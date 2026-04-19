@@ -1,0 +1,36 @@
+{
+  "servers": {
+    "soil-ct-infra": {
+      "type": "stdio",
+      "command": "C:/Users/ronys/miniconda3/envs/venv-napari/python.exe",
+      "args": ["-m", "mcp_server_stub"],
+      "env": {
+        "CONDA_DEFAULT_ENV": "venv-napari",
+        "PROJECT_ROOT": "${workspaceFolder}"
+      },
+      "disabled": true
+    }
+  },
+  "inputs": [],
+  "metadata": {
+    "description": "MCP bridge for nnUNet4SoilXrayCT. Built-in VS Code tool aliases (read, search, edit, execute) handle most operations. This config is a placeholder for future custom MCP server tools.",
+    "permission_matrix": {
+      "autonomous_tools": [
+        "fs_operations: read, edit, search (via built-in tool aliases)",
+        "shell_execution: execute (via built-in tool alias, @architect only)",
+        "workspace_indexing: search (via built-in tool alias)",
+        "verify_venv: conda activate venv-napari check",
+        "run_lint: linting and static analysis",
+        "check_env: environment and dependency verification"
+      ],
+      "human_gated_tools": [
+        "scientific_code_execution: requires turn-by-turn human approval",
+        "label_remapping: changes to mask_to_nnUNet or dataset_info.json",
+        "threshold_modification: changes to Otsu, intensity constraints, mode detection",
+        "normalization_change: changes to zscore, rescale, norm200 parameters",
+        "metric_modification: changes to Dice formula, loss weights, smoothing"
+      ]
+    },
+    "note": "Enable the soil-ct-infra server once the MCP server stub is implemented. Until then, all tool capabilities are provided by VS Code's built-in tool aliases assigned to agents via YAML frontmatter."
+  }
+}

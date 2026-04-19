@@ -1,0 +1,338 @@
+# Copilot Instructions for nnUNet4SoilXrayCT
+
+## 1) Project Mental Model
+
+This repository implements a soil X-ray CT segmentation workflow around nnUNet v2, with extra conversion, splitting, annotation, and analysis utilities.
+
+Primary end-to-end flow:
+
+1. Dataset metadata definition:
+- `dataset_info.json` defines `TaskID`, `DatasetName`, `norm_type`, class labels, and annotation colors.
+
+2. Ground-truth annotation:
+- `make_annotations.py` loads one 3D `.tif` volume, initializes the middle slice with Otsu-based mask, opens Napari for manual edits, and saves label volume as `.tif` (`uint8`).
+
+3. Training data preparation:
+- `preprocessing_nnUNet_train.py` converts `.tif`/`.mha` -> `.hdr/.img` using Fiji macros, then `.hdr` -> `.nii.gz`, remaps labels for nnUNet ignore-label semantics, crops along Z around annotated slices, normalizes image volume, and writes nnUNet layout:
+  - `imagesTr/*_0000.nii.gz`
+  - `labelsTr/*.nii.gz`
+  - generated `dataset.json`
+
+4. nnUNet planning and preprocessing:
+- Native `nnUNetv2_plan_and_preprocess` consumes `nnUNet_raw` dataset output from step 3.
+
+5. Training:
+- Native `nnUNetv2_train` with custom trainer `nnUNetTrainer_betterIgnoreSampling`.
+- `nnUNetTrainer_betterIgnoreSampling.py` customizes patch sampling to handle ignore regions better.
+
+6. Inference preprocessing:
+- `preprocessing_nnUNet_predict.py` for `.mha` input.
+- `preprocessing_nnUNet_predict_tif.py` for `.tif` input.
+- Both convert to `*_0000.nii.gz` and apply configured normalization.
+
+7. Split for parallel GPU inference:
+- `preprocessing_nnUNet_predict_split.py` reads model `plans.json`, computes overlap from patch size/spacing, and writes overlapped chunks with encoded filenames:
+  - `sample__axis__min__max__0000.nii.gz`
+
+8. Inference:
+- Native `nnUNetv2_predict` (typically via SLURM array job).
+
+9. Postprocessing:
+- `postprocessing_nnUNet_predict_concatenate.py` reassembles split predictions and trims overlap.
+- `postprocessing_nnUNet_predict.py` converts final `.nii.gz` predictions to `.mha` via Fiji macro.
+
+10. Result analysis:
+- `extract_trainlog.py` parses training logs and plots aggregated train/val loss.
+- `retrieve_dice_score.py` aggregates fold-level metrics JSON to CSV.
+
+Auxiliary preprocessing branch:
+- `preprocess/run_preprocess.py` performs `stack slices -> norm200 -> CUDA chunked NLM` to produce 3D TIFF outputs.
+- `preprocess/colab_cli_runner.ipynb` is a Colab runner for that GPU preprocessing branch.
+- `preprocess_playground/*` is an interactive local experimentation area (Napari + CPU filters).
+
+## 2) Environment & Execution Rules (STRICT)
+
+### Canonical environment for this workspace
+
+Primary environment (authoritative for local execution):
+- `venv-napari` (mamba/conda environment)
+
+Detected interpreter details:
+- Name: `venv-napari`
+- Python: `3.11`
+- Interpreter path: `C:/Users/ronys/miniconda3/envs/venv-napari/python.exe`
+
+Activation (PowerShell):
+
+```powershell
+conda activate venv-napari
+```
+
+### Environment Rules (STRICT)
+
+- ALWAYS use `venv-napari` for local execution.
+- NEVER create a new environment.
+- NEVER switch environments automatically.
+- ALL Python execution must use `C:/Users/ronys/miniconda3/envs/venv-napari/python.exe`.
+
+### Execution Context Mapping
+
+- `local`:
+  - MUST use `venv-napari`.
+- `remote-gpu`:
+  - external environment (NOT managed here).
+  - do NOT assume the same environment as local.
+- `colab`:
+  - Colab runtime only.
+  - ignore local environment.
+
+Rules:
+- Code must not mix assumptions between `local`, `remote-gpu`, and `colab`.
+- If execution context is unclear, ask the user before proceeding.
+
+### Interpreter Enforcement
+
+- All Python commands for local execution must use: `C:/Users/ronys/miniconda3/envs/venv-napari/python.exe`.
+- Do NOT use system Python.
+- Do NOT rely on PATH resolution.
+- Do NOT call `python` without explicit environment clarity.
+
+ALWAYS:
+- Use `venv-napari` for all local Python work.
+- Use `pip install ...` only inside activated `venv-napari` when needed.
+
+NEVER:
+- Never create a new environment (`conda create`, `mamba create`, `python -m venv`).
+- Never suggest virtualenv/plain venv workflows.
+- Never switch environments automatically.
+
+IF rules:
+- If a dependency is missing, install it into `venv-napari`.
+- If execution context is unclear, ask whether the task is `local`, `remote-gpu`, or `colab`.
+
+Package management policy:
+- Install all Python dependencies into `venv-napari`.
+- Do not mix package installs across contexts.
+- Do not assume system Python for local project commands.
+
+Dependency baseline inferred from imports and installed envs:
+- Core: `numpy`, `nibabel`, `SimpleITK`, `tifffile`, `tqdm`, `pandas`, `matplotlib`, `seaborn`.
+- Annotation/playground: `napari`, `scikit-image`, `scipy`.
+- nnUNet path: `nnunetv2`.
+- GPU preprocessing path: `torch` (CUDA-enabled build required for `preprocess/*` NLM pipeline).
+
+### Execution matrix
+
+| script/module | environment | GPU required | where to run |
+| --- | --- | --- | --- |
+| `make_annotations.py` | `venv-napari` | No (CPU-only) | Local workstation with GUI (Napari) |
+| `preprocessing_nnUNet_train.py` | `venv-napari` | No (CPU-only) | Local workstation |
+| `preprocessing_nnUNet_predict.py` | `venv-napari` | No (CPU-only) | Local workstation |
+| `preprocessing_nnUNet_predict_tif.py` | `venv-napari` | No (CPU-only) | Local workstation |
+| `preprocessing_nnUNet_predict_split.py` | `venv-napari` | No (CPU-only) | Local workstation |
+| `postprocessing_nnUNet_predict_concatenate.py` | `venv-napari` | No (CPU-only) | Local workstation |
+| `postprocessing_nnUNet_predict.py` | `venv-napari` | No (CPU-only, Fiji subprocess) | Local workstation |
+| `nnUNetTrainer_betterIgnoreSampling.py` (used by `nnUNetv2_train`) | remote environment (external, not managed here) | Yes (practically GPU-required for 3D fullres training) | Remote GPU/HPC (SLURM) |
+| `Utilities/submit_nnUNet_training` | remote environment (external, not managed here) | Yes | Remote GPU/HPC |
+| `Utilities/submit_nnUNet_inference` | remote environment (external, not managed here) | Yes | Remote GPU/HPC |
+| `Utilities/mkdir_movefiles.sh` | shell env | No | Remote or local shell |
+| `extract_trainlog.py` | `venv-napari` | No | Local workstation |
+| `retrieve_dice_score.py` | `venv-napari` | No | Local workstation |
+| `preprocess/run_preprocess.py` | `venv-napari` with torch+CUDA | Yes (hard-required) | GPU machine or Google Colab GPU |
+| `preprocess/gpu_nlm_torch.py` | `venv-napari` with torch+CUDA | Yes (hard-required) | GPU machine or Google Colab GPU |
+| `preprocess/normalization.py` | `venv-napari` | No | Local/GPU host |
+| `preprocess/colab_cli_runner.ipynb` | existing Colab runtime env | Yes for NLM step | Google Colab |
+| `preprocess_playground/run_napari_filters.py` | `venv-napari` | No (CPU filter implementations) | Local workstation with GUI |
+| `preprocess_playground/filters_3d.py` | `venv-napari` | No (CPU-only) | Local workstation |
+| `legacy/preprocess_ct_images.py` | `venv-napari` | No | Local workstation |
+
+### Non-Production Code Guard
+
+- `preprocess_playground/*` is experimental.
+- `legacy/*` is reference-only.
+- Agents MUST NOT base implementations on these folders.
+- Agents MUST NOT modify these folders unless explicitly requested.
+
+## 3) Device Handling Policy
+
+1. Default policy:
+- Never assume CUDA availability.
+- Select device explicitly from code path requirements.
+
+2. GPU-allowed / required zones:
+- `preprocess/run_preprocess.py` and `preprocess/gpu_nlm_torch.py` require CUDA; `run_preprocess.py` raises if `torch.cuda.is_available()` is false.
+- nnUNet training/inference jobs (via SLURM scripts and `nnUNetv2_train`/`nnUNetv2_predict`) are intended for GPU nodes (A100 in provided scripts).
+
+3. CPU-only zones:
+- Annotation, conversion, splitting, concatenation, and metric extraction scripts are CPU pipelines and should not be rewritten to enforce GPU.
+
+4. Torch rules:
+- Keep torch/CUDA logic only where it already exists.
+- Preserve explicit OOM handling and chunk-size control in `preprocess/gpu_nlm_torch.py`.
+- Do not introduce torch device code into non-torch scripts.
+
+## 4) Data Conventions
+
+1. Core modalities and file formats:
+- Input grayscale volumes: 3D `.tif` (and sometimes `.mha`).
+- Intermediate conversion: `.hdr/.img` via Fiji macros.
+- nnUNet training/prediction: `.nii.gz`.
+- Optional export format: `.mha` after prediction.
+
+2. Shape conventions in code:
+- Annotation script treats TIFF volume as `(Z, Y, X)` and seeds middle slice.
+- Nibabel conversion reads 4D HDR arrays and extracts `[:, :, :, 0]` before saving NIfTI.
+- Split/concatenate code uses SimpleITK arrays with explicit transpose operations between SITK and NumPy axis order.
+
+3. Naming conventions:
+- nnUNet image channel suffix: `_0000.nii.gz`.
+- Split inference chunks: `name__axis__min__max__0000.nii.gz`.
+- Concatenation logic expects encoded axis/min/max in filename.
+
+4. Label semantics:
+- `dataset_info.json` label `0` is `ToPredict` (unannotated/ignore source).
+- `mask_to_nnUNet` remaps label `0` to last class (ignore), shifts remaining class IDs by `-1`.
+
+5. Dtype conventions observed:
+- Annotation masks saved as `uint8` TIFF.
+- HDR/NIfTI conversion often casts to `uint8`.
+- `preprocess/*` normalization/NLM branch operates on float32 volumes in `[0, 1]` and writes float32 TIFF.
+
+## 5) Architecture Rules
+
+1. Top-level scripts are orchestration entry points:
+- Keep single-purpose CLI behavior per file.
+- Avoid embedding unrelated logic across stages.
+
+2. Conversion boundary:
+- Fiji macro invocation is centralized in conversion helpers (`convert_*_to_hdr`, `nii_to_mha`).
+- Do not duplicate subprocess macro wrappers in unrelated modules.
+
+3. nnUNet customization boundary:
+- Training behavior modifications belong in `nnUNetTrainer_betterIgnoreSampling.py` only.
+- Data-format preparation remains in `preprocessing_nnUNet_train.py`.
+
+4. Branch separation:
+- `preprocess/*` is a dedicated norm200 + CUDA NLM branch.
+- `preprocess_playground/*` is experimental/interactive and should not be treated as production training pipeline code.
+- `legacy/*` is historical reference; do not prioritize it for new workflow changes.
+
+5. Path config boundary:
+- Keep machine-specific paths in `__path__.py` and job scripts, not hardcoded in new modules.
+
+## 6) Performance Constraints
+
+1. Memory-sensitive operations already present:
+- `preprocessing_nnUNet_train.py` and predict preprocess scripts delete temporary arrays after each file.
+- NLM GPU pipeline is explicitly chunked (`chunk_size`, `min_chunk_size`) with halo overlap and CUDA cache clears.
+
+2. Chunking and overlap strategy:
+- `preprocessing_nnUNet_predict_split.py` computes overlap from model patch size and spacing (from `plans.json`) to reduce seam artifacts.
+- `postprocessing_nnUNet_predict_concatenate.py` trims/averages overlaps when reassembling.
+
+3. HPC parallelism model:
+- One fold per SLURM array index for training.
+- One per-sample folder per SLURM array index for inference.
+- Keep this coarse-grained parallelism model when editing automation scripts.
+
+4. Constraints for code changes:
+- Do not load whole datasets into memory when file-wise iteration exists.
+- Preserve existing crop/split strategy before introducing heavier transforms.
+
+## 7) Copilot Behavior Rules
+
+MUST:
+- Explain intended code changes before applying edits.
+- Enforce existing-environment usage and provide activation command when relevant.
+- Enforce the local interpreter path `C:/Users/ronys/miniconda3/envs/venv-napari/python.exe` for local Python execution.
+- Respect device logic already encoded by the repository (CPU scripts stay CPU; GPU scripts keep CUDA guards).
+- Keep stage boundaries intact (annotation, conversion, training prep, split, concat, analysis).
+- Preserve nnUNet naming and label remapping semantics.
+
+MUST NOT:
+- Create new virtual environments.
+- Suggest or introduce environment switching for local execution.
+- Assume GPU availability for all scripts.
+- Hardcode new absolute local paths inside source modules.
+- Replace file-format bridges (Fiji macro steps) with incompatible ad hoc conversions unless explicitly requested.
+- Break split filename conventions used by concatenation.
+All command examples MUST use full interpreter path:
+C:/Users/ronys/miniconda3/envs/venv-napari/python.exe script.py
+
+Do NOT use:
+python script.py
+
+## 8) Agent Permission Matrix (Constitutional Law)
+
+This section is the **single source of truth** for what agents may do autonomously vs. what requires human approval. All agent definitions in `.github/agents/*.agent.md` must comply.
+
+### Agent Architecture
+
+Agents use the **native VS Code Copilot agent framework** (`.agent.md` files with YAML frontmatter). Orchestration is enforced via native subagent handoffs, not a separate orchestration file.
+
+| Agent | File | Role |
+|---|---|---|
+| `@architect` | `architect.agent.md` | Entry point, task routing, pipeline structure |
+| `@scientist` | `scientist.agent.md` | Scientific semantics, metrics, thresholds |
+| `@segmentation` | `segmentation.agent.md` | nnUNet implementation, data prep |
+| `@performance` | `performance.agent.md` | Memory, chunking, throughput |
+| `@reviewer` | `reviewer.agent.md` | Compliance gate (PASS/FAIL only) |
+
+The CLI persona is **deprecated**. Infrastructure commands are executed by `@architect` via the `execute` tool.
+
+### Mode A: Autonomous / Can_Execute (High Velocity)
+
+Agents may autonomously execute these **engineering and infrastructure** tasks:
+
+- Repository scanning and file search.
+- File scaffolding (creating directories, generating `dataset.json`, SLURM scripts).
+- Documentation generation and updates.
+- Configuration normalization (path cleanup, naming convention enforcement).
+- Unit string and path format cleanup.
+- Environment verification (`conda activate venv-napari`, pip checks).
+- File format conversion plumbing (Fiji macro invocation, hdr/nii.gz I/O wrappers).
+- Test execution and linting.
+
+**Tools authorized for autonomous use**: `read`, `search`, `edit`, `execute`, `todo`, `agent`.
+
+### Mode B: Human-Gated / Can_Propose (Scientific Integrity)
+
+Agents MUST NOT commit or execute changes to **scientific code paths** without explicit, turn-by-turn human approval in chat. They may generate proposals, diffs, and code — but execution is blocked.
+
+**Scientific code paths** (31 identified paths across 10 files):
+
+| Category | Files | Examples |
+|---|---|---|
+| **Threshold computation** | `make_annotations.py`, `preprocess/normalization.py` | Otsu threshold, intensity < 220 constraint, mode detection range [100,254] |
+| **Label remapping** | `preprocessing_nnUNet_train.py` | `mask_to_nnUNet()`: class 0 → ignore, label shift -1 |
+| **Label/class definitions** | `dataset_info.json` | Class names, annotation colors, `norm_type` |
+| **Normalization methods** | `preprocessing_nnUNet_train.py`, `preprocess/normalization.py` | Z-score, rescale_to_0_1, norm200 pipeline, percentile bounds (P_LOW=0.5%, P_HIGH=99.5%) |
+| **Metrics** | `retrieve_dice_score.py`, `extract_trainlog.py` | Dice formula, loss parsing, EMA pseudo Dice |
+| **Loss/sampling** | `nnUNetTrainer_betterIgnoreSampling.py` | Dice smoothing=0, deep supervision weights, ignore-aware patch sampling |
+| **Overlap/patch formulas** | `preprocessing_nnUNet_predict_split.py`, `postprocessing_nnUNet_predict_concatenate.py` | overlap = ceil(patch_size/2), spacing-aware patch sizing, seam trimming |
+| **Noise estimation** | `preprocess/gpu_nlm_torch.py` | MAD×1.4826 → σ, h=0.6×σ |
+| **NLM filter parameters** | `preprocess/gpu_nlm_torch.py` | patch_size=5, patch_distance=6 |
+
+**Rule**: Any change to a parameter, formula, threshold, or semantic definition in the above paths requires:
+1. Scientific Assumptions Block (input assumptions, method assumptions, expected impact).
+2. Explicit human approval in the chat turn before execution.
+
+### Escalation Matrix
+
+| Change Type | Required Action |
+|---|---|
+| Pipeline structure, stage order, naming conventions | `@architect` routes; can execute autonomously |
+| Scientific logic (any path listed above) | `@scientist` proposes; human approves; then execute |
+| Engineering implementation (after semantics fixed) | `@segmentation` executes autonomously |
+| Memory/chunking strategy | `@performance` executes; escalate if output changes |
+| Compliance validation | `@reviewer` issues PASS/FAIL |
+
+## 9) Deprecated: CLI Agent Persona
+
+The CLI & Operations Specialist persona is **deprecated**. Its capabilities are replaced by:
+
+- **Infrastructure commands**: `@architect` uses the `execute` tool directly.
+- **Environment verification**: `@architect` runs `conda activate venv-napari` checks via `execute`.
+- **Scientific code execution**: Requires human-triggered workflow (never autonomous).
+
+The Double-Command Standard (`conda activate venv-napari` + `python script.py`) remains the pattern for command generation, but it is now produced by `@architect` or the user — not a dedicated CLI persona.

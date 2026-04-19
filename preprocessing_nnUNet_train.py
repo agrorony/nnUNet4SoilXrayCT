@@ -9,6 +9,7 @@ from typing import List
 
 import nibabel as nib
 import numpy as np
+import tifffile
 from nnunetv2.dataset_conversion.generate_dataset_json import generate_dataset_json
 from tqdm import tqdm
 
@@ -87,6 +88,28 @@ def convert_hdr_to_nii(input_dir: str, is_mask: bool = False, num_classes: int =
         del img, img_arr
         os.remove(hdr_file)
         os.remove(hdr_file.replace(".hdr", ".img"))
+
+def convert_tif_to_nii_images(input_dir: str, output_dir: str) -> None:
+    """
+    Convert .tif image files directly to .nii.gz using tifffile and nibabel,
+    bypassing Fiji. Matches the axis convention of the Fiji Analyze path:
+    tifffile reads (Z, Y, X) -> transpose to (X, Y, Z) to match Fiji Analyze output.
+    Casts to uint8 to match convert_hdr_to_nii behavior.
+
+    :param input_dir: path to the input folder which contains the .tif files
+    :param output_dir: path to the folder in which the .nii.gz output should be saved
+    :return:
+    """
+    Path(output_dir).mkdir(parents=True, exist_ok=True)
+    tif_files = glob.glob(join(input_dir, "*.tif"))
+    for tif_file in tqdm(tif_files, desc="Convert Image .tif to .nii.gz"):
+        basename = os.path.splitext(os.path.basename(tif_file))[0]
+        img_arr = tifffile.imread(tif_file)              # shape: (Z, Y, X)
+        img_arr = img_arr.transpose(2, 1, 0)              # shape: (X, Y, Z) — matches Fiji Analyze
+        img_arr = img_arr.astype(np.uint8)                 # match convert_hdr_to_nii behavior
+        nii = nib.Nifti1Image(img_arr, np.eye(4))
+        nib.save(nii, join(output_dir, basename + ".nii.gz"))
+        del img_arr, nii
 
 def get_img_file(mask_name: str, img_files: List[str], img_postfix: str) -> str:
     """
@@ -196,11 +219,9 @@ if __name__ == "__main__":
     convert_tif_to_hdr(input_dir_masks, temp_mask_folder) # with the new napari workflow for annotations, the images are saved in .tif automatically
     convert_hdr_to_nii(temp_mask_folder, True, num_classes)
     """
-    Step2: Convert image files from .tif to .nii.gz 
+    Step2: Convert image files from .tif to .nii.gz (Python-based, bypasses Fiji)
     """
-    #convert_mha_to_hdr(input_dir_images, temp_img_folder) # uncomment if input grayscale data are in .mha format and commment the next line
-    convert_tif_to_hdr(input_dir_images, temp_img_folder) 
-    convert_hdr_to_nii(temp_img_folder)
+    convert_tif_to_nii_images(input_dir_images, temp_img_folder)
     """
     Step3: Convert everything into nnUNet format
     """
@@ -228,15 +249,21 @@ if __name__ == "__main__":
         z_min = max(0, np.min(z) - number_of_offset_layers)
         z_max = min(np.max(z) + number_of_offset_layers + 1, mask_data.shape[2] - 1)
 
+        # ── Shared affine: derived from mask (carries real voxel spacing from Fiji/HDR).
+        # ── Origin is shifted to reflect the z_min crop offset in physical space.
+        shared_affine = mask.affine.copy()
+        shared_affine[:3, 3] = mask.affine[:3, 3] + mask.affine[:3, 2] * z_min
+
         # Crop Mask and Convert to nnUNet format
         mask_data = mask_data[:, :, z_min:z_max]
-        mask_data = mask_to_nnUNet(mask_data, num_classes)
-        # Save Mask File
-        nib.save(
-            nib.Nifti1Image(mask_data, mask.affine, mask.header),
-            join(nnUNet_mask_folder, mask_name + ".nii.gz"),
-        )
-        del mask, mask_data
+        mask_data = mask_to_nnUNet(mask_data, num_classes).astype(np.uint8)
+        # Save Mask File with shared affine and explicit uint8 header dtype
+        mask_out = nib.Nifti1Image(mask_data, shared_affine)
+        mask_out.header.set_data_dtype(np.uint8)
+        nib.save(mask_out, join(nnUNet_mask_folder, mask_name + ".nii.gz"))
+        print(f"  → {mask_name}: labels={np.unique(mask_data).tolist()} "
+              f"dtype={mask_data.dtype} shape={mask_data.shape}")
+        del mask, mask_data, mask_out
 
         """
         Convert image into nnUNet format
@@ -244,15 +271,12 @@ if __name__ == "__main__":
         img = nib.load(img_file)
         img_data = img.get_fdata()
 
-        img_data = img_data[:, :, z_min:z_max] # crop the image to annotations
+        img_data = img_data[:, :, z_min:z_max]  # crop the image to annotations
         img_data = img_normalize(img_data, norm_type)
-        
-        # Save Image File
-        nib.save(
-            nib.Nifti1Image(img_data, img.affine, img.header),
-            join(nnUNet_img_folder, mask_name + "_0000.nii.gz"),
-        )
-        del img, img_data
+        # Save Image File with the same shared affine — guarantees spatial alignment with label
+        img_out = nib.Nifti1Image(img_data, shared_affine)
+        nib.save(img_out, join(nnUNet_img_folder, mask_name + "_0000.nii.gz"))
+        del img, img_data, img_out
 
     """
     Step4: Create the dataset.json which is needed for nnUNet and contains information about the dataset
