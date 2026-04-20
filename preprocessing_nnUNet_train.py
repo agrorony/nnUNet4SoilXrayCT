@@ -70,7 +70,8 @@ def convert_hdr_to_nii(input_dir: str, is_mask: bool = False, num_classes: int =
     for hdr_file in tqdm(hdr_files, desc="Process File to .nii.gz"):
         # Load the file
         img = nib.load(hdr_file)
-        img_arr = img.get_fdata().astype(np.uint8)[:, :, :, 0]
+        raw = img.get_fdata()[:, :, :, 0]
+        img_arr = raw.astype(np.uint8) if is_mask else raw
         # Check if there is a Class ID outside [0:num_classes]
         if is_mask:
             min_idx, max_idx = np.min(img_arr), np.max(img_arr)
@@ -106,7 +107,35 @@ def convert_tif_to_nii_images(input_dir: str, output_dir: str) -> None:
         basename = os.path.splitext(os.path.basename(tif_file))[0]
         img_arr = tifffile.imread(tif_file)              # shape: (Z, Y, X)
         img_arr = img_arr.transpose(2, 1, 0)              # shape: (X, Y, Z) — matches Fiji Analyze
-        img_arr = img_arr.astype(np.uint8)                 # match convert_hdr_to_nii behavior
+        # Preserve original dtype (float32 for NLM, uint8/uint16 for raw CT)
+        nii = nib.Nifti1Image(img_arr, np.eye(4))
+        nib.save(nii, join(output_dir, basename + ".nii.gz"))
+        del img_arr, nii
+
+def convert_tif_to_nii_masks(input_dir: str, output_dir: str,
+                             num_classes: int = None) -> None:
+    """
+    Convert .tif mask files directly to .nii.gz using tifffile and nibabel,
+    bypassing Fiji. Same axis convention as convert_tif_to_nii_images.
+    Validates label IDs when num_classes is provided.
+
+    :param input_dir: path to the input folder which contains the .tif mask files
+    :param output_dir: path to the folder in which the .nii.gz output should be saved
+    :param num_classes: if set, check that label IDs are in [0, num_classes)
+    :return:
+    """
+    Path(output_dir).mkdir(parents=True, exist_ok=True)
+    tif_files = glob.glob(join(input_dir, "*.tif"))
+    for tif_file in tqdm(tif_files, desc="Convert Mask .tif to .nii.gz"):
+        basename = os.path.splitext(os.path.basename(tif_file))[0]
+        img_arr = tifffile.imread(tif_file)              # shape: (Z, Y, X)
+        img_arr = img_arr.transpose(2, 1, 0)              # shape: (X, Y, Z) — matches Fiji Analyze
+        img_arr = img_arr.astype(np.uint8)
+        if num_classes is not None:
+            min_idx, max_idx = np.min(img_arr), np.max(img_arr)
+            if min_idx < 0 or max_idx >= num_classes:
+                print(f"WARNING: Index ERROR in file: {tif_file} - min={min_idx} max={max_idx}")
+                print(f"         The corresponding Voxels will be ignored")
         nii = nib.Nifti1Image(img_arr, np.eye(4))
         nib.save(nii, join(output_dir, basename + ".nii.gz"))
         del img_arr, nii
@@ -213,11 +242,12 @@ if __name__ == "__main__":
     Path(nnUNet_mask_folder).mkdir(parents=True, exist_ok=True)
 
     """
-    Step1: Convert annotation files from .tif to .nii.gz 
+    Step1: Convert annotation files from .tif to .nii.gz (Python-based, bypasses Fiji)
     """
     #convert_mha_to_hdr(input_dir_mask, temp_img_folder) # uncomment if annotation files are in .mha format
-    convert_tif_to_hdr(input_dir_masks, temp_mask_folder) # with the new napari workflow for annotations, the images are saved in .tif automatically
-    convert_hdr_to_nii(temp_mask_folder, True, num_classes)
+    # convert_tif_to_hdr(input_dir_masks, temp_mask_folder) # old Fiji path — fails on non-ASCII paths
+    # convert_hdr_to_nii(temp_mask_folder, True, num_classes)
+    convert_tif_to_nii_masks(input_dir_masks, temp_mask_folder, num_classes)
     """
     Step2: Convert image files from .tif to .nii.gz (Python-based, bypasses Fiji)
     """

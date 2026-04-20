@@ -25,7 +25,7 @@ def convert_hdr_to_nii_normalize(input_dir: str,norm_type:str) -> None:
     for hdr_file in tqdm(hdr_files, desc="Process Image to .nii.gz"):
         # Load the file
         img = nib.load(hdr_file)
-        img_arr = img.get_fdata().astype(np.uint8)[:, :, :, 0]
+        img_arr = img.get_fdata()[:, :, :, 0]
 
         # Normalize the image
         img_arr = img_normalize(img_arr, norm_type)
