@@ -3,6 +3,28 @@ Minimal preprocess pipeline:
     stack slices -> norm200 -> CUDA NLM -> write two 3D TIFF outputs
 """
 
+# =============================================================================
+# Runtime dependencies and version constraints
+# =============================================================================
+# Execution context: GPU machine or Google Colab (CUDA required — script
+# raises RuntimeError if torch.cuda.is_available() is False).
+#
+# Package        Constraint               Reason
+# -------------- ------------------------ ------------------------------------
+# torch          >= 2.0, CUDA build       GPU NLM step (gpu_nlm_torch.py);
+#                                         CPU-only torch will fail at runtime
+# tifffile       any modern               TIFF volume I/O
+# numpy          any modern (no upper     no numba dependency here
+#                bound)
+# normalization  local module             norm200 pipeline (normalization.py)
+# gpu_nlm_torch  local module             NLM (gpu_nlm_torch.py)
+# =============================================================================
+#
+# Install torch with CUDA (example for CUDA 12.4):
+#   pip install torch --index-url https://download.pytorch.org/whl/cu124
+# Verify: python -c "import torch; print(torch.cuda.is_available())"
+# =============================================================================
+
 from __future__ import annotations
 
 import argparse
