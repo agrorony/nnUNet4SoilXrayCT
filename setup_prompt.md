@@ -37,7 +37,7 @@ This pulls many transitive dependencies (numpy, scipy, scikit-image, tqdm, etc.)
 ### Step 4 — Install remaining project dependencies
 
 ```powershell
-pip install nibabel tifffile SimpleITK pandas matplotlib seaborn napari[all] pyyaml
+pip install nibabel tifffile SimpleITK pandas matplotlib seaborn napari[all] pyyaml porespy
 ```
 
 | Package | Used by |
@@ -50,6 +50,7 @@ pip install nibabel tifffile SimpleITK pandas matplotlib seaborn napari[all] pyy
 | `seaborn` | Plotting (extract_trainlog.py) |
 | `napari[all]` | 3D annotation GUI (make_annotations.py); also installs `qtpy` |
 | `pyyaml` | Config loading (legacy pore analysis) |
+| `porespy` | Local thickness via EDT sphere reconstruction (analysis/psd_diagnostics_core.py) |
 
 ### Step 5 — (Optional) Install CuPy for GPU-accelerated PSD analysis
 
@@ -105,6 +106,7 @@ matplotlib
 seaborn
 napari[all]
 pyyaml
+porespy
 cupy-cuda12x                    # optional, for GPU PSD analysis
 ```
 

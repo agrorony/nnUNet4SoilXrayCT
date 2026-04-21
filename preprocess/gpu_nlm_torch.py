@@ -6,6 +6,25 @@ It operates on float32 volumes in [0, 1] and supports chunked processing for
 large 3D volumes that do not fit on GPU memory in one pass.
 """
 
+# =============================================================================
+# Runtime dependencies and version constraints
+# =============================================================================
+# Execution context: GPU machine or Google Colab (CUDA required — hard fail
+# if torch.cuda.is_available() is False).
+#
+# Package        Constraint               Reason
+# -------------- ------------------------ ------------------------------------
+# torch          >= 2.0, CUDA build       GPU NLM convolution kernels;
+#                                         CPU-only torch will fail at runtime
+# numpy          any modern (no upper     no numba; torch handles GPU ops
+#                bound)                   directly
+# =============================================================================
+#
+# Install torch with CUDA (example for CUDA 12.4):
+#   pip install torch --index-url https://download.pytorch.org/whl/cu124
+# Verify: python -c "import torch; print(torch.cuda.is_available())"
+# =============================================================================
+
 from __future__ import annotations
 
 from dataclasses import dataclass

@@ -13,6 +13,34 @@ No CLI logic, no implicit paths, no global state.
 All algorithmic behavior is preserved from legacy/pores_analysis.
 """
 
+# =============================================================================
+# Runtime dependencies and version constraints
+# =============================================================================
+# Package        Constraint               Reason
+# -------------- ------------------------ ------------------------------------
+# numpy          >= 1.22, <= 2.3          numba 0.63.x hard upper-bound;
+#                                         pip install "numpy<2.4" to pin
+# porespy        >= 3.0.4                 local_thickness(method='imj')
+#                                         (BoneJ-equivalent EDT sphere algo)
+# numba          >= 0.5x (0.63.1 tested)  JIT sphere-insertion kernels
+#                                         used internally by porespy
+# edt            >= 3.0.0                 fast float EDT (porespy dep)
+# scikit-image   >= 0.26.0               0.25.x has broken segmentation DLL
+#                                         on Windows — causes hard crash;
+#                                         0.26.0 fixes it
+# scipy          any modern               distance_transform_edt fallback
+# =============================================================================
+#
+# NOTE: This file has a NARROWER numpy window than the rest of the project.
+# All other project scripts are compatible with any modern numpy (1.22 - 2.x).
+# If you upgrade numpy above 2.3, porespy/numba will raise ImportError.
+# =============================================================================
+#
+# Tested environment (venv-napari, April 2026):
+#   numpy==2.3.5   scikit-image==0.26.0   porespy==3.0.4
+#   numba==0.63.1  edt==3.0.0             scipy==1.17.1
+# =============================================================================
+
 from __future__ import annotations
 
 import warnings
@@ -220,71 +248,47 @@ class _BlockProcessor:
 
 
 # ---------------------------------------------------------------------------
-# Opening map  (morphological local thickness)
-# Preserved from legacy local_thickness.py
+# Local thickness  (EDT-based maximum inscribed sphere reconstruction)
+# Replaces the previous integer-radius morphological-opening loop that
+# quantised pore diameters to even integers and produced a sparse PSD.
+# Uses porespy.filters.local_thickness (method='imj') which implements the
+# Hildebrand & Rüegsegger (1997) / BoneJ equivalent: for every pore voxel,
+# the float radius of the maximally-inscribed sphere covering it is recorded
+# via Numba-JIT per-voxel sphere insertion.
 # ---------------------------------------------------------------------------
 
-def _compute_opening_cpu(edt_map: np.ndarray) -> np.ndarray:
-    from scipy.ndimage import binary_dilation
-
-    opening_map = np.zeros_like(edt_map, dtype=np.float32)
-    max_r = int(edt_map.max())
-    print(f"  Computing Opening Map (CPU Iterative, Max Radius: {max_r})...")
-    for r in range(1, max_r + 1):
-        centers = edt_map >= r
-        if not np.any(centers):
-            continue
-        z, y, x = np.ogrid[-r : r + 1, -r : r + 1, -r : r + 1]
-        sphere = (z ** 2 + y ** 2 + x ** 2) <= r ** 2
-        spheres_mask = binary_dilation(centers, structure=sphere)
-        idx = spheres_mask > 0
-        opening_map[idx] = np.maximum(opening_map[idx], 2.0 * r)
-        if max_r > 50 and r % 10 == 0:
-            print(f"    Progress: {r}/{max_r} radii processed")
-    return opening_map
-
-
-def _compute_opening_gpu(edt_map: np.ndarray) -> np.ndarray:
-    import cupy as cp
-    from cupyx.scipy.ndimage import binary_dilation
-
-    edt_gpu = cp.asarray(edt_map, dtype=cp.float32)
-    opening_map = cp.zeros_like(edt_gpu)
-    max_r = int(edt_gpu.max())
-    print(f"  Computing Opening Map (GPU Iterative, Max Radius: {max_r})...")
-    for r in range(1, max_r + 1):
-        centers = edt_gpu >= r
-        if not cp.any(centers):
-            continue
-        z, y, x = cp.ogrid[-r : r + 1, -r : r + 1, -r : r + 1]
-        sphere = (z ** 2 + y ** 2 + x ** 2) <= r ** 2
-        spheres_mask = binary_dilation(centers, structure=sphere)
-        idx = spheres_mask > 0
-        opening_map[idx] = cp.maximum(opening_map[idx], 2.0 * r)
-        if max_r > 50 and r % 10 == 0:
-            print(f"    Progress: {r}/{max_r} radii processed")
-    out = cp.asnumpy(opening_map).astype(np.float32)
-    del edt_gpu, opening_map, centers, sphere, spheres_mask
-    cp.get_default_memory_pool().free_all_blocks()
-    return out
-
-
 def _compute_opening_map(edt_map: np.ndarray, use_gpu: bool = True) -> np.ndarray:
+    """Compute per-voxel local thickness (diameter) via EDT sphere reconstruction.
+
+    Calls ``porespy.filters.local_thickness(method='imj')``, passing the
+    pre-computed ``edt_map`` directly to avoid redundant EDT computation.
+    The binary pore mask is derived as ``edt_map > 0``.
+
+    Returns diameter values (radius × 2) as float32, preserving the
+    downstream API contract of the previous implementation.
+
+    ``use_gpu`` is accepted for API compatibility; PoreSpy uses Numba JIT
+    (parallel CPU) for the sphere-insertion pass regardless.
+    """
+    from porespy.filters import local_thickness as _ps_local_thickness
+
     if edt_map.dtype not in (np.float32, np.float64):
         warnings.warn(
             f"EDT map dtype {edt_map.dtype} not float32/64, converting",
             UserWarning,
         )
         edt_map = edt_map.astype(np.float32)
-    if use_gpu and _check_gpu_available():
-        try:
-            return _compute_opening_gpu(edt_map)
-        except Exception as exc:
-            warnings.warn(
-                f"GPU opening failed ({exc}), falling back to CPU",
-                RuntimeWarning,
-            )
-    return _compute_opening_cpu(edt_map)
+
+    im = edt_map > 0  # binary pore mask derived from EDT
+    print(
+        f"  Computing Local Thickness (PoreSpy imj, "
+        f"max EDT radius: {edt_map.max():.2f})..."
+    )
+    # local_thickness returns radius per voxel; multiply by 2 for diameter
+    lt = _ps_local_thickness(
+        im, dt=edt_map.astype(np.float64), method="imj", smooth=False
+    )
+    return (np.asarray(lt) * 2).astype(np.float32)
 
 
 # ---------------------------------------------------------------------------

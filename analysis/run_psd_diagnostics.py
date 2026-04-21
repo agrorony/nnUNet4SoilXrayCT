@@ -47,6 +47,21 @@ One run folder per execution::
 from __future__ import annotations
 
 import argparse
+# =============================================================================
+# Runtime dependencies and version constraints
+# =============================================================================
+# This script calls psd_diagnostics_core, which uses porespy + numba.
+# The numpy version constraint is INHERITED from that module.
+#
+# Package        Constraint               Reason
+# -------------- ------------------------ ------------------------------------
+# numpy          >= 1.22, <= 2.3          numba 0.63.x upper-bound (via
+#                                         psd_diagnostics_core -> porespy)
+# porespy        >= 3.0.4                 required by psd_diagnostics_core
+# scikit-image   >= 0.26.0               0.25.x segmentation DLL crash on Win
+# scipy          any modern               used by psd_diagnostics_core
+# =============================================================================
+
 import csv
 import json
 import sys
