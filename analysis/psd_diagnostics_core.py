@@ -8,6 +8,7 @@ compare_runs(result_a, result_b, *, ...)  ->  dict
 to_json_serializable(obj)  ->  JSON-native Python object
 build_psd_table(result)  ->  list[dict]  (CSV rows, §4.6 columns)
 build_summary(result, *, mode, run_name)  ->  dict  (§4.7 fields)
+plot_psd_extras(pore_diameters_um, psd, run_dir, n_bins)  ->  list[str]
 
 No CLI logic, no implicit paths, no global state.
 All algorithmic behavior is preserved from legacy/pores_analysis.
@@ -602,6 +603,31 @@ class _DiagnosticsCollector:
             )
         self.data["stages"]["post_psd"] = payload
 
+    def log_edt_grid_diagnostic(self, report: Dict[str, Any]) -> None:
+        print("\n[EDT grid diagnostic]")
+        if "error" in report:
+            print(f"  Error: {report['error']}")
+            self.data["stages"]["edt_grid_diagnostic"] = report
+            return
+        print(
+            f"  Theoretical EDT levels  : {report['total_theoretical_levels']}"
+        )
+        print(
+            f"  Natural bins (EDT-spaced): {report['total_bins']}  "
+            f"| empty: {report['empty_bins']}  "
+            f"| non-empty: {report['nonempty_bins']}  "
+            f"(empty fraction: {report['empty_fraction']:.1%})"
+        )
+        print(
+            f"  Main 50-bin PSD zero-count bins    : {report['main_psd_zero_count_bins']}"
+        )
+        print(
+            f"  ... falling in structural EDT gaps : "
+            f"{report['main_psd_zero_bins_in_structural_gaps']}"
+            f"  → {'EDT discretization' if report['main_psd_zero_bins_in_structural_gaps'] > 0 else 'not structural gaps'}"
+        )
+        self.data["stages"]["edt_grid_diagnostic"] = report
+
 
 # ---------------------------------------------------------------------------
 # PSD computation
@@ -642,6 +668,17 @@ def _compute_psd_from_opening_map(
     # Voxel-to-physical scale: isotropic mean of spacing (legacy behaviour)
     voxel_scale_um = float(np.mean(voxel_spacing))
 
+    # ── EDT/binning gap diagnostic ───────────────────────────────────────
+    # Determines whether empty PSD bins are caused by EDT discretization
+    # (gaps in unique diameter values) or over-fine log binning.
+    _vals_um = pore_diameters.astype(np.float64) * voxel_scale_um
+    _u = np.unique(np.round(_vals_um, 3))
+    print(f"\n[Diameter diagnostic] Unique diameter values: {len(_u)}")
+    print(f"  First 50: {_u[:50]}")
+    if len(_u) > 1:
+        print(f"  Gaps between first 20 consecutive values: {np.diff(_u[:20])}")
+    # ─────────────────────────────────────────────────────────────────────
+
     if bin_edges_um is None:
         min_d = float(pore_diameters.min())
         max_d = float(pore_diameters.max())
@@ -661,6 +698,16 @@ def _compute_psd_from_opening_map(
     bin_centers_um = bin_centers_px * voxel_scale_um
 
     collector.log_binning(volume_counts, bin_edges_px, _bin_edges_um)
+
+    # ── EDT grid diagnostic ───────────────────────────────────────────────
+    _grid_report = _edt_grid_diagnostic(
+        pore_diameters.astype(np.float64) * voxel_scale_um,
+        voxel_spacing,
+        bin_centers_um,
+        volume_counts,
+    )
+    collector.log_edt_grid_diagnostic(_grid_report)
+    # ─────────────────────────────────────────────────────────────────────
 
     total_pore_voxels = int(pore_diameters.size)
     cumulative_volume = np.cumsum(volume_counts) / total_pore_voxels
@@ -682,6 +729,9 @@ def _compute_psd_from_opening_map(
         "reliability_flag": reliability_flag,
         "total_pore_voxels": total_pore_voxels,
         "voxel_spacing": tuple(voxel_spacing),
+        # Raw diameters for downstream plotting (popped by run_psd_pipeline;
+        # not part of the serialised PSD schema).
+        "pore_diameters_um": pore_diameters.astype(np.float64) * voxel_scale_um,
     }
 
 
@@ -699,6 +749,232 @@ def _empty_psd_result(
         "total_pore_voxels": 0,
         "voxel_spacing": tuple(voxel_spacing),
     }
+
+
+# ---------------------------------------------------------------------------
+# EDT grid diagnostic
+# ---------------------------------------------------------------------------
+
+def _edt_grid_diagnostic(
+    pore_diameters_um: np.ndarray,
+    voxel_spacing: Tuple[float, float, float],
+    psd_bin_centers_um: np.ndarray,
+    psd_volume_counts: np.ndarray,
+) -> Dict[str, Any]:
+    """Compute grid-aware EDT bin diagnostic.
+
+    Enumerates all theoretically possible EDT diameters:
+        D = 2 * sqrt((dz*sz)^2 + (dy*sy)^2 + (dx*sx)^2)  [µm]
+    for non-negative integer steps (sz, sy, sx), up to the observed max
+    diameter.  These are the only diameters the integer EDT grid can produce.
+
+    Returns a dict with:
+        total_theoretical_levels      -- distinct possible EDT diameters
+        total_bins                    -- number of natural (EDT-spaced) bins
+        empty_bins                    -- bins with no pore voxels
+        nonempty_bins                 -- bins with at least one pore voxel
+        empty_fraction                -- empty_bins / total_bins
+        main_psd_zero_count_bins      -- zero-count bins in the main PSD
+        main_psd_zero_bins_in_structural_gaps
+                                      -- of those, how many fall strictly
+                                         between two consecutive EDT levels
+                                         (structural gap, not a binning artefact)
+        structural_gap_details        -- list of per-bin detail dicts
+    """
+    dz, dy, dx = (float(voxel_spacing[0]),
+                  float(voxel_spacing[1]),
+                  float(voxel_spacing[2]))
+
+    if pore_diameters_um.size == 0:
+        return {"error": "no pore voxels"}
+
+    max_d = float(pore_diameters_um.max())
+
+    # Upper bound for each axis step (cap at 300 to avoid OOM for exotic configs)
+    nz_max = min(int(np.ceil(max_d / (2.0 * dz))) + 1, 300)
+    ny_max = min(int(np.ceil(max_d / (2.0 * dy))) + 1, 300)
+    nx_max = min(int(np.ceil(max_d / (2.0 * dx))) + 1, 300)
+
+    # Vectorised enumeration of all integer-grid EDT diameters
+    nz_g, ny_g, nx_g = np.meshgrid(
+        np.arange(nz_max + 1, dtype=np.float64),
+        np.arange(ny_max + 1, dtype=np.float64),
+        np.arange(nx_max + 1, dtype=np.float64),
+        indexing='ij',
+    )
+    d_all = 2.0 * np.sqrt((dz * nz_g)**2 + (dy * ny_g)**2 + (dx * nx_g)**2)
+    d_mask = (d_all > 0.0) & (d_all <= max_d * 1.05)
+    theoretical_um = np.unique(np.round(d_all[d_mask], 4))
+
+    n_theoretical = int(theoretical_um.size)
+    if n_theoretical < 2:
+        return {
+            "total_theoretical_levels": n_theoretical,
+            "error": "too few theoretical levels to form bins",
+        }
+
+    # Bin edges midway between consecutive theoretical levels
+    half_gaps = np.diff(theoretical_um) * 0.5
+    bin_edges = np.concatenate([
+        [max(0.0, theoretical_um[0] - half_gaps[0])],
+        theoretical_um[:-1] + half_gaps,
+        [theoretical_um[-1] + half_gaps[-1]],
+    ])
+
+    counts, _ = np.histogram(pore_diameters_um.astype(np.float64), bins=bin_edges)
+    n_total_bins = int(counts.size)
+    n_empty = int(np.sum(counts == 0))
+    n_nonempty = n_total_bins - n_empty
+
+    # Cross-check: which main-PSD zero-count bins fall in structural gaps
+    zero_mask = np.asarray(psd_volume_counts) == 0
+    zero_centers = np.asarray(psd_bin_centers_um)[zero_mask]
+    structural_hits = 0
+    gap_details: List[Dict[str, Any]] = []
+    for zc in zero_centers:
+        zc_f = float(zc)
+        idx = int(np.searchsorted(theoretical_um, zc_f))
+        if 0 < idx < n_theoretical:
+            lo = float(theoretical_um[idx - 1])
+            hi = float(theoretical_um[idx])
+            structural_hits += 1
+            gap_details.append({
+                "psd_bin_um": round(zc_f, 2),
+                "between_edt_levels": [round(lo, 2), round(hi, 2)],
+                "gap_width_um": round(hi - lo, 2),
+            })
+
+    return {
+        "total_theoretical_levels": n_theoretical,
+        "total_bins": n_total_bins,
+        "empty_bins": n_empty,
+        "nonempty_bins": n_nonempty,
+        "empty_fraction": round(n_empty / n_total_bins, 4) if n_total_bins > 0 else 0.0,
+        "main_psd_zero_count_bins": int(zero_mask.sum()),
+        "main_psd_zero_bins_in_structural_gaps": structural_hits,
+        "structural_gap_details": gap_details,
+    }
+
+
+# ---------------------------------------------------------------------------
+# Optional diagnostic plots
+# ---------------------------------------------------------------------------
+
+def plot_psd_extras(
+    pore_diameters_um: np.ndarray,
+    psd: Dict[str, Any],
+    run_dir: Any,
+    n_bins: int = 30,
+) -> List[str]:
+    """Generate two supplementary diagnostic plots and save them to *run_dir*.
+
+    Plots produced
+    --------------
+    psd_hist_30bins.png
+        Differential PSD histogram with ``n_bins`` log-spaced bins.
+        Normalization matches the main PSD table: counts / (total_voxels * bin_width_µm).
+
+    psd_kde.png
+        KDE-smoothed diameter distribution.  KDE is computed on log₁₀(d) values
+        (Scott's rule bandwidth) and transformed back to µm-space via the
+        Jacobian  p(d) = f(log₁₀ d) / (d · ln 10).
+
+    Parameters
+    ----------
+    pore_diameters_um:
+        1-D array of valid pore diameters in µm (from ``result["pore_diameters_um"]``).
+    psd:
+        The ``result["psd"]`` sub-dict (used only for metadata in this call).
+    run_dir:
+        Output directory path (str or Path).
+    n_bins:
+        Number of log-spaced bins for the histogram plot (default 30).
+
+    Returns
+    -------
+    list[str]
+        Absolute paths of the files written.  Empty if no pore voxels.
+    """
+    from pathlib import Path as _Path
+    import matplotlib.pyplot as plt
+    from scipy.stats import gaussian_kde
+
+    run_dir = _Path(run_dir)
+    written: List[str] = []
+
+    if pore_diameters_um.size == 0:
+        warnings.warn(
+            "plot_psd_extras: no pore diameters — plots skipped", UserWarning
+        )
+        return written
+
+    d = pore_diameters_um.astype(np.float64)
+    total = int(d.size)
+    d_min, d_max = float(d.min()), float(d.max())
+
+    # ── Plot 1: n_bins log-spaced histogram ──────────────────────────────
+    edges = np.logspace(np.log10(max(d_min, 1e-9)), np.log10(d_max * 1.1), n_bins + 1)
+    counts, _ = np.histogram(d, bins=edges)
+    centers = (edges[:-1] + edges[1:]) / 2.0
+    widths = np.diff(edges)
+    diff_psd = counts / (total * widths)
+
+    fig1, ax1 = plt.subplots(figsize=(8, 5))
+    ax1.bar(
+        centers, diff_psd,
+        width=widths, align="center",
+        color="steelblue", edgecolor="white", linewidth=0.4,
+        label=f"{n_bins} log-spaced bins",
+    )
+    ax1.set_xscale("log")
+    ax1.set_xlabel("Pore diameter (µm)", fontsize=11)
+    ax1.set_ylabel("Differential PSD  [µm⁻¹]", fontsize=11)
+    ax1.set_title(
+        f"PSD — {n_bins} log-spaced bins\n"
+        f"n = {total:,} voxels,  range {d_min:.1f}–{d_max:.1f} µm",
+        fontsize=10,
+    )
+    ax1.legend(fontsize=9)
+    ax1.grid(axis="y", linestyle="--", alpha=0.4)
+    fig1.tight_layout()
+    p1 = run_dir / "psd_hist_30bins.png"
+    fig1.savefig(p1, dpi=150)
+    plt.close(fig1)
+    written.append(str(p1))
+
+    # ── Plot 2: KDE-smoothed distribution (log-space KDE) ────────────────
+    # KDE is fitted on log₁₀(d) with Scott's rule, then back-transformed.
+    log_d = np.log10(d)
+    kde = gaussian_kde(log_d)  # Scott's rule bandwidth
+    bw_log = float(kde.factor) * float(np.std(log_d))  # actual log₁₀ bandwidth
+
+    x_log = np.linspace(float(log_d.min()), float(log_d.max()), 500)
+    x_um = 10.0 ** x_log
+    # Jacobian: p(d) = f(log₁₀ d) / (d · ln 10)
+    y_kde = kde(x_log) / (x_um * np.log(10.0))
+
+    fig2, ax2 = plt.subplots(figsize=(8, 5))
+    ax2.plot(x_um, y_kde, color="firebrick", linewidth=2,
+             label="KDE (log-space, Scott's rule)")
+    ax2.fill_between(x_um, y_kde, alpha=0.15, color="firebrick")
+    ax2.set_xscale("log")
+    ax2.set_xlabel("Pore diameter (µm)", fontsize=11)
+    ax2.set_ylabel("Density  [µm⁻¹]", fontsize=11)
+    ax2.set_title(
+        f"KDE — pore diameter distribution\n"
+        f"Scott bandwidth h = {bw_log:.4f} (log₁₀ scale),  "
+        f"n = {total:,} voxels",
+        fontsize=10,
+    )
+    ax2.legend(fontsize=9)
+    ax2.grid(axis="y", linestyle="--", alpha=0.4)
+    fig2.tight_layout()
+    p2 = run_dir / "psd_kde.png"
+    fig2.savefig(p2, dpi=150)
+    plt.close(fig2)
+    written.append(str(p2))
+
+    return written
 
 
 # ---------------------------------------------------------------------------
@@ -960,10 +1236,17 @@ def run_psd_pipeline(
         "default_n_bins": _DEFAULT_N_BINS,
     }
 
+    # Expose raw diameters at the top level so callers can generate optional
+    # plots without touching the serialised PSD schema.
+    pore_diameters_um: np.ndarray = psd.pop(
+        "pore_diameters_um", np.array([], dtype=np.float64)
+    )
+
     return {
         "psd": psd,
         "diagnostics": collector.data,
         "meta": meta,
+        "pore_diameters_um": pore_diameters_um,
     }
 
 

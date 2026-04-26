@@ -72,6 +72,12 @@ from typing import Any, Dict, List, Optional, Tuple
 
 import numpy as np
 
+# Non-interactive backend — must be set before any pyplot import.
+# plot_psd_extras (in psd_diagnostics_core) imports pyplot lazily;
+# this call ensures Agg is active before that happens.
+import matplotlib
+matplotlib.use("Agg")
+
 # ---------------------------------------------------------------------------
 # Import core; abort immediately if unavailable
 # ---------------------------------------------------------------------------
@@ -82,6 +88,7 @@ try:
         build_summary,
         compare_runs,
         generate_synthetic_volume,
+        plot_psd_extras,
         run_psd_pipeline,
         to_json_serializable,
     )
@@ -102,6 +109,8 @@ _F_SUMMARY = "summary.json"
 _F_TABLE = "psd_table.csv"
 _F_COMPARISON = "comparison.json"          # synthetic only
 _F_GROUND_TRUTH = "ground_truth.json"      # synthetic only
+_F_PLOT_HIST = "psd_hist_30bins.png"       # supplementary diagnostic plot
+_F_PLOT_KDE = "psd_kde.png"               # supplementary diagnostic plot
 
 
 # ===========================================================================
@@ -180,6 +189,12 @@ def _write_json(run_dir: Path, filename: str, data: Any) -> None:
         json.dump(to_json_serializable(data), fh, indent=2)
 
 
+def _write_plots(run_dir: Path, result: Dict[str, Any]) -> List[str]:
+    """Generate psd_hist_30bins.png and psd_kde.png into *run_dir*."""
+    pore_diameters_um = result.get("pore_diameters_um", np.array([], dtype=np.float64))
+    return plot_psd_extras(pore_diameters_um, result["psd"], run_dir)
+
+
 def _write_csv(run_dir: Path, rows: List[Dict[str, Any]]) -> None:
     """Write psd_table.csv with columns in §4.6 order."""
     path = run_dir / _F_TABLE
@@ -219,6 +234,9 @@ def _write_all_outputs(
 
     # psd_table.csv  (§4.6)
     _write_csv(run_dir, build_psd_table(result))
+
+    # supplementary diagnostic plots
+    _write_plots(run_dir, result)
 
 
 # ===========================================================================
@@ -321,7 +339,8 @@ def _run_real(args: argparse.Namespace) -> None:
     n_reliable = int(psd["reliability_flag"].sum())
     print(f"Reliable bins: {n_reliable}/{len(psd['reliability_flag'])}")
     print("Files written:")
-    for f in (_F_CONFIG, _F_RESULT, _F_DIAG, _F_SUMMARY, _F_TABLE):
+    for f in (_F_CONFIG, _F_RESULT, _F_DIAG, _F_SUMMARY, _F_TABLE,
+              _F_PLOT_HIST, _F_PLOT_KDE):
         print(f"  {f}")
 
 
@@ -455,7 +474,8 @@ def _run_synthetic(args: argparse.Namespace) -> None:
     )
     print("Files written:")
     for f in (_F_CONFIG, _F_RESULT, _F_DIAG, _F_SUMMARY, _F_TABLE,
-              _F_GROUND_TRUTH, _F_COMPARISON):
+              _F_GROUND_TRUTH, _F_COMPARISON,
+              _F_PLOT_HIST, _F_PLOT_KDE):
         print(f"  {f}")
 
 
