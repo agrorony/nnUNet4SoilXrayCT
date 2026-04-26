@@ -652,7 +652,8 @@ def _compute_psd_from_opening_map(
         )
         _bin_edges_um = bin_edges_px * voxel_scale_um
     else:
-        bin_edges_px = np.array(bin_edges_um, dtype=np.float32) / voxel_scale_um
+        # Keep bin edges in float64 to avoid precision loss; pore diameters stay float32.
+        bin_edges_px = np.asarray(bin_edges_um, dtype=np.float64) / voxel_scale_um
         _bin_edges_um = bin_edges_px * voxel_scale_um
 
     volume_counts, _ = np.histogram(pore_diameters, bins=bin_edges_px)
