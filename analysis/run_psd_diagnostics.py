@@ -192,7 +192,10 @@ def _write_json(run_dir: Path, filename: str, data: Any) -> None:
 def _write_plots(run_dir: Path, result: Dict[str, Any]) -> List[str]:
     """Generate psd_hist_30bins.png and psd_kde.png into *run_dir*."""
     pore_diameters_um = result.get("pore_diameters_um", np.array([], dtype=np.float64))
-    return plot_psd_extras(pore_diameters_um, result["psd"], run_dir)
+    voxel_spacing = result["psd"].get("voxel_spacing")
+    return plot_psd_extras(
+        pore_diameters_um, result["psd"], run_dir, voxel_spacing=voxel_spacing
+    )
 
 
 def _write_csv(run_dir: Path, rows: List[Dict[str, Any]]) -> None:

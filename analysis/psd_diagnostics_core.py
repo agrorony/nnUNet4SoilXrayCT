@@ -755,6 +755,33 @@ def _empty_psd_result(
 # EDT grid diagnostic
 # ---------------------------------------------------------------------------
 
+def _edt_theoretical_levels_um(
+    voxel_spacing: Tuple[float, float, float],
+    max_d_um: float,
+    cap: int = 300,
+) -> np.ndarray:
+    """Sorted array of all theoretically possible EDT diameters in µm.
+
+    Enumerates D = 2·sqrt((dz·sz)²+(dy·sy)²+(dx·sx)²) for non-negative
+    integer steps (sz, sy, sx) up to *max_d_um*.
+    """
+    dz = float(voxel_spacing[0])
+    dy = float(voxel_spacing[1])
+    dx = float(voxel_spacing[2])
+    nz_max = min(int(np.ceil(max_d_um / (2.0 * dz))) + 1, cap)
+    ny_max = min(int(np.ceil(max_d_um / (2.0 * dy))) + 1, cap)
+    nx_max = min(int(np.ceil(max_d_um / (2.0 * dx))) + 1, cap)
+    nz_g, ny_g, nx_g = np.meshgrid(
+        np.arange(nz_max + 1, dtype=np.float64),
+        np.arange(ny_max + 1, dtype=np.float64),
+        np.arange(nx_max + 1, dtype=np.float64),
+        indexing="ij",
+    )
+    d_all = 2.0 * np.sqrt((dz * nz_g) ** 2 + (dy * ny_g) ** 2 + (dx * nx_g) ** 2)
+    d_mask = (d_all > 0.0) & (d_all <= max_d_um * 1.05)
+    return np.unique(np.round(d_all[d_mask], 4))
+
+
 def _edt_grid_diagnostic(
     pore_diameters_um: np.ndarray,
     voxel_spacing: Tuple[float, float, float],
@@ -789,22 +816,7 @@ def _edt_grid_diagnostic(
         return {"error": "no pore voxels"}
 
     max_d = float(pore_diameters_um.max())
-
-    # Upper bound for each axis step (cap at 300 to avoid OOM for exotic configs)
-    nz_max = min(int(np.ceil(max_d / (2.0 * dz))) + 1, 300)
-    ny_max = min(int(np.ceil(max_d / (2.0 * dy))) + 1, 300)
-    nx_max = min(int(np.ceil(max_d / (2.0 * dx))) + 1, 300)
-
-    # Vectorised enumeration of all integer-grid EDT diameters
-    nz_g, ny_g, nx_g = np.meshgrid(
-        np.arange(nz_max + 1, dtype=np.float64),
-        np.arange(ny_max + 1, dtype=np.float64),
-        np.arange(nx_max + 1, dtype=np.float64),
-        indexing='ij',
-    )
-    d_all = 2.0 * np.sqrt((dz * nz_g)**2 + (dy * ny_g)**2 + (dx * nx_g)**2)
-    d_mask = (d_all > 0.0) & (d_all <= max_d * 1.05)
-    theoretical_um = np.unique(np.round(d_all[d_mask], 4))
+    theoretical_um = _edt_theoretical_levels_um(voxel_spacing, max_d)
 
     n_theoretical = int(theoretical_um.size)
     if n_theoretical < 2:
@@ -865,6 +877,7 @@ def plot_psd_extras(
     psd: Dict[str, Any],
     run_dir: Any,
     n_bins: int = 30,
+    voxel_spacing: Optional[Tuple[float, float, float]] = None,
 ) -> List[str]:
     """Generate two supplementary diagnostic plots and save them to *run_dir*.
 
@@ -872,23 +885,27 @@ def plot_psd_extras(
     --------------
     psd_hist_30bins.png
         Differential PSD histogram with ``n_bins`` log-spaced bins.
-        Normalization matches the main PSD table: counts / (total_voxels * bin_width_µm).
+        Bins that contain no theoretically possible EDT diameter (structural
+        gaps) are drawn in red with hatching when *voxel_spacing* is supplied.
+        X-axis shows readable µm tick labels.
 
     psd_kde.png
-        KDE-smoothed diameter distribution.  KDE is computed on log₁₀(d) values
-        (Scott's rule bandwidth) and transformed back to µm-space via the
-        Jacobian  p(d) = f(log₁₀ d) / (d · ln 10).
+        KDE-smoothed diameter distribution (log-space Scott bandwidth,
+        Jacobian-corrected to µm).  X-axis uses the same readable tick labels.
 
     Parameters
     ----------
     pore_diameters_um:
-        1-D array of valid pore diameters in µm (from ``result["pore_diameters_um"]``).
+        1-D array of valid pore diameters in µm.
     psd:
-        The ``result["psd"]`` sub-dict (used only for metadata in this call).
+        The ``result["psd"]`` sub-dict (metadata only).
     run_dir:
         Output directory path (str or Path).
     n_bins:
         Number of log-spaced bins for the histogram plot (default 30).
+    voxel_spacing:
+        Physical voxel spacing (dz, dy, dx) in µm.  When provided, structural
+        EDT gaps are computed and highlighted on the histogram.
 
     Returns
     -------
@@ -897,6 +914,8 @@ def plot_psd_extras(
     """
     from pathlib import Path as _Path
     import matplotlib.pyplot as plt
+    import matplotlib.ticker as _mticker
+    from matplotlib.patches import Patch as _Patch
     from scipy.stats import gaussian_kde
 
     run_dir = _Path(run_dir)
@@ -912,21 +931,69 @@ def plot_psd_extras(
     total = int(d.size)
     d_min, d_max = float(d.min()), float(d.max())
 
+    # ── EDT gap detection ─────────────────────────────────────────────────
+    theoretical_um: Optional[np.ndarray] = None
+    if voxel_spacing is not None:
+        try:
+            theoretical_um = _edt_theoretical_levels_um(voxel_spacing, d_max)
+        except Exception:
+            theoretical_um = None
+
+    def _is_gap(lo: float, hi: float) -> bool:
+        if theoretical_um is None or theoretical_um.size == 0:
+            return False
+        return (
+            int(np.searchsorted(theoretical_um, lo, side="left"))
+            == int(np.searchsorted(theoretical_um, hi, side="right"))
+        )
+
+    # ── Readable x-axis helper ────────────────────────────────────────────
+    def _apply_ticks(ax: object, xmin: float, xmax: float) -> None:
+        ticks = sorted({
+            float(m) * 10.0 ** e
+            for e in range(-2, 6)
+            for m in (1, 2, 3, 5)
+            if xmin * 0.7 <= float(m) * 10.0 ** e <= xmax * 1.4
+        })
+        ax.set_xscale("log")  # type: ignore[attr-defined]
+        ax.xaxis.set_major_locator(_mticker.FixedLocator(ticks))  # type: ignore
+        ax.xaxis.set_major_formatter(  # type: ignore
+            _mticker.FuncFormatter(lambda x, _: f"{x:.0f}")
+        )
+        ax.xaxis.set_minor_formatter(_mticker.NullFormatter())  # type: ignore
+        plt.setp(ax.xaxis.get_majorticklabels(), rotation=45, ha="right")  # type: ignore
+
     # ── Plot 1: n_bins log-spaced histogram ──────────────────────────────
     edges = np.logspace(np.log10(max(d_min, 1e-9)), np.log10(d_max * 1.1), n_bins + 1)
     counts, _ = np.histogram(d, bins=edges)
-    centers = (edges[:-1] + edges[1:]) / 2.0
     widths = np.diff(edges)
     diff_psd = counts / (total * widths)
 
-    fig1, ax1 = plt.subplots(figsize=(8, 5))
-    ax1.bar(
-        centers, diff_psd,
-        width=widths, align="center",
-        color="steelblue", edgecolor="white", linewidth=0.4,
-        label=f"{n_bins} log-spaced bins",
-    )
-    ax1.set_xscale("log")
+    fig1, ax1 = plt.subplots(figsize=(10, 5))
+    gap_labelled = False
+    for i in range(n_bins):
+        is_gap = _is_gap(float(edges[i]), float(edges[i + 1]))
+        kw: Dict[str, Any] = dict(
+            x=edges[i], height=diff_psd[i], width=widths[i], align="edge",
+            linewidth=0.4,
+        )
+        if is_gap:
+            kw.update(color="tomato", hatch="///", edgecolor="darkred")
+            if not gap_labelled:
+                kw["label"] = "No EDT level in bin"
+                gap_labelled = True
+        else:
+            kw.update(color="steelblue", edgecolor="white")
+        ax1.bar(**kw)
+
+    legend_handles = [_Patch(facecolor="steelblue", label=f"{n_bins} log-spaced bins")]
+    if theoretical_um is not None:
+        legend_handles.append(
+            _Patch(facecolor="tomato", hatch="///", edgecolor="darkred",
+                   label="No EDT level in bin")
+        )
+    ax1.legend(handles=legend_handles, fontsize=9)
+    _apply_ticks(ax1, d_min, d_max)
     ax1.set_xlabel("Pore diameter (µm)", fontsize=11)
     ax1.set_ylabel("Differential PSD  [µm⁻¹]", fontsize=11)
     ax1.set_title(
@@ -934,7 +1001,6 @@ def plot_psd_extras(
         f"n = {total:,} voxels,  range {d_min:.1f}–{d_max:.1f} µm",
         fontsize=10,
     )
-    ax1.legend(fontsize=9)
     ax1.grid(axis="y", linestyle="--", alpha=0.4)
     fig1.tight_layout()
     p1 = run_dir / "psd_hist_30bins.png"
@@ -943,21 +1009,19 @@ def plot_psd_extras(
     written.append(str(p1))
 
     # ── Plot 2: KDE-smoothed distribution (log-space KDE) ────────────────
-    # KDE is fitted on log₁₀(d) with Scott's rule, then back-transformed.
     log_d = np.log10(d)
     kde = gaussian_kde(log_d)  # Scott's rule bandwidth
-    bw_log = float(kde.factor) * float(np.std(log_d))  # actual log₁₀ bandwidth
-
+    bw_log = float(kde.factor) * float(np.std(log_d))
     x_log = np.linspace(float(log_d.min()), float(log_d.max()), 500)
     x_um = 10.0 ** x_log
     # Jacobian: p(d) = f(log₁₀ d) / (d · ln 10)
     y_kde = kde(x_log) / (x_um * np.log(10.0))
 
-    fig2, ax2 = plt.subplots(figsize=(8, 5))
+    fig2, ax2 = plt.subplots(figsize=(10, 5))
     ax2.plot(x_um, y_kde, color="firebrick", linewidth=2,
              label="KDE (log-space, Scott's rule)")
     ax2.fill_between(x_um, y_kde, alpha=0.15, color="firebrick")
-    ax2.set_xscale("log")
+    _apply_ticks(ax2, d_min, d_max)
     ax2.set_xlabel("Pore diameter (µm)", fontsize=11)
     ax2.set_ylabel("Density  [µm⁻¹]", fontsize=11)
     ax2.set_title(
