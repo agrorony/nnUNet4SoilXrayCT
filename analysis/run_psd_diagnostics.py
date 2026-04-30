@@ -1,8 +1,8 @@
-"""PSD diagnostics runner — CLI entrypoint for real-data mode.
+"""PSD diagnostics runner — CLI entrypoint for two modes.
 
 Usage
 -----
-::
+real mode::
 
     python run_psd_diagnostics.py real \\
         --input /path/to/volume.npy \\
@@ -16,6 +16,20 @@ Usage
         [--halo-width 50] \\
         [--no-gpu]
 
+synthetic mode::
+
+    python run_psd_diagnostics.py synthetic \\
+        --output-root /path/to/results \\
+        [--run-name my_test] \\
+        [--shape 80 80 80] \\
+        [--voxel-spacing 1.0 1.0 1.0] \\
+        [--sphere-count 40] \\
+        [--seed 42] \\
+        [--min-radius-um 5.0] \\
+        [--chunk-size 64 64 64] \\
+        [--halo-width 32] \\
+        [--no-gpu]
+
 Output
 ------
 One run folder per execution::
@@ -26,6 +40,8 @@ One run folder per execution::
         diagnostics.json
         summary.json
         psd_table.csv
+        comparison.json   (synthetic only)
+        ground_truth.json (synthetic only)
 """
 
 from __future__ import annotations
@@ -64,6 +80,8 @@ try:
         PSD_TABLE_COLUMNS,
         build_psd_table,
         build_summary,
+        compare_runs,
+        generate_synthetic_volume,
         run_psd_pipeline,
         to_json_serializable,
     )
@@ -82,6 +100,8 @@ _F_RESULT = "result_psd.json"
 _F_DIAG = "diagnostics.json"
 _F_SUMMARY = "summary.json"
 _F_TABLE = "psd_table.csv"
+_F_COMPARISON = "comparison.json"          # synthetic only
+_F_GROUND_TRUTH = "ground_truth.json"      # synthetic only
 
 
 # ===========================================================================
@@ -306,13 +326,147 @@ def _run_real(args: argparse.Namespace) -> None:
 
 
 # ===========================================================================
+# Synthetic mode  (§7 / §8 — both paths mandatory)
+# ===========================================================================
+
+def _run_synthetic(args: argparse.Namespace) -> None:
+    # Parse spacing
+    try:
+        spacing: Tuple[float, float, float] = tuple(
+            float(v) for v in args.voxel_spacing
+        )
+    except (TypeError, ValueError) as exc:
+        _fail(f"Invalid --voxel-spacing: {exc}")
+
+    if len(spacing) != 3:
+        _fail(
+            f"--voxel-spacing requires exactly 3 values, got {len(spacing)}"
+        )
+    if any(v <= 0 for v in spacing):
+        _fail(f"All voxel-spacing values must be positive, got {spacing}")
+
+    # Parse shape
+    try:
+        shape: Tuple[int, int, int] = tuple(int(d) for d in args.shape)
+    except (TypeError, ValueError) as exc:
+        _fail(f"Invalid --shape: {exc}")
+    if len(shape) != 3 or any(d <= 0 for d in shape):
+        _fail(f"--shape requires 3 positive integers, got {args.shape}")
+
+    sphere_count = int(args.sphere_count)
+    seed: Optional[int] = int(args.seed) if args.seed is not None else None
+    min_radius_um = float(args.min_radius_um)
+
+    chunk_size: Tuple[int, int, int] = tuple(int(c) for c in args.chunk_size)
+    halo_width: int = int(args.halo_width)
+
+    ts = datetime.utcnow().strftime("%Y%m%dT%H%M%S")
+    run_name = _safe_name(args.run_name) if args.run_name else "synthetic"
+    output_root = Path(args.output_root)
+    use_gpu = not args.no_gpu
+
+    config: Dict[str, Any] = {
+        "mode": "synthetic",
+        "run_name": run_name,
+        "timestamp": ts,
+        "shape": list(shape),
+        "voxel_spacing": list(spacing),
+        "sphere_count": sphere_count,
+        "seed": seed,
+        "min_radius_um": min_radius_um,
+        "use_chunking_chunked_run": True,
+        "chunk_size": list(chunk_size),
+        "halo_width": halo_width,
+        "use_gpu": use_gpu,
+    }
+
+    # Generate synthetic volume (deterministic)
+    synth = generate_synthetic_volume(
+        shape=shape,
+        voxel_spacing=spacing,
+        sphere_count=sphere_count,
+        seed=seed,
+        min_radius_um=min_radius_um,
+    )
+    vol: np.ndarray = synth["volume"]
+    ground_truth: Dict[str, Any] = synth["ground_truth"]
+
+    # §7.3 — both monolithic and chunked paths are mandatory
+    print("\n[Synthetic] Running monolithic pipeline...")
+    result_mono = run_psd_pipeline(
+        vol,
+        spacing,
+        use_chunking=False,
+        use_gpu=use_gpu,
+        diagnostics_cfg={"run_tag": f"{run_name}_monolithic"},
+    )
+
+    print("\n[Synthetic] Running chunked pipeline...")
+    result_chunked = run_psd_pipeline(
+        vol,
+        spacing,
+        use_chunking=True,
+        chunk_size=chunk_size,
+        halo_width=halo_width,
+        use_gpu=use_gpu,
+        diagnostics_cfg={"run_tag": f"{run_name}_chunked"},
+    )
+
+    # §8 — mandatory comparison
+    comparison = compare_runs(
+        result_mono,
+        result_chunked,
+        label_a="monolithic",
+        label_b="chunked",
+    )
+
+    # Write outputs
+    run_dir = _make_run_dir(output_root, run_name, ts)
+
+    # 5 common files (using monolithic result as the canonical result)
+    _write_all_outputs(
+        run_dir,
+        config=config,
+        result=result_mono,
+        mode="synthetic",
+        run_name=run_name,
+        timestamp=ts,
+    )
+
+    # ground_truth.json  (§4.2 / §7.2)
+    _write_json(run_dir, _F_GROUND_TRUTH, ground_truth)
+
+    # comparison.json  (§4.2 / §4.8)
+    _write_json(run_dir, _F_COMPARISON, comparison)
+
+    # Console summary
+    psd = result_mono["psd"]
+    print(f"\nRun directory: {run_dir}")
+    print(f"Placed spheres: {ground_truth['placed_count']}")
+    print(f"Total pore voxels: {psd['total_pore_voxels']:,}")
+    if psd["bin_centers_um"].size > 0:
+        print(
+            f"Diameter range: {float(psd['bin_centers_um'].min()):.2f}"
+            f" – {float(psd['bin_centers_um'].max()):.2f} µm"
+        )
+    print(
+        f"Mono vs chunked: {comparison['status']} "
+        f"(exact_equal={comparison['exact_equal']})"
+    )
+    print("Files written:")
+    for f in (_F_CONFIG, _F_RESULT, _F_DIAG, _F_SUMMARY, _F_TABLE,
+              _F_GROUND_TRUTH, _F_COMPARISON):
+        print(f"  {f}")
+
+
+# ===========================================================================
 # Argument parser
 # ===========================================================================
 
 def _build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(
         prog="run_psd_diagnostics",
-        description="PSD diagnostics runner.",
+        description="PSD diagnostics runner (real and synthetic modes).",
     )
     sub = parser.add_subparsers(dest="mode", required=True)
 
@@ -358,6 +512,52 @@ def _build_parser() -> argparse.ArgumentParser:
         help="Disable GPU acceleration (force CPU).",
     )
 
+    # ------------------------------------------------------------ synthetic
+    p_syn = sub.add_parser(
+        "synthetic",
+        help="Generate a synthetic volume and run monolithic + chunked pipelines.",
+    )
+    p_syn.add_argument(
+        "--output-root", required=True,
+        help="Parent directory for run-folder output.",
+    )
+    p_syn.add_argument("--run-name", default=None, help="Optional run identifier.")
+    p_syn.add_argument(
+        "--shape", nargs=3, type=int, default=[80, 80, 80],
+        metavar=("Z", "Y", "X"),
+        help="Volume dimensions in voxels (default: 80 80 80).",
+    )
+    p_syn.add_argument(
+        "--voxel-spacing", nargs=3, type=float, default=[1.0, 1.0, 1.0],
+        metavar=("DZ", "DY", "DX"),
+        help="Physical voxel spacing in µm (default: 1.0 1.0 1.0).",
+    )
+    p_syn.add_argument(
+        "--sphere-count", type=int, default=40,
+        help="Target number of non-overlapping spheres (default: 40).",
+    )
+    p_syn.add_argument(
+        "--seed", type=int, default=None,
+        help="RNG seed for reproducibility.",
+    )
+    p_syn.add_argument(
+        "--min-radius-um", type=float, default=5.0,
+        help="Minimum sphere radius in µm (default: 5.0).",
+    )
+    p_syn.add_argument(
+        "--chunk-size", nargs=3, type=int, default=[64, 64, 64],
+        metavar=("CZ", "CY", "CX"),
+        help="Core chunk size for chunked pipeline run (default: 64 64 64).",
+    )
+    p_syn.add_argument(
+        "--halo-width", type=int, default=32,
+        help="Halo width in voxels for chunked pipeline run (default: 32).",
+    )
+    p_syn.add_argument(
+        "--no-gpu", action="store_true",
+        help="Disable GPU acceleration (force CPU).",
+    )
+
     return parser
 
 
@@ -371,6 +571,8 @@ def main() -> None:
 
     if args.mode == "real":
         _run_real(args)
+    elif args.mode == "synthetic":
+        _run_synthetic(args)
     else:
         _fail(f"Unknown mode: {args.mode}")
 
