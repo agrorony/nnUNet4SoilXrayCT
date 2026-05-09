@@ -3,8 +3,6 @@
 Public API
 ----------
 run_psd_pipeline(volume, voxel_spacing, *, ...)  ->  dict
-generate_synthetic_volume(*, shape, voxel_spacing, ...)  ->  dict
-compare_runs(result_a, result_b, *, ...)  ->  dict
 to_json_serializable(obj)  ->  JSON-native Python object
 build_psd_table(result)  ->  list[dict]  (CSV rows, §4.6 columns)
 build_summary(result, *, mode, run_name)  ->  dict  (§4.7 fields)
@@ -56,7 +54,6 @@ import numpy as np
 _INTERNAL_VOXEL_SPACING: Tuple[float, float, float] = (1.0, 1.0, 1.0)
 _DEFAULT_N_BINS: int = 50
 _DEFAULT_BORDER_WIDTH: int = 1
-_MIN_RELIABLE_DIAMETER_VOXELS: int = 5
 _DEFAULT_HIST_BINS: int = 64
 _DEFAULT_LOW_COUNT_THRESHOLD: int = 5
 _DEFAULT_SPIKE_MULTIPLIER: float = 5.0
@@ -669,9 +666,6 @@ def _compute_psd_from_opening_map(
 
     collector.log_post_psd(differential_volume, bin_centers_um)
 
-    # Reliability flag: Vogel et al. constraint (diameter >= configured threshold)
-    reliability_flag = bin_centers_px >= _MIN_RELIABLE_DIAMETER_VOXELS
-
     return {
         "bin_centers_px": bin_centers_px,
         "bin_centers_um": bin_centers_um,
@@ -679,7 +673,6 @@ def _compute_psd_from_opening_map(
         "volume_counts": volume_counts,
         "cumulative_volume": cumulative_volume,
         "differential_volume": differential_volume,
-        "reliability_flag": reliability_flag,
         "total_pore_voxels": total_pore_voxels,
         "voxel_spacing": tuple(voxel_spacing),
     }
@@ -695,112 +688,9 @@ def _empty_psd_result(
         "volume_counts": np.array([], dtype=np.int64),
         "cumulative_volume": np.array([], dtype=np.float64),
         "differential_volume": np.array([], dtype=np.float64),
-        "reliability_flag": np.array([], dtype=bool),
         "total_pore_voxels": 0,
         "voxel_spacing": tuple(voxel_spacing),
     }
-
-
-# ---------------------------------------------------------------------------
-# Synthetic volume generator
-# Preserved from legacy synthetic_volume.generate_non_overlapping_spheres
-# ---------------------------------------------------------------------------
-
-def _generate_non_overlapping_spheres(
-    volume_shape: Tuple[int, int, int],
-    voxel_spacing: Tuple[float, float, float],
-    n_spheres: int,
-    min_radius_um: float,
-    max_radius_um: Optional[float],
-    seed: Optional[int],
-    max_attempts: int = 6000,
-) -> Tuple[np.ndarray, np.ndarray, np.ndarray]:
-    """Create a binary volume populated with non-overlapping spheres.
-
-    Uses a log-normal radius distribution (same as legacy) so the ground-truth
-    PSD is smooth and continuous in physical units.  Sphere placement is in
-    physical coordinates to honour anisotropic voxel spacing.
-    """
-    rng = np.random.default_rng(seed)
-    volume_shape = tuple(int(d) for d in volume_shape)
-    spacing = np.array(voxel_spacing, dtype=float)
-    physical_extents = np.array(volume_shape, dtype=float) * spacing
-    default_max = float(np.min(physical_extents) / 3.0)
-    max_r = float(max_radius_um) if max_radius_um is not None else default_max
-    if max_r <= min_radius_um:
-        raise ValueError("max_radius_um must be larger than min_radius_um")
-
-    def _sample_radius() -> float:
-        value = float(rng.lognormal(mean=np.log(6.0), sigma=0.35))
-        return float(np.clip(value, min_radius_um, max_r))
-
-    def _sample_center(radius: float) -> np.ndarray:
-        coords = []
-        for extent in physical_extents:
-            lo = radius
-            hi = extent - radius
-            if hi <= lo:
-                return np.array([])
-            coords.append(rng.uniform(lo, hi))
-        return np.array(coords, dtype=float)
-
-    placed_centers: List[np.ndarray] = []
-    placed_radii: List[float] = []
-    attempts = 0
-
-    while len(placed_centers) < n_spheres and attempts < max_attempts:
-        attempts += 1
-        radius = _sample_radius()
-        center = _sample_center(radius)
-        if center.size == 0:
-            continue
-        overlap = any(
-            np.linalg.norm(center - oc) < (radius + orr)
-            for oc, orr in zip(placed_centers, placed_radii)
-        )
-        if overlap:
-            continue
-        placed_centers.append(center)
-        placed_radii.append(radius)
-
-    if len(placed_centers) < n_spheres:
-        warnings.warn(
-            f"Only placed {len(placed_centers)} spheres out of "
-            f"requested {n_spheres}",
-            UserWarning,
-        )
-
-    volume = np.zeros(volume_shape, dtype=bool)
-    centers_arr = (
-        np.array(placed_centers, dtype=float)
-        if placed_centers
-        else np.zeros((0, 3))
-    )
-    radii_arr = np.array(placed_radii, dtype=float)
-
-    for center, radius in zip(centers_arr, radii_arr):
-        z_phys, y_phys, x_phys = center
-        r = radius
-        z_min = max(0, int(np.floor((z_phys - r) / spacing[0])))
-        z_max = min(volume_shape[0], int(np.ceil((z_phys + r) / spacing[0])))
-        y_min = max(0, int(np.floor((y_phys - r) / spacing[1])))
-        y_max = min(volume_shape[1], int(np.ceil((y_phys + r) / spacing[1])))
-        x_min = max(0, int(np.floor((x_phys - r) / spacing[2])))
-        x_max = min(volume_shape[2], int(np.ceil((x_phys + r) / spacing[2])))
-
-        if z_min >= z_max or y_min >= y_max or x_min >= x_max:
-            continue
-
-        z_lin = (np.arange(z_min, z_max) + 0.5) * spacing[0]
-        y_lin = (np.arange(y_min, y_max) + 0.5) * spacing[1]
-        x_lin = (np.arange(x_min, x_max) + 0.5) * spacing[2]
-        dz2 = (z_lin[:, None, None] - z_phys) ** 2
-        dy2 = (y_lin[None, :, None] - y_phys) ** 2
-        dx2 = (x_lin[None, None, :] - x_phys) ** 2
-        mask = (dz2 + dy2 + dx2) <= (r ** 2)
-        volume[z_min:z_max, y_min:y_max, x_min:x_max] |= mask
-
-    return volume, radii_arr, centers_arr
 
 
 # ===========================================================================
@@ -843,8 +733,8 @@ def run_psd_pipeline(
         PSD arrays and scalars::
 
             bin_centers_px, bin_centers_um, bin_edges_um, volume_counts,
-            cumulative_volume, differential_volume, reliability_flag,
-            total_pore_voxels, voxel_spacing
+            cumulative_volume, differential_volume, total_pore_voxels,
+            voxel_spacing
 
     ``diagnostics``
         Full diagnostics payload (run_tag, created, config, stages) ready
@@ -936,12 +826,6 @@ def run_psd_pipeline(
             f"Diameter range: {psd['bin_centers_um'].min():.2f} - "
             f"{psd['bin_centers_um'].max():.2f} um"
         )
-    n_reliable = int(psd["reliability_flag"].sum())
-    n_total = int(psd["reliability_flag"].size)
-    print(
-        f"Reliable bins (d >= {_MIN_RELIABLE_DIAMETER_VOXELS} voxels): "
-        f"{n_reliable}/{n_total}"
-    )
 
     meta: Dict[str, Any] = {
         "volume_shape": list(volume.shape),
@@ -956,7 +840,6 @@ def run_psd_pipeline(
         ),
         "chunk_size": list(chunk_size) if use_chunking else None,
         "halo_width": halo_width if use_chunking else None,
-        "min_reliable_diameter_voxels": _MIN_RELIABLE_DIAMETER_VOXELS,
         "default_n_bins": _DEFAULT_N_BINS,
     }
 
@@ -964,198 +847,6 @@ def run_psd_pipeline(
         "psd": psd,
         "diagnostics": collector.data,
         "meta": meta,
-    }
-
-
-# ---------------------------------------------------------------------------
-
-
-def generate_synthetic_volume(
-    *,
-    shape: Tuple[int, int, int],
-    voxel_spacing: Tuple[float, float, float],
-    sphere_count: int = 40,
-    seed: Optional[int] = None,
-    min_radius_um: float = 5.0,
-    max_radius_um: Optional[float] = None,
-) -> Dict[str, Any]:
-    """Generate a deterministic synthetic binary pore volume of non-overlapping
-    spheres.
-
-    Parameters
-    ----------
-    shape : (Z, Y, X) volume dimensions in voxels
-    voxel_spacing : (dz, dy, dx) physical spacing in micrometers
-    sphere_count : target number of spheres to place
-    seed : RNG seed for reproducibility (None = non-deterministic)
-    min_radius_um : minimum physical radius in micrometers
-    max_radius_um : maximum physical radius; defaults to min_physical_dim / 3
-
-    Returns
-    -------
-    dict with keys:
-
-    ``volume``
-        3-D bool ndarray (True = pore)
-
-    ``ground_truth``
-        Generator parameters and diameter statistics for downstream
-        validation::
-
-            shape, voxel_spacing, sphere_count_requested, seed,
-            placed_count, radii_um, centers_um, diameter_stats
-    """
-    volume, radii_arr, centers_arr = _generate_non_overlapping_spheres(
-        volume_shape=shape,
-        voxel_spacing=voxel_spacing,
-        n_spheres=sphere_count,
-        min_radius_um=min_radius_um,
-        max_radius_um=max_radius_um,
-        seed=seed,
-    )
-
-    placed_count = int(radii_arr.size)
-    if placed_count > 0:
-        diameters = 2.0 * radii_arr
-        diam_stats: Dict[str, Any] = {
-            "count": placed_count,
-            "min": float(diameters.min()),
-            "max": float(diameters.max()),
-            "mean": float(diameters.mean()),
-            "median": float(np.median(diameters)),
-            "std": float(diameters.std()),
-        }
-    else:
-        diam_stats = {
-            "count": 0,
-            "min": 0.0,
-            "max": 0.0,
-            "mean": 0.0,
-            "median": 0.0,
-            "std": 0.0,
-        }
-
-    # Resolve the effective max_radius that was actually used
-    _spacing_arr = np.array(voxel_spacing, dtype=float)
-    _phys_extents = np.array(list(shape), dtype=float) * _spacing_arr
-    _effective_max_radius = (
-        float(max_radius_um)
-        if max_radius_um is not None
-        else float(np.min(_phys_extents) / 3.0)
-    )
-
-    ground_truth: Dict[str, Any] = {
-        "shape": list(shape),
-        "voxel_spacing": [float(v) for v in voxel_spacing],
-        "sphere_count_requested": sphere_count,
-        "seed": seed,
-        "min_radius_um": float(min_radius_um),
-        "max_radius_um": _effective_max_radius,
-        "placed_count": placed_count,
-        "radii_um": radii_arr.tolist(),
-        "centers_um": centers_arr.tolist(),
-        "diameter_stats": diam_stats,
-    }
-
-    return {"volume": volume, "ground_truth": ground_truth}
-
-
-# ---------------------------------------------------------------------------
-
-
-def compare_runs(
-    result_a: Dict[str, Any],
-    result_b: Dict[str, Any],
-    *,
-    label_a: str = "monolithic",
-    label_b: str = "chunked",
-) -> Dict[str, Any]:
-    """Compare two ``run_psd_pipeline`` outputs for array equality and
-    numerical differences.
-
-    Required comparison arrays (contract §8.1):
-        bin_centers_um, bin_edges_um, differential_volume, volume_counts
-
-    Parameters
-    ----------
-    result_a, result_b : dicts returned by ``run_psd_pipeline``
-    label_a, label_b   : human-readable labels for each run
-
-    Returns
-    -------
-    dict matching the ``comparison.json`` schema (contract §4.8)::
-
-        labels, exact_equal, array_comparisons, diagnostics_equal,
-        max_abs_diff, nonzero_diff_counts, status
-    """
-    _COMPARE_KEYS = [
-        "bin_centers_um",
-        "bin_edges_um",
-        "differential_volume",
-        "volume_counts",
-    ]
-    _ATOL = 1e-12
-
-    psd_a = result_a["psd"]
-    psd_b = result_b["psd"]
-
-    array_comparisons: Dict[str, Any] = {}
-    all_exact = True
-    global_max_diff = 0.0
-    nonzero_diff_counts: Dict[str, int] = {}
-
-    for key in _COMPARE_KEYS:
-        arr_a = np.asarray(psd_a[key])
-        arr_b = np.asarray(psd_b[key])
-        shapes_match = arr_a.shape == arr_b.shape
-
-        if shapes_match:
-            exact_eq = bool(np.array_equal(arr_a, arr_b))
-            if np.issubdtype(arr_a.dtype, np.floating):
-                diff = np.abs(
-                    arr_a.astype(np.float64) - arr_b.astype(np.float64)
-                )
-                max_diff = float(diff.max()) if diff.size else 0.0
-                nz = int(np.sum(diff > _ATOL))
-            else:
-                not_equal = arr_a != arr_b
-                max_diff = float(np.sum(not_equal))
-                nz = int(not_equal.sum())
-        else:
-            exact_eq = False
-            max_diff = float("nan")
-            nz = -1
-
-        if not exact_eq:
-            all_exact = False
-        if np.isfinite(max_diff) and max_diff > global_max_diff:
-            global_max_diff = max_diff
-        nonzero_diff_counts[key] = nz
-
-        array_comparisons[key] = {
-            "shape_a": list(arr_a.shape),
-            "shape_b": list(arr_b.shape),
-            "shapes_match": shapes_match,
-            "exact_equal": exact_eq,
-            "max_abs_diff": max_diff,
-            "nonzero_diff_count": nz,
-        }
-
-    # Diagnostics equality: stage keys present in both runs must match
-    stages_a = result_a.get("diagnostics", {}).get("stages", {})
-    stages_b = result_b.get("diagnostics", {}).get("stages", {})
-    diagnostics_equal = set(stages_a.keys()) == set(stages_b.keys())
-
-    status = "identical" if (all_exact and diagnostics_equal) else "differ"
-
-    return {
-        "labels": [label_a, label_b],
-        "exact_equal": all_exact,
-        "array_comparisons": array_comparisons,
-        "diagnostics_equal": diagnostics_equal,
-        "max_abs_diff": global_max_diff,
-        "nonzero_diff_counts": nonzero_diff_counts,
-        "status": status,
     }
 
 
@@ -1195,7 +886,6 @@ PSD_TABLE_COLUMNS: Tuple[str, ...] = (
     "Volume_Count",
     "Cumulative_Porosity",
     "Differential_PSD",
-    "is_reliable",
 )
 
 
@@ -1221,7 +911,6 @@ def build_psd_table(result: Dict[str, Any]) -> List[Dict[str, Any]]:
                 "Volume_Count": int(psd["volume_counts"][i]),
                 "Cumulative_Porosity": float(psd["cumulative_volume"][i]),
                 "Differential_PSD": float(psd["differential_volume"][i]),
-                "is_reliable": bool(psd["reliability_flag"][i]),
             }
         )
     return rows
@@ -1238,7 +927,7 @@ def build_summary(
     Parameters
     ----------
     result   : dict returned by ``run_psd_pipeline``
-    mode     : execution mode string, e.g. ``'real'`` or ``'synthetic'``
+    mode     : execution mode string, e.g. ``'real'``
     run_name : run identifier string
 
     Returns
