@@ -6,18 +6,19 @@ Main workflow:
 1) Load a 3D volume (.tif or .nii/.nii.gz)
 2) Compute per-slice metrics (variance + foreground fraction)
 3) Select informative slices with spacing constraints
-4) Optionally run nnUNetv2_predict on selected slices only
-5) Save selected images, predictions, and metadata
+4) Optionally run nnUNetv2_predict on the processed full volume
+5) Save selected images, per-slice previews, full-size bootstrap annotation volume, and metadata
 """
 
 import argparse
 import csv
+import io
 import json
 import os
 import re
 import shutil
-import subprocess
 import sys
+from contextlib import redirect_stderr, redirect_stdout
 from dataclasses import dataclass
 from datetime import datetime
 from pathlib import Path
@@ -27,6 +28,9 @@ import nibabel as nib
 import numpy as np
 import tifffile
 from skimage.filters import threshold_otsu
+
+
+MAX_Z_SLICES = 650
 
 
 @dataclass
@@ -143,6 +147,24 @@ def read_default_norm_type(dataset_info_path: Path) -> str:
     return metadata.get("norm_type", "noNorm")
 
 
+def read_num_annotation_labels(dataset_info_path: Path) -> Optional[int]:
+    if not dataset_info_path.exists():
+        return None
+    with dataset_info_path.open("r", encoding="utf-8") as f:
+        metadata = json.load(f)
+    labels = metadata.get("labels", {})
+    if not isinstance(labels, dict) or len(labels) == 0:
+        return None
+    return len(labels)
+
+
+def sample_id_from_input_path(input_volume: Path) -> str:
+    name = input_volume.name
+    if name.lower().endswith(".nii.gz"):
+        return name[:-7]
+    return input_volume.stem
+
+
 def normalize_image(img: np.ndarray, norm_type: str) -> np.ndarray:
     if norm_type == "noNorm":
         return img
@@ -179,18 +201,53 @@ def load_volume_as_zyx(input_volume: Path) -> np.ndarray:
     )
 
 
+def crop_volume_around_center_zyx(
+    volume_zyx: np.ndarray,
+    max_z_slices: int = MAX_Z_SLICES,
+) -> Tuple[np.ndarray, int, int]:
+    z_dim = volume_zyx.shape[0]
+    if z_dim <= max_z_slices:
+        return volume_zyx, 0, z_dim
+
+    center = z_dim // 2
+    half = max_z_slices // 2
+    start = center - half
+    end = start + max_z_slices
+
+    if start < 0:
+        start = 0
+        end = max_z_slices
+    if end > z_dim:
+        end = z_dim
+        start = z_dim - max_z_slices
+
+    return volume_zyx[start:end], start, end
+
+
+def make_output_index_map(
+    selected_indices: Sequence[int],
+    axis: int,
+    z_crop_start: int,
+) -> Dict[int, int]:
+    if axis == 0:
+        return {idx: idx + z_crop_start for idx in selected_indices}
+    return {idx: idx for idx in selected_indices}
+
+
 def make_dirs(base_dir: Path) -> Dict[str, Path]:
     selected_dir = base_dir / "selected_slices"
     predictions_dir = base_dir / "predictions"
+    annotations_dir = base_dir / "annotations"
     metadata_dir = base_dir / "metadata"
     temp_dir = base_dir / "_temp_nnunet"
     temp_input_dir = temp_dir / "input"
     temp_pred_dir = temp_dir / "pred"
-    for p in [selected_dir, predictions_dir, metadata_dir, temp_input_dir, temp_pred_dir]:
+    for p in [selected_dir, predictions_dir, annotations_dir, metadata_dir, temp_input_dir, temp_pred_dir]:
         p.mkdir(parents=True, exist_ok=True)
     return {
         "selected": selected_dir,
         "predictions": predictions_dir,
+        "annotations": annotations_dir,
         "metadata": metadata_dir,
         "temp": temp_dir,
         "temp_input": temp_input_dir,
@@ -362,17 +419,18 @@ def save_selected_images(
     volume_axis_first: np.ndarray,
     selected_indices: Sequence[int],
     selected_dir: Path,
+    output_index_by_local: Dict[int, int],
 ) -> None:
     for idx in selected_indices:
         img2d = volume_axis_first[idx]
-        out_path = selected_dir / f"slice_{idx:04d}_image.tif"
+        out_idx = output_index_by_local[idx]
+        out_path = selected_dir / f"slice_{out_idx:04d}_image.tif"
         tifffile.imwrite(str(out_path), img2d)
 
 
-def build_nnunet_2d_volume_from_slice(img2d: np.ndarray) -> np.ndarray:
-    # Internal slice is (Y, X). Build single-slice 3D as (Z=1, Y, X), then transpose to (X, Y, Z).
-    vol_zyx = img2d[np.newaxis, ...]
-    return vol_zyx.transpose(2, 1, 0)
+def build_nnunet_xyz_from_zyx_volume(volume_zyx: np.ndarray) -> np.ndarray:
+    # nnUNet NIfTI convention is (X, Y, Z); internal convention here is (Z, Y, X).
+    return volume_zyx.transpose(2, 1, 0)
 
 
 def infer_predict_settings(
@@ -429,27 +487,23 @@ def infer_predict_settings(
     return dataset_id, trainer, configuration, plans, extra_env
 
 
-def write_prediction_inputs(
-    volume_axis_first: np.ndarray,
-    selected_indices: Sequence[int],
+def write_prediction_input_full_volume(
+    volume_zyx: np.ndarray,
     temp_input_dir: Path,
     norm_type: str,
-) -> List[str]:
-    case_ids: List[str] = []
-    for idx in selected_indices:
-        img2d = volume_axis_first[idx].astype(np.float32)
-        img2d = normalize_image(img2d, norm_type).astype(np.float32)
-        vol_xyz = build_nnunet_2d_volume_from_slice(img2d)
-        case_id = f"slice_{idx:04d}"
-        case_ids.append(case_id)
-        out_nii = temp_input_dir / f"{case_id}_0000.nii.gz"
-        nib.save(nib.Nifti1Image(vol_xyz, np.eye(4)), str(out_nii))
-    return case_ids
+) -> str:
+    case_id = "full_volume"
+    vol = normalize_image(volume_zyx.astype(np.float32), norm_type).astype(np.float32)
+    vol_xyz = build_nnunet_xyz_from_zyx_volume(vol)
+    out_nii = temp_input_dir / f"{case_id}_0000.nii.gz"
+    nib.save(nib.Nifti1Image(vol_xyz, np.eye(4)), str(out_nii))
+    return case_id
 
 
 def run_nnunet_predict(
     input_dir: Path,
     output_dir: Path,
+    model_folder: str,
     dataset_id: str,
     trainer: str,
     configuration: str,
@@ -459,8 +513,19 @@ def run_nnunet_predict(
     device: Optional[str],
     extra_env: Dict[str, str],
 ) -> Tuple[int, str, str, List[str]]:
+    from nnunetv2.inference.predict_from_raw_data import nnUNetPredictor
+    import torch
+
+    original_torch_load = torch.load
+
+    def patched_torch_load(*args, **kwargs):
+        kwargs.setdefault("weights_only", False)
+        return original_torch_load(*args, **kwargs)
+
+    torch.load = patched_torch_load
+
     cmd: List[str] = [
-        "nnUNetv2_predict",
+        "nnUNetPredictor.predict_from_files",
         "-i",
         str(input_dir),
         "-o",
@@ -481,43 +546,134 @@ def run_nnunet_predict(
     if device:
         cmd.extend(["-device", device])
 
-    env = os.environ.copy()
-    env.update(extra_env)
+    old_env = {key: os.environ.get(key) for key in extra_env}
+    os.environ.update(extra_env)
+    stdout_buffer = io.StringIO()
+    stderr_buffer = io.StringIO()
 
-    proc = subprocess.run(
-        cmd,
-        capture_output=True,
-        text=True,
-        env=env,
-        check=False,
-    )
-    return proc.returncode, proc.stdout, proc.stderr, cmd
+    try:
+        with redirect_stdout(stdout_buffer), redirect_stderr(stderr_buffer):
+            torch_device = torch.device(device) if device is not None else torch.device("cuda" if torch.cuda.is_available() else "cpu")
+            predictor = nnUNetPredictor(
+                tile_step_size=0.5,
+                use_gaussian=True,
+                use_mirroring=True,
+                perform_everything_on_device=True,
+                device=torch_device,
+                verbose=True,
+                allow_tqdm=True,
+            )
+            predictor.initialize_from_trained_model_folder(
+                model_folder,
+                use_folds=tuple(int(f) if str(f).isdigit() else f for f in folds),
+                checkpoint_name=checkpoint_name or "checkpoint_final.pth",
+            )
+            predictor.predict_from_files(
+                str(input_dir),
+                str(output_dir),
+                save_probabilities=False,
+                overwrite=True,
+                num_processes_preprocessing=2,
+                num_processes_segmentation_export=2,
+                folder_with_segs_from_prev_stage=None,
+                num_parts=1,
+                part_id=0,
+            )
+    except Exception as exc:
+        stderr_buffer.write(f"{type(exc).__name__}: {exc}\n")
+        return 1, stdout_buffer.getvalue(), stderr_buffer.getvalue(), cmd
+    finally:
+        torch.load = original_torch_load
+        for key, value in extra_env.items():
+            if old_env.get(key) is None:
+                os.environ.pop(key, None)
+            else:
+                os.environ[key] = old_env[key]  # type: ignore[index]
+
+    return 0, stdout_buffer.getvalue(), stderr_buffer.getvalue(), cmd
 
 
-def convert_predictions_to_tif(
+def convert_full_volume_prediction_to_tif(
     temp_pred_dir: Path,
     selected_indices: Sequence[int],
     predictions_dir: Path,
-) -> List[str]:
+    output_index_by_local: Dict[int, int],
+    axis: int,
+) -> Tuple[List[str], Dict[int, np.ndarray]]:
     saved: List[str] = []
+    pred2d_by_idx: Dict[int, np.ndarray] = {}
+
+    nii_path = temp_pred_dir / "full_volume.nii.gz"
+    if not nii_path.exists():
+        return saved, pred2d_by_idx
+
+    pred_xyz = nib.load(str(nii_path)).get_fdata()
+    if pred_xyz.ndim != 3:
+        raise ValueError(f"Unexpected prediction shape for {nii_path}: {pred_xyz.shape}")
+
+    pred_zyx = pred_xyz.transpose(2, 1, 0)
+    pred_axis_first = np.moveaxis(pred_zyx, axis, 0)
+
     for idx in selected_indices:
-        case_id = f"slice_{idx:04d}"
-        nii_path = temp_pred_dir / f"{case_id}.nii.gz"
-        if not nii_path.exists():
+        if idx < 0 or idx >= pred_axis_first.shape[0]:
             continue
-        pred_xyz = nib.load(str(nii_path)).get_fdata()
-        if pred_xyz.ndim != 3:
-            raise ValueError(f"Unexpected prediction shape for {nii_path}: {pred_xyz.shape}")
 
-        # Back to (Z, Y, X), then squeeze Z=1 for 2D output.
-        pred_zyx = pred_xyz.transpose(2, 1, 0)
-        pred2d = np.squeeze(pred_zyx, axis=0)
-        pred2d = pred2d.astype(np.uint8)
+        pred2d = np.asarray(pred_axis_first[idx], dtype=np.uint8)
 
-        out_tif = predictions_dir / f"slice_{idx:04d}_pred.tif"
+        out_tif = predictions_dir / f"slice_{output_index_by_local[idx]:04d}_pred.tif"
         tifffile.imwrite(str(out_tif), pred2d)
         saved.append(str(out_tif))
-    return saved
+        pred2d_by_idx[idx] = pred2d
+    return saved, pred2d_by_idx
+
+
+def remap_nnunet_prediction_to_annotation_labels(
+    pred2d: np.ndarray,
+    num_annotation_labels: Optional[int],
+) -> np.ndarray:
+    pred_int = np.rint(pred2d).astype(np.int32)
+    if num_annotation_labels is None or num_annotation_labels < 2:
+        return pred_int.astype(np.uint8)
+
+    # In this project, training remaps annotation 1..N to nnUNet 0..N-1 and ignore to last class.
+    ignore_label = num_annotation_labels - 1
+    ann = pred_int + 1
+    ann[pred_int == ignore_label] = 0
+    ann = np.clip(ann, 0, num_annotation_labels - 1)
+    return ann.astype(np.uint8)
+
+
+def build_full_annotation_volume(
+    volume_axis_first_shape: Tuple[int, int, int],
+    selected_indices: Sequence[int],
+    pred2d_by_idx: Dict[int, np.ndarray],
+    num_annotation_labels: Optional[int],
+) -> np.ndarray:
+    annotation_volume = np.zeros(volume_axis_first_shape, dtype=np.uint8)
+    for idx in selected_indices:
+        if idx not in pred2d_by_idx:
+            continue
+        mapped = remap_nnunet_prediction_to_annotation_labels(
+            pred2d_by_idx[idx],
+            num_annotation_labels=num_annotation_labels,
+        )
+        if mapped.shape != annotation_volume[idx].shape:
+            raise ValueError(
+                f"Predicted slice shape mismatch at index {idx}: "
+                f"pred={mapped.shape}, target={annotation_volume[idx].shape}"
+            )
+        annotation_volume[idx] = mapped
+    return annotation_volume
+
+
+def save_full_annotation_tif(
+    annotation_volume_zyx: np.ndarray,
+    annotations_dir: Path,
+    sample_id: str,
+) -> str:
+    out_path = annotations_dir / f"{sample_id}.tif"
+    tifffile.imwrite(str(out_path), annotation_volume_zyx.astype(np.uint8))
+    return str(out_path)
 
 
 def write_metrics_csv(metrics: Sequence[SliceMetric], out_csv: Path) -> None:
@@ -547,11 +703,13 @@ def write_selected_csv(
     metric_by_idx: Dict[int, SliceMetric],
     reasons: Dict[int, str],
     out_csv: Path,
+    output_index_by_local: Dict[int, int],
 ) -> None:
     with out_csv.open("w", newline="", encoding="utf-8") as f:
         writer = csv.writer(f)
         writer.writerow([
             "slice_idx",
+            "local_slice_idx",
             "variance",
             "foreground_fraction",
             "score",
@@ -561,6 +719,7 @@ def write_selected_csv(
             m = metric_by_idx[idx]
             writer.writerow(
                 [
+                    output_index_by_local[idx],
                     idx,
                     f"{m.variance:.8f}",
                     f"{m.foreground_fraction:.8f}",
@@ -583,6 +742,12 @@ def write_json_metadata(
     used_fallback: bool,
     prediction_cmd: Optional[Sequence[str]],
     predicted_files: Sequence[str],
+    annotation_volume_path: Optional[str],
+    output_index_by_local: Dict[int, int],
+    z_crop_start: int,
+    z_crop_end: int,
+    original_shape_zyx: Tuple[int, int, int],
+    processed_shape_zyx: Tuple[int, int, int],
 ) -> None:
     metric_by_idx = {m.slice_idx: m for m in metrics}
     payload = {
@@ -593,9 +758,14 @@ def write_json_metadata(
         "norm_type": norm_type,
         "otsu_threshold": otsu_threshold,
         "used_fallback": used_fallback,
+        "original_shape_zyx": list(original_shape_zyx),
+        "processed_shape_zyx": list(processed_shape_zyx),
+        "z_crop_start": z_crop_start,
+        "z_crop_end": z_crop_end,
         "selected": [
             {
-                "slice_idx": idx,
+            "slice_idx": output_index_by_local[idx],
+            "local_slice_idx": idx,
                 "reason": reasons.get(idx, "selected"),
                 "variance": metric_by_idx[idx].variance,
                 "foreground_fraction": metric_by_idx[idx].foreground_fraction,
@@ -605,6 +775,7 @@ def write_json_metadata(
         ],
         "prediction_command": list(prediction_cmd) if prediction_cmd else None,
         "predicted_files": list(predicted_files),
+        "annotation_volume_path": annotation_volume_path,
     }
     with out_json.open("w", encoding="utf-8") as f:
         json.dump(payload, f, indent=2)
@@ -628,29 +799,38 @@ def main() -> int:
     norm_type = args.norm_type
     if norm_type is None:
         norm_type = read_default_norm_type(Path.cwd() / "dataset_info.json")
+    num_annotation_labels = read_num_annotation_labels(Path.cwd() / "dataset_info.json")
+    sample_id = sample_id_from_input_path(input_volume)
 
     run_log_lines: List[str] = [
         f"[{datetime.now().isoformat(timespec='seconds')}] start",
         f"input_volume={input_volume}",
+        f"sample_id={sample_id}",
         f"model_or_checkpoint={args.model_or_checkpoint}",
         f"output_dir={output_dir}",
         f"axis={args.axis}",
         f"num_slices={args.num_slices}",
         f"min_slice_gap={args.min_slice_gap}",
         f"norm_type={norm_type}",
+        f"num_annotation_labels={num_annotation_labels}",
         f"dry_run={args.dry_run}",
     ]
 
     dirs = make_dirs(output_dir)
 
     # 1) Load volume as (Z, Y, X)
-    vol_zyx = load_volume_as_zyx(input_volume)
-    if args.axis < 0 or args.axis >= vol_zyx.ndim:
-        print(f"ERROR: axis out of range for volume shape {vol_zyx.shape}: axis={args.axis}")
+    original_vol_zyx = load_volume_as_zyx(input_volume)
+    if args.axis < 0 or args.axis >= original_vol_zyx.ndim:
+        print(f"ERROR: axis out of range for volume shape {original_vol_zyx.shape}: axis={args.axis}")
         return 1
 
+    vol_zyx, z_crop_start, z_crop_end = crop_volume_around_center_zyx(original_vol_zyx)
+
     volume_axis_first = np.moveaxis(vol_zyx, args.axis, 0)
-    run_log_lines.append(f"loaded_shape_zyx={tuple(vol_zyx.shape)}")
+    run_log_lines.append(f"original_shape_zyx={tuple(original_vol_zyx.shape)}")
+    run_log_lines.append(f"processed_shape_zyx={tuple(vol_zyx.shape)}")
+    run_log_lines.append(f"z_crop_start={z_crop_start}")
+    run_log_lines.append(f"z_crop_end={z_crop_end}")
     run_log_lines.append(f"analysis_shape_axis_first={tuple(volume_axis_first.shape)}")
 
     # 2) Compute metrics and select slices
@@ -664,33 +844,40 @@ def main() -> int:
         min_slice_gap=args.min_slice_gap,
     )
     metric_by_idx = {m.slice_idx: m for m in metrics}
+    output_index_by_local = make_output_index_map(selected, args.axis, z_crop_start)
 
     print("Selected slices:")
     for idx in selected:
         m = metric_by_idx[idx]
         why = reasons.get(idx, "selected")
         print(
-            f"  slice={idx:04d} variance={m.variance:.6f} "
+            f"  slice={output_index_by_local[idx]:04d} variance={m.variance:.6f} "
             f"foreground_fraction={m.foreground_fraction:.6f} score={m.score:.6f} reason={why}"
         )
 
     # 3) Save selected raw slices + metadata
-    save_selected_images(volume_axis_first, selected, dirs["selected"])
+    save_selected_images(volume_axis_first, selected, dirs["selected"], output_index_by_local)
     write_metrics_csv(metrics, dirs["metadata"] / "all_slice_metrics.csv")
-    write_selected_csv(selected, metric_by_idx, reasons, dirs["metadata"] / "selected_slices.csv")
+    write_selected_csv(
+        selected,
+        metric_by_idx,
+        reasons,
+        dirs["metadata"] / "selected_slices.csv",
+        output_index_by_local,
+    )
 
     prediction_cmd: Optional[List[str]] = None
     predicted_files: List[str] = []
+    annotation_volume_path: Optional[str] = None
 
     if not args.dry_run:
-        # 4) Build prediction inputs and run nnUNet CLI
-        case_ids = write_prediction_inputs(
-            volume_axis_first,
-            selected,
+        # 4) Build one full-volume prediction input and run 3D nnUNet inference.
+        case_id = write_prediction_input_full_volume(
+            vol_zyx,
             dirs["temp_input"],
             norm_type,
         )
-        run_log_lines.append(f"temp_cases={case_ids}")
+        run_log_lines.append(f"temp_cases={[case_id]}")
 
         try:
             dataset_id, trainer, configuration, plans, extra_env = infer_predict_settings(
@@ -716,6 +903,12 @@ def main() -> int:
                 used_fallback=used_fallback,
                 prediction_cmd=None,
                 predicted_files=[],
+                annotation_volume_path=None,
+                output_index_by_local=output_index_by_local,
+                z_crop_start=z_crop_start,
+                z_crop_end=z_crop_end,
+                original_shape_zyx=tuple(original_vol_zyx.shape),
+                processed_shape_zyx=tuple(vol_zyx.shape),
             )
             print(f"ERROR: {e}")
             return 2
@@ -729,6 +922,7 @@ def main() -> int:
         code, stdout, stderr, cmd = run_nnunet_predict(
             input_dir=dirs["temp_input"],
             output_dir=dirs["temp_pred"],
+            model_folder=args.model_or_checkpoint,
             dataset_id=dataset_id,
             trainer=trainer,
             configuration=configuration,
@@ -762,12 +956,39 @@ def main() -> int:
                 used_fallback=used_fallback,
                 prediction_cmd=prediction_cmd,
                 predicted_files=[],
+                annotation_volume_path=None,
+                output_index_by_local=output_index_by_local,
+                z_crop_start=z_crop_start,
+                z_crop_end=z_crop_end,
+                original_shape_zyx=tuple(original_vol_zyx.shape),
+                processed_shape_zyx=tuple(vol_zyx.shape),
             )
             print("ERROR: nnUNetv2_predict failed. Check run_log.txt for details.")
             return 3
 
-        predicted_files = convert_predictions_to_tif(dirs["temp_pred"], selected, dirs["predictions"])
+        predicted_files, pred2d_by_idx = convert_full_volume_prediction_to_tif(
+            dirs["temp_pred"],
+            selected,
+            dirs["predictions"],
+            output_index_by_local,
+            axis=args.axis,
+        )
+        full_annotation_axis_first = build_full_annotation_volume(
+            volume_axis_first_shape=volume_axis_first.shape,
+            selected_indices=selected,
+            pred2d_by_idx=pred2d_by_idx,
+            num_annotation_labels=num_annotation_labels,
+        )
+        cropped_annotation_zyx = np.moveaxis(full_annotation_axis_first, 0, args.axis)
+        annotation_zyx = np.zeros(original_vol_zyx.shape, dtype=np.uint8)
+        annotation_zyx[z_crop_start:z_crop_end] = cropped_annotation_zyx
+        annotation_volume_path = save_full_annotation_tif(
+            annotation_volume_zyx=annotation_zyx,
+            annotations_dir=dirs["annotations"],
+            sample_id=sample_id,
+        )
         run_log_lines.append(f"saved_predictions={predicted_files}")
+        run_log_lines.append(f"saved_annotation_volume={annotation_volume_path}")
 
     # 5) Save metadata and cleanup
     write_json_metadata(
@@ -783,6 +1004,12 @@ def main() -> int:
         used_fallback=used_fallback,
         prediction_cmd=prediction_cmd,
         predicted_files=predicted_files,
+        annotation_volume_path=annotation_volume_path,
+        output_index_by_local=output_index_by_local,
+        z_crop_start=z_crop_start,
+        z_crop_end=z_crop_end,
+        original_shape_zyx=tuple(original_vol_zyx.shape),
+        processed_shape_zyx=tuple(vol_zyx.shape),
     )
 
     run_log_lines.append(f"used_fallback={used_fallback}")
