@@ -200,8 +200,13 @@ if __name__ == "__main__":
     :param input_dir_images: Path to the folder which contains the images in the .tif file format -- this is now read from the __path__ file
     :param input_dir_masks: Path to the folder which contains the annotations in the .tif file format -- this is now read from the __path__ file
         Requirements:
-        - label 0 are the voxels which are not annotated and should be ignored
-        - label 1 should be the soil matrix
+        - label 0: unannotated/ToPredict (voxels which should be ignored)
+        - label 1: Matrix (soil solid phase)
+        - label 2: Stones (reserved for future annotations)
+        - label 3: POM_type1 (Particulate Organic Matter type 1)
+        - label 4: POM_type2 (Particulate Organic Matter type 2)
+        - label 5: unused (reserved)
+        - label 6: Pore (void spaces/pores)
     :param DatasetName: Name of the Dataset, can be arbitrary
     :param TaskID: Each dataset needs to have a unique ID
     :param Classes: Name of the Classes in the order of the Class IDs in the annotations. The Name

@@ -17,6 +17,9 @@ source /home/phalempi/MPvenv/bin/activate # modify with your paths
 ## declaring the environment variable
 export nnUNet_preprocessed="/data/bosys-nnunet/nnUNet_preprocessed" # modify with your path
 export nnUNet_results="/work/phalempi/nnUNet_results" # modify with your path
+export NNUNET_EARLY_STOP_ENABLED="1"
+export NNUNET_EARLY_STOP_PATIENCE="20"
+export NNUNET_EARLY_STOP_MIN_DELTA="0.001"
 
 ## Run training with nnUNet native command
-nnUNetv2_train 304 3d_fullres $SLURM_ARRAY_TASK_ID -tr nnUNetTrainer_betterIgnoreSampling
+nnUNetv2_train 304 3d_fullres $SLURM_ARRAY_TASK_ID -tr nnUNetTrainer_betterIgnoreSampling_earlyStopValLoss

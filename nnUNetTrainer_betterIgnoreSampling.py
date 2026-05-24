@@ -1,3 +1,4 @@
+import os
 from typing import Union, Tuple
 
 import numpy as np
@@ -268,3 +269,129 @@ class nnUNetTrainer_betterIgnoreSampling_10epochs(nnUNetTrainer_betterIgnoreSamp
         """used for debugging plans etc"""
         super().__init__(plans, configuration, fold, dataset_json, unpack_dataset, device)
         self.num_epochs = 10
+
+
+class nnUNetTrainer_betterIgnoreSampling_earlyStopValLoss(nnUNetTrainer_betterIgnoreSampling):
+    def __init__(self, plans: dict, configuration: str, fold: int, dataset_json: dict, unpack_dataset: bool = True,
+                 device: torch.device = torch.device('cuda')):
+        super().__init__(plans, configuration, fold, dataset_json, unpack_dataset, device)
+        self.early_stopping_enabled = self._parse_bool_env('NNUNET_EARLY_STOP_ENABLED', True)
+        self.early_stopping_patience = self._parse_int_env('NNUNET_EARLY_STOP_PATIENCE', 20, min_value=1)
+        self.early_stopping_min_delta = self._parse_float_env('NNUNET_EARLY_STOP_MIN_DELTA', 0.001, min_value=0.0)
+
+        self._best_val_loss = None
+        self._epochs_without_improvement = 0
+        self._stop_training_early = False
+
+    @staticmethod
+    def _parse_bool_env(var_name: str, default_value: bool) -> bool:
+        raw = os.environ.get(var_name)
+        if raw is None:
+            return default_value
+        value = raw.strip().lower()
+        if value in {'1', 'true', 'yes', 'y', 'on'}:
+            return True
+        if value in {'0', 'false', 'no', 'n', 'off'}:
+            return False
+        return default_value
+
+    @staticmethod
+    def _parse_int_env(var_name: str, default_value: int, min_value: int = None) -> int:
+        raw = os.environ.get(var_name)
+        if raw is None:
+            return default_value
+        try:
+            parsed = int(raw)
+        except ValueError:
+            return default_value
+        if min_value is not None:
+            parsed = max(min_value, parsed)
+        return parsed
+
+    @staticmethod
+    def _parse_float_env(var_name: str, default_value: float, min_value: float = None) -> float:
+        raw = os.environ.get(var_name)
+        if raw is None:
+            return default_value
+        try:
+            parsed = float(raw)
+        except ValueError:
+            return default_value
+        if min_value is not None:
+            parsed = max(min_value, parsed)
+        return parsed
+
+    def on_train_start(self):
+        super().on_train_start()
+        self.print_to_log_file(
+            f'Early stopping config | enabled={self.early_stopping_enabled} | '
+            f'patience={self.early_stopping_patience} | min_delta={self.early_stopping_min_delta}'
+        )
+
+    def on_epoch_end(self):
+        super().on_epoch_end()
+
+        if not self.early_stopping_enabled:
+            return
+
+        current_val_loss = float(self.logger.my_fantastic_logging['val_losses'][-1])
+
+        if self._best_val_loss is None:
+            self._best_val_loss = current_val_loss
+            self._epochs_without_improvement = 0
+            self.print_to_log_file(
+                f'Early stopping: baseline val_loss={np.round(current_val_loss, decimals=6)}'
+            )
+            return
+
+        improvement = self._best_val_loss - current_val_loss
+        if improvement > self.early_stopping_min_delta:
+            self._best_val_loss = current_val_loss
+            self._epochs_without_improvement = 0
+            self.print_to_log_file(
+                f'Early stopping: improvement detected | '
+                f'val_loss={np.round(current_val_loss, decimals=6)} | '
+                f'delta={np.round(improvement, decimals=6)}'
+            )
+            return
+
+        self._epochs_without_improvement += 1
+        self.print_to_log_file(
+            f'Early stopping: no significant improvement | '
+            f'val_loss={np.round(current_val_loss, decimals=6)} | '
+            f'best_val_loss={np.round(self._best_val_loss, decimals=6)} | '
+            f'delta={np.round(improvement, decimals=6)} | '
+            f'wait={self._epochs_without_improvement}/{self.early_stopping_patience}'
+        )
+
+        if self._epochs_without_improvement >= self.early_stopping_patience:
+            self._stop_training_early = True
+            self.print_to_log_file(
+                f'Early stopping triggered at epoch {self.current_epoch} | '
+                f'best_val_loss={np.round(self._best_val_loss, decimals=6)}'
+            )
+
+    def run_training(self):
+        self.on_train_start()
+
+        for epoch in range(self.current_epoch, self.num_epochs):
+            self.on_epoch_start()
+
+            self.on_train_epoch_start()
+            train_outputs = []
+            for batch_id in range(self.num_iterations_per_epoch):
+                train_outputs.append(self.train_step(next(self.dataloader_train)))
+            self.on_train_epoch_end(train_outputs)
+
+            with torch.no_grad():
+                self.on_validation_epoch_start()
+                val_outputs = []
+                for batch_id in range(self.num_val_iterations_per_epoch):
+                    val_outputs.append(self.validation_step(next(self.dataloader_val)))
+                self.on_validation_epoch_end(val_outputs)
+
+            self.on_epoch_end()
+            if self._stop_training_early:
+                break
+
+        self.on_train_end()

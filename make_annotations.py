@@ -21,13 +21,16 @@ def load_image(input_path, sample_id):
     print(f"Loaded {sample_id}, shape: {grayscale_data.shape}")
     return grayscale_data
 
-def load_annotations(output_path, sample_id):
+def load_annotations_from_file(annotation_file):
     import io
-    image_path_annotations = output_path / f'{sample_id}.tif'
-    with open(image_path_annotations, 'rb') as f:
+    with open(annotation_file, 'rb') as f:
         saved_annotations = tiff.imread(io.BytesIO(f.read()))
-    print(f"Loaded previously saved annotations of {sample_id}")
+    print(f"Loaded previously saved annotations from {annotation_file}")
     return saved_annotations
+
+def load_annotations(output_path, sample_id):
+    image_path_annotations = output_path / f'{sample_id}.tif'
+    return load_annotations_from_file(image_path_annotations)
 
 def apply_threshold(grayscale_data):
     middle_index = grayscale_data.shape[0] // 2 - 1
@@ -145,6 +148,7 @@ def main():
     parser.add_argument('-i', type=Path, required=True, help='Path to the input directory')
     parser.add_argument('-o', type=Path, required=True, help='Path to save the output')
     parser.add_argument('-id', type=str, required=True, help='Sample ID')
+    parser.add_argument('-a', '--annotations', type=Path, default=None, required=False, help='Optional explicit annotation file to preload')
     parser.add_argument('-write', type=str, default= 'yes', required=False, help='Whether to save annotations or not - Possible answers: yes, no - /!\ yes overwrites previous annotations - Default is yes')
     parser.add_argument('-v', action='store_true', help='Increase output verbosity')
     args = parser.parse_args()
@@ -152,10 +156,14 @@ def main():
     # loading grayscale data
     grayscale_data = load_image(args.i, args.id)
 
-    # loading annotations if they exist, otherwise applying Otsu threshold
-    if (args.o / f'{args.id}.tif').exists():
+    # loading annotations: explicit file if provided, otherwise existing default behavior
+    if args.annotations is not None:
+        if not args.annotations.exists():
+            raise FileNotFoundError(f'Explicit annotations file not found: {args.annotations}')
+        annotations = load_annotations_from_file(args.annotations)
+    elif (args.o / f'{args.id}.tif').exists():
         annotations = load_annotations(args.o, args.id)
-    else:   
+    else:
         annotations = apply_threshold(grayscale_data)
     metadata = load_metadata(Path.cwd() / 'dataset_info.json')
     color_dict = normalize_colors(metadata)

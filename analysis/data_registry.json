@@ -1,0 +1,61 @@
+{
+  "project": {
+    "name": "nnUNet4SoilXrayCT",
+    "canonical_data_root": "\\\\hive3065\\Yael_Mishael\\Rony\\remote_computer backup\\10.5",
+    "updated_at": "2026-05-24T00:00:00"
+  },
+  "paths": {
+    "canonical_data_root": "\\\\hive3065\\Yael_Mishael\\Rony\\remote_computer backup\\10.5"
+  },
+  "samples": [
+    {
+      "sample_id": "mishmar_hanegev_Cu011_samp_2_Rec_nlm",
+      "raw_tiff_path": "\\\\hive3065\\Yael_Mishael\\Rony\\remote_computer backup\\10.5\\mishmar_hanegev_Cu011_samp_2_Rec_nlm.tif",
+      "nifti_input_path": null,
+      "split_input_dir": null,
+      "prediction_output_dir": "\\\\hive3065\\Yael_Mishael\\Rony\\remote_computer backup\\10.5\\bootstrap_outputs_fullctx\\mishmar_hanegev_Cu011_samp_2_Rec_nlm\\predictions",
+      "bad_slice_manifest_path": null,
+      "annotation_versions": [
+        "\\\\hive3065\\Yael_Mishael\\Rony\\remote_computer backup\\10.5\\annotations\\mishmar_hanegev_Cu011_samp_2_Rec_nlm.tif",
+        "\\\\hive3065\\Yael_Mishael\\Rony\\remote_computer backup\\10.5\\bootstrap_outputs_fullctx\\mishmar_hanegev_Cu011_samp_2_Rec_nlm\\annotations\\mishmar_hanegev_Cu011_samp_2_Rec_nlm.tif",
+        "\\\\hive3065\\Yael_Mishael\\Rony\\remote_computer backup\\10.5\\bootstrap_outputs\\mishmar_hanegev_Cu011_samp_2_Rec_nlm\\annotations\\mishmar_hanegev_Cu011_samp_2_Rec_nlm.tif"
+      ],
+      "latest_annotation_path": "\\\\hive3065\\Yael_Mishael\\Rony\\remote_computer backup\\10.5\\annotations\\mishmar_hanegev_Cu011_samp_2_Rec_nlm.tif",
+      "status": "validated_yellow_overwrite_protected"
+    }
+  ],
+  "manifests": {
+    "bad_slice_manifests": []
+  },
+  "annotations": {
+    "active_latest": {
+      "mishmar_hanegev_Cu011_samp_2_Rec_nlm": "\\\\hive3065\\Yael_Mishael\\Rony\\remote_computer backup\\10.5\\annotations\\mishmar_hanegev_Cu011_samp_2_Rec_nlm.tif"
+    }
+  },
+  "checks": {
+    "last_gate": {
+      "timestamp": "2026-05-24T00:00:00",
+      "sample_id": "mishmar_hanegev_Cu011_samp_2_Rec_nlm",
+      "decision": "YELLOW",
+      "reason": "Existing valid annotation found; routed to versioned output directory to prevent overwrite.",
+      "resolved_paths": {
+        "input_file": "\\\\hive3065\\Yael_Mishael\\Rony\\remote_computer backup\\10.5\\mishmar_hanegev_Cu011_samp_2_Rec_nlm.tif",
+        "annotation_preload": "\\\\hive3065\\Yael_Mishael\\Rony\\remote_computer backup\\10.5\\annotations\\mishmar_hanegev_Cu011_samp_2_Rec_nlm.tif",
+        "output_dir": "\\\\hive3065\\Yael_Mishael\\Rony\\remote_computer backup\\10.5\\bootstrap_outputs_fullctx\\mishmar_hanegev_Cu011_samp_2_Rec_nlm\\annotations_v20260524_r01"
+      }
+    }
+  },
+  "history": [
+    {
+      "timestamp": "2026-05-24T00:00:00",
+      "action": "validate_make_annotations_paths",
+      "sample_id": "mishmar_hanegev_Cu011_samp_2_Rec_nlm",
+      "decision": "YELLOW",
+      "paths_touched": [
+        "\\\\hive3065\\Yael_Mishael\\Rony\\remote_computer backup\\10.5\\mishmar_hanegev_Cu011_samp_2_Rec_nlm.tif",
+        "\\\\hive3065\\Yael_Mishael\\Rony\\remote_computer backup\\10.5\\annotations\\mishmar_hanegev_Cu011_samp_2_Rec_nlm.tif",
+        "\\\\hive3065\\Yael_Mishael\\Rony\\remote_computer backup\\10.5\\bootstrap_outputs_fullctx\\mishmar_hanegev_Cu011_samp_2_Rec_nlm\\annotations_v20260524_r01"
+      ]
+    }
+  ]
+}

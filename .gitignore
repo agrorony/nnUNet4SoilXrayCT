@@ -1,0 +1,25 @@
+# Python bytecode and caches
+__pycache__/
+*.py[cod]
+*.pyd
+*.so
+.pytest_cache/
+.mypy_cache/
+
+# Notebook state
+.ipynb_checkpoints/
+
+# Local editor config
+.vscode/
+
+# Generated analysis artifacts
+analysis/iteration_state.json
+analysis/selected_outputs/
+
+# Generated preprocessing outputs
+preprocess/nlm_output/
+preprocess/norm200_output/
+
+# Common OS junk
+.DS_Store
+Thumbs.db

@@ -60,7 +60,7 @@ Primary environment (authoritative for local execution):
 Detected interpreter details:
 - Name: `venv-napari`
 - Python: `3.11`
-- Interpreter path: `C:/Users/ronys/miniconda3/envs/venv-napari/python.exe`
+- Interpreter path: `C:/Users/rony.schwartz/.conda/envs/venv-napari/python.exe`
 
 Activation (PowerShell):
 
@@ -73,7 +73,7 @@ conda activate venv-napari
 - ALWAYS use `venv-napari` for local execution.
 - NEVER create a new environment.
 - NEVER switch environments automatically.
-- ALL Python execution must use `C:/Users/ronys/miniconda3/envs/venv-napari/python.exe`.
+- ALL Python execution must use `C:/Users/rony.schwartz/.conda/envs/venv-napari/python.exe`.
 
 ### Execution Context Mapping
 
@@ -92,7 +92,7 @@ Rules:
 
 ### Interpreter Enforcement
 
-- All Python commands for local execution must use: `C:/Users/ronys/miniconda3/envs/venv-napari/python.exe`.
+- All Python commands for local execution must use: `C:/Users/rony.schwartz/.conda/envs/venv-napari/python.exe`.
 - Do NOT use system Python.
 - Do NOT rely on PATH resolution.
 - Do NOT call `python` without explicit environment clarity.
@@ -192,6 +192,16 @@ Dependency baseline inferred from imports and installed envs:
 4. Label semantics:
 - `dataset_info.json` label `0` is `ToPredict` (unannotated/ignore source).
 - `mask_to_nnUNet` remaps label `0` to last class (ignore), shifts remaining class IDs by `-1`.
+- Current annotation classes in this repository:
+  - `0`: `ToPredict`
+  - `1`: `Matrix`
+  - `2`: `Stones`
+  - `3`: `POM_type1`
+  - `4`: `POM_type2`
+  - `5`: `unused`
+  - `6`: `Pore`
+- Iteration rule: user-facing QA and slice-injection handoffs must use annotation label space.
+- For `inspect_predictions.py`, run with `--reverse_label_map` so displayed prediction IDs match annotation IDs.
 
 5. Dtype conventions observed:
 - Annotation masks saved as `uint8` TIFF.
@@ -244,7 +254,7 @@ Dependency baseline inferred from imports and installed envs:
 MUST:
 - Explain intended code changes before applying edits.
 - Enforce existing-environment usage and provide activation command when relevant.
-- Enforce the local interpreter path `C:/Users/ronys/miniconda3/envs/venv-napari/python.exe` for local Python execution.
+- Enforce the local interpreter path `C:/Users/rony.schwartz/.conda/envs/venv-napari/python.exe` for local Python execution.
 - Respect device logic already encoded by the repository (CPU scripts stay CPU; GPU scripts keep CUDA guards).
 - Keep stage boundaries intact (annotation, conversion, training prep, split, concat, analysis).
 - Preserve nnUNet naming and label remapping semantics.
@@ -257,7 +267,7 @@ MUST NOT:
 - Replace file-format bridges (Fiji macro steps) with incompatible ad hoc conversions unless explicitly requested.
 - Break split filename conventions used by concatenation.
 All command examples MUST use full interpreter path:
-C:/Users/ronys/miniconda3/envs/venv-napari/python.exe script.py
+C:/Users/rony.schwartz/.conda/envs/venv-napari/python.exe script.py
 
 Do NOT use:
 python script.py

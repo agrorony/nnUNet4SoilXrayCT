@@ -31,6 +31,20 @@ Before getting down to business, let´s define a few terms to avoid potential co
 # Workflow
 Our workflow includes several crucial steps such as image annotation, conversion, preprocessing, model training, inference and analysis of the output data (Figure 1). The workflow was mainly developed in Python. It uses several scripts (steps in italic font on figure 1) that create annotations and convert the images to nnUNet-friendly formats, before processing using the native nnUNet pipeline (steps in bold font on figure 1). 
 
+## Quick prediction inspection in Napari (single volume)
+Use the standalone script `inspect_predictions.py` to visually compare one prediction volume with its original volume in Napari.
+
+Supported input formats: `.nii`, `.nii.gz`, `.tif`, `.tiff`, `.mha`.
+
+Command (local):
+````shell
+C:/Users/ronys/miniconda3/envs/venv-napari/python.exe inspect_predictions.py --prediction_volume /path/to/prediction.nii.gz --original_volume /path/to/original.tif
+````
+
+Optional flags:
+- `--prediction_opacity 0.5` to control overlay opacity.
+- `--hide_prediction` to start with prediction hidden.
+
 <p align="center">
   <img src="Figures/Workflow.png" width="500"> 
 </p>

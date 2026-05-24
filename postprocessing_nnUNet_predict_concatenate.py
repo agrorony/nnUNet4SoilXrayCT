@@ -13,19 +13,21 @@ def ensemble_files(img_folder, output_folder):
     image_roots = np.unique([img.rsplit("__", 4)[0] for img in images])
 
     for image_root in image_roots:
-        images_i = [image for image in images if image_root in image]
+        images_i = [image for image in images if image.startswith(f"{image_root}__")]
 
         print(f"{image_root}: {len(images_i)} files found")
 
         params = np.array(
-            # [image.replace("__0000.nii.gz", "").rsplit("__", 3)[-3:] for image in images_i],
             [image.replace("_.nii.gz", "").rsplit("__", 3)[-3:] for image in images_i],
             dtype=int,
         )
 
+        # Keep [axis, min, max] triplets paired and ordered by chunk start position.
+        params = params[np.argsort(params[:, 1])]
+
         axis = params[0, 0]
-        min_pos = np.sort(params[:, 1])
-        max_pos = np.sort(params[:, 2])
+        min_pos = params[:, 1]
+        max_pos = params[:, 2]
         overlap = (
             np.insert(max_pos, 0, min_pos[0])
             - np.insert(min_pos, len(min_pos), max_pos[-1])
