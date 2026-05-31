@@ -70,6 +70,7 @@ try:
         PSD_TABLE_COLUMNS,
         build_psd_table,
         build_summary,
+        plot_psd_extras,
         run_psd_pipeline,
         to_json_serializable,
     )
@@ -88,6 +89,10 @@ _F_RESULT = "result_psd.json"
 _F_DIAG = "diagnostics.json"
 _F_SUMMARY = "summary.json"
 _F_TABLE = "psd_table.csv"
+_F_TABLE_RAW = "psd_raw_data.csv"
+_F_PLOT_HIST = "psd_30bins_microbial_active_domain.png"
+_F_PLOT_KDE = "psd_kde.png"
+_F_PLOT_20BINS = "psd_20bins_30_150um.png"
 
 
 # ===========================================================================
@@ -168,11 +173,7 @@ def _write_json(run_dir: Path, filename: str, data: Any) -> None:
 
 def _write_plots(run_dir: Path, result: Dict[str, Any]) -> List[str]:
     """Generate psd_hist_30bins.png and psd_kde.png into *run_dir*."""
-    pore_diameters_um = result.get("pore_diameters_um", np.array([], dtype=np.float64))
-    voxel_spacing = result["psd"].get("voxel_spacing")
-    return plot_psd_extras(
-        pore_diameters_um, result["psd"], run_dir, voxel_spacing=voxel_spacing
-    )
+    return plot_psd_extras(result["psd"], run_dir)
 
 
 def _write_csv(run_dir: Path, rows: List[Dict[str, Any]]) -> None:
@@ -182,6 +183,73 @@ def _write_csv(run_dir: Path, rows: List[Dict[str, Any]]) -> None:
         writer = csv.DictWriter(fh, fieldnames=list(PSD_TABLE_COLUMNS))
         writer.writeheader()
         writer.writerows(rows)
+
+
+def _write_raw_csv(run_dir: Path, rows: List[Dict[str, Any]]) -> None:
+    """Write psd_raw_data.csv (same data as psd_table.csv, agent-spec required name)."""
+    path = run_dir / _F_TABLE_RAW
+    with path.open("w", newline="", encoding="utf-8") as fh:
+        writer = csv.DictWriter(fh, fieldnames=list(PSD_TABLE_COLUMNS))
+        writer.writeheader()
+        writer.writerows(rows)
+
+
+def _write_20bins_plot(run_dir: Path, psd_dict: Dict[str, Any]) -> None:
+    """Generate psd_20bins_30_150um.png — zoomed 30–150 µm view, 20 bins.
+
+    Y-axis is per-bin pore volume fraction (Volume_Count / total_pore_voxels).
+    """
+    import matplotlib.pyplot as plt
+
+    bin_centers_um = np.asarray(psd_dict.get("bin_centers_um", np.array([])))
+    volume_counts = np.asarray(psd_dict.get("volume_counts", np.array([])))
+    total_pore_voxels = int(psd_dict.get("total_pore_voxels", max(int(volume_counts.sum()), 1)))
+
+    if bin_centers_um.size == 0:
+        return
+
+    # Per-bin pore volume fraction for all bins
+    volume_fraction = volume_counts / total_pore_voxels
+
+    # Filter to [30, 150] µm range
+    mask = (bin_centers_um >= 30.0) & (bin_centers_um <= 150.0)
+    filtered_centers = bin_centers_um[mask]
+    filtered_fracs = volume_fraction[mask]
+
+    if filtered_centers.size == 0:
+        return
+
+    # 20 log-spaced bins in target range
+    target_bin_edges = np.logspace(np.log10(30.0), np.log10(150.0), 21)
+    target_bin_centers = (target_bin_edges[:-1] + target_bin_edges[1:]) / 2
+
+    # Re-bin the filtered data into 20 bins
+    hist_counts, _ = np.histogram(filtered_centers, bins=target_bin_edges,
+                                   weights=filtered_fracs)
+
+    fig, ax = plt.subplots(figsize=(10, 6), dpi=100)
+    ax.bar(
+        target_bin_centers,
+        hist_counts,
+        width=np.diff(target_bin_edges),
+        color="#e67300",
+        edgecolor="white",
+        linewidth=0.5,
+        alpha=0.85,
+        label="Pore volume fraction per bin (30–150 µm)",
+    )
+
+    ax.set_xlabel("Pore Diameter (µm)", fontsize=11)
+    ax.set_ylabel("Pore volume fraction", fontsize=11)
+    ax.set_title("Microbial Active Domain — PSD (20 bins, 30–150 µm)",
+                  fontsize=12, fontweight="bold")
+    ax.set_xscale("log")
+    ax.grid(True, which="both", alpha=0.3)
+    ax.legend()
+
+    f = run_dir / _F_PLOT_20BINS
+    fig.savefig(str(f), dpi=100, bbox_inches="tight")
+    plt.close(fig)
 
 
 def _write_all_outputs(
@@ -213,10 +281,17 @@ def _write_all_outputs(
     _write_json(run_dir, _F_SUMMARY, summary)
 
     # psd_table.csv  (§4.6)
-    _write_csv(run_dir, build_psd_table(result))
+    psd_rows = build_psd_table(result)
+    _write_csv(run_dir, psd_rows)
+    
+    # psd_raw_data.csv (agent-spec required name)
+    _write_raw_csv(run_dir, psd_rows)
 
     # supplementary diagnostic plots
     _write_plots(run_dir, result)
+    
+    # psd_20bins_30_150um.png (agent-spec required plot)
+    _write_20bins_plot(run_dir, result["psd"])
 
 
 # ===========================================================================
@@ -317,8 +392,8 @@ def _run_real(args: argparse.Namespace) -> None:
             f" – {float(psd['bin_centers_um'].max()):.2f} µm"
         )
     print("Files written:")
-    for f in (_F_CONFIG, _F_RESULT, _F_DIAG, _F_SUMMARY, _F_TABLE,
-              _F_PLOT_HIST, _F_PLOT_KDE):
+    for f in (_F_CONFIG, _F_RESULT, _F_DIAG, _F_SUMMARY, _F_TABLE, _F_TABLE_RAW,
+              _F_PLOT_HIST, _F_PLOT_KDE, _F_PLOT_20BINS):
         print(f"  {f}")
 
 

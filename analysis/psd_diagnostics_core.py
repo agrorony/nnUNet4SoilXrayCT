@@ -963,3 +963,192 @@ def build_summary(
         "mode": mode,
         "run_name": run_name,
     }
+
+
+# ---------------------------------------------------------------------------
+# Plot generation  (§4.5 graphical diagnostics)
+# ---------------------------------------------------------------------------
+
+def plot_psd_extras(
+    psd_dict: Dict[str, Any],
+    run_dir: str | Path,
+) -> List[str]:
+    """Generate diagnostic PSD plots from binned data.
+
+    Generates two plots:
+
+    - ``psd_30bins_microbial_active_domain.png``: 30-bin histogram (full diameter
+      range, log-scale x), y-axis = per-bin pore volume fraction
+      (Volume_Count / total_pore_voxels), cumulative on right axis, with the
+      30–150 µm microbial active domain highlighted.
+    - ``psd_kde.png``: kernel density estimate (log-space, Jacobian-corrected).
+
+    Parameters
+    ----------
+    psd_dict : dict
+        Pipeline output dict with keys: bin_centers_um, bin_edges_um,
+        volume_counts, total_pore_voxels, voxel_spacing
+    run_dir : str or Path
+        Directory to save PNG files
+
+    Returns
+    -------
+    list[str]
+        Filenames written (psd_30bins_microbial_active_domain.png, psd_kde.png)
+    """
+    import matplotlib.pyplot as plt
+    from pathlib import Path
+
+    _MICROBIAL_LO = 30.0
+    _MICROBIAL_HI = 150.0
+
+    run_dir = Path(run_dir)
+    written_files = []
+
+    # Extract binned data — convert lists to numpy arrays (JSON compat)
+    bin_centers_um = np.asarray(psd_dict.get("bin_centers_um", np.array([])))
+    volume_counts  = np.asarray(psd_dict.get("volume_counts",  np.array([])))
+    total_pore_voxels = int(
+        psd_dict.get("total_pore_voxels", max(int(volume_counts.sum()), 1))
+    )
+
+    if bin_centers_um.size == 0:
+        return written_files
+
+    # ── Re-bin into exactly 30 log-spaced bins across the FULL diameter range ──
+    _N_PLOT_BINS = 30
+    d_min = float(bin_centers_um.min())
+    d_max = float(bin_centers_um.max())
+    plot_edges   = np.logspace(np.log10(d_min), np.log10(d_max), _N_PLOT_BINS + 1)
+    plot_centers = np.sqrt(plot_edges[:-1] * plot_edges[1:])  # geometric mean
+
+    rebinned, _ = np.histogram(bin_centers_um, bins=plot_edges, weights=volume_counts)
+
+    # Per-bin pore volume fraction (y-axis)
+    volume_fraction    = rebinned / total_pore_voxels
+    cumulative_fraction = np.cumsum(volume_fraction)
+    bar_widths = np.diff(plot_edges)
+
+    # Bar colours: orange for microbial active domain, blue elsewhere
+    bar_colors = [
+        "#e67300" if _MICROBIAL_LO <= d <= _MICROBIAL_HI else "#4878cf"
+        for d in plot_centers
+    ]
+
+    # --- Plot 1: full-range PSD (30 bins) with microbial domain highlight ----
+    fig1, ax1_l = plt.subplots(figsize=(11, 6), dpi=100)
+    ax1_r = ax1_l.twinx()
+
+    ax1_l.bar(
+        plot_centers,
+        volume_fraction,
+        width=bar_widths,
+        color=bar_colors,
+        edgecolor="white",
+        linewidth=0.5,
+        alpha=0.85,
+        label="Pore volume fraction per bin",
+    )
+
+    # Cumulative line
+    ax1_r.plot(
+        plot_centers,
+        cumulative_fraction,
+        color="black",
+        linewidth=2,
+        label="Cumulative",
+    )
+    ax1_r.set_ylim(0, 1.05)
+    ax1_r.set_ylabel("Cumulative pore volume fraction", fontsize=11)
+
+    # Microbial active domain shading + annotation
+    x_lo = max(_MICROBIAL_LO, d_min)
+    x_hi = min(_MICROBIAL_HI, d_max)
+    if x_lo < x_hi:
+        ax1_l.axvspan(x_lo, x_hi, alpha=0.10, color="orange", zorder=0)
+        ax1_l.axvline(x_lo, color="orange", linestyle="--", linewidth=1.2, alpha=0.8)
+        ax1_l.axvline(x_hi, color="orange", linestyle="--", linewidth=1.2, alpha=0.8)
+        mid_x = float(np.sqrt(x_lo * x_hi))
+        y_top = float(volume_fraction.max()) if volume_fraction.max() > 0 else 1.0
+        ax1_l.text(
+            mid_x, y_top * 0.97,
+            "Microbial\nactive domain\n30–150 µm",
+            ha="center", va="top", fontsize=9, color="darkorange",
+            bbox=dict(boxstyle="round,pad=0.3", facecolor="white",
+                      edgecolor="orange", alpha=0.85),
+        )
+
+    ax1_l.set_xlabel("Pore Diameter (µm)", fontsize=11)
+    ax1_l.set_ylabel("Pore volume fraction", fontsize=11)
+    ax1_l.set_xscale("log")
+    ax1_l.set_title(
+        f"Pore Size Distribution — {_N_PLOT_BINS} bins (full range)",
+        fontsize=12, fontweight="bold",
+    )
+    ax1_l.grid(True, which="both", alpha=0.3)
+
+    # Combined legend
+    h1, l1 = ax1_l.get_legend_handles_labels()
+    h2, l2 = ax1_r.get_legend_handles_labels()
+    ax1_l.legend(h1 + h2, l1 + l2, loc="upper right", fontsize=10)
+
+    f1 = run_dir / "psd_30bins_microbial_active_domain.png"
+    fig1.savefig(str(f1), dpi=100, bbox_inches="tight")
+    plt.close(fig1)
+    written_files.append("psd_30bins_microbial_active_domain.png")
+    
+    # --- Plot 2: KDE (log-space, Jacobian-corrected) ---
+    fig2, ax2 = plt.subplots(figsize=(10, 6), dpi=100)
+    
+    # Build smooth KDE from the binned data
+    # Treat each bin center as a sample, weighted by volume_counts
+    if volume_counts.sum() > 0:
+        # Create weighted samples for KDE
+        samples_for_kde = []
+        for center, count in zip(bin_centers_um, volume_counts):
+            # Use count as sample multiplicity (rounded)
+            samples_for_kde.extend([center] * max(1, int(round(count / volume_counts.max() * 1000))))
+        
+        if len(samples_for_kde) > 1:
+            from scipy.stats import gaussian_kde
+            
+            # KDE in log-space
+            log_samples = np.log10(np.array(samples_for_kde))
+            try:
+                kde = gaussian_kde(log_samples)
+                
+                # Evaluate on a fine log-scale grid
+                x_eval = np.logspace(np.log10(bin_centers_um.min()), 
+                                     np.log10(bin_centers_um.max()), 200)
+                x_log = np.log10(x_eval)
+                y_log_space = kde(x_log)
+                
+                # Jacobian correction: dy_linear = dy_log * d(log x)/dx = dy_log / x
+                y_linear_space = y_log_space / x_eval
+                
+                ax2.plot(x_eval, y_linear_space, color="blue", linewidth=2, label="KDE (Jacobian-corrected)")
+                ax2.fill_between(x_eval, y_linear_space, alpha=0.3, color="blue")
+            except Exception:
+                # If KDE fails, fall back to bar chart using the 30 re-binned data
+                ax2.bar(
+                    plot_centers,
+                    volume_fraction,
+                    width=bar_widths,
+                    edgecolor="black",
+                    alpha=0.7,
+                    label="Pore volume fraction (fallback)",
+                )
+    
+    ax2.set_xlabel("Pore Diameter (µm)", fontsize=11)
+    ax2.set_ylabel("Density", fontsize=11)
+    ax2.set_title("PSD KDE (log-space, Jacobian-corrected)", fontsize=12, fontweight="bold")
+    ax2.set_xscale("log")
+    ax2.grid(True, which="both", alpha=0.3)
+    ax2.legend()
+    
+    f2 = run_dir / "psd_kde.png"
+    fig2.savefig(str(f2), dpi=100, bbox_inches="tight")
+    plt.close(fig2)
+    written_files.append("psd_kde.png")
+    
+    return written_files
