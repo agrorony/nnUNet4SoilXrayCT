@@ -1,0 +1,23 @@
+{
+  "r01": {
+    "exists": true,
+    "path": "\\\\hive3065\\Yael_Mishael\\Rony\\remote_computer backup\\10.5\\bootstrap_outputs_fullctx\\mishmar_hanegev_Cu011_samp_2_Rec_nlm\\annotations_v20260525_r01\\mishmar_hanegev_Cu011_samp_2_Rec_nlm.tif",
+    "size": 347431542,
+    "mtime": 1779716514.753786,
+    "sha256": "a93d69e772ddd01c391d2ebb26e97ff913b04c9a4ace1ed347a14707dae5caf5"
+  },
+  "r02": {
+    "exists": true,
+    "path": "\\\\hive3065\\Yael_Mishael\\Rony\\remote_computer backup\\10.5\\bootstrap_outputs_fullctx\\mishmar_hanegev_Cu011_samp_2_Rec_nlm\\annotations_v20260525_r02\\mishmar_hanegev_Cu011_samp_2_Rec_nlm.tif",
+    "size": 347431542,
+    "mtime": 1780145401.40178,
+    "sha256": "ab84c6dcf999406a77799dbfc0705e3130d33549d5adc7342ddb479e89b313e3"
+  },
+  "stage": {
+    "exists": true,
+    "path": "\\\\hive3065\\Yael_Mishael\\Rony\\remote_computer backup\\nnUNet_resources\\multi_sample_iter01\\_multi_sample_stage\\annotations\\mishmar_hanegev_Cu011_samp_2_Rec_nlm.tif",
+    "size": 347431542,
+    "mtime": 1780145401.40178,
+    "sha256": "ab84c6dcf999406a77799dbfc0705e3130d33549d5adc7342ddb479e89b313e3"
+  }
+}

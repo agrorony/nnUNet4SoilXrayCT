@@ -44,6 +44,16 @@ When values are unknown, mark as unresolved and ask only for the missing fields.
 
 Persist state to analysis/iteration_state.json whenever the state changes.
 
+Registry coordination boundary (mandatory):
+- Do not directly edit analysis/data_registry.json.
+- Do not directly edit registry version pointers, including annotations.active_latest, samples[].latest_annotation_path, or samples[].annotation_versions.
+- When a registry mutation is needed, hand off to the Data Registry and Path Validation agent with a proposed mutation package:
+  - sample_id
+  - requested path update
+  - reason for change
+- Only after Data Registry returns a GREEN gate decision may workflow continue.
+- After registry approval, record the gate decision reference in analysis/iteration_state.json notes.
+
 ## Repository and Environment Rules
 
 Follow local execution policy exactly:

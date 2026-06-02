@@ -1,0 +1,13 @@
+NLM annotation candidates:
+PATH=\\hive3065\Yael_Mishael\Rony\remote_computer backup\10.5\annotations\nlm_volume.tif
+LASTWRITE=2026-05-30 15:18:24
+SIZE=275578322
+
+PATH=\\hive3065\Yael_Mishael\Rony\remote_computer backup\10.5\bootstrap_outputs\nlm_volume\annotations\nlm_volume.tif
+LASTWRITE=2026-05-10 23:12:10
+SIZE=275578322
+
+PATH=\\hive3065\Yael_Mishael\Rony\remote_computer backup\10.5\bootstrap_outputs_fullctx\nlm_volume\annotations\nlm_volume.tif
+LASTWRITE=2026-05-10 22:49:41
+SIZE=275578322
+

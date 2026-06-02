@@ -327,12 +327,31 @@ Agents MUST NOT commit or execute changes to **scientific code paths** without e
 1. Scientific Assumptions Block (input assumptions, method assumptions, expected impact).
 2. Explicit human approval in the chat turn before execution.
 
+### Mode C: Registry Coordination / Must_Consult
+
+Agents MUST consult the Data Registry and Path Validation agent before editing version-tracking files.
+
+Protected files and fields:
+- `analysis/data_registry.json` (all fields)
+- especially: `annotations.active_latest`, `samples[].latest_annotation_path`, `samples[].annotation_versions`, `history`
+
+Mandatory flow:
+1. Orchestration agent proposes mutation (sample_id, requested update, reason).
+2. Data Registry agent validates existence, freshness, lineage, and overwrite safety.
+3. Data Registry agent returns gate decision: GREEN, YELLOW, or RED.
+4. Only Data Registry agent writes `analysis/data_registry.json`.
+5. Orchestration agent logs gate decision reference in `analysis/iteration_state.json`.
+
+Forbidden:
+- ml workflow orchestration must not directly edit `analysis/data_registry.json`.
+
 ### Escalation Matrix
 
 | Change Type | Required Action |
 |---|---|
 | Pipeline structure, stage order, naming conventions | `@architect` routes; can execute autonomously |
 | Scientific logic (any path listed above) | `@scientist` proposes; human approves; then execute |
+| Registry/version-tracking mutations (`analysis/data_registry.json`) | Must consult `Data Registry and Path Validation`; only that agent may write |
 | Engineering implementation (after semantics fixed) | `@segmentation` executes autonomously |
 | Memory/chunking strategy | `@performance` executes; escalate if output changes |
 | Compliance validation | `@reviewer` issues PASS/FAIL |

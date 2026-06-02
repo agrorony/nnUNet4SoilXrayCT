@@ -2,7 +2,7 @@
   "project": {
     "name": "nnUNet4SoilXrayCT",
     "canonical_data_root": "\\\\hive3065\\Yael_Mishael\\Rony\\remote_computer backup\\10.5",
-    "updated_at": "2026-05-30T14:30:00+02:00"
+    "updated_at": "2026-05-31T18:30:00+02:00"
   },
   "paths": {
     "canonical_data_root": "\\\\hive3065\\Yael_Mishael\\Rony\\remote_computer backup\\10.5"
@@ -17,13 +17,14 @@
       "prediction_concatenated_path": "\\\\hive3065\\Yael_Mishael\\Rony\\remote_computer backup\\nnUNet_resources\\mishmar_hanegev_Cu011_samp_2_Rec_nlm\\inference_output_concat\\mishmar_hanegev_Cu011_samp_2_Rec_nlm.nii.gz",
       "bad_slice_manifest_path": null,
       "annotation_versions": [
+        "\\\\hive3065\\Yael_Mishael\\Rony\\remote_computer backup\\10.5\\bootstrap_outputs_fullctx\\mishmar_hanegev_Cu011_samp_2_Rec_nlm\\annotations_v20260525_r02\\mishmar_hanegev_Cu011_samp_2_Rec_nlm.tif",
         "\\\\hive3065\\Yael_Mishael\\Rony\\remote_computer backup\\10.5\\bootstrap_outputs_fullctx\\mishmar_hanegev_Cu011_samp_2_Rec_nlm\\annotations_v20260525_r01\\mishmar_hanegev_Cu011_samp_2_Rec_nlm.tif",
         "\\\\hive3065\\Yael_Mishael\\Rony\\remote_computer backup\\10.5\\bootstrap_outputs_fullctx\\mishmar_hanegev_Cu011_samp_2_Rec_nlm\\annotations_v20260524_r01\\mishmar_hanegev_Cu011_samp_2_Rec_nlm.tif",
         "\\\\hive3065\\Yael_Mishael\\Rony\\remote_computer backup\\10.5\\annotations\\mishmar_hanegev_Cu011_samp_2_Rec_nlm.tif",
         "\\\\hive3065\\Yael_Mishael\\Rony\\remote_computer backup\\10.5\\bootstrap_outputs_fullctx\\mishmar_hanegev_Cu011_samp_2_Rec_nlm\\annotations\\mishmar_hanegev_Cu011_samp_2_Rec_nlm.tif",
         "\\\\hive3065\\Yael_Mishael\\Rony\\remote_computer backup\\10.5\\bootstrap_outputs\\mishmar_hanegev_Cu011_samp_2_Rec_nlm\\annotations\\mishmar_hanegev_Cu011_samp_2_Rec_nlm.tif"
       ],
-      "latest_annotation_path": "\\\\hive3065\\Yael_Mishael\\Rony\\remote_computer backup\\10.5\\bootstrap_outputs_fullctx\\mishmar_hanegev_Cu011_samp_2_Rec_nlm\\annotations_v20260525_r01\\mishmar_hanegev_Cu011_samp_2_Rec_nlm.tif",
+      "latest_annotation_path": "\\\\hive3065\\Yael_Mishael\\Rony\\remote_computer backup\\10.5\\bootstrap_outputs_fullctx\\mishmar_hanegev_Cu011_samp_2_Rec_nlm\\annotations_v20260525_r02\\mishmar_hanegev_Cu011_samp_2_Rec_nlm.tif",
       "status": "annotations_ready"
     },
     {
@@ -46,7 +47,7 @@
   },
   "annotations": {
     "active_latest": {
-      "mishmar_hanegev_Cu011_samp_2_Rec_nlm": "\\\\hive3065\\Yael_Mishael\\Rony\\remote_computer backup\\10.5\\bootstrap_outputs_fullctx\\mishmar_hanegev_Cu011_samp_2_Rec_nlm\\annotations_v20260525_r01\\mishmar_hanegev_Cu011_samp_2_Rec_nlm.tif",
+      "mishmar_hanegev_Cu011_samp_2_Rec_nlm": "\\\\hive3065\\Yael_Mishael\\Rony\\remote_computer backup\\10.5\\bootstrap_outputs_fullctx\\mishmar_hanegev_Cu011_samp_2_Rec_nlm\\annotations_v20260525_r02\\mishmar_hanegev_Cu011_samp_2_Rec_nlm.tif",
       "nlm_volume": "\\\\hive3065\\Yael_Mishael\\Rony\\remote_computer backup\\10.5\\annotations\\nlm_volume.tif"
     }
   },
@@ -67,6 +68,24 @@
     }
   },
   "history": [
+    {
+      "timestamp": "2026-05-31T18:30:00+02:00",
+      "action": "set_active_latest_annotation",
+      "sample_id": "mishmar_hanegev_Cu011_samp_2_Rec_nlm",
+      "decision": "GREEN",
+      "paths_touched": [
+        "\\\\hive3065\\Yael_Mishael\\Rony\\remote_computer backup\\10.5\\bootstrap_outputs_fullctx\\mishmar_hanegev_Cu011_samp_2_Rec_nlm\\annotations_v20260525_r02\\mishmar_hanegev_Cu011_samp_2_Rec_nlm.tif"
+      ]
+    },
+    {
+      "timestamp": "2026-05-31T18:30:00+02:00",
+      "action": "verify_nlm_annotation_recency",
+      "sample_id": "nlm_volume",
+      "decision": "YELLOW",
+      "paths_touched": [
+        "\\\\hive3065\\Yael_Mishael\\Rony\\remote_computer backup\\10.5\\annotations\\nlm_volume.tif"
+      ]
+    },
     {
       "timestamp": "2026-05-30T14:30:00+02:00",
       "action": "organize_inference_outputs_for_inspection",
