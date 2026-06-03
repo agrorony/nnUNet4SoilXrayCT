@@ -15,8 +15,9 @@
       "split_input_dir": "\\\\hive3065\\Yael_Mishael\\Rony\\remote_computer backup\\nnUNet_resources\\mishmar_hanegev_Cu011_samp_2_Rec_nlm\\inference_input",
       "prediction_output_dir": "\\\\hive3065\\Yael_Mishael\\Rony\\remote_computer backup\\nnUNet_resources\\mishmar_hanegev_Cu011_samp_2_Rec_nlm\\inference_output",
       "prediction_concatenated_path": "\\\\hive3065\\Yael_Mishael\\Rony\\remote_computer backup\\nnUNet_resources\\mishmar_hanegev_Cu011_samp_2_Rec_nlm\\inference_output_concat\\mishmar_hanegev_Cu011_samp_2_Rec_nlm.nii.gz",
-      "bad_slice_manifest_path": null,
+      "bad_slice_manifest_path": "C:\\Users\\rony.schwartz\\Documents\\nnUNet4SoilXrayCT\\analysis\\selected_outputs\\mishmar_hanegev_Cu011_samp_2_Rec_nlm\\bad_slices_iter02.json",
       "annotation_versions": [
+        "\\\\hive3065\\Yael_Mishael\\Rony\\remote_computer backup\\10.5\\bootstrap_outputs_fullctx\\mishmar_hanegev_Cu011_samp_2_Rec_nlm\\annotations_v20260602_r01\\mishmar_hanegev_Cu011_samp_2_Rec_nlm.tif",
         "\\\\hive3065\\Yael_Mishael\\Rony\\remote_computer backup\\10.5\\bootstrap_outputs_fullctx\\mishmar_hanegev_Cu011_samp_2_Rec_nlm\\annotations_v20260525_r02\\mishmar_hanegev_Cu011_samp_2_Rec_nlm.tif",
         "\\\\hive3065\\Yael_Mishael\\Rony\\remote_computer backup\\10.5\\bootstrap_outputs_fullctx\\mishmar_hanegev_Cu011_samp_2_Rec_nlm\\annotations_v20260525_r01\\mishmar_hanegev_Cu011_samp_2_Rec_nlm.tif",
         "\\\\hive3065\\Yael_Mishael\\Rony\\remote_computer backup\\10.5\\bootstrap_outputs_fullctx\\mishmar_hanegev_Cu011_samp_2_Rec_nlm\\annotations_v20260524_r01\\mishmar_hanegev_Cu011_samp_2_Rec_nlm.tif",
@@ -24,8 +25,8 @@
         "\\\\hive3065\\Yael_Mishael\\Rony\\remote_computer backup\\10.5\\bootstrap_outputs_fullctx\\mishmar_hanegev_Cu011_samp_2_Rec_nlm\\annotations\\mishmar_hanegev_Cu011_samp_2_Rec_nlm.tif",
         "\\\\hive3065\\Yael_Mishael\\Rony\\remote_computer backup\\10.5\\bootstrap_outputs\\mishmar_hanegev_Cu011_samp_2_Rec_nlm\\annotations\\mishmar_hanegev_Cu011_samp_2_Rec_nlm.tif"
       ],
-      "latest_annotation_path": "\\\\hive3065\\Yael_Mishael\\Rony\\remote_computer backup\\10.5\\bootstrap_outputs_fullctx\\mishmar_hanegev_Cu011_samp_2_Rec_nlm\\annotations_v20260525_r02\\mishmar_hanegev_Cu011_samp_2_Rec_nlm.tif",
-      "status": "annotations_ready"
+      "latest_annotation_path": "\\\\hive3065\\Yael_Mishael\\Rony\\remote_computer backup\\10.5\\bootstrap_outputs_fullctx\\mishmar_hanegev_Cu011_samp_2_Rec_nlm\\annotations_v20260602_r01\\mishmar_hanegev_Cu011_samp_2_Rec_nlm.tif",
+      "status": "in_progress"
     },
     {
       "sample_id": "nlm_volume",
@@ -34,12 +35,13 @@
       "split_input_dir": "\\\\hive3065\\Yael_Mishael\\Rony\\remote_computer backup\\nnUNet_resources\\bnei_reem\\inference_input",
       "prediction_output_dir": "\\\\hive3065\\Yael_Mishael\\Rony\\remote_computer backup\\nnUNet_resources\\bnei_reem\\inference_output",
       "prediction_concatenated_path": "\\\\hive3065\\Yael_Mishael\\Rony\\remote_computer backup\\nnUNet_resources\\bnei_reem\\inference_concatenated\\nlm_volume.nii.gz",
-      "bad_slice_manifest_path": null,
+      "bad_slice_manifest_path": "C:\\Users\\rony.schwartz\\Documents\\nnUNet4SoilXrayCT\\analysis\\selected_outputs\\nlm_volume\\bad_slices_iter02.json",
       "annotation_versions": [
+        "\\\\hive3065\\Yael_Mishael\\Rony\\remote_computer backup\\10.5\\annotations_v20260602_r01\\nlm_volume.tif",
         "\\\\hive3065\\Yael_Mishael\\Rony\\remote_computer backup\\10.5\\annotations\\nlm_volume.tif"
       ],
-      "latest_annotation_path": "\\\\hive3065\\Yael_Mishael\\Rony\\remote_computer backup\\10.5\\annotations\\nlm_volume.tif",
-      "status": "annotations_ready"
+      "latest_annotation_path": "\\\\hive3065\\Yael_Mishael\\Rony\\remote_computer backup\\10.5\\annotations_v20260602_r01\\nlm_volume.tif",
+      "status": "in_progress"
     }
   ],
   "manifests": {
@@ -47,27 +49,54 @@
   },
   "annotations": {
     "active_latest": {
-      "mishmar_hanegev_Cu011_samp_2_Rec_nlm": "\\\\hive3065\\Yael_Mishael\\Rony\\remote_computer backup\\10.5\\bootstrap_outputs_fullctx\\mishmar_hanegev_Cu011_samp_2_Rec_nlm\\annotations_v20260525_r02\\mishmar_hanegev_Cu011_samp_2_Rec_nlm.tif",
-      "nlm_volume": "\\\\hive3065\\Yael_Mishael\\Rony\\remote_computer backup\\10.5\\annotations\\nlm_volume.tif"
+      "mishmar_hanegev_Cu011_samp_2_Rec_nlm": "\\\\hive3065\\Yael_Mishael\\Rony\\remote_computer backup\\10.5\\bootstrap_outputs_fullctx\\mishmar_hanegev_Cu011_samp_2_Rec_nlm\\annotations_v20260602_r01\\mishmar_hanegev_Cu011_samp_2_Rec_nlm.tif",
+      "nlm_volume": "\\\\hive3065\\Yael_Mishael\\Rony\\remote_computer backup\\10.5\\annotations_v20260602_r01\\nlm_volume.tif"
     }
   },
   "checks": {
     "last_gate": {
-      "timestamp": "2026-05-25T15:44:44+02:00",
-      "sample_id": "mishmar_hanegev_Cu011_samp_2_Rec_nlm",
+      "timestamp": "2026-06-02T15:32:31",
+      "sample_id": "nlm_volume",
       "decision": "GREEN",
-      "reason": "Old preferred prediction slices were remapped (+1) and injected into the latest annotation at exact slice indices.",
+      "reason": "iter_02 registry mutation validated: all requested paths exist, annotation lineage moves forward, and no unsafe overwrite detected.",
       "resolved_paths": {
-        "input_file": "\\\\hive3065\\Yael_Mishael\\Rony\\remote_computer backup\\10.5\\mishmar_hanegev_Cu011_samp_2_Rec_nlm.tif",
-        "nifti_input": "\\\\hive3065\\Yael_Mishael\\Rony\\remote_computer backup\\nnUNet_resources\\mishmar_hanegev_Cu011_samp_2_Rec_nlm\\nifti_predict\\mishmar_hanegev_Cu011_samp_2_Rec_nlm_0000.nii.gz",
-        "split_input_dir": "\\\\hive3065\\Yael_Mishael\\Rony\\remote_computer backup\\nnUNet_resources\\mishmar_hanegev_Cu011_samp_2_Rec_nlm\\inference_input",
-        "prediction_output_dir": "\\\\hive3065\\Yael_Mishael\\Rony\\remote_computer backup\\nnUNet_resources\\mishmar_hanegev_Cu011_samp_2_Rec_nlm\\inference_output",
-        "latest_annotation": "\\\\hive3065\\Yael_Mishael\\Rony\\remote_computer backup\\10.5\\bootstrap_outputs_fullctx\\mishmar_hanegev_Cu011_samp_2_Rec_nlm\\annotations_v20260525_r01\\mishmar_hanegev_Cu011_samp_2_Rec_nlm.tif",
-        "injection_manifest": "C:\\Users\\rony.schwartz\\Documents\\nnUNet4SoilXrayCT\\analysis\\selected_outputs\\mishmar_hanegev_Cu011_samp_2_Rec_nlm\\injected_old_predictions_v20260525_r01.json"
+        "latest_annotation": "\\\\hive3065\\Yael_Mishael\\Rony\\remote_computer backup\\10.5\\annotations_v20260602_r01\\nlm_volume.tif",
+        "bad_slice_manifest": "C:\\Users\\rony.schwartz\\Documents\\nnUNet4SoilXrayCT\\analysis\\selected_outputs\\nlm_volume\\bad_slices_iter02.json",
+        "prediction_concatenated": "\\\\hive3065\\Yael_Mishael\\Rony\\remote_computer backup\\nnUNet_resources\\bnei_reem\\inference_concatenated\\nlm_volume.nii.gz"
       }
     }
   },
   "history": [
+    {
+      "timestamp": "2026-06-02T15:32:31",
+      "action": "inject_predictions_into_latest_annotation_iter02",
+      "sample_id": "mishmar_hanegev_Cu011_samp_2_Rec_nlm",
+      "decision": "GREEN",
+      "paths_touched": [
+        "\\\\hive3065\\Yael_Mishael\\Rony\\remote_computer backup\\10.5\\bootstrap_outputs_fullctx\\mishmar_hanegev_Cu011_samp_2_Rec_nlm\\annotations_v20260525_r02\\mishmar_hanegev_Cu011_samp_2_Rec_nlm.tif",
+        "\\\\hive3065\\Yael_Mishael\\Rony\\remote_computer backup\\nnUNet_resources\\mishmar_hanegev_Cu011_samp_2_Rec_nlm\\inference_output_concat\\mishmar_hanegev_Cu011_samp_2_Rec_nlm.nii.gz",
+        "\\\\hive3065\\Yael_Mishael\\Rony\\remote_computer backup\\10.5\\bootstrap_outputs_fullctx\\mishmar_hanegev_Cu011_samp_2_Rec_nlm\\annotations_v20260602_r01\\mishmar_hanegev_Cu011_samp_2_Rec_nlm.tif",
+        "C:\\Users\\rony.schwartz\\Documents\\nnUNet4SoilXrayCT\\analysis\\selected_outputs\\mishmar_hanegev_Cu011_samp_2_Rec_nlm\\bad_slices_iter02.json",
+        "C:\\Users\\rony.schwartz\\Documents\\nnUNet4SoilXrayCT\\analysis\\selected_outputs\\mishmar_hanegev_Cu011_samp_2_Rec_nlm\\injected_predictions_iter_02.json"
+      ],
+      "requested_by_agent": "GitHub Copilot",
+      "approved_by_agent": "Data Registry and Path Validation"
+    },
+    {
+      "timestamp": "2026-06-02T15:32:31",
+      "action": "inject_predictions_into_latest_annotation_iter02",
+      "sample_id": "nlm_volume",
+      "decision": "GREEN",
+      "paths_touched": [
+        "\\\\hive3065\\Yael_Mishael\\Rony\\remote_computer backup\\10.5\\annotations\\nlm_volume.tif",
+        "\\\\hive3065\\Yael_Mishael\\Rony\\remote_computer backup\\nnUNet_resources\\bnei_reem\\inference_concatenated\\nlm_volume.nii.gz",
+        "\\\\hive3065\\Yael_Mishael\\Rony\\remote_computer backup\\10.5\\annotations_v20260602_r01\\nlm_volume.tif",
+        "C:\\Users\\rony.schwartz\\Documents\\nnUNet4SoilXrayCT\\analysis\\selected_outputs\\nlm_volume\\bad_slices_iter02.json",
+        "C:\\Users\\rony.schwartz\\Documents\\nnUNet4SoilXrayCT\\analysis\\selected_outputs\\nlm_volume\\injected_predictions_iter_02.json"
+      ],
+      "requested_by_agent": "GitHub Copilot",
+      "approved_by_agent": "Data Registry and Path Validation"
+    },
     {
       "timestamp": "2026-05-31T18:30:00+02:00",
       "action": "set_active_latest_annotation",
