@@ -1,0 +1,2 @@
+Loaded 6 annotated classes from C:\Users\rony.schwartz\Documents\nnUNet4SoilXrayCT\dataset_info.json
+Napari viewer open. Close the window to exit.

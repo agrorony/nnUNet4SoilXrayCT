@@ -1,0 +1,131 @@
+Model dir:   \\hive3065\Yael_Mishael\Rony\remote_computer backup\nnUNet_resources\multi_sample_iter02\nnUNet_results\Dataset777_GCEF\nnUNetTrainer_betterIgnoreSampling_earlyStopValLoss__nnUNetPlans__3d_fullres
+Input dir:   \\hive3065\Yael_Mishael\Rony\remote_computer backup\nnUNet_resources\bnei_reem\inference_input
+Output dir:  \\hive3065\Yael_Mishael\Rony\remote_computer backup\nnUNet_resources\bnei_reem\inference_output_iter02
+CUDA:        True
+Chunks:      8
+Checkpoint:  checkpoint_final.pth
+There are 8 cases in the source folder
+I am process 0 out of 1 (max process ID is 0, we start counting with 0!)
+There are 8 cases that I would like to predict
+
+Predicting nlm_volume__2__0__146_:
+perform_everything_on_device: False
+Input shape: torch.Size([1, 146, 650, 650])
+step_size: 0.5
+mirror_axes: None
+n_steps 200, image size is torch.Size([146, 650, 650]), tile_size [128, 128, 128], tile_step_size 0.5
+steps:
+[[0, 18], [0, 58, 116, 174, 232, 290, 348, 406, 464, 522], [0, 58, 116, 174, 232, 290, 348, 406, 464, 522]]
+move image to device cpu
+preallocating results arrays on device cpu
+Prediction done
+sending off prediction to background worker for resampling and export
+done with nlm_volume__2__0__146_
+
+Predicting nlm_volume__2__100__310_:
+perform_everything_on_device: False
+Input shape: torch.Size([1, 210, 650, 650])
+step_size: 0.5
+mirror_axes: None
+n_steps 300, image size is torch.Size([210, 650, 650]), tile_size [128, 128, 128], tile_step_size 0.5
+steps:
+[[0, 41, 82], [0, 58, 116, 174, 232, 290, 348, 406, 464, 522], [0, 58, 116, 174, 232, 290, 348, 406, 464, 522]]
+move image to device cpu
+preallocating results arrays on device cpu
+Prediction done
+sending off prediction to background worker for resampling and export
+done with nlm_volume__2__100__310_
+
+Predicting nlm_volume__2__182__392_:
+perform_everything_on_device: False
+Input shape: torch.Size([1, 210, 650, 650])
+step_size: 0.5
+mirror_axes: None
+n_steps 300, image size is torch.Size([210, 650, 650]), tile_size [128, 128, 128], tile_step_size 0.5
+steps:
+[[0, 41, 82], [0, 58, 116, 174, 232, 290, 348, 406, 464, 522], [0, 58, 116, 174, 232, 290, 348, 406, 464, 522]]
+move image to device cpu
+preallocating results arrays on device cpu
+Prediction done
+sending off prediction to background worker for resampling and export
+done with nlm_volume__2__182__392_
+
+Predicting nlm_volume__2__18__228_:
+perform_everything_on_device: False
+Input shape: torch.Size([1, 210, 650, 650])
+step_size: 0.5
+mirror_axes: None
+n_steps 300, image size is torch.Size([210, 650, 650]), tile_size [128, 128, 128], tile_step_size 0.5
+steps:
+[[0, 41, 82], [0, 58, 116, 174, 232, 290, 348, 406, 464, 522], [0, 58, 116, 174, 232, 290, 348, 406, 464, 522]]
+move image to device cpu
+preallocating results arrays on device cpu
+Prediction done
+sending off prediction to background worker for resampling and export
+done with nlm_volume__2__18__228_
+
+Predicting nlm_volume__2__264__474_:
+perform_everything_on_device: False
+Input shape: torch.Size([1, 210, 650, 650])
+step_size: 0.5
+mirror_axes: None
+n_steps 300, image size is torch.Size([210, 650, 650]), tile_size [128, 128, 128], tile_step_size 0.5
+steps:
+[[0, 41, 82], [0, 58, 116, 174, 232, 290, 348, 406, 464, 522], [0, 58, 116, 174, 232, 290, 348, 406, 464, 522]]
+move image to device cpu
+preallocating results arrays on device cpu
+Prediction done
+sending off prediction to background worker for resampling and export
+done with nlm_volume__2__264__474_
+
+Predicting nlm_volume__2__346__556_:
+perform_everything_on_device: False
+Input shape: torch.Size([1, 210, 650, 650])
+step_size: 0.5
+mirror_axes: None
+n_steps 300, image size is torch.Size([210, 650, 650]), tile_size [128, 128, 128], tile_step_size 0.5
+steps:
+[[0, 41, 82], [0, 58, 116, 174, 232, 290, 348, 406, 464, 522], [0, 58, 116, 174, 232, 290, 348, 406, 464, 522]]
+move image to device cpu
+preallocating results arrays on device cpu
+Prediction done
+sending off prediction to background worker for resampling and export
+done with nlm_volume__2__346__556_
+
+Predicting nlm_volume__2__428__638_:
+perform_everything_on_device: False
+Input shape: torch.Size([1, 210, 650, 650])
+step_size: 0.5
+mirror_axes: None
+n_steps 300, image size is torch.Size([210, 650, 650]), tile_size [128, 128, 128], tile_step_size 0.5
+steps:
+[[0, 41, 82], [0, 58, 116, 174, 232, 290, 348, 406, 464, 522], [0, 58, 116, 174, 232, 290, 348, 406, 464, 522]]
+move image to device cpu
+preallocating results arrays on device cpu
+Prediction done
+sending off prediction to background worker for resampling and export
+done with nlm_volume__2__428__638_
+
+Predicting nlm_volume__2__510__652_:
+perform_everything_on_device: False
+Input shape: torch.Size([1, 142, 650, 650])
+step_size: 0.5
+mirror_axes: None
+n_steps 200, image size is torch.Size([142, 650, 650]), tile_size [128, 128, 128], tile_step_size 0.5
+steps:
+[[0, 14], [0, 58, 116, 174, 232, 290, 348, 406, 464, 522], [0, 58, 116, 174, 232, 290, 348, 406, 464, 522]]
+move image to device cpu
+preallocating results arrays on device cpu
+Prediction done
+sending off prediction to background worker for resampling and export
+done with nlm_volume__2__510__652_
+
+Done. 8 prediction files in \\hive3065\Yael_Mishael\Rony\remote_computer backup\nnUNet_resources\bnei_reem\inference_output_iter02
+  nlm_volume__2__0__146_.nii.gz
+  nlm_volume__2__100__310_.nii.gz
+  nlm_volume__2__182__392_.nii.gz
+  nlm_volume__2__18__228_.nii.gz
+  nlm_volume__2__264__474_.nii.gz
+  nlm_volume__2__346__556_.nii.gz
+  nlm_volume__2__428__638_.nii.gz
+  nlm_volume__2__510__652_.nii.gz
