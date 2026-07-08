@@ -1,0 +1,13 @@
+checks:
+  - name: annotation i2
+    path: "\\\\hive3065\\Yael_Mishael\\Rony\\remote_computer backup\\nnUNet_resources\\fresh_train_annotations_bnei_reem\\annotations_i2.nii.gz"
+  - name: raw tif
+    path: "\\\\hive3065\\Yael_Mishael\\Rony\\remote_computer backup\\10.5\\nlm_volume.tif"
+  - name: fresh checkpoint
+    path: "\\\\hive3065\\Yael_Mishael\\Rony\\remote_computer backup\\nnUNet_resources\\bnei_reem_iter04\\multi_sample_fresh_bnei_reem\\nnUNet_results\\Dataset777_GCEF\\nnUNetTrainer_betterIgnoreSampling_earlyStopValLoss__nnUNetPlans__3d_fullres\\fold_0\\checkpoint_final.pth"
+  - name: inference input dir
+    path: "\\\\hive3065\\Yael_Mishael\\Rony\\remote_computer backup\\nnUNet_resources\\bnei_reem_iter04\\inference_input"
+  - name: train wrapper
+    path: "C:\\Users\\rony.schwartz\\Documents\\nnUNet4SoilXrayCT\\03_training\\scripts\\train_wrapper.py"
+  - name: inference script i2
+    path: "C:\\Users\\rony.schwartz\\Documents\\nnUNet4SoilXrayCT\\04_inference\\scripts\\run_inference.py"
