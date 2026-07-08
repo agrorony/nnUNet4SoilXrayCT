@@ -1,0 +1,15 @@
+# Auto-generated from REORG_PLAN.md §3.3 mapping table during the 2026-07 reorg.
+# Replaces the old repo-root per-iteration script for 'iter03'.
+iteration_name: iter03
+sample_id: nlm_volume
+gpu: 0
+trainer_name: nnUNetTrainer_betterIgnoreSampling_earlyStopValLoss
+annotation_path: "E:\...\annotations_iter03\new_annotations.nii.gz"
+base_checkpoint: iter02
+dataset_id: '777'
+force_rebuild: true
+offset_layers: 48
+early_stop_patience: 20
+early_stop_min_delta: 0.001
+run_inference_after: true
+# note: Combined train+infer in the original _run_iter03.py (chains to _run_inference_iter03.py).

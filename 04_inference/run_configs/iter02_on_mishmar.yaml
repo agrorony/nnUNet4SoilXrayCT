@@ -1,0 +1,7 @@
+# Auto-generated from REORG_PLAN.md §3.3 mapping table during the 2026-07 reorg.
+iteration_name: iter02_on_mishmar
+sample_id: mishmar_hanegev_Cu011_samp_2_Rec_nlm
+trainer_name: nnUNetTrainer_betterIgnoreSampling_earlyStopValLoss
+dataset_id: '777'
+model_dir_override: multi_sample_iter02
+# note: Was _run_inference_mishmar_iter02.py: iter02 model applied to the mishmar sample.

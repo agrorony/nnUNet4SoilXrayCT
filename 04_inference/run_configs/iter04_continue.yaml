@@ -1,0 +1,7 @@
+# Auto-generated from REORG_PLAN.md §3.3 mapping table during the 2026-07 reorg.
+iteration_name: iter04_continue
+sample_id: nlm_volume
+trainer_name: nnUNetTrainer_betterIgnoreSampling_earlyStopValLoss
+dataset_id: '777'
+model_dir_override: multi_sample_iter04_continue
+reuse_split_from: iter04

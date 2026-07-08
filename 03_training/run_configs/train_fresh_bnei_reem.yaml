@@ -1,0 +1,15 @@
+# Auto-generated from REORG_PLAN.md §3.3 mapping table during the 2026-07 reorg.
+# Replaces the old repo-root per-iteration script for 'train_fresh_bnei_reem'.
+iteration_name: train_fresh_bnei_reem
+sample_id: nlm_volume
+gpu: 1
+trainer_name: nnUNetTrainer_betterIgnoreSampling_earlyStopValLoss
+annotation_path: "\\hive3065\Yael_Mishael\Rony\remote_computer backup\nnUNet_resources\fresh_train_annotations_bnei_reem\annotations.nii.gz"
+base_checkpoint: scratch
+dataset_id: '777'
+force_rebuild: true
+offset_layers: 48
+early_stop_patience: 20
+early_stop_min_delta: 0.001
+run_inference_after: false
+# note: Baseline 'fresh_bnei_reem' model, from scratch, per _launch_parallel_training.ps1 comment (GPU 1).

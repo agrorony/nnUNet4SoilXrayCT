@@ -1,0 +1,6 @@
+# Auto-generated from REORG_PLAN.md §3.3 mapping table during the 2026-07 reorg.
+iteration_name: fresh_bnei_reem_i3
+sample_id: nlm_volume
+trainer_name: nnUNetTrainer_betterIgnoreSampling_earlyStopValLoss
+dataset_id: '777'
+reuse_split_from: iter04
