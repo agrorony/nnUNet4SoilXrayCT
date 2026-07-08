@@ -1,0 +1,8 @@
+44447 flagged entries loaded (excluded classes: [5], min_severity=0.0)
+Prediction classes: Matrix=1, Stones=2, POM_type1=3, POM_type2=4, unused=5, Pore=6
+[1/44447] id=1 z=0 object_id=13 class=1 event=disappear severity=1.000 — object 13 disappears with no successor at z=0
+Napari viewer open. Use the Next/Previous flagged buttons to step through issues. Close the window to exit.
+[2/44447] id=2 z=0 object_id=15 class=1 event=disappear severity=1.000 — object 15 disappears with no successor at z=0
+[3/44447] id=3 z=0 object_id=16 class=1 event=disappear severity=1.000 — object 16 disappears with no successor at z=0
+[4/44447] id=4 z=0 object_id=17 class=1 event=disappear severity=1.000 — object 17 disappears with no successor at z=0
+

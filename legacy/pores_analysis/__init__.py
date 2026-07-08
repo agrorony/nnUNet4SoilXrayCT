@@ -52,6 +52,17 @@ from .psd_output import (
 )
 from .block_processor import BlockProcessor
 from .checkpoint_manager import CheckpointManager
+from .topology_metrics import (
+    add_pore_size_bin,
+    connectivity_density,
+    connectivity_probability,
+    degree_of_anisotropy,
+    distance_map,
+    get_percolating_mask,
+    surface_area_by_size_class,
+    tortuosity_diffusive,
+)
+from .extended_pipeline import compute_psd_extended
 
 __all__ = [
     # Main API
@@ -60,7 +71,7 @@ __all__ = [
     'save_psd_dataframe',
     'load_psd_dataframe',
     'plot_psd',
-    
+
     # Advanced components
     'compute_edt',
     'compute_opening_map',
@@ -68,4 +79,15 @@ __all__ = [
     'BlockProcessor',
     'CheckpointManager',
     'mask_border_voxels',
+
+    # Extended topology/connectivity metrics (Stage 2 additions)
+    'compute_psd_extended',
+    'add_pore_size_bin',
+    'connectivity_density',
+    'connectivity_probability',
+    'degree_of_anisotropy',
+    'distance_map',
+    'get_percolating_mask',
+    'surface_area_by_size_class',
+    'tortuosity_diffusive',
 ]

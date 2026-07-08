@@ -6,7 +6,7 @@ from typing import Any, Dict, Optional
 
 import yaml
 
-PROJECT_ROOT = Path(__file__).resolve().parents[3]
+PROJECT_ROOT = Path(__file__).resolve().parents[2]
 _CONFIG_PATH = PROJECT_ROOT / "config" / "pores_analysis" / "config.yaml"
 _ENV_CONFIG_KEY = "PORES_ANALYSIS_CONFIG_JSON"
 

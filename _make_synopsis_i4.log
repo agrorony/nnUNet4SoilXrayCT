@@ -1,0 +1,15 @@
+Loading volume TIF ...
+  shape: (652, 650, 650)  dtype: float32
+Loading annotation NIfTI ...
+  shape: (652, 650, 650)  labels: [0, 1, 2, 3, 6]
+Loading prediction NIfTI ...
+  shape: (652, 650, 650)  labels: [1, 2, 3, 6]
+
+Annotated slices: 35  (z = 26 … 551)
+Writing 35 PNGs to:
+  C:\Users\rony.schwartz\Documents\nnUNet4SoilXrayCT\analysis\synopsis_i4
+
+  [  1/35]  z=0026  ->  slice_0026.png
+  [ 35/35]  z=0551  ->  slice_0551.png
+
+[DONE] 35 images in C:\Users\rony.schwartz\Documents\nnUNet4SoilXrayCT\analysis\synopsis_i4

@@ -2,10 +2,66 @@
   "project": {
     "name": "nnUNet4SoilXrayCT",
     "canonical_data_root": "\\\\hive3065\\Yael_Mishael\\Rony\\remote_computer backup\\10.5",
-    "updated_at": "2026-06-17T16:27:00Z"
+    "updated_at": "2026-06-30T20:00:00Z"
   },
   "paths": {
-    "canonical_data_root": "\\\\hive3065\\Yael_Mishael\\Rony\\remote_computer backup\\10.5"
+    "canonical_data_root": "\\\\hive3065\\Yael_Mishael\\Rony\\remote_computer backup\\10.5",
+    "nnunet_resources": "\\\\hive3065\\Yael_Mishael\\Rony\\remote_computer backup\\nnUNet_resources"
+  },
+  "training_runs": {
+    "iter04_continue_bnei_reem": {
+      "description": "Fine-tune from iter04 checkpoint on nlm_volume with merged_GT.nii.gz",
+      "sample_id": "nlm_volume",
+      "gpu": 0,
+      "pretrained_from": "multi_sample_iter04",
+      "annotation": "\\\\hive3065\\Yael_Mishael\\Rony\\remote_computer backup\\microSAM_inputs\\merged_GT.nii.gz",
+      "model_dir": "\\\\hive3065\\Yael_Mishael\\Rony\\remote_computer backup\\nnUNet_resources\\multi_sample_iter04_continue",
+      "checkpoint": "\\\\hive3065\\Yael_Mishael\\Rony\\remote_computer backup\\nnUNet_resources\\multi_sample_iter04_continue\\nnUNet_results\\Dataset777_GCEF\\nnUNetTrainer_betterIgnoreSampling_earlyStopValLoss__nnUNetPlans__3d_fullres\\fold_0\\checkpoint_final.pth",
+      "status": "complete",
+      "stopped_at_epoch": 44,
+      "final_train_loss": -0.7545,
+      "final_val_loss": -0.7723,
+      "inference_output": "\\\\hive3065\\Yael_Mishael\\Rony\\remote_computer backup\\nnUNet_resources\\bnei_reem_iter04_continue\\inference_concatenated\\nlm_volume.nii.gz",
+      "completed_at": "2026-06-28"
+    },
+    "fresh_bnei_reem": {
+      "description": "Train from scratch (no pretrained weights) on nlm_volume with merged_GT.nii.gz",
+      "sample_id": "nlm_volume",
+      "gpu": 1,
+      "pretrained_from": null,
+      "annotation": "\\\\hive3065\\Yael_Mishael\\Rony\\remote_computer backup\\microSAM_inputs\\merged_GT.nii.gz",
+      "model_dir": "\\\\hive3065\\Yael_Mishael\\Rony\\remote_computer backup\\nnUNet_resources\\bnei_reem_iter04\\multi_sample_fresh_bnei_reem",
+      "checkpoint": "\\\\hive3065\\Yael_Mishael\\Rony\\remote_computer backup\\nnUNet_resources\\bnei_reem_iter04\\multi_sample_fresh_bnei_reem\\nnUNet_results\\Dataset777_GCEF\\nnUNetTrainer_betterIgnoreSampling_earlyStopValLoss__nnUNetPlans__3d_fullres\\fold_0\\checkpoint_final.pth",
+      "status": "complete",
+      "inference_output": "\\\\hive3065\\Yael_Mishael\\Rony\\remote_computer backup\\nnUNet_resources\\bnei_reem_fresh_bnei_reem\\inference_concatenated\\nlm_volume.nii.gz",
+      "completed_at": "2026-06-28"
+    },
+    "fresh_bnei_reem_i2": {
+      "description": "Fine-tune from fresh_bnei_reem checkpoint on nlm_volume with annotations_i2.nii.gz (new microsam annotations)",
+      "sample_id": "nlm_volume",
+      "gpu": 0,
+      "pretrained_from": "fresh_bnei_reem",
+      "annotation": "\\\\hive3065\\Yael_Mishael\\Rony\\remote_computer backup\\nnUNet_resources\\fresh_train_annotations_bnei_reem\\annotations_i2.nii.gz",
+      "model_dir": "\\\\hive3065\\Yael_Mishael\\Rony\\remote_computer backup\\nnUNet_resources\\multi_sample_fresh_bnei_reem_i2",
+      "checkpoint": "\\\\hive3065\\Yael_Mishael\\Rony\\remote_computer backup\\nnUNet_resources\\multi_sample_fresh_bnei_reem_i2\\nnUNet_results\\Dataset777_GCEF\\nnUNetTrainer_betterIgnoreSampling_earlyStopValLoss__nnUNetPlans__3d_fullres\\fold_0\\checkpoint_final.pth",
+      "status": "complete",
+      "launched_at": "2026-06-30",
+      "inference_output": "\\\\hive3065\\Yael_Mishael\\Rony\\remote_computer backup\\nnUNet_resources\\bnei_reem_fresh_bnei_reem_i2\\inference_concatenated\\nlm_volume.nii.gz",
+      "completed_at": "2026-07-01"
+    },
+    "fresh_bnei_reem_i3": {
+      "description": "Fine-tune from fresh_bnei_reem_i2 checkpoint on nlm_volume with annotations_i3.nii.gz (new microsam annotations)",
+      "sample_id": "nlm_volume",
+      "gpu": 0,
+      "pretrained_from": "fresh_bnei_reem_i2",
+      "annotation": "\\\\hive3065\\Yael_Mishael\\Rony\\remote_computer backup\\nnUNet_resources\\fresh_train_annotations_bnei_reem\\annotations_i3.nii.gz",
+      "model_dir": "\\\\hive3065\\Yael_Mishael\\Rony\\remote_computer backup\\nnUNet_resources\\multi_sample_fresh_bnei_reem_i3",
+      "checkpoint": "\\\\hive3065\\Yael_Mishael\\Rony\\remote_computer backup\\nnUNet_resources\\multi_sample_fresh_bnei_reem_i3\\nnUNet_results\\Dataset777_GCEF\\nnUNetTrainer_betterIgnoreSampling_earlyStopValLoss__nnUNetPlans__3d_fullres\\fold_0\\checkpoint_final.pth",
+      "status": "complete",
+      "launched_at": "2026-07-01",
+      "completed_at": "2026-07-02",
+      "inference_output": "\\\\hive3065\\Yael_Mishael\\Rony\\remote_computer backup\\nnUNet_resources\\bnei_reem_fresh_bnei_reem_i3\\inference_concatenated\\nlm_volume.nii.gz"
+    }
   },
   "samples": [
     {
@@ -35,20 +91,23 @@
     {
       "sample_id": "nlm_volume",
       "raw_tiff_path": "\\\\hive3065\\Yael_Mishael\\Rony\\remote_computer backup\\10.5\\nlm_volume.tif",
-      "nifti_input_path": "\\\\hive3065\\Yael_Mishael\\Rony\\remote_computer backup\\nnUNet_resources\\bnei_reem\\nifti_predict\\nlm_volume_0000.nii.gz",
-      "split_input_dir": "\\\\hive3065\\Yael_Mishael\\Rony\\remote_computer backup\\nnUNet_resources\\bnei_reem\\inference_input",
-      "prediction_output_dir": "\\\\hive3065\\Yael_Mishael\\Rony\\remote_computer backup\\nnUNet_resources\\bnei_reem\\inference_output",
-      "prediction_concatenated_path": "\\\\hive3065\\Yael_Mishael\\Rony\\remote_computer backup\\nnUNet_resources\\bnei_reem\\inference_concatenated\\nlm_volume.nii.gz",
+      "nifti_input_path": "\\\\hive3065\\Yael_Mishael\\Rony\\remote_computer backup\\nnUNet_resources\\bnei_reem_iter04\\nifti_predict\\nlm_volume_0000.nii.gz",
+      "split_input_dir": "\\\\hive3065\\Yael_Mishael\\Rony\\remote_computer backup\\nnUNet_resources\\bnei_reem_iter04\\inference_input",
+      "prediction_output_dir": "\\\\hive3065\\Yael_Mishael\\Rony\\remote_computer backup\\nnUNet_resources\\bnei_reem_iter04_continue\\inference_output",
+      "prediction_concatenated_path": "\\\\hive3065\\Yael_Mishael\\Rony\\remote_computer backup\\nnUNet_resources\\bnei_reem_iter04_continue\\inference_concatenated\\nlm_volume.nii.gz",
       "bad_slice_manifest_path": "C:\\Users\\rony.schwartz\\Documents\\nnUNet4SoilXrayCT\\analysis\\selected_outputs\\nlm_volume\\bad_slices_iter_02_corrected_latest_predictions_yfix.json",
       "annotation_versions": [
+        "\\\\hive3065\\Yael_Mishael\\Rony\\remote_computer backup\\nnUNet_resources\\fresh_train_annotations_bnei_reem\\annotations_i3.nii.gz",
+        "\\\\hive3065\\Yael_Mishael\\Rony\\remote_computer backup\\nnUNet_resources\\fresh_train_annotations_bnei_reem\\annotations_i2.nii.gz",
+        "\\\\hive3065\\Yael_Mishael\\Rony\\remote_computer backup\\microSAM_inputs\\merged_GT.nii.gz",
         "\\\\hive3065\\Yael_Mishael\\Rony\\remote_computer backup\\10.5\\annotations_v20260617_r01\\nlm_volume.tif",
         "\\\\hive3065\\Yael_Mishael\\Rony\\remote_computer backup\\10.5\\annotations_v20260603_r04\\nlm_volume.tif",
         "\\\\hive3065\\Yael_Mishael\\Rony\\remote_computer backup\\10.5\\annotations_v20260603_r03\\nlm_volume.tif",
         "\\\\hive3065\\Yael_Mishael\\Rony\\remote_computer backup\\10.5\\annotations_v20260602_r01\\nlm_volume.tif",
         "\\\\hive3065\\Yael_Mishael\\Rony\\remote_computer backup\\10.5\\annotations\\nlm_volume.tif"
       ],
-      "latest_annotation_path": "\\\\hive3065\\Yael_Mishael\\Rony\\remote_computer backup\\10.5\\annotations_v20260617_r01\\nlm_volume.tif",
-      "status": "ready_for_training"
+      "latest_annotation_path": "\\\\hive3065\\Yael_Mishael\\Rony\\remote_computer backup\\microSAM_inputs\\merged_GT.nii.gz",
+      "status": "ready_for_annotation"
     }
   ],
   "manifests": {
@@ -57,21 +116,65 @@
   "annotations": {
     "active_latest": {
       "mishmar_hanegev_Cu011_samp_2_Rec_nlm": "\\\\hive3065\\Yael_Mishael\\Rony\\remote_computer backup\\10.5\\bootstrap_outputs_fullctx\\mishmar_hanegev_Cu011_samp_2_Rec_nlm\\annotations_v20260610_r01\\mishmar_hanegev_Cu011_samp_2_Rec_nlm.tif",
-      "nlm_volume": "\\\\hive3065\\Yael_Mishael\\Rony\\remote_computer backup\\10.5\\annotations_v20260617_r01\\nlm_volume.tif"
+      "nlm_volume": "\\\\hive3065\\Yael_Mishael\\Rony\\remote_computer backup\\microSAM_inputs\\merged_GT.nii.gz"
     }
   },
   "checks": {
     "last_gate": {
-      "timestamp": "2026-06-17T16:27:00Z",
+      "timestamp": "2026-06-28T14:30:00Z",
       "sample_id": "nlm_volume",
       "decision": "GREEN",
-      "reason": "Latest annotations (v20260617_r01) validated and ready for training input preprocessing",
+      "reason": "iter04_continue training complete (epoch 44, val_loss=-0.7723); inference complete; napari+microsam opened on slices 50-70 with merged_GT.nii.gz",
       "resolved_paths": {
-        "latest_annotation": "\\\\hive3065\\Yael_Mishael\\Rony\\remote_computer backup\\10.5\\annotations_v20260617_r01\\nlm_volume.tif"
+        "latest_annotation": "\\\\hive3065\\Yael_Mishael\\Rony\\remote_computer backup\\microSAM_inputs\\merged_GT.nii.gz",
+        "latest_prediction": "\\\\hive3065\\Yael_Mishael\\Rony\\remote_computer backup\\nnUNet_resources\\bnei_reem_iter04_continue\\inference_concatenated\\nlm_volume.nii.gz"
       }
     }
   },
   "history": [
+    {
+      "timestamp": "2026-07-01T00:00:00Z",
+      "action": "launch_fresh_bnei_reem_i3_training",
+      "sample_id": "nlm_volume",
+      "decision": "GREEN",
+      "reason": "Fine-tuning from fresh_bnei_reem_i2 checkpoint with new microsam annotations (annotations_i3.nii.gz, labels [0,1,2,3,6], z-range 26-551). Model stored at multi_sample_fresh_bnei_reem_i3, inference output at bnei_reem_fresh_bnei_reem_i3. PID 16196.",
+      "paths_touched": [
+        "\\\\hive3065\\Yael_Mishael\\Rony\\remote_computer backup\\nnUNet_resources\\fresh_train_annotations_bnei_reem\\annotations_i3.nii.gz",
+        "\\\\hive3065\\Yael_Mishael\\Rony\\remote_computer backup\\nnUNet_resources\\multi_sample_fresh_bnei_reem_i3",
+        "\\\\hive3065\\Yael_Mishael\\Rony\\remote_computer backup\\nnUNet_resources\\bnei_reem_fresh_bnei_reem_i3"
+      ],
+      "requested_by_agent": "Claude Code",
+      "approved_by_agent": "Claude Code"
+    },
+    {
+      "timestamp": "2026-06-30T20:00:00Z",
+      "action": "launch_fresh_bnei_reem_i2_training",
+      "sample_id": "nlm_volume",
+      "decision": "GREEN",
+      "reason": "Fine-tuning from fresh_bnei_reem checkpoint with new microsam annotations (annotations_i2.nii.gz, labels [0,1,2,3,6], z-range 26-551). Model will be stored at multi_sample_fresh_bnei_reem_i2, inference output at bnei_reem_fresh_bnei_reem_i2.",
+      "paths_touched": [
+        "\\\\hive3065\\Yael_Mishael\\Rony\\remote_computer backup\\nnUNet_resources\\fresh_train_annotations_bnei_reem\\annotations_i2.nii.gz",
+        "\\\\hive3065\\Yael_Mishael\\Rony\\remote_computer backup\\nnUNet_resources\\multi_sample_fresh_bnei_reem_i2",
+        "\\\\hive3065\\Yael_Mishael\\Rony\\remote_computer backup\\nnUNet_resources\\bnei_reem_fresh_bnei_reem_i2"
+      ],
+      "requested_by_agent": "Claude Code",
+      "approved_by_agent": "Claude Code"
+    },
+    {
+      "timestamp": "2026-06-28T14:30:00Z",
+      "action": "register_iter05_training_outputs",
+      "sample_id": "nlm_volume",
+      "decision": "GREEN",
+      "reason": "Two parallel training runs completed on merged_GT.nii.gz: iter04_continue (GPU0, fine-tune, epoch 44, val_loss=-0.7723) and fresh_bnei_reem (GPU1, from scratch, in progress ~epoch74, best_val_loss=-0.4168). Inference run with iter04_continue model. Registry updated to reflect new paths.",
+      "paths_touched": [
+        "\\\\hive3065\\Yael_Mishael\\Rony\\remote_computer backup\\nnUNet_resources\\multi_sample_iter04_continue",
+        "\\\\hive3065\\Yael_Mishael\\Rony\\remote_computer backup\\nnUNet_resources\\multi_sample_fresh_bnei_reem",
+        "\\\\hive3065\\Yael_Mishael\\Rony\\remote_computer backup\\nnUNet_resources\\bnei_reem_iter04_continue\\inference_concatenated\\nlm_volume.nii.gz",
+        "\\\\hive3065\\Yael_Mishael\\Rony\\remote_computer backup\\microSAM_inputs\\merged_GT.nii.gz"
+      ],
+      "requested_by_agent": "Claude Code",
+      "approved_by_agent": "Claude Code"
+    },
     {
       "timestamp": "2026-06-17T16:27:00Z",
       "action": "mark_annotations_ready_for_training_iter03",

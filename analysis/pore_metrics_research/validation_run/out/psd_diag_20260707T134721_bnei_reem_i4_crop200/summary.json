@@ -1,0 +1,41 @@
+{
+  "range": {
+    "min": 2.23017156124115,
+    "max": 906.4473876953125
+  },
+  "repeat_bins": 788,
+  "low_count_bins": 13,
+  "spikes": 4,
+  "mode": "extended",
+  "run_name": "bnei_reem_i4_crop200",
+  "euler_number": 56,
+  "connectivity_density_per_mm3": -111.99999999999997,
+  "connectivity_probability_gamma": 0.8811232270761961,
+  "degree_of_anisotropy": 0.2713301215338818,
+  "anisotropy_eigenvalues": [
+    5.222533591787837e-05,
+    4.625283388384696e-05,
+    3.805502917613263e-05
+  ],
+  "anisotropy_fabric_tensor": [
+    [
+      4.53118410124864e-05,
+      2.4043072707554703e-06,
+      -6.55107422299849e-06
+    ],
+    [
+      2.4043072707554703e-06,
+      4.689707608122451e-05,
+      -4.79802203552195e-07
+    ],
+    [
+      -6.55107422299849e-06,
+      -4.79802203552195e-07,
+      4.432428188414706e-05
+    ]
+  ],
+  "psd_30_150um_volume_fraction": 0.5710538001308778,
+  "tortuosity_axis0": 1.650655986344334,
+  "tortuosity_axis1": 6.07083166225106,
+  "tortuosity_axis2": 3.011780011489429
+}

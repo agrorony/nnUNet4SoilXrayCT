@@ -1,0 +1,89 @@
+============================================================
+PSD Pipeline Execution
+============================================================
+Volume shape: (100, 200, 200)
+Voxel spacing (physical): (5.0, 5.0, 5.0) um
+Porosity: 0.3565
+GPU: False, Chunking: False
+
+[1/3] Computing Euclidean Distance Transform...
+  EDT complete. Max distance: 41.18 voxels
+
+[Diagnostics] EDT map
+  Range: 0.0000 - 41.1825
+  Unique values: 1317, integer-like: False
+  Histogram bins: 64, counts head [2574192, 229888, 162513], tail [49, 22, 6]
+
+[2/3] Computing Opening Map (Morphological Reconstruction)...
+  Computing Local Thickness (PoreSpy imj, max EDT radius: 41.18)...
+  Opening complete. Max diameter: 82.37 voxels
+
+[Diagnostics] Opening map
+  Unique diameters: 811
+  Top diameter fractions: [{'diameter': 0.0, 'count': 2325180, 'fraction': 0.581295}, {'diameter': 2.0, 'count': 188839, 'fraction': 0.04720975}, {'diameter': 6.0, 'count': 75256, 'fraction': 0.018814}, {'diameter': 82.36504364013672, 'count': 74741, 'fraction': 0.01868525}, {'diameter': 4.4721360206604, 'count': 50076, 'fraction': 0.012519}]
+  Histogram bins: 64, counts head [2325180, 188839, 25560]
+
+[3/3] Extracting Pore Size Distribution...
+
+[Diagnostics] Raw pore diameters
+  Count: 1369216, range: 2.0000 - 82.3650
+  Repeated diameters (>1): 788, samples: [{'diameter': 82.36504364013672, 'count': 69480}, {'diameter': 4.4721360206604, 'count': 47689}, {'diameter': 6.0, 'count': 46149}, {'diameter': 8.246211051940918, 'count': 39287}, {'diameter': 79.8248062133789, 'count': 28172}]
+  Histogram bins: 64, counts head [30823, 75249, 18927]
+
+[Diagnostics] Bin edges
+  Bin edges (px): [0.4, 0.49206862449645994, 0.6053287982940674] ... [132.15958251953126, 162.578955078125, 200.0]
+  Bin edges (um): [2.0, 2.4603431224823, 3.026643991470337] ... [660.7979125976562, 812.894775390625, 1000.0]
+  Bin width (um): min 4.4822e-01, max 1.8711e+02, zero-width bins: 0
+  Empty bins: 13, low-count bins (< 5): 13
+
+[Diagnostics] Differential PSD
+  Finite bins: 32, NaNs: 0, Infs: 0
+  Median: 1.0081e-03, MAD: 1.0081e-03, Spike threshold: 6.0487e-03
+  Spikes detected at indices: [11, 14, 15, 16]
+
+============================================================
+PSD Calculation Complete
+============================================================
+Total pore voxels analyzed: 1,369,216
+Diameter range: 2.23 - 906.45 um
+[15:48:41] WARNING  Found non-percolating regions, were filled to    _dns.py:73
+                    percolate                                                  
+[15:49:04] WARNING  Found non-percolating regions, were filled to    _dns.py:73
+                    percolate                                                  
+[15:49:31] WARNING  Found non-percolating regions, were filled to    _dns.py:73
+                    percolate                                                  
+[15:50:05] ERROR    Inlet/outlet rates don't match: 1.1155e+01 vs.  _dns.py:108
+                    -1.1154e+01                                                
+
+Run directory: pore_metrics_research\validation_run\out\psd_diag_20260707T134721_bnei_reem_i4_crop200
+Total pore voxels: 1,369,216
+Diameter range: 2.23 - 906.45 um
+Euler number: 56
+Connectivity density (mm^-3): -112
+Connectivity probability (Gamma): 0.881123
+Degree of anisotropy: 0.27133
+Tortuosity axis0: 1.650655986344334
+Tortuosity axis1: 6.07083166225106
+Tortuosity axis2: 3.011780011489429
+Files written:
+  config.json
+  result_psd.json
+  diagnostics.json
+  summary.json
+  psd_table.csv
+  psd_raw_data.csv
+  psd_30bins_microbial_active_domain.png
+  psd_kde.png
+  psd_20bins_30_150um.png
+  distance_to_pore_unconditioned.tif
+  distance_to_pore_unconditioned_midslice.tif
+  distance_to_pore_connected.tif
+  distance_to_pore_connected_midslice.tif
+  distance_to_pom_unconditioned.tif
+  distance_to_pom_unconditioned_midslice.tif
+  distance_to_pom_connected.tif
+  distance_to_pom_connected_midslice.tif
+  extended_distance_maps_midslice.png
+  extended_connectivity_topology_metrics.png
+  extended_tortuosity.png
+  extended_surface_area_by_class.png

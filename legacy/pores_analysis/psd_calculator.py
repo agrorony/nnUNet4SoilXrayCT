@@ -220,7 +220,11 @@ def compute_psd_from_opening_map(
         'reliability_flag': reliability_flag,
         'total_pore_voxels': total_pore_voxels,
         'diagnostics': diagnostics.data if diagnostics and diagnostics.enabled else None,
-        'voxel_spacing': voxel_spacing
+        'voxel_spacing': voxel_spacing,
+        # Kept for extended-metrics consumers (e.g. per-size-class surface
+        # area in topology_metrics.py) - does not change existing keys.
+        'diameter_map': diameter_map,
+        'masked_pore_mask': masked_volume & (diameter_map > 0),
     }
 
 
@@ -235,7 +239,9 @@ def _empty_psd_result() -> Dict[str, np.ndarray]:
         'differential_volume': np.array([]),
         'reliability_flag': np.array([], dtype=bool),
         'total_pore_voxels': 0,
-        'voxel_spacing': DEFAULT_PHYSICAL_VOXEL_SPACING
+        'voxel_spacing': DEFAULT_PHYSICAL_VOXEL_SPACING,
+        'diameter_map': None,
+        'masked_pore_mask': None,
     }
 
 

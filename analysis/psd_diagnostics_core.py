@@ -675,6 +675,12 @@ def _compute_psd_from_opening_map(
         "differential_volume": differential_volume,
         "total_pore_voxels": total_pore_voxels,
         "voxel_spacing": tuple(voxel_spacing),
+        # Additive fields (not consumed by any existing caller — added for
+        # analysis/psd_topology_metrics.py's per-bin surface-area metric,
+        # which needs the full per-voxel diameter map, not just the
+        # histogram). Named-key access only; safe to add.
+        "diameter_map": diameter_map,
+        "masked_pore_mask": pore_mask,
     }
 
 
@@ -690,6 +696,8 @@ def _empty_psd_result(
         "differential_volume": np.array([], dtype=np.float64),
         "total_pore_voxels": 0,
         "voxel_spacing": tuple(voxel_spacing),
+        "diameter_map": None,
+        "masked_pore_mask": None,
     }
 
 
@@ -913,6 +921,65 @@ def build_psd_table(result: Dict[str, Any]) -> List[Dict[str, Any]]:
                 "Differential_PSD": float(psd["differential_volume"][i]),
             }
         )
+    return rows
+
+
+# Extended CSV columns (base PSD_TABLE_COLUMNS + topology/connectivity
+# metrics from analysis/pore_metrics_research/decisions.md D1-D5). Sample-
+# level scalars are broadcast across every bin row; Surface_Area_um2 is a
+# genuine per-bin value.
+EXTENDED_PSD_TABLE_COLUMNS: Tuple[str, ...] = PSD_TABLE_COLUMNS + (
+    "Surface_Area_um2",
+    "Euler_Number",
+    "Connectivity_Density_per_mm3",
+    "Connectivity_Probability_Gamma",
+    "Degree_of_Anisotropy",
+    "Tortuosity_Axis0",
+    "Tortuosity_Axis1",
+    "Tortuosity_Axis2",
+    "PSD_30_150um_Volume_Fraction",
+)
+
+
+def build_extended_psd_table(
+    result: Dict[str, Any],
+    surface_areas: "np.ndarray",
+    scalars: Dict[str, Any],
+) -> List[Dict[str, Any]]:
+    """Build the extended PSD table: base PSD_TABLE_COLUMNS rows (via
+    ``build_psd_table``) plus the new topology/connectivity columns.
+
+    Parameters
+    ----------
+    result : dict returned by ``run_psd_pipeline``
+    surface_areas : per-bin surface area (um^2), same length as the PSD
+        bin arrays; NaN where a bin had too few voxels to mesh.
+    scalars : sample-level scalar metrics dict (broadcast across all rows),
+        expected keys: euler_number, connectivity_density_per_mm3,
+        connectivity_probability_gamma, degree_of_anisotropy,
+        tortuosity_axis0/1/2, psd_30_150um_volume_fraction.
+
+    Returns
+    -------
+    list of row dicts with keys matching ``EXTENDED_PSD_TABLE_COLUMNS``
+    """
+    base_rows = build_psd_table(result)
+    n = len(base_rows)
+    sa = np.asarray(surface_areas, dtype=np.float64) if len(surface_areas) else np.full(n, np.nan)
+
+    rows: List[Dict[str, Any]] = []
+    for i, row in enumerate(base_rows):
+        extended_row = dict(row)
+        extended_row["Surface_Area_um2"] = float(sa[i]) if i < len(sa) else float("nan")
+        extended_row["Euler_Number"] = scalars.get("euler_number")
+        extended_row["Connectivity_Density_per_mm3"] = scalars.get("connectivity_density_per_mm3")
+        extended_row["Connectivity_Probability_Gamma"] = scalars.get("connectivity_probability_gamma")
+        extended_row["Degree_of_Anisotropy"] = scalars.get("degree_of_anisotropy")
+        extended_row["Tortuosity_Axis0"] = scalars.get("tortuosity_axis0")
+        extended_row["Tortuosity_Axis1"] = scalars.get("tortuosity_axis1")
+        extended_row["Tortuosity_Axis2"] = scalars.get("tortuosity_axis2")
+        extended_row["PSD_30_150um_Volume_Fraction"] = scalars.get("psd_30_150um_volume_fraction")
+        rows.append(extended_row)
     return rows
 
 

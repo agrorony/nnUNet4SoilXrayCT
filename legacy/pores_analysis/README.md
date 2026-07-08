@@ -21,7 +21,15 @@ pip install cupy-cuda11x  # or cupy-cuda12x
 
 # Optional: Advanced features
 pip install scikit-image matplotlib openpyxl tables h5py
+
+# Extended topology/connectivity metrics (Euler/connectivity density, Gamma,
+# anisotropy, tortuosity, surface area by size class) - see topology_metrics.py
+# and extended_pipeline.py, and analysis/pore_metrics_research/decisions.md
+pip install porespy tifffile
 ```
+
+See `environment.yml` for a full conda environment specification (added
+alongside the extended topology/connectivity metrics).
 
 ## Quick Start
 

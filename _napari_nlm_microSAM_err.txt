@@ -1,0 +1,6 @@
+C:\Users\rony.schwartz\.conda\envs\venv-napari\Lib\site-packages\micro_sam\util.py:15: UserWarning: elf has switched from the affogato, vigra, and nifty librares to https://github.com/computational-cell-analytics/bioimage-cpp as new backed for custom functionality implemented in C++, e.g. mutex watershed, multicut etc. This may lead to some changes in behavior and interface. If you run into issues with the new version consider installing a version < 0.9. Please also consider raising an issue on github so that we are aware of issues with the migration.
+  import elf.parallel as parallel_impl
+0.00s - Debugger warning: It seems that frozen modules are being used, which may
+0.01s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off
+0.00s - to python to disable frozen modules.
+0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.

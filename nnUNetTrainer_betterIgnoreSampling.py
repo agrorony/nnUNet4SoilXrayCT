@@ -395,3 +395,43 @@ class nnUNetTrainer_betterIgnoreSampling_earlyStopValLoss(nnUNetTrainer_betterIg
                 break
 
         self.on_train_end()
+
+
+class nnUNetTrainer_betterIgnoreSampling_earlyStopValLoss_lowlr(
+        nnUNetTrainer_betterIgnoreSampling_earlyStopValLoss):
+    """
+    Fine-tuning variant with lower initial LR and explicit per-epoch mean Dice logging.
+
+    LR change:
+      Original (nnUNet default):  initial_lr = 1e-2
+      This class:                 initial_lr = 2e-3  (5x reduction)
+
+    Dice logging fix:
+      Base class logs 'Pseudo dice [per-class list]' every epoch but the
+      'Yayy! New best EMA pseudo Dice' summary only appears on improvement epochs.
+      This class additionally logs 'mean_dice_computed <float>' every epoch,
+      computed as the mean of non-NaN values in the per-class list.
+    """
+
+    def __init__(self, plans: dict, configuration: str, fold: int,
+                 dataset_json: dict, unpack_dataset: bool = True,
+                 device: torch.device = torch.device('cuda')):
+        super().__init__(plans, configuration, fold, dataset_json,
+                         unpack_dataset, device)
+        # Original LR: 1e-2 (nnUNet default for nnUNetTrainer)
+        # New LR: 2e-3 (5x reduction for continued fine-tuning stability)
+        self.initial_lr = 2e-3
+
+    def on_epoch_end(self):
+        super().on_epoch_end()
+        try:
+            pseudo_dice_history = self.logger.my_fantastic_logging.get('pseudo_dice', [])
+            if pseudo_dice_history:
+                arr = np.array(pseudo_dice_history[-1], dtype=float)
+                valid = arr[~np.isnan(arr)]
+                mean_d = float(np.mean(valid)) if len(valid) > 0 else float('nan')
+            else:
+                mean_d = float('nan')
+            self.print_to_log_file(f'mean_dice_computed {mean_d:.6f}')
+        except Exception as e:
+            self.print_to_log_file(f'mean_dice_computed ERROR: {e}')
