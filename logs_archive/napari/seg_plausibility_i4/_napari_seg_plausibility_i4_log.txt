@@ -1,0 +1,28 @@
+44447 flagged entries loaded (excluded classes: [5], min_severity=0.0)
+[1/44447] id=1 z=0 object_id=13 class=1 event=disappear severity=1.000 — object 13 disappears with no successor at z=0
+Napari viewer open. Use the Next/Previous flagged buttons to step through issues. Close the window to exit.
+[2/44447] id=2 z=0 object_id=15 class=1 event=disappear severity=1.000 — object 15 disappears with no successor at z=0
+[3/44447] id=3 z=0 object_id=16 class=1 event=disappear severity=1.000 — object 16 disappears with no successor at z=0
+[4/44447] id=4 z=0 object_id=17 class=1 event=disappear severity=1.000 — object 17 disappears with no successor at z=0
+[5/44447] id=5 z=0 object_id=18 class=1 event=disappear severity=1.000 — object 18 disappears with no successor at z=0
+[6/44447] id=6 z=0 object_id=19 class=1 event=disappear severity=1.000 — object 19 disappears with no successor at z=0
+[7/44447] id=7 z=0 object_id=20 class=1 event=disappear severity=1.000 — object 20 disappears with no successor at z=0
+[8/44447] id=8 z=0 object_id=21 class=1 event=disappear severity=1.000 — object 21 disappears with no successor at z=0
+[9/44447] id=9 z=0 object_id=22 class=1 event=disappear severity=1.000 — object 22 disappears with no successor at z=0
+[10/44447] id=10 z=0 object_id=23 class=1 event=disappear severity=1.000 — object 23 disappears with no successor at z=0
+[11/44447] id=11 z=0 object_id=24 class=1 event=disappear severity=1.000 — object 24 disappears with no successor at z=0
+[12/44447] id=12 z=0 object_id=25 class=1 event=disappear severity=1.000 — object 25 disappears with no successor at z=0
+[13/44447] id=13 z=0 object_id=26 class=1 event=disappear severity=1.000 — object 26 disappears with no successor at z=0
+[14/44447] id=14 z=0 object_id=30 class=1 event=disappear severity=1.000 — object 30 disappears with no successor at z=0
+[15/44447] id=15 z=0 object_id=37 class=2 event=disappear severity=1.000 — object 37 disappears with no successor at z=0
+[16/44447] id=16 z=0 object_id=40 class=2 event=disappear severity=1.000 — object 40 disappears with no successor at z=0
+[17/44447] id=17 z=0 object_id=42 class=2 event=disappear severity=1.000 — object 42 disappears with no successor at z=0
+[18/44447] id=18 z=0 object_id=49 class=2 event=disappear severity=1.000 — object 49 disappears with no successor at z=0
+[19/44447] id=19 z=0 object_id=56 class=2 event=disappear severity=1.000 — object 56 disappears with no successor at z=0
+[20/44447] id=20 z=0 object_id=57 class=2 event=disappear severity=1.000 — object 57 disappears with no successor at z=0
+[21/44447] id=21 z=0 object_id=67 class=2 event=disappear severity=1.000 — object 67 disappears with no successor at z=0
+[22/44447] id=22 z=0 object_id=68 class=2 event=disappear severity=1.000 — object 68 disappears with no successor at z=0
+[23/44447] id=107 z=1 object_id=802 class=1 event=appear severity=1.000 — object 802 appears with no predecessor at z=1
+[24/44447] id=108 z=1 object_id=803 class=1 event=appear severity=1.000 — object 803 appears with no predecessor at z=1
+[25/44447] id=109 z=1 object_id=803 class=1 event=disappear severity=1.000 — object 803 disappears with no successor at z=1
+
