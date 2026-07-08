@@ -1,14 +1,14 @@
 """
-training_diag/check_data.py
+05_evaluation/labels_debug/check_data.py
 Diagnostic tool for nnU-Net training data: value audit, metadata check,
 label integrity, intensity stats, napari visualization, and self-check.
 
 Usage:
     # Auto-select first matching pair:
-    python training_diag/check_data.py
+    python 05_evaluation/labels_debug/check_data.py
 
     # Explicit case name (without suffix):
-    python training_diag/check_data.py --case bnei_reem_001
+    python 05_evaluation/labels_debug/check_data.py --case bnei_reem_001
 """
 
 import argparse
