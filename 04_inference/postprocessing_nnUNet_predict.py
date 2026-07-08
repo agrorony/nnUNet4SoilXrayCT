@@ -1,7 +1,11 @@
 import argparse
 import subprocess
+import sys
 from pathlib import Path
 
+# __path__.py now lives in 02_preprocessing/nnunet/ (moved during the 2026-07
+# reorg); add it to sys.path since this script is no longer in the same folder.
+sys.path.insert(0, str(Path(__file__).resolve().parent.parent / '02_preprocessing' / 'nnunet'))
 from __path__ import PATH_ImageJ
 
 

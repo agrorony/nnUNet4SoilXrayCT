@@ -12,14 +12,38 @@ __pycache__/
 # Local editor config
 .vscode/
 
-# Generated analysis artifacts
-analysis/iteration_state.json
-analysis/selected_outputs/
+# Generated analysis artifacts (post reorg paths)
+01_data_ingestion/registry/iteration_state.json
+06_reporting/selected_outputs/
 
-# Generated preprocessing outputs
-preprocess/nlm_output/
-preprocess/norm200_output/
+# Regenerable QA renders (synopsis outputs) — see 06_reporting/scripts/make_synopsis.py
+06_reporting/synopsis_outputs/
+
+# Regenerable PSD validation-run outputs and third-party reference PDFs
+05_evaluation/psd/pore_metrics_research/validation_run/
+05_evaluation/psd/pore_metrics_research/papers/
 
 # Common OS junk
 .DS_Store
 Thumbs.db
+
+# Reorg: stray locked files that could not be deleted from their old
+# locations during the 2026-07 reorg (Windows file lock, "Device or
+# resource busy") — tracked copies now live at their new reorg paths;
+# these old-path leftovers are physically orphaned and pending manual
+# deletion by the maintainer once the lock is released.
+/microsam_3d/debug.log
+/_napari_mishmar_microSAM_log.txt
+/_napari_mishmar_microSAM_err.txt
+
+# Reorg amendment C: these 7 log/txt files were previously committed to git;
+# they are now `git rm --cached` and archived (moved, not deleted) into
+# logs_archive/ — stop tracking going forward. History (old blobs) is
+# preserved; this is NOT a git-history purge.
+logs_archive/training/mishmar_psd/mishmar_psd.log
+logs_archive/inference/inference/_inference_err.txt
+logs_archive/inference/inference/_inference_log.txt
+logs_archive/inference/inference_nlm/_inference_nlm_err.txt
+logs_archive/inference/inference_nlm/_inference_nlm_log.txt
+logs_archive/napari/nlm/_napari_nlm_err.txt
+logs_archive/napari/nlm/_napari_nlm_log.txt

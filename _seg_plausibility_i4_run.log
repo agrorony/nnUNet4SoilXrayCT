@@ -1,7 +1,0 @@
-Loaded volume //hive3065/Yael_Mishael/Rony/remote_computer backup/nnUNet_resources/bnei_reem_fresh_bnei_reem_i4/inference_concatenated/nlm_volume.nii.gz: shape=(652, 650, 650), dtype=int32, classes=[1, 2, 5]
-WARNING: no --thresholds given, using built-in defaults.
-[OK] instance_map -> ../analysis/selected_outputs/bnei_reem/seg_plausibility_i4\instance_map.tif
-[OK] track_table  -> ../analysis/selected_outputs/bnei_reem/seg_plausibility_i4\track_table.csv
-[OK] errors.json  -> ../analysis/selected_outputs/bnei_reem/seg_plausibility_i4\errors.json
-Tracks: 115370  Events: 183349  Flagged transitions: 139449  Total errors: 322798
-

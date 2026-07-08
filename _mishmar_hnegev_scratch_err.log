@@ -1,4 +1,0 @@
-Traceback (most recent call last):
-  File "C:\Users\rony.schwartz\Documents\nnUNet4SoilXrayCT\_run_mishmar_hnegev_scratch.py", line 24, in <module>
-    import nibabel as nib
-ModuleNotFoundError: No module named 'nibabel'
