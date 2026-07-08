@@ -4,13 +4,7 @@ This repository contains the code and documentation to run the complete nnUNet p
 2. several scripts to prepare the input images to a format that is compatible with nnUNet;
 3. extra utilities for result extraction. 
 
-In this repository, we provide detailed explanations on how to transition from 3D image stacks to nnUNet predictions. If you used this repository and associated code for your own work, please cite the following references to acknowledge our efforts: 
-````
-Isensee, F., Jaeger, P. F., Kohl, S. A., Petersen, J., & Maier-Hein, K. H. (2021). nnU-Net: a self-configuring method for deep learning-based biomedical image segmentation. Nature methods, 18(2), 203-211. https://doi.org/10.1038/s41592-020-01008-z
-````
-````
-Phalempin, M., Krämer, L., Geers-Lucas, M., Isensee, F., & Schlüter, S. (2025). Deep learning segmentation of soil constituents in 3D X-ray CT images. Geoderma. 458, 117321. https://doi.org/10.1016/j.geoderma.2025.117321
-````
+In this repository, we provide detailed explanations on how to transition from 3D image stacks to nnUNet predictions. If you used this repository and associated code for your own work, please cite the references, institutional links, and tooling documentation listed in **[`RESOURCES.md`](RESOURCES.md)** to acknowledge our efforts.
 
 # Philosopy
 The scripts and repository were written assuming (almost) no prerequisite programming experience of the user. Together, we will go in detail into a range of technical aspects, from installing plugins to tapping into the resources of high performance computing (HPC) cluster. We aimed to write codes which are flexible and easy to use. For most scripts, you will have to adjust a few file paths only. In most cases, these filepaths are given from the terminals. We hope that this philosophy and the level of details of this document will help you get onto the deep learning boat for your image processing tasks.
@@ -46,7 +40,7 @@ Optional flags:
 - `--hide_prediction` to start with prediction hidden.
 
 <p align="center">
-  <img src="Figures/Workflow.png" width="500"> 
+  <img src="00_docs/Figures/Workflow.png" width="500"> 
 </p>
 
 **Figure 1.** Workflow to transition from 3D X-ray CT image stacks to nnUNet predictions 
@@ -175,7 +169,7 @@ ImageJ is a free, open-source image processing software widely used in scientifi
    
    **For Ubuntu**: convert_mha_to_img_ubuntu.ijm, convert_nii_to_mha_ubuntu.ijm.
     If the Ubuntu scripts are used, remove the "_ubuntu" sufices in the filenames.
-3. Put the nnUNetTrainer_betterIgnoreSampling.py into nnunet/nnunetv2/training/nnUNetTrainer/variants/sampling/
+3. Put 03_training/nnUNetTrainer_betterIgnoreSampling.py into nnunet/nnunetv2/training/nnUNetTrainer/variants/sampling/
 4. Place nifti_io.jar (currently in ./nnUNetX4SoilXrayCT/Utilities) into the plugins folder of ImageJ (at ../Fiji.app/plugins").
    
 ### 2.1.6. Setting file paths
@@ -197,7 +191,7 @@ Data conversion entails converting the input files to .nii.gz, handling the igno
 
 You can set the appropriate method in the ```dataset_info.json``` file. Once this is done, start converting your data by running:
 ````shell
-python preprocessing_nnUNet_train.py
+python 02_preprocessing/nnunet/preprocessing_nnUNet_train.py
 ````
 <!-- Notes for me: This step takes roughly 7 minutes for an image of 3G on BOPHY116 --> 
 
@@ -245,6 +239,8 @@ source /home/username/venv-nnunet/bin/activate
 Once your virtual environment is created, you can install PyTorch. PyTorch is an open-source machine learning library for Python, widely used for deep learning and artificial intelligence. It provides flexible tools for building, training, and deploying neural networks, with strong support for GPUs and dynamic computation graphs. To install PyTorch, enter the following command: 
 ````
 pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu117
+
+> See `RESOURCES.md` for the full list of PyTorch wheel indices used across this repo (cu117 here, cu124 for the GPU preprocessing branch).
 ````
 Note that, here, we install an older PyTorch version (compatible with the CUDA platform 11.7). More recent versions of CUDA are currently available, however we have not yet tried them on our cluster.
 
@@ -298,16 +294,16 @@ Depending on the resources currently available, the job scheduler will distribut
 ## 6.1. Preprocessing of the images 
 This step preprocesses the images that you want to segment (i.e., the ones that were not selected as part of the training dataset). This preprocessing mainly entails an image normalization step and a conversion from a 3D .tif stack to a format that nnUNet can read. When the images to predict are 3D .tif image stacks, use: 
 ````shell
-python preprocessing_nnUNet_predict_tif.py -i /path/to/images_tif -o /path/to/images_nii
+python 02_preprocessing/nnunet/preprocessing_nnUNet_predict_tif.py -i /path/to/images_tif -o /path/to/images_nii
 ````
 When the images to predict are in .mha format, use: 
 ````shell
-python preprocessing_nnUNet_predict.py -i /path/to/images_mha -o /path/to/images_nii
+python 02_preprocessing/nnunet/preprocessing_nnUNet_predict.py -i /path/to/images_mha -o /path/to/images_nii
 ````
 If you used another normalization method than "zscore" for the preprocessing of your training images, the normalization method has to be specified here again after the "-n" flag, for example:
 
 ````shell
-python preprocessing_nnUNet_predict_tif.py -i /path/to/images_tif -o /path/to/images_nii -n noNorm
+python 02_preprocessing/nnunet/preprocessing_nnUNet_predict_tif.py -i /path/to/images_tif -o /path/to/images_nii -n noNorm
 ````
 ## 6.2. Splitting of the images
 <!-- Question: why can we not give a norm_type here too? -->
@@ -317,7 +313,7 @@ We highly recommend splitting the images after conversion to .nii.gz. This split
 
 To split the data, use the following command:
 ````shell
-python preprocessing_nnUNet_predict_split.py -i /input/path/to/images_nii/to_split -o /output/path/for/split/images -s 8 -m /path/to/the/trained/model
+python 02_preprocessing/nnunet/preprocessing_nnUNet_predict_split.py -i /input/path/to/images_nii/to_split -o /output/path/for/split/images -s 8 -m /path/to/the/trained/model
 ````
 Here, there are two things to note: 
 1) The model (given after the flag -m) is located at: \nnUNet_results\Dataset_TaskID\nnUNetTrainer_betterIgnoreSampling__nnUNetPlans__3d_fullres. The reason why we give the model here is that patch size and image spacing are read from the ``plans.json`` file located in the model folder. The patch size and image spacing are used to calculate the overlap used during splitting the images. Choosing an appropriate overlap is necessary to avoid segmentation artifacts between image splits. The command actually works without giving the model path, but default values are taken then. Since the nnUNet_results folder is on the cluster, you might want to either run `preprocessing_nnUNet_predict_split.py` from the terminal of the cluster or transfer back the nnUNet_results folder to your workstation to do the splitting there. 
@@ -387,17 +383,17 @@ where the parameters "0" and "n" correspond to indices used to retrieve the samp
 
 ## 6.4. Post-processing of the predictions 
 ### 6.4.1 Concatenate the predicted images 
-Assuming you have used the `preprocessing_nnUNet_predict_split.py` script previously, the predicted images now have to be concatenated back into a volume having the shape of the input image, while making sure to get rid of overlapping regions. This is exactly what ``postprocessing_nnUNet_predict_concatenate.py`` does.
+Assuming you have used the `02_preprocessing/nnunet/preprocessing_nnUNet_predict_split.py` script previously, the predicted images now have to be concatenated back into a volume having the shape of the input image, while making sure to get rid of overlapping regions. This is exactly what ``04_inference/postprocessing_nnUNet_predict_concatenate.py`` does.
 
 ````shell
-python postprocessing_nnUNet_predict_concatenate.py -i /input/path/to/your/splitted_prediction -o /outpath/to/your/saved_prediction
+python 04_inference/postprocessing_nnUNet_predict_concatenate.py -i /input/path/to/your/splitted_prediction -o /outpath/to/your/saved_prediction
 ````
 
 ### 6.4.2 Final file conversion
 After the previous step, your segmentation results are ready in .nii.gz format. If you are also a .mha enthousiast like we are, you might want to do a final conversion step using: 
 
 ````shell
-python postprocessing_nnUNet_predict.py -i /input/path/to/your/splitted_prediction -o /outpath/to/your/saved_prediction
+python 04_inference/postprocessing_nnUNet_predict.py -i /input/path/to/your/splitted_prediction -o /outpath/to/your/saved_prediction
 ````
 # 7. Log analysis
 In this section, we describe two extra utilities that can be used to extract information on training and validation metrics. These utilities use data from files located in the "nnUNet_results/Dataset_X_YY/nnUNetTrainer_betterIgnoreSampling__nnUNetPlans__3d_fullres/". In this folder, the log results for each training fold are contained in "./fold_X/training_log_X.txt" for training metrics and in "./fold_X/validation/summary.json" for validation metrics. For ease-of-use, we recommend moving these files to dedicated folders. You will want to rename the "summary.json" files as they have the same name and your OS will likely complain if you put them in one folder (helps with clarity as well!). In the following sections, we will assume that you have done so. In general, we also recommend inspecting these files to get a better understanding of the output data and its format.
@@ -440,6 +436,6 @@ This repository was drafted by Maxime Phalempin (UFZ) and Lars Krämer (DKFZ, HI
 Part of this work was funded by Helmholtz Imaging (HI), a platform of the Helmholtz Incubator. 
 
 <p align="left">
-  <img src="Figures/UFZ_Logo.png" width="500"> 
-  <img src="Figures/HI_Logo.png" width="300"> 
+  <img src="00_docs/Figures/UFZ_Logo.png" width="500"> 
+  <img src="00_docs/Figures/HI_Logo.png" width="300"> 
 </p>
