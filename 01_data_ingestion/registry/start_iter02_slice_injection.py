@@ -3,8 +3,12 @@
 Start iter_02 by selecting 2 prediction slices per sample that are not already
 annotated in the latest annotation, then inject them into new annotation versions.
 
-This script intentionally does not mutate analysis/data_registry.json directly.
-It writes a mutation package for the Data Registry and Path Validation agent.
+This script intentionally does not mutate
+01_data_ingestion/registry/data_registry.json directly. It writes a
+mutation package instead (the automated "Data Registry and Path
+Validation agent" that historically consumed these packages was removed
+from .github/agents/ during the 2026-07 reorg per amendment B; mutation
+packages should now be reviewed/applied manually).
 """
 
 from __future__ import annotations
@@ -45,7 +49,7 @@ def parse_args() -> argparse.Namespace:
         "--repo_dir",
         type=Path,
         default=Path.cwd(),
-        help="Repository root containing analysis/data_registry.json.",
+        help="Repository root (data_registry.json is resolved relative to this script's own folder).",
     )
     parser.add_argument(
         "--seed",
@@ -363,10 +367,12 @@ def main() -> int:
     args = parse_args()
 
     repo_dir = args.repo_dir.resolve()
-    analysis_dir = repo_dir / "analysis"
-    registry_path = analysis_dir / "data_registry.json"
+    # 2026-07 reorg: analysis/ no longer exists. data_registry.json now lives
+    # alongside this script under 01_data_ingestion/registry/; selected_outputs
+    # moved to 06_reporting/selected_outputs/.
+    registry_path = Path(__file__).resolve().parent / "data_registry.json"
     dataset_info_path = repo_dir / "dataset_info.json"
-    selected_outputs_root = analysis_dir / "selected_outputs"
+    selected_outputs_root = repo_dir / "06_reporting" / "selected_outputs"
 
     if not registry_path.exists():
         raise FileNotFoundError(f"Missing registry: {registry_path}")
