@@ -1,17 +1,13 @@
-[000.0s] Loading volume: \\hive3065\Yael_Mishael\Rony\remote_computer backup\10.5\mishmar_hanegev_Cu011_samp_2_Rec_nlm.tif | RAM: 0.03 GB
-[001.8s]   shape=(822, 650, 650)  dtype=float32 | RAM: 0.14 GB
-[001.8s] Loading prediction: \\hive3065\Yael_Mishael\Rony\remote_computer backup\nnUNet_resources\mishmar_hanegev_new_work\mishmar_hanegev_Cu011_samp_2_Rec_nlm.nii.gz | RAM: 0.14 GB
-[002.4s]   shape=(822, 650, 650) | RAM: 0.17 GB
-[002.4s] Loading GT: \\hive3065\Yael_Mishael\Rony\remote_computer backup\nnUNet_resources\mishmar_hanegev_new_work\annotations\mishmar_hanegev_Cu011_samp_2_Rec_nlm.nii.gz | RAM: 0.17 GB
-[002.4s]   shape=(822, 650, 650) | RAM: 0.17 GB
-[002.4s] Creating viewer ... | RAM: 0.17 GB
-[007.1s] Adding volume layer ... | RAM: 0.37 GB
-[007.9s] Volume layer added. | RAM: 0.38 GB
-[007.9s] Adding prediction layer (computing to numpy for paintability) ... | RAM: 0.38 GB
-[009.6s] Prediction layer added. | RAM: 0.74 GB
-[009.6s] Adding GT layer (computing to numpy for paintability) ... | RAM: 0.74 GB
-[011.4s] GT layer added. | RAM: 1.09 GB
-[011.4s] Loading extra layer 'pred_iter02' (computing to numpy) ... | RAM: 1.09 GB
-[013.6s]   'pred_iter02' layer added. | RAM: 1.45 GB
-[019.3s] Building dock widgets ... | RAM: 2.03 GB
-[019.4s] Widgets ready. Entering napari event loop ... | RAM: 2.03 GB
+[000.0s] Loading volume: //hive3065/Yael_Mishael/Rony/remote_computer backup/10.5/Rehovot_samp3_highkV_Cu0.11_15um.tif | RAM: 0.03 GB
+[003.1s]   shape=(650, 650, 650)  dtype=float32 | RAM: 0.14 GB
+[003.1s] Loading prediction: c:\Users\rony.schwartz\Documents\nnUNet4SoilXrayCT\predictions_rehovot_20260815\Rehovot_samp3_highkV_Cu0.11_15um\Rehovot_samp3_highkV_Cu0.11_15um_loess_i2.tif | RAM: 0.14 GB
+[003.3s]   shape=(650, 650, 650) | RAM: 0.14 GB
+[003.3s] Creating viewer ... | RAM: 0.14 GB
+[012.7s] Adding volume layer ... | RAM: 0.35 GB
+[014.0s] Volume layer added. | RAM: 0.36 GB
+[014.0s] Adding prediction layer (computing to numpy for paintability) ... | RAM: 0.36 GB
+[017.0s] Prediction layer added. | RAM: 0.67 GB
+[017.0s] Loading extra layer 'bnei_reem_i4' (computing to numpy) ... | RAM: 0.67 GB
+[020.5s]   'bnei_reem_i4' layer added. | RAM: 0.95 GB
+[030.3s] Building dock widgets ... | RAM: 1.56 GB
+[030.6s] Widgets ready. Entering napari event loop ... | RAM: 1.56 GB

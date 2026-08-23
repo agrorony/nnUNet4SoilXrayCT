@@ -78,6 +78,7 @@ def run_microsam(args):
         extra_label_paths=extra_label_paths,
         zrange=zrange,
         debug=args.debug,
+        title=args.title,
     )
 
 
@@ -124,6 +125,7 @@ def main():
     parser.add_argument('--pred-paths', action='append', metavar='NAME=PATH',
                          help='Repeatable. First entry is the primary prediction; rest become extra label layers.')
     parser.add_argument('--zrange', type=int, nargs=2, metavar=('START', 'END'))
+    parser.add_argument('--title', default=None, help='Custom napari window title (only used with --viewer microsam).')
     parser.add_argument('--debug', action='store_true', default=True)
     parser.add_argument('--seg-plausibility-results-dir')
     parser.add_argument('--exclude-classes', default=None, help='Only used with --mode seg_plausibility.')

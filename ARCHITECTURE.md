@@ -52,7 +52,9 @@ pipeline-stage folders plus a log archive.
   `scripts/launch_napari_review.py` (S6, consolidated viewer dispatcher),
   `scripts/make_synopsis.py` (S7), `scripts/plot_training_metrics.py`
   (S8), plus `extract_trainlog.py`, `make_psd_plot.py`,
-  `inspect_predictions.py`. `synopsis_outputs/` and `selected_outputs/`
+  `inspect_predictions.py`, `aggregate_training_diagnostics.py` (S13,
+  cross-run training-curve comparison across both soil branches).
+  `synopsis_outputs/`, `selected_outputs/`, and `training_diagnostics/`
   hold regenerable QA renders (gitignored — see `.gitignore`).
 - **`07_utilities/`** — `Utilities/` (SLURM submission scripts,
   `nifti_io.jar` — see §5 below), `Fiji_macros/` (image-format conversion
@@ -106,6 +108,7 @@ for the archive note and scheduled deletion in a future cleanup cycle.
 | S10 | `inspect_labels.py` | `05_evaluation/scripts/` | `_inspect_labels.py` |
 | S11 | `verify_paths.py` | `01_data_ingestion/scripts/` | `_verify_i2_paths.py` |
 | S12 | `find_dataset_json.py` | `07_utilities/scripts/` | `_find_dataset_json.py` |
+| S13 | `aggregate_training_diagnostics.py` | `06_reporting/scripts/` | (new — no per-iteration predecessor) |
 
 Each `<stage>/scripts/legacy_per_iteration/` folder holds the retired
 originals pending a live verification cycle (see

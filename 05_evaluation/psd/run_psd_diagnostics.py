@@ -608,17 +608,20 @@ def _run_extended(args: argparse.Namespace) -> None:
     # the model's trained label indices for the actual integer convention).
     labeled_vol = _load_labeled_volume(input_path)
 
+    chunk_size: Tuple[int, int, int] = tuple(int(c) for c in args.chunk_size)
+    halo_width: int = int(args.halo_width)
+
     pore_label = int(args.pore_label)
-    pom_label = int(args.pom_label)
+    pom_labels = [int(v) for v in args.pom_label]
 
     pore_mask = (labeled_vol == pore_label)
-    pom_mask = (labeled_vol == pom_label)
+    pom_mask = np.isin(labeled_vol, pom_labels)
 
     if not np.any(pore_mask):
         _fail(f"No voxels found with pore_label={pore_label} in {input_path}")
     if not np.any(pom_mask):
         warnings.warn(
-            f"No voxels found with pom_label={pom_label}; "
+            f"No voxels found with pom_label(s)={pom_labels}; "
             "distance-to-POM maps will be skipped.",
             UserWarning,
         )
@@ -638,10 +641,13 @@ def _run_extended(args: argparse.Namespace) -> None:
         "input": str(input_path.resolve()),
         "voxel_spacing": list(spacing),
         "pore_label": pore_label,
-        "pom_label": pom_label,
+        "pom_label": pom_labels,
         "exclude_borders": not args.no_exclude_borders,
         "bin_edges_um_input": bin_edges_um.tolist() if bin_edges_um is not None else None,
         "extended_bin_edges_um": extended_bin_edges_um.tolist(),
+        "use_chunking": args.use_chunking,
+        "chunk_size": list(chunk_size) if args.use_chunking else None,
+        "halo_width": halo_width if args.use_chunking else None,
         "use_gpu": not args.no_gpu,
         "n_anisotropy_directions": int(args.n_anisotropy_directions),
         "voxel_size_um_isotropic_placeholder": voxel_size_um,
@@ -656,6 +662,9 @@ def _run_extended(args: argparse.Namespace) -> None:
         result = run_psd_pipeline(
             pore_mask,
             spacing,
+            use_chunking=args.use_chunking,
+            chunk_size=chunk_size,
+            halo_width=halo_width,
             exclude_borders=not args.no_exclude_borders,
             bin_edges_um=extended_bin_edges_um,
             use_gpu=not args.no_gpu,
@@ -867,8 +876,10 @@ def _build_parser() -> argparse.ArgumentParser:
         help="Integer label value identifying the pore phase.",
     )
     p_ext.add_argument(
-        "--pom-label", type=int, required=True,
-        help="Integer label value identifying the POM (particulate organic matter) phase.",
+        "--pom-label", type=int, required=True, nargs="+",
+        help="Integer label value(s) identifying the POM (particulate organic matter) "
+             "phase. Repeatable/multi-value; e.g. '--pom-label 3 4' merges POM_type1 and "
+             "POM_type2 into a single POM mask.",
     )
     p_ext.add_argument(
         "--voxel-spacing", nargs=3, type=float, required=True,
@@ -890,8 +901,25 @@ def _build_parser() -> argparse.ArgumentParser:
              "The 30-150um bin is always added on top of these.",
     )
     p_ext.add_argument(
-        "--n-anisotropy-directions", type=int, default=100,
-        help="Number of MIL sampling directions for degree-of-anisotropy (default: 100).",
+        "--n-anisotropy-directions", type=int, default=800,
+        help="Number of MIL sampling directions for degree-of-anisotropy (default: 800; "
+             "convergence-tested 2026-07-22 on the bnei_reem_i4_crop200 validation volume, "
+             "see pore_metrics_research/decisions.md D4-addendum — N=100 was not converged).",
+    )
+    p_ext.add_argument(
+        "--use-chunking", action="store_true",
+        help="Use block-chunked EDT for the PSD/pore-EDT step (default: monolithic). "
+             "Does NOT chunk the topology metrics (connectivity/anisotropy/tortuosity), "
+             "which still run on the full mask.",
+    )
+    p_ext.add_argument(
+        "--chunk-size", nargs=3, type=int, default=[128, 128, 128],
+        metavar=("CZ", "CY", "CX"),
+        help="Core chunk size before halo padding (default: 128 128 128).",
+    )
+    p_ext.add_argument(
+        "--halo-width", type=int, default=50,
+        help="Halo padding in voxels for chunked EDT (default: 50).",
     )
     p_ext.add_argument(
         "--no-gpu", action="store_true",

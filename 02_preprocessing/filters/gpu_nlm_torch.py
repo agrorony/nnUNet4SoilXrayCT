@@ -44,9 +44,21 @@ class NLMConfig:
     min_chunk_size: int = 32
 
 
-def _estimate_sigma_torch(volume_3d: torch.Tensor) -> float:
-    med = torch.median(volume_3d)
-    mad = torch.median(torch.abs(volume_3d - med))
+def _estimate_sigma_torch(volume_3d: torch.Tensor, max_samples: int = 200_000_000) -> float:
+    """Robust noise-sigma estimate via median/MAD.
+
+    torch.median on CUDA sorts internally, which hard-fails above ~2.147B
+    (INT_MAX) elements (hit on a 1800x896x1344 = 2.169B-voxel volume). Random
+    subsampling with replacement keeps the estimate statistically equivalent
+    (negligible sampling error at n=200M) while staying well under that limit
+    for any volume size.
+    """
+    flat = volume_3d.reshape(-1)
+    if flat.numel() > max_samples:
+        idx = torch.randint(0, flat.numel(), (max_samples,), device=flat.device)
+        flat = flat[idx]
+    med = torch.median(flat)
+    mad = torch.median(torch.abs(flat - med))
     return float((mad * 1.4826).item())
 
 

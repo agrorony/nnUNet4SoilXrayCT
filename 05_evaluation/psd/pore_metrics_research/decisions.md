@@ -93,6 +93,25 @@ where `s_i` is the size (voxel count) of pore cluster `i`, obtained from 26-conn
 
 **Confidence: Medium.** The overall MIL → fabric tensor → eigenvalue-ratio anisotropy pipeline structure is High confidence (stated directly in Odgaard 1997 and corroborated by Jarvis et al. 2017). However, **Doube et al. (2010)**, which would specify BoneJ's exact number/pattern of sampling directions and the precise least-squares fitting weights, **was not present in the papers folder**; the direction count (N=100, Fibonacci sampling) and the exact tensor-fit numerics are a defensible standard choice from general knowledge of MIL implementations, not verified against BoneJ's source — **this specific parameterization is flagged Low confidence**.
 
+**D4-addendum (2026-07-22): direction/line-count parameterization resolved by convergence test, independent of BoneJ.**
+Ran `degree_of_anisotropy()` on the `bnei_reem_i4_crop200` validation volume's connected pore mask (1,337,361 voxels) at `n_directions` in {50,100,200,400,800} and `n_lines_per_direction` in {100,200,400,800}, 4 random seeds per configuration:
+
+| n_directions | n_lines | mean DA | std DA | relative std |
+|---|---|---|---|---|
+| 50  | 400 | 0.195 | 0.055 | 28.1% |
+| 100 | 400 | 0.231 | 0.042 | 18.2% |
+| 200 | 400 | 0.202 | 0.003 | 1.6% (likely a lucky draw, not a trend — see 400/400 below) |
+| 400 | 400 | 0.169 | 0.036 | 21.0% |
+| 800 | 400 | 0.175 | 0.021 | 11.7% |
+| 400 | 800 | 0.192 | 0.024 | 12.3% |
+| 800 | 800 | 0.188 | 0.003 | **1.4%** |
+
+**Finding: the old default (N=100, L=400, used in the original validation run — that run actually used `--n-anisotropy-directions 40`, even lower) is not converged.** Seed-to-seed DA spread is ~18-28% relative at N=100/N=50, comparable in magnitude to plausible real anisotropy differences between samples — i.e. not usable for cross-sample comparison as-is. Raising only `n_directions` (to 400 or 800) or only `n_lines_per_direction` (to 800) at fixed 400 on the other axis does **not** reliably fix this (11-21% relative std persists) — **both must be increased together**. Only the N=800/L=800 configuration converged tightly (1.4% relative std across seeds, ~14x runtime vs the old default: ~17s vs ~1.3s per sample on this crop).
+
+Root cause: this pore fabric is close to isotropic — the three fitted fabric-tensor eigenvalues are within ~30% of each other regardless of sampling density (e.g. λ ≈ [4.9-5.4, 4.4-4.8, 3.8-4.1] ×10⁻⁵ across all configs tested) — so `DA = 1 - λ_min/λ_max` is a ratio of two similar, noisy numbers and amplifies sampling noise. This is a property of the ratio-based DA metric near isotropy, not a bug in the implementation.
+
+**Resolution:** defaults updated to `n_directions=800, n_lines_per_direction=800` in `psd_topology_metrics.py::degree_of_anisotropy()` and the CLI default (`--n-anisotropy-directions`) in `run_psd_diagnostics.py` bumped from 100 to 800. **This parameterization sub-issue is now resolved (High confidence, verified empirically)** — independent of the still-open question of whether it reproduces BoneJ's exact numeric output (that part remains Low confidence pending Doube et al. 2010).
+
 ---
 
 ## D5 — Tortuosity: definition + computation method

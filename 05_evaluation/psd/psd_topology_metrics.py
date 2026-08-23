@@ -310,8 +310,8 @@ def _mean_intercept_length(
 def degree_of_anisotropy(
     pore_mask: np.ndarray,
     voxel_size_um: float,
-    n_directions: int = 100,
-    n_lines_per_direction: int = 400,
+    n_directions: int = 800,
+    n_lines_per_direction: int = 800,
     seed: int = 0,
 ) -> Dict[str, object]:
     """Degree of anisotropy via the mean-intercept-length (MIL) fabric-tensor
@@ -320,6 +320,14 @@ def degree_of_anisotropy(
     No existing Python/porespy implementation was found - this is written
     from scratch: sample directions -> per-direction MIL -> least-squares
     fabric tensor fit -> eigen-decomposition -> DA = 1 - lambda_min/lambda_max.
+
+    Defaults convergence-tested 2026-07-22 on the bnei_reem_i4_crop200
+    validation volume (see decisions.md D4-addendum): the previous defaults
+    (100 directions, 400 lines/direction) gave a seed-to-seed relative std
+    of ~18% on DA, because this pore fabric is close to isotropic and DA is
+    a ratio of near-equal eigenvalues (noise-amplifying). 800/800 brought
+    relative std down to ~1.4%. Increasing only one of the two knobs did not
+    converge reliably - both must be raised together.
 
     Returns dict with 'degree_of_anisotropy' (0=isotropic, 1=max anisotropic),
     'eigenvalues' (sorted descending), and 'fabric_tensor'.

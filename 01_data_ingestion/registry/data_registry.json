@@ -9,6 +9,34 @@
     "nnunet_resources": "\\\\hive3065\\Yael_Mishael\\Rony\\remote_computer backup\\nnUNet_resources"
   },
   "training_runs": {
+    "mishmar_hanegev_maoz_3_5p85um_loess_i2": {
+      "description": "Continue from mishmar_hanegev_maoz_3_5p85um_scratch checkpoint with new 2-slice bootstrap annotations (z 715-716, offset_layers=48)",
+      "sample_id": "mishmar_hanegev_maoz_3_5p85um",
+      "gpu": 1,
+      "pretrained_from": "mishmar_hanegev_maoz_3_5p85um_scratch",
+      "annotation": "\\\\hive3065\\Yael_Mishael\\Rony\\remote_computer backup\\nnUNet_resources\\mishmar_hanegev_new_work\\mishmar_hanegev_maoz_3_5p85um\\annotations\\mishmar_hanegev_maoz_3_5p85um.nii.gz",
+      "model_dir": "\\\\hive3065\\Yael_Mishael\\Rony\\remote_computer backup\\nnUNet_resources\\multi_sample_mishmar_hanegev_maoz_3_5p85um_loess_i2",
+      "checkpoint": "\\\\hive3065\\Yael_Mishael\\Rony\\remote_computer backup\\nnUNet_resources\\multi_sample_mishmar_hanegev_maoz_3_5p85um_loess_i2\\nnUNet_results\\Dataset777_GCEF\\nnUNetTrainer_betterIgnoreSampling_earlyStopValLoss__nnUNetPlans__3d_fullres\\fold_0\\checkpoint_final.pth",
+      "status": "complete",
+      "stopped_at_epoch": 69,
+      "best_val_loss": -0.911783,
+      "best_ema_dice": 0.9635,
+      "completed_at": "2026-07-15"
+    },
+    "mishmar_hanegev_maoz_3_5p85um_scratch": {
+      "description": "Train from scratch on mishmar_hanegev_maoz_3_5p85um with 3-slice bootstrap annotations (z 499-501, offset_layers=48)",
+      "sample_id": "mishmar_hanegev_maoz_3_5p85um",
+      "gpu": 1,
+      "pretrained_from": null,
+      "annotation": "\\\\hive3065\\Yael_Mishael\\Rony\\remote_computer backup\\nnUNet_resources\\mishmar_hanegev_new_work\\mishmar_hanegev_maoz_3_5p85um\\annotations\\mishmar_hanegev_maoz_3_5p85um.nii.gz",
+      "model_dir": "\\\\hive3065\\Yael_Mishael\\Rony\\remote_computer backup\\nnUNet_resources\\multi_sample_mishmar_hanegev_maoz_3_5p85um_scratch",
+      "checkpoint": "\\\\hive3065\\Yael_Mishael\\Rony\\remote_computer backup\\nnUNet_resources\\multi_sample_mishmar_hanegev_maoz_3_5p85um_scratch\\nnUNet_results\\Dataset777_GCEF\\nnUNetTrainer_betterIgnoreSampling_earlyStopValLoss__nnUNetPlans__3d_fullres\\fold_0\\checkpoint_final.pth",
+      "status": "complete",
+      "stopped_at_epoch": 64,
+      "best_val_loss": -0.923679,
+      "best_ema_dice": 0.9579,
+      "completed_at": "2026-07-12"
+    },
     "iter04_continue_bnei_reem": {
       "description": "Fine-tune from iter04 checkpoint on nlm_volume with merged_GT.nii.gz",
       "sample_id": "nlm_volume",
@@ -89,6 +117,46 @@
       "status": "ready_for_training"
     },
     {
+      "sample_id": "mishmar_hanegev_maoz_3_5p85um",
+      "raw_tiff_path": "\\\\hive3065\\Yael_Mishael\\Rony\\remote_computer backup\\10.5\\mishmar_hanegev_maoz_3_5p85um.tif",
+      "source_slices_dir": "\\\\HIVE3065\\Yael_Mishael\\Rony\\mishmar_hanegev_maoz\\3-16mm_diam_5.85um",
+      "preprocessing": {
+        "crop": "center-crop cube 1000x1000x1000 (Z,Y,X), voxel size 5.85um",
+        "steps": ["stack_slices_to_volume", "norm200", "CUDA NLM (chunked, patch_size=5, patch_distance=6, chunk_size=128)"],
+        "script": "02_preprocessing/filters/crop_center_and_preprocess.py"
+      },
+      "annotation_versions": [],
+      "latest_annotation_path": null,
+      "status": "preprocessed_awaiting_annotation"
+    },
+    {
+      "sample_id": "mishmar_hanegev_maoz_2_8p8um",
+      "raw_tiff_path": "\\\\hive3065\\Yael_Mishael\\Rony\\remote_computer backup\\10.5\\mishmar_hanegev_maoz_2_8p8um.tif",
+      "source_slices_dir": "\\\\HIVE3065\\Yael_Mishael\\Rony\\mishmar_hanegev_maoz\\2-16mm_diam_8.8um\\2-16mm_diam_8.8um",
+      "preprocessing": {
+        "crop": "center-crop cube 1000x1000x1000 (Z,Y,X), voxel size 8.8um",
+        "steps": ["stack_slices_to_volume", "norm200", "CUDA NLM (chunked, patch_size=5, patch_distance=6, chunk_size=128)"],
+        "script": "02_preprocessing/filters/crop_center_and_preprocess.py"
+      },
+      "annotation_versions": [],
+      "latest_annotation_path": null,
+      "status": "preprocessed_awaiting_annotation"
+    },
+    {
+      "sample_id": "Rehovot_samp3_highkV_Cu0.11_15um",
+      "raw_tiff_path": "\\\\hive3065\\Yael_Mishael\\Rony\\remote_computer backup\\10.5\\Rehovot_samp3_highkV_Cu0.11_15um.tif",
+      "source_slices_dir": "\\\\hive3065\\Yael_Mishael\\Rony\\10.12.25_Rehovot_samp_3_clean\\Rehovot_samp3_highkV_Cu0.11_15um_Rec",
+      "preprocessing": {
+        "crop": "center-crop cube 650x650x650 (Z,Y,X), voxel size 15um",
+        "steps": ["stack_slices_to_volume", "norm200", "CUDA NLM (chunked, patch_size=5, patch_distance=6, chunk_size=128)"],
+        "script": "02_preprocessing/filters/crop_center_and_preprocess.py"
+      },
+      "notes": "Raw scan folder had 6 corrupted 0-byte projection files (_ar0..._ar5.tif) and a stray reconstruction run (811 _rec*.tif slices, 1236x1236, plus rec.log/bmp) that had been saved directly into the scan folder instead of a dedicated output folder. Corrupted files excluded via a validated clean copy at 10.12.25_Rehovot_samp_3_clean; reconstruction slices moved into a proper _Rec subfolder there before preprocessing. Only 811 Z-slices available, hence 650^3 crop (not the usual 1000^3 default).",
+      "annotation_versions": [],
+      "latest_annotation_path": null,
+      "status": "preprocessed_awaiting_annotation"
+    },
+    {
       "sample_id": "nlm_volume",
       "raw_tiff_path": "\\\\hive3065\\Yael_Mishael\\Rony\\remote_computer backup\\10.5\\nlm_volume.tif",
       "nifti_input_path": "\\\\hive3065\\Yael_Mishael\\Rony\\remote_computer backup\\nnUNet_resources\\bnei_reem_iter04\\nifti_predict\\nlm_volume_0000.nii.gz",
@@ -132,6 +200,33 @@
     }
   },
   "history": [
+    {
+      "timestamp": "2026-08-04T00:00:00Z",
+      "action": "clean_copy_and_preprocess_rehovot_samp3",
+      "sample_id": "Rehovot_samp3_highkV_Cu0.11_15um",
+      "decision": "GREEN",
+      "reason": "Original scan folder (10.12.25_Rehovot_samp_3) had 6 zero-byte corrupted projection files (_ar0-_ar5.tif) and no delete permission in place. Made a validated clean copy (10.12.25_Rehovot_samp_3_clean) skipping those 6 files (1840 files copied, decode-checked via tifffile/PIL). A reconstruction run performed afterward saved 811 _rec*.tif slices (1236x1236) plus rec.log/bmp directly into the clean copy instead of a dedicated output folder; moved into a new Rehovot_samp3_highkV_Cu0.11_15um_Rec subfolder there. Ran crop_center_and_preprocess.py (center-crop 650^3 cube, limited by 811 available Z-slices, then norm200 + CUDA NLM on GPU) to produce the training-ready volume.",
+      "paths_touched": [
+        "\\\\hive3065\\Yael_Mishael\\Rony\\10.12.25_Rehovot_samp_3_clean",
+        "\\\\hive3065\\Yael_Mishael\\Rony\\10.12.25_Rehovot_samp_3_clean\\Rehovot_samp3_highkV_Cu0.11_15um_Rec",
+        "\\\\hive3065\\Yael_Mishael\\Rony\\remote_computer backup\\10.5\\Rehovot_samp3_highkV_Cu0.11_15um.tif"
+      ],
+      "requested_by_agent": "Claude Code",
+      "approved_by_agent": "Claude Code"
+    },
+    {
+      "timestamp": "2026-07-12T00:00:00Z",
+      "action": "preprocess_mishmar_hanegev_maoz_scans",
+      "sample_id": "mishmar_hanegev_maoz_3_5p85um, mishmar_hanegev_maoz_2_8p8um",
+      "decision": "GREEN",
+      "reason": "New higher-quality mishmar hanegev scans replacing the stuck prior sample. Raw slice stacks (1845^2x1353 @5.85um and 1794x1807x3311 @8.8um) center-cropped to 1000^3 cubes and run through norm200 + CUDA NLM (chunked) on GPU1. Outputs exported to canonical 10.5 root.",
+      "paths_touched": [
+        "\\\\hive3065\\Yael_Mishael\\Rony\\remote_computer backup\\10.5\\mishmar_hanegev_maoz_3_5p85um.tif",
+        "\\\\hive3065\\Yael_Mishael\\Rony\\remote_computer backup\\10.5\\mishmar_hanegev_maoz_2_8p8um.tif"
+      ],
+      "requested_by_agent": "Claude Code",
+      "approved_by_agent": "Claude Code"
+    },
     {
       "timestamp": "2026-07-01T00:00:00Z",
       "action": "launch_fresh_bnei_reem_i3_training",

@@ -153,6 +153,7 @@ def main(
     extra_label_paths: dict = None,
     zrange: tuple = None,
     debug: bool = False,
+    title: str = None,
 ) -> None:
     if debug:
         _setup_debug_logging()
@@ -182,7 +183,7 @@ def main(
         _log(f"  shape={gt.shape}", t0, debug)
 
     _log("Creating viewer ...", t0, debug)
-    viewer = napari.Viewer(title="micro-SAM 3D Proofreader")
+    viewer = napari.Viewer(title=title or "micro-SAM 3D Proofreader")
 
     _log("Adding volume layer ...", t0, debug)
     viewer.add_image(volume, name="volume", colormap="gray")
@@ -231,11 +232,15 @@ if __name__ == "__main__":
                         help="Ground-truth annotation TIFF (optional, enables GT diff error map)")
     parser.add_argument("--zrange", nargs=2, type=int, metavar=("Z0", "Z1"),
                         help="Crop to Z-slice range [Z0, Z1) — useful for fast testing")
+    parser.add_argument("--extra-labels", nargs=2, action="append", metavar=("NAME", "PATH"),
+                        help="Additional read-only labels layer: NAME PATH. Repeatable. "
+                             "Shown at low opacity with a distinct color seed.")
     parser.add_argument("--debug", action="store_true",
                         help="Log timing and RAM to console + microsam_3d/debug.log")
     args = parser.parse_args()
     main(
         args.volume, args.pred, args.gt,
+        extra_label_paths=dict(args.extra_labels) if args.extra_labels else None,
         zrange=tuple(args.zrange) if args.zrange else None,
         debug=args.debug,
     )
