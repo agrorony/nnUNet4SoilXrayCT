@@ -14,17 +14,15 @@ def load_metadata(metadata_path):
     return metadata
 
 def load_image(input_path, sample_id):
-    import io
     image_path = input_path / f'{sample_id}.tif'
-    with open(image_path, 'rb') as f:
-        grayscale_data = tiff.imread(io.BytesIO(f.read()))
+    print(f"Loading {sample_id} from {image_path} ...")
+    grayscale_data = tiff.imread(image_path)
     print(f"Loaded {sample_id}, shape: {grayscale_data.shape}")
     return grayscale_data
 
 def load_annotations_from_file(annotation_file):
-    import io
-    with open(annotation_file, 'rb') as f:
-        saved_annotations = tiff.imread(io.BytesIO(f.read()))
+    print(f"Loading annotations from {annotation_file} ...")
+    saved_annotations = tiff.imread(annotation_file)
     print(f"Loaded previously saved annotations from {annotation_file}")
     return saved_annotations
 
