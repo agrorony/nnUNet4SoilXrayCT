@@ -1,0 +1,149 @@
+{
+  "n_archetypes": 6,
+  "archetype_silhouette": 0.46661604845176125,
+  "centroids": [
+    {
+      "soil": "bnei_reem",
+      "cluster_id": 0,
+      "archetype_id": 0,
+      "n": 251
+    },
+    {
+      "soil": "bnei_reem",
+      "cluster_id": 1,
+      "archetype_id": 1,
+      "n": 246
+    },
+    {
+      "soil": "bnei_reem",
+      "cluster_id": 2,
+      "archetype_id": 3,
+      "n": 311
+    },
+    {
+      "soil": "bnei_reem",
+      "cluster_id": 3,
+      "archetype_id": 2,
+      "n": 369
+    },
+    {
+      "soil": "bnei_reem",
+      "cluster_id": 4,
+      "archetype_id": 5,
+      "n": 97
+    },
+    {
+      "soil": "bnei_reem",
+      "cluster_id": 5,
+      "archetype_id": 4,
+      "n": 187
+    },
+    {
+      "soil": "mishmar_native",
+      "cluster_id": 0,
+      "archetype_id": 2,
+      "n": 604
+    },
+    {
+      "soil": "mishmar_native",
+      "cluster_id": 1,
+      "archetype_id": 1,
+      "n": 286
+    },
+    {
+      "soil": "mishmar_native",
+      "cluster_id": 2,
+      "archetype_id": 0,
+      "n": 364
+    },
+    {
+      "soil": "mishmar_native",
+      "cluster_id": 3,
+      "archetype_id": 4,
+      "n": 472
+    },
+    {
+      "soil": "mishmar_label_downsample",
+      "cluster_id": 0,
+      "archetype_id": 4,
+      "n": 433
+    },
+    {
+      "soil": "mishmar_label_downsample",
+      "cluster_id": 1,
+      "archetype_id": 3,
+      "n": 223
+    },
+    {
+      "soil": "mishmar_image_then_predict",
+      "cluster_id": 0,
+      "archetype_id": 3,
+      "n": 9
+    },
+    {
+      "soil": "mishmar_image_then_predict",
+      "cluster_id": 1,
+      "archetype_id": 2,
+      "n": 36
+    },
+    {
+      "soil": "mishmar_image_then_predict",
+      "cluster_id": 2,
+      "archetype_id": 1,
+      "n": 22
+    },
+    {
+      "soil": "mishmar_image_then_predict",
+      "cluster_id": 3,
+      "archetype_id": 4,
+      "n": 31
+    },
+    {
+      "soil": "mishmar_image_then_predict",
+      "cluster_id": 4,
+      "archetype_id": 0,
+      "n": 17
+    }
+  ],
+  "contingency_table": {
+    "0": {
+      "bnei_reem": 251,
+      "mishmar_image_then_predict": 17,
+      "mishmar_label_downsample": 0,
+      "mishmar_native": 364
+    },
+    "1": {
+      "bnei_reem": 246,
+      "mishmar_image_then_predict": 22,
+      "mishmar_label_downsample": 0,
+      "mishmar_native": 286
+    },
+    "2": {
+      "bnei_reem": 369,
+      "mishmar_image_then_predict": 36,
+      "mishmar_label_downsample": 0,
+      "mishmar_native": 604
+    },
+    "3": {
+      "bnei_reem": 311,
+      "mishmar_image_then_predict": 9,
+      "mishmar_label_downsample": 223,
+      "mishmar_native": 0
+    },
+    "4": {
+      "bnei_reem": 187,
+      "mishmar_image_then_predict": 31,
+      "mishmar_label_downsample": 433,
+      "mishmar_native": 472
+    },
+    "5": {
+      "bnei_reem": 97,
+      "mishmar_image_then_predict": 0,
+      "mishmar_label_downsample": 0,
+      "mishmar_native": 0
+    }
+  },
+  "chi2": 1591.1237899046819,
+  "dof": 15,
+  "p": 0.0
+}

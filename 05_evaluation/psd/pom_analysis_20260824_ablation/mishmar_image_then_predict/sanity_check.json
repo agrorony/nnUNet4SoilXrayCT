@@ -1,0 +1,22 @@
+{
+  "branch": "mishmar_image_then_predict",
+  "source_prediction": "\\\\hive3065\\Yael_Mishael\\Rony\\remote_computer backup\\nnUNet_resources\\mishmar_hanegev_maoz_3_5p85um\\ablation_image_downsample\\inference_output_concat_ds15um\\mishmar_image_then_predict.nii.gz",
+  "target_voxel_um": 15.000149,
+  "shape": [
+    390,
+    390,
+    390
+  ],
+  "unique_labels": [
+    0,
+    1,
+    2,
+    5
+  ],
+  "pore_voxel_fraction_pct": 25.6323134240294,
+  "pom_voxel_fraction_pct": 0.8564844316323607,
+  "native_mishmar_pore_voxel_fraction_pct": 27.0384653,
+  "native_mishmar_pom_voxel_fraction_pct": 1.6146797,
+  "pom_collapse_floor_pct": 0.3,
+  "pom_collapsed": false
+}

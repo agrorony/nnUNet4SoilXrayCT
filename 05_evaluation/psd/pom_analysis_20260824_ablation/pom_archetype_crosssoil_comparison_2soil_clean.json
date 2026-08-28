@@ -1,0 +1,95 @@
+{
+  "n_archetypes": 6,
+  "archetype_silhouette": 0.49747609553016153,
+  "centroids": [
+    {
+      "soil": "bnei_reem",
+      "cluster_id": 0,
+      "archetype_id": 3,
+      "n": 256
+    },
+    {
+      "soil": "bnei_reem",
+      "cluster_id": 1,
+      "archetype_id": 5,
+      "n": 308
+    },
+    {
+      "soil": "bnei_reem",
+      "cluster_id": 2,
+      "archetype_id": 4,
+      "n": 96
+    },
+    {
+      "soil": "bnei_reem",
+      "cluster_id": 3,
+      "archetype_id": 2,
+      "n": 371
+    },
+    {
+      "soil": "bnei_reem",
+      "cluster_id": 4,
+      "archetype_id": 1,
+      "n": 242
+    },
+    {
+      "soil": "bnei_reem",
+      "cluster_id": 5,
+      "archetype_id": 0,
+      "n": 188
+    },
+    {
+      "soil": "mishmar_native",
+      "cluster_id": 0,
+      "archetype_id": 4,
+      "n": 286
+    },
+    {
+      "soil": "mishmar_native",
+      "cluster_id": 1,
+      "archetype_id": 2,
+      "n": 606
+    },
+    {
+      "soil": "mishmar_native",
+      "cluster_id": 2,
+      "archetype_id": 0,
+      "n": 476
+    },
+    {
+      "soil": "mishmar_native",
+      "cluster_id": 3,
+      "archetype_id": 3,
+      "n": 358
+    }
+  ],
+  "contingency_table": {
+    "0": {
+      "bnei_reem": 188,
+      "mishmar_native": 476
+    },
+    "1": {
+      "bnei_reem": 242,
+      "mishmar_native": 0
+    },
+    "2": {
+      "bnei_reem": 371,
+      "mishmar_native": 606
+    },
+    "3": {
+      "bnei_reem": 256,
+      "mishmar_native": 358
+    },
+    "4": {
+      "bnei_reem": 96,
+      "mishmar_native": 286
+    },
+    "5": {
+      "bnei_reem": 308,
+      "mishmar_native": 0
+    }
+  },
+  "chi2": 826.5680218501449,
+  "dof": 5,
+  "p": 2.067029159161008e-176
+}

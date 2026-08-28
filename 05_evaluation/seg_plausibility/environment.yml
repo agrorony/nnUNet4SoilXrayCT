@@ -1,0 +1,12 @@
+name: segplaus
+channels:
+  - conda-forge
+dependencies:
+  - python=3.10
+  - numpy
+  - scipy
+  - scikit-image
+  - pandas
+  - tifffile
+  - pyyaml
+  - networkx

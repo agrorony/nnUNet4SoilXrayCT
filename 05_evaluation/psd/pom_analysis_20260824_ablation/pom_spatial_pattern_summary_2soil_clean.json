@@ -1,0 +1,20 @@
+{
+  "bnei_reem": {
+    "n_objects": 1461,
+    "mean_nn_distance_um": 304.77463034929445,
+    "median_nn_distance_um": 256.36617339518796,
+    "expected_nn_distance_um_csr": 476.48462935998714,
+    "clark_evans_r_index": 0.6396316094365245,
+    "verdict": "aggregated/clustered",
+    "object_density_per_um3": 1.5714088251217102e-09
+  },
+  "mishmar_native": {
+    "n_objects": 1726,
+    "mean_nn_distance_um": 221.016893866397,
+    "median_nn_distance_um": 199.07571909533976,
+    "expected_nn_distance_um_csr": 270.15990429855526,
+    "clark_evans_r_index": 0.8180965803946613,
+    "verdict": "aggregated/clustered",
+    "object_density_per_um3": 8.621308643224052e-09
+  }
+}

@@ -1,0 +1,1875 @@
+Thu Jul  2 13:09:52 2026       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 572.61                 Driver Version: 572.61         CUDA Version: 12.8     |
+|-----------------------------------------+------------------------+----------------------+
+| GPU  Name                  Driver-Model | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  NVIDIA RTX A6000             WDDM  |   00000000:3B:00.0 Off |                    0 |
+| 30%   33C    P8             15W /  300W |    3953MiB /  46068MiB |      0%      Default |
+|                                         |                        |                  N/A |
++-----------------------------------------+------------------------+----------------------+
+|   1  NVIDIA RTX A6000             WDDM  |   00000000:D8:00.0 Off |                    0 |
+| 30%   41C    P8             18W /  300W |    1830MiB /  46068MiB |      4%      Default |
+|                                         |                        |                  N/A |
++-----------------------------------------+------------------------+----------------------+
+                                                                                         
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI              PID   Type   Process name                        GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|    0   N/A  N/A           41784      C   ...a\envs\venv-napari\python.exe      N/A      |
+|    1   N/A  N/A            5252    C+G   C:\Windows\explorer.exe               N/A      |
+|    1   N/A  N/A           19424    C+G   ...a\envs\venv-napari\python.exe      N/A      |
+|    1   N/A  N/A           20560    C+G   ...na_cw5n1h2txyewy\SearchUI.exe      N/A      |
+|    1   N/A  N/A           29964    C+G   ...ms\Microsoft VS Code\Code.exe      N/A      |
+|    1   N/A  N/A           32044    C+G   ...a\envs\venv-napari\python.exe      N/A      |
+|    1   N/A  N/A           41784    C+G   ...a\envs\venv-napari\python.exe      N/A      |
+|    1   N/A  N/A           42876    C+G   ...xyewy\ShellExperienceHost.exe      N/A      |
+|    1   N/A  N/A           48388    C+G   ...Chrome\Application\chrome.exe      N/A      |
+|    1   N/A  N/A           50616    C+G   ...a\envs\venv-napari\python.exe      N/A      |
++-----------------------------------------------------------------------------------------+
+Fingerprint extraction...
+Dataset777_GCEF
+Using <class 'nnunetv2.imageio.simpleitk_reader_writer.SimpleITKIO'> as reader/writer
+
+####################
+verify_dataset_integrity Done. 
+If you didn't see any error messages then your dataset is most likely OK!
+####################
+
+Using <class 'nnunetv2.imageio.simpleitk_reader_writer.SimpleITKIO'> as reader/writer
+Experiment planning...
+
+############################
+INFO: You are using the old nnU-Net default planner. We have updated our recommendations. Please consider using those instead! Read more here: https://github.com/MIC-DKFZ/nnUNet/blob/master/documentation/resenc_presets.md
+############################
+
+Attempting to find 3d_lowres config. 
+Current spacing: [1.03 1.03 1.03]. 
+Current patch size: (np.int64(128), np.int64(128), np.int64(128)). 
+Current median shape: [582.52427184 631.06796117 631.06796117]
+Attempting to find 3d_lowres config. 
+Current spacing: [1.0609 1.0609 1.0609]. 
+Current patch size: (np.int64(128), np.int64(128), np.int64(128)). 
+Current median shape: [565.55754548 612.68734094 612.68734094]
+Attempting to find 3d_lowres config. 
+Current spacing: [1.092727 1.092727 1.092727]. 
+Current patch size: (np.int64(128), np.int64(128), np.int64(128)). 
+Current median shape: [549.08499561 594.84207858 594.84207858]
+Attempting to find 3d_lowres config. 
+Current spacing: [1.12550881 1.12550881 1.12550881]. 
+Current patch size: (np.int64(128), np.int64(128), np.int64(128)). 
+Current median shape: [533.09222875 577.51658115 577.51658115]
+Attempting to find 3d_lowres config. 
+Current spacing: [1.15927407 1.15927407 1.15927407]. 
+Current patch size: (np.int64(128), np.int64(128), np.int64(128)). 
+Current median shape: [517.56527063 560.69570985 560.69570985]
+Attempting to find 3d_lowres config. 
+Current spacing: [1.1940523 1.1940523 1.1940523]. 
+Current patch size: (np.int64(128), np.int64(128), np.int64(128)). 
+Current median shape: [502.49055401 544.36476684 544.36476684]
+Attempting to find 3d_lowres config. 
+Current spacing: [1.22987387 1.22987387 1.22987387]. 
+Current patch size: (np.int64(128), np.int64(128), np.int64(128)). 
+Current median shape: [487.85490681 528.50948237 528.50948237]
+Attempting to find 3d_lowres config. 
+Current spacing: [1.26677008 1.26677008 1.26677008]. 
+Current patch size: (np.int64(128), np.int64(128), np.int64(128)). 
+Current median shape: [473.64554059 513.1160023  513.1160023 ]
+Attempting to find 3d_lowres config. 
+Current spacing: [1.30477318 1.30477318 1.30477318]. 
+Current patch size: (np.int64(128), np.int64(128), np.int64(128)). 
+Current median shape: [459.85003941 498.17087602 498.17087602]
+Attempting to find 3d_lowres config. 
+Current spacing: [1.34391638 1.34391638 1.34391638]. 
+Current patch size: (np.int64(128), np.int64(128), np.int64(128)). 
+Current median shape: [446.45634894 483.66104468 483.66104468]
+Attempting to find 3d_lowres config. 
+Current spacing: [1.38423387 1.38423387 1.38423387]. 
+Current patch size: (np.int64(128), np.int64(128), np.int64(128)). 
+Current median shape: [433.45276596 469.57382979 469.57382979]
+Attempting to find 3d_lowres config. 
+Current spacing: [1.42576089 1.42576089 1.42576089]. 
+Current patch size: (np.int64(128), np.int64(128), np.int64(128)). 
+Current median shape: [420.82792812 455.89692213 455.89692213]
+Attempting to find 3d_lowres config. 
+Current spacing: [1.46853371 1.46853371 1.46853371]. 
+Current patch size: (np.int64(128), np.int64(128), np.int64(128)). 
+Current median shape: [408.570804 442.618371 442.618371]
+Attempting to find 3d_lowres config. 
+Current spacing: [1.51258972 1.51258972 1.51258972]. 
+Current patch size: (np.int64(128), np.int64(128), np.int64(128)). 
+Current median shape: [396.67068349 429.72657378 429.72657378]
+Attempting to find 3d_lowres config. 
+Current spacing: [1.55796742 1.55796742 1.55796742]. 
+Current patch size: (np.int64(128), np.int64(128), np.int64(128)). 
+Current median shape: [385.11716844 417.21026581 417.21026581]
+Attempting to find 3d_lowres config. 
+Current spacing: [1.60470644 1.60470644 1.60470644]. 
+Current patch size: (np.int64(128), np.int64(128), np.int64(128)). 
+Current median shape: [373.90016353 405.05851049 405.05851049]
+Attempting to find 3d_lowres config. 
+Current spacing: [1.65284763 1.65284763 1.65284763]. 
+Current patch size: (np.int64(128), np.int64(128), np.int64(128)). 
+Current median shape: [363.00986751 393.2606898  393.2606898 ]
+Attempting to find 3d_lowres config. 
+Current spacing: [1.70243306 1.70243306 1.70243306]. 
+Current patch size: (np.int64(128), np.int64(128), np.int64(128)). 
+Current median shape: [352.43676457 381.80649495 381.80649495]
+Attempting to find 3d_lowres config. 
+Current spacing: [1.75350605 1.75350605 1.75350605]. 
+Current patch size: (np.int64(128), np.int64(128), np.int64(128)). 
+Current median shape: [342.17161609 370.68591743 370.68591743]
+Attempting to find 3d_lowres config. 
+Current spacing: [1.80611123 1.80611123 1.80611123]. 
+Current patch size: (np.int64(128), np.int64(128), np.int64(128)). 
+Current median shape: [332.20545251 359.88924022 359.88924022]
+Attempting to find 3d_lowres config. 
+Current spacing: [1.86029457 1.86029457 1.86029457]. 
+Current patch size: (np.int64(128), np.int64(128), np.int64(128)). 
+Current median shape: [322.52956555 349.40702934 349.40702934]
+Attempting to find 3d_lowres config. 
+Current spacing: [1.91610341 1.91610341 1.91610341]. 
+Current patch size: (np.int64(128), np.int64(128), np.int64(128)). 
+Current median shape: [313.13550053 339.23012557 339.23012557]
+Attempting to find 3d_lowres config. 
+Current spacing: [1.97358651 1.97358651 1.97358651]. 
+Current patch size: (np.int64(128), np.int64(128), np.int64(128)). 
+Current median shape: [304.01504906 329.34963648 329.34963648]
+Attempting to find 3d_lowres config. 
+Current spacing: [2.03279411 2.03279411 2.03279411]. 
+Current patch size: (np.int64(128), np.int64(128), np.int64(128)). 
+Current median shape: [295.1602418  319.75692862 319.75692862]
+Attempting to find 3d_lowres config. 
+Current spacing: [2.09377793 2.09377793 2.09377793]. 
+Current patch size: (np.int64(128), np.int64(128), np.int64(128)). 
+Current median shape: [286.56334156 310.44362002 310.44362002]
+Attempting to find 3d_lowres config. 
+Current spacing: [2.15659127 2.15659127 2.15659127]. 
+Current patch size: (np.int64(128), np.int64(128), np.int64(128)). 
+Current median shape: [278.21683646 301.40157284 301.40157284]
+Attempting to find 3d_lowres config. 
+Current spacing: [2.22128901 2.22128901 2.22128901]. 
+Current patch size: (np.int64(128), np.int64(128), np.int64(128)). 
+Current median shape: [270.11343346 292.62288625 292.62288625]
+Attempting to find 3d_lowres config. 
+Current spacing: [2.28792768 2.28792768 2.28792768]. 
+Current patch size: (np.int64(128), np.int64(128), np.int64(128)). 
+Current median shape: [262.2460519  284.09988956 284.09988956]
+Attempting to find 3d_lowres config. 
+Current spacing: [2.35656551 2.35656551 2.35656551]. 
+Current patch size: (np.int64(128), np.int64(128), np.int64(128)). 
+Current median shape: [254.60781738 275.8251355  275.8251355 ]
+Attempting to find 3d_lowres config. 
+Current spacing: [2.42726247 2.42726247 2.42726247]. 
+Current patch size: (np.int64(128), np.int64(128), np.int64(128)). 
+Current median shape: [247.19205571 267.79139369 267.79139369]
+Attempting to find 3d_lowres config. 
+Current spacing: [2.50008035 2.50008035 2.50008035]. 
+Current patch size: (np.int64(128), np.int64(128), np.int64(128)). 
+Current median shape: [239.9922871  259.99164435 259.99164435]
+Attempting to find 3d_lowres config. 
+Current spacing: [2.57508276 2.57508276 2.57508276]. 
+Current patch size: (np.int64(128), np.int64(128), np.int64(128)). 
+Current median shape: [233.00222048 252.41907219 252.41907219]
+Attempting to find 3d_lowres config. 
+Current spacing: [2.65233524 2.65233524 2.65233524]. 
+Current patch size: (np.int64(128), np.int64(128), np.int64(128)). 
+Current median shape: [226.21574804 245.06706038 245.06706038]
+Attempting to find 3d_lowres config. 
+Current spacing: [2.7319053 2.7319053 2.7319053]. 
+Current patch size: (np.int64(128), np.int64(128), np.int64(128)). 
+Current median shape: [219.62693985 237.92918483 237.92918483]
+Attempting to find 3d_lowres config. 
+Current spacing: [2.81386245 2.81386245 2.81386245]. 
+Current patch size: (np.int64(128), np.int64(128), np.int64(128)). 
+Current median shape: [213.23003869 230.99920858 230.99920858]
+Attempting to find 3d_lowres config. 
+Current spacing: [2.89827833 2.89827833 2.89827833]. 
+Current patch size: (np.int64(128), np.int64(128), np.int64(128)). 
+Current median shape: [207.01945503 224.27107629 224.27107629]
+Attempting to find 3d_lowres config. 
+Current spacing: [2.98522668 2.98522668 2.98522668]. 
+Current patch size: (np.int64(128), np.int64(128), np.int64(128)). 
+Current median shape: [200.98976217 217.73890902 217.73890902]
+Attempting to find 3d_lowres config. 
+Current spacing: [3.07478348 3.07478348 3.07478348]. 
+Current patch size: (np.int64(128), np.int64(128), np.int64(128)). 
+Current median shape: [195.13569143 211.39699905 211.39699905]
+Attempting to find 3d_lowres config. 
+Current spacing: [3.16702698 3.16702698 3.16702698]. 
+Current patch size: (np.int64(128), np.int64(128), np.int64(128)). 
+Current median shape: [189.4521276 205.2398049 205.2398049]
+2D U-Net configuration:
+{'data_identifier': 'nnUNetPlans_2d', 'preprocessor_name': 'DefaultPreprocessor', 'batch_size': 5, 'patch_size': (np.int64(768), np.int64(768)), 'median_image_size_in_voxels': array([650., 650.]), 'spacing': array([1., 1.]), 'normalization_schemes': ['NoNormalization'], 'use_mask_for_norm': [False], 'resampling_fn_data': 'resample_data_or_seg_to_shape', 'resampling_fn_seg': 'resample_data_or_seg_to_shape', 'resampling_fn_data_kwargs': {'is_seg': False, 'order': 3, 'order_z': 0, 'force_separate_z': None}, 'resampling_fn_seg_kwargs': {'is_seg': True, 'order': 1, 'order_z': 0, 'force_separate_z': None}, 'resampling_fn_probabilities': 'resample_data_or_seg_to_shape', 'resampling_fn_probabilities_kwargs': {'is_seg': False, 'order': 1, 'order_z': 0, 'force_separate_z': None}, 'architecture': {'network_class_name': 'dynamic_network_architectures.architectures.unet.PlainConvUNet', 'arch_kwargs': {'n_stages': 8, 'features_per_stage': (32, 64, 128, 256, 512, 512, 512, 512), 'conv_op': 'torch.nn.modules.conv.Conv2d', 'kernel_sizes': ((3, 3), (3, 3), (3, 3), (3, 3), (3, 3), (3, 3), (3, 3), (3, 3)), 'strides': ((1, 1), (2, 2), (2, 2), (2, 2), (2, 2), (2, 2), (2, 2), (2, 2)), 'n_conv_per_stage': (2, 2, 2, 2, 2, 2, 2, 2), 'n_conv_per_stage_decoder': (2, 2, 2, 2, 2, 2, 2), 'conv_bias': True, 'norm_op': 'torch.nn.modules.instancenorm.InstanceNorm2d', 'norm_op_kwargs': {'eps': 1e-05, 'affine': True}, 'dropout_op': None, 'dropout_op_kwargs': None, 'nonlin': 'torch.nn.LeakyReLU', 'nonlin_kwargs': {'inplace': True}}, '_kw_requires_import': ('conv_op', 'norm_op', 'dropout_op', 'nonlin')}, 'batch_dice': True}
+
+Using <class 'nnunetv2.imageio.simpleitk_reader_writer.SimpleITKIO'> as reader/writer
+3D lowres U-Net configuration:
+{'data_identifier': 'nnUNetPlans_3d_lowres', 'preprocessor_name': 'DefaultPreprocessor', 'batch_size': 2, 'patch_size': (np.int64(128), np.int64(128), np.int64(128)), 'median_image_size_in_voxels': (189, 205, 205), 'spacing': array([3.16702698, 3.16702698, 3.16702698]), 'normalization_schemes': ['NoNormalization'], 'use_mask_for_norm': [False], 'resampling_fn_data': 'resample_data_or_seg_to_shape', 'resampling_fn_seg': 'resample_data_or_seg_to_shape', 'resampling_fn_data_kwargs': {'is_seg': False, 'order': 3, 'order_z': 0, 'force_separate_z': None}, 'resampling_fn_seg_kwargs': {'is_seg': True, 'order': 1, 'order_z': 0, 'force_separate_z': None}, 'resampling_fn_probabilities': 'resample_data_or_seg_to_shape', 'resampling_fn_probabilities_kwargs': {'is_seg': False, 'order': 1, 'order_z': 0, 'force_separate_z': None}, 'architecture': {'network_class_name': 'dynamic_network_architectures.architectures.unet.PlainConvUNet', 'arch_kwargs': {'n_stages': 6, 'features_per_stage': (32, 64, 128, 256, 320, 320), 'conv_op': 'torch.nn.modules.conv.Conv3d', 'kernel_sizes': ((3, 3, 3), (3, 3, 3), (3, 3, 3), (3, 3, 3), (3, 3, 3), (3, 3, 3)), 'strides': ((1, 1, 1), (2, 2, 2), (2, 2, 2), (2, 2, 2), (2, 2, 2), (2, 2, 2)), 'n_conv_per_stage': (2, 2, 2, 2, 2, 2), 'n_conv_per_stage_decoder': (2, 2, 2, 2, 2), 'conv_bias': True, 'norm_op': 'torch.nn.modules.instancenorm.InstanceNorm3d', 'norm_op_kwargs': {'eps': 1e-05, 'affine': True}, 'dropout_op': None, 'dropout_op_kwargs': None, 'nonlin': 'torch.nn.LeakyReLU', 'nonlin_kwargs': {'inplace': True}}, '_kw_requires_import': ('conv_op', 'norm_op', 'dropout_op', 'nonlin')}, 'batch_dice': False, 'next_stage': '3d_cascade_fullres'}
+
+3D fullres U-Net configuration:
+{'data_identifier': 'nnUNetPlans_3d_fullres', 'preprocessor_name': 'DefaultPreprocessor', 'batch_size': 2, 'patch_size': (np.int64(128), np.int64(128), np.int64(128)), 'median_image_size_in_voxels': array([600., 650., 650.]), 'spacing': array([1., 1., 1.]), 'normalization_schemes': ['NoNormalization'], 'use_mask_for_norm': [False], 'resampling_fn_data': 'resample_data_or_seg_to_shape', 'resampling_fn_seg': 'resample_data_or_seg_to_shape', 'resampling_fn_data_kwargs': {'is_seg': False, 'order': 3, 'order_z': 0, 'force_separate_z': None}, 'resampling_fn_seg_kwargs': {'is_seg': True, 'order': 1, 'order_z': 0, 'force_separate_z': None}, 'resampling_fn_probabilities': 'resample_data_or_seg_to_shape', 'resampling_fn_probabilities_kwargs': {'is_seg': False, 'order': 1, 'order_z': 0, 'force_separate_z': None}, 'architecture': {'network_class_name': 'dynamic_network_architectures.architectures.unet.PlainConvUNet', 'arch_kwargs': {'n_stages': 6, 'features_per_stage': (32, 64, 128, 256, 320, 320), 'conv_op': 'torch.nn.modules.conv.Conv3d', 'kernel_sizes': ((3, 3, 3), (3, 3, 3), (3, 3, 3), (3, 3, 3), (3, 3, 3), (3, 3, 3)), 'strides': ((1, 1, 1), (2, 2, 2), (2, 2, 2), (2, 2, 2), (2, 2, 2), (2, 2, 2)), 'n_conv_per_stage': (2, 2, 2, 2, 2, 2), 'n_conv_per_stage_decoder': (2, 2, 2, 2, 2), 'conv_bias': True, 'norm_op': 'torch.nn.modules.instancenorm.InstanceNorm3d', 'norm_op_kwargs': {'eps': 1e-05, 'affine': True}, 'dropout_op': None, 'dropout_op_kwargs': None, 'nonlin': 'torch.nn.LeakyReLU', 'nonlin_kwargs': {'inplace': True}}, '_kw_requires_import': ('conv_op', 'norm_op', 'dropout_op', 'nonlin')}, 'batch_dice': True}
+
+Plans were saved to \\hive3065\Yael_Mishael\Rony\remote_computer backup\nnUNet_resources\multi_sample_fresh_bnei_reem_i3_lowlr\nnUNet_preprocessed\Dataset777_GCEF\nnUNetPlans.json
+Preprocessing...
+Preprocessing dataset Dataset777_GCEF
+Configuration: 2d...
+Configuration: 3d_fullres...
+Configuration: 3d_lowres...
+Copied: C:\Users\rony.schwartz\Documents\nnUNet4SoilXrayCT\nnUNetTrainer_betterIgnoreSampling.py -> C:\Users\rony.schwartz\.conda\envs\venv-napari\Lib\site-packages\nnunetv2\training\nnUNetTrainer\variants\sampling\nnUNetTrainer_betterIgnoreSampling.py
+[OK] Custom trainer registered: nnUNetTrainer_betterIgnoreSampling_earlyStopValLoss_lowlr
+     initial_lr = nnUNetTrainer_betterIgnoreSampling_earlyStopValLoss_lowlr.__init__
+Training sample:   nlm_volume
+Raw TIF:           \\hive3065\Yael_Mishael\Rony\remote_computer backup\10.5\nlm_volume.tif
+Annotation:        \\hive3065\Yael_Mishael\Rony\remote_computer backup\nnUNet_resources\fresh_train_annotations_bnei_reem\annotations_i3.nii.gz
+Pretrained weights (i2): \\hive3065\Yael_Mishael\Rony\remote_computer backup\nnUNet_resources\multi_sample_fresh_bnei_reem_i2\nnUNet_results\Dataset777_GCEF\nnUNetTrainer_betterIgnoreSampling_earlyStopValLoss__nnUNetPlans__3d_fullres\fold_0\checkpoint_final.pth
+
+LOCAL_BASE: \\hive3065\Yael_Mishael\Rony\remote_computer backup\nnUNet_resources\multi_sample_fresh_bnei_reem_i3_lowlr
+nnUNet_raw: \\hive3065\Yael_Mishael\Rony\remote_computer backup\nnUNet_resources\multi_sample_fresh_bnei_reem_i3_lowlr\nnUNet_raw
+nnUNet_preprocessed: \\hive3065\Yael_Mishael\Rony\remote_computer backup\nnUNet_resources\multi_sample_fresh_bnei_reem_i3_lowlr\nnUNet_preprocessed
+nnUNet_results: \\hive3065\Yael_Mishael\Rony\remote_computer backup\nnUNet_resources\multi_sample_fresh_bnei_reem_i3_lowlr\nnUNet_results
+Step 1: Loading raw image TIF...
+  Image shape (X, Y, Z): (650, 650, 652)
+Step 2: Loading annotation NIfTI...
+  Annotation shape as loaded: (650, 650, 652)
+  Unique labels: [0, 1, 2, 3, 6]
+  Axis convention: (X, Y, Z) -- no transpose needed.
+  Annotation shape after axis alignment: (650, 650, 652)
+Step 3: Cropping to annotated z-range...
+  Annotated z-range: 26-551 -> crop [0, 600]
+  Cropped -- image: (650, 650, 600), annotation: (650, 650, 600)
+Step 4: Applying nnUNet label mapping...
+  nnUNet labels after remapping: [0, 1, 2, 5, 6]
+Step 5: Saving nnUNet dataset...
+  Saved image:  \\hive3065\Yael_Mishael\Rony\remote_computer backup\nnUNet_resources\multi_sample_fresh_bnei_reem_i3_lowlr\nnUNet_raw\Dataset777_GCEF\imagesTr\nlm_volume_0000.nii.gz
+  Saved label:  \\hive3065\Yael_Mishael\Rony\remote_computer backup\nnUNet_resources\multi_sample_fresh_bnei_reem_i3_lowlr\nnUNet_raw\Dataset777_GCEF\labelsTr\nlm_volume.nii.gz
+Step 6: Generating dataset.json...
+  Generated dataset.json in \\hive3065\Yael_Mishael\Rony\remote_computer backup\nnUNet_resources\multi_sample_fresh_bnei_reem_i3_lowlr\nnUNet_raw\Dataset777_GCEF
+
+Dataset preparation complete.
+imagesTr: 1 | labelsTr: 1
+[OK] Dataset ready.
+[OK] Planning and preprocessing complete.
+Wrote \\hive3065\Yael_Mishael\Rony\remote_computer backup\nnUNet_resources\multi_sample_fresh_bnei_reem_i3_lowlr\nnUNet_preprocessed\Dataset777_GCEF\splits_final.json
+Early stopping env: {'NNUNET_EARLY_STOP_ENABLED': '1', 'NNUNET_EARLY_STOP_PATIENCE': '20', 'NNUNET_EARLY_STOP_MIN_DELTA': '0.001'}
+Trainer: nnUNetTrainer_betterIgnoreSampling_earlyStopValLoss_lowlr  (LR=2e-3, was 1e-2)
+Pretrained weights: \\hive3065\Yael_Mishael\Rony\remote_computer backup\nnUNet_resources\multi_sample_fresh_bnei_reem_i2\nnUNet_results\Dataset777_GCEF\nnUNetTrainer_betterIgnoreSampling_earlyStopValLoss__nnUNetPlans__3d_fullres\fold_0\checkpoint_final.pth
+C:\Users\rony.schwartz\.conda\envs\venv-napari\Lib\site-packages\nnunetv2\training\nnUNetTrainer\nnUNetTrainer.py:161: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+  self.grad_scaler = GradScaler() if self.device.type == 'cuda' else None
+C:\Users\rony.schwartz\.conda\envs\venv-napari\Lib\site-packages\nnunetv2\training\nnUNetTrainer\nnUNetTrainer.py:1044: RuntimeWarning: invalid value encountered in scalar divide
+  global_dc_per_class = [i for i in [2 * i / (2 * i + j + k) for i, j, k in zip(tp, fp, fn)]]
+
+############################
+INFO: You are using the old nnU-Net default plans. We have updated our recommendations. Please consider using those instead! Read more here: https://github.com/MIC-DKFZ/nnUNet/blob/master/documentation/resenc_presets.md
+############################
+
+Using device: cuda:0
+
+#######################################################################
+Please cite the following paper when using nnU-Net:
+Isensee, F., Jaeger, P. F., Kohl, S. A., Petersen, J., & Maier-Hein, K. H. (2021). nnU-Net: a self-configuring method for deep learning-based biomedical image segmentation. Nature methods, 18(2), 203-211.
+#######################################################################
+
+[pretrained_weights] Loaded 292/292 keys from checkpoint.
+2026-07-02 13:17:42.180521: do_dummy_2d_data_aug: False
+2026-07-02 13:17:42.217523: Using splits from existing split file: \\hive3065\Yael_Mishael\Rony\remote_computer backup\nnUNet_resources\multi_sample_fresh_bnei_reem_i3_lowlr\nnUNet_preprocessed\Dataset777_GCEF\splits_final.json
+2026-07-02 13:17:42.259522: The split file contains 1 splits.
+2026-07-02 13:17:42.285521: Desired fold for training: 0
+2026-07-02 13:17:42.312521: This split has 1 training and 1 validation cases.
+2026-07-02 13:17:42.344514: WARNING: Some validation cases are also in the training set. Please check the splits.json or ignore if this is intentional.
+using pin_memory on device 0
+using pin_memory on device 0
+
+This is the configuration used by this training:
+Configuration name: 3d_fullres
+ {'data_identifier': 'nnUNetPlans_3d_fullres', 'preprocessor_name': 'DefaultPreprocessor', 'batch_size': 2, 'patch_size': [128, 128, 128], 'median_image_size_in_voxels': [600.0, 650.0, 650.0], 'spacing': [1.0, 1.0, 1.0], 'normalization_schemes': ['NoNormalization'], 'use_mask_for_norm': [False], 'resampling_fn_data': 'resample_data_or_seg_to_shape', 'resampling_fn_seg': 'resample_data_or_seg_to_shape', 'resampling_fn_data_kwargs': {'is_seg': False, 'order': 3, 'order_z': 0, 'force_separate_z': None}, 'resampling_fn_seg_kwargs': {'is_seg': True, 'order': 1, 'order_z': 0, 'force_separate_z': None}, 'resampling_fn_probabilities': 'resample_data_or_seg_to_shape', 'resampling_fn_probabilities_kwargs': {'is_seg': False, 'order': 1, 'order_z': 0, 'force_separate_z': None}, 'architecture': {'network_class_name': 'dynamic_network_architectures.architectures.unet.PlainConvUNet', 'arch_kwargs': {'n_stages': 6, 'features_per_stage': [32, 64, 128, 256, 320, 320], 'conv_op': 'torch.nn.modules.conv.Conv3d', 'kernel_sizes': [[3, 3, 3], [3, 3, 3], [3, 3, 3], [3, 3, 3], [3, 3, 3], [3, 3, 3]], 'strides': [[1, 1, 1], [2, 2, 2], [2, 2, 2], [2, 2, 2], [2, 2, 2], [2, 2, 2]], 'n_conv_per_stage': [2, 2, 2, 2, 2, 2], 'n_conv_per_stage_decoder': [2, 2, 2, 2, 2], 'conv_bias': True, 'norm_op': 'torch.nn.modules.instancenorm.InstanceNorm3d', 'norm_op_kwargs': {'eps': 1e-05, 'affine': True}, 'dropout_op': None, 'dropout_op_kwargs': None, 'nonlin': 'torch.nn.LeakyReLU', 'nonlin_kwargs': {'inplace': True}, 'deep_supervision': True}, '_kw_requires_import': ['conv_op', 'norm_op', 'dropout_op', 'nonlin']}, 'batch_dice': True} 
+
+These are the global plan.json settings:
+ {'dataset_name': 'Dataset777_GCEF', 'plans_name': 'nnUNetPlans', 'original_median_spacing_after_transp': [1.0, 1.0, 1.0], 'original_median_shape_after_transp': [600, 650, 650], 'image_reader_writer': 'SimpleITKIO', 'transpose_forward': [0, 1, 2], 'transpose_backward': [0, 1, 2], 'experiment_planner_used': 'ExperimentPlanner', 'label_manager': 'LabelManager', 'foreground_intensity_properties_per_channel': {'0': {'max': 1.0, 'mean': 0.6639092564582825, 'median': 0.7579227089881897, 'min': 0.003021601587533951, 'percentile_00_5': 0.12038014829158783, 'percentile_99_5': 0.9756746295094487, 'std': 0.21991291642189026}}} 
+
+2026-07-02 13:19:08.455255: unpacking dataset...
+2026-07-02 13:19:24.208057: unpacking done...
+2026-07-02 13:19:24.297627: Unable to plot network architecture:
+2026-07-02 13:19:24.330159: No module named 'hiddenlayer'
+2026-07-02 13:19:24.421227: Early stopping config | enabled=True | patience=20 | min_delta=0.001
+2026-07-02 13:19:24.454749: 
+2026-07-02 13:19:24.486748: Epoch 0
+2026-07-02 13:19:24.520790: Current learning rate: 0.002
+2026-07-02 13:21:29.446017: train_loss -0.5024
+2026-07-02 13:21:29.478018: val_loss -0.5312
+2026-07-02 13:21:29.509019: Pseudo dice [np.float32(0.4898), np.float32(0.8762), np.float32(nan), np.float32(nan), np.float32(0.9644)]
+2026-07-02 13:21:29.545017: Epoch time: 124.99 s
+2026-07-02 13:21:29.579046: Yayy! New best EMA pseudo Dice: 0.7767999768257141
+2026-07-02 13:21:31.446883: Early stopping: baseline val_loss=-0.531159
+2026-07-02 13:21:31.476722: mean_dice_computed nan
+2026-07-02 13:21:31.508735: 
+2026-07-02 13:21:31.538824: Epoch 1
+2026-07-02 13:21:31.568855: Current learning rate: 0.002
+2026-07-02 13:23:38.619656: train_loss -0.5159
+2026-07-02 13:23:38.655658: val_loss -0.5159
+2026-07-02 13:23:38.684658: Pseudo dice [np.float32(0.4334), np.float32(0.896), np.float32(nan), np.float32(nan), np.float32(0.9679)]
+2026-07-02 13:23:38.714675: Epoch time: 127.11 s
+2026-07-02 13:23:39.725708: Early stopping: no significant improvement | val_loss=-0.515899 | best_val_loss=-0.531159 | delta=-0.015261 | wait=1/20
+2026-07-02 13:23:39.771703: mean_dice_computed nan
+2026-07-02 13:23:39.815703: 
+2026-07-02 13:23:39.852703: Epoch 2
+2026-07-02 13:23:39.892704: Current learning rate: 0.002
+2026-07-02 13:25:46.092794: train_loss -0.5271
+2026-07-02 13:25:46.123794: val_loss -0.542
+2026-07-02 13:25:46.153849: Pseudo dice [np.float32(0.5365), np.float32(0.8806), np.float32(nan), np.float32(nan), np.float32(0.9637)]
+2026-07-02 13:25:46.183845: Epoch time: 126.28 s
+2026-07-02 13:25:46.218868: Yayy! New best EMA pseudo Dice: 0.7774999737739563
+2026-07-02 13:25:48.033468: Early stopping: improvement detected | val_loss=-0.542012 | delta=0.010853
+2026-07-02 13:25:48.068490: mean_dice_computed nan
+2026-07-02 13:25:48.109516: 
+2026-07-02 13:25:48.141549: Epoch 3
+2026-07-02 13:25:48.176051: Current learning rate: 0.00199
+2026-07-02 13:27:56.573793: train_loss -0.5248
+2026-07-02 13:27:56.605344: val_loss -0.5134
+2026-07-02 13:27:56.636438: Pseudo dice [np.float32(0.3893), np.float32(0.897), np.float32(nan), np.float32(nan), np.float32(0.9652)]
+2026-07-02 13:27:56.667029: Epoch time: 128.47 s
+2026-07-02 13:27:58.308408: Early stopping: no significant improvement | val_loss=-0.513413 | best_val_loss=-0.542012 | delta=-0.028599 | wait=1/20
+2026-07-02 13:27:58.339000: mean_dice_computed nan
+2026-07-02 13:27:58.371152: 
+2026-07-02 13:27:58.401365: Epoch 4
+2026-07-02 13:27:58.433832: Current learning rate: 0.00199
+2026-07-02 13:30:00.679091: train_loss -0.5272
+2026-07-02 13:30:00.712101: val_loss -0.5352
+2026-07-02 13:30:00.743100: Pseudo dice [np.float32(0.5384), np.float32(0.9057), np.float32(nan), np.float32(nan), np.float32(0.9641)]
+2026-07-02 13:30:00.781091: Epoch time: 122.31 s
+2026-07-02 13:30:00.824091: Yayy! New best EMA pseudo Dice: 0.7775999903678894
+2026-07-02 13:30:03.348881: Early stopping: no significant improvement | val_loss=-0.535186 | best_val_loss=-0.542012 | delta=-0.006826 | wait=2/20
+2026-07-02 13:30:03.379547: mean_dice_computed nan
+2026-07-02 13:30:03.411689: 
+2026-07-02 13:30:03.442098: Epoch 5
+2026-07-02 13:30:03.471862: Current learning rate: 0.00199
+2026-07-02 13:32:10.213078: train_loss -0.5356
+2026-07-02 13:32:10.232078: val_loss -0.5052
+2026-07-02 13:32:10.262078: Pseudo dice [np.float32(0.4663), np.float32(0.8742), np.float32(nan), np.float32(nan), np.float32(0.9637)]
+2026-07-02 13:32:10.303077: Epoch time: 126.8 s
+2026-07-02 13:32:11.522426: Early stopping: no significant improvement | val_loss=-0.505169 | best_val_loss=-0.542012 | delta=-0.036843 | wait=3/20
+2026-07-02 13:32:11.552877: mean_dice_computed nan
+2026-07-02 13:32:11.585395: 
+2026-07-02 13:32:11.617439: Epoch 6
+2026-07-02 13:32:11.649478: Current learning rate: 0.00199
+2026-07-02 13:34:24.744540: train_loss -0.5267
+2026-07-02 13:34:24.774541: val_loss -0.4965
+2026-07-02 13:34:24.803540: Pseudo dice [np.float32(0.3753), np.float32(0.8965), np.float32(nan), np.float32(nan), np.float32(0.9601)]
+2026-07-02 13:34:24.842540: Epoch time: 133.16 s
+2026-07-02 13:34:25.973377: Early stopping: no significant improvement | val_loss=-0.496545 | best_val_loss=-0.542012 | delta=-0.045467 | wait=4/20
+2026-07-02 13:34:26.002975: mean_dice_computed nan
+2026-07-02 13:34:26.035056: 
+2026-07-02 13:34:26.078569: Epoch 7
+2026-07-02 13:34:26.112082: Current learning rate: 0.00199
+2026-07-02 13:36:31.107080: train_loss -0.533
+2026-07-02 13:36:31.142081: val_loss -0.5217
+2026-07-02 13:36:31.171136: Pseudo dice [np.float32(0.4477), np.float32(0.9087), np.float32(nan), np.float32(nan), np.float32(0.9721)]
+2026-07-02 13:36:31.200159: Epoch time: 125.07 s
+2026-07-02 13:36:32.435081: Early stopping: no significant improvement | val_loss=-0.521712 | best_val_loss=-0.542012 | delta=-0.0203 | wait=5/20
+2026-07-02 13:36:32.468081: mean_dice_computed nan
+2026-07-02 13:36:32.499081: 
+2026-07-02 13:36:32.537081: Epoch 8
+2026-07-02 13:36:32.568090: Current learning rate: 0.00199
+2026-07-02 13:38:42.126468: train_loss -0.541
+2026-07-02 13:38:42.170565: val_loss -0.5129
+2026-07-02 13:38:42.209738: Pseudo dice [np.float32(0.4809), np.float32(0.9134), np.float32(nan), np.float32(nan), np.float32(0.9615)]
+2026-07-02 13:38:42.256759: Epoch time: 129.63 s
+2026-07-02 13:38:43.566713: Early stopping: no significant improvement | val_loss=-0.512852 | best_val_loss=-0.542012 | delta=-0.02916 | wait=6/20
+2026-07-02 13:38:43.596489: mean_dice_computed nan
+2026-07-02 13:38:43.627522: 
+2026-07-02 13:38:43.658036: Epoch 9
+2026-07-02 13:38:43.689064: Current learning rate: 0.00198
+2026-07-02 13:40:50.521617: train_loss -0.5404
+2026-07-02 13:40:50.554701: val_loss -0.5374
+2026-07-02 13:40:50.585837: Pseudo dice [np.float32(0.6235), np.float32(0.912), np.float32(nan), np.float32(nan), np.float32(0.9659)]
+2026-07-02 13:40:50.616903: Epoch time: 126.9 s
+2026-07-02 13:40:50.647730: Yayy! New best EMA pseudo Dice: 0.7807000279426575
+2026-07-02 13:40:52.471818: Early stopping: no significant improvement | val_loss=-0.537371 | best_val_loss=-0.542012 | delta=-0.004641 | wait=7/20
+2026-07-02 13:40:52.500031: mean_dice_computed nan
+2026-07-02 13:40:52.528636: 
+2026-07-02 13:40:52.555372: Epoch 10
+2026-07-02 13:40:52.582083: Current learning rate: 0.00198
+2026-07-02 13:43:01.389578: train_loss -0.5508
+2026-07-02 13:43:01.420586: val_loss -0.5464
+2026-07-02 13:43:01.450586: Pseudo dice [np.float32(0.4581), np.float32(0.9288), np.float32(nan), np.float32(nan), np.float32(0.9784)]
+2026-07-02 13:43:01.481587: Epoch time: 128.86 s
+2026-07-02 13:43:01.511589: Yayy! New best EMA pseudo Dice: 0.781499981880188
+2026-07-02 13:43:03.586379: Early stopping: improvement detected | val_loss=-0.546433 | delta=0.004421
+2026-07-02 13:43:03.629900: mean_dice_computed nan
+2026-07-02 13:43:03.661900: 
+2026-07-02 13:43:03.691993: Epoch 11
+2026-07-02 13:43:03.721261: Current learning rate: 0.00198
+2026-07-02 13:45:17.051671: train_loss -0.5473
+2026-07-02 13:45:17.083197: val_loss -0.5715
+2026-07-02 13:45:17.113240: Pseudo dice [np.float32(0.4774), np.float32(0.9341), np.float32(nan), np.float32(nan), np.float32(0.9683)]
+2026-07-02 13:45:17.142806: Epoch time: 133.39 s
+2026-07-02 13:45:17.172414: Yayy! New best EMA pseudo Dice: 0.7827000021934509
+2026-07-02 13:45:19.199489: Early stopping: improvement detected | val_loss=-0.571535 | delta=0.025102
+2026-07-02 13:45:19.230725: mean_dice_computed nan
+2026-07-02 13:45:19.263883: 
+2026-07-02 13:45:19.295018: Epoch 12
+2026-07-02 13:45:19.326060: Current learning rate: 0.00198
+2026-07-02 13:47:19.324080: train_loss -0.558
+2026-07-02 13:47:19.356088: val_loss -0.5349
+2026-07-02 13:47:19.388088: Pseudo dice [np.float32(0.4642), np.float32(0.9149), np.float32(nan), np.float32(nan), np.float32(0.9651)]
+2026-07-02 13:47:19.421124: Epoch time: 120.06 s
+2026-07-02 13:47:21.021377: Early stopping: no significant improvement | val_loss=-0.534948 | best_val_loss=-0.571535 | delta=-0.036587 | wait=1/20
+2026-07-02 13:47:21.051894: mean_dice_computed nan
+2026-07-02 13:47:21.084933: 
+2026-07-02 13:47:21.116295: Epoch 13
+2026-07-02 13:47:21.145843: Current learning rate: 0.00198
+2026-07-02 13:49:25.381430: train_loss -0.5545
+2026-07-02 13:49:25.415428: val_loss -0.5003
+2026-07-02 13:49:25.446031: Pseudo dice [np.float32(0.3891), np.float32(0.8892), np.float32(nan), np.float32(nan), np.float32(0.9655)]
+2026-07-02 13:49:25.476598: Epoch time: 124.3 s
+2026-07-02 13:49:27.241681: Early stopping: no significant improvement | val_loss=-0.50035 | best_val_loss=-0.571535 | delta=-0.071185 | wait=2/20
+2026-07-02 13:49:27.280742: mean_dice_computed nan
+2026-07-02 13:49:27.311741: 
+2026-07-02 13:49:27.340478: Epoch 14
+2026-07-02 13:49:27.369626: Current learning rate: 0.00197
+2026-07-02 13:51:39.211614: train_loss -0.5491
+2026-07-02 13:51:39.254127: val_loss -0.542
+2026-07-02 13:51:39.283641: Pseudo dice [np.float32(0.4087), np.float32(0.9336), np.float32(nan), np.float32(nan), np.float32(0.9659)]
+2026-07-02 13:51:39.318641: Epoch time: 131.9 s
+2026-07-02 13:51:40.490505: Early stopping: no significant improvement | val_loss=-0.541975 | best_val_loss=-0.571535 | delta=-0.029559 | wait=3/20
+2026-07-02 13:51:40.520673: mean_dice_computed nan
+2026-07-02 13:51:40.553260: 
+2026-07-02 13:51:40.593612: Epoch 15
+2026-07-02 13:51:40.633611: Current learning rate: 0.00197
+2026-07-02 13:53:51.338827: train_loss -0.5547
+2026-07-02 13:53:51.371344: val_loss -0.5217
+2026-07-02 13:53:51.403372: Pseudo dice [np.float32(0.4004), np.float32(0.923), np.float32(nan), np.float32(nan), np.float32(0.9674)]
+2026-07-02 13:53:51.432885: Epoch time: 130.79 s
+2026-07-02 13:53:52.782243: Early stopping: no significant improvement | val_loss=-0.52175 | best_val_loss=-0.571535 | delta=-0.049785 | wait=4/20
+2026-07-02 13:53:52.812763: mean_dice_computed nan
+2026-07-02 13:53:52.843762: 
+2026-07-02 13:53:52.873791: Epoch 16
+2026-07-02 13:53:52.904306: Current learning rate: 0.00197
+2026-07-02 13:56:03.448660: train_loss -0.5508
+2026-07-02 13:56:03.484461: val_loss -0.5635
+2026-07-02 13:56:03.515069: Pseudo dice [np.float32(0.6814), np.float32(0.924), np.float32(nan), np.float32(nan), np.float32(0.9677)]
+2026-07-02 13:56:03.545980: Epoch time: 130.61 s
+2026-07-02 13:56:03.577552: Yayy! New best EMA pseudo Dice: 0.7847999930381775
+2026-07-02 13:56:05.651965: Early stopping: no significant improvement | val_loss=-0.563493 | best_val_loss=-0.571535 | delta=-0.008042 | wait=5/20
+2026-07-02 13:56:05.682479: mean_dice_computed nan
+2026-07-02 13:56:05.721542: 
+2026-07-02 13:56:05.752075: Epoch 17
+2026-07-02 13:56:05.784255: Current learning rate: 0.00197
+2026-07-02 13:58:14.939067: train_loss -0.5544
+2026-07-02 13:58:14.990066: val_loss -0.5231
+2026-07-02 13:58:15.027313: Pseudo dice [np.float32(0.3712), np.float32(0.9228), np.float32(nan), np.float32(nan), np.float32(0.9714)]
+2026-07-02 13:58:15.066808: Epoch time: 129.22 s
+2026-07-02 13:58:16.444722: Early stopping: no significant improvement | val_loss=-0.523073 | best_val_loss=-0.571535 | delta=-0.048462 | wait=6/20
+2026-07-02 13:58:16.476915: mean_dice_computed nan
+2026-07-02 13:58:16.510479: 
+2026-07-02 13:58:16.541933: Epoch 18
+2026-07-02 13:58:16.574069: Current learning rate: 0.00197
+2026-07-02 14:00:27.771418: train_loss -0.5594
+2026-07-02 14:00:27.802977: val_loss -0.5726
+2026-07-02 14:00:27.832750: Pseudo dice [np.float32(0.4779), np.float32(0.9158), np.float32(nan), np.float32(nan), np.float32(0.9709)]
+2026-07-02 14:00:27.873253: Epoch time: 131.26 s
+2026-07-02 14:00:29.123193: Early stopping: improvement detected | val_loss=-0.572603 | delta=0.001068
+2026-07-02 14:00:29.154193: mean_dice_computed nan
+2026-07-02 14:00:29.196193: 
+2026-07-02 14:00:29.237194: Epoch 19
+2026-07-02 14:00:29.280240: Current learning rate: 0.00197
+2026-07-02 14:02:40.283596: train_loss -0.5659
+2026-07-02 14:02:40.332163: val_loss -0.5523
+2026-07-02 14:02:40.362700: Pseudo dice [np.float32(0.4673), np.float32(0.9224), np.float32(nan), np.float32(nan), np.float32(0.9688)]
+2026-07-02 14:02:40.393875: Epoch time: 131.09 s
+2026-07-02 14:02:41.951385: Early stopping: no significant improvement | val_loss=-0.552275 | best_val_loss=-0.572603 | delta=-0.020328 | wait=1/20
+2026-07-02 14:02:41.981385: mean_dice_computed nan
+2026-07-02 14:02:42.014385: 
+2026-07-02 14:02:42.050385: Epoch 20
+2026-07-02 14:02:42.079389: Current learning rate: 0.00196
+2026-07-02 14:04:49.844947: train_loss -0.566
+2026-07-02 14:04:49.902946: val_loss -0.577
+2026-07-02 14:04:49.943459: Pseudo dice [np.float32(0.4666), np.float32(0.9348), np.float32(nan), np.float32(nan), np.float32(0.972)]
+2026-07-02 14:04:49.986489: Epoch time: 127.83 s
+2026-07-02 14:04:51.361148: Early stopping: improvement detected | val_loss=-0.577037 | delta=0.004434
+2026-07-02 14:04:51.405148: mean_dice_computed nan
+2026-07-02 14:04:51.449148: 
+2026-07-02 14:04:51.484148: Epoch 21
+2026-07-02 14:04:51.515148: Current learning rate: 0.00196
+2026-07-02 14:06:59.216488: train_loss -0.5628
+2026-07-02 14:06:59.249490: val_loss -0.5587
+2026-07-02 14:06:59.280086: Pseudo dice [np.float32(0.4509), np.float32(0.9201), np.float32(nan), np.float32(nan), np.float32(0.9646)]
+2026-07-02 14:06:59.310100: Epoch time: 127.77 s
+2026-07-02 14:07:01.132643: Early stopping: no significant improvement | val_loss=-0.558731 | best_val_loss=-0.577037 | delta=-0.018306 | wait=1/20
+2026-07-02 14:07:01.162635: mean_dice_computed nan
+2026-07-02 14:07:01.193192: 
+2026-07-02 14:07:01.223729: Epoch 22
+2026-07-02 14:07:01.252830: Current learning rate: 0.00196
+2026-07-02 14:09:11.424151: train_loss -0.5705
+2026-07-02 14:09:11.485153: val_loss -0.5275
+2026-07-02 14:09:11.516152: Pseudo dice [np.float32(0.4703), np.float32(0.9146), np.float32(nan), np.float32(nan), np.float32(0.9669)]
+2026-07-02 14:09:11.547152: Epoch time: 130.23 s
+2026-07-02 14:09:12.635693: Early stopping: no significant improvement | val_loss=-0.527541 | best_val_loss=-0.577037 | delta=-0.049496 | wait=2/20
+2026-07-02 14:09:12.677499: mean_dice_computed nan
+2026-07-02 14:09:12.714064: 
+2026-07-02 14:09:12.753812: Epoch 23
+2026-07-02 14:09:12.794809: Current learning rate: 0.00196
+2026-07-02 14:11:19.979464: train_loss -0.556
+2026-07-02 14:11:20.384976: val_loss -0.5639
+2026-07-02 14:11:20.443976: Pseudo dice [np.float32(0.4557), np.float32(0.9328), np.float32(nan), np.float32(nan), np.float32(0.9768)]
+2026-07-02 14:11:20.489489: Epoch time: 127.27 s
+2026-07-02 14:11:21.656204: Early stopping: no significant improvement | val_loss=-0.563882 | best_val_loss=-0.577037 | delta=-0.013155 | wait=3/20
+2026-07-02 14:11:21.685472: mean_dice_computed nan
+2026-07-02 14:11:21.716125: 
+2026-07-02 14:11:21.744707: Epoch 24
+2026-07-02 14:11:21.772055: Current learning rate: 0.00196
+2026-07-02 14:13:32.455224: train_loss -0.5629
+2026-07-02 14:13:32.506227: val_loss -0.5404
+2026-07-02 14:13:32.574931: Pseudo dice [np.float32(0.426), np.float32(0.9339), np.float32(nan), np.float32(nan), np.float32(0.9764)]
+2026-07-02 14:13:32.616932: Epoch time: 130.74 s
+2026-07-02 14:13:34.068833: Early stopping: no significant improvement | val_loss=-0.540396 | best_val_loss=-0.577037 | delta=-0.03664 | wait=4/20
+2026-07-02 14:13:34.102835: mean_dice_computed nan
+2026-07-02 14:13:34.141284: 
+2026-07-02 14:13:34.175536: Epoch 25
+2026-07-02 14:13:34.218362: Current learning rate: 0.00195
+2026-07-02 14:15:37.841474: train_loss -0.5693
+2026-07-02 14:15:37.952565: val_loss -0.5543
+2026-07-02 14:15:38.048556: Pseudo dice [np.float32(0.4992), np.float32(0.929), np.float32(nan), np.float32(nan), np.float32(0.9708)]
+2026-07-02 14:15:38.089122: Epoch time: 123.7 s
+2026-07-02 14:15:38.121056: Yayy! New best EMA pseudo Dice: 0.7849000096321106
+2026-07-02 14:15:39.947614: Early stopping: no significant improvement | val_loss=-0.554318 | best_val_loss=-0.577037 | delta=-0.022719 | wait=5/20
+2026-07-02 14:15:39.976770: mean_dice_computed nan
+2026-07-02 14:15:40.008401: 
+2026-07-02 14:15:40.037338: Epoch 26
+2026-07-02 14:15:40.066052: Current learning rate: 0.00195
+2026-07-02 14:17:41.356092: train_loss -0.5599
+2026-07-02 14:17:41.429604: val_loss -0.5524
+2026-07-02 14:17:41.469604: Pseudo dice [np.float32(0.3465), np.float32(0.9447), np.float32(nan), np.float32(nan), np.float32(0.9719)]
+2026-07-02 14:17:41.601140: Epoch time: 121.35 s
+2026-07-02 14:17:42.892905: Early stopping: no significant improvement | val_loss=-0.5524 | best_val_loss=-0.577037 | delta=-0.024637 | wait=6/20
+2026-07-02 14:17:42.922646: mean_dice_computed nan
+2026-07-02 14:17:42.954558: 
+2026-07-02 14:17:42.984107: Epoch 27
+2026-07-02 14:17:43.014071: Current learning rate: 0.00195
+2026-07-02 14:19:44.924594: train_loss -0.5673
+2026-07-02 14:19:44.956596: val_loss -0.5628
+2026-07-02 14:19:44.987596: Pseudo dice [np.float32(0.4499), np.float32(0.9268), np.float32(nan), np.float32(nan), np.float32(0.964)]
+2026-07-02 14:19:45.017606: Epoch time: 121.97 s
+2026-07-02 14:19:46.590577: Early stopping: no significant improvement | val_loss=-0.562779 | best_val_loss=-0.577037 | delta=-0.014258 | wait=7/20
+2026-07-02 14:19:46.625577: mean_dice_computed nan
+2026-07-02 14:19:46.668577: 
+2026-07-02 14:19:46.707577: Epoch 28
+2026-07-02 14:19:46.745577: Current learning rate: 0.00195
+2026-07-02 14:21:44.371619: train_loss -0.5589
+2026-07-02 14:21:44.438621: val_loss -0.5444
+2026-07-02 14:21:44.496619: Pseudo dice [np.float32(0.4334), np.float32(0.9394), np.float32(nan), np.float32(nan), np.float32(0.9657)]
+2026-07-02 14:21:44.619619: Epoch time: 117.7 s
+2026-07-02 14:21:46.124232: Early stopping: no significant improvement | val_loss=-0.544424 | best_val_loss=-0.577037 | delta=-0.032613 | wait=8/20
+2026-07-02 14:21:46.152464: mean_dice_computed nan
+2026-07-02 14:21:46.183017: 
+2026-07-02 14:21:46.211080: Epoch 29
+2026-07-02 14:21:46.240223: Current learning rate: 0.00195
+2026-07-02 14:23:44.054264: train_loss -0.5621
+2026-07-02 14:23:44.086264: val_loss -0.5612
+2026-07-02 14:23:44.117264: Pseudo dice [np.float32(0.4913), np.float32(0.9425), np.float32(nan), np.float32(nan), np.float32(0.9765)]
+2026-07-02 14:23:44.159264: Epoch time: 117.87 s
+2026-07-02 14:23:45.511806: Early stopping: no significant improvement | val_loss=-0.56119 | best_val_loss=-0.577037 | delta=-0.015847 | wait=9/20
+2026-07-02 14:23:45.540903: mean_dice_computed nan
+2026-07-02 14:23:45.572453: 
+2026-07-02 14:23:45.601643: Epoch 30
+2026-07-02 14:23:45.631714: Current learning rate: 0.00195
+2026-07-02 14:25:46.290564: train_loss -0.5706
+2026-07-02 14:25:46.323564: val_loss -0.574
+2026-07-02 14:25:46.356565: Pseudo dice [np.float32(0.4875), np.float32(0.9301), np.float32(nan), np.float32(nan), np.float32(0.9771)]
+2026-07-02 14:25:46.392564: Epoch time: 120.72 s
+2026-07-02 14:25:46.422572: Yayy! New best EMA pseudo Dice: 0.785099983215332
+2026-07-02 14:25:48.770185: Early stopping: no significant improvement | val_loss=-0.574008 | best_val_loss=-0.577037 | delta=-0.003029 | wait=10/20
+2026-07-02 14:25:48.799434: mean_dice_computed nan
+2026-07-02 14:25:48.829811: 
+2026-07-02 14:25:48.859392: Epoch 31
+2026-07-02 14:25:48.888891: Current learning rate: 0.00194
+2026-07-02 14:27:54.895963: train_loss -0.5753
+2026-07-02 14:27:54.948963: val_loss -0.5815
+2026-07-02 14:27:55.007482: Pseudo dice [np.float32(0.526), np.float32(0.9369), np.float32(nan), np.float32(nan), np.float32(0.9756)]
+2026-07-02 14:27:55.095478: Epoch time: 126.07 s
+2026-07-02 14:27:55.145991: Yayy! New best EMA pseudo Dice: 0.7878999710083008
+2026-07-02 14:27:56.946681: Early stopping: improvement detected | val_loss=-0.581469 | delta=0.004433
+2026-07-02 14:27:56.977408: mean_dice_computed nan
+2026-07-02 14:27:57.009629: 
+2026-07-02 14:27:57.039702: Epoch 32
+2026-07-02 14:27:57.070265: Current learning rate: 0.00194
+2026-07-02 14:29:58.026873: train_loss -0.5608
+2026-07-02 14:29:58.075986: val_loss -0.5632
+2026-07-02 14:29:58.107986: Pseudo dice [np.float32(0.4855), np.float32(0.9321), np.float32(nan), np.float32(nan), np.float32(0.9735)]
+2026-07-02 14:29:58.143986: Epoch time: 121.02 s
+2026-07-02 14:29:58.187985: Yayy! New best EMA pseudo Dice: 0.7888000011444092
+2026-07-02 14:30:00.150294: Early stopping: no significant improvement | val_loss=-0.563192 | best_val_loss=-0.581469 | delta=-0.018277 | wait=1/20
+2026-07-02 14:30:00.181452: mean_dice_computed nan
+2026-07-02 14:30:00.213058: 
+2026-07-02 14:30:00.243518: Epoch 33
+2026-07-02 14:30:00.275831: Current learning rate: 0.00194
+2026-07-02 14:32:03.840363: train_loss -0.5728
+2026-07-02 14:32:03.871371: val_loss -0.5394
+2026-07-02 14:32:03.902371: Pseudo dice [np.float32(0.4669), np.float32(0.936), np.float32(nan), np.float32(nan), np.float32(0.9786)]
+2026-07-02 14:32:03.933986: Epoch time: 123.63 s
+2026-07-02 14:32:03.966082: Yayy! New best EMA pseudo Dice: 0.7893000245094299
+2026-07-02 14:32:06.049132: Early stopping: no significant improvement | val_loss=-0.539353 | best_val_loss=-0.581469 | delta=-0.042117 | wait=2/20
+2026-07-02 14:32:06.082614: mean_dice_computed nan
+2026-07-02 14:32:06.117205: 
+2026-07-02 14:32:06.149526: Epoch 34
+2026-07-02 14:32:06.181769: Current learning rate: 0.00194
+2026-07-02 14:34:04.051403: train_loss -0.572
+2026-07-02 14:34:04.084470: val_loss -0.5717
+2026-07-02 14:34:04.115520: Pseudo dice [np.float32(0.4653), np.float32(0.9389), np.float32(nan), np.float32(nan), np.float32(0.9735)]
+2026-07-02 14:34:04.145559: Epoch time: 117.94 s
+2026-07-02 14:34:04.175571: Yayy! New best EMA pseudo Dice: 0.7896000146865845
+2026-07-02 14:34:06.220097: Early stopping: no significant improvement | val_loss=-0.571694 | best_val_loss=-0.581469 | delta=-0.009775 | wait=3/20
+2026-07-02 14:34:06.251302: mean_dice_computed nan
+2026-07-02 14:34:06.282873: 
+2026-07-02 14:34:06.313046: Epoch 35
+2026-07-02 14:34:06.343613: Current learning rate: 0.00194
+2026-07-02 14:36:09.817503: train_loss -0.5655
+2026-07-02 14:36:09.850511: val_loss -0.5415
+2026-07-02 14:36:09.882513: Pseudo dice [np.float32(0.3634), np.float32(0.9234), np.float32(nan), np.float32(nan), np.float32(0.9695)]
+2026-07-02 14:36:09.914512: Epoch time: 123.54 s
+2026-07-02 14:36:11.550011: Early stopping: no significant improvement | val_loss=-0.541479 | best_val_loss=-0.581469 | delta=-0.03999 | wait=4/20
+2026-07-02 14:36:11.580014: mean_dice_computed nan
+2026-07-02 14:36:11.612012: 
+2026-07-02 14:36:11.642011: Epoch 36
+2026-07-02 14:36:11.676013: Current learning rate: 0.00194
+2026-07-02 14:38:12.825881: train_loss -0.5691
+2026-07-02 14:38:13.035398: val_loss -0.5576
+2026-07-02 14:38:13.169395: Pseudo dice [np.float32(0.5039), np.float32(0.935), np.float32(nan), np.float32(nan), np.float32(0.9718)]
+2026-07-02 14:38:13.219395: Epoch time: 121.22 s
+2026-07-02 14:38:14.486185: Early stopping: no significant improvement | val_loss=-0.55758 | best_val_loss=-0.581469 | delta=-0.02389 | wait=5/20
+2026-07-02 14:38:14.519013: mean_dice_computed nan
+2026-07-02 14:38:14.554103: 
+2026-07-02 14:38:14.587234: Epoch 37
+2026-07-02 14:38:14.619757: Current learning rate: 0.00193
+2026-07-02 14:40:16.442910: train_loss -0.5671
+2026-07-02 14:40:16.492003: val_loss -0.5789
+2026-07-02 14:40:16.545003: Pseudo dice [np.float32(0.4297), np.float32(0.9408), np.float32(nan), np.float32(nan), np.float32(0.9763)]
+2026-07-02 14:40:16.595518: Epoch time: 121.89 s
+2026-07-02 14:40:18.318787: Early stopping: no significant improvement | val_loss=-0.578878 | best_val_loss=-0.581469 | delta=-0.002591 | wait=6/20
+2026-07-02 14:40:18.353874: mean_dice_computed nan
+2026-07-02 14:40:18.391978: 
+2026-07-02 14:40:18.426579: Epoch 38
+2026-07-02 14:40:18.458662: Current learning rate: 0.00193
+2026-07-02 14:42:20.573412: train_loss -0.5682
+2026-07-02 14:42:20.607411: val_loss -0.5598
+2026-07-02 14:42:20.642412: Pseudo dice [np.float32(0.4717), np.float32(0.9334), np.float32(nan), np.float32(nan), np.float32(0.9655)]
+2026-07-02 14:42:20.676411: Epoch time: 122.18 s
+2026-07-02 14:42:22.768128: Early stopping: no significant improvement | val_loss=-0.559775 | best_val_loss=-0.581469 | delta=-0.021694 | wait=7/20
+2026-07-02 14:42:22.798682: mean_dice_computed nan
+2026-07-02 14:42:22.832888: 
+2026-07-02 14:42:22.863642: Epoch 39
+2026-07-02 14:42:22.892359: Current learning rate: 0.00193
+2026-07-02 14:44:23.123901: train_loss -0.5748
+2026-07-02 14:44:23.165902: val_loss -0.5657
+2026-07-02 14:44:23.198902: Pseudo dice [np.float32(0.3331), np.float32(0.9369), np.float32(nan), np.float32(nan), np.float32(0.9726)]
+2026-07-02 14:44:23.228902: Epoch time: 120.29 s
+2026-07-02 14:44:24.654481: Early stopping: no significant improvement | val_loss=-0.565736 | best_val_loss=-0.581469 | delta=-0.015733 | wait=8/20
+2026-07-02 14:44:24.684507: mean_dice_computed nan
+2026-07-02 14:44:24.717019: 
+2026-07-02 14:44:24.749048: Epoch 40
+2026-07-02 14:44:24.779562: Current learning rate: 0.00193
+2026-07-02 14:46:25.813795: train_loss -0.5715
+2026-07-02 14:46:25.855797: val_loss -0.5733
+2026-07-02 14:46:25.901702: Pseudo dice [np.float32(0.5475), np.float32(0.9362), np.float32(nan), np.float32(nan), np.float32(0.9778)]
+2026-07-02 14:46:25.933742: Epoch time: 121.1 s
+2026-07-02 14:46:27.642296: Early stopping: no significant improvement | val_loss=-0.573275 | best_val_loss=-0.581469 | delta=-0.008194 | wait=9/20
+2026-07-02 14:46:27.672298: mean_dice_computed nan
+2026-07-02 14:46:27.702846: 
+2026-07-02 14:46:27.732444: Epoch 41
+2026-07-02 14:46:27.761765: Current learning rate: 0.00193
+2026-07-02 14:48:28.480594: train_loss -0.5689
+2026-07-02 14:48:28.581595: val_loss -0.5643
+2026-07-02 14:48:28.628596: Pseudo dice [np.float32(0.4318), np.float32(0.9413), np.float32(nan), np.float32(nan), np.float32(0.9721)]
+2026-07-02 14:48:28.708113: Epoch time: 120.78 s
+2026-07-02 14:48:30.141069: Early stopping: no significant improvement | val_loss=-0.564338 | best_val_loss=-0.581469 | delta=-0.017131 | wait=10/20
+2026-07-02 14:48:30.170663: mean_dice_computed nan
+2026-07-02 14:48:30.200878: 
+2026-07-02 14:48:30.228451: Epoch 42
+2026-07-02 14:48:30.257052: Current learning rate: 0.00192
+2026-07-02 14:50:31.837489: train_loss -0.5724
+2026-07-02 14:50:31.872491: val_loss -0.6089
+2026-07-02 14:50:31.903701: Pseudo dice [np.float32(0.7798), np.float32(0.9371), np.float32(nan), np.float32(nan), np.float32(0.9789)]
+2026-07-02 14:50:31.934384: Epoch time: 121.64 s
+2026-07-02 14:50:31.972002: Yayy! New best EMA pseudo Dice: 0.7978000044822693
+2026-07-02 14:50:33.874541: Early stopping: improvement detected | val_loss=-0.608901 | delta=0.027431
+2026-07-02 14:50:33.905085: mean_dice_computed nan
+2026-07-02 14:50:33.937599: 
+2026-07-02 14:50:33.968132: Epoch 43
+2026-07-02 14:50:34.002218: Current learning rate: 0.00192
+2026-07-02 14:52:30.168620: train_loss -0.5798
+2026-07-02 14:52:30.200621: val_loss -0.5622
+2026-07-02 14:52:30.231620: Pseudo dice [np.float32(0.4342), np.float32(0.9357), np.float32(nan), np.float32(nan), np.float32(0.9686)]
+2026-07-02 14:52:30.263623: Epoch time: 116.23 s
+2026-07-02 14:52:31.762445: Early stopping: no significant improvement | val_loss=-0.562199 | best_val_loss=-0.608901 | delta=-0.046702 | wait=1/20
+2026-07-02 14:52:31.793087: mean_dice_computed nan
+2026-07-02 14:52:31.824713: 
+2026-07-02 14:52:31.854295: Epoch 44
+2026-07-02 14:52:31.884337: Current learning rate: 0.00192
+2026-07-02 14:54:33.317710: train_loss -0.5778
+2026-07-02 14:54:33.362721: val_loss -0.5564
+2026-07-02 14:54:33.394325: Pseudo dice [np.float32(0.3807), np.float32(0.9369), np.float32(nan), np.float32(nan), np.float32(0.9723)]
+2026-07-02 14:54:33.428673: Epoch time: 121.49 s
+2026-07-02 14:54:34.818174: Early stopping: no significant improvement | val_loss=-0.556411 | best_val_loss=-0.608901 | delta=-0.052489 | wait=2/20
+2026-07-02 14:54:34.848181: mean_dice_computed nan
+2026-07-02 14:54:34.880184: 
+2026-07-02 14:54:34.911177: Epoch 45
+2026-07-02 14:54:34.940175: Current learning rate: 0.00192
+2026-07-02 14:56:34.886589: train_loss -0.5628
+2026-07-02 14:56:34.918598: val_loss -0.5536
+2026-07-02 14:56:34.949599: Pseudo dice [np.float32(0.4171), np.float32(0.9425), np.float32(nan), np.float32(nan), np.float32(0.9757)]
+2026-07-02 14:56:34.979596: Epoch time: 120.01 s
+2026-07-02 14:56:36.363305: Early stopping: no significant improvement | val_loss=-0.55358 | best_val_loss=-0.608901 | delta=-0.055321 | wait=3/20
+2026-07-02 14:56:36.392437: mean_dice_computed nan
+2026-07-02 14:56:36.423053: 
+2026-07-02 14:56:36.452634: Epoch 46
+2026-07-02 14:56:36.480863: Current learning rate: 0.00192
+2026-07-02 14:58:38.652960: train_loss -0.578
+2026-07-02 14:58:38.684964: val_loss -0.5536
+2026-07-02 14:58:38.715968: Pseudo dice [np.float32(0.4293), np.float32(0.9432), np.float32(nan), np.float32(nan), np.float32(0.9689)]
+2026-07-02 14:58:38.746968: Epoch time: 122.23 s
+2026-07-02 14:58:40.041529: Early stopping: no significant improvement | val_loss=-0.553648 | best_val_loss=-0.608901 | delta=-0.055252 | wait=4/20
+2026-07-02 14:58:40.089042: mean_dice_computed nan
+2026-07-02 14:58:40.209043: 
+2026-07-02 14:58:40.252043: Epoch 47
+2026-07-02 14:58:40.309042: Current learning rate: 0.00192
+2026-07-02 15:00:44.213599: train_loss -0.5661
+2026-07-02 15:00:44.248453: val_loss -0.5774
+2026-07-02 15:00:44.283016: Pseudo dice [np.float32(0.594), np.float32(0.9415), np.float32(nan), np.float32(nan), np.float32(0.9583)]
+2026-07-02 15:00:44.328048: Epoch time: 124.01 s
+2026-07-02 15:00:46.234301: Early stopping: no significant improvement | val_loss=-0.577358 | best_val_loss=-0.608901 | delta=-0.031542 | wait=5/20
+2026-07-02 15:00:46.275426: mean_dice_computed nan
+2026-07-02 15:00:46.307570: 
+2026-07-02 15:00:46.338300: Epoch 48
+2026-07-02 15:00:46.367930: Current learning rate: 0.00191
+2026-07-02 15:02:51.643408: train_loss -0.5731
+2026-07-02 15:02:51.704407: val_loss -0.5806
+2026-07-02 15:02:51.747921: Pseudo dice [np.float32(0.6166), np.float32(0.9349), np.float32(nan), np.float32(nan), np.float32(0.9718)]
+2026-07-02 15:02:51.816436: Epoch time: 125.34 s
+2026-07-02 15:02:51.846446: Yayy! New best EMA pseudo Dice: 0.7990000247955322
+2026-07-02 15:02:53.549164: Early stopping: no significant improvement | val_loss=-0.580553 | best_val_loss=-0.608901 | delta=-0.028348 | wait=6/20
+2026-07-02 15:02:53.580293: mean_dice_computed nan
+2026-07-02 15:02:53.612884: 
+2026-07-02 15:02:53.642984: Epoch 49
+2026-07-02 15:02:53.674082: Current learning rate: 0.00191
+2026-07-02 15:04:49.072876: train_loss -0.5859
+2026-07-02 15:04:49.115873: val_loss -0.6132
+2026-07-02 15:04:49.157872: Pseudo dice [np.float32(0.6678), np.float32(0.9478), np.float32(nan), np.float32(nan), np.float32(0.9786)]
+2026-07-02 15:04:49.207386: Epoch time: 115.46 s
+2026-07-02 15:04:50.166533: Yayy! New best EMA pseudo Dice: 0.8055999875068665
+2026-07-02 15:04:51.881890: Early stopping: improvement detected | val_loss=-0.613248 | delta=0.004348
+2026-07-02 15:04:51.911596: mean_dice_computed nan
+2026-07-02 15:04:51.944218: 
+2026-07-02 15:04:51.974043: Epoch 50
+2026-07-02 15:04:52.003620: Current learning rate: 0.00191
+2026-07-02 15:06:51.190587: train_loss -0.58
+2026-07-02 15:06:51.231591: val_loss -0.5454
+2026-07-02 15:06:51.272587: Pseudo dice [np.float32(0.3939), np.float32(0.9318), np.float32(nan), np.float32(nan), np.float32(0.9706)]
+2026-07-02 15:06:51.310587: Epoch time: 119.25 s
+2026-07-02 15:06:52.758791: Early stopping: no significant improvement | val_loss=-0.545396 | best_val_loss=-0.613248 | delta=-0.067853 | wait=1/20
+2026-07-02 15:06:52.788365: mean_dice_computed nan
+2026-07-02 15:06:52.820518: 
+2026-07-02 15:06:52.850092: Epoch 51
+2026-07-02 15:06:52.879940: Current learning rate: 0.00191
+2026-07-02 15:08:54.126285: train_loss -0.5665
+2026-07-02 15:08:54.158284: val_loss -0.58
+2026-07-02 15:08:54.189286: Pseudo dice [np.float32(0.4744), np.float32(0.946), np.float32(nan), np.float32(nan), np.float32(0.9655)]
+2026-07-02 15:08:54.220284: Epoch time: 121.31 s
+2026-07-02 15:08:55.626836: Early stopping: no significant improvement | val_loss=-0.579983 | best_val_loss=-0.613248 | delta=-0.033265 | wait=2/20
+2026-07-02 15:08:55.668861: mean_dice_computed nan
+2026-07-02 15:08:55.714965: 
+2026-07-02 15:08:55.754951: Epoch 52
+2026-07-02 15:08:55.824951: Current learning rate: 0.00191
+2026-07-02 15:10:58.004970: train_loss -0.5775
+2026-07-02 15:10:58.036971: val_loss -0.5539
+2026-07-02 15:10:58.067972: Pseudo dice [np.float32(0.4428), np.float32(0.9384), np.float32(nan), np.float32(nan), np.float32(0.9701)]
+2026-07-02 15:10:58.099971: Epoch time: 122.29 s
+2026-07-02 15:10:59.391319: Early stopping: no significant improvement | val_loss=-0.553898 | best_val_loss=-0.613248 | delta=-0.05935 | wait=3/20
+2026-07-02 15:10:59.534451: mean_dice_computed nan
+2026-07-02 15:10:59.596452: 
+2026-07-02 15:10:59.642452: Epoch 53
+2026-07-02 15:10:59.725481: Current learning rate: 0.0019
+2026-07-02 15:13:00.508094: train_loss -0.5681
+2026-07-02 15:13:00.541174: val_loss -0.5465
+2026-07-02 15:13:00.572736: Pseudo dice [np.float32(0.4182), np.float32(0.9406), np.float32(nan), np.float32(nan), np.float32(0.9754)]
+2026-07-02 15:13:00.603879: Epoch time: 120.91 s
+2026-07-02 15:13:02.073362: Early stopping: no significant improvement | val_loss=-0.546452 | best_val_loss=-0.613248 | delta=-0.066797 | wait=4/20
+2026-07-02 15:13:02.104362: mean_dice_computed nan
+2026-07-02 15:13:02.141362: 
+2026-07-02 15:13:02.249363: Epoch 54
+2026-07-02 15:13:02.284364: Current learning rate: 0.0019
+2026-07-02 15:15:03.030055: train_loss -0.5664
+2026-07-02 15:15:03.065062: val_loss -0.5646
+2026-07-02 15:15:03.095304: Pseudo dice [np.float32(0.4768), np.float32(0.9336), np.float32(nan), np.float32(nan), np.float32(0.9748)]
+2026-07-02 15:15:03.125853: Epoch time: 120.89 s
+2026-07-02 15:15:04.630177: Early stopping: no significant improvement | val_loss=-0.56459 | best_val_loss=-0.613248 | delta=-0.048658 | wait=5/20
+2026-07-02 15:15:04.660506: mean_dice_computed nan
+2026-07-02 15:15:04.692635: 
+2026-07-02 15:15:04.722214: Epoch 55
+2026-07-02 15:15:04.752796: Current learning rate: 0.0019
+2026-07-02 15:17:03.844287: train_loss -0.5714
+2026-07-02 15:17:03.883351: val_loss -0.5738
+2026-07-02 15:17:03.914405: Pseudo dice [np.float32(0.5756), np.float32(0.9435), np.float32(nan), np.float32(nan), np.float32(0.9731)]
+2026-07-02 15:17:03.946937: Epoch time: 119.15 s
+2026-07-02 15:17:05.341980: Early stopping: no significant improvement | val_loss=-0.573849 | best_val_loss=-0.613248 | delta=-0.039399 | wait=6/20
+2026-07-02 15:17:05.379981: mean_dice_computed nan
+2026-07-02 15:17:05.423982: 
+2026-07-02 15:17:05.464983: Epoch 56
+2026-07-02 15:17:05.501982: Current learning rate: 0.0019
+2026-07-02 15:19:06.582680: train_loss -0.581
+2026-07-02 15:19:06.659194: val_loss -0.5403
+2026-07-02 15:19:06.689764: Pseudo dice [np.float32(0.3874), np.float32(0.9441), np.float32(nan), np.float32(nan), np.float32(0.9803)]
+2026-07-02 15:19:06.719764: Epoch time: 121.16 s
+2026-07-02 15:19:08.559533: Early stopping: no significant improvement | val_loss=-0.540328 | best_val_loss=-0.613248 | delta=-0.072921 | wait=7/20
+2026-07-02 15:19:08.590566: mean_dice_computed nan
+2026-07-02 15:19:08.622596: 
+2026-07-02 15:19:08.653305: Epoch 57
+2026-07-02 15:19:08.683885: Current learning rate: 0.0019
+2026-07-02 15:21:08.594922: train_loss -0.5733
+2026-07-02 15:21:08.636922: val_loss -0.5463
+2026-07-02 15:21:08.671932: Pseudo dice [np.float32(0.3883), np.float32(0.9322), np.float32(nan), np.float32(nan), np.float32(0.9721)]
+2026-07-02 15:21:08.703957: Epoch time: 119.97 s
+2026-07-02 15:21:10.160032: Early stopping: no significant improvement | val_loss=-0.546307 | best_val_loss=-0.613248 | delta=-0.066942 | wait=8/20
+2026-07-02 15:21:10.244545: mean_dice_computed nan
+2026-07-02 15:21:10.292545: 
+2026-07-02 15:21:10.337544: Epoch 58
+2026-07-02 15:21:10.371546: Current learning rate: 0.0019
+2026-07-02 15:23:10.198058: train_loss -0.5834
+2026-07-02 15:23:10.234059: val_loss -0.5503
+2026-07-02 15:23:10.271058: Pseudo dice [np.float32(0.5119), np.float32(0.9396), np.float32(nan), np.float32(nan), np.float32(0.9638)]
+2026-07-02 15:23:10.310058: Epoch time: 119.91 s
+2026-07-02 15:23:11.696674: Early stopping: no significant improvement | val_loss=-0.550306 | best_val_loss=-0.613248 | delta=-0.062943 | wait=9/20
+2026-07-02 15:23:11.733674: mean_dice_computed nan
+2026-07-02 15:23:11.770674: 
+2026-07-02 15:23:11.811674: Epoch 59
+2026-07-02 15:23:11.843674: Current learning rate: 0.00189
+2026-07-02 15:25:13.940965: train_loss -0.5853
+2026-07-02 15:25:13.973968: val_loss -0.5658
+2026-07-02 15:25:14.003968: Pseudo dice [np.float32(0.4697), np.float32(0.9467), np.float32(nan), np.float32(nan), np.float32(0.9754)]C:\Users\rony.schwartz\.conda\envs\venv-napari\Lib\site-packages\nnunetv2\evaluation\evaluate_predictions.py:157: RuntimeWarning: Mean of empty slice
+  means[r][m] = np.nanmean([i['metrics'][r][m] for i in results])
+
+2026-07-02 15:25:14.034049: Epoch time: 122.17 s
+2026-07-02 15:25:15.705028: Early stopping: no significant improvement | val_loss=-0.565785 | best_val_loss=-0.613248 | delta=-0.047463 | wait=10/20
+2026-07-02 15:25:15.736027: mean_dice_computed nan
+2026-07-02 15:25:15.768028: 
+2026-07-02 15:25:15.799028: Epoch 60
+2026-07-02 15:25:15.829028: Current learning rate: 0.00189
+2026-07-02 15:27:18.614951: train_loss -0.5816
+2026-07-02 15:27:18.647951: val_loss -0.5981
+2026-07-02 15:27:18.678952: Pseudo dice [np.float32(0.5102), np.float32(0.9549), np.float32(nan), np.float32(nan), np.float32(0.9827)]
+2026-07-02 15:27:18.708954: Epoch time: 122.85 s
+2026-07-02 15:27:20.065243: Early stopping: no significant improvement | val_loss=-0.598122 | best_val_loss=-0.613248 | delta=-0.015126 | wait=11/20
+2026-07-02 15:27:20.105242: mean_dice_computed nan
+2026-07-02 15:27:20.149244: 
+2026-07-02 15:27:20.179242: Epoch 61
+2026-07-02 15:27:20.209242: Current learning rate: 0.00189
+2026-07-02 15:29:22.071492: train_loss -0.5833
+2026-07-02 15:29:22.103029: val_loss -0.5636
+2026-07-02 15:29:22.131570: Pseudo dice [np.float32(0.5692), np.float32(0.9195), np.float32(nan), np.float32(nan), np.float32(0.9709)]
+2026-07-02 15:29:22.160198: Epoch time: 121.92 s
+2026-07-02 15:29:23.546731: Early stopping: no significant improvement | val_loss=-0.563622 | best_val_loss=-0.613248 | delta=-0.049626 | wait=12/20
+2026-07-02 15:29:23.589731: mean_dice_computed nan
+2026-07-02 15:29:23.633731: 
+2026-07-02 15:29:23.677735: Epoch 62
+2026-07-02 15:29:23.717817: Current learning rate: 0.00189
+2026-07-02 15:31:21.227695: train_loss -0.5755
+2026-07-02 15:31:21.292695: val_loss -0.5484
+2026-07-02 15:31:21.356696: Pseudo dice [np.float32(0.4153), np.float32(0.9282), np.float32(nan), np.float32(nan), np.float32(0.9627)]
+2026-07-02 15:31:21.400697: Epoch time: 117.6 s
+2026-07-02 15:31:22.653929: Early stopping: no significant improvement | val_loss=-0.548353 | best_val_loss=-0.613248 | delta=-0.064895 | wait=13/20
+2026-07-02 15:31:22.682449: mean_dice_computed nan
+2026-07-02 15:31:22.713122: 
+2026-07-02 15:31:22.742200: Epoch 63
+2026-07-02 15:31:22.771231: Current learning rate: 0.00189
+2026-07-02 15:33:27.673698: train_loss -0.57
+2026-07-02 15:33:27.720700: val_loss -0.5711
+2026-07-02 15:33:27.765221: Pseudo dice [np.float32(0.5488), np.float32(0.9423), np.float32(nan), np.float32(nan), np.float32(0.9628)]
+2026-07-02 15:33:27.794731: Epoch time: 124.96 s
+2026-07-02 15:33:29.110930: Early stopping: no significant improvement | val_loss=-0.57113 | best_val_loss=-0.613248 | delta=-0.042118 | wait=14/20
+2026-07-02 15:33:29.156929: mean_dice_computed nan
+2026-07-02 15:33:29.209930: 
+2026-07-02 15:33:29.251930: Epoch 64
+2026-07-02 15:33:29.294930: Current learning rate: 0.00188
+2026-07-02 15:35:32.079674: train_loss -0.5886
+2026-07-02 15:35:32.137195: val_loss -0.5754
+2026-07-02 15:35:32.740192: Pseudo dice [np.float32(0.4299), np.float32(0.9379), np.float32(nan), np.float32(nan), np.float32(0.9732)]
+2026-07-02 15:35:32.858199: Epoch time: 122.87 s
+2026-07-02 15:35:34.459720: Early stopping: no significant improvement | val_loss=-0.575397 | best_val_loss=-0.613248 | delta=-0.037851 | wait=15/20
+2026-07-02 15:35:34.491244: mean_dice_computed nan
+2026-07-02 15:35:34.522766: 
+2026-07-02 15:35:34.553963: Epoch 65
+2026-07-02 15:35:34.584615: Current learning rate: 0.00188
+2026-07-02 15:37:35.584596: train_loss -0.5664
+2026-07-02 15:37:35.627619: val_loss -0.5805
+2026-07-02 15:37:35.672643: Pseudo dice [np.float32(0.6128), np.float32(0.9307), np.float32(nan), np.float32(nan), np.float32(0.9764)]
+2026-07-02 15:37:35.731155: Epoch time: 121.06 s
+2026-07-02 15:37:37.016026: Early stopping: no significant improvement | val_loss=-0.580492 | best_val_loss=-0.613248 | delta=-0.032757 | wait=16/20
+2026-07-02 15:37:37.045745: mean_dice_computed nan
+2026-07-02 15:37:37.077870: 
+2026-07-02 15:37:37.107738: Epoch 66
+2026-07-02 15:37:37.137744: Current learning rate: 0.00188
+2026-07-02 15:39:42.972281: train_loss -0.5824
+2026-07-02 15:39:43.015284: val_loss -0.5328
+2026-07-02 15:39:43.061837: Pseudo dice [np.float32(0.3942), np.float32(0.9404), np.float32(nan), np.float32(nan), np.float32(0.972)]
+2026-07-02 15:39:43.094920: Epoch time: 125.9 s
+2026-07-02 15:39:44.946827: Early stopping: no significant improvement | val_loss=-0.53279 | best_val_loss=-0.613248 | delta=-0.080458 | wait=17/20
+2026-07-02 15:39:44.978826: mean_dice_computed nan
+2026-07-02 15:39:45.013835: 
+2026-07-02 15:39:45.051824: Epoch 67
+2026-07-02 15:39:45.084824: Current learning rate: 0.00188
+2026-07-02 15:41:48.253704: train_loss -0.5758
+2026-07-02 15:41:48.290712: val_loss -0.5798
+2026-07-02 15:41:48.321716: Pseudo dice [np.float32(0.4691), np.float32(0.9345), np.float32(nan), np.float32(nan), np.float32(0.9648)]
+2026-07-02 15:41:48.352916: Epoch time: 123.24 s
+2026-07-02 15:41:49.781627: Early stopping: no significant improvement | val_loss=-0.579759 | best_val_loss=-0.613248 | delta=-0.033489 | wait=18/20
+2026-07-02 15:41:49.830171: mean_dice_computed nan
+2026-07-02 15:41:49.860717: 
+2026-07-02 15:41:49.889248: Epoch 68
+2026-07-02 15:41:49.919370: Current learning rate: 0.00188
+2026-07-02 15:43:53.321944: train_loss -0.5703
+2026-07-02 15:43:53.374940: val_loss -0.5861
+2026-07-02 15:43:53.475453: Pseudo dice [np.float32(0.4929), np.float32(0.9343), np.float32(nan), np.float32(nan), np.float32(0.9694)]
+2026-07-02 15:43:53.527453: Epoch time: 123.46 s
+2026-07-02 15:43:54.969009: Early stopping: no significant improvement | val_loss=-0.586092 | best_val_loss=-0.613248 | delta=-0.027156 | wait=19/20
+2026-07-02 15:43:55.010009: mean_dice_computed nan
+2026-07-02 15:43:55.051009: 
+2026-07-02 15:43:55.081009: Epoch 69
+2026-07-02 15:43:55.116010: Current learning rate: 0.00188
+2026-07-02 15:45:55.567553: train_loss -0.5884
+2026-07-02 15:45:55.607554: val_loss -0.5798
+2026-07-02 15:45:55.637555: Pseudo dice [np.float32(0.4548), np.float32(0.9359), np.float32(nan), np.float32(nan), np.float32(0.9731)]
+2026-07-02 15:45:55.669554: Epoch time: 120.52 s
+2026-07-02 15:45:57.158151: Early stopping: no significant improvement | val_loss=-0.579776 | best_val_loss=-0.613248 | delta=-0.033473 | wait=20/20
+2026-07-02 15:45:57.188174: Early stopping triggered at epoch 70 | best_val_loss=-0.613248
+2026-07-02 15:45:57.217172: mean_dice_computed nan
+2026-07-02 15:45:58.120971: Training done.
+2026-07-02 15:45:58.254973: Using splits from existing split file: \\hive3065\Yael_Mishael\Rony\remote_computer backup\nnUNet_resources\multi_sample_fresh_bnei_reem_i3_lowlr\nnUNet_preprocessed\Dataset777_GCEF\splits_final.json
+2026-07-02 15:45:58.289972: The split file contains 1 splits.
+2026-07-02 15:45:58.320972: Desired fold for training: 0
+2026-07-02 15:45:58.352972: This split has 1 training and 1 validation cases.
+2026-07-02 15:45:58.383972: WARNING: Some validation cases are also in the training set. Please check the splits.json or ignore if this is intentional.
+2026-07-02 15:45:58.422973: predicting nlm_volume
+2026-07-02 15:45:58.495976: nlm_volume, shape torch.Size([1, 600, 650, 650]), rank 0
+2026-07-02 15:52:14.935053: Validation complete
+2026-07-02 15:52:14.992054: Mean Validation Dice:  nan
+
+Saved summary CSV: \\hive3065\Yael_Mishael\Rony\remote_computer backup\nnUNet_resources\multi_sample_fresh_bnei_reem_i3_lowlr\nnUNet_results\Dataset777_GCEF\nnUNetTrainer_betterIgnoreSampling_earlyStopValLoss_lowlr__nnUNetPlans__3d_fullres\analytics\training_metrics_summary.csv
+WARNING: 70 epochs missing mean_dice in CSV
+
+=== Training Summary ===
+  epochs:      69
+  train_loss:  -0.588400
+  val_loss:    -0.579800
+  mean_dice:   nan
+
+[OK] Analytics saved to \\hive3065\Yael_Mishael\Rony\remote_computer backup\nnUNet_resources\multi_sample_fresh_bnei_reem_i3_lowlr\nnUNet_results\Dataset777_GCEF\nnUNetTrainer_betterIgnoreSampling_earlyStopValLoss_lowlr__nnUNetPlans__3d_fullres\analytics
+
+======================================================================
+Running inference with fresh_bnei_reem_i3_lowlr model ...
+======================================================================
+Input chunks (8):
+  nlm_volume__2__0__130__0000.nii.gz
+  nlm_volume__2__116__294__0000.nii.gz
+  nlm_volume__2__198__376__0000.nii.gz
+  nlm_volume__2__280__458__0000.nii.gz
+  nlm_volume__2__34__212__0000.nii.gz
+  nlm_volume__2__362__540__0000.nii.gz
+  nlm_volume__2__444__622__0000.nii.gz
+  nlm_volume__2__526__652__0000.nii.gz
+Checkpoint: checkpoint_final.pth
+CUDA available: True
+
+=== Step 1: Inference ===
+There are 8 cases in the source folder
+I am process 0 out of 1 (max process ID is 0, we start counting with 0!)
+There are 8 cases that I would like to predict
+
+Predicting nlm_volume__2__0__130_:
+perform_everything_on_device: False
+Input shape: torch.Size([1, 130, 650, 650])
+step_size: 0.5
+mirror_axes: None
+n_steps 200, image size is torch.Size([130, 650, 650]), tile_size [128, 128, 128], tile_step_size 0.5
+steps:
+[[0, 2], [0, 58, 116, 174, 232, 290, 348, 406, 464, 522], [0, 58, 116, 174, 232, 290, 348, 406, 464, 522]]
+move image to device cpu
+preallocating results arrays on device cpu
+
+  0%|          | 0/200 [00:00<?, ?it/s]
+  0%|          | 1/200 [00:01<04:14,  1.28s/it]
+  2%|1         | 3/200 [00:01<01:13,  2.70it/s]
+  2%|2         | 5/200 [00:01<00:40,  4.85it/s]
+  4%|3         | 7/200 [00:01<00:27,  7.01it/s]
+  4%|4         | 9/200 [00:01<00:21,  8.91it/s]
+  6%|5         | 11/200 [00:01<00:18, 10.43it/s]
+  6%|6         | 13/200 [00:02<00:17, 10.98it/s]
+  8%|7         | 15/200 [00:02<00:14, 12.49it/s]
+  8%|8         | 17/200 [00:02<00:13, 13.77it/s]
+ 10%|#         | 20/200 [00:02<00:11, 15.75it/s]
+ 12%|#1        | 23/200 [00:02<00:10, 17.11it/s]
+ 12%|#2        | 25/200 [00:02<00:09, 17.77it/s]
+ 14%|#3        | 27/200 [00:02<00:09, 18.28it/s]
+ 14%|#4        | 29/200 [00:02<00:09, 18.73it/s]
+ 16%|#5        | 31/200 [00:02<00:08, 19.07it/s]
+ 17%|#7        | 34/200 [00:03<00:08, 19.41it/s]
+ 18%|#8        | 36/200 [00:03<00:08, 19.51it/s]
+ 19%|#9        | 38/200 [00:03<00:08, 19.54it/s]
+ 20%|##        | 40/200 [00:03<00:08, 19.35it/s]
+ 21%|##1       | 42/200 [00:03<00:08, 19.31it/s]
+ 22%|##2       | 45/200 [00:03<00:07, 19.62it/s]
+ 24%|##4       | 48/200 [00:03<00:07, 19.89it/s]
+ 25%|##5       | 50/200 [00:03<00:07, 19.92it/s]
+ 26%|##6       | 52/200 [00:04<00:07, 19.83it/s]
+ 27%|##7       | 54/200 [00:04<00:07, 19.77it/s]
+ 28%|##8       | 56/200 [00:04<00:07, 19.67it/s]
+ 29%|##9       | 58/200 [00:04<00:07, 19.65it/s]
+ 30%|###       | 60/200 [00:04<00:07, 19.64it/s]
+ 31%|###1      | 62/200 [00:04<00:07, 19.52it/s]
+ 32%|###2      | 64/200 [00:04<00:06, 19.54it/s]
+ 33%|###3      | 66/200 [00:04<00:06, 19.51it/s]
+ 34%|###4      | 68/200 [00:04<00:06, 19.54it/s]
+ 35%|###5      | 70/200 [00:04<00:06, 19.56it/s]
+ 36%|###6      | 72/200 [00:05<00:06, 19.63it/s]
+ 37%|###7      | 74/200 [00:05<00:06, 19.68it/s]
+ 38%|###8      | 76/200 [00:05<00:06, 19.72it/s]
+ 39%|###9      | 78/200 [00:05<00:06, 19.74it/s]
+ 40%|####      | 80/200 [00:05<00:06, 19.82it/s]
+ 41%|####1     | 82/200 [00:05<00:05, 19.76it/s]
+ 42%|####2     | 84/200 [00:05<00:05, 19.71it/s]
+ 43%|####3     | 86/200 [00:05<00:05, 19.74it/s]
+ 44%|####4     | 88/200 [00:05<00:05, 19.70it/s]
+ 45%|####5     | 90/200 [00:05<00:05, 19.73it/s]
+ 46%|####6     | 92/200 [00:06<00:05, 19.75it/s]
+ 47%|####6     | 94/200 [00:06<00:05, 19.71it/s]
+ 48%|####8     | 96/200 [00:06<00:05, 19.74it/s]
+ 49%|####9     | 98/200 [00:06<00:05, 19.76it/s]
+ 50%|#####     | 100/200 [00:06<00:05, 19.71it/s]
+ 51%|#####1    | 102/200 [00:06<00:04, 19.62it/s]
+ 52%|#####2    | 104/200 [00:06<00:04, 19.50it/s]
+ 53%|#####3    | 106/200 [00:06<00:04, 19.59it/s]
+ 54%|#####4    | 108/200 [00:06<00:04, 19.65it/s]
+ 55%|#####5    | 110/200 [00:06<00:04, 19.70it/s]
+ 56%|#####6    | 112/200 [00:07<00:04, 19.67it/s]
+ 57%|#####6    | 114/200 [00:07<00:04, 19.71it/s]
+ 58%|#####8    | 116/200 [00:07<00:04, 19.74it/s]
+ 59%|#####8    | 118/200 [00:07<00:04, 19.76it/s]
+ 60%|######    | 120/200 [00:07<00:04, 19.77it/s]
+ 61%|######1   | 122/200 [00:07<00:03, 19.66it/s]
+ 62%|######2   | 124/200 [00:07<00:03, 19.70it/s]
+ 63%|######3   | 126/200 [00:07<00:03, 19.68it/s]
+ 64%|######4   | 128/200 [00:07<00:03, 19.66it/s]
+ 65%|######5   | 130/200 [00:07<00:03, 19.58it/s]
+ 66%|######6   | 132/200 [00:08<00:03, 19.36it/s]
+ 67%|######7   | 134/200 [00:08<00:03, 19.27it/s]
+ 68%|######8   | 136/200 [00:08<00:03, 19.37it/s]
+ 69%|######9   | 138/200 [00:08<00:03, 19.38it/s]
+ 70%|#######   | 140/200 [00:08<00:03, 19.45it/s]
+ 71%|#######1  | 142/200 [00:08<00:02, 19.50it/s]
+ 72%|#######2  | 144/200 [00:08<00:02, 19.53it/s]
+ 74%|#######3  | 147/200 [00:08<00:02, 19.81it/s]
+ 75%|#######5  | 150/200 [00:08<00:02, 19.97it/s]
+ 76%|#######6  | 152/200 [00:09<00:02, 19.98it/s]
+ 78%|#######7  | 155/200 [00:09<00:02, 20.13it/s]
+ 79%|#######9  | 158/200 [00:09<00:02, 20.18it/s]
+ 80%|########  | 161/200 [00:09<00:01, 19.86it/s]
+ 82%|########1 | 163/200 [00:09<00:01, 19.75it/s]
+ 82%|########2 | 165/200 [00:09<00:01, 19.67it/s]
+ 84%|########3 | 167/200 [00:09<00:01, 19.65it/s]
+ 84%|########4 | 169/200 [00:09<00:01, 19.59it/s]
+ 86%|########5 | 171/200 [00:10<00:01, 19.54it/s]
+ 86%|########6 | 173/200 [00:10<00:01, 19.56it/s]
+ 88%|########7 | 175/200 [00:10<00:01, 19.63it/s]
+ 88%|########8 | 177/200 [00:10<00:01, 19.68it/s]
+ 90%|########9 | 179/200 [00:10<00:01, 19.72it/s]
+ 90%|######### | 181/200 [00:10<00:00, 19.68it/s]
+ 92%|#########1| 183/200 [00:10<00:00, 19.72it/s]
+ 92%|#########2| 185/200 [00:10<00:00, 19.74it/s]
+ 94%|#########3| 187/200 [00:10<00:00, 19.76it/s]
+ 95%|#########5| 190/200 [00:11<00:00, 19.85it/s]
+ 96%|#########6| 192/200 [00:11<00:00, 19.84it/s]
+ 97%|#########7| 194/200 [00:11<00:00, 19.72it/s]
+ 98%|#########8| 196/200 [00:11<00:00, 19.63it/s]
+ 99%|#########9| 198/200 [00:11<00:00, 19.63it/s]
+100%|##########| 200/200 [00:11<00:00, 19.62it/s]
+100%|##########| 200/200 [00:11<00:00, 17.35it/s]
+Prediction done
+sending off prediction to background worker for resampling and export
+done with nlm_volume__2__0__130_
+
+Predicting nlm_volume__2__116__294_:
+perform_everything_on_device: False
+Input shape: torch.Size([1, 178, 650, 650])
+step_size: 0.5
+mirror_axes: None
+n_steps 200, image size is torch.Size([178, 650, 650]), tile_size [128, 128, 128], tile_step_size 0.5
+steps:
+[[0, 50], [0, 58, 116, 174, 232, 290, 348, 406, 464, 522], [0, 58, 116, 174, 232, 290, 348, 406, 464, 522]]
+move image to device cpu
+preallocating results arrays on device cpu
+
+  0%|          | 0/200 [00:00<?, ?it/s]
+  1%|1         | 2/200 [00:00<00:16, 11.83it/s]
+  2%|2         | 4/200 [00:00<00:12, 15.29it/s]
+  3%|3         | 6/200 [00:00<00:11, 16.87it/s]
+  4%|4         | 8/200 [00:00<00:10, 17.79it/s]
+  5%|5         | 10/200 [00:00<00:10, 18.29it/s]
+  6%|6         | 12/200 [00:00<00:10, 18.54it/s]
+  7%|7         | 14/200 [00:00<00:09, 18.82it/s]
+  8%|8         | 16/200 [00:00<00:09, 19.00it/s]
+  9%|9         | 18/200 [00:01<00:09, 19.02it/s]
+ 10%|#         | 20/200 [00:01<00:09, 19.08it/s]
+ 11%|#1        | 22/200 [00:01<00:09, 19.02it/s]
+ 12%|#2        | 24/200 [00:01<00:09, 19.08it/s]
+ 13%|#3        | 26/200 [00:01<00:09, 19.07it/s]
+ 14%|#4        | 28/200 [00:01<00:09, 19.06it/s]
+ 15%|#5        | 30/200 [00:01<00:08, 19.06it/s]
+ 16%|#6        | 32/200 [00:01<00:08, 18.89it/s]
+ 17%|#7        | 34/200 [00:01<00:08, 18.57it/s]
+ 18%|#8        | 36/200 [00:01<00:08, 18.45it/s]
+ 19%|#9        | 38/200 [00:02<00:08, 18.68it/s]
+ 20%|##        | 40/200 [00:02<00:08, 18.63it/s]
+ 21%|##1       | 42/200 [00:02<00:08, 18.60it/s]
+ 22%|##2       | 44/200 [00:02<00:08, 18.73it/s]
+ 23%|##3       | 46/200 [00:02<00:08, 18.88it/s]
+ 24%|##4       | 48/200 [00:02<00:08, 18.87it/s]
+ 25%|##5       | 50/200 [00:02<00:07, 18.98it/s]
+ 26%|##6       | 52/200 [00:02<00:07, 19.00it/s]
+ 27%|##7       | 54/200 [00:02<00:07, 19.07it/s]
+ 28%|##8       | 56/200 [00:03<00:07, 19.17it/s]
+ 29%|##9       | 58/200 [00:03<00:07, 19.19it/s]
+ 30%|###       | 60/200 [00:03<00:07, 19.04it/s]
+ 31%|###1      | 62/200 [00:03<00:07, 18.77it/s]
+ 32%|###2      | 64/200 [00:03<00:07, 18.85it/s]
+ 33%|###3      | 66/200 [00:03<00:07, 18.75it/s]
+ 34%|###4      | 68/200 [00:03<00:07, 18.58it/s]
+ 35%|###5      | 70/200 [00:03<00:06, 18.61it/s]
+ 36%|###6      | 72/200 [00:03<00:06, 18.64it/s]
+ 37%|###7      | 74/200 [00:03<00:06, 18.81it/s]
+ 38%|###8      | 76/200 [00:04<00:06, 19.10it/s]
+ 39%|###9      | 78/200 [00:04<00:06, 19.08it/s]
+ 40%|####      | 80/200 [00:04<00:06, 19.07it/s]
+ 41%|####1     | 82/200 [00:04<00:06, 19.12it/s]
+ 42%|####2     | 84/200 [00:04<00:06, 19.21it/s]
+ 43%|####3     | 86/200 [00:04<00:05, 19.27it/s]
+ 44%|####4     | 88/200 [00:04<00:05, 19.31it/s]
+ 45%|####5     | 90/200 [00:04<00:05, 19.35it/s]
+ 46%|####6     | 92/200 [00:04<00:05, 19.31it/s]
+ 47%|####6     | 94/200 [00:05<00:05, 19.29it/s]
+ 48%|####8     | 96/200 [00:05<00:05, 19.27it/s]
+ 49%|####9     | 98/200 [00:05<00:05, 19.37it/s]
+ 50%|#####     | 100/200 [00:05<00:05, 19.38it/s]
+ 51%|#####1    | 102/200 [00:05<00:05, 19.45it/s]
+ 52%|#####2    | 104/200 [00:05<00:04, 19.44it/s]
+ 53%|#####3    | 106/200 [00:05<00:04, 19.49it/s]
+ 54%|#####4    | 108/200 [00:05<00:04, 19.36it/s]
+ 55%|#####5    | 110/200 [00:05<00:04, 19.37it/s]
+ 56%|#####6    | 112/200 [00:05<00:04, 19.27it/s]
+ 57%|#####6    | 114/200 [00:06<00:04, 19.32it/s]
+ 58%|#####8    | 116/200 [00:06<00:04, 19.46it/s]
+ 59%|#####8    | 118/200 [00:06<00:04, 19.28it/s]
+ 60%|######    | 120/200 [00:06<00:04, 19.15it/s]
+ 61%|######1   | 122/200 [00:06<00:04, 19.07it/s]
+ 62%|######2   | 124/200 [00:06<00:03, 19.12it/s]
+ 63%|######3   | 126/200 [00:06<00:03, 19.10it/s]
+ 64%|######4   | 128/200 [00:06<00:03, 19.19it/s]
+ 65%|######5   | 130/200 [00:06<00:03, 19.20it/s]
+ 66%|######6   | 132/200 [00:06<00:03, 19.16it/s]
+ 67%|######7   | 134/200 [00:07<00:03, 19.12it/s]
+ 68%|######8   | 136/200 [00:07<00:03, 19.16it/s]
+ 69%|######9   | 138/200 [00:07<00:03, 19.12it/s]
+ 70%|#######   | 140/200 [00:07<00:03, 19.16it/s]
+ 71%|#######1  | 142/200 [00:07<00:03, 19.12it/s]
+ 72%|#######2  | 144/200 [00:07<00:02, 19.15it/s]
+ 73%|#######3  | 146/200 [00:07<00:02, 19.34it/s]
+ 74%|#######4  | 148/200 [00:07<00:02, 19.31it/s]
+ 75%|#######5  | 150/200 [00:07<00:02, 19.29it/s]
+ 76%|#######6  | 152/200 [00:08<00:02, 19.10it/s]
+ 77%|#######7  | 154/200 [00:08<00:02, 19.14it/s]
+ 78%|#######8  | 156/200 [00:08<00:02, 19.17it/s]
+ 79%|#######9  | 158/200 [00:08<00:02, 19.13it/s]
+ 80%|########  | 160/200 [00:08<00:02, 19.05it/s]
+ 81%|########1 | 162/200 [00:08<00:01, 19.05it/s]
+ 82%|########2 | 164/200 [00:08<00:01, 19.16it/s]
+ 83%|########2 | 166/200 [00:08<00:01, 19.18it/s]
+ 84%|########4 | 168/200 [00:08<00:01, 19.36it/s]
+ 85%|########5 | 170/200 [00:08<00:01, 19.21it/s]
+ 86%|########6 | 172/200 [00:09<00:01, 19.22it/s]
+ 87%|########7 | 174/200 [00:09<00:01, 19.17it/s]
+ 88%|########8 | 176/200 [00:09<00:01, 19.19it/s]
+ 89%|########9 | 178/200 [00:09<00:01, 19.20it/s]
+ 90%|######### | 180/200 [00:09<00:01, 19.26it/s]
+ 91%|#########1| 182/200 [00:09<00:00, 19.14it/s]
+ 92%|#########2| 184/200 [00:09<00:00, 19.01it/s]
+ 93%|#########3| 186/200 [00:09<00:00, 18.80it/s]
+ 94%|#########3| 188/200 [00:09<00:00, 18.61it/s]
+ 95%|#########5| 190/200 [00:10<00:00, 18.38it/s]
+ 96%|#########6| 192/200 [00:10<00:00, 18.52it/s]
+ 97%|#########7| 194/200 [00:10<00:00, 18.84it/s]
+ 98%|#########8| 197/200 [00:10<00:00, 19.27it/s]
+100%|##########| 200/200 [00:10<00:00, 19.62it/s]
+100%|##########| 200/200 [00:10<00:00, 18.99it/s]
+Prediction done
+sending off prediction to background worker for resampling and export
+done with nlm_volume__2__116__294_
+
+Predicting nlm_volume__2__198__376_:
+perform_everything_on_device: False
+Input shape: torch.Size([1, 178, 650, 650])
+step_size: 0.5
+mirror_axes: None
+n_steps 200, image size is torch.Size([178, 650, 650]), tile_size [128, 128, 128], tile_step_size 0.5
+steps:
+[[0, 50], [0, 58, 116, 174, 232, 290, 348, 406, 464, 522], [0, 58, 116, 174, 232, 290, 348, 406, 464, 522]]
+move image to device cpu
+preallocating results arrays on device cpu
+
+  0%|          | 0/200 [00:00<?, ?it/s]
+  0%|          | 1/200 [00:00<00:53,  3.70it/s]
+  2%|1         | 3/200 [00:00<00:24,  8.18it/s]
+  2%|2         | 5/200 [00:00<00:17, 10.96it/s]
+  4%|3         | 7/200 [00:00<00:14, 13.51it/s]
+  5%|5         | 10/200 [00:00<00:11, 15.98it/s]
+  6%|6         | 12/200 [00:00<00:11, 17.00it/s]
+  7%|7         | 14/200 [00:00<00:10, 17.68it/s]
+  8%|8         | 17/200 [00:01<00:09, 18.67it/s]
+ 10%|#         | 20/200 [00:01<00:09, 19.18it/s]
+ 12%|#1        | 23/200 [00:01<00:09, 19.49it/s]
+ 13%|#3        | 26/200 [00:01<00:08, 19.74it/s]
+ 14%|#4        | 29/200 [00:01<00:08, 19.78it/s]
+ 16%|#5        | 31/200 [00:01<00:08, 19.74it/s]
+ 16%|#6        | 33/200 [00:01<00:08, 19.71it/s]
+ 18%|#7        | 35/200 [00:02<00:08, 19.68it/s]
+ 18%|#8        | 37/200 [00:02<00:08, 19.50it/s]
+ 20%|#9        | 39/200 [00:02<00:08, 19.11it/s]
+ 20%|##        | 41/200 [00:02<00:08, 19.04it/s]
+ 22%|##1       | 43/200 [00:02<00:08, 18.99it/s]
+ 22%|##2       | 45/200 [00:02<00:08, 19.11it/s]
+ 24%|##3       | 47/200 [00:02<00:07, 19.15it/s]
+ 24%|##4       | 49/200 [00:02<00:07, 19.23it/s]
+ 26%|##5       | 51/200 [00:02<00:07, 19.28it/s]
+ 26%|##6       | 53/200 [00:02<00:07, 19.32it/s]
+ 28%|##7       | 55/200 [00:03<00:07, 19.30it/s]
+ 28%|##8       | 57/200 [00:03<00:07, 19.33it/s]
+ 30%|##9       | 59/200 [00:03<00:07, 19.25it/s]
+ 30%|###       | 61/200 [00:03<00:07, 19.08it/s]
+ 32%|###1      | 63/200 [00:03<00:07, 18.80it/s]
+ 32%|###2      | 65/200 [00:03<00:07, 18.61it/s]
+ 34%|###3      | 67/200 [00:03<00:07, 18.63it/s]
+ 34%|###4      | 69/200 [00:03<00:07, 18.60it/s]
+ 36%|###5      | 71/200 [00:03<00:07, 18.37it/s]
+ 36%|###6      | 73/200 [00:04<00:06, 18.31it/s]
+ 38%|###7      | 75/200 [00:04<00:06, 18.22it/s]
+ 38%|###8      | 77/200 [00:04<00:06, 17.63it/s]
+ 40%|###9      | 79/200 [00:04<00:06, 17.42it/s]
+ 40%|####      | 81/200 [00:04<00:06, 17.74it/s]
+ 42%|####1     | 83/200 [00:04<00:06, 18.01it/s]
+ 42%|####2     | 85/200 [00:04<00:06, 18.26it/s]
+ 44%|####3     | 87/200 [00:04<00:06, 18.44it/s]
+ 44%|####4     | 89/200 [00:04<00:05, 18.77it/s]
+ 46%|####5     | 91/200 [00:05<00:05, 19.02it/s]
+ 46%|####6     | 93/200 [00:05<00:05, 19.08it/s]
+ 48%|####7     | 95/200 [00:05<00:05, 18.96it/s]
+ 48%|####8     | 97/200 [00:05<00:05, 19.15it/s]
+ 50%|####9     | 99/200 [00:05<00:05, 19.23it/s]
+ 50%|#####     | 101/200 [00:05<00:05, 19.34it/s]
+ 52%|#####1    | 103/200 [00:05<00:05, 19.36it/s]
+ 52%|#####2    | 105/200 [00:05<00:04, 19.27it/s]
+ 54%|#####3    | 107/200 [00:05<00:04, 19.20it/s]
+ 55%|#####4    | 109/200 [00:05<00:04, 19.21it/s]
+ 56%|#####5    | 111/200 [00:06<00:04, 19.27it/s]
+ 56%|#####6    | 113/200 [00:06<00:04, 19.32it/s]
+ 57%|#####7    | 115/200 [00:06<00:04, 19.35it/s]
+ 58%|#####8    | 117/200 [00:06<00:04, 19.04it/s]
+ 60%|#####9    | 119/200 [00:06<00:04, 17.77it/s]
+ 60%|######    | 121/200 [00:06<00:04, 16.77it/s]
+ 62%|######1   | 123/200 [00:06<00:04, 16.49it/s]
+ 62%|######2   | 125/200 [00:06<00:04, 16.46it/s]
+ 64%|######3   | 127/200 [00:07<00:04, 16.81it/s]
+ 64%|######4   | 129/200 [00:07<00:04, 17.25it/s]
+ 66%|######5   | 131/200 [00:07<00:03, 17.56it/s]
+ 66%|######6   | 133/200 [00:07<00:03, 17.89it/s]
+ 68%|######7   | 135/200 [00:07<00:03, 18.22it/s]
+ 68%|######8   | 137/200 [00:07<00:03, 18.46it/s]
+ 70%|######9   | 139/200 [00:07<00:03, 18.63it/s]
+ 70%|#######   | 141/200 [00:07<00:03, 18.81it/s]
+ 72%|#######1  | 143/200 [00:07<00:03, 18.99it/s]
+ 72%|#######2  | 145/200 [00:07<00:02, 19.11it/s]
+ 74%|#######3  | 147/200 [00:08<00:02, 19.26it/s]
+ 74%|#######4  | 149/200 [00:08<00:02, 19.36it/s]
+ 76%|#######5  | 151/200 [00:08<00:02, 19.32it/s]
+ 76%|#######6  | 153/200 [00:08<00:02, 19.41it/s]
+ 78%|#######7  | 155/200 [00:08<00:02, 19.47it/s]
+ 78%|#######8  | 157/200 [00:08<00:02, 19.51it/s]
+ 80%|#######9  | 159/200 [00:08<00:02, 19.54it/s]
+ 80%|########  | 161/200 [00:08<00:01, 19.56it/s]
+ 82%|########1 | 163/200 [00:08<00:01, 19.63it/s]
+ 82%|########2 | 165/200 [00:08<00:01, 19.62it/s]
+ 84%|########3 | 167/200 [00:09<00:01, 19.62it/s]
+ 84%|########4 | 169/200 [00:09<00:01, 19.50it/s]
+ 86%|########5 | 171/200 [00:09<00:01, 19.42it/s]
+ 86%|########6 | 173/200 [00:09<00:01, 19.36it/s]
+ 88%|########7 | 175/200 [00:09<00:01, 19.27it/s]
+ 88%|########8 | 177/200 [00:09<00:01, 19.26it/s]
+ 90%|########9 | 179/200 [00:09<00:01, 19.25it/s]
+ 90%|######### | 181/200 [00:09<00:00, 19.08it/s]
+ 92%|#########1| 183/200 [00:09<00:00, 18.85it/s]
+ 92%|#########2| 185/200 [00:10<00:00, 18.80it/s]
+ 94%|#########3| 187/200 [00:10<00:00, 18.77it/s]
+ 94%|#########4| 189/200 [00:10<00:00, 18.69it/s]
+ 96%|#########5| 191/200 [00:10<00:00, 18.69it/s]
+ 96%|#########6| 193/200 [00:10<00:00, 18.75it/s]
+ 98%|#########7| 195/200 [00:10<00:00, 18.89it/s]
+ 98%|#########8| 197/200 [00:10<00:00, 19.10it/s]
+100%|#########9| 199/200 [00:10<00:00, 19.25it/s]
+100%|##########| 200/200 [00:10<00:00, 18.47it/s]
+Prediction done
+sending off prediction to background worker for resampling and export
+done with nlm_volume__2__198__376_
+
+Predicting nlm_volume__2__280__458_:
+perform_everything_on_device: False
+Input shape: torch.Size([1, 178, 650, 650])
+step_size: 0.5
+mirror_axes: None
+n_steps 200, image size is torch.Size([178, 650, 650]), tile_size [128, 128, 128], tile_step_size 0.5
+steps:
+[[0, 50], [0, 58, 116, 174, 232, 290, 348, 406, 464, 522], [0, 58, 116, 174, 232, 290, 348, 406, 464, 522]]
+move image to device cpu
+preallocating results arrays on device cpu
+
+  0%|          | 0/200 [00:00<?, ?it/s]
+  1%|1         | 2/200 [00:00<00:12, 15.87it/s]
+  2%|2         | 4/200 [00:00<00:10, 17.88it/s]
+  3%|3         | 6/200 [00:00<00:10, 18.71it/s]
+  4%|4         | 8/200 [00:00<00:10, 19.05it/s]
+  5%|5         | 10/200 [00:00<00:09, 19.32it/s]
+  6%|6         | 12/200 [00:00<00:09, 19.35it/s]
+  7%|7         | 14/200 [00:00<00:09, 19.37it/s]
+  8%|8         | 16/200 [00:00<00:09, 19.51it/s]
+  9%|9         | 18/200 [00:00<00:09, 19.54it/s]
+ 10%|#         | 20/200 [00:01<00:09, 19.50it/s]
+ 11%|#1        | 22/200 [00:01<00:09, 19.53it/s]
+ 12%|#2        | 24/200 [00:01<00:08, 19.56it/s]
+ 13%|#3        | 26/200 [00:01<00:08, 19.51it/s]
+ 14%|#4        | 28/200 [00:01<00:08, 19.37it/s]
+ 15%|#5        | 30/200 [00:01<00:08, 19.11it/s]
+ 16%|#6        | 32/200 [00:01<00:08, 19.03it/s]
+ 17%|#7        | 34/200 [00:01<00:08, 19.15it/s]
+ 18%|#8        | 36/200 [00:01<00:08, 19.23it/s]
+ 19%|#9        | 38/200 [00:01<00:08, 19.23it/s]
+ 20%|##        | 40/200 [00:02<00:08, 19.17it/s]
+ 21%|##1       | 42/200 [00:02<00:08, 19.03it/s]
+ 22%|##2       | 44/200 [00:02<00:08, 18.82it/s]
+ 23%|##3       | 46/200 [00:02<00:08, 18.67it/s]
+ 24%|##4       | 48/200 [00:02<00:08, 18.63it/s]
+ 25%|##5       | 50/200 [00:02<00:08, 18.59it/s]
+ 26%|##6       | 52/200 [00:02<00:07, 18.57it/s]
+ 27%|##7       | 54/200 [00:02<00:07, 18.71it/s]
+ 28%|##8       | 56/200 [00:02<00:07, 18.92it/s]
+ 29%|##9       | 58/200 [00:03<00:07, 18.96it/s]
+ 30%|###       | 60/200 [00:03<00:07, 19.15it/s]
+ 31%|###1      | 62/200 [00:03<00:07, 19.28it/s]
+ 32%|###2      | 64/200 [00:03<00:07, 19.32it/s]
+ 33%|###3      | 66/200 [00:03<00:06, 19.35it/s]
+ 34%|###4      | 69/200 [00:03<00:06, 19.40it/s]
+ 36%|###5      | 71/200 [00:03<00:06, 19.15it/s]
+ 36%|###6      | 73/200 [00:03<00:06, 19.18it/s]
+ 38%|###7      | 75/200 [00:03<00:06, 18.93it/s]
+ 38%|###8      | 77/200 [00:04<00:06, 18.86it/s]
+ 40%|###9      | 79/200 [00:04<00:06, 18.61it/s]
+ 40%|####      | 81/200 [00:04<00:06, 18.53it/s]
+ 42%|####1     | 83/200 [00:04<00:06, 18.63it/s]
+ 42%|####2     | 85/200 [00:04<00:06, 18.65it/s]
+ 44%|####3     | 87/200 [00:04<00:06, 18.66it/s]
+ 44%|####4     | 89/200 [00:04<00:05, 18.77it/s]
+ 46%|####6     | 92/200 [00:04<00:05, 19.23it/s]
+ 47%|####6     | 94/200 [00:04<00:05, 19.28it/s]
+ 48%|####8     | 96/200 [00:05<00:05, 19.27it/s]
+ 49%|####9     | 98/200 [00:05<00:05, 19.36it/s]
+ 50%|#####     | 100/200 [00:05<00:05, 19.43it/s]
+ 51%|#####1    | 102/200 [00:05<00:05, 19.48it/s]
+ 52%|#####2    | 104/200 [00:05<00:04, 19.58it/s]
+ 53%|#####3    | 106/200 [00:05<00:04, 19.64it/s]
+ 54%|#####4    | 108/200 [00:05<00:04, 19.41it/s]
+ 55%|#####5    | 110/200 [00:05<00:04, 19.52it/s]
+ 56%|#####6    | 112/200 [00:05<00:04, 19.21it/s]
+ 57%|#####6    | 114/200 [00:05<00:04, 19.22it/s]
+ 58%|#####8    | 116/200 [00:06<00:04, 19.22it/s]
+ 59%|#####8    | 118/200 [00:06<00:04, 19.17it/s]
+ 60%|######    | 120/200 [00:06<00:04, 19.08it/s]
+ 61%|######1   | 122/200 [00:06<00:04, 19.07it/s]
+ 62%|######2   | 124/200 [00:06<00:03, 19.06it/s]
+ 63%|######3   | 126/200 [00:06<00:03, 18.95it/s]
+ 64%|######4   | 128/200 [00:06<00:03, 18.98it/s]
+ 65%|######5   | 130/200 [00:06<00:03, 18.89it/s]
+ 66%|######6   | 132/200 [00:06<00:03, 18.83it/s]
+ 67%|######7   | 134/200 [00:07<00:03, 18.74it/s]
+ 68%|######8   | 136/200 [00:07<00:03, 18.67it/s]
+ 69%|######9   | 138/200 [00:07<00:03, 18.78it/s]
+ 70%|#######   | 140/200 [00:07<00:03, 18.91it/s]
+ 71%|#######1  | 142/200 [00:07<00:03, 18.85it/s]
+ 72%|#######2  | 144/200 [00:07<00:02, 18.91it/s]
+ 73%|#######3  | 146/200 [00:07<00:02, 19.00it/s]
+ 74%|#######4  | 148/200 [00:07<00:02, 19.13it/s]
+ 75%|#######5  | 150/200 [00:07<00:02, 19.27it/s]
+ 76%|#######6  | 152/200 [00:07<00:02, 19.31it/s]
+ 77%|#######7  | 154/200 [00:08<00:02, 19.34it/s]
+ 78%|#######8  | 156/200 [00:08<00:02, 19.25it/s]
+ 79%|#######9  | 158/200 [00:08<00:02, 19.19it/s]
+ 80%|########  | 160/200 [00:08<00:02, 18.98it/s]
+ 81%|########1 | 162/200 [00:08<00:02, 18.90it/s]
+ 82%|########2 | 164/200 [00:08<00:01, 18.89it/s]
+ 83%|########2 | 166/200 [00:08<00:01, 18.88it/s]
+ 84%|########4 | 168/200 [00:08<00:01, 18.82it/s]
+ 85%|########5 | 170/200 [00:08<00:01, 18.84it/s]
+ 86%|########6 | 172/200 [00:09<00:01, 18.90it/s]
+ 87%|########7 | 174/200 [00:09<00:01, 19.05it/s]
+ 88%|########8 | 176/200 [00:09<00:01, 19.11it/s]
+ 89%|########9 | 178/200 [00:09<00:01, 19.09it/s]
+ 90%|######### | 180/200 [00:09<00:01, 19.08it/s]
+ 91%|#########1| 182/200 [00:09<00:00, 19.07it/s]
+ 92%|#########2| 184/200 [00:09<00:00, 19.01it/s]
+ 93%|#########3| 186/200 [00:09<00:00, 19.02it/s]
+ 94%|#########3| 188/200 [00:09<00:00, 19.08it/s]
+ 95%|#########5| 190/200 [00:09<00:00, 19.02it/s]
+ 96%|#########6| 192/200 [00:10<00:00, 18.97it/s]
+ 97%|#########7| 194/200 [00:10<00:00, 18.94it/s]
+ 98%|#########8| 196/200 [00:10<00:00, 18.87it/s]
+ 99%|#########9| 198/200 [00:10<00:00, 18.60it/s]
+100%|##########| 200/200 [00:10<00:00, 18.32it/s]
+100%|##########| 200/200 [00:10<00:00, 19.03it/s]
+Prediction done
+sending off prediction to background worker for resampling and export
+done with nlm_volume__2__280__458_
+
+Predicting nlm_volume__2__34__212_:
+perform_everything_on_device: False
+Input shape: torch.Size([1, 178, 650, 650])
+step_size: 0.5
+mirror_axes: None
+n_steps 200, image size is torch.Size([178, 650, 650]), tile_size [128, 128, 128], tile_step_size 0.5
+steps:
+[[0, 50], [0, 58, 116, 174, 232, 290, 348, 406, 464, 522], [0, 58, 116, 174, 232, 290, 348, 406, 464, 522]]
+move image to device cpu
+preallocating results arrays on device cpu
+
+  0%|          | 0/200 [00:00<?, ?it/s]
+  1%|1         | 2/200 [00:00<00:12, 15.87it/s]
+  2%|2         | 4/200 [00:00<00:11, 17.51it/s]
+  3%|3         | 6/200 [00:00<00:10, 18.18it/s]
+  4%|4         | 8/200 [00:00<00:10, 18.65it/s]
+  5%|5         | 10/200 [00:00<00:10, 18.73it/s]
+  6%|6         | 12/200 [00:00<00:10, 18.77it/s]
+  7%|7         | 14/200 [00:00<00:09, 18.86it/s]
+  8%|8         | 16/200 [00:00<00:09, 18.86it/s]
+  9%|9         | 18/200 [00:00<00:09, 18.92it/s]
+ 10%|#         | 20/200 [00:01<00:09, 18.96it/s]
+ 11%|#1        | 22/200 [00:01<00:09, 18.93it/s]
+ 12%|#2        | 24/200 [00:01<00:09, 19.02it/s]
+ 13%|#3        | 26/200 [00:01<00:09, 19.14it/s]
+ 14%|#4        | 28/200 [00:01<00:08, 19.11it/s]
+ 15%|#5        | 30/200 [00:01<00:08, 18.93it/s]
+ 16%|#6        | 32/200 [00:01<00:08, 19.18it/s]
+ 17%|#7        | 34/200 [00:01<00:08, 18.98it/s]
+ 18%|#8        | 36/200 [00:01<00:08, 18.78it/s]
+ 19%|#9        | 38/200 [00:02<00:08, 18.81it/s]
+ 20%|##        | 40/200 [00:02<00:08, 18.77it/s]
+ 21%|##1       | 42/200 [00:02<00:08, 18.80it/s]
+ 22%|##2       | 44/200 [00:02<00:08, 18.82it/s]
+ 23%|##3       | 46/200 [00:02<00:08, 18.94it/s]
+ 24%|##4       | 48/200 [00:02<00:07, 19.03it/s]
+ 25%|##5       | 50/200 [00:02<00:07, 18.98it/s]
+ 26%|##6       | 52/200 [00:02<00:07, 18.89it/s]
+ 27%|##7       | 54/200 [00:02<00:07, 18.78it/s]
+ 28%|##8       | 56/200 [00:02<00:07, 18.65it/s]
+ 29%|##9       | 58/200 [00:03<00:07, 18.61it/s]
+ 30%|###       | 60/200 [00:03<00:07, 18.69it/s]
+ 31%|###1      | 62/200 [00:03<00:07, 18.74it/s]
+ 32%|###2      | 64/200 [00:03<00:07, 18.73it/s]
+ 33%|###3      | 66/200 [00:03<00:07, 18.72it/s]
+ 34%|###4      | 68/200 [00:03<00:07, 18.81it/s]
+ 35%|###5      | 70/200 [00:03<00:06, 18.88it/s]
+ 36%|###6      | 72/200 [00:03<00:06, 18.99it/s]
+ 37%|###7      | 74/200 [00:03<00:06, 18.95it/s]
+ 38%|###8      | 76/200 [00:04<00:06, 18.93it/s]
+ 39%|###9      | 78/200 [00:04<00:08, 14.86it/s]
+ 40%|####      | 80/200 [00:04<00:07, 15.33it/s]
+ 41%|####1     | 82/200 [00:04<00:07, 16.08it/s]
+ 42%|####2     | 84/200 [00:04<00:06, 16.70it/s]
+ 43%|####3     | 86/200 [00:04<00:06, 17.30it/s]
+ 44%|####4     | 88/200 [00:04<00:06, 17.79it/s]
+ 45%|####5     | 90/200 [00:04<00:06, 17.90it/s]
+ 46%|####6     | 92/200 [00:05<00:05, 18.04it/s]
+ 47%|####6     | 94/200 [00:05<00:05, 18.38it/s]
+ 48%|####8     | 96/200 [00:05<00:05, 18.37it/s]
+ 49%|####9     | 98/200 [00:05<00:05, 18.46it/s]
+ 50%|#####     | 100/200 [00:05<00:05, 18.48it/s]
+ 51%|#####1    | 102/200 [00:05<00:05, 18.39it/s]
+ 52%|#####2    | 104/200 [00:05<00:05, 18.28it/s]
+ 53%|#####3    | 106/200 [00:05<00:05, 18.60it/s]
+ 54%|#####4    | 108/200 [00:05<00:04, 18.68it/s]
+ 55%|#####5    | 110/200 [00:05<00:04, 18.63it/s]
+ 56%|#####6    | 112/200 [00:06<00:04, 18.65it/s]
+ 57%|#####6    | 114/200 [00:06<00:04, 18.82it/s]
+ 58%|#####8    | 116/200 [00:06<00:04, 18.78it/s]
+ 59%|#####8    | 118/200 [00:06<00:04, 18.75it/s]
+ 60%|######    | 120/200 [00:06<00:04, 18.68it/s]
+ 61%|######1   | 122/200 [00:06<00:04, 18.74it/s]
+ 62%|######2   | 124/200 [00:06<00:04, 18.67it/s]
+ 63%|######3   | 126/200 [00:06<00:03, 18.63it/s]
+ 64%|######4   | 128/200 [00:06<00:03, 18.70it/s]
+ 65%|######5   | 130/200 [00:07<00:03, 18.75it/s]
+ 66%|######6   | 132/200 [00:07<00:03, 18.89it/s]
+ 67%|######7   | 134/200 [00:07<00:03, 19.10it/s]
+ 68%|######8   | 136/200 [00:07<00:03, 19.08it/s]
+ 69%|######9   | 138/200 [00:07<00:03, 19.07it/s]
+ 70%|#######   | 140/200 [00:07<00:03, 19.07it/s]
+ 71%|#######1  | 142/200 [00:07<00:03, 19.06it/s]
+ 72%|#######2  | 144/200 [00:07<00:02, 19.06it/s]
+ 73%|#######3  | 146/200 [00:07<00:02, 18.89it/s]
+ 74%|#######4  | 148/200 [00:07<00:02, 18.78it/s]
+ 75%|#######5  | 150/200 [00:08<00:02, 18.60it/s]
+ 76%|#######6  | 152/200 [00:08<00:02, 18.37it/s]
+ 77%|#######7  | 154/200 [00:08<00:02, 18.41it/s]
+ 78%|#######8  | 156/200 [00:08<00:02, 18.04it/s]
+ 79%|#######9  | 158/200 [00:08<00:02, 18.33it/s]
+ 80%|########  | 160/200 [00:08<00:02, 18.49it/s]
+ 81%|########1 | 162/200 [00:08<00:02, 18.50it/s]
+ 82%|########2 | 164/200 [00:08<00:01, 18.45it/s]
+ 83%|########2 | 166/200 [00:08<00:01, 18.47it/s]
+ 84%|########4 | 168/200 [00:09<00:01, 18.33it/s]
+ 85%|########5 | 170/200 [00:09<00:01, 18.39it/s]
+ 86%|########6 | 172/200 [00:09<00:01, 18.53it/s]
+ 87%|########7 | 174/200 [00:09<00:01, 18.48it/s]
+ 88%|########8 | 176/200 [00:09<00:01, 18.54it/s]
+ 89%|########9 | 178/200 [00:09<00:01, 18.74it/s]
+ 90%|######### | 180/200 [00:09<00:01, 18.73it/s]
+ 91%|#########1| 182/200 [00:09<00:00, 18.46it/s]
+ 92%|#########2| 184/200 [00:09<00:00, 18.48it/s]
+ 93%|#########3| 186/200 [00:10<00:00, 18.44it/s]
+ 94%|#########3| 188/200 [00:10<00:00, 18.41it/s]
+ 95%|#########5| 190/200 [00:10<00:00, 18.49it/s]
+ 96%|#########6| 192/200 [00:10<00:00, 18.66it/s]
+ 97%|#########7| 194/200 [00:10<00:00, 18.88it/s]
+ 98%|#########8| 196/200 [00:10<00:00, 18.93it/s]
+ 99%|#########9| 198/200 [00:10<00:00, 18.96it/s]
+100%|##########| 200/200 [00:10<00:00, 18.94it/s]
+100%|##########| 200/200 [00:10<00:00, 18.53it/s]
+Prediction done
+sending off prediction to background worker for resampling and export
+done with nlm_volume__2__34__212_
+
+Predicting nlm_volume__2__362__540_:
+perform_everything_on_device: False
+Input shape: torch.Size([1, 178, 650, 650])
+step_size: 0.5
+mirror_axes: None
+n_steps 200, image size is torch.Size([178, 650, 650]), tile_size [128, 128, 128], tile_step_size 0.5
+steps:
+[[0, 50], [0, 58, 116, 174, 232, 290, 348, 406, 464, 522], [0, 58, 116, 174, 232, 290, 348, 406, 464, 522]]
+move image to device cpu
+preallocating results arrays on device cpu
+
+  0%|          | 0/200 [00:00<?, ?it/s]
+  0%|          | 1/200 [00:00<01:25,  2.33it/s]
+  2%|1         | 3/200 [00:00<00:31,  6.34it/s]
+  2%|2         | 5/200 [00:00<00:25,  7.72it/s]
+  4%|3         | 7/200 [00:00<00:18, 10.29it/s]
+  4%|4         | 9/200 [00:00<00:15, 12.42it/s]
+  6%|5         | 11/200 [00:01<00:13, 14.14it/s]
+  6%|6         | 13/200 [00:01<00:12, 15.39it/s]
+  8%|7         | 15/200 [00:01<00:12, 14.39it/s]
+  8%|8         | 17/200 [00:01<00:12, 15.14it/s]
+ 10%|9         | 19/200 [00:01<00:11, 16.01it/s]
+ 10%|#         | 21/200 [00:01<00:10, 16.79it/s]
+ 12%|#1        | 23/200 [00:01<00:10, 17.24it/s]
+ 12%|#2        | 25/200 [00:01<00:11, 14.73it/s]
+ 14%|#3        | 27/200 [00:02<00:11, 15.13it/s]
+ 14%|#4        | 29/200 [00:02<00:12, 14.14it/s]
+ 16%|#5        | 31/200 [00:02<00:11, 14.24it/s]
+ 16%|#6        | 33/200 [00:02<00:11, 15.13it/s]
+ 18%|#7        | 35/200 [00:02<00:10, 16.05it/s]
+ 18%|#8        | 37/200 [00:02<00:09, 16.76it/s]
+ 20%|#9        | 39/200 [00:02<00:09, 17.39it/s]
+ 20%|##        | 41/200 [00:02<00:09, 17.48it/s]
+ 22%|##1       | 43/200 [00:03<00:09, 16.42it/s]
+ 22%|##2       | 45/200 [00:03<00:09, 16.37it/s]
+ 24%|##3       | 47/200 [00:03<00:09, 16.42it/s]
+ 24%|##4       | 49/200 [00:03<00:10, 14.91it/s]
+ 26%|##5       | 51/200 [00:03<00:14, 10.33it/s]
+ 26%|##6       | 53/200 [00:03<00:12, 11.56it/s]
+ 28%|##7       | 55/200 [00:04<00:13, 10.49it/s]
+ 28%|##8       | 57/200 [00:04<00:13, 10.88it/s]
+ 30%|##9       | 59/200 [00:04<00:11, 12.41it/s]
+ 30%|###       | 61/200 [00:04<00:10, 13.47it/s]
+ 32%|###1      | 63/200 [00:04<00:09, 14.05it/s]
+ 32%|###2      | 65/200 [00:05<00:13, 10.37it/s]
+ 34%|###3      | 67/200 [00:05<00:12, 10.89it/s]
+ 34%|###4      | 69/200 [00:05<00:12, 10.41it/s]
+ 36%|###5      | 71/200 [00:05<00:15,  8.30it/s]
+ 36%|###6      | 72/200 [00:06<00:22,  5.72it/s]
+ 36%|###6      | 73/200 [00:06<00:22,  5.69it/s]
+ 37%|###7      | 74/200 [00:06<00:20,  6.04it/s]
+ 38%|###8      | 76/200 [00:06<00:15,  7.93it/s]
+ 39%|###9      | 78/200 [00:06<00:12,  9.99it/s]
+ 40%|####      | 80/200 [00:06<00:10, 11.69it/s]
+ 41%|####1     | 82/200 [00:06<00:10, 11.52it/s]
+ 42%|####2     | 84/200 [00:07<00:08, 12.90it/s]
+ 43%|####3     | 86/200 [00:07<00:07, 14.31it/s]
+ 44%|####4     | 88/200 [00:07<00:07, 15.25it/s]
+ 45%|####5     | 90/200 [00:07<00:06, 16.00it/s]
+ 46%|####6     | 92/200 [00:07<00:07, 13.73it/s]
+ 47%|####6     | 94/200 [00:07<00:09, 11.06it/s]
+ 48%|####8     | 96/200 [00:08<00:08, 12.08it/s]
+ 49%|####9     | 98/200 [00:08<00:07, 13.25it/s]
+ 50%|#####     | 100/200 [00:08<00:07, 12.87it/s]
+ 51%|#####1    | 102/200 [00:08<00:07, 12.42it/s]
+ 52%|#####2    | 104/200 [00:08<00:07, 12.17it/s]
+ 53%|#####3    | 106/200 [00:08<00:07, 12.11it/s]
+ 54%|#####4    | 108/200 [00:09<00:08, 10.89it/s]
+ 55%|#####5    | 110/200 [00:09<00:08, 10.06it/s]
+ 56%|#####6    | 112/200 [00:09<00:10,  8.56it/s]
+ 57%|#####6    | 114/200 [00:09<00:08, 10.17it/s]
+ 58%|#####8    | 116/200 [00:09<00:07, 11.74it/s]
+ 59%|#####8    | 118/200 [00:09<00:06, 12.81it/s]
+ 60%|######    | 120/200 [00:10<00:05, 13.88it/s]
+ 61%|######1   | 122/200 [00:10<00:07, 11.11it/s]
+ 62%|######2   | 124/200 [00:10<00:06, 12.62it/s]
+ 63%|######3   | 126/200 [00:10<00:05, 13.81it/s]
+ 64%|######4   | 128/200 [00:10<00:04, 14.99it/s]
+ 65%|######5   | 130/200 [00:10<00:06, 11.01it/s]
+ 66%|######6   | 132/200 [00:11<00:06, 10.06it/s]
+ 67%|######7   | 134/200 [00:11<00:06, 10.89it/s]
+ 68%|######8   | 136/200 [00:11<00:06, 10.54it/s]
+ 69%|######9   | 138/200 [00:11<00:05, 10.39it/s]
+ 70%|#######   | 140/200 [00:11<00:05, 10.56it/s]
+ 71%|#######1  | 142/200 [00:12<00:05, 10.21it/s]
+ 72%|#######2  | 144/200 [00:12<00:05, 10.86it/s]
+ 73%|#######3  | 146/200 [00:12<00:04, 12.13it/s]
+ 74%|#######4  | 148/200 [00:12<00:04, 11.62it/s]
+ 75%|#######5  | 150/200 [00:12<00:03, 12.54it/s]
+ 76%|#######6  | 152/200 [00:13<00:04, 10.02it/s]
+ 77%|#######7  | 154/200 [00:13<00:05,  9.17it/s]
+ 78%|#######8  | 156/200 [00:13<00:05,  7.84it/s]
+ 78%|#######8  | 157/200 [00:13<00:05,  8.07it/s]
+ 80%|#######9  | 159/200 [00:13<00:04,  9.98it/s]
+ 80%|########  | 161/200 [00:14<00:04,  9.44it/s]
+ 82%|########1 | 163/200 [00:14<00:03, 10.52it/s]
+ 82%|########2 | 165/200 [00:14<00:03, 10.72it/s]
+ 84%|########3 | 167/200 [00:14<00:02, 12.13it/s]
+ 84%|########4 | 169/200 [00:14<00:02, 13.61it/s]
+ 86%|########5 | 171/200 [00:14<00:02, 12.02it/s]
+ 86%|########6 | 173/200 [00:14<00:02, 12.07it/s]
+ 88%|########7 | 175/200 [00:15<00:01, 13.44it/s]
+ 88%|########8 | 177/200 [00:15<00:02, 11.23it/s]
+ 90%|########9 | 179/200 [00:15<00:01, 10.79it/s]
+ 90%|######### | 181/200 [00:15<00:01, 12.32it/s]
+ 92%|#########1| 183/200 [00:15<00:01, 13.64it/s]
+ 92%|#########2| 185/200 [00:16<00:01, 11.26it/s]
+ 94%|#########3| 187/200 [00:16<00:01, 12.40it/s]
+ 94%|#########4| 189/200 [00:16<00:00, 11.45it/s]
+ 96%|#########5| 191/200 [00:16<00:00, 12.88it/s]
+ 96%|#########6| 193/200 [00:16<00:00, 12.38it/s]
+ 98%|#########7| 195/200 [00:16<00:00, 13.05it/s]
+ 98%|#########8| 197/200 [00:16<00:00, 13.81it/s]
+100%|#########9| 199/200 [00:17<00:00, 13.08it/s]
+100%|##########| 200/200 [00:17<00:00, 11.61it/s]
+Prediction done
+sending off prediction to background worker for resampling and export
+done with nlm_volume__2__362__540_
+
+Predicting nlm_volume__2__444__622_:
+perform_everything_on_device: False
+Input shape: torch.Size([1, 178, 650, 650])
+step_size: 0.5
+mirror_axes: None
+n_steps 200, image size is torch.Size([178, 650, 650]), tile_size [128, 128, 128], tile_step_size 0.5
+steps:
+[[0, 50], [0, 58, 116, 174, 232, 290, 348, 406, 464, 522], [0, 58, 116, 174, 232, 290, 348, 406, 464, 522]]
+move image to device cpu
+preallocating results arrays on device cpu
+
+  0%|          | 0/200 [00:00<?, ?it/s]
+  0%|          | 1/200 [00:00<01:04,  3.10it/s]
+  2%|1         | 3/200 [00:00<00:24,  8.01it/s]
+  2%|2         | 5/200 [00:00<00:17, 11.31it/s]
+  4%|3         | 7/200 [00:00<00:14, 13.50it/s]
+  4%|4         | 9/200 [00:00<00:12, 15.21it/s]
+  6%|5         | 11/200 [00:00<00:11, 16.32it/s]
+  6%|6         | 13/200 [00:00<00:11, 16.94it/s]
+  8%|7         | 15/200 [00:01<00:10, 17.23it/s]
+  8%|8         | 17/200 [00:01<00:10, 17.61it/s]
+ 10%|9         | 19/200 [00:01<00:09, 18.14it/s]
+ 10%|#         | 21/200 [00:01<00:09, 18.46it/s]
+ 12%|#1        | 23/200 [00:01<00:09, 18.64it/s]
+ 12%|#2        | 25/200 [00:01<00:09, 18.87it/s]
+ 14%|#3        | 27/200 [00:01<00:09, 18.98it/s]
+ 14%|#4        | 29/200 [00:01<00:09, 18.84it/s]
+ 16%|#5        | 31/200 [00:01<00:08, 19.01it/s]
+ 16%|#6        | 33/200 [00:02<00:08, 18.91it/s]
+ 18%|#7        | 35/200 [00:02<00:08, 18.84it/s]
+ 18%|#8        | 37/200 [00:02<00:08, 18.85it/s]
+ 20%|#9        | 39/200 [00:02<00:08, 18.70it/s]
+ 20%|##        | 41/200 [00:02<00:08, 18.80it/s]
+ 22%|##1       | 43/200 [00:02<00:08, 18.82it/s]
+ 22%|##2       | 45/200 [00:02<00:08, 18.78it/s]
+ 24%|##3       | 47/200 [00:02<00:08, 18.81it/s]
+ 24%|##4       | 49/200 [00:02<00:07, 18.88it/s]
+ 26%|##5       | 51/200 [00:02<00:07, 18.93it/s]
+ 26%|##6       | 53/200 [00:03<00:07, 19.02it/s]
+ 28%|##7       | 55/200 [00:03<00:07, 19.03it/s]
+ 28%|##8       | 57/200 [00:03<00:07, 18.93it/s]
+ 30%|##9       | 59/200 [00:03<00:07, 18.91it/s]
+ 30%|###       | 61/200 [00:03<00:07, 18.90it/s]
+ 32%|###1      | 63/200 [00:03<00:07, 18.94it/s]
+ 32%|###2      | 65/200 [00:03<00:07, 18.97it/s]
+ 34%|###3      | 67/200 [00:03<00:07, 19.00it/s]
+ 34%|###4      | 69/200 [00:03<00:06, 18.96it/s]
+ 36%|###5      | 71/200 [00:04<00:06, 19.04it/s]
+ 36%|###6      | 73/200 [00:04<00:06, 18.99it/s]
+ 38%|###7      | 75/200 [00:04<00:06, 19.00it/s]
+ 38%|###8      | 77/200 [00:04<00:06, 19.02it/s]
+ 40%|###9      | 79/200 [00:04<00:06, 18.87it/s]
+ 40%|####      | 81/200 [00:04<00:06, 18.97it/s]
+ 42%|####1     | 83/200 [00:04<00:06, 19.16it/s]
+ 42%|####2     | 85/200 [00:04<00:05, 19.18it/s]
+ 44%|####3     | 87/200 [00:04<00:05, 19.14it/s]
+ 44%|####4     | 89/200 [00:04<00:05, 19.17it/s]
+ 46%|####5     | 91/200 [00:05<00:05, 19.13it/s]
+ 46%|####6     | 93/200 [00:05<00:05, 19.16it/s]
+ 48%|####7     | 95/200 [00:05<00:05, 19.13it/s]
+ 48%|####8     | 97/200 [00:05<00:05, 19.16it/s]
+ 50%|####9     | 99/200 [00:05<00:05, 19.12it/s]
+ 50%|#####     | 101/200 [00:05<00:05, 18.94it/s]
+ 52%|#####1    | 103/200 [00:05<00:05, 18.86it/s]
+ 52%|#####2    | 105/200 [00:05<00:05, 18.76it/s]
+ 54%|#####3    | 107/200 [00:05<00:04, 18.74it/s]
+ 55%|#####4    | 109/200 [00:06<00:04, 18.83it/s]
+ 56%|#####5    | 111/200 [00:06<00:04, 18.74it/s]
+ 56%|#####6    | 113/200 [00:06<00:04, 18.78it/s]
+ 57%|#####7    | 115/200 [00:06<00:04, 18.75it/s]
+ 58%|#####8    | 117/200 [00:06<00:04, 18.73it/s]
+ 60%|#####9    | 119/200 [00:06<00:04, 18.93it/s]
+ 60%|######    | 121/200 [00:06<00:04, 19.13it/s]
+ 62%|######1   | 123/200 [00:06<00:04, 19.16it/s]
+ 62%|######2   | 125/200 [00:06<00:03, 18.96it/s]
+ 64%|######3   | 127/200 [00:06<00:03, 18.62it/s]
+ 64%|######4   | 129/200 [00:07<00:03, 18.43it/s]
+ 66%|######5   | 131/200 [00:07<00:03, 18.26it/s]
+ 66%|######6   | 133/200 [00:07<00:03, 18.44it/s]
+ 68%|######7   | 135/200 [00:07<00:03, 18.41it/s]
+ 68%|######8   | 137/200 [00:07<00:03, 18.39it/s]
+ 70%|######9   | 139/200 [00:07<00:03, 18.23it/s]
+ 70%|#######   | 141/200 [00:07<00:03, 18.26it/s]
+ 72%|#######1  | 143/200 [00:07<00:03, 18.24it/s]
+ 72%|#######2  | 145/200 [00:07<00:02, 18.47it/s]
+ 74%|#######3  | 147/200 [00:08<00:02, 18.49it/s]
+ 74%|#######4  | 149/200 [00:08<00:02, 18.45it/s]
+ 76%|#######5  | 151/200 [00:08<00:02, 18.27it/s]
+ 76%|#######6  | 153/200 [00:08<00:02, 18.39it/s]
+ 78%|#######7  | 155/200 [00:08<00:02, 18.43it/s]
+ 78%|#######8  | 157/200 [00:08<00:02, 18.30it/s]
+ 80%|#######9  | 159/200 [00:08<00:02, 18.32it/s]
+ 80%|########  | 161/200 [00:08<00:02, 18.28it/s]
+ 82%|########1 | 163/200 [00:08<00:02, 18.45it/s]
+ 82%|########2 | 165/200 [00:09<00:01, 18.47it/s]
+ 84%|########3 | 167/200 [00:09<00:01, 18.28it/s]
+ 84%|########4 | 169/200 [00:09<00:01, 18.30it/s]
+ 86%|########5 | 171/200 [00:09<00:01, 18.42it/s]
+ 86%|########6 | 173/200 [00:09<00:01, 18.25it/s]
+ 88%|########7 | 175/200 [00:09<00:01, 18.28it/s]
+ 88%|########8 | 177/200 [00:09<00:01, 18.20it/s]
+ 90%|########9 | 179/200 [00:09<00:01, 18.29it/s]
+ 90%|######### | 181/200 [00:09<00:01, 18.26it/s]
+ 92%|#########1| 183/200 [00:10<00:00, 18.34it/s]
+ 92%|#########2| 185/200 [00:10<00:00, 18.44it/s]
+ 94%|#########3| 187/200 [00:10<00:00, 18.26it/s]
+ 94%|#########4| 189/200 [00:10<00:00, 17.34it/s]
+ 96%|#########5| 191/200 [00:10<00:00, 16.87it/s]
+ 96%|#########6| 193/200 [00:10<00:00, 17.11it/s]
+ 98%|#########7| 195/200 [00:10<00:00, 16.68it/s]
+ 98%|#########8| 197/200 [00:10<00:00, 16.67it/s]
+100%|#########9| 199/200 [00:10<00:00, 16.97it/s]
+100%|##########| 200/200 [00:11<00:00, 18.10it/s]
+Prediction done
+sending off prediction to background worker for resampling and export
+done with nlm_volume__2__444__622_
+
+Predicting nlm_volume__2__526__652_:
+perform_everything_on_device: False
+Input shape: torch.Size([1, 126, 650, 650])
+step_size: 0.5
+mirror_axes: None
+n_steps 100, image size is torch.Size([128, 650, 650]), tile_size [128, 128, 128], tile_step_size 0.5
+steps:
+[[0], [0, 58, 116, 174, 232, 290, 348, 406, 464, 522], [0, 58, 116, 174, 232, 290, 348, 406, 464, 522]]
+move image to device cpu
+preallocating results arrays on device cpu
+
+  0%|          | 0/100 [00:00<?, ?it/s]
+  1%|1         | 1/100 [00:00<00:27,  3.65it/s]
+  3%|3         | 3/100 [00:00<00:10,  9.10it/s]
+  5%|5         | 5/100 [00:00<00:07, 12.44it/s]
+  7%|7         | 7/100 [00:00<00:06, 14.63it/s]
+  9%|9         | 9/100 [00:00<00:05, 16.03it/s]
+ 11%|#1        | 11/100 [00:00<00:05, 17.07it/s]
+ 13%|#3        | 13/100 [00:00<00:04, 17.73it/s]
+ 15%|#5        | 15/100 [00:01<00:04, 18.35it/s]
+ 18%|#8        | 18/100 [00:01<00:04, 18.99it/s]
+ 20%|##        | 20/100 [00:01<00:04, 19.21it/s]
+ 22%|##2       | 22/100 [00:01<00:04, 19.32it/s]
+ 25%|##5       | 25/100 [00:01<00:03, 19.62it/s]
+ 27%|##7       | 27/100 [00:01<00:03, 19.67it/s]
+ 29%|##9       | 29/100 [00:01<00:03, 19.65it/s]
+ 31%|###1      | 31/100 [00:01<00:03, 19.59it/s]
+ 33%|###3      | 33/100 [00:01<00:03, 19.65it/s]
+ 35%|###5      | 35/100 [00:02<00:03, 19.64it/s]
+ 37%|###7      | 37/100 [00:02<00:03, 19.63it/s]
+ 39%|###9      | 39/100 [00:02<00:03, 19.57it/s]
+ 41%|####1     | 41/100 [00:02<00:03, 19.58it/s]
+ 43%|####3     | 43/100 [00:02<00:02, 19.59it/s]
+ 45%|####5     | 45/100 [00:02<00:02, 19.65it/s]
+ 47%|####6     | 47/100 [00:02<00:02, 19.70it/s]
+ 49%|####9     | 49/100 [00:02<00:02, 19.73it/s]
+ 51%|#####1    | 51/100 [00:02<00:02, 19.52it/s]
+ 53%|#####3    | 53/100 [00:02<00:02, 19.43it/s]
+ 55%|#####5    | 55/100 [00:03<00:02, 19.43it/s]
+ 57%|#####6    | 57/100 [00:03<00:02, 19.54it/s]
+ 59%|#####8    | 59/100 [00:03<00:02, 19.50it/s]
+ 61%|######1   | 61/100 [00:03<00:01, 19.65it/s]
+ 64%|######4   | 64/100 [00:03<00:01, 19.78it/s]
+ 66%|######6   | 66/100 [00:03<00:01, 19.58it/s]
+ 68%|######8   | 68/100 [00:03<00:01, 19.64it/s]
+ 70%|#######   | 70/100 [00:03<00:01, 19.63it/s]
+ 73%|#######3  | 73/100 [00:03<00:01, 19.72it/s]
+ 75%|#######5  | 75/100 [00:04<00:01, 19.59it/s]
+ 77%|#######7  | 77/100 [00:04<00:01, 19.65it/s]
+ 79%|#######9  | 79/100 [00:04<00:01, 19.69it/s]
+ 81%|########1 | 81/100 [00:04<00:00, 19.78it/s]
+ 83%|########2 | 83/100 [00:04<00:00, 19.56it/s]
+ 85%|########5 | 85/100 [00:04<00:00, 19.52it/s]
+ 87%|########7 | 87/100 [00:04<00:00, 19.54it/s]
+ 89%|########9 | 89/100 [00:04<00:00, 19.23it/s]
+ 91%|#########1| 91/100 [00:04<00:00, 19.17it/s]
+ 93%|#########3| 93/100 [00:04<00:00, 19.19it/s]
+ 95%|#########5| 95/100 [00:05<00:00, 19.15it/s]
+ 97%|#########7| 97/100 [00:05<00:00, 19.23it/s]
+ 99%|#########9| 99/100 [00:05<00:00, 19.12it/s]
+100%|##########| 100/100 [00:05<00:00, 18.70it/s]
+Prediction done
+sending off prediction to background worker for resampling and export
+done with nlm_volume__2__526__652_
+Inference complete.
+
+=== Step 2: Concatenation ===
+nlm_volume: 8 files found
+
+
+======================================================================
+DONE - fresh_bnei_reem_i3_lowlr prediction:
+  \\hive3065\Yael_Mishael\Rony\remote_computer backup\nnUNet_resources\bnei_reem_fresh_bnei_reem_i3_lowlr\inference_concatenated\nlm_volume.nii.gz  (10.0 MB)
+======================================================================
+
+[OK] fresh_bnei_reem_i3_lowlr pipeline complete.

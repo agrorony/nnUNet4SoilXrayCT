@@ -1,0 +1,949 @@
+"""PSD diagnostics runner — CLI entrypoint for real-data mode.
+
+Usage
+-----
+::
+
+    python run_psd_diagnostics.py real \\
+        --input /path/to/volume.npy \\
+        --voxel-spacing 1.0 1.0 1.0 \\
+        --output-root /path/to/results \\
+        [--run-name scan_001] \\
+        [--no-exclude-borders] \\
+        [--bin-edges-json '[1,2,4,8,16]'] \\
+        [--use-chunking] \\
+        [--chunk-size 128 128 128] \\
+        [--halo-width 50] \\
+        [--no-gpu]
+
+Output
+------
+One run folder per execution::
+
+    <output-root>/psd_diag_<timestamp>_<run-name>/
+        config.json
+        result_psd.json
+        diagnostics.json
+        summary.json
+        psd_table.csv
+"""
+
+from __future__ import annotations
+
+import argparse
+# =============================================================================
+# Runtime dependencies and version constraints
+# =============================================================================
+# This script calls psd_diagnostics_core, which uses porespy + numba.
+# The numpy version constraint is INHERITED from that module.
+#
+# Package        Constraint               Reason
+# -------------- ------------------------ ------------------------------------
+# numpy          >= 1.22, <= 2.3          numba 0.63.x upper-bound (via
+#                                         psd_diagnostics_core -> porespy)
+# porespy        >= 3.0.4                 required by psd_diagnostics_core
+# scikit-image   >= 0.26.0               0.25.x segmentation DLL crash on Win
+# scipy          any modern               used by psd_diagnostics_core
+# =============================================================================
+
+import csv
+import json
+import sys
+import warnings
+from datetime import datetime
+from pathlib import Path
+from typing import Any, Dict, List, Optional, Tuple
+
+import numpy as np
+
+# Non-interactive backend — must be set before any pyplot import.
+# plot_psd_extras (in psd_diagnostics_core) imports pyplot lazily;
+# this call ensures Agg is active before that happens.
+import matplotlib
+matplotlib.use("Agg")
+
+# ---------------------------------------------------------------------------
+# Import core; abort immediately if unavailable
+# ---------------------------------------------------------------------------
+try:
+    from psd_diagnostics_core import (
+        PSD_TABLE_COLUMNS,
+        EXTENDED_PSD_TABLE_COLUMNS,
+        build_psd_table,
+        build_extended_psd_table,
+        build_summary,
+        plot_psd_extras,
+        run_psd_pipeline,
+        to_json_serializable,
+    )
+except ImportError as _exc:  # pragma: no cover
+    print(
+        f"ERROR: cannot import psd_diagnostics_core: {_exc}",
+        file=sys.stderr,
+    )
+    sys.exit(1)
+
+try:
+    from psd_topology_metrics import (
+        add_pore_size_bin,
+        connectivity_density,
+        connectivity_probability,
+        degree_of_anisotropy,
+        distance_map_from_mask,
+        get_percolating_mask,
+        surface_area_by_size_class,
+        tortuosity_diffusive,
+    )
+except ImportError as _exc:  # pragma: no cover
+    print(
+        f"ERROR: cannot import psd_topology_metrics: {_exc}",
+        file=sys.stderr,
+    )
+    sys.exit(1)
+
+# ---------------------------------------------------------------------------
+# Output file names (single source of truth — §4.1 / §4.2)
+# ---------------------------------------------------------------------------
+_F_CONFIG = "config.json"
+_F_RESULT = "result_psd.json"
+_F_DIAG = "diagnostics.json"
+_F_SUMMARY = "summary.json"
+_F_TABLE = "psd_table.csv"
+_F_TABLE_RAW = "psd_raw_data.csv"
+_F_PLOT_HIST = "psd_30bins_microbial_active_domain.png"
+_F_PLOT_KDE = "psd_kde.png"
+_F_PLOT_20BINS = "psd_20bins_30_150um.png"
+
+# Extended-mode-only output names (analysis/pore_metrics_research/decisions.md)
+_F_PLOT_DISTANCE_MAPS = "extended_distance_maps_midslice.png"
+_F_PLOT_CONNECTIVITY = "extended_connectivity_topology_metrics.png"
+_F_PLOT_TORTUOSITY = "extended_tortuosity.png"
+_F_PLOT_SURFACE_AREA = "extended_surface_area_by_class.png"
+_DISTANCE_MAP_NAMES: Tuple[str, ...] = (
+    "distance_to_pore_unconditioned",
+    "distance_to_pore_connected",
+    "distance_to_pom_unconditioned",
+    "distance_to_pom_connected",
+)
+
+
+# ===========================================================================
+# Volume I/O helpers
+# ===========================================================================
+
+def _load_volume(path: Path) -> np.ndarray:
+    """Load a 3-D binary volume from .npy or .tif/.tiff.
+
+    Raises SystemExit(1) on error; writes structured message to stderr.
+    """
+    suffix = path.suffix.lower()
+    try:
+        if suffix == ".npy":
+            vol = np.load(str(path))
+        elif suffix in (".tif", ".tiff"):
+            try:
+                import tifffile
+                vol = tifffile.imread(str(path))
+            except ImportError:
+                _fail(
+                    f"tifffile is required to load .tif volumes: "
+                    f"pip install tifffile"
+                )
+        else:
+            _fail(
+                f"Unsupported volume format '{suffix}'. "
+                f"Supported: .npy, .tif, .tiff"
+            )
+    except FileNotFoundError:
+        _fail(f"Input volume not found: {path}")
+    except Exception as exc:
+        _fail(f"Failed to load volume from {path}: {exc}")
+
+    if vol.ndim != 3:
+        _fail(
+            f"Volume must be 3-D, got shape {vol.shape} from {path}"
+        )
+    return vol
+
+
+def _load_labeled_volume(path: Path) -> np.ndarray:
+    """Load a 3-D integer-labeled volume for ``extended`` mode.
+
+    Supports .npy, .tif/.tiff (same as ``_load_volume``) plus .nii/.nii.gz
+    (nibabel), since real 3-phase segmentation outputs in this project are
+    stored as NIfTI (e.g. nlm_volume.nii.gz).
+
+    Raises SystemExit(1) on error; writes structured message to stderr.
+    """
+    name_lower = path.name.lower()
+    if name_lower.endswith(".nii") or name_lower.endswith(".nii.gz"):
+        try:
+            import nibabel as nib
+        except ImportError:
+            _fail("nibabel is required to load .nii/.nii.gz volumes: pip install nibabel")
+        try:
+            img = nib.load(str(path))
+            vol = np.asarray(img.dataobj)
+        except FileNotFoundError:
+            _fail(f"Input volume not found: {path}")
+        except Exception as exc:
+            _fail(f"Failed to load volume from {path}: {exc}")
+    else:
+        vol = _load_volume(path)
+
+    if vol.ndim != 3:
+        _fail(f"Volume must be 3-D, got shape {vol.shape} from {path}")
+    return vol
+
+
+# ===========================================================================
+# Fail-fast error handler  (§3.4)
+# ===========================================================================
+
+def _fail(msg: str) -> None:
+    """Write structured error to stderr and exit non-zero immediately."""
+    print(json.dumps({"error": msg}), file=sys.stderr)
+    sys.exit(1)
+
+
+# ===========================================================================
+# Run-folder creation  (§4 naming)
+# ===========================================================================
+
+def _make_run_dir(output_root: Path, run_name: str, ts: str) -> Path:
+    """Create and return <output_root>/psd_diag_<ts>_<run_name>/."""
+    folder_name = f"psd_diag_{ts}_{run_name}"
+    run_dir = output_root / folder_name
+    run_dir.mkdir(parents=True, exist_ok=True)
+    return run_dir
+
+
+def _safe_name(raw: str) -> str:
+    """Sanitise run_name to filesystem-safe characters."""
+    return "".join(c if c.isalnum() or c in "_-" else "_" for c in raw)
+
+
+# ===========================================================================
+# Writers  (§4 output contract)
+# ===========================================================================
+
+def _write_json(run_dir: Path, filename: str, data: Any) -> None:
+    path = run_dir / filename
+    with path.open("w", encoding="utf-8") as fh:
+        json.dump(to_json_serializable(data), fh, indent=2)
+
+
+def _write_plots(run_dir: Path, result: Dict[str, Any]) -> List[str]:
+    """Generate psd_hist_30bins.png and psd_kde.png into *run_dir*."""
+    return plot_psd_extras(result["psd"], run_dir)
+
+
+def _write_csv(run_dir: Path, rows: List[Dict[str, Any]]) -> None:
+    """Write psd_table.csv with columns in §4.6 order."""
+    path = run_dir / _F_TABLE
+    with path.open("w", newline="", encoding="utf-8") as fh:
+        writer = csv.DictWriter(fh, fieldnames=list(PSD_TABLE_COLUMNS))
+        writer.writeheader()
+        writer.writerows(rows)
+
+
+def _write_raw_csv(run_dir: Path, rows: List[Dict[str, Any]]) -> None:
+    """Write psd_raw_data.csv (same data as psd_table.csv, agent-spec required name)."""
+    path = run_dir / _F_TABLE_RAW
+    with path.open("w", newline="", encoding="utf-8") as fh:
+        writer = csv.DictWriter(fh, fieldnames=list(PSD_TABLE_COLUMNS))
+        writer.writeheader()
+        writer.writerows(rows)
+
+
+def _write_20bins_plot(run_dir: Path, psd_dict: Dict[str, Any]) -> None:
+    """Generate psd_20bins_30_150um.png — zoomed 30–150 µm view, 20 bins.
+
+    Y-axis is per-bin pore volume fraction (Volume_Count / total_pore_voxels).
+    """
+    import matplotlib.pyplot as plt
+
+    bin_centers_um = np.asarray(psd_dict.get("bin_centers_um", np.array([])))
+    volume_counts = np.asarray(psd_dict.get("volume_counts", np.array([])))
+    total_pore_voxels = int(psd_dict.get("total_pore_voxels", max(int(volume_counts.sum()), 1)))
+
+    if bin_centers_um.size == 0:
+        return
+
+    # Per-bin pore volume fraction for all bins
+    volume_fraction = volume_counts / total_pore_voxels
+
+    # Filter to [30, 150] µm range
+    mask = (bin_centers_um >= 30.0) & (bin_centers_um <= 150.0)
+    filtered_centers = bin_centers_um[mask]
+    filtered_fracs = volume_fraction[mask]
+
+    if filtered_centers.size == 0:
+        return
+
+    # 20 log-spaced bins in target range
+    target_bin_edges = np.logspace(np.log10(30.0), np.log10(150.0), 21)
+    target_bin_centers = (target_bin_edges[:-1] + target_bin_edges[1:]) / 2
+
+    # Re-bin the filtered data into 20 bins
+    hist_counts, _ = np.histogram(filtered_centers, bins=target_bin_edges,
+                                   weights=filtered_fracs)
+
+    fig, ax = plt.subplots(figsize=(10, 6), dpi=100)
+    ax.bar(
+        target_bin_centers,
+        hist_counts,
+        width=np.diff(target_bin_edges),
+        color="#e67300",
+        edgecolor="white",
+        linewidth=0.5,
+        alpha=0.85,
+        label="Pore volume fraction per bin (30–150 µm)",
+    )
+
+    ax.set_xlabel("Pore Diameter (µm)", fontsize=11)
+    ax.set_ylabel("Pore volume fraction", fontsize=11)
+    ax.set_title("Microbial Active Domain — PSD (20 bins, 30–150 µm)",
+                  fontsize=12, fontweight="bold")
+    ax.set_xscale("log")
+    ax.grid(True, which="both", alpha=0.3)
+    ax.legend()
+
+    f = run_dir / _F_PLOT_20BINS
+    fig.savefig(str(f), dpi=100, bbox_inches="tight")
+    plt.close(fig)
+
+
+def _write_all_outputs(
+    run_dir: Path,
+    *,
+    config: Dict[str, Any],
+    result: Dict[str, Any],
+    mode: str,
+    run_name: str,
+    timestamp: str,
+) -> None:
+    """Write the 5 files required for every run (§4.1)."""
+
+    # config.json
+    _write_json(run_dir, _F_CONFIG, config)
+
+    # result_psd.json  — add §4.3 scalar fields
+    psd_payload = dict(result["psd"])
+    psd_payload["mode"] = mode
+    psd_payload["run_name"] = run_name
+    psd_payload["timestamp"] = timestamp
+    _write_json(run_dir, _F_RESULT, psd_payload)
+
+    # diagnostics.json  (§4.4 keys already present from core)
+    _write_json(run_dir, _F_DIAG, result["diagnostics"])
+
+    # summary.json  (§4.7)
+    summary = build_summary(result, mode=mode, run_name=run_name)
+    _write_json(run_dir, _F_SUMMARY, summary)
+
+    # psd_table.csv  (§4.6)
+    psd_rows = build_psd_table(result)
+    _write_csv(run_dir, psd_rows)
+    
+    # psd_raw_data.csv (agent-spec required name)
+    _write_raw_csv(run_dir, psd_rows)
+
+    # supplementary diagnostic plots
+    _write_plots(run_dir, result)
+    
+    # psd_20bins_30_150um.png (agent-spec required plot)
+    _write_20bins_plot(run_dir, result["psd"])
+
+
+# ===========================================================================
+# Real mode  (§3.5 / §4 / §7)
+# ===========================================================================
+
+def _run_real(args: argparse.Namespace) -> None:
+    input_path = Path(args.input)
+    if not input_path.exists():
+        _fail(f"Input path does not exist: {input_path}")
+
+    # Parse and validate voxel spacing
+    try:
+        spacing: Tuple[float, float, float] = tuple(
+            float(v) for v in args.voxel_spacing
+        )
+    except (TypeError, ValueError) as exc:
+        _fail(f"Invalid --voxel-spacing: {exc}")
+
+    if len(spacing) != 3:
+        _fail(
+            f"--voxel-spacing requires exactly 3 values, got {len(spacing)}"
+        )
+    if any(v <= 0 for v in spacing):
+        _fail(f"All voxel-spacing values must be positive, got {spacing}")
+
+    # Parse optional bin edges
+    bin_edges_um: Optional[np.ndarray] = None
+    if args.bin_edges_json:
+        try:
+            raw_edges = json.loads(args.bin_edges_json)
+            bin_edges_um = np.array(raw_edges, dtype=np.float64)
+        except (json.JSONDecodeError, ValueError) as exc:
+            _fail(f"Invalid --bin-edges-json: {exc}")
+
+    # Load volume
+    vol = _load_volume(input_path)
+
+    # Chunking params
+    chunk_size: Tuple[int, int, int] = tuple(int(c) for c in args.chunk_size)
+    halo_width: int = int(args.halo_width)
+
+    # Identify run
+    ts = datetime.utcnow().strftime("%Y%m%dT%H%M%S")
+    run_name = _safe_name(args.run_name) if args.run_name else "real"
+    output_root = Path(args.output_root)
+
+    config: Dict[str, Any] = {
+        "mode": "real",
+        "run_name": run_name,
+        "timestamp": ts,
+        "input": str(input_path.resolve()),
+        "voxel_spacing": list(spacing),
+        "exclude_borders": not args.no_exclude_borders,
+        "use_chunking": args.use_chunking,
+        "chunk_size": list(chunk_size),
+        "halo_width": halo_width,
+        "bin_edges_um_input": bin_edges_um.tolist() if bin_edges_um is not None else None,
+        "use_gpu": not args.no_gpu,
+    }
+
+    # Run pipeline
+    with warnings.catch_warnings(record=True) as caught_warnings:
+        warnings.simplefilter("always")
+        result = run_psd_pipeline(
+            vol,
+            spacing,
+            use_chunking=args.use_chunking,
+            chunk_size=chunk_size,
+            halo_width=halo_width,
+            exclude_borders=not args.no_exclude_borders,
+            bin_edges_um=bin_edges_um,
+            use_gpu=not args.no_gpu,
+            diagnostics_cfg={"run_tag": run_name},
+        )
+
+    if caught_warnings:
+        config["warnings"] = [str(w.message) for w in caught_warnings]
+
+    # Write outputs
+    run_dir = _make_run_dir(output_root, run_name, ts)
+    _write_all_outputs(
+        run_dir,
+        config=config,
+        result=result,
+        mode="real",
+        run_name=run_name,
+        timestamp=ts,
+    )
+
+    # Console summary
+    psd = result["psd"]
+    print(f"\nRun directory: {run_dir}")
+    print(f"Total pore voxels: {psd['total_pore_voxels']:,}")
+    if psd["bin_centers_um"].size > 0:
+        print(
+            f"Diameter range: {float(psd['bin_centers_um'].min()):.2f}"
+            f" – {float(psd['bin_centers_um'].max()):.2f} µm"
+        )
+    print("Files written:")
+    for f in (_F_CONFIG, _F_RESULT, _F_DIAG, _F_SUMMARY, _F_TABLE, _F_TABLE_RAW,
+              _F_PLOT_HIST, _F_PLOT_KDE, _F_PLOT_20BINS):
+        print(f"  {f}")
+
+
+# ===========================================================================
+# Extended mode  (topology/connectivity metrics — decisions.md D1-D5)
+# ===========================================================================
+
+def _write_distance_map_tifs(
+    run_dir: Path,
+    distance_maps: Dict[str, Optional[np.ndarray]],
+) -> List[str]:
+    """Write each distance map (3D volume + mid-slice) to .tif.
+
+    Non-finite (inf) values — voxels with no reachable target — are
+    replaced with 0.0 before writing so downstream tif viewers don't choke
+    on inf.
+    """
+    try:
+        import tifffile
+    except ImportError:
+        warnings.warn(
+            "tifffile is not installed; distance maps will not be saved to disk.",
+            UserWarning,
+        )
+        return []
+
+    written: List[str] = []
+    for name, dmap in distance_maps.items():
+        if dmap is None:
+            continue
+        finite = np.where(np.isfinite(dmap), dmap, 0.0).astype(np.float32)
+
+        vol_name = f"{name}.tif"
+        tifffile.imwrite(str(run_dir / vol_name), finite)
+        written.append(vol_name)
+
+        mid_z = finite.shape[0] // 2
+        slice_name = f"{name}_midslice.tif"
+        tifffile.imwrite(str(run_dir / slice_name), finite[mid_z])
+        written.append(slice_name)
+
+    return written
+
+
+def _write_extended_plots(
+    run_dir: Path,
+    psd: Dict[str, Any],
+    scalars: Dict[str, Any],
+    surface_areas: np.ndarray,
+    distance_maps: Dict[str, Optional[np.ndarray]],
+) -> List[str]:
+    """One matplotlib PNG per new metric group (decisions.md D1-D5)."""
+    import matplotlib.pyplot as plt
+
+    written: List[str] = []
+
+    # --- D1: connectivity-conditioned distance maps (mid-slice montage) ----
+    present = [(k, v) for k, v in distance_maps.items() if v is not None]
+    if present:
+        fig, axes = plt.subplots(1, len(present), figsize=(5 * len(present), 5))
+        if len(present) == 1:
+            axes = [axes]
+        for ax, (name, dmap) in zip(axes, present):
+            mid_z = dmap.shape[0] // 2
+            finite = np.where(np.isfinite(dmap[mid_z]), dmap[mid_z], np.nan)
+            im = ax.imshow(finite, cmap="viridis")
+            ax.set_title(name, fontsize=9)
+            ax.axis("off")
+            fig.colorbar(im, ax=ax, fraction=0.046, pad=0.04, label="distance (um)")
+        fig.suptitle("Distance-to-phase maps (mid Z-slice)")
+        fig.tight_layout()
+        fig.savefig(str(run_dir / _F_PLOT_DISTANCE_MAPS), dpi=150)
+        plt.close(fig)
+        written.append(_F_PLOT_DISTANCE_MAPS)
+
+    # --- D2/D3/D4: connectivity density, gamma, anisotropy (bar chart) -----
+    fig, ax = plt.subplots(figsize=(7, 5))
+    metric_names = [
+        "connectivity_density_per_mm3",
+        "connectivity_probability_gamma",
+        "degree_of_anisotropy",
+    ]
+    values = [scalars.get(m, np.nan) for m in metric_names]
+    ax.bar(metric_names, values, color="tab:green")
+    ax.set_ylabel("Value")
+    ax.set_title("Connectivity / topology metrics")
+    plt.setp(ax.get_xticklabels(), rotation=20, ha="right")
+    fig.tight_layout()
+    fig.savefig(str(run_dir / _F_PLOT_CONNECTIVITY), dpi=150)
+    plt.close(fig)
+    written.append(_F_PLOT_CONNECTIVITY)
+
+    # --- D5: tortuosity per axis --------------------------------------------
+    fig, ax = plt.subplots(figsize=(6, 5))
+    tort_keys = [k for k in scalars if k.startswith("tortuosity_axis")]
+    tort_vals = [scalars[k] for k in tort_keys]
+    ax.bar(tort_keys, tort_vals, color="tab:purple")
+    ax.set_ylabel("Diffusive tortuosity (tau_d)")
+    ax.set_title("Tortuosity by axis")
+    fig.tight_layout()
+    fig.savefig(str(run_dir / _F_PLOT_TORTUOSITY), dpi=150)
+    plt.close(fig)
+    written.append(_F_PLOT_TORTUOSITY)
+
+    # --- Surface area by pore-size class ------------------------------------
+    fig, ax = plt.subplots(figsize=(7, 5))
+    bin_centers = np.asarray(psd["bin_centers_um"])
+    surface_areas = np.asarray(surface_areas, dtype=np.float64)
+    if bin_centers.size and bin_centers.size == surface_areas.size:
+        widths = np.gradient(bin_centers) if bin_centers.size > 1 else bin_centers
+        finite = np.isfinite(surface_areas)
+        ax.bar(bin_centers[finite], surface_areas[finite], width=np.asarray(widths)[finite], color="tab:red")
+        ax.set_xscale("log")
+    ax.set_xlabel("Pore diameter (um)")
+    ax.set_ylabel("Surface area (um^2)")
+    ax.set_title("Surface area by pore-size class")
+    fig.tight_layout()
+    fig.savefig(str(run_dir / _F_PLOT_SURFACE_AREA), dpi=150)
+    plt.close(fig)
+    written.append(_F_PLOT_SURFACE_AREA)
+
+    return written
+
+
+def _run_extended(args: argparse.Namespace) -> None:
+    input_path = Path(args.input)
+    if not input_path.exists():
+        _fail(f"Input path does not exist: {input_path}")
+
+    try:
+        spacing: Tuple[float, float, float] = tuple(float(v) for v in args.voxel_spacing)
+    except (TypeError, ValueError) as exc:
+        _fail(f"Invalid --voxel-spacing: {exc}")
+
+    if len(spacing) != 3:
+        _fail(f"--voxel-spacing requires exactly 3 values, got {len(spacing)}")
+    if any(v <= 0 for v in spacing):
+        _fail(f"All voxel-spacing values must be positive, got {spacing}")
+    voxel_size_um = float(np.mean(spacing))
+
+    bin_edges_um: Optional[np.ndarray] = None
+    if args.bin_edges_json:
+        try:
+            raw_edges = json.loads(args.bin_edges_json)
+            bin_edges_um = np.array(raw_edges, dtype=np.float64)
+        except (json.JSONDecodeError, ValueError) as exc:
+            _fail(f"Invalid --bin-edges-json: {exc}")
+
+    # Load 3-phase labeled volume (matrix/pore/POM; see dataset_info.json /
+    # the model's trained label indices for the actual integer convention).
+    labeled_vol = _load_labeled_volume(input_path)
+
+    chunk_size: Tuple[int, int, int] = tuple(int(c) for c in args.chunk_size)
+    halo_width: int = int(args.halo_width)
+
+    pore_label = int(args.pore_label)
+    pom_labels = [int(v) for v in args.pom_label]
+
+    pore_mask = (labeled_vol == pore_label)
+    pom_mask = np.isin(labeled_vol, pom_labels)
+
+    if not np.any(pore_mask):
+        _fail(f"No voxels found with pore_label={pore_label} in {input_path}")
+    if not np.any(pom_mask):
+        warnings.warn(
+            f"No voxels found with pom_label(s)={pom_labels}; "
+            "distance-to-POM maps will be skipped.",
+            UserWarning,
+        )
+
+    # decisions.md "New functionality 2": always add the 30-150um (Dor et
+    # al. 2025) bin on top of whatever bin edges were requested/defaulted.
+    extended_bin_edges_um = add_pore_size_bin(bin_edges_um, low=30.0, high=150.0)
+
+    ts = datetime.utcnow().strftime("%Y%m%dT%H%M%S")
+    run_name = _safe_name(args.run_name) if args.run_name else "extended"
+    output_root = Path(args.output_root)
+
+    config: Dict[str, Any] = {
+        "mode": "extended",
+        "run_name": run_name,
+        "timestamp": ts,
+        "input": str(input_path.resolve()),
+        "voxel_spacing": list(spacing),
+        "pore_label": pore_label,
+        "pom_label": pom_labels,
+        "exclude_borders": not args.no_exclude_borders,
+        "bin_edges_um_input": bin_edges_um.tolist() if bin_edges_um is not None else None,
+        "extended_bin_edges_um": extended_bin_edges_um.tolist(),
+        "use_chunking": args.use_chunking,
+        "chunk_size": list(chunk_size) if args.use_chunking else None,
+        "halo_width": halo_width if args.use_chunking else None,
+        "use_gpu": not args.no_gpu,
+        "n_anisotropy_directions": int(args.n_anisotropy_directions),
+        "voxel_size_um_isotropic_placeholder": voxel_size_um,
+    }
+
+    with warnings.catch_warnings(record=True) as caught_warnings:
+        warnings.simplefilter("always")
+
+        # ------------------------------------------------------------
+        # Existing PSD pipeline (unchanged) on the pore phase.
+        # ------------------------------------------------------------
+        result = run_psd_pipeline(
+            pore_mask,
+            spacing,
+            use_chunking=args.use_chunking,
+            chunk_size=chunk_size,
+            halo_width=halo_width,
+            exclude_borders=not args.no_exclude_borders,
+            bin_edges_um=extended_bin_edges_um,
+            use_gpu=not args.no_gpu,
+            diagnostics_cfg={"run_tag": run_name},
+        )
+        psd = result["psd"]
+        diameter_map = psd.get("diameter_map")
+        masked_pore_mask = psd.get("masked_pore_mask")
+        if masked_pore_mask is None:
+            masked_pore_mask = pore_mask
+
+        # ------------------------------------------------------------
+        # D1: connectivity-conditioned + unconditioned distance maps.
+        # ------------------------------------------------------------
+        dist_pore_unconditioned = distance_map_from_mask(pore_mask, voxel_size_um, connected_only=False)
+        dist_pore_conditioned = distance_map_from_mask(pore_mask, voxel_size_um, connected_only=True, axis=0)
+        dist_pom_unconditioned = None
+        dist_pom_conditioned = None
+        if np.any(pom_mask):
+            dist_pom_unconditioned = distance_map_from_mask(pom_mask, voxel_size_um, connected_only=False)
+            dist_pom_conditioned = distance_map_from_mask(pom_mask, voxel_size_um, connected_only=True, axis=0)
+
+        connected_pore_mask = get_percolating_mask(pore_mask, axis=0)
+
+        # ------------------------------------------------------------
+        # D2 & D3: Euler/connectivity density and Gamma.
+        # ------------------------------------------------------------
+        conn_density = connectivity_density(pore_mask, voxel_size_um)
+        gamma = connectivity_probability(pore_mask)
+
+        # ------------------------------------------------------------
+        # D4: degree of anisotropy (MIL fabric tensor).
+        # ------------------------------------------------------------
+        anisotropy_source_mask = connected_pore_mask if np.any(connected_pore_mask) else pore_mask
+        anisotropy = degree_of_anisotropy(
+            anisotropy_source_mask, voxel_size_um, n_directions=int(args.n_anisotropy_directions)
+        )
+
+        # ------------------------------------------------------------
+        # D5: diffusive tortuosity (porespy).
+        # ------------------------------------------------------------
+        tortuosity = tortuosity_diffusive(pore_mask, axes=(0, 1, 2))
+
+        # ------------------------------------------------------------
+        # New functionality 7: surface area per pore-size class.
+        # ------------------------------------------------------------
+        if diameter_map is not None and psd["bin_edges_um"].size > 0:
+            surface_areas = surface_area_by_size_class(
+                diameter_map, masked_pore_mask, psd["bin_edges_um"], voxel_size_um
+            )
+        else:
+            surface_areas = np.full(max(len(psd["bin_edges_um"]) - 1, 0), np.nan)
+
+        bin_centers = psd["bin_centers_um"]
+        in_30_150 = (bin_centers >= 30.0) & (bin_centers < 150.0)
+        if psd["total_pore_voxels"] > 0 and len(psd["volume_counts"]) > 0:
+            frac_30_150 = float(psd["volume_counts"][in_30_150].sum() / psd["total_pore_voxels"])
+        else:
+            frac_30_150 = float("nan")
+
+        scalars: Dict[str, Any] = {
+            "euler_number": conn_density["euler_number"],
+            "connectivity_density_per_mm3": conn_density["connectivity_density_per_mm3"],
+            "connectivity_probability_gamma": gamma,
+            "degree_of_anisotropy": anisotropy["degree_of_anisotropy"],
+            "anisotropy_eigenvalues": anisotropy["eigenvalues"],
+            "anisotropy_fabric_tensor": anisotropy["fabric_tensor"],
+            "psd_30_150um_volume_fraction": frac_30_150,
+            **tortuosity,
+        }
+
+    if caught_warnings:
+        config["warnings"] = [str(w.message) for w in caught_warnings]
+
+    run_dir = _make_run_dir(output_root, run_name, ts)
+
+    # config.json / diagnostics.json — same contract as `real` mode.
+    _write_json(run_dir, _F_CONFIG, config)
+    _write_json(run_dir, _F_DIAG, result["diagnostics"])
+
+    # result_psd.json — base PSD payload + new scalar metrics (additive).
+    psd_payload = {k: v for k, v in result["psd"].items() if k not in ("diameter_map", "masked_pore_mask")}
+    psd_payload["mode"] = "extended"
+    psd_payload["run_name"] = run_name
+    psd_payload["timestamp"] = ts
+    psd_payload.update(scalars)
+    _write_json(run_dir, _F_RESULT, psd_payload)
+
+    # summary.json — base summary + new scalar metrics (additive).
+    summary = build_summary(result, mode="extended", run_name=run_name)
+    summary.update(scalars)
+    _write_json(run_dir, _F_SUMMARY, summary)
+
+    # psd_table.csv / psd_raw_data.csv — SAME files as `real` mode, extended
+    # with new columns (not a second table), per the task spec.
+    extended_rows = build_extended_psd_table(result, surface_areas, scalars)
+    with (run_dir / _F_TABLE).open("w", newline="", encoding="utf-8") as fh:
+        writer = csv.DictWriter(fh, fieldnames=list(EXTENDED_PSD_TABLE_COLUMNS))
+        writer.writeheader()
+        writer.writerows(extended_rows)
+    with (run_dir / _F_TABLE_RAW).open("w", newline="", encoding="utf-8") as fh:
+        writer = csv.DictWriter(fh, fieldnames=list(EXTENDED_PSD_TABLE_COLUMNS))
+        writer.writeheader()
+        writer.writerows(extended_rows)
+
+    # Base diagnostic plots (same as `real` mode).
+    _write_plots(run_dir, result)
+    _write_20bins_plot(run_dir, result["psd"])
+
+    # Distance-map .tif files (3D + mid-slice), D1.
+    distance_maps = {
+        "distance_to_pore_unconditioned": dist_pore_unconditioned,
+        "distance_to_pore_connected": dist_pore_conditioned,
+        "distance_to_pom_unconditioned": dist_pom_unconditioned,
+        "distance_to_pom_connected": dist_pom_conditioned,
+    }
+    tif_files = _write_distance_map_tifs(run_dir, distance_maps)
+
+    # New per-metric plots.
+    plot_files = _write_extended_plots(run_dir, result["psd"], scalars, surface_areas, distance_maps)
+
+    # Console summary
+    print(f"\nRun directory: {run_dir}")
+    print(f"Total pore voxels: {psd['total_pore_voxels']:,}")
+    if psd["bin_centers_um"].size > 0:
+        print(
+            f"Diameter range: {float(psd['bin_centers_um'].min()):.2f}"
+            f" - {float(psd['bin_centers_um'].max()):.2f} um"
+        )
+    print(f"Euler number: {scalars['euler_number']}")
+    print(f"Connectivity density (mm^-3): {scalars['connectivity_density_per_mm3']:.6g}")
+    print(f"Connectivity probability (Gamma): {scalars['connectivity_probability_gamma']:.6g}")
+    print(f"Degree of anisotropy: {scalars['degree_of_anisotropy']:.6g}")
+    for ax in (0, 1, 2):
+        print(f"Tortuosity axis{ax}: {scalars.get(f'tortuosity_axis{ax}')}")
+    print("Files written:")
+    for f in (_F_CONFIG, _F_RESULT, _F_DIAG, _F_SUMMARY, _F_TABLE, _F_TABLE_RAW,
+              _F_PLOT_HIST, _F_PLOT_KDE, _F_PLOT_20BINS, *tif_files, *plot_files):
+        print(f"  {f}")
+
+
+# ===========================================================================
+# Argument parser
+# ===========================================================================
+
+def _build_parser() -> argparse.ArgumentParser:
+    parser = argparse.ArgumentParser(
+        prog="run_psd_diagnostics",
+        description="PSD diagnostics runner.",
+    )
+    sub = parser.add_subparsers(dest="mode", required=True)
+
+    # ------------------------------------------------------------------ real
+    p_real = sub.add_parser("real", help="Run diagnostics on a real binary volume.")
+    p_real.add_argument(
+        "--input", required=True,
+        help="Path to 3-D binary volume (.npy or .tif).",
+    )
+    p_real.add_argument(
+        "--voxel-spacing", nargs=3, type=float, required=True,
+        metavar=("DZ", "DY", "DX"),
+        help="Physical voxel spacing in µm, order: dz dy dx.",
+    )
+    p_real.add_argument(
+        "--output-root", required=True,
+        help="Parent directory for run-folder output.",
+    )
+    p_real.add_argument("--run-name", default=None, help="Optional run identifier.")
+    p_real.add_argument(
+        "--no-exclude-borders", action="store_true",
+        help="Disable 1-voxel border exclusion (default: borders excluded).",
+    )
+    p_real.add_argument(
+        "--bin-edges-json", default=None,
+        help="JSON array of custom bin edges in µm, e.g. '[2,4,8,16,32]'.",
+    )
+    p_real.add_argument(
+        "--use-chunking", action="store_true",
+        help="Use block-chunked EDT (default: monolithic).",
+    )
+    p_real.add_argument(
+        "--chunk-size", nargs=3, type=int, default=[128, 128, 128],
+        metavar=("CZ", "CY", "CX"),
+        help="Core chunk size before halo padding (default: 128 128 128).",
+    )
+    p_real.add_argument(
+        "--halo-width", type=int, default=50,
+        help="Halo padding in voxels for chunked EDT (default: 50).",
+    )
+    p_real.add_argument(
+        "--no-gpu", action="store_true",
+        help="Disable GPU acceleration (force CPU).",
+    )
+
+    # -------------------------------------------------------------- extended
+    p_ext = sub.add_parser(
+        "extended",
+        help=(
+            "Run diagnostics + topology/connectivity metrics (decisions.md "
+            "D1-D5) on a real 3-phase labeled volume."
+        ),
+    )
+    p_ext.add_argument(
+        "--input", required=True,
+        help="Path to 3-D integer-labeled volume (.npy, .tif, .nii, or .nii.gz).",
+    )
+    p_ext.add_argument(
+        "--pore-label", type=int, required=True,
+        help="Integer label value identifying the pore phase.",
+    )
+    p_ext.add_argument(
+        "--pom-label", type=int, required=True, nargs="+",
+        help="Integer label value(s) identifying the POM (particulate organic matter) "
+             "phase. Repeatable/multi-value; e.g. '--pom-label 3 4' merges POM_type1 and "
+             "POM_type2 into a single POM mask.",
+    )
+    p_ext.add_argument(
+        "--voxel-spacing", nargs=3, type=float, required=True,
+        metavar=("DZ", "DY", "DX"),
+        help="Physical voxel spacing in µm, order: dz dy dx.",
+    )
+    p_ext.add_argument(
+        "--output-root", required=True,
+        help="Parent directory for run-folder output.",
+    )
+    p_ext.add_argument("--run-name", default=None, help="Optional run identifier.")
+    p_ext.add_argument(
+        "--no-exclude-borders", action="store_true",
+        help="Disable 1-voxel border exclusion (default: borders excluded).",
+    )
+    p_ext.add_argument(
+        "--bin-edges-json", default=None,
+        help="JSON array of custom bin edges in µm, e.g. '[2,4,8,16,32]'. "
+             "The 30-150um bin is always added on top of these.",
+    )
+    p_ext.add_argument(
+        "--n-anisotropy-directions", type=int, default=800,
+        help="Number of MIL sampling directions for degree-of-anisotropy (default: 800; "
+             "convergence-tested 2026-07-22 on the bnei_reem_i4_crop200 validation volume, "
+             "see pore_metrics_research/decisions.md D4-addendum — N=100 was not converged).",
+    )
+    p_ext.add_argument(
+        "--use-chunking", action="store_true",
+        help="Use block-chunked EDT for the PSD/pore-EDT step (default: monolithic). "
+             "Does NOT chunk the topology metrics (connectivity/anisotropy/tortuosity), "
+             "which still run on the full mask.",
+    )
+    p_ext.add_argument(
+        "--chunk-size", nargs=3, type=int, default=[128, 128, 128],
+        metavar=("CZ", "CY", "CX"),
+        help="Core chunk size before halo padding (default: 128 128 128).",
+    )
+    p_ext.add_argument(
+        "--halo-width", type=int, default=50,
+        help="Halo padding in voxels for chunked EDT (default: 50).",
+    )
+    p_ext.add_argument(
+        "--no-gpu", action="store_true",
+        help="Disable GPU acceleration (force CPU).",
+    )
+
+    return parser
+
+
+# ===========================================================================
+# Entrypoint
+# ===========================================================================
+
+def main() -> None:
+    parser = _build_parser()
+    args = parser.parse_args()
+
+    if args.mode == "real":
+        _run_real(args)
+    elif args.mode == "extended":
+        _run_extended(args)
+    else:
+        _fail(f"Unknown mode: {args.mode}")
+
+
+if __name__ == "__main__":
+    main()

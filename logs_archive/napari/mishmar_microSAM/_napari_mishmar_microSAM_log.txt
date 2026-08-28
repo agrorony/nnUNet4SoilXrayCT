@@ -1,0 +1,21 @@
+[OK] volume: \\hive3065\Yael_Mishael\Rony\remote_computer backup\10.5\mishmar_hanegev_Cu011_samp_2_Rec_nlm.tif
+[OK] GT: \\hive3065\Yael_Mishael\Rony\remote_computer backup\nnUNet_resources\mishmar_hanegev_new_work\annotations\mishmar_hanegev_Cu011_samp_2_Rec_nlm.nii.gz
+[OK] pred_new: \\hive3065\Yael_Mishael\Rony\remote_computer backup\nnUNet_resources\mishmar_hanegev_new_work\mishmar_hanegev_Cu011_samp_2_Rec_nlm.nii.gz
+[OK] pred_iter02: \\hive3065\Yael_Mishael\Rony\remote_computer backup\nnUNet_resources\mishmar_hanegev_Cu011_samp_2_Rec_nlm\inference_output_concat_iter02\mishmar_hanegev_Cu011_samp_2_Rec_nlm.nii.gz
+[000.0s] Loading volume: \\hive3065\Yael_Mishael\Rony\remote_computer backup\10.5\mishmar_hanegev_Cu011_samp_2_Rec_nlm.tif | RAM: 0.03 GB
+[001.8s]   shape=(822, 650, 650)  dtype=float32 | RAM: 0.14 GB
+[001.8s] Loading prediction: \\hive3065\Yael_Mishael\Rony\remote_computer backup\nnUNet_resources\mishmar_hanegev_new_work\mishmar_hanegev_Cu011_samp_2_Rec_nlm.nii.gz | RAM: 0.14 GB
+[002.4s]   shape=(822, 650, 650) | RAM: 0.17 GB
+[002.4s] Loading GT: \\hive3065\Yael_Mishael\Rony\remote_computer backup\nnUNet_resources\mishmar_hanegev_new_work\annotations\mishmar_hanegev_Cu011_samp_2_Rec_nlm.nii.gz | RAM: 0.17 GB
+[002.4s]   shape=(822, 650, 650) | RAM: 0.17 GB
+[002.4s] Creating viewer ... | RAM: 0.17 GB
+[007.1s] Adding volume layer ... | RAM: 0.37 GB
+[007.9s] Volume layer added. | RAM: 0.38 GB
+[007.9s] Adding prediction layer (computing to numpy for paintability) ... | RAM: 0.38 GB
+[009.6s] Prediction layer added. | RAM: 0.74 GB
+[009.6s] Adding GT layer (computing to numpy for paintability) ... | RAM: 0.74 GB
+[011.4s] GT layer added. | RAM: 1.09 GB
+[011.4s] Loading extra layer 'pred_iter02' (computing to numpy) ... | RAM: 1.09 GB
+[013.6s]   'pred_iter02' layer added. | RAM: 1.45 GB
+[019.3s] Building dock widgets ... | RAM: 2.03 GB
+[019.4s] Widgets ready. Entering napari event loop ... | RAM: 2.03 GB

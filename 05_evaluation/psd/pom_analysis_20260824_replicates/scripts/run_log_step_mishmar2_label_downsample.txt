@@ -1,0 +1,62 @@
+[16:05:40] === mishmar_label_downsample_2: majority-vote label downsample ===
+[16:05:40] Loading \\hive3065\Yael_Mishael\Rony\remote_computer backup\nnUNet_resources\mishmar_hanegev_maoz_2_8p8um\inference_output_concat_loess_i2\mishmar_hanegev_maoz_2_8p8um.nii.gz
+[16:06:33]   source shape=(1000, 1000, 1000) unique_labels=[0, 1, 2, 5] voxel_um=8.8
+[16:06:33]   block partition: n=1000 -> m=587 blocks/axis, mean block size=1.7036 vox, achieved voxel size=14.9915um (target 15.000149um)
+[16:11:03]   majority-vote downsample done (269.9s) -> shape=(587, 587, 587)
+[16:11:06]   downsampled unique_labels=[0, 1, 2, 5]
+[16:11:07]   downsampled pore=43,060,424 (21.289%)  pom=3,327,571 (1.645%)
+[16:11:07]   reference: this sample's own native (8.8um) pore=22.984%  pom=1.643%
+
+======================================================================
+SANITY CHECK -- mishmar_label_downsample_2
+======================================================================
+{
+  "branch": "mishmar_label_downsample_2",
+  "achieved_voxel_um": 14.991482112436115,
+  "target_voxel_um": 15.000149,
+  "shape": [
+    587,
+    587,
+    587
+  ],
+  "unique_labels": [
+    0,
+    1,
+    2,
+    5
+  ],
+  "pore_voxel_fraction_pct": 21.289428247182936,
+  "pom_voxel_fraction_pct": 1.6451785064147713,
+  "native_8p8um_pore_voxel_fraction_pct": 22.984,
+  "native_8p8um_pom_voxel_fraction_pct": 1.6431,
+  "pom_collapse_floor_pct": 0.3,
+  "pom_collapsed": false
+}
+[16:11:07] Sanity check passed. Saving downsampled label volume + running full POM pipeline...
+[16:11:18]   wrote C:\Users\rony.schwartz\Documents\nnUNet4SoilXrayCT\05_evaluation\psd\pom_analysis_20260824_replicates\mishmar_label_downsample_2\mishmar_label_downsample_2.nii.gz
+[16:11:20]   pore voxels=43,060,424 (21.289%)  pom voxels=3,327,571 (1.645%)
+[16:11:20] Labeling POM objects (26-connectivity)...
+[16:11:29]   n_objects_raw=3,479  (9.5s)
+[16:11:29]   proposed elbow cutoff = 15 voxels (45.87 um equiv diameter)
+[16:11:31]   denoised POM voxels=3,318,220 (99.72% of raw POM volume)
+[16:11:31] Building pore-dilation masks for adjacency conditions...
+[16:11:39]   pore-adjacent POM voxels=3,318,004
+[16:11:39] Computing percolating pore mask (axis=0, 26-connectivity)...
+[16:11:58]   connected-pore-adjacent POM voxels=3,303,658
+[16:11:58] Computing distance_to_pom_denoised EDT...
+[16:13:28]   EDT done (90.8s)
+[16:13:34] Computing distance_to_pom_pore_adjacent EDT...
+[16:14:43]   EDT done (68.2s)
+[16:14:48] Computing distance_to_pom_connected_pore_adjacent EDT...
+[16:16:14]   EDT done (85.6s)
+[16:16:20] Computing A3 accessibility metrics...
+[16:16:24]   POM volume fraction (denoised) = 1.641%  contact fraction = 0.549
+[16:16:24] Computing Part B object diameters...
+[16:16:24]   n_objects=1,091  median=83.97um  vol-weighted median=1146.44um  largest=2131.58um (45.36% of denoised POM volume)
+[16:16:24] Saving mid-slice kept/removed diagnostic PNG...
+[16:16:25] Wrote C:\Users\rony.schwartz\Documents\nnUNet4SoilXrayCT\05_evaluation\psd\pom_analysis_20260824_replicates\mishmar_label_downsample_2\summary_pom_metrics.json
+[16:16:25] === Sanity checks ===
+[16:16:25] ordering denoised(500.6219177246094) <= pore_adj(501.0016174316406) <= conn_pore_adj(525.8231811523438): True
+[16:16:25] volume-weighted median >= count median: True
+[16:16:26] === DONE ===
+

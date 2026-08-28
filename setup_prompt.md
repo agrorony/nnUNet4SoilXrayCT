@@ -43,14 +43,14 @@ pip install nibabel tifffile SimpleITK pandas matplotlib seaborn napari[all] pyy
 | Package | Used by |
 |---|---|
 | `nibabel` | NIfTI I/O (preprocessing_nnUNet_train.py, `preprocessing_nnUNet_predict*.py`, check_data.py) |
-| `tifffile` | TIFF volume I/O (make_annotations.py, preprocessing_nnUNet_train.py, run_preprocess.py, run_psd_diagnostics.py) |
+| `tifffile` | TIFF volume I/O (01_data_ingestion/make_annotations.py, 02_preprocessing/nnunet/preprocessing_nnUNet_train.py, 02_preprocessing/filters/run_preprocess.py, 05_evaluation/psd/run_psd_diagnostics.py) |
 | `SimpleITK` | Volume split/concatenate (preprocessing_nnUNet_predict_split.py, postprocessing_nnUNet_predict_concatenate.py) |
 | `pandas` | Metrics aggregation (extract_trainlog.py) |
 | `matplotlib` | Plotting (extract_trainlog.py) |
 | `seaborn` | Plotting (extract_trainlog.py) |
 | `napari[all]` | 3D annotation GUI (make_annotations.py); also installs `qtpy` |
 | `pyyaml` | Config loading (legacy pore analysis) |
-| `porespy` | Local thickness via EDT sphere reconstruction (analysis/psd_diagnostics_core.py) |
+| `porespy` | Local thickness via EDT sphere reconstruction (05_evaluation/psd/psd_diagnostics_core.py) |
 
 ### Step 5 — (Optional) Install CuPy for GPU-accelerated PSD analysis
 
@@ -58,7 +58,7 @@ pip install nibabel tifffile SimpleITK pandas matplotlib seaborn napari[all] pyy
 pip install cupy-cuda12x
 ```
 
-Match `12x` to your CUDA version. Only needed for psd_diagnostics_core.py GPU path.
+Match `12x` to your CUDA version. Only needed for 05_evaluation/psd/psd_diagnostics_core.py GPU path.
 
 ### Step 6 — Set nnUNet environment variables
 

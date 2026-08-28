@@ -1,0 +1,72 @@
+[14:52:46] === Run '4soil': ['bnei_reem', 'mishmar_native', 'mishmar_label_downsample', 'mishmar_image_then_predict'] ===
+[14:52:46] === bnei_reem (Bnei Re'em (Vertisol)) -- cutoff=8 vox (from prior run) ===
+[14:52:46] Loading \\hive3065\Yael_Mishael\Rony\remote_computer backup\nnUNet_resources\bnei_reem_fresh_bnei_reem_i4\inference_concatenated\nlm_volume.nii.gz
+[14:52:47] Labeling POM objects (26-connectivity)...
+[14:53:00]   n_objects_raw=2,709  n_kept(>= 8 vox)=1,461
+[14:53:19] Computing per-object voxel-position moments (vectorized bincount)...
+[14:53:21]   batched eigendecomposition of 1,461 3x3 covariance matrices...
+[14:53:21] Computing sphericity (marching cubes per object, voxel-proxy fallback)...
+[14:53:25]   sphericity for 1,461 objects done (3.6s); 0 used the voxel-proxy fallback
+[14:53:25]   43 objects had raw sphericity > 1.0 -- clipped to 1.0 per spec
+[14:53:25]   features computed for 1,461 objects (dropped 0 with undefined contact fraction)
+[14:53:26] === mishmar_native (Mishmar HaNegev (Loess) -- native 5.85um) -- cutoff=21 vox (from prior run) ===
+[14:53:26] Loading \\hive3065\Yael_Mishael\Rony\remote_computer backup\nnUNet_resources\mishmar_hanegev_maoz_3_5p85um\inference_output_concat_loess_i2\mishmar_hanegev_maoz_3_5p85um.nii.gz
+[14:53:30] Labeling POM objects (26-connectivity)...
+[14:54:22]   n_objects_raw=4,391  n_kept(>= 21 vox)=1,726
+[14:55:36] Computing per-object voxel-position moments (vectorized bincount)...
+[14:55:43]   batched eigendecomposition of 1,726 3x3 covariance matrices...
+[14:55:43] Computing sphericity (marching cubes per object, voxel-proxy fallback)...
+[14:55:59]   sphericity for 1,726 objects done (11.7s); 0 used the voxel-proxy fallback
+[14:55:59]   4 objects had raw sphericity > 1.0 -- clipped to 1.0 per spec
+[14:55:59]   features computed for 1,726 objects (dropped 0 with undefined contact fraction)
+[14:56:00] === mishmar_label_downsample (Mishmar HaNegev (Loess) -- label-downsampled ~15um) -- cutoff=13 vox (from prior run) ===
+[14:56:00] Loading C:\Users\rony.schwartz\Documents\nnUNet4SoilXrayCT\05_evaluation\psd\pom_analysis_20260824_ablation\mishmar_label_downsample\mishmar_label_downsample.nii.gz
+[14:56:00] Labeling POM objects (26-connectivity)...
+[14:56:02]   n_objects_raw=1,902  n_kept(>= 13 vox)=656
+[14:56:05] Computing per-object voxel-position moments (vectorized bincount)...
+[14:56:05]   batched eigendecomposition of 656 3x3 covariance matrices...
+[14:56:05] Computing sphericity (marching cubes per object, voxel-proxy fallback)...
+[14:56:07]   sphericity for 656 objects done (1.2s); 0 used the voxel-proxy fallback
+[14:56:07]   3 objects had raw sphericity > 1.0 -- clipped to 1.0 per spec
+[14:56:07]   features computed for 656 objects (dropped 0 with undefined contact fraction)
+[14:56:07] === mishmar_image_then_predict (Mishmar HaNegev (Loess) -- image-downsampled ~15um then predicted) -- cutoff=24 vox (from prior run) ===
+[14:56:07] Loading \\hive3065\Yael_Mishael\Rony\remote_computer backup\nnUNet_resources\mishmar_hanegev_maoz_3_5p85um\ablation_image_downsample\inference_output_concat_ds15um\mishmar_image_then_predict.nii.gz
+[14:56:07] Labeling POM objects (26-connectivity)...
+[14:56:09]   n_objects_raw=432  n_kept(>= 24 vox)=115
+[14:56:12] Computing per-object voxel-position moments (vectorized bincount)...
+[14:56:12]   batched eigendecomposition of 115 3x3 covariance matrices...
+[14:56:12] Computing sphericity (marching cubes per object, voxel-proxy fallback)...
+[14:56:13]   sphericity for 115 objects done (0.4s); 0 used the voxel-proxy fallback
+[14:56:13]   features computed for 115 objects (dropped 0 with undefined contact fraction)
+[14:56:13] Fitting StandardScaler across ONLY this run's soils (['bnei_reem', 'mishmar_native', 'mishmar_label_downsample', 'mishmar_image_then_predict']) -- no pooling with excluded branches...
+[14:56:13] === bnei_reem: spatial pattern ===
+[14:56:13]   n=1461  mean NN=304.77um  R=0.640 (aggregated/clustered)
+[14:56:13] === bnei_reem: clustering ===
+[14:56:29]   best_k=6  silhouette=0.245
+[14:56:30] === mishmar_native: spatial pattern ===
+[14:56:30]   n=1726  mean NN=221.02um  R=0.818 (aggregated/clustered)
+[14:56:30] === mishmar_native: clustering ===
+[14:56:30]   best_k=4  silhouette=0.272
+[14:56:31] === mishmar_label_downsample: spatial pattern ===
+[14:56:31]   n=656  mean NN=346.79um  R=0.930 (close to random (CSR))
+[14:56:31] === mishmar_label_downsample: clustering ===
+[14:56:31]   best_k=2  silhouette=0.263
+[14:56:32] === mishmar_image_then_predict: spatial pattern ===
+[14:56:32]   n=115  mean NN=629.45um  R=0.945 (close to random (CSR))
+[14:56:32] === mishmar_image_then_predict: clustering ===
+[14:56:32]   best_k=5  silhouette=0.263
+[14:56:32] Wrote pom_spatial_pattern_summary_4soil.json
+[14:56:32] Wrote pom_cluster_profiles_4soil.csv
+[14:56:32] === Cross-soil archetype matching ===
+[14:56:32] Archetypes: k=6 (silhouette=0.467)  chi2=1591.12 dof=15 p=0
+
+Contingency table (soil x archetype):
+archetype_id                  0    1    2    3    4   5
+soil                                                   
+bnei_reem                   251  246  369  311  187  97
+mishmar_image_then_predict   17   22   36    9   31   0
+mishmar_label_downsample      0    0    0  223  433   0
+mishmar_native              364  286  604    0  472   0
+[14:56:32] Wrote pom_object_features_4soil.csv (3,958 rows)
+[14:56:32] DONE (4soil)
+

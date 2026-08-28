@@ -1,0 +1,507 @@
+{
+  "project": {
+    "name": "nnUNet4SoilXrayCT",
+    "canonical_data_root": "\\\\hive3065\\Yael_Mishael\\Rony\\remote_computer backup\\10.5",
+    "updated_at": "2026-06-30T20:00:00Z"
+  },
+  "paths": {
+    "canonical_data_root": "\\\\hive3065\\Yael_Mishael\\Rony\\remote_computer backup\\10.5",
+    "nnunet_resources": "\\\\hive3065\\Yael_Mishael\\Rony\\remote_computer backup\\nnUNet_resources"
+  },
+  "training_runs": {
+    "mishmar_hanegev_maoz_3_5p85um_loess_i2": {
+      "description": "Continue from mishmar_hanegev_maoz_3_5p85um_scratch checkpoint with new 2-slice bootstrap annotations (z 715-716, offset_layers=48)",
+      "sample_id": "mishmar_hanegev_maoz_3_5p85um",
+      "gpu": 1,
+      "pretrained_from": "mishmar_hanegev_maoz_3_5p85um_scratch",
+      "annotation": "\\\\hive3065\\Yael_Mishael\\Rony\\remote_computer backup\\nnUNet_resources\\mishmar_hanegev_new_work\\mishmar_hanegev_maoz_3_5p85um\\annotations\\mishmar_hanegev_maoz_3_5p85um.nii.gz",
+      "model_dir": "\\\\hive3065\\Yael_Mishael\\Rony\\remote_computer backup\\nnUNet_resources\\multi_sample_mishmar_hanegev_maoz_3_5p85um_loess_i2",
+      "checkpoint": "\\\\hive3065\\Yael_Mishael\\Rony\\remote_computer backup\\nnUNet_resources\\multi_sample_mishmar_hanegev_maoz_3_5p85um_loess_i2\\nnUNet_results\\Dataset777_GCEF\\nnUNetTrainer_betterIgnoreSampling_earlyStopValLoss__nnUNetPlans__3d_fullres\\fold_0\\checkpoint_final.pth",
+      "status": "complete",
+      "stopped_at_epoch": 69,
+      "best_val_loss": -0.911783,
+      "best_ema_dice": 0.9635,
+      "completed_at": "2026-07-15"
+    },
+    "mishmar_hanegev_maoz_3_5p85um_scratch": {
+      "description": "Train from scratch on mishmar_hanegev_maoz_3_5p85um with 3-slice bootstrap annotations (z 499-501, offset_layers=48)",
+      "sample_id": "mishmar_hanegev_maoz_3_5p85um",
+      "gpu": 1,
+      "pretrained_from": null,
+      "annotation": "\\\\hive3065\\Yael_Mishael\\Rony\\remote_computer backup\\nnUNet_resources\\mishmar_hanegev_new_work\\mishmar_hanegev_maoz_3_5p85um\\annotations\\mishmar_hanegev_maoz_3_5p85um.nii.gz",
+      "model_dir": "\\\\hive3065\\Yael_Mishael\\Rony\\remote_computer backup\\nnUNet_resources\\multi_sample_mishmar_hanegev_maoz_3_5p85um_scratch",
+      "checkpoint": "\\\\hive3065\\Yael_Mishael\\Rony\\remote_computer backup\\nnUNet_resources\\multi_sample_mishmar_hanegev_maoz_3_5p85um_scratch\\nnUNet_results\\Dataset777_GCEF\\nnUNetTrainer_betterIgnoreSampling_earlyStopValLoss__nnUNetPlans__3d_fullres\\fold_0\\checkpoint_final.pth",
+      "status": "complete",
+      "stopped_at_epoch": 64,
+      "best_val_loss": -0.923679,
+      "best_ema_dice": 0.9579,
+      "completed_at": "2026-07-12"
+    },
+    "iter04_continue_bnei_reem": {
+      "description": "Fine-tune from iter04 checkpoint on nlm_volume with merged_GT.nii.gz",
+      "sample_id": "nlm_volume",
+      "gpu": 0,
+      "pretrained_from": "multi_sample_iter04",
+      "annotation": "\\\\hive3065\\Yael_Mishael\\Rony\\remote_computer backup\\microSAM_inputs\\merged_GT.nii.gz",
+      "model_dir": "\\\\hive3065\\Yael_Mishael\\Rony\\remote_computer backup\\nnUNet_resources\\multi_sample_iter04_continue",
+      "checkpoint": "\\\\hive3065\\Yael_Mishael\\Rony\\remote_computer backup\\nnUNet_resources\\multi_sample_iter04_continue\\nnUNet_results\\Dataset777_GCEF\\nnUNetTrainer_betterIgnoreSampling_earlyStopValLoss__nnUNetPlans__3d_fullres\\fold_0\\checkpoint_final.pth",
+      "status": "complete",
+      "stopped_at_epoch": 44,
+      "final_train_loss": -0.7545,
+      "final_val_loss": -0.7723,
+      "inference_output": "\\\\hive3065\\Yael_Mishael\\Rony\\remote_computer backup\\nnUNet_resources\\bnei_reem_iter04_continue\\inference_concatenated\\nlm_volume.nii.gz",
+      "completed_at": "2026-06-28"
+    },
+    "fresh_bnei_reem": {
+      "description": "Train from scratch (no pretrained weights) on nlm_volume with merged_GT.nii.gz",
+      "sample_id": "nlm_volume",
+      "gpu": 1,
+      "pretrained_from": null,
+      "annotation": "\\\\hive3065\\Yael_Mishael\\Rony\\remote_computer backup\\microSAM_inputs\\merged_GT.nii.gz",
+      "model_dir": "\\\\hive3065\\Yael_Mishael\\Rony\\remote_computer backup\\nnUNet_resources\\bnei_reem_iter04\\multi_sample_fresh_bnei_reem",
+      "checkpoint": "\\\\hive3065\\Yael_Mishael\\Rony\\remote_computer backup\\nnUNet_resources\\bnei_reem_iter04\\multi_sample_fresh_bnei_reem\\nnUNet_results\\Dataset777_GCEF\\nnUNetTrainer_betterIgnoreSampling_earlyStopValLoss__nnUNetPlans__3d_fullres\\fold_0\\checkpoint_final.pth",
+      "status": "complete",
+      "inference_output": "\\\\hive3065\\Yael_Mishael\\Rony\\remote_computer backup\\nnUNet_resources\\bnei_reem_fresh_bnei_reem\\inference_concatenated\\nlm_volume.nii.gz",
+      "completed_at": "2026-06-28"
+    },
+    "fresh_bnei_reem_i2": {
+      "description": "Fine-tune from fresh_bnei_reem checkpoint on nlm_volume with annotations_i2.nii.gz (new microsam annotations)",
+      "sample_id": "nlm_volume",
+      "gpu": 0,
+      "pretrained_from": "fresh_bnei_reem",
+      "annotation": "\\\\hive3065\\Yael_Mishael\\Rony\\remote_computer backup\\nnUNet_resources\\fresh_train_annotations_bnei_reem\\annotations_i2.nii.gz",
+      "model_dir": "\\\\hive3065\\Yael_Mishael\\Rony\\remote_computer backup\\nnUNet_resources\\multi_sample_fresh_bnei_reem_i2",
+      "checkpoint": "\\\\hive3065\\Yael_Mishael\\Rony\\remote_computer backup\\nnUNet_resources\\multi_sample_fresh_bnei_reem_i2\\nnUNet_results\\Dataset777_GCEF\\nnUNetTrainer_betterIgnoreSampling_earlyStopValLoss__nnUNetPlans__3d_fullres\\fold_0\\checkpoint_final.pth",
+      "status": "complete",
+      "launched_at": "2026-06-30",
+      "inference_output": "\\\\hive3065\\Yael_Mishael\\Rony\\remote_computer backup\\nnUNet_resources\\bnei_reem_fresh_bnei_reem_i2\\inference_concatenated\\nlm_volume.nii.gz",
+      "completed_at": "2026-07-01"
+    },
+    "fresh_bnei_reem_i3": {
+      "description": "Fine-tune from fresh_bnei_reem_i2 checkpoint on nlm_volume with annotations_i3.nii.gz (new microsam annotations)",
+      "sample_id": "nlm_volume",
+      "gpu": 0,
+      "pretrained_from": "fresh_bnei_reem_i2",
+      "annotation": "\\\\hive3065\\Yael_Mishael\\Rony\\remote_computer backup\\nnUNet_resources\\fresh_train_annotations_bnei_reem\\annotations_i3.nii.gz",
+      "model_dir": "\\\\hive3065\\Yael_Mishael\\Rony\\remote_computer backup\\nnUNet_resources\\multi_sample_fresh_bnei_reem_i3",
+      "checkpoint": "\\\\hive3065\\Yael_Mishael\\Rony\\remote_computer backup\\nnUNet_resources\\multi_sample_fresh_bnei_reem_i3\\nnUNet_results\\Dataset777_GCEF\\nnUNetTrainer_betterIgnoreSampling_earlyStopValLoss__nnUNetPlans__3d_fullres\\fold_0\\checkpoint_final.pth",
+      "status": "complete",
+      "launched_at": "2026-07-01",
+      "completed_at": "2026-07-02",
+      "inference_output": "\\\\hive3065\\Yael_Mishael\\Rony\\remote_computer backup\\nnUNet_resources\\bnei_reem_fresh_bnei_reem_i3\\inference_concatenated\\nlm_volume.nii.gz"
+    }
+  },
+  "samples": [
+    {
+      "sample_id": "mishmar_hanegev_Cu011_samp_2_Rec_nlm",
+      "raw_tiff_path": "\\\\hive3065\\Yael_Mishael\\Rony\\remote_computer backup\\10.5\\mishmar_hanegev_Cu011_samp_2_Rec_nlm.tif",
+      "nifti_input_path": "\\\\hive3065\\Yael_Mishael\\Rony\\remote_computer backup\\nnUNet_resources\\mishmar_hanegev_Cu011_samp_2_Rec_nlm\\nifti_predict\\mishmar_hanegev_Cu011_samp_2_Rec_nlm_0000.nii.gz",
+      "split_input_dir": "\\\\hive3065\\Yael_Mishael\\Rony\\remote_computer backup\\nnUNet_resources\\mishmar_hanegev_Cu011_samp_2_Rec_nlm\\inference_input",
+      "prediction_output_dir": "\\\\hive3065\\Yael_Mishael\\Rony\\remote_computer backup\\nnUNet_resources\\mishmar_hanegev_Cu011_samp_2_Rec_nlm\\inference_output",
+      "prediction_concatenated_path": "\\\\hive3065\\Yael_Mishael\\Rony\\remote_computer backup\\nnUNet_resources\\mishmar_hanegev_Cu011_samp_2_Rec_nlm\\inference_output_concat\\mishmar_hanegev_Cu011_samp_2_Rec_nlm.nii.gz",
+      "bad_slice_manifest_path": "C:\\Users\\rony.schwartz\\Documents\\nnUNet4SoilXrayCT\\analysis\\selected_outputs\\mishmar_hanegev_Cu011_samp_2_Rec_nlm\\bad_slices_iter_02_corrected_latest_predictions_yfix.json",
+      "annotation_versions": [
+        "\\\\hive3065\\Yael_Mishael\\Rony\\remote_computer backup\\10.5\\bootstrap_outputs_fullctx\\mishmar_hanegev_Cu011_samp_2_Rec_nlm\\annotations_v20260610_r01\\mishmar_hanegev_Cu011_samp_2_Rec_nlm.tif",
+        "\\\\hive3065\\Yael_Mishael\\Rony\\remote_computer backup\\10.5\\bootstrap_outputs_fullctx\\mishmar_hanegev_Cu011_samp_2_Rec_nlm\\annotations_v20260603_r05\\mishmar_hanegev_Cu011_samp_2_Rec_nlm.tif",
+        "\\\\hive3065\\Yael_Mishael\\Rony\\remote_computer backup\\10.5\\bootstrap_outputs_fullctx\\mishmar_hanegev_Cu011_samp_2_Rec_nlm\\annotations_v20260603_r04\\mishmar_hanegev_Cu011_samp_2_Rec_nlm.tif",
+        "\\\\hive3065\\Yael_Mishael\\Rony\\remote_computer backup\\10.5\\bootstrap_outputs_fullctx\\mishmar_hanegev_Cu011_samp_2_Rec_nlm\\annotations_v20260603_r03\\mishmar_hanegev_Cu011_samp_2_Rec_nlm.tif",
+        "\\\\hive3065\\Yael_Mishael\\Rony\\remote_computer backup\\10.5\\bootstrap_outputs_fullctx\\mishmar_hanegev_Cu011_samp_2_Rec_nlm\\annotations_v20260602_r01\\mishmar_hanegev_Cu011_samp_2_Rec_nlm.tif",
+        "\\\\hive3065\\Yael_Mishael\\Rony\\remote_computer backup\\10.5\\bootstrap_outputs_fullctx\\mishmar_hanegev_Cu011_samp_2_Rec_nlm\\annotations_v20260525_r02\\mishmar_hanegev_Cu011_samp_2_Rec_nlm.tif",
+        "\\\\hive3065\\Yael_Mishael\\Rony\\remote_computer backup\\10.5\\bootstrap_outputs_fullctx\\mishmar_hanegev_Cu011_samp_2_Rec_nlm\\annotations_v20260525_r01\\mishmar_hanegev_Cu011_samp_2_Rec_nlm.tif",
+        "\\\\hive3065\\Yael_Mishael\\Rony\\remote_computer backup\\10.5\\bootstrap_outputs_fullctx\\mishmar_hanegev_Cu011_samp_2_Rec_nlm\\annotations_v20260524_r01\\mishmar_hanegev_Cu011_samp_2_Rec_nlm.tif",
+        "\\\\hive3065\\Yael_Mishael\\Rony\\remote_computer backup\\10.5\\annotations\\mishmar_hanegev_Cu011_samp_2_Rec_nlm.tif",
+        "\\\\hive3065\\Yael_Mishael\\Rony\\remote_computer backup\\10.5\\bootstrap_outputs_fullctx\\mishmar_hanegev_Cu011_samp_2_Rec_nlm\\annotations\\mishmar_hanegev_Cu011_samp_2_Rec_nlm.tif",
+        "\\\\hive3065\\Yael_Mishael\\Rony\\remote_computer backup\\10.5\\bootstrap_outputs\\mishmar_hanegev_Cu011_samp_2_Rec_nlm\\annotations\\mishmar_hanegev_Cu011_samp_2_Rec_nlm.tif"
+      ],
+      "latest_annotation_path": "\\\\hive3065\\Yael_Mishael\\Rony\\remote_computer backup\\10.5\\bootstrap_outputs_fullctx\\mishmar_hanegev_Cu011_samp_2_Rec_nlm\\annotations_v20260610_r01\\mishmar_hanegev_Cu011_samp_2_Rec_nlm.tif",
+      "status": "ready_for_training"
+    },
+    {
+      "sample_id": "mishmar_hanegev_maoz_3_5p85um",
+      "raw_tiff_path": "\\\\hive3065\\Yael_Mishael\\Rony\\remote_computer backup\\10.5\\mishmar_hanegev_maoz_3_5p85um.tif",
+      "source_slices_dir": "\\\\HIVE3065\\Yael_Mishael\\Rony\\mishmar_hanegev_maoz\\3-16mm_diam_5.85um",
+      "preprocessing": {
+        "crop": "center-crop cube 1000x1000x1000 (Z,Y,X), voxel size 5.85um",
+        "steps": ["stack_slices_to_volume", "norm200", "CUDA NLM (chunked, patch_size=5, patch_distance=6, chunk_size=128)"],
+        "script": "02_preprocessing/filters/crop_center_and_preprocess.py"
+      },
+      "annotation_versions": [],
+      "latest_annotation_path": null,
+      "status": "preprocessed_awaiting_annotation"
+    },
+    {
+      "sample_id": "mishmar_hanegev_maoz_2_8p8um",
+      "raw_tiff_path": "\\\\hive3065\\Yael_Mishael\\Rony\\remote_computer backup\\10.5\\mishmar_hanegev_maoz_2_8p8um.tif",
+      "source_slices_dir": "\\\\HIVE3065\\Yael_Mishael\\Rony\\mishmar_hanegev_maoz\\2-16mm_diam_8.8um\\2-16mm_diam_8.8um",
+      "preprocessing": {
+        "crop": "center-crop cube 1000x1000x1000 (Z,Y,X), voxel size 8.8um",
+        "steps": ["stack_slices_to_volume", "norm200", "CUDA NLM (chunked, patch_size=5, patch_distance=6, chunk_size=128)"],
+        "script": "02_preprocessing/filters/crop_center_and_preprocess.py"
+      },
+      "annotation_versions": [],
+      "latest_annotation_path": null,
+      "status": "preprocessed_awaiting_annotation"
+    },
+    {
+      "sample_id": "Rehovot_samp3_highkV_Cu0.11_15um",
+      "raw_tiff_path": "\\\\hive3065\\Yael_Mishael\\Rony\\remote_computer backup\\10.5\\Rehovot_samp3_highkV_Cu0.11_15um.tif",
+      "source_slices_dir": "\\\\hive3065\\Yael_Mishael\\Rony\\10.12.25_Rehovot_samp_3_clean\\Rehovot_samp3_highkV_Cu0.11_15um_Rec",
+      "preprocessing": {
+        "crop": "center-crop cube 650x650x650 (Z,Y,X), voxel size 15um",
+        "steps": ["stack_slices_to_volume", "norm200", "CUDA NLM (chunked, patch_size=5, patch_distance=6, chunk_size=128)"],
+        "script": "02_preprocessing/filters/crop_center_and_preprocess.py"
+      },
+      "notes": "Raw scan folder had 6 corrupted 0-byte projection files (_ar0..._ar5.tif) and a stray reconstruction run (811 _rec*.tif slices, 1236x1236, plus rec.log/bmp) that had been saved directly into the scan folder instead of a dedicated output folder. Corrupted files excluded via a validated clean copy at 10.12.25_Rehovot_samp_3_clean; reconstruction slices moved into a proper _Rec subfolder there before preprocessing. Only 811 Z-slices available, hence 650^3 crop (not the usual 1000^3 default).",
+      "annotation_versions": [],
+      "latest_annotation_path": null,
+      "status": "preprocessed_awaiting_annotation"
+    },
+    {
+      "sample_id": "nlm_volume",
+      "raw_tiff_path": "\\\\hive3065\\Yael_Mishael\\Rony\\remote_computer backup\\10.5\\nlm_volume.tif",
+      "nifti_input_path": "\\\\hive3065\\Yael_Mishael\\Rony\\remote_computer backup\\nnUNet_resources\\bnei_reem_iter04\\nifti_predict\\nlm_volume_0000.nii.gz",
+      "split_input_dir": "\\\\hive3065\\Yael_Mishael\\Rony\\remote_computer backup\\nnUNet_resources\\bnei_reem_iter04\\inference_input",
+      "prediction_output_dir": "\\\\hive3065\\Yael_Mishael\\Rony\\remote_computer backup\\nnUNet_resources\\bnei_reem_iter04_continue\\inference_output",
+      "prediction_concatenated_path": "\\\\hive3065\\Yael_Mishael\\Rony\\remote_computer backup\\nnUNet_resources\\bnei_reem_iter04_continue\\inference_concatenated\\nlm_volume.nii.gz",
+      "bad_slice_manifest_path": "C:\\Users\\rony.schwartz\\Documents\\nnUNet4SoilXrayCT\\analysis\\selected_outputs\\nlm_volume\\bad_slices_iter_02_corrected_latest_predictions_yfix.json",
+      "annotation_versions": [
+        "\\\\hive3065\\Yael_Mishael\\Rony\\remote_computer backup\\nnUNet_resources\\fresh_train_annotations_bnei_reem\\annotations_i3.nii.gz",
+        "\\\\hive3065\\Yael_Mishael\\Rony\\remote_computer backup\\nnUNet_resources\\fresh_train_annotations_bnei_reem\\annotations_i2.nii.gz",
+        "\\\\hive3065\\Yael_Mishael\\Rony\\remote_computer backup\\microSAM_inputs\\merged_GT.nii.gz",
+        "\\\\hive3065\\Yael_Mishael\\Rony\\remote_computer backup\\10.5\\annotations_v20260617_r01\\nlm_volume.tif",
+        "\\\\hive3065\\Yael_Mishael\\Rony\\remote_computer backup\\10.5\\annotations_v20260603_r04\\nlm_volume.tif",
+        "\\\\hive3065\\Yael_Mishael\\Rony\\remote_computer backup\\10.5\\annotations_v20260603_r03\\nlm_volume.tif",
+        "\\\\hive3065\\Yael_Mishael\\Rony\\remote_computer backup\\10.5\\annotations_v20260602_r01\\nlm_volume.tif",
+        "\\\\hive3065\\Yael_Mishael\\Rony\\remote_computer backup\\10.5\\annotations\\nlm_volume.tif"
+      ],
+      "latest_annotation_path": "\\\\hive3065\\Yael_Mishael\\Rony\\remote_computer backup\\microSAM_inputs\\merged_GT.nii.gz",
+      "status": "ready_for_annotation"
+    }
+  ],
+  "manifests": {
+    "bad_slice_manifests": []
+  },
+  "annotations": {
+    "active_latest": {
+      "mishmar_hanegev_Cu011_samp_2_Rec_nlm": "\\\\hive3065\\Yael_Mishael\\Rony\\remote_computer backup\\10.5\\bootstrap_outputs_fullctx\\mishmar_hanegev_Cu011_samp_2_Rec_nlm\\annotations_v20260610_r01\\mishmar_hanegev_Cu011_samp_2_Rec_nlm.tif",
+      "nlm_volume": "\\\\hive3065\\Yael_Mishael\\Rony\\remote_computer backup\\microSAM_inputs\\merged_GT.nii.gz"
+    }
+  },
+  "checks": {
+    "last_gate": {
+      "timestamp": "2026-06-28T14:30:00Z",
+      "sample_id": "nlm_volume",
+      "decision": "GREEN",
+      "reason": "iter04_continue training complete (epoch 44, val_loss=-0.7723); inference complete; napari+microsam opened on slices 50-70 with merged_GT.nii.gz",
+      "resolved_paths": {
+        "latest_annotation": "\\\\hive3065\\Yael_Mishael\\Rony\\remote_computer backup\\microSAM_inputs\\merged_GT.nii.gz",
+        "latest_prediction": "\\\\hive3065\\Yael_Mishael\\Rony\\remote_computer backup\\nnUNet_resources\\bnei_reem_iter04_continue\\inference_concatenated\\nlm_volume.nii.gz"
+      }
+    }
+  },
+  "history": [
+    {
+      "timestamp": "2026-08-04T00:00:00Z",
+      "action": "clean_copy_and_preprocess_rehovot_samp3",
+      "sample_id": "Rehovot_samp3_highkV_Cu0.11_15um",
+      "decision": "GREEN",
+      "reason": "Original scan folder (10.12.25_Rehovot_samp_3) had 6 zero-byte corrupted projection files (_ar0-_ar5.tif) and no delete permission in place. Made a validated clean copy (10.12.25_Rehovot_samp_3_clean) skipping those 6 files (1840 files copied, decode-checked via tifffile/PIL). A reconstruction run performed afterward saved 811 _rec*.tif slices (1236x1236) plus rec.log/bmp directly into the clean copy instead of a dedicated output folder; moved into a new Rehovot_samp3_highkV_Cu0.11_15um_Rec subfolder there. Ran crop_center_and_preprocess.py (center-crop 650^3 cube, limited by 811 available Z-slices, then norm200 + CUDA NLM on GPU) to produce the training-ready volume.",
+      "paths_touched": [
+        "\\\\hive3065\\Yael_Mishael\\Rony\\10.12.25_Rehovot_samp_3_clean",
+        "\\\\hive3065\\Yael_Mishael\\Rony\\10.12.25_Rehovot_samp_3_clean\\Rehovot_samp3_highkV_Cu0.11_15um_Rec",
+        "\\\\hive3065\\Yael_Mishael\\Rony\\remote_computer backup\\10.5\\Rehovot_samp3_highkV_Cu0.11_15um.tif"
+      ],
+      "requested_by_agent": "Claude Code",
+      "approved_by_agent": "Claude Code"
+    },
+    {
+      "timestamp": "2026-07-12T00:00:00Z",
+      "action": "preprocess_mishmar_hanegev_maoz_scans",
+      "sample_id": "mishmar_hanegev_maoz_3_5p85um, mishmar_hanegev_maoz_2_8p8um",
+      "decision": "GREEN",
+      "reason": "New higher-quality mishmar hanegev scans replacing the stuck prior sample. Raw slice stacks (1845^2x1353 @5.85um and 1794x1807x3311 @8.8um) center-cropped to 1000^3 cubes and run through norm200 + CUDA NLM (chunked) on GPU1. Outputs exported to canonical 10.5 root.",
+      "paths_touched": [
+        "\\\\hive3065\\Yael_Mishael\\Rony\\remote_computer backup\\10.5\\mishmar_hanegev_maoz_3_5p85um.tif",
+        "\\\\hive3065\\Yael_Mishael\\Rony\\remote_computer backup\\10.5\\mishmar_hanegev_maoz_2_8p8um.tif"
+      ],
+      "requested_by_agent": "Claude Code",
+      "approved_by_agent": "Claude Code"
+    },
+    {
+      "timestamp": "2026-07-01T00:00:00Z",
+      "action": "launch_fresh_bnei_reem_i3_training",
+      "sample_id": "nlm_volume",
+      "decision": "GREEN",
+      "reason": "Fine-tuning from fresh_bnei_reem_i2 checkpoint with new microsam annotations (annotations_i3.nii.gz, labels [0,1,2,3,6], z-range 26-551). Model stored at multi_sample_fresh_bnei_reem_i3, inference output at bnei_reem_fresh_bnei_reem_i3. PID 16196.",
+      "paths_touched": [
+        "\\\\hive3065\\Yael_Mishael\\Rony\\remote_computer backup\\nnUNet_resources\\fresh_train_annotations_bnei_reem\\annotations_i3.nii.gz",
+        "\\\\hive3065\\Yael_Mishael\\Rony\\remote_computer backup\\nnUNet_resources\\multi_sample_fresh_bnei_reem_i3",
+        "\\\\hive3065\\Yael_Mishael\\Rony\\remote_computer backup\\nnUNet_resources\\bnei_reem_fresh_bnei_reem_i3"
+      ],
+      "requested_by_agent": "Claude Code",
+      "approved_by_agent": "Claude Code"
+    },
+    {
+      "timestamp": "2026-06-30T20:00:00Z",
+      "action": "launch_fresh_bnei_reem_i2_training",
+      "sample_id": "nlm_volume",
+      "decision": "GREEN",
+      "reason": "Fine-tuning from fresh_bnei_reem checkpoint with new microsam annotations (annotations_i2.nii.gz, labels [0,1,2,3,6], z-range 26-551). Model will be stored at multi_sample_fresh_bnei_reem_i2, inference output at bnei_reem_fresh_bnei_reem_i2.",
+      "paths_touched": [
+        "\\\\hive3065\\Yael_Mishael\\Rony\\remote_computer backup\\nnUNet_resources\\fresh_train_annotations_bnei_reem\\annotations_i2.nii.gz",
+        "\\\\hive3065\\Yael_Mishael\\Rony\\remote_computer backup\\nnUNet_resources\\multi_sample_fresh_bnei_reem_i2",
+        "\\\\hive3065\\Yael_Mishael\\Rony\\remote_computer backup\\nnUNet_resources\\bnei_reem_fresh_bnei_reem_i2"
+      ],
+      "requested_by_agent": "Claude Code",
+      "approved_by_agent": "Claude Code"
+    },
+    {
+      "timestamp": "2026-06-28T14:30:00Z",
+      "action": "register_iter05_training_outputs",
+      "sample_id": "nlm_volume",
+      "decision": "GREEN",
+      "reason": "Two parallel training runs completed on merged_GT.nii.gz: iter04_continue (GPU0, fine-tune, epoch 44, val_loss=-0.7723) and fresh_bnei_reem (GPU1, from scratch, in progress ~epoch74, best_val_loss=-0.4168). Inference run with iter04_continue model. Registry updated to reflect new paths.",
+      "paths_touched": [
+        "\\\\hive3065\\Yael_Mishael\\Rony\\remote_computer backup\\nnUNet_resources\\multi_sample_iter04_continue",
+        "\\\\hive3065\\Yael_Mishael\\Rony\\remote_computer backup\\nnUNet_resources\\multi_sample_fresh_bnei_reem",
+        "\\\\hive3065\\Yael_Mishael\\Rony\\remote_computer backup\\nnUNet_resources\\bnei_reem_iter04_continue\\inference_concatenated\\nlm_volume.nii.gz",
+        "\\\\hive3065\\Yael_Mishael\\Rony\\remote_computer backup\\microSAM_inputs\\merged_GT.nii.gz"
+      ],
+      "requested_by_agent": "Claude Code",
+      "approved_by_agent": "Claude Code"
+    },
+    {
+      "timestamp": "2026-06-17T16:27:00Z",
+      "action": "mark_annotations_ready_for_training_iter03",
+      "sample_id": "nlm_volume",
+      "decision": "GREEN",
+      "reason": "Latest annotations (v20260617_r01) validated and ready for training input preprocessing",
+      "paths_touched": [
+        "\\\\hive3065\\Yael_Mishael\\Rony\\remote_computer backup\\10.5\\annotations_v20260617_r01\\nlm_volume.tif"
+      ],
+      "requested_by_agent": "Claude Code",
+      "approved_by_agent": "DataRegistryPathValidationAgent"
+    },
+    {
+      "timestamp": "2026-06-17T15:47:00Z",
+      "action": "mark_annotations_ready_for_training_iter03",
+      "sample_id": "mishmar_hanegev_Cu011_samp_2_Rec_nlm",
+      "decision": "GREEN",
+      "reason": "Latest annotations (v20260610_r01) validated and ready for training input preprocessing",
+      "paths_touched": [
+        "\\\\hive3065\\Yael_Mishael\\Rony\\remote_computer backup\\10.5\\bootstrap_outputs_fullctx\\mishmar_hanegev_Cu011_samp_2_Rec_nlm\\annotations_v20260610_r01\\mishmar_hanegev_Cu011_samp_2_Rec_nlm.tif"
+      ],
+      "requested_by_agent": "Claude Code",
+      "approved_by_agent": "DataRegistryPathValidationAgent"
+    },
+    {
+      "timestamp": "2026-06-03T13:08:00",
+      "action": "flip_y_only_slices_393_527_in_latest_annotation",
+      "sample_id": "mishmar_hanegev_Cu011_samp_2_Rec_nlm",
+      "decision": "GREEN",
+      "paths_touched": [
+        "\\\\hive3065\\Yael_Mishael\\Rony\\remote_computer backup\\10.5\\bootstrap_outputs_fullctx\\mishmar_hanegev_Cu011_samp_2_Rec_nlm\\annotations_v20260603_r04\\mishmar_hanegev_Cu011_samp_2_Rec_nlm.tif",
+        "\\\\hive3065\\Yael_Mishael\\Rony\\remote_computer backup\\10.5\\bootstrap_outputs_fullctx\\mishmar_hanegev_Cu011_samp_2_Rec_nlm\\annotations_v20260603_r05\\mishmar_hanegev_Cu011_samp_2_Rec_nlm.tif"
+      ],
+      "requested_by_agent": "GitHub Copilot",
+      "approved_by_agent": "GitHub Copilot"
+    },
+    {
+      "timestamp": "2026-06-03T13:00:10",
+      "action": "inject_predictions_into_latest_annotation_iter_02_corrected_latest_predictions_yfix",
+      "sample_id": "mishmar_hanegev_Cu011_samp_2_Rec_nlm",
+      "decision": "GREEN",
+      "paths_touched": [
+        "\\\\hive3065\\Yael_Mishael\\Rony\\remote_computer backup\\10.5\\bootstrap_outputs_fullctx\\mishmar_hanegev_Cu011_samp_2_Rec_nlm\\annotations_v20260603_r03\\mishmar_hanegev_Cu011_samp_2_Rec_nlm.tif",
+        "\\\\hive3065\\Yael_Mishael\\Rony\\remote_computer backup\\nnUNet_resources\\mishmar_hanegev_Cu011_samp_2_Rec_nlm\\inference_output_concat_20260602_124611\\mishmar_hanegev_Cu011_samp_2_Rec_nlm.nii.gz",
+        "\\\\hive3065\\Yael_Mishael\\Rony\\remote_computer backup\\10.5\\bootstrap_outputs_fullctx\\mishmar_hanegev_Cu011_samp_2_Rec_nlm\\annotations_v20260603_r04\\mishmar_hanegev_Cu011_samp_2_Rec_nlm.tif",
+        "C:\\Users\\rony.schwartz\\Documents\\nnUNet4SoilXrayCT\\analysis\\selected_outputs\\mishmar_hanegev_Cu011_samp_2_Rec_nlm\\bad_slices_iter_02_corrected_latest_predictions_yfix.json",
+        "C:\\Users\\rony.schwartz\\Documents\\nnUNet4SoilXrayCT\\analysis\\selected_outputs\\mishmar_hanegev_Cu011_samp_2_Rec_nlm\\injected_predictions_iter_02_corrected_latest_predictions_yfix.json"
+      ],
+      "requested_by_agent": "GitHub Copilot",
+      "approved_by_agent": "Data Registry and Path Validation"
+    },
+    {
+      "timestamp": "2026-06-03T13:00:10",
+      "action": "inject_predictions_into_latest_annotation_iter_02_corrected_latest_predictions_yfix",
+      "sample_id": "nlm_volume",
+      "decision": "GREEN",
+      "paths_touched": [
+        "\\\\hive3065\\Yael_Mishael\\Rony\\remote_computer backup\\10.5\\annotations_v20260603_r03\\nlm_volume.tif",
+        "\\\\hive3065\\Yael_Mishael\\Rony\\remote_computer backup\\nnUNet_resources\\bnei_reem\\inference_concatenated_20260602_124611\\nlm_volume.nii.gz",
+        "\\\\hive3065\\Yael_Mishael\\Rony\\remote_computer backup\\10.5\\annotations_v20260603_r04\\nlm_volume.tif",
+        "C:\\Users\\rony.schwartz\\Documents\\nnUNet4SoilXrayCT\\analysis\\selected_outputs\\nlm_volume\\bad_slices_iter_02_corrected_latest_predictions_yfix.json",
+        "C:\\Users\\rony.schwartz\\Documents\\nnUNet4SoilXrayCT\\analysis\\selected_outputs\\nlm_volume\\injected_predictions_iter_02_corrected_latest_predictions_yfix.json"
+      ],
+      "requested_by_agent": "GitHub Copilot",
+      "approved_by_agent": "Data Registry and Path Validation"
+    },
+    {
+      "timestamp": "2026-06-03T12:36:09",
+      "action": "inject_predictions_into_latest_annotation_iter_02_corrected_latest_predictions",
+      "sample_id": "mishmar_hanegev_Cu011_samp_2_Rec_nlm",
+      "decision": "GREEN",
+      "paths_touched": [
+        "\\\\hive3065\\Yael_Mishael\\Rony\\remote_computer backup\\10.5\\bootstrap_outputs_fullctx\\mishmar_hanegev_Cu011_samp_2_Rec_nlm\\annotations_v20260602_r01\\mishmar_hanegev_Cu011_samp_2_Rec_nlm.tif",
+        "\\\\hive3065\\Yael_Mishael\\Rony\\remote_computer backup\\nnUNet_resources\\mishmar_hanegev_Cu011_samp_2_Rec_nlm\\inference_output_concat_20260602_124611\\mishmar_hanegev_Cu011_samp_2_Rec_nlm.nii.gz",
+        "\\\\hive3065\\Yael_Mishael\\Rony\\remote_computer backup\\10.5\\bootstrap_outputs_fullctx\\mishmar_hanegev_Cu011_samp_2_Rec_nlm\\annotations_v20260603_r03\\mishmar_hanegev_Cu011_samp_2_Rec_nlm.tif",
+        "C:\\Users\\rony.schwartz\\Documents\\nnUNet4SoilXrayCT\\analysis\\selected_outputs\\mishmar_hanegev_Cu011_samp_2_Rec_nlm\\bad_slices_iter_02_corrected_latest_predictions.json",
+        "C:\\Users\\rony.schwartz\\Documents\\nnUNet4SoilXrayCT\\analysis\\selected_outputs\\mishmar_hanegev_Cu011_samp_2_Rec_nlm\\injected_predictions_iter_02_corrected_latest_predictions.json"
+      ],
+      "requested_by_agent": "GitHub Copilot",
+      "approved_by_agent": "Data Registry and Path Validation"
+    },
+    {
+      "timestamp": "2026-06-03T12:36:09",
+      "action": "inject_predictions_into_latest_annotation_iter_02_corrected_latest_predictions",
+      "sample_id": "nlm_volume",
+      "decision": "GREEN",
+      "paths_touched": [
+        "\\\\hive3065\\Yael_Mishael\\Rony\\remote_computer backup\\10.5\\annotations_v20260602_r01\\nlm_volume.tif",
+        "\\\\hive3065\\Yael_Mishael\\Rony\\remote_computer backup\\nnUNet_resources\\bnei_reem\\inference_concatenated_20260602_124611\\nlm_volume.nii.gz",
+        "\\\\hive3065\\Yael_Mishael\\Rony\\remote_computer backup\\10.5\\annotations_v20260603_r03\\nlm_volume.tif",
+        "C:\\Users\\rony.schwartz\\Documents\\nnUNet4SoilXrayCT\\analysis\\selected_outputs\\nlm_volume\\bad_slices_iter_02_corrected_latest_predictions.json",
+        "C:\\Users\\rony.schwartz\\Documents\\nnUNet4SoilXrayCT\\analysis\\selected_outputs\\nlm_volume\\injected_predictions_iter_02_corrected_latest_predictions.json"
+      ],
+      "requested_by_agent": "GitHub Copilot",
+      "approved_by_agent": "Data Registry and Path Validation"
+    },
+    {
+      "timestamp": "2026-06-02T15:32:31",
+      "action": "inject_predictions_into_latest_annotation_iter02",
+      "sample_id": "mishmar_hanegev_Cu011_samp_2_Rec_nlm",
+      "decision": "GREEN",
+      "paths_touched": [
+        "\\\\hive3065\\Yael_Mishael\\Rony\\remote_computer backup\\10.5\\bootstrap_outputs_fullctx\\mishmar_hanegev_Cu011_samp_2_Rec_nlm\\annotations_v20260525_r02\\mishmar_hanegev_Cu011_samp_2_Rec_nlm.tif",
+        "\\\\hive3065\\Yael_Mishael\\Rony\\remote_computer backup\\nnUNet_resources\\mishmar_hanegev_Cu011_samp_2_Rec_nlm\\inference_output_concat\\mishmar_hanegev_Cu011_samp_2_Rec_nlm.nii.gz",
+        "\\\\hive3065\\Yael_Mishael\\Rony\\remote_computer backup\\10.5\\bootstrap_outputs_fullctx\\mishmar_hanegev_Cu011_samp_2_Rec_nlm\\annotations_v20260602_r01\\mishmar_hanegev_Cu011_samp_2_Rec_nlm.tif",
+        "C:\\Users\\rony.schwartz\\Documents\\nnUNet4SoilXrayCT\\analysis\\selected_outputs\\mishmar_hanegev_Cu011_samp_2_Rec_nlm\\bad_slices_iter02.json",
+        "C:\\Users\\rony.schwartz\\Documents\\nnUNet4SoilXrayCT\\analysis\\selected_outputs\\mishmar_hanegev_Cu011_samp_2_Rec_nlm\\injected_predictions_iter_02.json"
+      ],
+      "requested_by_agent": "GitHub Copilot",
+      "approved_by_agent": "Data Registry and Path Validation"
+    },
+    {
+      "timestamp": "2026-06-02T15:32:31",
+      "action": "inject_predictions_into_latest_annotation_iter02",
+      "sample_id": "nlm_volume",
+      "decision": "GREEN",
+      "paths_touched": [
+        "\\\\hive3065\\Yael_Mishael\\Rony\\remote_computer backup\\10.5\\annotations\\nlm_volume.tif",
+        "\\\\hive3065\\Yael_Mishael\\Rony\\remote_computer backup\\nnUNet_resources\\bnei_reem\\inference_concatenated\\nlm_volume.nii.gz",
+        "\\\\hive3065\\Yael_Mishael\\Rony\\remote_computer backup\\10.5\\annotations_v20260602_r01\\nlm_volume.tif",
+        "C:\\Users\\rony.schwartz\\Documents\\nnUNet4SoilXrayCT\\analysis\\selected_outputs\\nlm_volume\\bad_slices_iter02.json",
+        "C:\\Users\\rony.schwartz\\Documents\\nnUNet4SoilXrayCT\\analysis\\selected_outputs\\nlm_volume\\injected_predictions_iter_02.json"
+      ],
+      "requested_by_agent": "GitHub Copilot",
+      "approved_by_agent": "Data Registry and Path Validation"
+    },
+    {
+      "timestamp": "2026-05-31T18:30:00+02:00",
+      "action": "set_active_latest_annotation",
+      "sample_id": "mishmar_hanegev_Cu011_samp_2_Rec_nlm",
+      "decision": "GREEN",
+      "paths_touched": [
+        "\\\\hive3065\\Yael_Mishael\\Rony\\remote_computer backup\\10.5\\bootstrap_outputs_fullctx\\mishmar_hanegev_Cu011_samp_2_Rec_nlm\\annotations_v20260525_r02\\mishmar_hanegev_Cu011_samp_2_Rec_nlm.tif"
+      ]
+    },
+    {
+      "timestamp": "2026-05-31T18:30:00+02:00",
+      "action": "verify_nlm_annotation_recency",
+      "sample_id": "nlm_volume",
+      "decision": "YELLOW",
+      "paths_touched": [
+        "\\\\hive3065\\Yael_Mishael\\Rony\\remote_computer backup\\10.5\\annotations\\nlm_volume.tif"
+      ]
+    },
+    {
+      "timestamp": "2026-05-30T14:30:00+02:00",
+      "action": "organize_inference_outputs_for_inspection",
+      "sample_id": "nlm_volume",
+      "decision": "GREEN",
+      "paths_touched": [
+        "\\\\hive3065\\Yael_Mishael\\Rony\\remote_computer backup\\nnUNet_resources\\bnei_reem\\nifti_predict\\nlm_volume_0000.nii.gz",
+        "\\\\hive3065\\Yael_Mishael\\Rony\\remote_computer backup\\nnUNet_resources\\bnei_reem\\inference_input",
+        "\\\\hive3065\\Yael_Mishael\\Rony\\remote_computer backup\\nnUNet_resources\\bnei_reem\\inference_output",
+        "\\\\hive3065\\Yael_Mishael\\Rony\\remote_computer backup\\nnUNet_resources\\bnei_reem\\inference_concatenated\\nlm_volume.nii.gz"
+      ]
+    },
+    {
+      "timestamp": "2026-05-30T14:30:00+02:00",
+      "action": "organize_inference_outputs_for_inspection",
+      "sample_id": "mishmar_hanegev_Cu011_samp_2_Rec_nlm",
+      "decision": "GREEN",
+      "paths_touched": [
+        "\\\\hive3065\\Yael_Mishael\\Rony\\remote_computer backup\\nnUNet_resources\\mishmar_hanegev_Cu011_samp_2_Rec_nlm\\nifti_predict\\mishmar_hanegev_Cu011_samp_2_Rec_nlm_0000.nii.gz",
+        "\\\\hive3065\\Yael_Mishael\\Rony\\remote_computer backup\\nnUNet_resources\\mishmar_hanegev_Cu011_samp_2_Rec_nlm\\inference_input",
+        "\\\\hive3065\\Yael_Mishael\\Rony\\remote_computer backup\\nnUNet_resources\\mishmar_hanegev_Cu011_samp_2_Rec_nlm\\inference_output",
+        "\\\\hive3065\\Yael_Mishael\\Rony\\remote_computer backup\\nnUNet_resources\\mishmar_hanegev_Cu011_samp_2_Rec_nlm\\inference_output_concat\\mishmar_hanegev_Cu011_samp_2_Rec_nlm.nii.gz"
+      ]
+    },
+    {
+      "timestamp": "2026-05-30T00:00:00+02:00",
+      "action": "mark_annotations_ready",
+      "sample_id": "nlm_volume",
+      "decision": "GREEN",
+      "paths_touched": [
+        "\\\\hive3065\\Yael_Mishael\\Rony\\remote_computer backup\\10.5\\annotations\\nlm_volume.tif"
+      ]
+    },
+    {
+      "timestamp": "2026-05-30T00:00:00+02:00",
+      "action": "mark_annotations_ready",
+      "sample_id": "mishmar_hanegev_Cu011_samp_2_Rec_nlm",
+      "decision": "GREEN",
+      "paths_touched": [
+        "\\\\hive3065\\Yael_Mishael\\Rony\\remote_computer backup\\10.5\\bootstrap_outputs_fullctx\\mishmar_hanegev_Cu011_samp_2_Rec_nlm\\annotations_v20260525_r01\\mishmar_hanegev_Cu011_samp_2_Rec_nlm.tif"
+      ]
+    },
+    {
+      "timestamp": "2026-05-25T15:59:26+02:00",
+      "action": "start_make_annotations_refinement_session",
+      "sample_id": "mishmar_hanegev_Cu011_samp_2_Rec_nlm",
+      "decision": "GREEN",
+      "paths_touched": [
+        "\\\\hive3065\\Yael_Mishael\\Rony\\remote_computer backup\\10.5\\mishmar_hanegev_Cu011_samp_2_Rec_nlm.tif",
+        "\\\\hive3065\\Yael_Mishael\\Rony\\remote_computer backup\\10.5\\bootstrap_outputs_fullctx\\mishmar_hanegev_Cu011_samp_2_Rec_nlm\\annotations_v20260525_r01\\mishmar_hanegev_Cu011_samp_2_Rec_nlm.tif",
+        "\\\\hive3065\\Yael_Mishael\\Rony\\remote_computer backup\\10.5\\bootstrap_outputs_fullctx\\mishmar_hanegev_Cu011_samp_2_Rec_nlm\\annotations_v20260525_r02"
+      ]
+    },
+    {
+      "timestamp": "2026-05-25T15:44:44+02:00",
+      "action": "inject_old_predictions_into_latest_annotation",
+      "sample_id": "mishmar_hanegev_Cu011_samp_2_Rec_nlm",
+      "decision": "GREEN",
+      "paths_touched": [
+        "\\\\hive3065\\Yael_Mishael\\Rony\\remote_computer backup\\10.5\\bootstrap_outputs_fullctx\\mishmar_hanegev_Cu011_samp_2_Rec_nlm\\predictions\\slice_0086_pred.tif",
+        "\\\\hive3065\\Yael_Mishael\\Rony\\remote_computer backup\\10.5\\bootstrap_outputs_fullctx\\mishmar_hanegev_Cu011_samp_2_Rec_nlm\\predictions\\slice_0253_pred.tif",
+        "\\\\hive3065\\Yael_Mishael\\Rony\\remote_computer backup\\10.5\\bootstrap_outputs_fullctx\\mishmar_hanegev_Cu011_samp_2_Rec_nlm\\predictions\\slice_0543_pred.tif",
+        "\\\\hive3065\\Yael_Mishael\\Rony\\remote_computer backup\\10.5\\bootstrap_outputs_fullctx\\mishmar_hanegev_Cu011_samp_2_Rec_nlm\\annotations_v20260525_r01\\mishmar_hanegev_Cu011_samp_2_Rec_nlm.tif",
+        "C:\\Users\\rony.schwartz\\Documents\\nnUNet4SoilXrayCT\\analysis\\selected_outputs\\mishmar_hanegev_Cu011_samp_2_Rec_nlm\\injected_old_predictions_v20260525_r01.json"
+      ]
+    },
+    {
+      "timestamp": "2026-05-25T13:14:22+02:00",
+      "action": "validate_training_and_inference_paths",
+      "sample_id": "mishmar_hanegev_Cu011_samp_2_Rec_nlm",
+      "decision": "GREEN",
+      "paths_touched": [
+        "\\\\hive3065\\Yael_Mishael\\Rony\\remote_computer backup\\nnUNet_resources\\mishmar_hanegev_Cu011_samp_2_Rec_nlm\\nifti_predict\\mishmar_hanegev_Cu011_samp_2_Rec_nlm_0000.nii.gz",
+        "\\\\hive3065\\Yael_Mishael\\Rony\\remote_computer backup\\nnUNet_resources\\mishmar_hanegev_Cu011_samp_2_Rec_nlm\\inference_input",
+        "\\\\hive3065\\Yael_Mishael\\Rony\\remote_computer backup\\nnUNet_resources\\mishmar_hanegev_Cu011_samp_2_Rec_nlm\\inference_output",
+        "\\\\hive3065\\Yael_Mishael\\Rony\\remote_computer backup\\10.5\\bootstrap_outputs_fullctx\\mishmar_hanegev_Cu011_samp_2_Rec_nlm\\annotations_v20260524_r01\\mishmar_hanegev_Cu011_samp_2_Rec_nlm.tif"
+      ]
+    },
+    {
+      "timestamp": "2026-05-24T00:00:00",
+      "action": "validate_make_annotations_paths",
+      "sample_id": "mishmar_hanegev_Cu011_samp_2_Rec_nlm",
+      "decision": "YELLOW",
+      "paths_touched": [
+        "\\\\hive3065\\Yael_Mishael\\Rony\\remote_computer backup\\10.5\\mishmar_hanegev_Cu011_samp_2_Rec_nlm.tif",
+        "\\\\hive3065\\Yael_Mishael\\Rony\\remote_computer backup\\10.5\\annotations\\mishmar_hanegev_Cu011_samp_2_Rec_nlm.tif",
+        "\\\\hive3065\\Yael_Mishael\\Rony\\remote_computer backup\\10.5\\bootstrap_outputs_fullctx\\mishmar_hanegev_Cu011_samp_2_Rec_nlm\\annotations_v20260524_r01"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+# Auto-generated from REORG_PLAN.md §3.3 mapping table during the 2026-07 reorg.
+# Replaces the old repo-root per-iteration script for 'iter04_continue'.
+iteration_name: iter04_continue
+sample_id: nlm_volume
+gpu: 0
+trainer_name: nnUNetTrainer_betterIgnoreSampling_earlyStopValLoss
+annotation_path: "\\hive3065\Yael_Mishael\Rony\remote_computer backup\nnUNet_resources\merged_GT\merged_GT.nii.gz"
+base_checkpoint: iter04
+dataset_id: '777'
+force_rebuild: true
+offset_layers: 48
+early_stop_patience: 20
+early_stop_min_delta: 0.001
+run_inference_after: false
+# note: Fine-tune from iter04, per _launch_parallel_training.ps1 comment (GPU 0). Was train_iter4_continue_bnei_reem.py.

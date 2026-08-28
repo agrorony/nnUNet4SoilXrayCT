@@ -1,0 +1,192 @@
+
+  0%|          | 0/216 [00:00<?, ?it/s]
+  0%|          | 1/216 [00:01<04:32,  1.27s/it]
+  2%|�\ufffd         | 4/216 [00:01<00:59,  3.59it/s]
+  3%|▎         | 7/216 [00:01<00:32,  6.52it/s]
+  5%|�\ufffd         | 10/216 [00:01<00:21,  9.38it/s]
+  6%|▌         | 13/216 [00:01<00:16, 11.99it/s]
+  7%|▋         | 16/216 [00:01<00:14, 14.23it/s]
+  9%|▉         | 19/216 [00:02<00:12, 16.11it/s]
+ 10%|█         | 22/216 [00:02<00:11, 17.60it/s]
+ 12%|█�\ufffd        | 25/216 [00:02<00:10, 18.76it/s]
+ 13%|█▎        | 28/216 [00:02<00:09, 19.62it/s]
+ 14%|█�\ufffd        | 31/216 [00:02<00:09, 20.26it/s]
+ 16%|█▌        | 34/216 [00:02<00:08, 20.76it/s]
+ 17%|█▋        | 37/216 [00:02<00:08, 21.09it/s]
+ 19%|█▊        | 40/216 [00:03<00:08, 21.26it/s]
+ 20%|█▉        | 43/216 [00:03<00:08, 21.44it/s]
+ 21%|██�\ufffd       | 46/216 [00:03<00:07, 21.42it/s]
+ 23%|██▎       | 49/216 [00:03<00:07, 21.53it/s]
+ 24%|██�\ufffd       | 52/216 [00:03<00:07, 21.59it/s]
+ 25%|██▌       | 55/216 [00:03<00:07, 21.68it/s]
+ 27%|██▋       | 58/216 [00:03<00:07, 21.70it/s]
+ 28%|██▊       | 61/216 [00:04<00:07, 21.77it/s]
+ 30%|██▉       | 64/216 [00:04<00:06, 21.81it/s]
+ 31%|███       | 67/216 [00:04<00:06, 21.81it/s]
+ 32%|███�\ufffd      | 70/216 [00:04<00:06, 21.83it/s]
+ 34%|███�\ufffd      | 73/216 [00:04<00:06, 21.87it/s]
+ 35%|███▌      | 76/216 [00:04<00:06, 21.90it/s]
+ 37%|███▋      | 79/216 [00:04<00:06, 21.85it/s]
+ 38%|███▊      | 82/216 [00:04<00:06, 21.74it/s]
+ 39%|███▉      | 85/216 [00:05<00:05, 21.84it/s]
+ 41%|████      | 88/216 [00:05<00:05, 21.83it/s]
+ 42%|████�\ufffd     | 91/216 [00:05<00:05, 21.90it/s]
+ 44%|████▎     | 94/216 [00:05<00:05, 21.87it/s]
+ 45%|████�\ufffd     | 97/216 [00:05<00:05, 21.18it/s]
+ 46%|████▋     | 100/216 [00:05<00:05, 20.49it/s]
+ 48%|████▊     | 103/216 [00:06<00:05, 19.78it/s]
+ 49%|████▊     | 105/216 [00:06<00:05, 19.31it/s]
+ 50%|████▉     | 107/216 [00:06<00:05, 18.19it/s]
+ 50%|█████     | 109/216 [00:06<00:06, 17.09it/s]
+ 51%|█████�\ufffd    | 111/216 [00:06<00:06, 16.20it/s]
+ 52%|█████�\ufffd    | 113/216 [00:06<00:06, 15.60it/s]
+ 53%|█████▎    | 115/216 [00:06<00:06, 15.19it/s]
+ 54%|█████�\ufffd    | 117/216 [00:06<00:06, 14.90it/s]
+ 55%|█████▌    | 119/216 [00:07<00:06, 14.71it/s]
+ 56%|█████▌    | 121/216 [00:07<00:06, 14.60it/s]
+ 57%|█████▋    | 123/216 [00:07<00:06, 14.49it/s]
+ 58%|█████▊    | 125/216 [00:07<00:06, 14.38it/s]
+ 59%|█████▉    | 127/216 [00:07<00:06, 14.27it/s]
+ 60%|█████▉    | 129/216 [00:07<00:06, 14.25it/s]
+ 61%|██████    | 131/216 [00:07<00:05, 14.23it/s]
+ 62%|██████�\ufffd   | 133/216 [00:08<00:05, 14.21it/s]
+ 62%|██████▎   | 135/216 [00:08<00:05, 14.23it/s]
+ 63%|██████▎   | 137/216 [00:08<00:05, 14.23it/s]
+ 64%|██████�\ufffd   | 139/216 [00:08<00:05, 14.19it/s]
+ 65%|██████▌   | 141/216 [00:08<00:05, 14.19it/s]
+ 66%|██████▌   | 143/216 [00:08<00:05, 14.18it/s]
+ 67%|██████▋   | 145/216 [00:08<00:05, 14.17it/s]
+ 68%|██████▊   | 147/216 [00:09<00:04, 14.19it/s]
+ 69%|██████▉   | 149/216 [00:09<00:04, 14.17it/s]
+ 70%|██████▉   | 151/216 [00:09<00:04, 14.11it/s]
+ 71%|███████   | 153/216 [00:09<00:04, 14.12it/s]
+ 72%|███████�\ufffd  | 155/216 [00:09<00:04, 14.12it/s]
+ 73%|███████▎  | 157/216 [00:09<00:04, 14.10it/s]
+ 74%|███████▎  | 159/216 [00:09<00:04, 14.08it/s]
+ 75%|███████�\ufffd  | 161/216 [00:10<00:03, 14.08it/s]
+ 75%|███████▌  | 163/216 [00:10<00:03, 14.08it/s]
+ 76%|███████▋  | 165/216 [00:10<00:03, 14.06it/s]
+ 77%|███████▋  | 167/216 [00:10<00:03, 14.08it/s]
+ 78%|███████▊  | 169/216 [00:10<00:03, 14.05it/s]
+ 79%|███████▉  | 171/216 [00:10<00:03, 14.04it/s]
+ 80%|████████  | 173/216 [00:10<00:03, 14.01it/s]
+ 81%|████████  | 175/216 [00:11<00:02, 13.93it/s]
+ 82%|████████�\ufffd | 177/216 [00:11<00:02, 13.93it/s]
+ 83%|████████▎ | 179/216 [00:11<00:02, 13.98it/s]
+ 84%|████████�\ufffd | 181/216 [00:11<00:02, 13.99it/s]
+ 85%|████████�\ufffd | 183/216 [00:11<00:02, 13.99it/s]
+ 86%|████████▌ | 185/216 [00:11<00:02, 13.94it/s]
+ 87%|████████▋ | 187/216 [00:11<00:02, 13.94it/s]
+ 88%|████████▊ | 189/216 [00:12<00:01, 13.97it/s]
+ 88%|████████▊ | 191/216 [00:12<00:01, 14.00it/s]
+ 89%|████████▉ | 193/216 [00:12<00:01, 14.00it/s]
+ 90%|█████████ | 195/216 [00:12<00:01, 13.98it/s]
+ 91%|█████████ | 197/216 [00:12<00:01, 13.98it/s]
+ 92%|█████████�\ufffd| 199/216 [00:12<00:01, 13.97it/s]
+ 93%|█████████▎| 201/216 [00:12<00:01, 13.99it/s]
+ 94%|█████████�\ufffd| 203/216 [00:13<00:00, 14.03it/s]
+ 95%|█████████�\ufffd| 205/216 [00:13<00:00, 14.06it/s]
+ 96%|█████████▌| 207/216 [00:13<00:00, 14.09it/s]
+ 97%|█████████▋| 209/216 [00:13<00:00, 14.03it/s]
+ 98%|█████████▊| 211/216 [00:13<00:00, 14.00it/s]
+ 99%|█████████▊| 213/216 [00:13<00:00, 14.05it/s]
+100%|█████████▉| 215/216 [00:13<00:00, 14.07it/s]
+100%|██████████| 216/216 [00:13<00:00, 15.45it/s]
+
+[14:44:35] === Step A: split (s=1, reuses existing split/concat orientation convention) ===
+Model Parameters:
+Patch Size:     [256, 256, 32]
+Target Spacing: [1.0, 1.0, 1.0]
+----------
+1 Images found
+----------
+Image File:    mishmar_image_then_predict_0000.nii.gz
+Image Shape:   (390, 390, 390)
+Image Spacing: (1.0, 1.0, 1.0)
+Original Patch Size:   [256. 256.  32.]
+Patch Overlap:   [128. 128.  16.]
+Base Crop Size:   [390 390 390]
+ - Split 0 from [0 0 0] to [390 390 390]
+
+[14:44:46]   1 chunk(s): ['mishmar_image_then_predict__2__0__390__0000.nii.gz']
+[14:44:46] === Step B: nnUNet inference (loess_i2) ===
+[14:44:46]   checkpoint: checkpoint_final.pth  CUDA available: True
+There are 1 cases in the source folder
+I am process 0 out of 1 (max process ID is 0, we start counting with 0!)
+There are 1 cases that I would like to predict
+
+Predicting mishmar_image_then_predict__2__0__390_:
+perform_everything_on_device: False
+Input shape: torch.Size([1, 390, 390, 390])
+step_size: 0.5
+mirror_axes: None
+n_steps 216, image size is torch.Size([390, 390, 390]), tile_size [32, 256, 256], tile_step_size 0.5
+steps:
+[[0, 16, 31, 47, 62, 78, 93, 109, 125, 140, 156, 171, 187, 202, 218, 233, 249, 265, 280, 296, 311, 327, 342, 358], [0, 67, 134], [0, 67, 134]]
+move image to device cpu
+preallocating results arrays on device cpu
+Prediction done
+sending off prediction to background worker for resampling and export
+done with mishmar_image_then_predict__2__0__390_
+[14:45:42]   inference done
+[14:45:42] === Step C: concatenation ===
+mishmar_image_then_predict: 1 files found
+
+[14:45:44]   wrote \\hive3065\Yael_Mishael\Rony\remote_computer backup\nnUNet_resources\mishmar_hanegev_maoz_3_5p85um\ablation_image_downsample\inference_output_concat_ds15um\mishmar_image_then_predict.nii.gz
+[14:45:44] Loading \\hive3065\Yael_Mishael\Rony\remote_computer backup\nnUNet_resources\mishmar_hanegev_maoz_3_5p85um\ablation_image_downsample\inference_output_concat_ds15um\mishmar_image_then_predict.nii.gz
+[14:45:45]   shape=(390, 390, 390) unique_labels=[0, 1, 2, 5]
+[14:45:45]   pore=15,204,832 (25.632%)  pom=508,058 (0.856%)
+[14:45:45]   reference: native Mishmar (5.85um) pore=27.038%  pom=1.615%
+
+======================================================================
+SANITY CHECK -- mishmar_image_then_predict
+======================================================================
+{
+  "branch": "mishmar_image_then_predict",
+  "source_prediction": "\\\\hive3065\\Yael_Mishael\\Rony\\remote_computer backup\\nnUNet_resources\\mishmar_hanegev_maoz_3_5p85um\\ablation_image_downsample\\inference_output_concat_ds15um\\mishmar_image_then_predict.nii.gz",
+  "target_voxel_um": 15.000149,
+  "shape": [
+    390,
+    390,
+    390
+  ],
+  "unique_labels": [
+    0,
+    1,
+    2,
+    5
+  ],
+  "pore_voxel_fraction_pct": 25.6323134240294,
+  "pom_voxel_fraction_pct": 0.8564844316323607,
+  "native_mishmar_pore_voxel_fraction_pct": 27.0384653,
+  "native_mishmar_pom_voxel_fraction_pct": 1.6146797,
+  "pom_collapse_floor_pct": 0.3,
+  "pom_collapsed": false
+}
+[14:45:45] Sanity check passed. Running full POM pipeline...
+[14:45:45]   pore voxels=15,204,832 (25.632%)  pom voxels=508,058 (0.856%)
+[14:45:45] Labeling POM objects (26-connectivity)...
+[14:45:47]   n_objects_raw=432  (1.8s)
+[14:45:47]   proposed elbow cutoff = 24 voxels (53.68 um equiv diameter)
+[14:45:47]   denoised POM voxels=506,313 (99.66% of raw POM volume)
+[14:45:47] Building pore-dilation masks for adjacency conditions...
+[14:45:49]   pore-adjacent POM voxels=506,138
+[14:45:49] Computing percolating pore mask (axis=0, 26-connectivity)...
+[14:45:53]   connected-pore-adjacent POM voxels=504,365
+[14:45:53] Computing distance_to_pom_denoised EDT...
+[14:46:08]   EDT done (14.8s)
+[14:46:11] Computing distance_to_pom_pore_adjacent EDT...
+[14:46:26]   EDT done (14.6s)
+[14:46:30] Computing distance_to_pom_connected_pore_adjacent EDT...
+[14:46:45]   EDT done (14.6s)
+[14:46:49] Computing A3 accessibility metrics...
+[14:46:50]   POM volume fraction (denoised) = 0.854%  contact fraction = 0.562
+[14:46:50] Computing Part B object diameters...
+[14:46:50]   n_objects=115  median=84.02um  vol-weighted median=695.30um  largest=860.91um (19.55% of denoised POM volume)
+[14:46:50] Saving mid-slice kept/removed diagnostic PNG...
+[14:46:50] Wrote C:\Users\rony.schwartz\Documents\nnUNet4SoilXrayCT\05_evaluation\psd\pom_analysis_20260824_ablation\mishmar_image_then_predict\summary_pom_metrics.json
+[14:46:50] === Sanity checks ===
+[14:46:50] ordering denoised(761.792236328125) <= pore_adj(765.7827758789062) <= conn_pore_adj(797.5685424804688): True
+[14:46:50] volume-weighted median >= count median: True
+[14:46:50] === DONE ===
+

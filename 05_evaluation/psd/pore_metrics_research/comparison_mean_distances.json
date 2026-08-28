@@ -1,0 +1,14 @@
+{
+  "bnei_reem_corrected_15um": {
+    "dist_pore_unconditioned_mean_um": 48.65043258666992,
+    "dist_pore_connected_mean_um": 126.05784606933594,
+    "dist_pom_unconditioned_mean_um": 477.3039855957031,
+    "dist_pom_connected_mean_um": NaN
+  },
+  "mishmar_hanegev_5p85um": {
+    "dist_pore_unconditioned_mean_um": 20.37091064453125,
+    "dist_pore_connected_mean_um": 31.100574493408203,
+    "dist_pom_unconditioned_mean_um": 219.23931884765625,
+    "dist_pom_connected_mean_um": NaN
+  }
+}

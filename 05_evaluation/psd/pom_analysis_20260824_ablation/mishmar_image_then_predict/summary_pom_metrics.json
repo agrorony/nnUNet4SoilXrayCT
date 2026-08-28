@@ -1,0 +1,155 @@
+{
+  "soil": "mishmar_image_then_predict",
+  "soil_label": "Mishmar HaNegev (Loess) -- image downsampled to 15.00um then loess_i2 predicted fresh",
+  "source_input": "\\\\hive3065\\Yael_Mishael\\Rony\\remote_computer backup\\nnUNet_resources\\mishmar_hanegev_maoz_3_5p85um\\ablation_image_downsample\\inference_output_concat_ds15um\\mishmar_image_then_predict.nii.gz",
+  "voxel_size_um": 15.000149,
+  "shape": [
+    390,
+    390,
+    390
+  ],
+  "label_convention": {
+    "pore_label": 5,
+    "pom_label": 2
+  },
+  "n_total_voxels": 59319000,
+  "n_pore_voxels": 15204832,
+  "n_pom_voxels_raw": 508058,
+  "border_width_excluded_voxels": 1,
+  "A1_noise_floor": {
+    "n_objects_raw": 432,
+    "size_histogram_1_50vox": {
+      "1": 78,
+      "2": 48,
+      "3": 38,
+      "4": 21,
+      "5": 17,
+      "6": 20,
+      "7": 11,
+      "8": 12,
+      "9": 10,
+      "10": 12,
+      "11": 5,
+      "12": 3,
+      "13": 9,
+      "14": 6,
+      "15": 4,
+      "16": 4,
+      "17": 5,
+      "18": 2,
+      "19": 3,
+      "20": 2,
+      "21": 5,
+      "22": 0,
+      "23": 2,
+      "24": 1,
+      "25": 0,
+      "26": 1,
+      "27": 3,
+      "28": 1,
+      "29": 0,
+      "30": 2,
+      "31": 1,
+      "32": 2,
+      "33": 2,
+      "34": 4,
+      "35": 2,
+      "36": 1,
+      "37": 2,
+      "38": 0,
+      "39": 3,
+      "40": 0,
+      "41": 4,
+      "42": 1,
+      "43": 0,
+      "44": 0,
+      "45": 2,
+      "46": 0,
+      "47": 1,
+      "48": 0,
+      "49": 0,
+      "50": 2
+    },
+    "proposed_default_cutoff": {
+      "cutoff_voxels": 24,
+      "cutoff_volume_um3": 81002.41382397717,
+      "cutoff_equiv_diameter_um": 53.68254697771541,
+      "n_objects_kept": 115,
+      "pom_volume_fraction_retained": 0.9965653527746832
+    },
+    "sensitivity_cutoffs": {
+      "2": {
+        "cutoff_voxels": 2,
+        "cutoff_equiv_diameter_um": 23.448012168510413,
+        "n_objects_kept": 354,
+        "n_objects_removed": 78,
+        "pom_volume_fraction_retained": 0.9998464742214471
+      },
+      "8": {
+        "cutoff_voxels": 8,
+        "cutoff_equiv_diameter_um": 37.22139918285657,
+        "n_objects_kept": 199,
+        "n_objects_removed": 233,
+        "pom_volume_fraction_retained": 0.9987127453952108
+      },
+      "27": {
+        "cutoff_voxels": 27,
+        "cutoff_equiv_diameter_um": 55.83209877428485,
+        "n_objects_kept": 113,
+        "n_objects_removed": 319,
+        "pom_volume_fraction_retained": 0.9964669388140724
+      }
+    }
+  },
+  "A2_conditioned_distance_maps": {
+    "distance_to_pom_denoised": {
+      "degenerate": false,
+      "degenerate_reason": null,
+      "mean_um": 761.792236328125,
+      "median_um": 750.1574096679688,
+      "n_voxels": 58411072,
+      "n_target_voxels": 506313,
+      "pom_volume_fraction_of_total_pom": 0.9965653527746832,
+      "pom_volume_fraction_of_denoised_pom": 1.0
+    },
+    "distance_to_pom_pore_adjacent": {
+      "degenerate": false,
+      "degenerate_reason": null,
+      "mean_um": 765.7827758789062,
+      "median_um": 755.0902709960938,
+      "n_voxels": 58411072,
+      "n_target_voxels": 506138,
+      "pom_volume_fraction_of_total_pom": 0.9962209039125454,
+      "pom_volume_fraction_of_denoised_pom": 0.9996543640001343
+    },
+    "distance_to_pom_connected_pore_adjacent": {
+      "degenerate": false,
+      "degenerate_reason": null,
+      "mean_um": 797.5685424804688,
+      "median_um": 782.0244140625,
+      "n_voxels": 58411072,
+      "n_target_voxels": 504365,
+      "pom_volume_fraction_of_total_pom": 0.9927311448692866,
+      "pom_volume_fraction_of_denoised_pom": 0.9961525775557807
+    }
+  },
+  "A3_accessibility_metrics": {
+    "soil": "mishmar_image_then_predict",
+    "pom_volume_fraction_pct_raw": 0.8564844316323607,
+    "pom_volume_fraction_pct_denoised": 0.8535427097557275,
+    "n_pom_objects_ge_cutoff": 115,
+    "cutoff_voxels": 24,
+    "pom_pore_contact_fraction": 0.5620294621730955,
+    "n_surface_voxels_denoised_pom": 144117
+  },
+  "B_size_distribution_summary": {
+    "soil": "mishmar_image_then_predict",
+    "cutoff_voxels": 24,
+    "n_objects": 115,
+    "median_diameter_um": 84.01535007993724,
+    "volume_weighted_median_diameter_um": 695.3048379153972,
+    "largest_object_diameter_um": 860.9111738020491,
+    "largest_object_pct_of_denoised_pom_volume": 19.55094970897449,
+    "total_denoised_pom_voxels": 506313
+  }
+}

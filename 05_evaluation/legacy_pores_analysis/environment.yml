@@ -1,0 +1,31 @@
+# Environment for legacy/pores_analysis (PSD + extended topology/connectivity metrics).
+# No repo-wide environment.yml existed for this module (README previously only
+# listed a pip-install snippet) - this file was added as part of the Stage 2
+# PSD-module extension (analysis/pore_metrics_research/stage2_implementation_prompt.md)
+# to declare `porespy`, needed for diffusive tortuosity (decisions.md D5).
+name: pores_analysis
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.10
+  # numpy<=2.4 required: numba (a porespy/openpnm dependency) hard-fails on
+  # numpy>=2.5 as of numba 0.66 ("Numba needs NumPy 2.4 or less"). Verified
+  # during Stage 2 end-to-end testing (2026-07): numpy 2.4.6 is compatible
+  # with pandas/bottleneck/pyarrow/numexpr/scipy/scikit-image/numba/porespy/
+  # openpnm all together in this environment; numpy<2 breaks openpnm/scipy
+  # (both require numpy>=2), and numpy>=2.5 breaks numba.
+  - numpy<=2.4.6
+  - scipy
+  - pandas
+  - scikit-image
+  - matplotlib
+  - pyyaml
+  - tifffile
+  - pip
+  - pip:
+      - porespy       # diffusive tortuosity (porespy.simulations.tortuosity_fd) - decisions.md D5
+      - openpnm       # required by porespy.simulations.tortuosity_fd's Fickian-diffusion solve
+      - openpyxl      # optional: Excel export in psd_output.py
+      - tables        # optional: HDF5 export in psd_output.py
+      # - cupy-cuda11x  # optional: GPU-accelerated EDT/opening (see distance_transform.py)

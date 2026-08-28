@@ -1,0 +1,186 @@
+{
+  "n_archetypes": 6,
+  "archetype_silhouette": 0.43006052652969035,
+  "centroids": [
+    {
+      "soil": "bnei_reem",
+      "group": "bnei_reem",
+      "cluster_id": 0,
+      "archetype_id": 1,
+      "n": 188
+    },
+    {
+      "soil": "bnei_reem",
+      "group": "bnei_reem",
+      "cluster_id": 1,
+      "archetype_id": 3,
+      "n": 97
+    },
+    {
+      "soil": "bnei_reem",
+      "group": "bnei_reem",
+      "cluster_id": 2,
+      "archetype_id": 4,
+      "n": 370
+    },
+    {
+      "soil": "bnei_reem",
+      "group": "bnei_reem",
+      "cluster_id": 3,
+      "archetype_id": 5,
+      "n": 244
+    },
+    {
+      "soil": "bnei_reem",
+      "group": "bnei_reem",
+      "cluster_id": 4,
+      "archetype_id": 2,
+      "n": 307
+    },
+    {
+      "soil": "bnei_reem",
+      "group": "bnei_reem",
+      "cluster_id": 5,
+      "archetype_id": 0,
+      "n": 255
+    },
+    {
+      "soil": "mishmar_label_downsample_1",
+      "group": "mishmar",
+      "cluster_id": 0,
+      "archetype_id": 2,
+      "n": 232
+    },
+    {
+      "soil": "mishmar_label_downsample_1",
+      "group": "mishmar",
+      "cluster_id": 1,
+      "archetype_id": 1,
+      "n": 424
+    },
+    {
+      "soil": "mishmar_label_downsample_2",
+      "group": "mishmar",
+      "cluster_id": 0,
+      "archetype_id": 4,
+      "n": 332
+    },
+    {
+      "soil": "mishmar_label_downsample_2",
+      "group": "mishmar",
+      "cluster_id": 1,
+      "archetype_id": 0,
+      "n": 215
+    },
+    {
+      "soil": "mishmar_label_downsample_2",
+      "group": "mishmar",
+      "cluster_id": 2,
+      "archetype_id": 3,
+      "n": 225
+    },
+    {
+      "soil": "mishmar_label_downsample_2",
+      "group": "mishmar",
+      "cluster_id": 3,
+      "archetype_id": 1,
+      "n": 319
+    }
+  ],
+  "per_replicate": {
+    "contingency_table": {
+      "0": {
+        "bnei_reem": 255,
+        "mishmar_label_downsample_1": 0,
+        "mishmar_label_downsample_2": 215
+      },
+      "1": {
+        "bnei_reem": 188,
+        "mishmar_label_downsample_1": 424,
+        "mishmar_label_downsample_2": 319
+      },
+      "2": {
+        "bnei_reem": 307,
+        "mishmar_label_downsample_1": 232,
+        "mishmar_label_downsample_2": 0
+      },
+      "3": {
+        "bnei_reem": 97,
+        "mishmar_label_downsample_1": 0,
+        "mishmar_label_downsample_2": 225
+      },
+      "4": {
+        "bnei_reem": 370,
+        "mishmar_label_downsample_1": 0,
+        "mishmar_label_downsample_2": 332
+      },
+      "5": {
+        "bnei_reem": 244,
+        "mishmar_label_downsample_1": 0,
+        "mishmar_label_downsample_2": 0
+      }
+    },
+    "chi2": 1558.4341965173558,
+    "dof": 10,
+    "p": 0.0
+  },
+  "group_level": {
+    "contingency_table": {
+      "0": {
+        "bnei_reem": 255,
+        "mishmar": 215
+      },
+      "1": {
+        "bnei_reem": 188,
+        "mishmar": 743
+      },
+      "2": {
+        "bnei_reem": 307,
+        "mishmar": 232
+      },
+      "3": {
+        "bnei_reem": 97,
+        "mishmar": 225
+      },
+      "4": {
+        "bnei_reem": 370,
+        "mishmar": 332
+      },
+      "5": {
+        "bnei_reem": 244,
+        "mishmar": 0
+      }
+    },
+    "chi2": 621.0719722339961,
+    "dof": 5,
+    "p": 5.656692925328651e-132
+  },
+  "mishmar_internal_consistency": {
+    "contingency_table": {
+      "0": {
+        "mishmar_label_downsample_1": 0,
+        "mishmar_label_downsample_2": 215
+      },
+      "1": {
+        "mishmar_label_downsample_1": 424,
+        "mishmar_label_downsample_2": 319
+      },
+      "2": {
+        "mishmar_label_downsample_1": 232,
+        "mishmar_label_downsample_2": 0
+      },
+      "3": {
+        "mishmar_label_downsample_1": 0,
+        "mishmar_label_downsample_2": 225
+      },
+      "4": {
+        "mishmar_label_downsample_1": 0,
+        "mishmar_label_downsample_2": 332
+      }
+    },
+    "chi2": 970.7082944274663,
+    "dof": 4,
+    "p": 7.949223719256774e-209,
+    "interpretation": "Low p means the two Mishmar replicates differ in archetype composition (physical-sample variability comparable to or larger than the group's internal spread); high p means they look similar (consistent with a real, reproducible Mishmar signature rather than single-sample noise)."
+  }
+}

@@ -1,0 +1,8 @@
+Loaded volume //hive3065/Yael_Mishael/Rony/remote_computer backup/nnUNet_resources/bnei_reem_fresh_bnei_reem_i3_scratch/inference_concatenated/nlm_volume.nii.gz: shape=(652, 650, 650), dtype=int32, classes=[1, 2, 5]
+Device: cuda
+WARNING: no --thresholds given, using built-in defaults.
+[OK] instance_map -> ../analysis/selected_outputs/bnei_reem/seg_plausibility_i3_scratch\instance_map.tif
+[OK] track_table  -> ../analysis/selected_outputs/bnei_reem/seg_plausibility_i3_scratch\track_table.csv
+[OK] errors.json  -> ../analysis/selected_outputs/bnei_reem/seg_plausibility_i3_scratch\errors.json
+Tracks: 87813  Events: 141024  Flagged transitions: 105667  Total errors: 246691
+

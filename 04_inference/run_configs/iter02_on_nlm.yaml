@@ -1,0 +1,7 @@
+# Auto-generated from REORG_PLAN.md §3.3 mapping table during the 2026-07 reorg.
+iteration_name: iter02_on_nlm
+sample_id: nlm_volume
+trainer_name: nnUNetTrainer_betterIgnoreSampling_earlyStopValLoss
+dataset_id: '777'
+model_dir_override: multi_sample_iter02
+# note: Was _run_inference_nlm_iter02.py (aka bnei_reem): iter02 model, output=inference_output_iter02.

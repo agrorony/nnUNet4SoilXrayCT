@@ -1,0 +1,15 @@
+[000.0s] Loading volume: \\hive3065\Yael_Mishael\Rony\remote_computer backup\10.5\nlm_volume.tif | RAM: 0.03 GB
+[002.2s]   shape=(20, 650, 650)  dtype=float32 | RAM: 0.14 GB
+[002.2s] Loading prediction: \\hive3065\Yael_Mishael\Rony\remote_computer backup\nnUNet_resources\bnei_reem_iter04_continue\inference_concatenated\nlm_volume.nii.gz | RAM: 0.14 GB
+[002.7s]   shape=(20, 650, 650) | RAM: 0.17 GB
+[002.7s] Loading GT: \\hive3065\Yael_Mishael\Rony\remote_computer backup\microSAM_inputs\merged_GT.nii.gz | RAM: 0.17 GB
+[002.8s]   shape=(20, 650, 650) | RAM: 0.17 GB
+[002.8s] Creating viewer ... | RAM: 0.17 GB
+[009.4s] Adding volume layer ... | RAM: 0.37 GB
+[010.5s] Volume layer added. | RAM: 0.38 GB
+[010.5s] Adding prediction layer ... | RAM: 0.38 GB
+[012.1s] Prediction layer added. | RAM: 0.68 GB
+[012.1s] Adding GT layer ... | RAM: 0.68 GB
+[014.0s] GT layer added. | RAM: 0.97 GB
+[021.7s] Building dock widgets ... | RAM: 1.55 GB
+[021.9s] Widgets ready. Entering napari event loop ... | RAM: 1.55 GB

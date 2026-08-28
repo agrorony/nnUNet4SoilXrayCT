@@ -1,0 +1,33 @@
+# Configuration for legacy/pores_analysis PSD pipeline.
+# Paths are resolved relative to the repo root (nnUNet4SoilXrayCT) unless absolute.
+
+paths:
+  base_drive_path: null
+  input_volume_relative_path: null
+  output_dir: "legacy/pores_analysis/results"
+  checkpoint_dir: "legacy/pores_analysis/checkpoints"
+  default_run_id: "default_run"
+
+image_params:
+  # Physical voxel edge length (isotropic), micrometers. Override per-call via
+  # compute_psd(..., voxel_spacing=...) or compute_psd_extended(..., voxel_size_um=...).
+  voxel_spacing: [5.0, 5.0, 5.0]
+
+processing_thresholds:
+  use_gpu: false
+  use_chunking: false
+  chunk_size: [128, 128, 128]
+  halo_width: 50
+  # bin_edges_um: null -> auto log-spaced bins; compute_psd_extended always adds 30-150 um.
+  bin_edges_um: null
+  exclude_border_pores: true
+  resume_from_checkpoint: false
+  border_width: 1
+  min_reliable_diameter_voxels: 5
+
+output_settings:
+  export_formats: ["csv"]
+  filename: "psd"
+  metadata: {}
+
+diagnostics: {}

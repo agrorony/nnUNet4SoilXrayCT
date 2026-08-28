@@ -1,0 +1,12 @@
+iteration_name: mishmar_hanegev_maoz_3_5p85um_scratch
+sample_id: mishmar_hanegev_maoz_3_5p85um
+gpu: 1
+trainer_name: nnUNetTrainer_betterIgnoreSampling_earlyStopValLoss
+annotation_path: '\\hive3065\Yael_Mishael\Rony\remote_computer backup\nnUNet_resources\mishmar_hanegev_new_work\mishmar_hanegev_maoz_3_5p85um\annotations\mishmar_hanegev_maoz_3_5p85um.nii.gz'
+base_checkpoint: scratch
+dataset_id: '777'
+force_rebuild: true
+offset_layers: 48
+early_stop_patience: 20
+early_stop_min_delta: 0.001
+run_inference_after: false

@@ -1,0 +1,14 @@
+# Auto-generated from REORG_PLAN.md §3.3 mapping table during the 2026-07 reorg.
+# Replaces the old repo-root per-iteration script for 'mishmar_hnegev_trained'.
+iteration_name: mishmar_hnegev_trained
+sample_id: mishmar_hanegev_Cu011_samp_2_Rec_nlm
+gpu: 0
+trainer_name: nnUNetTrainer_betterIgnoreSampling_earlyStopValLoss_lowlr
+annotation_path: "\\hive3065\Yael_Mishael\Rony\remote_computer backup\nnUNet_resources\mishmar_hanegev_new_work\annotations\mishmar_hanegev_Cu011_samp_2_Rec_nlm.nii.gz"
+base_checkpoint: mishmar_hnegev_scratch
+dataset_id: '777'
+force_rebuild: true
+offset_layers: 48
+early_stop_patience: 20
+early_stop_min_delta: 0.001
+run_inference_after: false

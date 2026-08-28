@@ -1,0 +1,74 @@
+{
+  "dist_denoised": {
+    "bnei_reem_n1": 597.8617553710938,
+    "mishmar_mean": 423.9446105957031,
+    "mishmar_se": 76.67730712890625,
+    "mishmar_values": [
+      347.2673034667969,
+      500.6219177246094
+    ]
+  },
+  "dist_pore_adj": {
+    "bnei_reem_n1": 603.78466796875,
+    "mishmar_mean": 424.8841247558594,
+    "mishmar_se": 76.11749267578125,
+    "mishmar_values": [
+      348.7666320800781,
+      501.0016174316406
+    ]
+  },
+  "dist_conn_pore_adj": {
+    "bnei_reem_n1": 666.8080444335938,
+    "mishmar_mean": 441.2533416748047,
+    "mishmar_se": 84.56983947753906,
+    "mishmar_values": [
+      356.6835021972656,
+      525.8231811523438
+    ]
+  },
+  "count_median_diam": {
+    "bnei_reem_n1": 72.03972231420103,
+    "mishmar_mean": 86.90394099670915,
+    "mishmar_se": 2.9371338740974267,
+    "mishmar_values": [
+      89.84107487080658,
+      83.96680712261173
+    ]
+  },
+  "vol_weighted_median_diam": {
+    "bnei_reem_n1": 690.2188502388295,
+    "mishmar_mean": 941.0057605461129,
+    "mishmar_se": 205.43695121968585,
+    "mishmar_values": [
+      735.5688093264271,
+      1146.4427117657988
+    ]
+  },
+  "pom_vol_frac": {
+    "bnei_reem_n1": 0.8178640142302247,
+    "mishmar_mean": 1.624288166897716,
+    "mishmar_se": 0.01626712810744635,
+    "mishmar_values": [
+      1.6080210387902696,
+      1.6405552950051623
+    ]
+  },
+  "pom_pore_contact": {
+    "bnei_reem_n1": 0.6422932338325659,
+    "mishmar_mean": 0.5737565048855033,
+    "mishmar_se": 0.02507385367908016,
+    "mishmar_values": [
+      0.5988303585645836,
+      0.5486826512064232
+    ]
+  },
+  "largest_obj_share": {
+    "bnei_reem_n1": 17.07705828306635,
+    "mishmar_mean": 45.37189718503237,
+    "mishmar_se": 0.012969808306287689,
+    "mishmar_values": [
+      45.384866993338655,
+      45.35892737672608
+    ]
+  }
+}
