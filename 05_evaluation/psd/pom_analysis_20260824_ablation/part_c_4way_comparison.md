@@ -1,0 +1,42 @@
+## Part C -- 4-way resolution-matched comparison
+
+| Metric | Bnei Re'em (15.00 um) | Mishmar native (5.85 um) | Mishmar label-downsample (~15 um) | Mishmar image-then-predict (~15 um) |
+|---|---|---|---|---|
+| Distance-to-POM, denoised, mean (median) um | 597.9 (542.1) | 268.1 (258.1) | 347.3 (334.4) | 761.8 (750.2) |
+| Distance-to-POM, pore-adjacent, mean (median) um | 603.8 (548.9) | 269.4 (259.2) | 348.8 (335.7) | 765.8 (755.1) |
+| Distance-to-POM, connected-pore-adjacent, mean (median) um | 666.8 (586.5) | 284.5 (272.5) | 356.7 (345.0) | 797.6 (782.0) |
+| Count-median object diameter, um | 72.0 | 33.9 | 89.8 | 84.0 |
+| Volume-weighted median diameter, um | 690.2 | 734.0 | 735.6 | 695.3 |
+| Largest single object, % of denoised POM volume | 17.1 | 45.1 | 45.4 | 19.6 |
+| POM volume fraction, % of total volume | 0.818 | 1.613 | 1.608 | 0.854 |
+| POM-pore contact fraction | 0.642 | 0.562 | 0.599 | 0.562 |
+| N POM objects (>= own elbow cutoff) | 1461 | 1726 | 656 | 115 |
+| Elbow cutoff (voxels / equiv um) | 8 vox / 37.2 um | 21 vox / 20.0 um | 13 vox / 43.8 um | 24 vox / 53.7 um |
+| Voxel size, um | 15.000 | 5.850 | 15.000 | 15.000 |
+
+### Interpretation
+
+**Directional check against Bnei Re'em / native Mishmar (distance-to-POM, denoised mean):**
+- mishmar_label_downsample (347.3 um) is closer to **mishmar_native**
+  (Bnei Re'em 597.9 um vs. native Mishmar 268.1 um).
+- mishmar_image_then_predict (761.8 um) is closer to **bnei_reem**.
+
+**Branch agreement (label-downsample vs. image-then-predict, same physical sample, same target ~15um):**
+
+- **distance-to-POM (denoised, mean)**: label-downsample=347.267, image-then-predict=761.792 (relative difference 54.4%) -- DIVERGENT
+- **POM volume fraction (denoised)**: label-downsample=1.608, image-then-predict=0.854 (relative difference 46.9%) -- DIVERGENT
+- **count-median object diameter**: label-downsample=89.841, image-then-predict=84.015 (relative difference 6.5%) -- CLOSE
+
+If these two branches agree closely, the ~15um-vs-5.85um shift in Mishmar's POM metrics is mostly a *geometric*
+consequence of coarser voxels (fewer resolvable small fragments, less-precise object boundaries) that the model
+would reproduce regardless of how it arrives at the coarse-resolution segmentation. If they diverge noticeably,
+that is evidence the segmentation model **itself behaves differently** when given native-resolution-vs-downsampled
+input at the same physical scale -- e.g. loess_i2 was trained on 5.85um patches and may not generalize cleanly to
+directly-downsampled 15um input even though nnU-Net internally resamples to its training spacing. That would be a
+separate, reportable finding about model robustness to input resolution, not just a POM-geometry effect.
+
+**No cross-sample caveat this time.** Unlike the discarded mishmar_15um branch (a different physical core), both
+new branches here operate on the exact same physical sample as mishmar_native -- so any distance/diameter shift
+toward Bnei Re'em's numbers can be attributed to resolution/segmentation-pathway effects, not sample-to-sample
+variability. The only remaining caveat is n=1 physical sample overall (as for all Mishmar numbers in this project) --
+these ablations isolate *resolution*, not soil-type sampling variability.

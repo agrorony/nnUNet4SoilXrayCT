@@ -1,0 +1,22 @@
+{
+  "branch": "mishmar_label_downsample",
+  "achieved_voxel_um": 15.0,
+  "target_voxel_um": 15.000149,
+  "shape": [
+    390,
+    390,
+    390
+  ],
+  "unique_labels": [
+    0,
+    1,
+    2,
+    5
+  ],
+  "pore_voxel_fraction_pct": 26.10829076687065,
+  "pom_voxel_fraction_pct": 1.6140612619902561,
+  "native_mishmar_pore_voxel_fraction_pct": 27.0384653,
+  "native_mishmar_pom_voxel_fraction_pct": 1.6146797,
+  "pom_collapse_floor_pct": 0.3,
+  "pom_collapsed": false
+}

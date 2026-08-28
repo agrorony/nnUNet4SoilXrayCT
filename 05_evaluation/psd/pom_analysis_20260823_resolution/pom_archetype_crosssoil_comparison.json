@@ -1,0 +1,115 @@
+{
+  "n_archetypes": 4,
+  "archetype_silhouette": 0.5793200632262206,
+  "centroids": [
+    {
+      "soil": "bnei_reem",
+      "cluster_id": 0,
+      "archetype_id": 2,
+      "n": 375
+    },
+    {
+      "soil": "bnei_reem",
+      "cluster_id": 1,
+      "archetype_id": 3,
+      "n": 177
+    },
+    {
+      "soil": "bnei_reem",
+      "cluster_id": 2,
+      "archetype_id": 0,
+      "n": 253
+    },
+    {
+      "soil": "bnei_reem",
+      "cluster_id": 3,
+      "archetype_id": 1,
+      "n": 237
+    },
+    {
+      "soil": "bnei_reem",
+      "cluster_id": 4,
+      "archetype_id": 3,
+      "n": 326
+    },
+    {
+      "soil": "bnei_reem",
+      "cluster_id": 5,
+      "archetype_id": 1,
+      "n": 93
+    },
+    {
+      "soil": "mishmar_native",
+      "cluster_id": 0,
+      "archetype_id": 3,
+      "n": 480
+    },
+    {
+      "soil": "mishmar_native",
+      "cluster_id": 1,
+      "archetype_id": 0,
+      "n": 350
+    },
+    {
+      "soil": "mishmar_native",
+      "cluster_id": 2,
+      "archetype_id": 2,
+      "n": 609
+    },
+    {
+      "soil": "mishmar_native",
+      "cluster_id": 3,
+      "archetype_id": 1,
+      "n": 287
+    },
+    {
+      "soil": "mishmar_15um",
+      "cluster_id": 0,
+      "archetype_id": 2,
+      "n": 502
+    },
+    {
+      "soil": "mishmar_15um",
+      "cluster_id": 1,
+      "archetype_id": 1,
+      "n": 234
+    },
+    {
+      "soil": "mishmar_15um",
+      "cluster_id": 2,
+      "archetype_id": 3,
+      "n": 178
+    },
+    {
+      "soil": "mishmar_15um",
+      "cluster_id": 3,
+      "archetype_id": 0,
+      "n": 301
+    }
+  ],
+  "contingency_table": {
+    "0": {
+      "bnei_reem": 253,
+      "mishmar_15um": 301,
+      "mishmar_native": 350
+    },
+    "1": {
+      "bnei_reem": 330,
+      "mishmar_15um": 234,
+      "mishmar_native": 287
+    },
+    "2": {
+      "bnei_reem": 375,
+      "mishmar_15um": 502,
+      "mishmar_native": 609
+    },
+    "3": {
+      "bnei_reem": 503,
+      "mishmar_15um": 178,
+      "mishmar_native": 480
+    }
+  },
+  "chi2": 183.28228398975034,
+  "dof": 6,
+  "p": 6.813748834193215e-37
+}

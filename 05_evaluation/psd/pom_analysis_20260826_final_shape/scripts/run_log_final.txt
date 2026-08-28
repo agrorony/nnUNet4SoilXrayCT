@@ -1,0 +1,75 @@
+[12:22:23] === Run 'final': ['bnei_reem', 'mishmar_label_downsample_1', 'mishmar_label_downsample_2'] ===
+[12:22:23] Groups: {'bnei_reem': 'bnei_reem', 'mishmar_label_downsample_1': 'mishmar', 'mishmar_label_downsample_2': 'mishmar'}
+[12:22:23] Resolvability cutoff: >= 20 voxels across equivalent-sphere diameter (same threshold applied identically to all 3 volumes)
+[12:22:23] === bnei_reem (Bnei Re'em (Vertisol) -- canonical nlm_volume, n=1) ===
+[12:22:23]   resolvability cutoff: diam>=20 vox (300.0um) -> n_voxels>=4188.8
+[12:22:23]   Loading \\hive3065\Yael_Mishael\Rony\remote_computer backup\nnUNet_resources\bnei_reem_fresh_bnei_reem_i4\inference_concatenated\nlm_volume.nii.gz
+[12:22:24]   Labeling POM objects (26-connectivity)...
+[12:22:38]   n_objects_raw=2,709  n_kept(diam>=20vox)=76
+[12:22:59]   Computing per-object voxel-position moments (vectorized bincount)...
+[12:23:00]   batched eigendecomposition of 76 3x3 covariance matrices...
+[12:23:00]   Computing sphericity (marching cubes per object, voxel-proxy fallback)...
+[12:23:04]   sphericity for 76 objects done (2.8s); 0 used the voxel-proxy fallback
+[12:23:04]   features computed for 76 objects (dropped 0 with undefined contact fraction)
+[12:23:05] === mishmar_label_downsample_1 (Mishmar HaNegev (Loess) -- sample 1 (native 5.85um), label-downsampled ~15um) ===
+[12:23:05]   resolvability cutoff: diam>=20 vox (300.0um) -> n_voxels>=4188.8
+[12:23:05]   Loading C:\Users\rony.schwartz\Documents\nnUNet4SoilXrayCT\05_evaluation\psd\pom_analysis_20260824_ablation\mishmar_label_downsample\mishmar_label_downsample.nii.gz
+[12:23:05]   Labeling POM objects (26-connectivity)...
+[12:23:07]   n_objects_raw=1,902  n_kept(diam>=20vox)=19
+[12:23:11]   Computing per-object voxel-position moments (vectorized bincount)...
+[12:23:12]   batched eigendecomposition of 19 3x3 covariance matrices...
+[12:23:12]   Computing sphericity (marching cubes per object, voxel-proxy fallback)...
+[12:23:13]   sphericity for 19 objects done (0.8s); 0 used the voxel-proxy fallback
+[12:23:13]   features computed for 19 objects (dropped 0 with undefined contact fraction)
+[12:23:13] === mishmar_label_downsample_2 (Mishmar HaNegev (Loess) -- sample 2 (native 8.8um), label-downsampled ~15um) ===
+[12:23:13]   resolvability cutoff: diam>=20 vox (300.0um) -> n_voxels>=4188.8
+[12:23:13]   Loading C:\Users\rony.schwartz\Documents\nnUNet4SoilXrayCT\05_evaluation\psd\pom_analysis_20260824_replicates\mishmar_label_downsample_2\mishmar_label_downsample_2.nii.gz
+[12:23:14]   Labeling POM objects (26-connectivity)...
+[12:23:24]   n_objects_raw=3,479  n_kept(diam>=20vox)=60
+[12:23:39]   Computing per-object voxel-position moments (vectorized bincount)...
+[12:23:41]   batched eigendecomposition of 60 3x3 covariance matrices...
+[12:23:41]   Computing sphericity (marching cubes per object, voxel-proxy fallback)...
+[12:23:44]   sphericity for 60 objects done (2.6s); 0 used the voxel-proxy fallback
+[12:23:44]   features computed for 60 objects (dropped 0 with undefined contact fraction)
+[12:23:44] Wrote object_counts_before_after_cutoff_final.json
+[12:23:44] Fitting StandardScaler across ONLY this run's 3 volumes -- no pooling with any other branch/soil...
+[12:23:44] === bnei_reem: spatial pattern ===
+[12:23:44]   n=76  R=0.9492404858321757  (close to random (CSR))
+[12:23:44] === bnei_reem: clustering ===
+[12:24:02]   best_k=4  silhouette=0.25820159538553017
+[12:24:02] === mishmar_label_downsample_1: spatial pattern ===
+[12:24:02]   n=19  R=1.0058501563709343  (close to random (CSR))
+[12:24:02] === mishmar_label_downsample_1: clustering ===
+[12:24:03]   best_k=6  silhouette=0.39035710145971464
+[12:24:03] === mishmar_label_downsample_2: spatial pattern ===
+[12:24:03]   n=60  R=0.9613998329238397  (close to random (CSR))
+[12:24:03] === mishmar_label_downsample_2: clustering ===
+[12:24:03]   best_k=6  silhouette=0.2778125502516962
+[12:24:04] Wrote pom_spatial_pattern_summary_final.json
+[12:24:04] Wrote pom_cluster_profiles_final.csv
+[12:24:04] === Cross-volume archetype matching (per-volume cluster centroids) ===
+[12:24:04] Wrote pom_archetype_proportion_vectors_final.json
+
+Archetype proportion vectors (index = archetype_id):
+  bnei_reem                           n= 76  [0.25  0.    0.145 0.    0.421 0.184]
+  mishmar_label_downsample_1          n= 19  [0.263 0.105 0.    0.158 0.263 0.211]
+  mishmar_label_downsample_2          n= 60  [0.383 0.117 0.25  0.25  0.    0.   ]
+  mishmar mean                             [0.323 0.111 0.125 0.204 0.132 0.105]
+  mishmar SE                               [0.06  0.006 0.125 0.046 0.132 0.105]
+[12:24:04] Wrote pom_archetype_crosssoil_comparison_final.json
+
+Per-volume contingency table (soil x archetype):
+archetype_id                 0  1   2   3   4   5
+soil                                             
+bnei_reem                   19  0  11   0  32  14
+mishmar_label_downsample_1   5  2   0   3   5   4
+mishmar_label_downsample_2  23  7  15  15   0   0
+
+GROUP-level contingency table (group x archetype):
+archetype_id   0  1   2   3   4   5
+group                              
+bnei_reem     19  0  11   0  32  14
+mishmar       28  9  15  18   5   4
+[12:24:04] Wrote pom_object_features_final.csv (155 rows)
+[12:24:04] DONE (final)
+

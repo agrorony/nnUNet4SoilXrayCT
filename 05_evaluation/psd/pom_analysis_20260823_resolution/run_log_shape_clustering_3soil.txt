@@ -1,0 +1,60 @@
+[16:35:28] === bnei_reem (Bnei Re'em (Vertisol)) -- cutoff=8 vox (from prior run) ===
+[16:35:28] Loading \\hive3065\Yael_Mishael\Rony\remote_computer backup\nnUNet_resources\bnei_reem_fresh_bnei_reem_i4\inference_concatenated\nlm_volume.nii.gz
+[16:35:29] Labeling POM objects (26-connectivity)...
+[16:35:43]   n_objects_raw=2,709  n_kept(>= 8 vox)=1,461
+[16:36:03] Computing per-object voxel-position moments (vectorized bincount)...
+[16:36:05]   batched eigendecomposition of 1,461 3x3 covariance matrices...
+[16:36:05] Computing sphericity (marching cubes per object, voxel-proxy fallback)...
+[16:36:10]   sphericity for 1,461 objects done (3.7s); 0 used the voxel-proxy fallback
+[16:36:10]   43 objects had raw sphericity > 1.0 (marching-cubes mesh smoothing slightly underestimates area for small near-convex objects) -- clipped to 1.0 per spec
+[16:36:10]   n_voxels_total=275,470,000
+[16:36:10]   features computed for 1,461 objects (dropped 0 with undefined contact fraction)
+[16:36:10] === mishmar_native (Mishmar HaNegev (Loess) -- native 5.85um) -- cutoff=21 vox (from prior run) ===
+[16:36:10] Loading \\hive3065\Yael_Mishael\Rony\remote_computer backup\nnUNet_resources\mishmar_hanegev_maoz_3_5p85um\inference_output_concat_loess_i2\mishmar_hanegev_maoz_3_5p85um.nii.gz
+[16:36:14] Labeling POM objects (26-connectivity)...
+[16:37:11]   n_objects_raw=4,391  n_kept(>= 21 vox)=1,726
+[16:38:28] Computing per-object voxel-position moments (vectorized bincount)...
+[16:38:36]   batched eigendecomposition of 1,726 3x3 covariance matrices...
+[16:38:36] Computing sphericity (marching cubes per object, voxel-proxy fallback)...
+[16:38:52]   sphericity for 1,726 objects done (12.0s); 0 used the voxel-proxy fallback
+[16:38:52]   4 objects had raw sphericity > 1.0 (marching-cubes mesh smoothing slightly underestimates area for small near-convex objects) -- clipped to 1.0 per spec
+[16:38:52]   n_voxels_total=1,000,000,000
+[16:38:52]   features computed for 1,726 objects (dropped 0 with undefined contact fraction)
+[16:38:53] === mishmar_15um (Mishmar HaNegev (Loess) -- new 15um sample) -- cutoff=12 vox (from prior run) ===
+[16:38:53] Loading \\hive3065\Yael_Mishael\Rony\remote_computer backup\nnUNet_resources\mishmar_hanegev_Cu011_samp_2_Rec_nlm\inference_output_concat_loess_i2\mishmar_hanegev_Cu011_samp_2_Rec_nlm.nii.gz
+[16:38:55] Labeling POM objects (26-connectivity)...
+[16:39:13]   n_objects_raw=2,824  n_kept(>= 12 vox)=1,215
+[16:39:38] Computing per-object voxel-position moments (vectorized bincount)...
+[16:39:40]   batched eigendecomposition of 1,215 3x3 covariance matrices...
+[16:39:40] Computing sphericity (marching cubes per object, voxel-proxy fallback)...
+[16:39:42]   sphericity for 1,215 objects done (0.7s); 0 used the voxel-proxy fallback
+[16:39:42]   35 objects had raw sphericity > 1.0 (marching-cubes mesh smoothing slightly underestimates area for small near-convex objects) -- clipped to 1.0 per spec
+[16:39:42]   n_voxels_total=347,295,000
+[16:39:42]   features computed for 1,215 objects (dropped 0 with undefined contact fraction)
+[16:39:42] Fitting global StandardScaler across all soils (pooled) for comparable cluster centroids...
+[16:39:42] === bnei_reem: spatial pattern ===
+[16:39:42]   n=1461  mean NN=304.77um  R=0.640 (aggregated/clustered)
+[16:39:42] === bnei_reem: clustering ===
+[16:39:53]   best_k=6  silhouette=0.247
+[16:39:54] === mishmar_native: spatial pattern ===
+[16:39:54]   n=1726  mean NN=221.02um  R=0.818 (aggregated/clustered)
+[16:39:54] === mishmar_native: clustering ===
+[16:39:54]   best_k=4  silhouette=0.275
+[16:39:55] === mishmar_15um: spatial pattern ===
+[16:39:55]   n=1215  mean NN=386.09um  R=0.705 (aggregated/clustered)
+[16:39:55] === mishmar_15um: clustering ===
+[16:39:55]   best_k=4  silhouette=0.292
+[16:39:56] Wrote pom_object_features_all_soils.csv (4,402 rows)
+[16:39:56] Wrote pom_spatial_pattern_summary.json
+[16:39:56] Wrote pom_cluster_profiles.csv
+[16:39:56] === Cross-soil archetype matching ===
+[16:39:56] Archetypes: k=4 (silhouette=0.579)  chi2=183.28 dof=6 p=6.814e-37
+
+Contingency table (soil x archetype):
+archetype_id      0    1    2    3
+soil                              
+bnei_reem       253  330  375  503
+mishmar_15um    301  234  502  178
+mishmar_native  350  287  609  480
+[16:39:56] DONE
+

@@ -1,0 +1,10 @@
+[14:42:19] Loading \\hive3065\Yael_Mishael\Rony\remote_computer backup\nnUNet_resources\mishmar_hanegev_maoz_3_5p85um\nifti_predict\mishmar_hanegev_maoz_3_5p85um_0000.nii.gz
+[14:43:25]   source shape=(1000, 1000, 1000) dtype=float32 voxel_um=5.85 min=0.0599 max=1.0000 mean=0.6313
+[14:43:25]   block partition: n=1000 -> m=390 blocks/axis, mean block size=2.5641 vox, achieved voxel size=15.0000um (target 15.000149um)
+[14:43:46]   block-mean downsample done (20.9s) -> shape=(390, 390, 390) min=0.0639 max=1.0000 mean=0.6313
+[14:44:00]   wrote \\hive3065\Yael_Mishael\Rony\remote_computer backup\nnUNet_resources\mishmar_hanegev_maoz_3_5p85um\ablation_image_downsample\nifti_predict_ds15um\mishmar_image_then_predict_0000.nii.gz
+
+======================================================================
+achieved_voxel_um=15.000000  shape=[390, 390, 390]  output=\\hive3065\Yael_Mishael\Rony\remote_computer backup\nnUNet_resources\mishmar_hanegev_maoz_3_5p85um\ablation_image_downsample\nifti_predict_ds15um\mishmar_image_then_predict_0000.nii.gz
+======================================================================
+

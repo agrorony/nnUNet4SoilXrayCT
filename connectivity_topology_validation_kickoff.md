@@ -1,0 +1,3 @@
+# Kickoff prompt — Track E (paste into a new chat)
+
+> Read `PROJECT_STATUS.md` in the project folder first — Track E row and the "Connectivity metrics" note. Then read `connectivity_topology_validation_prompt.md` and execute it in full: audit the χ/connectivity-density sign convention and reconcile it with Γ (Part A), find the root cause of the NaN tortuosity values (Part B), run the missing Rehovot topology metrics (Part C), run topology metrics on the native 15 µm Mishmar scan's pore channel for a resolution-matched comparison (Part D), and produce the consolidated cross-soil table plus draft-ready caption text (Part E). Flag anything that comes back genuinely inconsistent rather than smoothing it over. When done, prepare the validated results for Track D (figures).

@@ -1,0 +1,73 @@
+[16:17:55] === Run 'replicates': ['bnei_reem', 'mishmar_label_downsample_1', 'mishmar_label_downsample_2'] ===
+[16:17:55] Groups: {'bnei_reem': 'bnei_reem', 'mishmar_label_downsample_1': 'mishmar', 'mishmar_label_downsample_2': 'mishmar'}
+[16:17:55] === bnei_reem (Bnei Re'em (Vertisol) -- n=1 (only plausible replicate; see Part 0)) -- cutoff=8 vox (from prior run) ===
+[16:17:55] Loading \\hive3065\Yael_Mishael\Rony\remote_computer backup\nnUNet_resources\bnei_reem_fresh_bnei_reem_i4\inference_concatenated\nlm_volume.nii.gz
+[16:17:57] Labeling POM objects (26-connectivity)...
+[16:18:21]   n_objects_raw=2,709  n_kept(>= 8 vox)=1,461
+[16:19:03] Computing per-object voxel-position moments (vectorized bincount)...
+[16:19:05]   batched eigendecomposition of 1,461 3x3 covariance matrices...
+[16:19:05] Computing sphericity (marching cubes per object, voxel-proxy fallback)...
+[16:19:12]   sphericity for 1,461 objects done (5.1s); 0 used the voxel-proxy fallback
+[16:19:12]   43 objects had raw sphericity > 1.0 -- clipped to 1.0 per spec
+[16:19:12]   features computed for 1,461 objects (dropped 0 with undefined contact fraction)
+[16:19:12] === mishmar_label_downsample_1 (Mishmar HaNegev (Loess) -- sample 1 (native 5.85um), label-downsampled ~15um) -- cutoff=13 vox (from prior run) ===
+[16:19:12] Loading C:\Users\rony.schwartz\Documents\nnUNet4SoilXrayCT\05_evaluation\psd\pom_analysis_20260824_ablation\mishmar_label_downsample\mishmar_label_downsample.nii.gz
+[16:19:13] Labeling POM objects (26-connectivity)...
+[16:19:17]   n_objects_raw=1,902  n_kept(>= 13 vox)=656
+[16:19:25] Computing per-object voxel-position moments (vectorized bincount)...
+[16:19:26]   batched eigendecomposition of 656 3x3 covariance matrices...
+[16:19:26] Computing sphericity (marching cubes per object, voxel-proxy fallback)...
+[16:19:28]   sphericity for 656 objects done (1.8s); 0 used the voxel-proxy fallback
+[16:19:28]   3 objects had raw sphericity > 1.0 -- clipped to 1.0 per spec
+[16:19:28]   features computed for 656 objects (dropped 0 with undefined contact fraction)
+[16:19:28] === mishmar_label_downsample_2 (Mishmar HaNegev (Loess) -- sample 2 (native 8.8um), label-downsampled ~15um) -- cutoff=15 vox (from prior run) ===
+[16:19:28] Loading C:\Users\rony.schwartz\Documents\nnUNet4SoilXrayCT\05_evaluation\psd\pom_analysis_20260824_replicates\mishmar_label_downsample_2\mishmar_label_downsample_2.nii.gz
+[16:19:29] Labeling POM objects (26-connectivity)...
+[16:19:46]   n_objects_raw=3,479  n_kept(>= 15 vox)=1,091
+[16:20:20] Computing per-object voxel-position moments (vectorized bincount)...
+[16:20:22]   batched eigendecomposition of 1,091 3x3 covariance matrices...
+[16:20:22] Computing sphericity (marching cubes per object, voxel-proxy fallback)...
+[16:20:28]   sphericity for 1,091 objects done (4.7s); 0 used the voxel-proxy fallback
+[16:20:28]   8 objects had raw sphericity > 1.0 -- clipped to 1.0 per spec
+[16:20:28]   features computed for 1,091 objects (dropped 0 with undefined contact fraction)
+[16:20:29] Fitting StandardScaler across ONLY this run's soils (['bnei_reem', 'mishmar_label_downsample_1', 'mishmar_label_downsample_2']) -- no pooling with excluded branches...
+[16:20:29] === bnei_reem: spatial pattern ===
+[16:20:29]   n=1461  mean NN=304.77um  R=0.640 (aggregated/clustered)
+[16:20:29] === bnei_reem: clustering ===
+[16:20:50]   best_k=6  silhouette=0.246
+[16:20:51] === mishmar_label_downsample_1: spatial pattern ===
+[16:20:51]   n=656  mean NN=346.79um  R=0.930 (close to random (CSR))
+[16:20:51] === mishmar_label_downsample_1: clustering ===
+[16:20:51]   best_k=2  silhouette=0.255
+[16:20:52] === mishmar_label_downsample_2: spatial pattern ===
+[16:20:52]   n=1091  mean NN=402.72um  R=0.850 (aggregated/clustered)
+[16:20:52] === mishmar_label_downsample_2: clustering ===
+[16:20:53]   best_k=4  silhouette=0.242
+[16:20:54] Wrote pom_spatial_pattern_summary_replicates.json
+[16:20:54] Wrote pom_cluster_profiles_replicates.csv
+[16:20:54] === Cross-soil archetype matching (per-replicate centroids) ===
+[16:20:54] Archetypes: k=6 (silhouette=0.430)
+[16:20:54]   per-replicate: chi2=1558.43 dof=10 p=0
+[16:20:54]   GROUP-level (bnei_reem vs mishmar pooled): chi2=621.07 dof=5 p=5.657e-132
+[16:20:54]   Mishmar-internal (replicate 1 vs 2): chi2=970.71 dof=4 p=7.949e-209
+
+Per-replicate contingency table (soil x archetype):
+archetype_id                  0    1    2    3    4    5
+soil                                                    
+bnei_reem                   255  188  307   97  370  244
+mishmar_label_downsample_1    0  424  232    0    0    0
+mishmar_label_downsample_2  215  319    0  225  332    0
+
+GROUP-level contingency table (group x archetype):
+archetype_id    0    1    2    3    4    5
+group                                     
+bnei_reem     255  188  307   97  370  244
+mishmar       215  743  232  225  332    0
+
+Mishmar-internal contingency table (replicate x archetype):
+                              0    1    2    3    4
+mishmar_label_downsample_1    0  424  232    0    0
+mishmar_label_downsample_2  215  319    0  225  332
+[16:20:54] Wrote pom_object_features_replicates.csv (3,208 rows)
+[16:20:54] DONE (replicates)
+

@@ -1,0 +1,29 @@
+{
+  "bnei_reem": {
+    "path": "\\\\hive3065\\Yael_Mishael\\Rony\\remote_computer backup\\nnUNet_resources\\bnei_reem_fresh_bnei_reem_i4\\inference_concatenated\\nlm_volume.nii.gz",
+    "voxel_um": 15.000149,
+    "n_objects_raw": 2709,
+    "n_objects_kept_by_resolvability_cutoff": 76,
+    "n_objects_used_after_contact_fraction_dropna": 76,
+    "min_voxels_cutoff": 4188.790204786391,
+    "min_diameter_um": 300.00298
+  },
+  "mishmar_label_downsample_1": {
+    "path": "C:\\Users\\rony.schwartz\\Documents\\nnUNet4SoilXrayCT\\05_evaluation\\psd\\pom_analysis_20260824_ablation\\mishmar_label_downsample\\mishmar_label_downsample.nii.gz",
+    "voxel_um": 15.000149,
+    "n_objects_raw": 1902,
+    "n_objects_kept_by_resolvability_cutoff": 19,
+    "n_objects_used_after_contact_fraction_dropna": 19,
+    "min_voxels_cutoff": 4188.790204786391,
+    "min_diameter_um": 300.00298
+  },
+  "mishmar_label_downsample_2": {
+    "path": "C:\\Users\\rony.schwartz\\Documents\\nnUNet4SoilXrayCT\\05_evaluation\\psd\\pom_analysis_20260824_replicates\\mishmar_label_downsample_2\\mishmar_label_downsample_2.nii.gz",
+    "voxel_um": 15.000149,
+    "n_objects_raw": 3479,
+    "n_objects_kept_by_resolvability_cutoff": 60,
+    "n_objects_used_after_contact_fraction_dropna": 60,
+    "min_voxels_cutoff": 4188.790204786391,
+    "min_diameter_um": 300.00298
+  }
+}

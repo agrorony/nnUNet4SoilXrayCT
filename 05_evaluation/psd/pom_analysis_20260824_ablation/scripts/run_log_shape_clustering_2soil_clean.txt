@@ -1,0 +1,43 @@
+[14:47:48] === Run '2soil_clean': ['bnei_reem', 'mishmar_native'] ===
+[14:47:48] === bnei_reem (Bnei Re'em (Vertisol)) -- cutoff=8 vox (from prior run) ===
+[14:47:48] Loading \\hive3065\Yael_Mishael\Rony\remote_computer backup\nnUNet_resources\bnei_reem_fresh_bnei_reem_i4\inference_concatenated\nlm_volume.nii.gz
+[14:47:49] Labeling POM objects (26-connectivity)...
+[14:48:02]   n_objects_raw=2,709  n_kept(>= 8 vox)=1,461
+[14:48:22] Computing per-object voxel-position moments (vectorized bincount)...
+[14:48:24]   batched eigendecomposition of 1,461 3x3 covariance matrices...
+[14:48:24] Computing sphericity (marching cubes per object, voxel-proxy fallback)...
+[14:48:29]   sphericity for 1,461 objects done (3.6s); 0 used the voxel-proxy fallback
+[14:48:29]   43 objects had raw sphericity > 1.0 -- clipped to 1.0 per spec
+[14:48:29]   features computed for 1,461 objects (dropped 0 with undefined contact fraction)
+[14:48:29] === mishmar_native (Mishmar HaNegev (Loess) -- native 5.85um) -- cutoff=21 vox (from prior run) ===
+[14:48:29] Loading \\hive3065\Yael_Mishael\Rony\remote_computer backup\nnUNet_resources\mishmar_hanegev_maoz_3_5p85um\inference_output_concat_loess_i2\mishmar_hanegev_maoz_3_5p85um.nii.gz
+[14:48:34] Labeling POM objects (26-connectivity)...
+[14:49:29]   n_objects_raw=4,391  n_kept(>= 21 vox)=1,726
+[14:50:45] Computing per-object voxel-position moments (vectorized bincount)...
+[14:50:53]   batched eigendecomposition of 1,726 3x3 covariance matrices...
+[14:50:53] Computing sphericity (marching cubes per object, voxel-proxy fallback)...
+[14:51:09]   sphericity for 1,726 objects done (12.2s); 0 used the voxel-proxy fallback
+[14:51:09]   4 objects had raw sphericity > 1.0 -- clipped to 1.0 per spec
+[14:51:09]   features computed for 1,726 objects (dropped 0 with undefined contact fraction)
+[14:51:10] Fitting StandardScaler across ONLY this run's soils (['bnei_reem', 'mishmar_native']) -- no pooling with excluded branches...
+[14:51:10] === bnei_reem: spatial pattern ===
+[14:51:10]   n=1461  mean NN=304.77um  R=0.640 (aggregated/clustered)
+[14:51:10] === bnei_reem: clustering ===
+[14:51:27]   best_k=6  silhouette=0.246
+[14:51:27] === mishmar_native: spatial pattern ===
+[14:51:27]   n=1726  mean NN=221.02um  R=0.818 (aggregated/clustered)
+[14:51:27] === mishmar_native: clustering ===
+[14:51:28]   best_k=4  silhouette=0.273
+[14:51:29] Wrote pom_spatial_pattern_summary_2soil_clean.json
+[14:51:29] Wrote pom_cluster_profiles_2soil_clean.csv
+[14:51:29] === Cross-soil archetype matching ===
+[14:51:29] Archetypes: k=6 (silhouette=0.497)  chi2=826.57 dof=5 p=2.067e-176
+
+Contingency table (soil x archetype):
+archetype_id      0    1    2    3    4    5
+soil                                        
+bnei_reem       188  242  371  256   96  308
+mishmar_native  476    0  606  358  286    0
+[14:51:29] Wrote pom_object_features_2soil_clean.csv (3,187 rows)
+[14:51:29] DONE (2soil_clean)
+

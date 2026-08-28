@@ -1,0 +1,41 @@
+{
+  "bnei_reem": {
+    "label": "Bnei Re'em (Vertisol) -- canonical nlm_volume, n=1",
+    "voxel_um": 15.000149,
+    "n_total_voxels": 275470000,
+    "n_objects_raw": 2709,
+    "min_voxels_across_diameter": 20.0,
+    "min_diameter_um": 300.00298,
+    "min_voxels_for_cutoff": 4188.790204786391,
+    "n_objects_kept": 76,
+    "pom_object_volume_fraction_retained": 0.8353684781649875,
+    "largest_object_voxels": 384741,
+    "largest_object_diameter_um": 1353.5849659172368
+  },
+  "mishmar_label_downsample_1": {
+    "label": "Mishmar HaNegev -- sample 1 (native 5.85um), label-downsampled ~15um",
+    "voxel_um": 15.000149,
+    "n_total_voxels": 59319000,
+    "n_objects_raw": 1902,
+    "min_voxels_across_diameter": 20.0,
+    "min_diameter_um": 300.00298,
+    "min_voxels_for_cutoff": 4188.790204786391,
+    "n_objects_kept": 19,
+    "pom_object_volume_fraction_retained": 0.7702207437502937,
+    "largest_object_voxels": 432909,
+    "largest_object_diameter_um": 1407.8668093207734
+  },
+  "mishmar_label_downsample_2": {
+    "label": "Mishmar HaNegev -- sample 2 (native 8.8um), label-downsampled ~15um",
+    "voxel_um": 15.000149,
+    "n_total_voxels": 202262003,
+    "n_objects_raw": 3479,
+    "min_voxels_across_diameter": 20.0,
+    "min_diameter_um": 300.00298,
+    "min_voxels_for_cutoff": 4188.790204786391,
+    "n_objects_kept": 60,
+    "pom_object_volume_fraction_retained": 0.8706957717806773,
+    "largest_object_voxels": 1505109,
+    "largest_object_diameter_um": 2132.809254278838
+  }
+}
