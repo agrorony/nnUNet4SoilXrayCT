@@ -2,13 +2,15 @@
 
 > Single source of truth for what scans exist, where, and their processing/validity status. Update this whenever a new scan is found, processed, or its validity is reassessed. Prompts should read this before doing their own rediscovery.
 >
-> **2026-08-28 merge note:** Two versions of this file had diverged — a local-project-folder copy (rebuilt 2026-08-27/28 from scratch after a phantom-row problem) and this repo's own copy (a careful full-share inventory sweep from 2026-08-25, with `.log`-confirmed voxel sizes and raw-source paths). This version merges them: the 2026-08-25 sweep's Mishmar and Rehovot sections are the better evidence and are kept close to as-is; the Bnei Re'em section is corrected per Rony's direct confirmation (2026-08-28) that there are **2** physical specimens, not 3 — see the note under that section for the unresolved technical wrinkle this creates.
+> **2026-08-28 merge note:** Two versions of this file had diverged — a local-project-folder copy (rebuilt 2026-08-27/28 from scratch after a phantom-row problem) and this repo's own copy (a careful full-share inventory sweep from 2026-08-25, with `.log`-confirmed voxel sizes and raw-source paths). This version merges them: the 2026-08-25 sweep's Mishmar and Rehovot sections are the better evidence and are kept close to as-is.
+>
+> **2026-08-29 correction (final):** Bnei Re'em is **2 physical specimens**. "Canonical" is not a third scan — it's just the long-standing name for the *older* reconstruction of one of the two specimens (the one used in every prior comparison). Confirmed by Rony plus two independent evidence points: canonical's `fresh_bnei_reem_i4` training lineage dates back to ~June/July 2026, far predating either `samp_2_0` (Aug 4) or the `samp_2` redo (Aug 25); and canonical's recorded voxel size (15.000149 µm) exactly matches the `samp_2` (no dot) raw folder's logged voxel size, not `samp_2.0`'s (15.034357 µm). So the `samp_2` (no dot) raw core was processed twice, years apart — once as "canonical," once as this week's redo — while `samp_2.0` is the other, separate physical core.
 >
 > **One file, one location going forward:** this repo (`nnUNet4SoilXrayCT`, local git clone) is the canonical location for this file. The local project folder (`resarch exercise\`) keeps a copy for quick reference but should be treated as a mirror, not a second source of truth — update this one first, then copy over. Per Rony (2026-08-29): the `Z:\Rony\...` network-share copy is **not in scope** and should be disregarded going forward — this repo location is the only one that matters.
 
 ## Analysis-tier policy (Rony, 2026-08-29)
 
-- **Structural/topology metrics (pore-only: χ, connectivity density, Γ, DA, tortuosity, PSD, etc.):** every physical specimen listed below that has a valid pore channel is in scope, regardless of its POM status. This includes specimens excluded from POM work (e.g. `Cu011_samp_2`, Bnei Re'em Specimen 2) — POM invalidity does not disqualify pore/structure use.
+- **Structural/topology metrics (pore-only: χ, connectivity density, Γ, DA, tortuosity, PSD, etc.):** every reconstruction listed below that has a valid pore channel is in scope, regardless of its POM status. This includes ones excluded from POM work (e.g. `Cu011_samp_2`, Bnei Re'em Specimen B, Specimen A's redo) — POM invalidity does not disqualify pore/structure use.
 - **POM-inclusive analysis (Track A/B, 3-class matrix/POM/pore work):** restricted to exactly 3 volumes — Bnei Re'em canonical (`bnei_reem_fresh_bnei_reem_i4`), Mishmar `mishmar_hanegev_maoz_3_5p85um` (5.85 µm), and Mishmar `mishmar_hanegev_maoz_2_8p8um` (8.8 µm). No other volume — regardless of future processing status — enters POM analysis unless Rony explicitly adds it here.
 
 ## Inclusion rule (unchanged, 2026-08-24)
@@ -22,35 +24,29 @@ A sample is **NOT** excluded merely for differing in magnitude from another samp
 
 ---
 
-## Bnei Re'em (Vertisol) — 2 physical specimens (Rony confirmed 2026-08-28)
+## Bnei Re'em (Vertisol) — 2 physical specimens (confirmed 2026-08-29 per Rony)
 
-### Specimen 1 — canonical
+### Specimen A — raw core `18.12.25 bnei_reem_samp_2` (no dot), 15.000149 µm — two reconstructions of the same core, ~2 months apart
+| | Canonical (old reconstruction) | `bnei_reem_samp_2_rec_recropped` (this week's redo) |
+|---|---|---|
+| Raw source | `Z:\Rony\18.12.25 bnei_reem_samp_2\` — full ~1800-slice stack | (same raw source) |
+| Sample ID | `bnei_reem_fresh_bnei_reem_i4` | `bnei_reem_samp_2_rec_recropped` |
+| Preprocessing | Full pipeline (stack → crop 650³ → norm200 → NLM), trained through iterations i2→i4 (~June/July 2026) | Full pipeline, freshly reconstructed 2026-08-25 |
+| Model/checkpoint | `multi_sample_fresh_bnei_reem_i4`, `checkpoint_final.pth` | same |
+| Pore % / POM % | 21.636 / 0.819 | Not yet computed — no summary metrics on the share for this pass |
+| Status | **VALID — used in every prior comparison as "Bnei Re'em."** This is the long-running reconstruction, not a separate specimen | **CURRENT redo of the same core.** Model does not recognize POM here (per Rony) — **valid for structure/pore-only work; not usable for POM/3-class analysis** |
+| Location | `Z:\Rony\remote_computer backup\nnUNet_resources\bnei_reem_fresh_bnei_reem_i4\inference_concatenated\nlm_volume.nii.gz` | `...\nnUNet_resources\bnei_reem_samp_2_rec_recropped\` |
+
+### Specimen B — raw core `18.12.25 bnei_reem_samp_2.0`, 15.034357 µm
 | | |
 |---|---|
-| Sample ID | `bnei_reem_fresh_bnei_reem_i4` |
-| Raw source | Not present on the share as a standalone acquisition folder — only the derived NLM volume (`10.5\nlm_volume.tif`) and annotation iterations survive |
-| Voxel size | 15.000149 µm |
-| Preprocessing | Full pipeline (stack → crop 650³ → norm200 → NLM) — confirmed complete |
-| Model/checkpoint | `multi_sample_fresh_bnei_reem_i4`, `checkpoint_final.pth` |
-| Pore % / POM % | 21.636 / 0.819 |
-| Status | **VALID — canonical reference**, used in every comparison as "Bnei Re'em" |
-| Location | `Z:\Rony\remote_computer backup\nnUNet_resources\bnei_reem_fresh_bnei_reem_i4\inference_concatenated\nlm_volume.nii.gz` |
+| Raw source | `Z:\Rony\18.12.25 bnei_reem_samp_2.0\` — full ~1800-slice stack |
+| Processed file | `10.5\bnei_reem_samp_2_0.tif` (Aug 4, crop step skipped — driver bug) → `10.5\bnei_reem_samp_2_0_recropped.tif` (Aug 24, full pipeline re-run correctly: drop 12 stray SkyScan preview TIFFs, crop 650³, norm200, NLM) |
+| Pore % / POM % | ~39.4 / ~11.0 (original, superseded) → 28.3 / 7.62, elevated not collapsed (recropped, current) |
+| Status | **VALID for 2-class (pore/solid) work only — not used for POM/3-class analysis.** 2026-08-26: Rony decided not to pursue this specimen further for POM (settled on Bnei Re'em n=1 for POM — canonical only) |
+| Location | `Z:\Rony\remote_computer backup\nnUNet_resources\bnei_reem_samp_2_0_recropped\` |
 
-### Specimen 2 — second physical core, three processing/naming passes of the *same* scan
-Rony confirmed (2026-08-28) this is one specimen that got inconsistently named `samp_2` and `samp_2.0` across sessions — **not** two separate cores.
-
-**Open technical wrinkle, not yet explained:** the 2026-08-25 share sweep found `18.12.25 bnei_reem_samp_2\` and `18.12.25 bnei_reem_samp_2.0\` as two separate raw folders on `Z:\Rony\`, each with a full ~1800-slice stack, but different instrument-logged voxel sizes (15.000149 µm vs 15.034357 µm) — and the two reconstructions show different POM failure modes (samp_2's redo: POM not recognized at all; samp_2.0's redo: POM elevated but not collapsed). Per Rony this is still one physical core, so the voxel-size/dual-raw-folder difference needs an explanation at some point (duplicate/backup raw folder? a `.log` typo? a re-scan of the same core logged slightly differently?) — flagged for whenever it's convenient to check, not blocking.
-
-| | `bnei_reem_samp_2_0` | `bnei_reem_samp_2_0_recropped` | `bnei_reem_samp_2` (no dot) → `bnei_reem_samp_2_rec_recropped` |
-|---|---|---|---|
-| Raw source | `Z:\Rony\18.12.25 bnei_reem_samp_2.0\` | (same raw source, recropped) | `Z:\Rony\18.12.25 bnei_reem_samp_2\` |
-| Processed file | `10.5\bnei_reem_samp_2_0.tif` (Aug 4) | `10.5\bnei_reem_samp_2_0_recropped.tif` (Aug 24) | `10.5\bnei_reem_samp_2_rec_recropped.tif` (Aug 25 — this week's reconstruction) |
-| Preprocessing | Crop step skipped (driver bug) — raw→NLM→tif_direct | Full pipeline re-run correctly (drop 12 stray SkyScan preview TIFFs, crop 650³, norm200, NLM) | Full pipeline, freshly reconstructed |
-| Pore % / POM % | ~39.4 / ~11.0 | 28.3 / 7.62 (elevated, not collapsed) | Not yet computed — no summary metrics on the share for this pass |
-| Status | **SUPERSEDED** — kept for traceability | Prior "current" pass; 2026-08-26 Rony decided not to pursue this pass further for POM (settled on Bnei Re'em n=1 for POM) | **CURRENT reconstruction.** Model does not recognize POM here (per Rony) — **valid for structure/pore-only work; not usable for POM/3-class analysis** |
-| Location | `Z:\Rony\remote_computer backup\nnUNet_resources\bnei_reem_samp_2_0\` | `...\bnei_reem_samp_2_0_recropped\` | `...\bnei_reem_samp_2_rec_recropped\` |
-
-Bnei Re'em POM work remains **n=1** (canonical only). Specimen 2 (any pass) is usable for 2-class pore/solid work only (A2, Track E connectivity).
+Bnei Re'em POM work remains **n=1** (canonical only — the old reconstruction of Specimen A). Specimen A's redo and Specimen B are each usable for 2-class pore/solid work only (A2, Track E connectivity) — that gives Bnei Re'em up to n=3 *reconstructions* for structural/topology metrics, but only n=2 *physical specimens*.
 
 ---
 
@@ -97,3 +93,4 @@ This matches Rony's "2 active samples" — `samp1` is real but was never put thr
 - 2026-08-25 → 08-27 (local-project-folder copy, separately): that copy accumulated a phantom-looking `bnei_reem_samp_2` row with contradictory notes across sessions, lost the Mishmar/Rehovot detail this sweep had, and never recorded storage locations — diverged from this file rather than building on it.
 - **2026-08-28: merged.** Reconnected this repo, compared both copies. Rony confirmed directly: exactly 2 Bnei Re'em physical specimens (not 3) — `bnei_reem_samp_2` (no dot) and `bnei_reem_samp_2.0` are the same core under two names, despite the sweep finding them as separate raw folders with different voxel sizes (flagged above, unresolved technically, not blocking). `bnei_reem_samp_2`'s reconstruction (dated 2026-08-25 on the share) is the "this week" redo Rony mentioned — POM not recognized by the model there, pore/structure-only. Kept this file's superior Mishmar/Rehovot sections as the base. Going forward: this repo copy is canonical; the local project-folder copy is a mirror, updated to match.
 - **2026-08-29:** added the analysis-tier policy — all valid-pore specimens are in scope for structural/topology metrics; only the Bnei Re'em canonical + both native Mishmar scans (5.85/8.8 µm) are in scope for POM-inclusive analysis. Per Rony, the `Z:\Rony\...` network-share copy of this file is out of scope and no longer tracked here.
+- **2026-08-29 (corrections, same day, in order):** first wrongly collapsed `samp_2`/`samp_2.0` into one specimen (Bnei Re'em "2 total"). Rony corrected: they're two different physical cores (different voxel sizes because different scans) — so briefly went to "3 physical specimens" (canonical + samp_2.0 + samp_2, treating canonical as a third scan). Rony corrected again: canonical isn't a third scan at all, it's just the older of two reconstructions of the `samp_2` (no dot) core — confirmed via voxel-size match (canonical = 15.000149 µm = `samp_2`'s raw log; `samp_2.0`'s raw log is 15.034357 µm, different) and via canonical's `fresh_bnei_reem_i4` training lineage predating both Aug reconstructions by ~2 months. **Final: 2 physical specimens** — Specimen A (`samp_2` raw core, reconstructed twice: canonical + this week's redo) and Specimen B (`samp_2.0` raw core). Lesson: don't treat a working label like "canonical" as implying a distinct entity — verify what it actually refers to before building structure around it, and when a verbal count conflicts with sweep evidence, surface the conflict and ask rather than picking a side.
