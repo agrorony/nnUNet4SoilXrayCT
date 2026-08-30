@@ -154,7 +154,7 @@ def main() -> None:
     # --- Diameter map + leak-masking fix -----------------------------------
     diameter_map_px = compute_diameter_map_px(raw_pore_mask)
     pore_mask_true = raw_pore_mask & (diameter_map_px > 0)
-    n_leaked = int((diameter_map_px > 0).sum()) - int((diameter_map_px > 0) & raw_pore_mask).sum()
+    n_leaked = int((diameter_map_px > 0).sum()) - int(((diameter_map_px > 0) & raw_pore_mask).sum())
     n_pore_missing_thickness = int(raw_pore_mask.sum()) - int(pore_mask_true.sum())
     print(f"  Leaked non-pore voxels with diameter>0: {n_leaked:,}")
     print(f"  True pore voxels with diameter==0 (excluded from pore_mask_true): {n_pore_missing_thickness:,}")
