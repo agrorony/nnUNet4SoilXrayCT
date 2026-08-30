@@ -1,0 +1,20 @@
+[mishmar_second_8p8um] loading native-res segmentation: \\hive3065\Yael_Mishael\Rony\remote_computer backup\nnUNet4SoilXrayCT\05_evaluation\psd\pom_analysis_20260829_roi_expansion\pipeline_work\mishmar_second_8p8um\inference_concatenated\mishmar_second_8p8um.nii.gz
+[mishmar_second_8p8um] native shape=(1614, 1614, 1614) unique_labels=[0, 1, 2, 5] voxel_um=8.8
+[mishmar_second_8p8um] block partition: n=1614 -> m=947 blocks/axis, achieved voxel size=14.9981um (target 15.000149um)
+[mishmar_second_8p8um] downsampled shape=(947, 947, 947)
+[mishmar_second_8p8um] downsampled pore=172,768,581 (20.343%)  pom=66,747,114 (7.859%)
+{
+  "volume_key": "mishmar_second_8p8um",
+  "achieved_voxel_um": 14.998099260823654,
+  "target_voxel_um": 15.000149,
+  "shape": [
+    947,
+    947,
+    947
+  ],
+  "pore_voxel_fraction_pct": 20.342992044786254,
+  "pom_voxel_fraction_pct": 7.859276271502404,
+  "collapse_floor_pct": 0.3,
+  "downsampled_collapse_detected": false
+}
+[mishmar_second_8p8um] DONE -- wrote \\hive3065\Yael_Mishael\Rony\remote_computer backup\nnUNet4SoilXrayCT\05_evaluation\psd\pom_analysis_20260829_roi_expansion\pipeline_work\mishmar_second_8p8um\mishmar_second_8p8um_label_downsample.nii.gz

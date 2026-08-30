@@ -1,0 +1,17 @@
+{
+    "channel_names": {
+        "0": "noNorm"
+    },
+    "labels": {
+        "background": 0,
+        "Stones": 1,
+        "POM_type1": 2,
+        "POM_type2": 3,
+        "unused": 4,
+        "Pore": 5,
+        "ignore": 6
+    },
+    "numTraining": 1,
+    "file_ending": ".nii.gz",
+    "name": "GCEF"
+}

@@ -1,0 +1,14 @@
+{
+  "volume_key": "mishmar_second_8p8um",
+  "achieved_voxel_um": 14.998099260823654,
+  "target_voxel_um": 15.000149,
+  "shape": [
+    947,
+    947,
+    947
+  ],
+  "pore_voxel_fraction_pct": 20.342992044786254,
+  "pom_voxel_fraction_pct": 7.859276271502404,
+  "collapse_floor_pct": 0.3,
+  "downsampled_collapse_detected": false
+}

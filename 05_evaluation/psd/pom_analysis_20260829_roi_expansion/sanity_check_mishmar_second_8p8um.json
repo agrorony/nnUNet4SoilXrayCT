@@ -1,0 +1,18 @@
+{
+  "volume_key": "mishmar_second_8p8um",
+  "crop_shape": [
+    1614,
+    1614,
+    1614
+  ],
+  "n_total_voxels": 4204463544,
+  "new_pore_voxel_fraction_pct": 21.679906091724696,
+  "new_pom_voxel_fraction_pct": 7.963538118384028,
+  "baseline_pore_voxel_fraction_pct": 22.984,
+  "baseline_pom_voxel_fraction_pct": 1.643,
+  "collapse_floor_pct": 0.3,
+  "pore_collapsed": false,
+  "pom_collapsed": false,
+  "channel_collapse_detected": false,
+  "concat_path": "\\\\hive3065\\Yael_Mishael\\Rony\\remote_computer backup\\nnUNet4SoilXrayCT\\05_evaluation\\psd\\pom_analysis_20260829_roi_expansion\\pipeline_work\\mishmar_second_8p8um\\inference_concatenated\\mishmar_second_8p8um.nii.gz"
+}

@@ -1,0 +1,11 @@
+{
+    "folder_with_segs_from_prev_stage": null,
+    "list_of_lists_or_source_folder": "\\\\hive3065\\Yael_Mishael\\Rony\\remote_computer backup\\nnUNet4SoilXrayCT\\05_evaluation\\psd\\pom_analysis_20260829_roi_expansion\\pipeline_work\\bnei_reem_canonical\\inference_input",
+    "num_parts": 1,
+    "num_processes_preprocessing": 1,
+    "num_processes_segmentation_export": 1,
+    "output_folder_or_list_of_truncated_output_files": "\\\\hive3065\\Yael_Mishael\\Rony\\remote_computer backup\\nnUNet4SoilXrayCT\\05_evaluation\\psd\\pom_analysis_20260829_roi_expansion\\pipeline_work\\bnei_reem_canonical\\inference_output",
+    "overwrite": true,
+    "part_id": 0,
+    "save_probabilities": false
+}

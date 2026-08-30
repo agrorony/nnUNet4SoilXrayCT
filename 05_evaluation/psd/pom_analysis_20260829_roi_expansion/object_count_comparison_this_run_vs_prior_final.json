@@ -1,0 +1,35 @@
+[
+  {
+    "volume": "bnei_reem_canonical",
+    "prior_crop_size_vox": 652,
+    "this_run_crop_size_vox": 722,
+    "crop_decision": "no holder/mount signature found before reaching the 90%-cap boundary -- using proposed_max",
+    "prior_n_objects_raw": 2709,
+    "prior_n_kept": 76,
+    "this_run_n_objects_raw": 2709,
+    "this_run_n_kept": 76,
+    "delta_n_kept": 0
+  },
+  {
+    "volume": "mishmar_native_5p85um",
+    "prior_crop_size_vox": 1000,
+    "this_run_crop_size_vox": 1216,
+    "crop_decision": "no holder/mount signature found before reaching the 90%-cap boundary -- using proposed_max",
+    "prior_n_objects_raw": 1902,
+    "prior_n_kept": 19,
+    "this_run_n_objects_raw": 6959,
+    "this_run_n_kept": 53,
+    "delta_n_kept": 34
+  },
+  {
+    "volume": "mishmar_second_8p8um",
+    "prior_crop_size_vox": 1000,
+    "this_run_crop_size_vox": 1614,
+    "crop_decision": "no holder/mount signature found before reaching the 90%-cap boundary -- using proposed_max",
+    "prior_n_objects_raw": 3479,
+    "prior_n_kept": 60,
+    "this_run_n_objects_raw": 25358,
+    "this_run_n_kept": 294,
+    "delta_n_kept": 234
+  }
+]

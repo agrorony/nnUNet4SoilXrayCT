@@ -1,0 +1,45 @@
+{
+  "n_archetypes": 2,
+  "archetype_silhouette_on_centroids": 0.36963464900956267,
+  "min_voxels_across_diameter": 15.0,
+  "note": "n=1 on the Bnei Re'em side -- this is a descriptive comparison, not an inferential test.",
+  "per_volume_vectors": {
+    "bnei_reem": {
+      "vector": [
+        1.0,
+        0.0
+      ],
+      "n_objects": 125
+    },
+    "mishmar_label_downsample_1": {
+      "vector": [
+        1.0,
+        0.0
+      ],
+      "n_objects": 114
+    },
+    "mishmar_label_downsample_2": {
+      "vector": [
+        0.8065573770491803,
+        0.19344262295081968
+      ],
+      "n_objects": 610
+    }
+  },
+  "mishmar_mean": [
+    0.9032786885245901,
+    0.09672131147540984
+  ],
+  "mishmar_se": [
+    0.09672131147540984,
+    0.09672131147540984
+  ],
+  "bnei_reem_minus_mishmar_mean": [
+    0.09672131147540985,
+    -0.09672131147540984
+  ],
+  "bnei_reem_deviation_in_mishmar_se_units": [
+    1.0000000000000002,
+    -1.0
+  ]
+}

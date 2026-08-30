@@ -1,0 +1,23 @@
+{
+  "bnei_reem": {
+    "label": "Bnei Re'em (Vertisol) -- canonical nlm_volume, n=1 [EXISTING CROP]",
+    "path": "\\\\hive3065\\Yael_Mishael\\Rony\\remote_computer backup\\nnUNet_resources\\bnei_reem_fresh_bnei_reem_i4\\inference_concatenated\\nlm_volume.nii.gz",
+    "voxel_um": 15.000149,
+    "pore_label": 5,
+    "pom_label": 2
+  },
+  "mishmar_label_downsample_1": {
+    "label": "Mishmar HaNegev (Loess) -- sample 1 (native 5.85um), label-downsampled ~15um [ROI-EXPANDED CROP]",
+    "path": "\\\\hive3065\\Yael_Mishael\\Rony\\remote_computer backup\\nnUNet4SoilXrayCT\\05_evaluation\\psd\\pom_analysis_20260829_roi_expansion\\pipeline_work\\mishmar_native_5p85um\\mishmar_native_5p85um_label_downsample.nii.gz",
+    "voxel_um": 15.000149,
+    "pore_label": 5,
+    "pom_label": 2
+  },
+  "mishmar_label_downsample_2": {
+    "label": "Mishmar HaNegev (Loess) -- sample 2 (native 8.8um), label-downsampled ~15um [ROI-EXPANDED CROP]",
+    "path": "\\\\hive3065\\Yael_Mishael\\Rony\\remote_computer backup\\nnUNet4SoilXrayCT\\05_evaluation\\psd\\pom_analysis_20260829_roi_expansion\\pipeline_work\\mishmar_second_8p8um\\mishmar_second_8p8um_label_downsample.nii.gz",
+    "voxel_um": 15.000149,
+    "pore_label": 5,
+    "pom_label": 2
+  }
+}

@@ -1,0 +1,65 @@
+{
+  "bnei_reem_canonical": {
+    "raw_shape_zhw": [
+      804,
+      1344,
+      1344
+    ],
+    "current_crop_shape_zhw": [
+      652,
+      650,
+      650
+    ],
+    "margin_pct": {
+      "z_pct": 23.312883435582823,
+      "y_pct": 106.76923076923077,
+      "x_pct": 106.76923076923077
+    },
+    "qualifies_for_part2": true,
+    "voxel_um": 15.000149,
+    "raw_slice_dir": "\\\\hive3065\\Yael_Mishael\\Rony\\18.12.25 bnei_reem_samp_2",
+    "current_crop_tif": "\\\\hive3065\\Yael_Mishael\\Rony\\remote_computer backup\\10.5\\nlm_volume.tif"
+  },
+  "mishmar_native_5p85um": {
+    "raw_shape_zhw": [
+      1353,
+      1845,
+      1845
+    ],
+    "current_crop_shape_zhw": [
+      1000,
+      1000,
+      1000
+    ],
+    "margin_pct": {
+      "z_pct": 35.3,
+      "y_pct": 84.5,
+      "x_pct": 84.5
+    },
+    "qualifies_for_part2": true,
+    "voxel_um": 5.85,
+    "raw_slice_dir": "\\\\hive3065\\Yael_Mishael\\Rony\\mishmar_hanegev_maoz\\3-16mm_diam_5.85um",
+    "current_crop_tif": "\\\\hive3065\\Yael_Mishael\\Rony\\remote_computer backup\\10.5\\mishmar_hanegev_maoz_3_5p85um.tif"
+  },
+  "mishmar_second_8p8um": {
+    "raw_shape_zhw": [
+      3311,
+      1794,
+      1807
+    ],
+    "current_crop_shape_zhw": [
+      1000,
+      1000,
+      1000
+    ],
+    "margin_pct": {
+      "z_pct": 231.1,
+      "y_pct": 79.4,
+      "x_pct": 80.7
+    },
+    "qualifies_for_part2": true,
+    "voxel_um": 8.8,
+    "raw_slice_dir": "\\\\hive3065\\Yael_Mishael\\Rony\\mishmar_hanegev_maoz\\2-16mm_diam_8.8um\\2-16mm_diam_8.8um",
+    "current_crop_tif": "\\\\hive3065\\Yael_Mishael\\Rony\\remote_computer backup\\10.5\\mishmar_hanegev_maoz_2_8p8um.tif"
+  }
+}

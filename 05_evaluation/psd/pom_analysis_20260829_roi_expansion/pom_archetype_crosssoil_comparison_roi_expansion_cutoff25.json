@@ -1,0 +1,183 @@
+{
+  "n_archetypes": 6,
+  "archetype_silhouette": 0.3836256156424585,
+  "centroids": [
+    {
+      "soil": "bnei_reem",
+      "group": "bnei_reem",
+      "cluster_id": 0,
+      "archetype_id": 0,
+      "n": 8
+    },
+    {
+      "soil": "bnei_reem",
+      "group": "bnei_reem",
+      "cluster_id": 1,
+      "archetype_id": 5,
+      "n": 6
+    },
+    {
+      "soil": "bnei_reem",
+      "group": "bnei_reem",
+      "cluster_id": 2,
+      "archetype_id": 4,
+      "n": 10
+    },
+    {
+      "soil": "bnei_reem",
+      "group": "bnei_reem",
+      "cluster_id": 3,
+      "archetype_id": 3,
+      "n": 8
+    },
+    {
+      "soil": "bnei_reem",
+      "group": "bnei_reem",
+      "cluster_id": 4,
+      "archetype_id": 1,
+      "n": 9
+    },
+    {
+      "soil": "mishmar_label_downsample_1",
+      "group": "mishmar",
+      "cluster_id": 0,
+      "archetype_id": 5,
+      "n": 3
+    },
+    {
+      "soil": "mishmar_label_downsample_1",
+      "group": "mishmar",
+      "cluster_id": 1,
+      "archetype_id": 4,
+      "n": 6
+    },
+    {
+      "soil": "mishmar_label_downsample_1",
+      "group": "mishmar",
+      "cluster_id": 2,
+      "archetype_id": 2,
+      "n": 4
+    },
+    {
+      "soil": "mishmar_label_downsample_1",
+      "group": "mishmar",
+      "cluster_id": 3,
+      "archetype_id": 3,
+      "n": 6
+    },
+    {
+      "soil": "mishmar_label_downsample_1",
+      "group": "mishmar",
+      "cluster_id": 4,
+      "archetype_id": 1,
+      "n": 1
+    },
+    {
+      "soil": "mishmar_label_downsample_1",
+      "group": "mishmar",
+      "cluster_id": 5,
+      "archetype_id": 0,
+      "n": 4
+    },
+    {
+      "soil": "mishmar_label_downsample_2",
+      "group": "mishmar",
+      "cluster_id": 0,
+      "archetype_id": 4,
+      "n": 122
+    },
+    {
+      "soil": "mishmar_label_downsample_2",
+      "group": "mishmar",
+      "cluster_id": 1,
+      "archetype_id": 2,
+      "n": 36
+    }
+  ],
+  "per_replicate_contingency_table": {
+    "0": {
+      "bnei_reem": 8,
+      "mishmar_label_downsample_1": 4,
+      "mishmar_label_downsample_2": 0
+    },
+    "1": {
+      "bnei_reem": 9,
+      "mishmar_label_downsample_1": 1,
+      "mishmar_label_downsample_2": 0
+    },
+    "2": {
+      "bnei_reem": 0,
+      "mishmar_label_downsample_1": 4,
+      "mishmar_label_downsample_2": 36
+    },
+    "3": {
+      "bnei_reem": 8,
+      "mishmar_label_downsample_1": 6,
+      "mishmar_label_downsample_2": 0
+    },
+    "4": {
+      "bnei_reem": 10,
+      "mishmar_label_downsample_1": 6,
+      "mishmar_label_downsample_2": 122
+    },
+    "5": {
+      "bnei_reem": 6,
+      "mishmar_label_downsample_1": 3,
+      "mishmar_label_downsample_2": 0
+    }
+  },
+  "group_level_contingency_table": {
+    "0": {
+      "bnei_reem": 8,
+      "mishmar": 4
+    },
+    "1": {
+      "bnei_reem": 9,
+      "mishmar": 1
+    },
+    "2": {
+      "bnei_reem": 0,
+      "mishmar": 40
+    },
+    "3": {
+      "bnei_reem": 8,
+      "mishmar": 6
+    },
+    "4": {
+      "bnei_reem": 10,
+      "mishmar": 128
+    },
+    "5": {
+      "bnei_reem": 6,
+      "mishmar": 3
+    }
+  },
+  "mishmar_internal_consistency": {
+    "contingency_table": {
+      "0": {
+        "mishmar_label_downsample_1": 4,
+        "mishmar_label_downsample_2": 0
+      },
+      "1": {
+        "mishmar_label_downsample_1": 1,
+        "mishmar_label_downsample_2": 0
+      },
+      "2": {
+        "mishmar_label_downsample_1": 4,
+        "mishmar_label_downsample_2": 36
+      },
+      "3": {
+        "mishmar_label_downsample_1": 6,
+        "mishmar_label_downsample_2": 0
+      },
+      "4": {
+        "mishmar_label_downsample_1": 6,
+        "mishmar_label_downsample_2": 122
+      },
+      "5": {
+        "mishmar_label_downsample_1": 3,
+        "mishmar_label_downsample_2": 0
+      }
+    }
+  }
+}

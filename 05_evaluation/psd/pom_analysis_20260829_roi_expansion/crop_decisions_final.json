@@ -1,0 +1,19 @@
+{
+  "bnei_reem_canonical": {
+    "used_new_crop": false,
+    "decision": "existing crop used -- Part 2 native-res channel collapse: pore=14.685% pom=0.254% vs baseline pore=21.636% pom=0.819%",
+    "reasons": [
+      "Part 2 native-res channel collapse: pore=14.685% pom=0.254% vs baseline pore=21.636% pom=0.819%"
+    ]
+  },
+  "mishmar_native_5p85um": {
+    "used_new_crop": true,
+    "decision": "ROI-expanded crop used (final_crop_size=1216)",
+    "reasons": []
+  },
+  "mishmar_second_8p8um": {
+    "used_new_crop": true,
+    "decision": "ROI-expanded crop used (final_crop_size=1614)",
+    "reasons": []
+  }
+}

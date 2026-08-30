@@ -1,0 +1,29 @@
+{
+  "bnei_reem": {
+    "n_objects": 41,
+    "mean_nn_distance_um": 1562.237722298528,
+    "median_nn_distance_um": 1388.0246931354807,
+    "expected_nn_distance_um_csr": 1567.9697577044071,
+    "clark_evans_r_index": 0.9963442946665814,
+    "verdict": "close to random (CSR)",
+    "object_density_per_um3": 4.40983996098495e-11
+  },
+  "mishmar_label_downsample_1": {
+    "n_objects": 24,
+    "mean_nn_distance_um": 1362.5948830747566,
+    "median_nn_distance_um": 978.2387921930099,
+    "expected_nn_distance_um_csr": 1365.4698826968258,
+    "clark_evans_r_index": 0.997894497961104,
+    "verdict": "close to random (CSR)",
+    "object_density_per_um3": 6.6771248621549e-11
+  },
+  "mishmar_label_downsample_2": {
+    "n_objects": 158,
+    "mean_nn_distance_um": 1352.4969172716912,
+    "median_nn_distance_um": 1171.3755436818947,
+    "expected_nn_distance_um_csr": 1455.5880490653801,
+    "clark_evans_r_index": 0.9291756126605445,
+    "verdict": "close to random (CSR)",
+    "object_density_per_um3": 5.512142429347434e-11
+  }
+}

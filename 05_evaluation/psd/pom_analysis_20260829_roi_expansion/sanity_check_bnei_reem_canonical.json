@@ -1,0 +1,18 @@
+{
+  "volume_key": "bnei_reem_canonical",
+  "crop_shape": [
+    722,
+    722,
+    722
+  ],
+  "n_total_voxels": 376367048,
+  "new_pore_voxel_fraction_pct": 14.685118767358189,
+  "new_pom_voxel_fraction_pct": 0.25378364154770533,
+  "baseline_pore_voxel_fraction_pct": 21.636,
+  "baseline_pom_voxel_fraction_pct": 0.819,
+  "collapse_floor_pct": 0.3,
+  "pore_collapsed": false,
+  "pom_collapsed": true,
+  "channel_collapse_detected": true,
+  "concat_path": "\\\\hive3065\\Yael_Mishael\\Rony\\remote_computer backup\\nnUNet4SoilXrayCT\\05_evaluation\\psd\\pom_analysis_20260829_roi_expansion\\pipeline_work\\bnei_reem_canonical\\inference_concatenated\\bnei_reem_canonical.nii.gz"
+}

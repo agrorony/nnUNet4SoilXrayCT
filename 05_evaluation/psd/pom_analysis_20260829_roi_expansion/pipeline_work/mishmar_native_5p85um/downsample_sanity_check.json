@@ -1,0 +1,14 @@
+{
+  "volume_key": "mishmar_native_5p85um",
+  "achieved_voxel_um": 15.007594936708859,
+  "target_voxel_um": 15.000149,
+  "shape": [
+    474,
+    474,
+    474
+  ],
+  "pore_voxel_fraction_pct": 26.56891465200747,
+  "pom_voxel_fraction_pct": 2.0304108990551644,
+  "collapse_floor_pct": 0.3,
+  "downsampled_collapse_detected": false
+}

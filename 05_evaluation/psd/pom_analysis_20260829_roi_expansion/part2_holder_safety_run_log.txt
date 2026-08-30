@@ -1,0 +1,69 @@
+[bnei_reem_canonical] NOTE: current crop not perfectly cubic [652, 650, 650] -- using min axis as the known-good baseline size.
+[bnei_reem_canonical] raw=[804, 1344, 1344] current_crop=650 shortest_raw_axis=804 proposed_max=723
+[bnei_reem_canonical] loading centered cube of size 723 from raw stack (\\hive3065\Yael_Mishael\Rony\18.12.25 bnei_reem_samp_2) ...
+[bnei_reem_canonical] loaded, shape=(723, 723, 723), dtype was uint16, value range=[0, 65535]
+[bnei_reem_canonical] saturation threshold (99.9th pct)=9355.0  near-zero threshold=5.0
+[bnei_reem_canonical] baseline (interior, known-good crop) stats: {'n_voxels': 274625000, 'mean': 3954.87451171875, 'std': 1243.3604736328125, 'frac_saturated': 0.0008653108784706418, 'frac_near_zero': 0.008379805188893946}
+[bnei_reem_canonical]   shell r=[325,335) edge=670: mean=4126.0 std=1383.4 sat=0.123% zero=0.93% anomaly=False
+[bnei_reem_canonical]   shell r=[335,345) edge=690: mean=4155.9 std=1422.8 sat=0.142% zero=1.18% anomaly=False
+[bnei_reem_canonical]   shell r=[345,355) edge=710: mean=4171.7 std=1470.5 sat=0.141% zero=1.44% anomaly=False
+[bnei_reem_canonical]   shell r=[355,361) edge=722: mean=4147.4 std=1544.8 sat=0.135% zero=1.78% anomaly=False
+[bnei_reem_canonical] FINAL crop size decision: 722  (no holder/mount signature found before reaching the 90%-cap boundary -- using proposed_max)
+
+[mishmar_native_5p85um] raw=[1353, 1845, 1845] current_crop=1000 shortest_raw_axis=1353 proposed_max=1217
+[mishmar_native_5p85um] loading centered cube of size 1217 from raw stack (\\hive3065\Yael_Mishael\Rony\mishmar_hanegev_maoz\3-16mm_diam_5.85um) ...
+[mishmar_native_5p85um] loaded, shape=(1217, 1217, 1217), dtype was uint16, value range=[0, 65535]
+[mishmar_native_5p85um] saturation threshold (99.9th pct)=65535.0  near-zero threshold=6193.0
+[mishmar_native_5p85um] baseline (interior, known-good crop) stats: {'n_voxels': 1000000000, 'mean': 22852.99609375, 'std': 7544.88525390625, 'frac_saturated': 0.001106358, 'frac_near_zero': 0.000414802}
+[mishmar_native_5p85um]   shell r=[500,510) edge=1020: mean=22846.5 std=7359.6 sat=0.108% zero=0.09% anomaly=False
+[mishmar_native_5p85um]   shell r=[510,520) edge=1040: mean=22793.0 std=7324.9 sat=0.102% zero=0.11% anomaly=False
+[mishmar_native_5p85um]   shell r=[520,530) edge=1060: mean=22765.1 std=7304.5 sat=0.101% zero=0.11% anomaly=False
+[mishmar_native_5p85um]   shell r=[530,540) edge=1080: mean=22749.8 std=7309.3 sat=0.107% zero=0.12% anomaly=False
+[mishmar_native_5p85um]   shell r=[540,550) edge=1100: mean=22748.0 std=7298.4 sat=0.101% zero=0.12% anomaly=False
+[mishmar_native_5p85um]   shell r=[550,560) edge=1120: mean=22724.3 std=7294.5 sat=0.107% zero=0.14% anomaly=False
+[mishmar_native_5p85um]   shell r=[560,570) edge=1140: mean=22692.6 std=7280.4 sat=0.099% zero=0.15% anomaly=False
+[mishmar_native_5p85um]   shell r=[570,580) edge=1160: mean=22646.0 std=7256.4 sat=0.093% zero=0.17% anomaly=False
+[mishmar_native_5p85um]   shell r=[580,590) edge=1180: mean=22566.7 std=7281.4 sat=0.087% zero=0.21% anomaly=False
+[mishmar_native_5p85um]   shell r=[590,600) edge=1200: mean=22495.5 std=7361.0 sat=0.105% zero=0.27% anomaly=False
+[mishmar_native_5p85um]   shell r=[600,608) edge=1216: mean=22426.1 std=7393.4 sat=0.109% zero=0.36% anomaly=False
+[mishmar_native_5p85um] FINAL crop size decision: 1216  (no holder/mount signature found before reaching the 90%-cap boundary -- using proposed_max)
+
+[mishmar_second_8p8um] raw=[3311, 1794, 1807] current_crop=1000 shortest_raw_axis=1794 proposed_max=1614
+[mishmar_second_8p8um] loading centered cube of size 1614 from raw stack (\\hive3065\Yael_Mishael\Rony\mishmar_hanegev_maoz\2-16mm_diam_8.8um\2-16mm_diam_8.8um) ...
+[mishmar_second_8p8um] loaded, shape=(1614, 1614, 1614), dtype was uint16, value range=[0, 65535]
+[mishmar_second_8p8um] saturation threshold (99.9th pct)=41795.0  near-zero threshold=5.0
+[mishmar_second_8p8um] baseline (interior, known-good crop) stats: {'n_voxels': 1000000000, 'mean': 15483.025390625, 'std': 5761.8603515625, 'frac_saturated': 0.001285801, 'frac_near_zero': 0.000132169}
+[mishmar_second_8p8um]   shell r=[500,510) edge=1020: mean=15676.9 std=5720.2 sat=0.133% zero=0.01% anomaly=False
+[mishmar_second_8p8um]   shell r=[510,520) edge=1040: mean=15659.1 std=5749.6 sat=0.130% zero=0.02% anomaly=False
+[mishmar_second_8p8um]   shell r=[520,530) edge=1060: mean=15640.3 std=5774.8 sat=0.124% zero=0.02% anomaly=False
+[mishmar_second_8p8um]   shell r=[530,540) edge=1080: mean=15620.2 std=5782.3 sat=0.126% zero=0.02% anomaly=False
+[mishmar_second_8p8um]   shell r=[540,550) edge=1100: mean=15588.4 std=5788.6 sat=0.124% zero=0.02% anomaly=False
+[mishmar_second_8p8um]   shell r=[550,560) edge=1120: mean=15535.5 std=5833.1 sat=0.130% zero=0.02% anomaly=False
+[mishmar_second_8p8um]   shell r=[560,570) edge=1140: mean=15367.5 std=5937.8 sat=0.124% zero=0.05% anomaly=False
+[mishmar_second_8p8um]   shell r=[570,580) edge=1160: mean=15136.2 std=6084.1 sat=0.125% zero=0.09% anomaly=False
+[mishmar_second_8p8um]   shell r=[580,590) edge=1180: mean=14897.1 std=6188.1 sat=0.118% zero=0.11% anomaly=False
+[mishmar_second_8p8um]   shell r=[590,600) edge=1200: mean=14685.9 std=6241.8 sat=0.121% zero=0.11% anomaly=False
+[mishmar_second_8p8um]   shell r=[600,610) edge=1220: mean=14499.7 std=6279.2 sat=0.111% zero=0.11% anomaly=False
+[mishmar_second_8p8um]   shell r=[610,620) edge=1240: mean=14281.6 std=6327.4 sat=0.105% zero=0.11% anomaly=False
+[mishmar_second_8p8um]   shell r=[620,630) edge=1260: mean=14081.2 std=6395.7 sat=0.103% zero=0.11% anomaly=False
+[mishmar_second_8p8um]   shell r=[630,640) edge=1280: mean=13848.3 std=6489.8 sat=0.121% zero=0.11% anomaly=False
+[mishmar_second_8p8um]   shell r=[640,650) edge=1300: mean=13591.2 std=6560.6 sat=0.132% zero=0.11% anomaly=False
+[mishmar_second_8p8um]   shell r=[650,660) edge=1320: mean=13319.0 std=6606.8 sat=0.134% zero=0.12% anomaly=False
+[mishmar_second_8p8um]   shell r=[660,670) edge=1340: mean=13056.0 std=6636.2 sat=0.134% zero=0.13% anomaly=False
+[mishmar_second_8p8um]   shell r=[670,680) edge=1360: mean=12782.0 std=6633.7 sat=0.124% zero=0.14% anomaly=False
+[mishmar_second_8p8um]   shell r=[680,690) edge=1380: mean=12474.0 std=6596.8 sat=0.106% zero=0.14% anomaly=False
+[mishmar_second_8p8um]   shell r=[690,700) edge=1400: mean=12197.9 std=6568.7 sat=0.097% zero=0.15% anomaly=False
+[mishmar_second_8p8um]   shell r=[700,710) edge=1420: mean=11913.7 std=6516.5 sat=0.080% zero=0.15% anomaly=False
+[mishmar_second_8p8um]   shell r=[710,720) edge=1440: mean=11642.1 std=6457.1 sat=0.072% zero=0.16% anomaly=False
+[mishmar_second_8p8um]   shell r=[720,730) edge=1460: mean=11354.9 std=6373.3 sat=0.072% zero=0.16% anomaly=False
+[mishmar_second_8p8um]   shell r=[730,740) edge=1480: mean=11043.6 std=6267.4 sat=0.068% zero=0.18% anomaly=False
+[mishmar_second_8p8um]   shell r=[740,750) edge=1500: mean=10744.8 std=6162.1 sat=0.059% zero=0.19% anomaly=False
+[mishmar_second_8p8um]   shell r=[750,760) edge=1520: mean=10448.3 std=6059.0 sat=0.058% zero=0.22% anomaly=False
+[mishmar_second_8p8um]   shell r=[760,770) edge=1540: mean=10169.7 std=5935.4 sat=0.052% zero=0.24% anomaly=False
+[mishmar_second_8p8um]   shell r=[770,780) edge=1560: mean=9884.9 std=5775.6 sat=0.049% zero=0.26% anomaly=False
+[mishmar_second_8p8um]   shell r=[780,790) edge=1580: mean=9614.7 std=5597.6 sat=0.043% zero=0.26% anomaly=False
+[mishmar_second_8p8um]   shell r=[790,800) edge=1600: mean=9294.9 std=5370.1 sat=0.039% zero=0.28% anomaly=False
+[mishmar_second_8p8um]   shell r=[800,807) edge=1614: mean=9052.5 std=5150.0 sat=0.032% zero=0.30% anomaly=False
+[mishmar_second_8p8um] FINAL crop size decision: 1614  (no holder/mount signature found before reaching the 90%-cap boundary -- using proposed_max)
+
+Wrote \\hive3065\Yael_Mishael\Rony\remote_computer backup\nnUNet4SoilXrayCT\05_evaluation\psd\pom_analysis_20260829_roi_expansion\part2_holder_safety_report.json

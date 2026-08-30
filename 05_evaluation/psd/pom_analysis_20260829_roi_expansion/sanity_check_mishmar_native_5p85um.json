@@ -1,0 +1,18 @@
+{
+  "volume_key": "mishmar_native_5p85um",
+  "crop_shape": [
+    1216,
+    1216,
+    1216
+  ],
+  "n_total_voxels": 1798045696,
+  "new_pore_voxel_fraction_pct": 27.55853213866262,
+  "new_pom_voxel_fraction_pct": 2.0380147224022496,
+  "baseline_pore_voxel_fraction_pct": 27.038,
+  "baseline_pom_voxel_fraction_pct": 1.615,
+  "collapse_floor_pct": 0.3,
+  "pore_collapsed": false,
+  "pom_collapsed": false,
+  "channel_collapse_detected": false,
+  "concat_path": "\\\\hive3065\\Yael_Mishael\\Rony\\remote_computer backup\\nnUNet4SoilXrayCT\\05_evaluation\\psd\\pom_analysis_20260829_roi_expansion\\pipeline_work\\mishmar_native_5p85um\\inference_concatenated\\mishmar_native_5p85um.nii.gz"
+}
