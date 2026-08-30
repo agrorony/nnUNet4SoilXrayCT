@@ -29,7 +29,6 @@ The share sweep and specimen-identity work is done; these are the concrete candi
 
 **Ready to run now (valid pore channel, existing segmentation, no new inference needed):**
 - Bnei Re'em Specimen B (`bnei_reem_samp_2_0_recropped`) — genuine second physical Bnei Re'em specimen. Pore-only, valid. **This is the headline new replicate.**
-- Bnei Re'em Specimen A's redo (`bnei_reem_samp_2_rec_recropped`) — a fresh reconstruction of the *same* physical core as canonical (not a second specimen — see the reconstruction-vs-specimen note in Part 3). Valid pore channel. Worth running as a processing-robustness check, but do not count it as a second Bnei Re'em replicate when consolidating.
 - Mishmar `mishmar_hanegev_maoz_2_8p8um` (2nd physical Mishmar specimen, 8.8 µm native) — valid, plausible pore fraction. Prefer running topology at native 8.8 µm resolution if that segmentation exists on the share; otherwise use the already-produced ~15 µm label-downsampled version and note the resolution.
 - Rehovot `Rehovot_samp3_highkV_Cu0.11_15um` — fully processed (both models run, same setup as `samp2`), valid, genuine second physical Rehovot specimen, simply never run through Track E yet.
 
@@ -47,7 +46,7 @@ The share sweep and specimen-identity work is done; these are the concrete candi
 
 Build a master table, one row per completed run, columns: soil, sample ID, voxel size, χ, connectivity density, Γ, DA, tortuosity (per axis + convergence caveat), r*, resolution-limited flag. Then, **grouped by soil, distinguishing genuine physical replicates from a) derived/resampled versions and b) re-reconstructions of the same physical core** (per Part 1 — never mix any of these into one mean):
 
-- Bnei Re'em specifically: canonical and Specimen A's redo (`bnei_reem_samp_2_rec_recropped`) are the **same physical core**, reconstructed twice — report both numbers (useful as a processing-robustness check, same idea as the Mishmar downsample ablation) but treat them as **one** physical replicate, not two. Specimen B (`bnei_reem_samp_2_0_recropped`) is the genuine second physical replicate. So Bnei Re'em goes from n=1 to n=2 physical specimens (up to 3 reconstructions reported).
+- Bnei Re'em specifically: Specimen B (`bnei_reem_samp_2_0_recropped`) is the genuine second physical replicate. So Bnei Re'em goes from n=1 to n=2 physical specimens.
 - For any soil now at n≥2 genuine physical replicates: report mean ± SE per metric alongside the per-replicate values, and say explicitly that this is now a legitimate physical-replicate SE — not the sub-volume pseudoreplication comment 4 warns about.
 - For any soil still at n=1: say so plainly, don't compute an SE from n=1.
 - Note which soils gained replicates from this run and which didn't.
@@ -72,5 +71,5 @@ None of these should stop the rest of the run — process everything in Part 1's
 
 - Per volume: χ(r=smallest r) must equal the volume's own recorded full-mask `euler_number` exactly, and back-calculated volume must match recorded sample volume exactly — both required before that volume's numbers are trusted.
 - `pore_mask_true = raw_pore_mask & (diameter_map_px > 0)` applied at every step that touches the diameter map (never the unmasked thickness map directly).
-- No physical volume is double-counted as two replicates via a resampled/reprocessed derivative, or a second reconstruction, of itself (see the Bnei Re'em redo and `mishmar_label_downsample`/`mishmar_image_then_predict` notes).
+- No physical volume is double-counted as two replicates via a resampled/reprocessed derivative of itself (see the `mishmar_label_downsample`/`mishmar_image_then_predict` notes).
 - No pooling of raw metrics across soils or across resolutions — report per-soil, per-resolution, exactly like the existing 4-run table already does.
