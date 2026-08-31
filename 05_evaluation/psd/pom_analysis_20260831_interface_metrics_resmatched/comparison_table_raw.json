@@ -1,0 +1,122 @@
+[
+  {
+    "metric": "POM-pore contact fraction (voxel-face)",
+    "bnei_reem": 0.6422932338325659,
+    "mishmar_mean": 0.5737565048855033,
+    "mishmar_se": 0.02507385367908016,
+    "mishmar_native": 0.5988303585645836,
+    "mishmar_sample2": 0.5486826512064232
+  },
+  {
+    "metric": "POM-matrix contact fraction (voxel-face)",
+    "bnei_reem": 0.4580776334703419,
+    "mishmar_mean": 0.5287900914461914,
+    "mishmar_se": 0.017303575616947342,
+    "mishmar_native": 0.511486515829244,
+    "mishmar_sample2": 0.5460936670631387
+  },
+  {
+    "metric": "Voxel-face overlap fraction",
+    "bnei_reem": 0.11894481670059745,
+    "mishmar_mean": 0.13653349645607268,
+    "mishmar_se": 0.013293518207872522,
+    "mishmar_native": 0.1498270146639452,
+    "mishmar_sample2": 0.12323997824820017
+  },
+  {
+    "metric": "Voxel-face neither fraction",
+    "bnei_reem": 0.018573949397689693,
+    "mishmar_mean": 0.03398690012437793,
+    "mishmar_se": 0.005523240145739759,
+    "mishmar_native": 0.03951014027011769,
+    "mishmar_sample2": 0.028463659978638173
+  },
+  {
+    "metric": "MC total surface area (mm2)",
+    "bnei_reem": 252.69071311617952,
+    "mishmar_mean": 202.64193721261066,
+    "mishmar_se": 90.03156238024084,
+    "mishmar_native": 112.61037483236983,
+    "mishmar_sample2": 292.6734995928515
+  },
+  {
+    "metric": "Voxel-face total surface area (mm2)",
+    "bnei_reem": 348.4644227233827,
+    "mishmar_mean": 279.24877893556874,
+    "mishmar_se": 123.49387893556873,
+    "mishmar_native": 155.7549,
+    "mishmar_sample2": 402.74265787113745
+  },
+  {
+    "metric": "MC pore-facing area fraction",
+    "bnei_reem": 0.5751318802175018,
+    "mishmar_mean": 0.5034273017569568,
+    "mishmar_se": 0.017419114681505476,
+    "mishmar_native": 0.5208464164384623,
+    "mishmar_sample2": 0.48600818707545135
+  },
+  {
+    "metric": "MC matrix-facing area fraction",
+    "bnei_reem": 0.40585075415653354,
+    "mishmar_mean": 0.46684285160039973,
+    "mishmar_se": 0.022095184328049106,
+    "mishmar_native": 0.44474766727235066,
+    "mishmar_sample2": 0.48893803592844887
+  },
+  {
+    "metric": "SSA total (mm2/mm3)",
+    "bnei_reem": 33.23128638362311,
+    "mishmar_mean": 30.57921331865118,
+    "mishmar_se": 4.40072821101332,
+    "mishmar_native": 34.9799415296645,
+    "mishmar_sample2": 26.17848510763786
+  },
+  {
+    "metric": "SSA pore-facing (mm2/mm3)",
+    "bnei_reem": 19.112372219859424,
+    "mishmar_mean": 15.471067640248737,
+    "mishmar_se": 2.7481095527039585,
+    "mishmar_native": 18.219177192952696,
+    "mishmar_sample2": 12.722958087544779
+  },
+  {
+    "metric": "SSA matrix-facing (mm2/mm3)",
+    "bnei_reem": 13.486942640385184,
+    "mishmar_mean": 14.178452244376057,
+    "mishmar_se": 1.3787951522654511,
+    "mishmar_native": 15.557247396641507,
+    "mishmar_sample2": 12.799657092110605
+  },
+  {
+    "metric": "IAD pore (mm2/mm3)",
+    "bnei_reem": 0.1563132146519646,
+    "mishmar_mean": 0.2508476824718306,
+    "mishmar_se": 0.04212051988532721,
+    "mishmar_native": 0.2929682023571578,
+    "mishmar_sample2": 0.2087271625865034
+  },
+  {
+    "metric": "IAD matrix (mm2/mm3)",
+    "bnei_reem": 0.11030485047558213,
+    "mishmar_mean": 0.2300746316808856,
+    "mishmar_se": 0.020089179513761324,
+    "mishmar_native": 0.2501638111946469,
+    "mishmar_sample2": 0.20998545216712428
+  },
+  {
+    "metric": "Largest-object interface-area share (pct)",
+    "bnei_reem": 13.013115315662136,
+    "mishmar_mean": 37.95217004826196,
+    "mishmar_se": 2.1434683330056252,
+    "mishmar_native": 40.095638381267584,
+    "mishmar_sample2": 35.80870171525633
+  },
+  {
+    "metric": "Top5-object interface-area share (pct)",
+    "bnei_reem": 33.86285688339953,
+    "mishmar_mean": 54.943018842628604,
+    "mishmar_se": 3.807485583419723,
+    "mishmar_native": 58.75050442604832,
+    "mishmar_sample2": 51.13553325920888
+  }
+]

@@ -1,0 +1,67 @@
+{
+  "soil": "bnei_reem",
+  "soil_label": "Bnei Re'em (Vertisol) -- canonical nlm_volume",
+  "source_input": "\\\\hive3065\\Yael_Mishael\\Rony\\remote_computer backup\\nnUNet_resources\\bnei_reem_fresh_bnei_reem_i4\\inference_concatenated\\nlm_volume.nii.gz",
+  "voxel_size_um": 15.000149,
+  "shape": [
+    650,
+    650,
+    652
+  ],
+  "cutoff_voxels": 8,
+  "n_total_voxels": 275470000,
+  "n_pore_voxels": 59601845,
+  "n_pom_voxels_raw": 2255941,
+  "n_matrix_voxels_incl_label1": 213612214,
+  "n_pom_objects_raw": 2709,
+  "n_pom_objects": 1461,
+  "n_denoised_pom_voxels": 2252970,
+  "part1_voxel_face_contact": {
+    "n_surface_voxels_denoised_pom": 752021,
+    "pom_pore_contact_fraction_voxel": 0.6422932338325659,
+    "pom_matrix_contact_fraction_voxel": 0.4580776334703419,
+    "overlap_fraction_voxel": 0.11894481670059745,
+    "neither_fraction_voxel": 0.018573949397689693,
+    "reference_pore_contact_fraction": 0.6422932338325659,
+    "reproduction_check": {
+      "reference_value": 0.6422932338325659,
+      "computed_value": 0.6422932338325659,
+      "abs_diff": 0.0,
+      "matched_exact": true,
+      "close_within_1e-3": true
+    }
+  },
+  "part2_marching_cubes": {
+    "pom_surface_area_um2_marching_cubes_total": 252690713.11617953,
+    "pom_surface_area_um2_marching_cubes_pore_facing": 145330484.94800967,
+    "pom_surface_area_um2_marching_cubes_matrix_facing": 102554716.48655373,
+    "pom_surface_area_um2_marching_cubes_unclassified": 4805511.681616199,
+    "pom_surface_area_um2_voxel_face_count_total": 348464422.7233827,
+    "marching_cubes_area_ge_voxel_face_area": false,
+    "mc_pore_area_fraction": 0.5751318802175018,
+    "mc_matrix_area_fraction": 0.40585075415653354,
+    "voxel_face_pore_contact_fraction_for_comparison": 0.6422932338325659,
+    "fraction_disagreement_percentage_points": 6.716135361506403,
+    "fraction_disagreement_flag_gt_15pp": false,
+    "n_objects_mc_failed": 0
+  },
+  "part3_ssa_iad": {
+    "pom_volume_um3_denoised": 7604000344.708576,
+    "bulk_sample_volume_um3": 929738955670.4579,
+    "ssa_total_um1": 0.033231286383623104,
+    "ssa_pore_facing_um1": 0.019112372219859425,
+    "ssa_matrix_facing_um1": 0.013486942640385184,
+    "ssa_total_mm2_per_mm3": 33.23128638362311,
+    "ssa_pore_facing_mm2_per_mm3": 19.112372219859424,
+    "ssa_matrix_facing_mm2_per_mm3": 13.486942640385184,
+    "iad_pore_um1": 0.0001563132146519646,
+    "iad_matrix_um1": 0.00011030485047558212,
+    "iad_pore_mm2_per_mm3": 0.1563132146519646,
+    "iad_matrix_mm2_per_mm3": 0.11030485047558213
+  },
+  "part4_object_level": {
+    "largest_object_interface_area_share": 0.13013115315662135,
+    "top5_objects_interface_area_share": 0.33862856883399534,
+    "n_objects_considered": 1461
+  }
+}

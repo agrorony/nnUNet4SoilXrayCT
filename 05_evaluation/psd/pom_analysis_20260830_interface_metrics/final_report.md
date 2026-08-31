@@ -169,3 +169,75 @@ for it.
 
 Not computed -- no POM particle density is available in this project, per
 the prompt's explicit instruction not to fabricate one.
+
+---
+
+## Resolution correction (added 2026-08-31, see `pom_interface_metrics_resolution_fix_prompt.md`)
+
+**Bug found after this run shipped:** the "Mishmar mean +/- SE, n=2" above
+was computed from two replicates at *different* resolutions --
+`mishmar_native` was loaded at its native **5.85 um** (not downsampled),
+while `mishmar_sample2` was correctly loaded at its already-downsampled
+**~15 um**. Surface-area-based metrics (SSA, IAD, MC surface area) are
+directly sensitive to voxel size (finer voxels resolve more real surface
+micro-roughness), so part of the reported Mishmar variability -- and
+potentially part of the Bnei-Re'em-vs-Mishmar gap -- was a resolution
+confound, not a real specimen difference. Confirmed quantitatively at the
+time: `mishmar_native` SSA_total = 39.0 mm2/mm3 vs. `mishmar_sample2`'s
+26.2 mm2/mm3, a ~49% gap between nominal replicates.
+
+**Fix:** re-ran with `mishmar_native` replaced by the already-existing
+label-downsampled-to-15um version of the same physical sample
+(`pom_analysis_20260824_ablation/mishmar_label_downsample/mishmar_label_downsample.nii.gz`,
+pinned cutoff 13 vox, reference `pom_pore_contact_fraction` = 0.5988303585645836
+-- reproduced exactly, diff = 0.0, before trusting any downstream number).
+No other logic changed. Full outputs: `../pom_analysis_20260831_interface_metrics_resmatched/`
+(`final_report` numbers below; per-soil JSON; `pom_interface_metrics_figure.png/.svg`
+rebuilt with the same soil-figures-style conventions, now labeled
+"resolution-matched" and noting this correction directly on the figure).
+
+This run (20260830, resolution-mismatched) is kept as-is, unedited, as the
+documented record of what was actually computed and why it needed fixing --
+it is **superseded** by `pom_analysis_20260831_interface_metrics_resmatched/`
+for any number quoted in the draft going forward.
+
+### Before vs. after, every metric (Bnei Re'em n=1 vs. Mishmar mean +/- SE, n=2)
+
+| Metric | Bnei Re'em (unchanged) | Mishmar mean+-SE (BEFORE, mismatched res.) | Mishmar mean+-SE (AFTER, resolution-matched) | Conclusion |
+|---|---|---|---|---|
+| POM-pore contact fraction (voxel-face) | 0.642 | 0.556 +/- 0.007 | 0.574 +/- 0.025 | Survives (BR higher both ways; gap narrows slightly) |
+| POM-matrix contact fraction (voxel-face) | 0.458 | 0.508 +/- 0.038 | 0.529 +/- 0.017 | Survives (Mishmar higher both ways) |
+| MC total surface area (mm2) | 252.7 | 209.3 +/- 83.3 | 202.6 +/- 90.0 | Survives (BR higher both ways); SE stays wide -- driven by real between-replicate POM-abundance variation, not resolution |
+| Voxel-face total surface area (mm2), cross-check | 348.5 | 287.7 +/- 115.1 | 279.2 +/- 123.5 | Survives (BR higher both ways) |
+| MC pore-facing area fraction | 0.575 | 0.509 +/- 0.023 | 0.503 +/- 0.017 | Survives (BR higher both ways) |
+| MC matrix-facing area fraction | 0.406 | 0.461 +/- 0.028 | 0.467 +/- 0.022 | Survives (Mishmar higher both ways) |
+| SSA total (mm2/mm3) | 33.2 | 32.6 +/- 6.4 | 30.6 +/- 4.4 | Survives -- statistically indistinguishable from Bnei Re'em both before and after (this is the key "SSA doesn't differ" headline claim) |
+| SSA pore-facing (mm2/mm3) | 19.1 | 16.8 +/- 4.0 | 15.5 +/- 2.7 | Survives (BR higher both ways; SE tightens, if anything more confident now) |
+| SSA matrix-facing (mm2/mm3) | 13.5 | 14.8 +/- 2.0 | 14.2 +/- 1.4 | Survives (overlapping/indistinguishable both ways) |
+| IAD pore (mm2/mm3) | 0.156 | 0.272 +/- 0.063 | 0.251 +/- 0.042 | Survives -- Mishmar higher both ways; ratio narrows from 1.74x to 1.61x (headline claim intact, magnitude slightly more conservative) |
+| IAD matrix (mm2/mm3) | 0.110 | 0.241 +/- 0.031 | 0.230 +/- 0.020 | Survives -- ratio narrows from 2.19x to 2.09x |
+| Largest-object interface-area share (%) | 13.0 | 36.2 +/- 0.4 | 38.0 +/- 2.1 | Survives (Mishmar far higher both ways) |
+| Top-5-object interface-area share (%) | 33.9 | 52.6 +/- 1.4 | 54.9 +/- 3.8 | Survives (Mishmar far higher both ways) |
+
+**Bottom line: every directional conclusion in the original report survives
+the resolution fix unchanged.** Magnitudes shift by a few percent to a few
+mm2/mm3 in most rows; the two headline claims -- SSA statistically
+indistinguishable between soils, IAD 1.6-2.2x higher in Mishmar -- hold
+after correction, with the IAD ratio narrowing slightly (more
+conservative, not reversed). This was a real bug worth fixing (SSA is
+directly resolution-sensitive, and the ~49% native-vs-sample2 SSA gap it
+produced was large enough to misrepresent Mishmar's within-soil
+variability), but it was not, in the end, load-bearing for any conclusion
+already in the draft.
+
+**One residual honesty note:** even after nominal resolution-matching
+(both Mishmar replicates now ~15 um), `mishmar_native`'s SSA_total (35.0
+mm2/mm3) and `mishmar_sample2`'s (26.2 mm2/mm3) still differ by ~34%
+(down from ~49% before the fix, but not eliminated). This is reported as
+real between-replicate variability -- plausibly a genuine specimen
+difference, or a residual effect of the two replicates having reached
+~15 um by different routes (direct label-downsample of a 5.85 um native
+scan vs. downsample of an 8.8 um native scan) -- not swept under the rug.
+It is exactly the kind of variation the n=2 mean +/- SE is meant to carry,
+and is the reason the SE bars on the Mishmar side of every panel in
+`pom_interface_metrics_figure.png` are as wide as they are.

@@ -1,0 +1,67 @@
+{
+  "soil": "mishmar_native",
+  "soil_label": "Mishmar HaNegev (Loess) -- native 5.85um sample, label-downsampled to 15.0um (resolution-matched)",
+  "source_input": "\\\\hive3065\\Yael_Mishael\\Rony\\remote_computer backup\\nnUNet4SoilXrayCT\\05_evaluation\\psd\\pom_analysis_20260824_ablation\\mishmar_label_downsample\\mishmar_label_downsample.nii.gz",
+  "voxel_size_um": 15.0,
+  "shape": [
+    390,
+    390,
+    390
+  ],
+  "cutoff_voxels": 13,
+  "n_total_voxels": 59319000,
+  "n_pore_voxels": 15487177,
+  "n_pom_voxels_raw": 957445,
+  "n_matrix_voxels_incl_label1": 42874378,
+  "n_pom_objects_raw": 1902,
+  "n_pom_objects": 656,
+  "n_denoised_pom_voxels": 953862,
+  "part1_voxel_face_contact": {
+    "n_surface_voxels_denoised_pom": 345405,
+    "pom_pore_contact_fraction_voxel": 0.5988303585645836,
+    "pom_matrix_contact_fraction_voxel": 0.511486515829244,
+    "overlap_fraction_voxel": 0.1498270146639452,
+    "neither_fraction_voxel": 0.03951014027011769,
+    "reference_pore_contact_fraction": 0.5988303585645836,
+    "reproduction_check": {
+      "reference_value": 0.5988303585645836,
+      "computed_value": 0.5988303585645836,
+      "abs_diff": 0.0,
+      "matched_exact": true,
+      "close_within_1e-3": true
+    }
+  },
+  "part2_marching_cubes": {
+    "pom_surface_area_um2_marching_cubes_total": 112610374.83236983,
+    "pom_surface_area_um2_marching_cubes_pore_facing": 58652710.18523183,
+    "pom_surface_area_um2_marching_cubes_matrix_facing": 50083201.51736151,
+    "pom_surface_area_um2_marching_cubes_unclassified": 3874463.129776491,
+    "pom_surface_area_um2_voxel_face_count_total": 155754900.0,
+    "marching_cubes_area_ge_voxel_face_area": false,
+    "mc_pore_area_fraction": 0.5208464164384623,
+    "mc_matrix_area_fraction": 0.44474766727235066,
+    "voxel_face_pore_contact_fraction_for_comparison": 0.5988303585645836,
+    "fraction_disagreement_percentage_points": 7.798394212612125,
+    "fraction_disagreement_flag_gt_15pp": false,
+    "n_objects_mc_failed": 0
+  },
+  "part3_ssa_iad": {
+    "pom_volume_um3_denoised": 3219284250.0,
+    "bulk_sample_volume_um3": 200201625000.0,
+    "ssa_total_um1": 0.0349799415296645,
+    "ssa_pore_facing_um1": 0.018219177192952695,
+    "ssa_matrix_facing_um1": 0.015557247396641508,
+    "ssa_total_mm2_per_mm3": 34.9799415296645,
+    "ssa_pore_facing_mm2_per_mm3": 18.219177192952696,
+    "ssa_matrix_facing_mm2_per_mm3": 15.557247396641507,
+    "iad_pore_um1": 0.00029296820235715784,
+    "iad_matrix_um1": 0.0002501638111946469,
+    "iad_pore_mm2_per_mm3": 0.2929682023571578,
+    "iad_matrix_mm2_per_mm3": 0.2501638111946469
+  },
+  "part4_object_level": {
+    "largest_object_interface_area_share": 0.40095638381267584,
+    "top5_objects_interface_area_share": 0.5875050442604832,
+    "n_objects_considered": 656
+  }
+}
