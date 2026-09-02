@@ -48,6 +48,8 @@ A sample is **NOT** excluded merely for differing in magnitude from another samp
 
 Bnei Re'em POM work remains **n=1** (canonical only). Specimen B is usable for 2-class pore/solid work only (A2, Track E connectivity) — that gives Bnei Re'em 2 *reconstructions* for structural/topology metrics, matching its 2 *physical specimens*.
 
+**⚠ 2026-09-02 — Specimen B's Track E result is INVALID, do not use.** The `psd_diag_20260829T164631_bnei_reem_samp_2_0_recropped` run (PID 13048) and its `chi_r_bnei_reem_specB.csv` were computed on the scan's **trajectories** file, not the segmented volume at the `Location` above — confirmed by Rony. Every metric from that run (χ=−144, connectivity density 0.154, Γ=0.9539, DA=0.330, r*≈451µm) is retracted, including the headline "Specimen B crosses over, canonical doesn't" heterogeneity finding built on it. `track_e_correction_prompt.md` (repo root) rechecks the correct input file and reruns this properly — until that completes, Specimen B has **no valid Track E numbers**.
+
 ---
 
 ## Mishmar HaNegev (Loess) — 5 physical scans (2026-08-25 share sweep)
@@ -65,6 +67,8 @@ Derived from `mishmar_native` (same physical scan, nested here rather than as st
 - ~~`mishmar_image_then_predict`~~ — image-downsample-then-fresh-inference branch. **Not a standalone catalog entry** per Rony's standing decision (Pore 25.632% / POM 0.856%, disagreed with `mishmar_label_downsample` by 54% — kept elsewhere only as a model-robustness finding).
 
 `⚠ NEEDS RONY`: confirm whether `Cu011_samp_1`/`samp_3` should be run through the full pipeline (same treatment as `samp_2`) as the next step toward real Mishmar POM/pore replicates.
+
+**2026-09-02 — Track E resolution-matching in progress.** The 3 valid Mishmar Track E specimens (`mishmar_native` 5.85µm, `mishmar_hanegev_maoz_2_8p8um` 8.8µm, `Cu011_samp_2` ~15.0µm) sit at 3 different voxel sizes, so no mean±SE could be computed across them. Per Rony, `track_e_correction_prompt.md` (repo root) applies the same majority-vote label downsample already validated for POM (`mishmar_label_downsample`, Part A of `mishmar_downsample_ablation_prompt.md`) to bring `mishmar_native` and the 8.8µm specimen to matched ~15µm for Track E, so a real n=3 mean±SE can be reported. Native-resolution numbers are kept as the resolution-sensitivity comparison, not discarded.
 
 ---
 
