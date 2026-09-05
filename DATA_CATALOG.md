@@ -45,6 +45,7 @@ A sample is **NOT** excluded merely for differing in magnitude from another samp
 | Pore % / POM % | ~39.4 / ~11.0 (original, superseded) → 28.3 / 7.62, elevated not collapsed (recropped, current) |
 | Status | **VALID for 2-class (pore/solid) work only — not used for POM/3-class analysis.** 2026-08-26: Rony decided not to pursue this specimen further for POM (settled on Bnei Re'em n=1 for POM — canonical only) |
 | Location | `Z:\Rony\remote_computer backup\nnUNet_resources\bnei_reem_samp_2_0_recropped\` |
+| Track E correction check (2026-09-03) | Rony flagged the 2026-08-29 Track E run (`psd_diag_20260829T164631_bnei_reem_samp_2_0_recropped`) as possibly computed on scan trajectories/motion-metadata rather than this segmentation. Independent re-investigation (fresh reload + `np.unique()`, full preprocessing-log provenance trace, cross-check against a second script's voxel counts, both sanity checks re-verified) found **no evidence of a wrong input** — see `Topology_Metrics_Aug2026/track_e_correction_summary.md` Part 1 for full detail. χ=−144/Γ=0.9539/DA=0.330/r*≈451µm are NOT retracted. **Open item for Rony** — this discrepancy is unresolved, not confirmed as a false alarm. |
 
 Bnei Re'em POM work remains **n=1** (canonical only). Specimen B is usable for 2-class pore/solid work only (A2, Track E connectivity) — that gives Bnei Re'em 2 *reconstructions* for structural/topology metrics, matching its 2 *physical specimens*.
 
@@ -68,7 +69,7 @@ Derived from `mishmar_native` (same physical scan, nested here rather than as st
 
 `⚠ NEEDS RONY`: confirm whether `Cu011_samp_1`/`samp_3` should be run through the full pipeline (same treatment as `samp_2`) as the next step toward real Mishmar POM/pore replicates.
 
-**2026-09-02 — Track E resolution-matching in progress.** The 3 valid Mishmar Track E specimens (`mishmar_native` 5.85µm, `mishmar_hanegev_maoz_2_8p8um` 8.8µm, `Cu011_samp_2` ~15.0µm) sit at 3 different voxel sizes, so no mean±SE could be computed across them. Per Rony, `track_e_correction_prompt.md` (repo root) applies the same majority-vote label downsample already validated for POM (`mishmar_label_downsample`, Part A of `mishmar_downsample_ablation_prompt.md`) to bring `mishmar_native` and the 8.8µm specimen to matched ~15µm for Track E, so a real n=3 mean±SE can be reported. Native-resolution numbers are kept as the resolution-sensitivity comparison, not discarded.
+**2026-09-02/03 — Track E resolution-matching DONE.** The 3 valid Mishmar Track E specimens (`mishmar_native` 5.85µm, `mishmar_hanegev_maoz_2_8p8um` 8.8µm, `Cu011_samp_2` ~15.0µm) sat at 3 different voxel sizes, so no mean±SE could be computed across them. Per `track_e_correction_prompt.md`, `mishmar_native` and the 8.8µm specimen were majority-vote label-downsampled to matched ~15µm (achieved 15.007595µm and 14.998099µm respectively — close to but not bit-identical to `Cu011_samp_2`'s 15.000149µm), and Track E's full pipeline was rerun on both. Legitimate n=3 mean±SE now available: connectivity density 151.2±110.7 mm⁻³, Γ 0.9324±0.0018, DA 0.148±0.023, r* 133.3±42.4 µm. Full table + native-resolution comparison in `Topology_Metrics_Aug2026/track_e_correction_summary.md` Part 2. Native-resolution numbers kept on record as the resolution-sensitivity comparison, not pooled into this mean.
 
 ---
 
