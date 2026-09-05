@@ -6,6 +6,16 @@
 
 A prior investigation checked file paths, voxel fractions, and preprocessing logs for `bnei_reem_samp_2_0_recropped` and found nothing wrong — but that only rules out a *wrong-file* bug. It does NOT address what Rony actually observed: loading this segmentation in napari looks visually very different from every other scan in this project, and looks more like acquisition trajectories/motion artifact than a normal pore structure. A clean log and a matching pore fraction are consistent with a genuine CT motion artifact in the raw scan itself (garbage in, correctly processed, still garbage) — they don't rule it out. This prompt produces the actual evidence needed to judge that directly.
 
+## Part 0 — Decisive provenance check: does the catalogued segmentation actually trace back to Rony's chosen raw reconstruction? (do this FIRST — it may settle the question on its own)
+
+Rony has identified the specific raw reconstruction he decided to work with for this Bnei Re'em scan: **`C:\Users\rony.schwartz\Desktop\new_rec`** (on the remote/reconstruction computer — a different machine from the one this repo normally runs on, so locate it there, e.g. via a network path, remote session, or however that machine is normally reached). His own framing, verbatim: if the segmentation `DATA_CATALOG.md` points to for Specimen B was produced from this exact raw data, the r*≈451µm finding is legitimate; if it was not, then the mistake he originally flagged did happen — just not in the form first described.
+
+1. Identify the raw slice stack in `new_rec` — file count, per-slice dimensions, bit depth, and (if available) file timestamps/creation dates.
+2. Trace `bnei_reem_samp_2_0_recropped`'s full preprocessing chain backward from the catalogued segmentation (`nnUNet_resources\bnei_reem_samp_2_0_recropped\inference_concatenated\...`) to whatever raw input it actually started from — the same preprocessing log already used in the prior investigation (`05_evaluation/psd/full_volume_batch/logs/preprocess_samp_2_0.log` / `recrop_samp_2_0_retry.log`) should name or imply the raw source directory it read from first.
+3. **Compare the two directly**: slice count, per-slice pixel dimensions, and file timestamps between `new_rec` and whatever the preprocessing log shows as its actual raw input. If a byte-level or hash comparison of a few slices is feasible (e.g. the raw TIFFs are accessible from both references), do that too — it's more conclusive than metadata matching alone.
+4. Report a direct yes/no: **does the segmentation used for Specimen B's Track E numbers derive from `new_rec`, or from a different raw source?** If it's a different source, name exactly which directory/scan it actually came from, and say so plainly — this would mean Rony's original concern was correct in substance, even though the specific "trajectories file" mechanism wasn't confirmed by the earlier check.
+5. If this check is decisive either way, the remaining parts (1–3 below) become confirmatory rather than essential — still worth doing for the record, but say up front in the report which way Part 0 already points.
+
 ## Part 1 — Side-by-side 2D image evidence (must produce actual PNG files, not descriptions)
 
 For **`bnei_reem_samp_2_0_recropped`** (the volume in question) and **canonical Bnei Re'em** (`bnei_reem_fresh_bnei_reem_i4`), as a control:
