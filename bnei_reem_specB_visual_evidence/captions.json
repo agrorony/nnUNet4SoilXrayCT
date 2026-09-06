@@ -1,0 +1,102 @@
+{
+  "raw_volume_stats": {
+    "specB": {
+      "shape": [
+        650,
+        650,
+        650
+      ],
+      "dtype": "float32",
+      "min": 0.0020587791223078966,
+      "max": 1.0,
+      "mean": 0.6398623585700989,
+      "std": 0.2722391188144684
+    },
+    "canonical": {
+      "shape": [
+        650,
+        650,
+        652
+      ],
+      "dtype": "float32",
+      "min": -3.1284985542297363,
+      "max": 1.5289555788040161,
+      "mean": 1.88768282782803e-07,
+      "std": 0.9999998807907104
+    }
+  },
+  "images": [
+    [
+      "specB_axis0_mid_raw.png",
+      "specB, axis 0, mid-slice 325: raw grayscale CT only, no overlay."
+    ],
+    [
+      "specB_axis0_mid_overlay.png",
+      "specB, axis 0, mid-slice 325: raw CT with segmentation overlay (red=pore, green=POM)."
+    ],
+    [
+      "specB_axis1_mid_raw.png",
+      "specB, axis 1, mid-slice 325: raw grayscale CT only, no overlay."
+    ],
+    [
+      "specB_axis1_mid_overlay.png",
+      "specB, axis 1, mid-slice 325: raw CT with segmentation overlay (red=pore, green=POM)."
+    ],
+    [
+      "specB_axis2_mid_raw.png",
+      "specB, axis 2, mid-slice 325: raw grayscale CT only, no overlay."
+    ],
+    [
+      "specB_axis2_mid_overlay.png",
+      "specB, axis 2, mid-slice 325: raw CT with segmentation overlay (red=pore, green=POM)."
+    ],
+    [
+      "canonical_axis0_mid_raw.png",
+      "canonical, axis 0, mid-slice 325: raw grayscale CT only, no overlay."
+    ],
+    [
+      "canonical_axis0_mid_overlay.png",
+      "canonical, axis 0, mid-slice 325: raw CT with segmentation overlay (red=pore, green=POM)."
+    ],
+    [
+      "canonical_axis1_mid_raw.png",
+      "canonical, axis 1, mid-slice 325: raw grayscale CT only, no overlay."
+    ],
+    [
+      "canonical_axis1_mid_overlay.png",
+      "canonical, axis 1, mid-slice 325: raw CT with segmentation overlay (red=pore, green=POM)."
+    ],
+    [
+      "canonical_axis2_mid_raw.png",
+      "canonical, axis 2, mid-slice 326: raw grayscale CT only, no overlay."
+    ],
+    [
+      "canonical_axis2_mid_overlay.png",
+      "canonical, axis 2, mid-slice 326: raw CT with segmentation overlay (red=pore, green=POM)."
+    ],
+    [
+      "motion_screen_axis0_stats_and_ssim.png",
+      "Axis 0: top = per-slice mean+/-std raw intensity (specB vs canonical); bottom = consecutive-slice SSIM (specB vs canonical)."
+    ],
+    [
+      "motion_screen_axis0_fft.png",
+      "Axis 0: FFT power spectrum of the per-slice mean-intensity profile (specB vs canonical), log scale."
+    ],
+    [
+      "motion_screen_axis1_stats_and_ssim.png",
+      "Axis 1: top = per-slice mean+/-std raw intensity (specB vs canonical); bottom = consecutive-slice SSIM (specB vs canonical)."
+    ],
+    [
+      "motion_screen_axis1_fft.png",
+      "Axis 1: FFT power spectrum of the per-slice mean-intensity profile (specB vs canonical), log scale."
+    ],
+    [
+      "motion_screen_axis2_stats_and_ssim.png",
+      "Axis 2: top = per-slice mean+/-std raw intensity (specB vs canonical); bottom = consecutive-slice SSIM (specB vs canonical)."
+    ],
+    [
+      "motion_screen_axis2_fft.png",
+      "Axis 2: FFT power spectrum of the per-slice mean-intensity profile (specB vs canonical), log scale."
+    ]
+  ]
+}
