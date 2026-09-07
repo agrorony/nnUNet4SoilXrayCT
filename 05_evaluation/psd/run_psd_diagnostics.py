@@ -549,16 +549,18 @@ def _write_extended_plots(
     written.append(_F_PLOT_CONNECTIVITY)
 
     # --- D5: tortuosity per axis --------------------------------------------
-    fig, ax = plt.subplots(figsize=(6, 5))
+    # Skipped entirely under --no-tortuosity (no tortuosity_axis* keys present).
     tort_keys = [k for k in scalars if k.startswith("tortuosity_axis")]
-    tort_vals = [scalars[k] for k in tort_keys]
-    ax.bar(tort_keys, tort_vals, color="tab:purple")
-    ax.set_ylabel("Diffusive tortuosity (tau_d)")
-    ax.set_title("Tortuosity by axis")
-    fig.tight_layout()
-    fig.savefig(str(run_dir / _F_PLOT_TORTUOSITY), dpi=150)
-    plt.close(fig)
-    written.append(_F_PLOT_TORTUOSITY)
+    if tort_keys:
+        fig, ax = plt.subplots(figsize=(6, 5))
+        tort_vals = [scalars[k] for k in tort_keys]
+        ax.bar(tort_keys, tort_vals, color="tab:purple")
+        ax.set_ylabel("Diffusive tortuosity (tau_d)")
+        ax.set_title("Tortuosity by axis")
+        fig.tight_layout()
+        fig.savefig(str(run_dir / _F_PLOT_TORTUOSITY), dpi=150)
+        plt.close(fig)
+        written.append(_F_PLOT_TORTUOSITY)
 
     # --- Surface area by pore-size class ------------------------------------
     fig, ax = plt.subplots(figsize=(7, 5))
@@ -651,6 +653,7 @@ def _run_extended(args: argparse.Namespace) -> None:
         "use_gpu": not args.no_gpu,
         "n_anisotropy_directions": int(args.n_anisotropy_directions),
         "voxel_size_um_isotropic_placeholder": voxel_size_um,
+        "no_tortuosity": bool(args.no_tortuosity),
     }
 
     with warnings.catch_warnings(record=True) as caught_warnings:
@@ -706,7 +709,20 @@ def _run_extended(args: argparse.Namespace) -> None:
         # ------------------------------------------------------------
         # D5: diffusive tortuosity (porespy).
         # ------------------------------------------------------------
-        tortuosity = tortuosity_diffusive(pore_mask, axes=(0, 1, 2))
+        if args.no_tortuosity:
+            # --no-tortuosity: skip the porespy diffusive-tortuosity solve
+            # (~15 h/volume at 650^3; on Bnei Re'em volumes axis0 has in any
+            # case consistently returned NaN via solver non-convergence, see
+            # Topology_Metrics_Aug2026/connectivity_validation_summary.md
+            # Part B). The tortuosity_axis* keys are simply OMITTED from
+            # `scalars`, so every downstream consumer (result_psd.json,
+            # summary.json, the extended CSV's scalars.get() lookups, the
+            # per-axis plot) sees "absent" rather than a fabricated value.
+            print("[--no-tortuosity] skipping diffusive tortuosity; "
+                  "tortuosity_axis0/1/2 keys omitted from all outputs", flush=True)
+            tortuosity = {}
+        else:
+            tortuosity = tortuosity_diffusive(pore_mask, axes=(0, 1, 2))
 
         # ------------------------------------------------------------
         # New functionality 7: surface area per pore-size class.
@@ -798,8 +814,11 @@ def _run_extended(args: argparse.Namespace) -> None:
     print(f"Connectivity density (mm^-3): {scalars['connectivity_density_per_mm3']:.6g}")
     print(f"Connectivity probability (Gamma): {scalars['connectivity_probability_gamma']:.6g}")
     print(f"Degree of anisotropy: {scalars['degree_of_anisotropy']:.6g}")
-    for ax in (0, 1, 2):
-        print(f"Tortuosity axis{ax}: {scalars.get(f'tortuosity_axis{ax}')}")
+    if args.no_tortuosity:
+        print("Tortuosity: SKIPPED (--no-tortuosity)")
+    else:
+        for ax in (0, 1, 2):
+            print(f"Tortuosity axis{ax}: {scalars.get(f'tortuosity_axis{ax}')}")
     print("Files written:")
     for f in (_F_CONFIG, _F_RESULT, _F_DIAG, _F_SUMMARY, _F_TABLE, _F_TABLE_RAW,
               _F_PLOT_HIST, _F_PLOT_KDE, _F_PLOT_20BINS, *tif_files, *plot_files):
@@ -924,6 +943,15 @@ def _build_parser() -> argparse.ArgumentParser:
     p_ext.add_argument(
         "--no-gpu", action="store_true",
         help="Disable GPU acceleration (force CPU).",
+    )
+    p_ext.add_argument(
+        "--no-tortuosity", action="store_true",
+        help="Skip the D5 diffusive-tortuosity solve (porespy tortuosity_fd). "
+             "Costs ~15 h per 650^3 volume and, on this project's Bnei Re'em "
+             "volumes, axis0 returns NaN by solver non-convergence anyway. "
+             "The tortuosity_axis0/1/2 keys are omitted from result_psd.json, "
+             "summary.json and the extended CSV, and the per-axis tortuosity "
+             "plot is not written. Every other metric is unaffected.",
     )
 
     return parser
