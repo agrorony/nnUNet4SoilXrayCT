@@ -87,3 +87,6 @@ Both documents are internally consistent with what's on disk and don't overclaim
 ---
 
 *Full-disk recursive sweep (D:\, E:\, P:\ for `nnUNet_resources`/checkpoint files) was still running in the background when this report was generated; this file will be updated if it surfaces anything beyond the local Bnei Re'em mirrors already found on C:\.*
+
+
+> **2026-10-04:** Share access restored (read via E:\PROJECTS\Yael_Mishael\...); nothing was deleted. Earlier statements that the share/files were inaccessible are superseded. See  6_reporting/missing_data_20261004/REPORT.md.

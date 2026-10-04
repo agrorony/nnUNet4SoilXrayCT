@@ -1,0 +1,7 @@
+phase,soil,cube_size,n_rows,n_ok,share_ok,n_no_spanning_path,share_no_spanning_path,n_nonconvergence,share_nonconvergence,n_timeout,share_timeout,n_error,share_error,n_spanning,share_ok_of_spanning
+original,Vertisol,200,48,47,0.9792,0,0.0,0,0.0,1,0.0208,0,0.0,48,0.9792
+original,Loess,200,72,68,0.9444,0,0.0,0,0.0,4,0.0556,0,0.0,72,0.9444
+original,Sand,200,48,48,1.0,0,0.0,0,0.0,0,0.0,0,0.0,48,1.0
+original,Vertisol,128,48,41,0.8542,7,0.1458,0,0.0,0,0.0,0,0.0,41,1.0
+original,Loess,128,72,71,0.9861,1,0.0139,0,0.0,0,0.0,0,0.0,71,1.0
+original,Sand,128,48,48,1.0,0,0.0,0,0.0,0,0.0,0,0.0,48,1.0

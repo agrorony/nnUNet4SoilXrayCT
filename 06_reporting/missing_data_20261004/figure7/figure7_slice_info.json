@@ -1,0 +1,29 @@
+{
+ "bnei_reem_specA_unified": {
+  "z_slice": 325,
+  "voxel_um": 15.000149,
+  "scale_bar_mm": 2.0,
+  "shape": [
+   650,
+   650
+  ]
+ },
+ "mishmar_hanegev_maoz_3_5p85um": {
+  "z_slice": 500,
+  "voxel_um": 5.85,
+  "scale_bar_mm": 1.0,
+  "shape": [
+   1000,
+   1000
+  ]
+ },
+ "Rehovot_samp2_highkV_Cu0.11_15um": {
+  "z_slice": 325,
+  "voxel_um": 15.000149,
+  "scale_bar_mm": 2.0,
+  "shape": [
+   650,
+   650
+  ]
+ }
+}

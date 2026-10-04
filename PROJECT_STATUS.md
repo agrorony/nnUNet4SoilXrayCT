@@ -145,3 +145,6 @@ More importantly: a **later, distinct training attempt (`fresh_bnei_reem_i3`, ~A
 6. Recompute any non-POM structural metrics still missing per DATA_CATALOG.md, using the existing Track E pipeline.
 
 See `DATA_CATALOG.md`'s 2026-09-23 entry (end of Bnei Re'em section) for the full discovery writeup, including which Drive folders were checked and what is/isn't confirmed.
+
+
+> **2026-10-04:** Share access restored (read via E:\PROJECTS\Yael_Mishael\...); nothing was deleted. Earlier statements that the share/files were inaccessible are superseded. See  6_reporting/missing_data_20261004/REPORT.md.

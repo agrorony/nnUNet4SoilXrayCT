@@ -1,0 +1,41 @@
+{
+  "range": {
+    "min": 2.2301715612411503,
+    "max": 906.4473876953125
+  },
+  "repeat_bins": 280,
+  "low_count_bins": 16,
+  "spikes": 15,
+  "mode": "extended",
+  "run_name": "rehovot_samp3_full_volume",
+  "euler_number": -70319,
+  "connectivity_density_per_mm3": 75.34909496237606,
+  "connectivity_probability_gamma": 0.9973771545100923,
+  "degree_of_anisotropy": 0.17007982438198144,
+  "anisotropy_eigenvalues": [
+    2.9837888577460292e-05,
+    2.6207922464674666e-05,
+    2.4763065728276717e-05
+  ],
+  "anisotropy_fabric_tensor": [
+    [
+      2.983195417848112e-05,
+      5.2493548928201105e-08,
+      -1.6516363860434294e-07
+    ],
+    [
+      5.2493548928201105e-08,
+      2.6123113599060253e-05,
+      3.3894989851786287e-07
+    ],
+    [
+      -1.6516363860434294e-07,
+      3.3894989851786287e-07,
+      2.4853808992870324e-05
+    ]
+  ],
+  "psd_30_150um_volume_fraction": 0.5603262820477288,
+  "tortuosity_axis0": 2.516460494160824,
+  "tortuosity_axis1": 2.1064825072299187,
+  "tortuosity_axis2": 1.9081067124683735
+}

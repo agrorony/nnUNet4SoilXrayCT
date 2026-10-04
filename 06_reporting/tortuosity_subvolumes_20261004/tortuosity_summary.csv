@@ -1,0 +1,21 @@
+soil,specimen,cube_size,n_ok,median,mean,level,basis,n_specimens,se
+Loess,Cu011_samp_2,128,23,2.660365599096857,4.335689134558071,specimen,original,,
+Loess,Cu011_samp_2,200,24,2.9469080833232444,4.480568758256111,specimen,original,,
+Loess,mishmar_2_8p8um_label_ds15,128,24,3.3872533868852845,7.442045395265439,specimen,original,,
+Loess,mishmar_2_8p8um_label_ds15,200,23,3.135246440913401,3.350094760105653,specimen,original,,
+Loess,mishmar_3_5p85um_label_ds15,128,24,3.5133527897022976,3.642686279172333,specimen,original,,
+Loess,mishmar_3_5p85um_label_ds15,200,21,3.2205020517540874,3.4701305258553545,specimen,original,,
+Sand,Rehovot_samp2_highkV_Cu0.11_15um,128,24,3.349983880308691,3.668310784092721,specimen,original,,
+Sand,Rehovot_samp2_highkV_Cu0.11_15um,200,24,3.140053722551426,3.5335946427052995,specimen,original,,
+Sand,Rehovot_samp3_highkV_Cu0.11_15um,128,24,2.087505814646218,2.5042891505631526,specimen,original,,
+Sand,Rehovot_samp3_highkV_Cu0.11_15um,200,24,2.0529891690352358,2.2857566953170823,specimen,original,,
+Vertisol,bnei_reem_specA_unified,128,21,15.198072256132605,16.58268300218065,specimen,original,,
+Vertisol,bnei_reem_specA_unified,200,23,20.600201196696304,29.742769935930863,specimen,original,,
+Vertisol,bnei_reem_specB_unified,128,20,5.43776110543477,9.209007532037825,specimen,original,,
+Vertisol,bnei_reem_specB_unified,200,24,5.788829039265579,6.622684220874352,specimen,original,,
+Loess,(across specimens),128,71,4.335689134558071,5.140140269665281,soil,original,3.0,1.168209262766651
+Loess,(across specimens),200,68,3.4701305258553545,3.7669313480723727,soil,original,3.0,0.3584972855197531
+Sand,(across specimens),128,48,3.0862999673279368,3.0862999673279368,soil,original,2.0,0.5820108167647842
+Sand,(across specimens),200,48,2.909675669011191,2.909675669011191,soil,original,2.0,0.6239189736941085
+Vertisol,(across specimens),128,41,12.895845267109237,12.895845267109237,soil,original,2.0,3.686837735071413
+Vertisol,(across specimens),200,47,18.182727078402607,18.182727078402607,soil,original,2.0,11.560042857528256

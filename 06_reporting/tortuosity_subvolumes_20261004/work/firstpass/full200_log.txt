@@ -1,0 +1,2155 @@
+bnei_reem_specA_unified: shape (650, 650, 650), 27 candidate cubes, using 8
+bnei_reem_specB_unified: shape (650, 650, 650), 27 candidate cubes, using 8
+mishmar_3_5p85um_label_ds15: shape (474, 474, 474), 8 candidate cubes, using 8
+mishmar_2_8p8um_label_ds15: shape (947, 947, 947), 16 candidate cubes, using 8
+Cu011_samp_2: shape (650, 650, 822), 36 candidate cubes, using 8
+Rehovot_samp2_highkV_Cu0.11_15um: shape (650, 650, 650), 27 candidate cubes, using 8
+Rehovot_samp3_highkV_Cu0.11_15um: shape (650, 650, 650), 27 candidate cubes, using 8
+168 cube-axis rows, 168 solves
+  [13:49:16] done 0/168 running 8
+  [13:49:17] done 0/168 running 8
+  [13:49:18] done 0/168 running 8
+  [13:49:19] done 0/168 running 8
+  [13:49:20] done 0/168 running 8
+  [13:49:21] done 0/168 running 8
+  [13:49:22] done 0/168 running 8
+  [13:49:23] done 0/168 running 8
+[13:49:23] WARNING  Found non-percolating regions, were filled to    _dns.py:73
+                    percolate                                                  
+[13:49:23] WARNING  Found non-percolating regions, were filled to    _dns.py:73
+                    percolate                                                  
+[13:49:23] WARNING  Found non-percolating regions, were filled to    _dns.py:73
+                    percolate                                                  
+[13:49:23] WARNING  Found non-percolating regions, were filled to    _dns.py:73
+                    percolate                                                  
+[13:49:23] [13:49:23]WARNING   WARNING Found non-percolating regions, were filled to     _dns.pyFound non-percolating regions, were filled to    :_dns.py73:
+73           
+         percolate                                                                      
+percolate                                                  
+[13:49:23] WARNING  Found non-percolating regions, were filled to    _dns.py:73
+                    percolate                                                  
+[13:49:23] WARNING  Found non-percolating regions, were filled to    _dns.py:73
+                    percolate                                                  
+  [13:49:24] done 0/168 running 8
+  [13:49:25] done 0/168 running 8
+  [13:49:26] done 0/168 running 8
+  [13:49:27] done 0/168 running 8
+  [13:49:28] done 0/168 running 8
+  [13:49:29] done 0/168 running 8
+  [13:49:30] done 0/168 running 8
+  [13:49:31] done 0/168 running 8
+  [13:49:32] done 0/168 running 8
+  [13:49:33] done 0/168 running 8
+  [13:49:34] done 0/168 running 8
+  [13:49:35] done 0/168 running 8
+  [13:49:36] done 0/168 running 8
+  [13:49:37] done 0/168 running 8
+  [13:49:38] done 0/168 running 8
+  [13:49:39] done 0/168 running 8
+  [13:49:40] done 0/168 running 8
+  [13:49:41] done 0/168 running 8
+  [13:49:42] done 0/168 running 8
+  [13:49:43] done 0/168 running 8
+  [13:49:44] done 0/168 running 8
+  [13:49:45] done 0/168 running 8
+  [13:49:46] done 0/168 running 8
+  [13:49:47] done 0/168 running 8
+  [13:49:48] done 0/168 running 8
+  [13:49:49] done 0/168 running 8
+  [13:49:50] done 0/168 running 8
+  [13:49:51] done 0/168 running 8
+  [13:49:52] done 0/168 running 8
+  [13:49:53] done 0/168 running 8
+  [13:49:54] done 0/168 running 8
+  [13:49:55] done 0/168 running 8
+  [13:49:56] done 0/168 running 8
+  [13:49:57] done 0/168 running 8
+  [13:49:58] done 0/168 running 8
+  [13:49:59] done 0/168 running 8
+  [13:50:00] done 1/168 running 7
+  [13:50:01] done 1/168 running 8
+  [13:50:02] done 1/168 running 8
+  [13:50:03] done 1/168 running 8
+  [13:50:04] done 1/168 running 8
+  [13:50:05] done 1/168 running 8
+[13:50:06] ERROR    Inlet/outlet rates don't match: 1.3345e+00 vs.  _dns.py:108
+                    -1.3339e+00                                                
+  [13:50:06] done 1/168 running 8
+[13:50:07] ERROR    Inlet/outlet rates don't match: 1.0668e+00 vs.  _dns.py:108
+                    -1.0666e+00                                                
+  [13:50:08] done 2/168 running 7
+[13:50:08] WARNING  Found non-percolating regions, were filled to    _dns.py:73
+                    percolate                                                  
+  [13:50:09] done 3/168 running 7
+  [13:50:10] done 3/168 running 8
+  [13:50:11] done 3/168 running 8
+  [13:50:12] done 4/168 running 7
+  [13:50:13] done 4/168 running 8
+  [13:50:14] done 4/168 running 8
+  [13:50:15] done 4/168 running 8
+[13:50:15] WARNING  Found non-percolating regions, were filled to    _dns.py:73
+                    percolate                                                  
+  [13:50:16] done 4/168 running 8
+[13:50:16] WARNING  Found non-percolating regions, were filled to    _dns.py:73
+                    percolate                                                  
+  [13:50:17] done 4/168 running 8
+  [13:50:18] done 4/168 running 8
+  [13:50:19] done 4/168 running 8
+[13:50:19] WARNING  Found non-percolating regions, were filled to    _dns.py:73
+                    percolate                                                  
+  [13:50:20] done 4/168 running 8
+  [13:50:21] done 4/168 running 8
+  [13:50:22] done 4/168 running 8
+  [13:50:23] done 4/168 running 8
+  [13:50:24] done 4/168 running 8
+  [13:50:25] done 4/168 running 8
+[13:50:25] ERROR    Inlet/outlet rates don't match: 1.1525e-01 vs.  _dns.py:108
+                    -1.1484e-01                                                
+  [13:50:26] done 5/168 running 7
+  [13:50:27] done 5/168 running 8
+  [13:50:28] done 5/168 running 8
+[13:50:28] ERROR    Inlet/outlet rates don't match: 6.7242e-01 vs.  _dns.py:108
+                    -6.7207e-01                                                
+  [13:50:30] done 6/168 running 7
+  [13:50:31] done 6/168 running 8
+  [13:50:32] done 6/168 running 8
+  [13:50:33] done 6/168 running 8
+  [13:50:34] done 6/168 running 8
+[13:50:34] WARNING  Found non-percolating regions, were filled to    _dns.py:73
+                    percolate                                                  
+  [13:50:35] done 6/168 running 8
+  [13:50:36] done 6/168 running 8
+  [13:50:37] done 6/168 running 8
+[13:50:37] WARNING  Found non-percolating regions, were filled to    _dns.py:73
+                    percolate                                                  
+  [13:50:38] done 6/168 running 8
+  [13:50:39] done 6/168 running 8
+  [13:50:40] done 6/168 running 8
+  [13:50:41] done 7/168 running 7
+  [13:50:42] done 7/168 running 8
+  [13:50:43] done 7/168 running 8
+  [13:50:44] done 7/168 running 8
+  [13:50:45] done 7/168 running 8
+  [13:50:46] done 7/168 running 8
+  [13:50:47] done 7/168 running 8
+  [13:50:48] done 7/168 running 8
+[13:50:48] WARNING  Found non-percolating regions, were filled to    _dns.py:73
+                    percolate                                                  
+  [13:50:49] done 7/168 running 8
+[13:50:50] ERROR    Inlet/outlet rates don't match: 9.0240e-01 vs.  _dns.py:108
+                    -9.0206e-01                                                
+  [13:50:50] done 7/168 running 8
+  [13:50:51] done 8/168 running 7
+  [13:50:52] done 8/168 running 8
+  [13:50:53] done 8/168 running 8
+  [13:50:54] done 8/168 running 8
+  [13:50:55] done 8/168 running 8
+  [13:50:56] done 8/168 running 8
+  [13:50:57] done 8/168 running 8
+  [13:50:58] done 8/168 running 8
+[13:50:59] WARNING  Found non-percolating regions, were filled to    _dns.py:73
+                    percolate                                                  
+  [13:51:00] done 9/168 running 7
+  [13:51:01] done 9/168 running 8
+  [13:51:02] done 9/168 running 8
+  [13:51:03] done 9/168 running 8
+  [13:51:04] done 9/168 running 8
+  [13:51:05] done 9/168 running 8
+  [13:51:06] done 9/168 running 8
+  [13:51:07] done 9/168 running 8
+[13:51:07] WARNING  Found non-percolating regions, were filled to    _dns.py:73
+                    percolate                                                  
+  [13:51:08] done 9/168 running 8
+  [13:51:09] done 9/168 running 8
+  [13:51:10] done 9/168 running 8
+  [13:51:11] done 9/168 running 8
+  [13:51:12] done 9/168 running 8
+  [13:51:13] done 9/168 running 8
+  [13:51:14] done 9/168 running 8
+  [13:51:15] done 9/168 running 8
+  [13:51:16] done 9/168 running 8
+  [13:51:17] done 9/168 running 8
+  [13:51:18] done 9/168 running 8
+[13:51:18] ERROR    Inlet/outlet rates don't match: 1.1887e+00 vs.  _dns.py:108
+                    -1.1878e+00                                                
+  [13:51:19] done 9/168 running 8
+  [13:51:20] done 10/168 running 7
+  [13:51:21] done 10/168 running 8
+  [13:51:22] done 11/168 running 7
+  [13:51:23] done 11/168 running 8
+  [13:51:24] done 11/168 running 8
+  [13:51:25] done 11/168 running 8
+  [13:51:26] done 11/168 running 8
+[13:51:27] WARNING  Found non-percolating regions, were filled to    _dns.py:73
+                    percolate                                                  
+  [13:51:27] done 11/168 running 8
+  [13:51:28] done 11/168 running 8
+  [13:51:29] done 11/168 running 8
+[13:51:29] WARNING  Found non-percolating regions, were filled to    _dns.py:73
+                    percolate                                                  
+  [13:51:30] done 11/168 running 8
+  [13:51:32] done 12/168 running 7
+  [13:51:33] done 12/168 running 8
+  [13:51:34] done 12/168 running 8
+  [13:51:35] done 12/168 running 8
+  [13:51:36] done 12/168 running 8
+  [13:51:37] done 12/168 running 8
+  [13:51:38] done 12/168 running 8
+  [13:51:39] done 12/168 running 8
+[13:51:39] WARNING  Found non-percolating regions, were filled to    _dns.py:73
+                    percolate                                                  
+  [13:51:40] done 12/168 running 8
+  [13:51:41] done 12/168 running 8
+  [13:51:42] done 12/168 running 8
+  [13:51:43] done 12/168 running 8
+  [13:51:44] done 12/168 running 8
+  [13:51:45] done 12/168 running 8
+  [13:51:46] done 12/168 running 8
+  [13:51:47] done 12/168 running 8
+  [13:51:48] done 12/168 running 8
+[13:51:48] ERROR    Inlet/outlet rates don't match: 1.3104e+00 vs.  _dns.py:108
+                    -1.3103e+00                                                
+[13:51:49] ERROR    Inlet/outlet rates don't match: 1.7818e+00 vs.  _dns.py:108
+                    -1.7811e+00                                                
+  [13:51:49] done 13/168 running 7
+  [13:51:50] done 14/168 running 7
+  [13:51:51] done 14/168 running 8
+  [13:51:52] done 14/168 running 8
+  [13:51:53] done 14/168 running 8
+  [13:51:54] done 14/168 running 8
+  [13:51:55] done 14/168 running 8
+  [13:51:56] done 14/168 running 8
+[13:51:57] WARNING  Found non-percolating regions, were filled to    _dns.py:73
+                    percolate                                                  
+  [13:51:57] done 14/168 running 8
+[13:51:58] WARNING  Found non-percolating regions, were filled to    _dns.py:73
+                    percolate                                                  
+  [13:51:58] done 14/168 running 8
+  [13:51:59] done 14/168 running 8
+  [13:52:00] done 14/168 running 8
+  [13:52:01] done 14/168 running 8
+  [13:52:02] done 14/168 running 8
+  [13:52:03] done 14/168 running 8
+[13:52:03] ERROR    Inlet/outlet rates don't match: 3.9501e-01 vs.  _dns.py:108
+                    -3.9469e-01                                                
+  [13:52:05] done 15/168 running 7
+[13:52:05] ERROR    Inlet/outlet rates don't match: 5.8804e+00 vs.  _dns.py:108
+                    -5.8797e+00                                                
+  [13:52:06] done 15/168 running 8
+  [13:52:07] done 16/168 running 7
+  [13:52:08] done 16/168 running 8
+  [13:52:09] done 16/168 running 8
+  [13:52:10] done 16/168 running 8
+  [13:52:11] done 16/168 running 8
+  [13:52:12] done 16/168 running 8
+[13:52:12] WARNING  Found non-percolating regions, were filled to    _dns.py:73
+                    percolate                                                  
+  [13:52:13] done 16/168 running 8
+[13:52:13] ERROR    Inlet/outlet rates don't match: 1.0433e+00 vs.  _dns.py:108
+                    -1.0426e+00                                                
+  [13:52:14] done 16/168 running 8
+[13:52:14] WARNING  Found non-percolating regions, were filled to    _dns.py:73
+                    percolate                                                  
+  [13:52:15] done 17/168 running 7
+  [13:52:16] done 17/168 running 8
+  [13:52:17] done 17/168 running 8
+  [13:52:18] done 17/168 running 8
+[13:52:19] ERROR    Inlet/outlet rates don't match: 1.5093e+00 vs.  _dns.py:108
+                    -1.5092e+00                                                
+  [13:52:19] done 17/168 running 8
+  [13:52:20] done 18/168 running 7
+  [13:52:21] done 18/168 running 8
+[13:52:22] WARNING  Found non-percolating regions, were filled to    _dns.py:73
+                    percolate                                                  
+  [13:52:22] done 18/168 running 8
+  [13:52:23] done 18/168 running 8
+  [13:52:24] done 18/168 running 8
+  [13:52:25] done 18/168 running 8
+  [13:52:26] done 18/168 running 8
+  [13:52:27] done 18/168 running 8
+[13:52:28] WARNING  Found non-percolating regions, were filled to    _dns.py:73
+                    percolate                                                  
+  [13:52:28] done 18/168 running 8
+[13:52:28] ERROR    Inlet/outlet rates don't match: 7.9138e-01 vs.  _dns.py:108
+                    -7.9119e-01                                                
+  [13:52:30] done 19/168 running 7
+  [13:52:31] done 19/168 running 8
+  [13:52:32] done 19/168 running 8
+  [13:52:33] done 19/168 running 8
+  [13:52:34] done 19/168 running 8
+  [13:52:35] done 19/168 running 8
+  [13:52:36] done 19/168 running 8
+  [13:52:37] done 19/168 running 8
+[13:52:37] WARNING  Found non-percolating regions, were filled to    _dns.py:73
+                    percolate                                                  
+  [13:52:38] done 19/168 running 8
+  [13:52:39] done 19/168 running 8
+  [13:52:40] done 19/168 running 8
+  [13:52:41] done 19/168 running 8
+  [13:52:42] done 19/168 running 8
+  [13:52:43] done 19/168 running 8
+  [13:52:44] done 19/168 running 8
+  [13:52:45] done 19/168 running 8
+  [13:52:46] done 19/168 running 8
+  [13:52:47] done 19/168 running 8
+  [13:52:48] done 19/168 running 8
+  [13:52:49] done 19/168 running 8
+  [13:52:50] done 19/168 running 8
+  [13:52:51] done 19/168 running 8
+  [13:52:52] done 19/168 running 8
+  [13:52:53] done 19/168 running 8
+  [13:52:54] done 19/168 running 8
+  [13:52:55] done 19/168 running 8
+[13:52:55] ERROR    Inlet/outlet rates don't match: 4.0965e-01 vs.  _dns.py:108
+                    -4.0939e-01                                                
+  [13:52:56] done 20/168 running 7
+  [13:52:57] done 20/168 running 8
+  [13:52:58] done 20/168 running 8
+  [13:52:59] done 20/168 running 8
+  [13:53:00] done 20/168 running 8
+  [13:53:01] done 20/168 running 8
+  [13:53:02] done 20/168 running 8
+[13:53:04] WARNING  Found non-percolating regions, were filled to    _dns.py:73
+                    percolate                                                  
+  [13:53:04] done 21/168 running 7
+  [13:53:05] done 22/168 running 7
+  [13:53:06] done 22/168 running 8
+  [13:53:07] done 22/168 running 8
+  [13:53:08] done 22/168 running 8
+  [13:53:09] done 22/168 running 8
+  [13:53:10] done 22/168 running 8
+  [13:53:11] done 22/168 running 8
+[13:53:11] WARNING  Found non-percolating regions, were filled to    _dns.py:73
+                    percolate                                                  
+  [13:53:12] done 22/168 running 8
+[13:53:13] WARNING  Found non-percolating regions, were filled to    _dns.py:73
+                    percolate                                                  
+  [13:53:13] done 22/168 running 8
+  [13:53:14] done 22/168 running 8
+  [13:53:15] done 22/168 running 8
+[13:53:15] ERROR    Inlet/outlet rates don't match: 4.4715e-01 vs.  _dns.py:108
+                    -4.4681e-01                                                
+  [13:53:17] done 23/168 running 7
+  [13:53:18] done 23/168 running 8
+[13:53:18] ERROR    Inlet/outlet rates don't match: 3.4697e-01 vs.  _dns.py:108
+                    -3.4631e-01                                                
+  [13:53:19] done 23/168 running 8
+  [13:53:20] done 24/168 running 7
+  [13:53:21] done 24/168 running 8
+  [13:53:22] done 24/168 running 8
+  [13:53:23] done 24/168 running 8
+  [13:53:24] done 24/168 running 8
+[13:53:24] WARNING  Found non-percolating regions, were filled to    _dns.py:73
+                    percolate                                                  
+  [13:53:25] done 24/168 running 8
+  [13:53:26] done 24/168 running 8
+  [13:53:27] done 24/168 running 8
+[13:53:28] WARNING  Found non-percolating regions, were filled to    _dns.py:73
+                    percolate                                                  
+  [13:53:28] done 25/168 running 7
+[13:53:28] ERROR    Inlet/outlet rates don't match: 5.3221e+00 vs.  _dns.py:108
+                    -5.3207e+00                                                
+  [13:53:29] done 25/168 running 8
+  [13:53:30] done 26/168 running 7
+  [13:53:31] done 26/168 running 8
+  [13:53:32] done 26/168 running 8
+  [13:53:33] done 26/168 running 8
+  [13:53:34] done 26/168 running 8
+  [13:53:35] done 26/168 running 8
+[13:53:35] WARNING  Found non-percolating regions, were filled to    _dns.py:73
+                    percolate                                                  
+  [13:53:36] done 26/168 running 8
+  [13:53:37] done 26/168 running 8
+[13:53:37] WARNING  Found non-percolating regions, were filled to    _dns.py:73
+                    percolate                                                  
+  [13:53:38] done 26/168 running 8
+  [13:53:39] done 26/168 running 8
+  [13:53:40] done 26/168 running 8
+  [13:53:41] done 26/168 running 8
+  [13:53:42] done 26/168 running 8
+  [13:53:43] done 26/168 running 8
+  [13:53:44] done 26/168 running 8
+  [13:53:45] done 26/168 running 8
+  [13:53:46] done 26/168 running 8
+  [13:53:47] done 26/168 running 8
+  [13:53:48] done 26/168 running 8
+  [13:53:49] done 26/168 running 8
+  [13:53:50] done 26/168 running 8
+  [13:53:51] done 26/168 running 8
+  [13:53:52] done 26/168 running 8
+  [13:53:53] done 26/168 running 8
+  [13:53:54] done 26/168 running 8
+  [13:53:55] done 26/168 running 8
+  [13:53:56] done 26/168 running 8
+  [13:53:57] done 26/168 running 8
+  [13:53:58] done 26/168 running 8
+  [13:53:59] done 26/168 running 8
+  [13:54:00] done 26/168 running 8
+  [13:54:01] done 26/168 running 8
+  [13:54:02] done 26/168 running 8
+  [13:54:03] done 26/168 running 8
+  [13:54:04] done 26/168 running 8
+  [13:54:05] done 26/168 running 8
+  [13:54:06] done 26/168 running 8
+  [13:54:07] done 26/168 running 8
+  [13:54:08] done 26/168 running 8
+[13:54:08] ERROR    Inlet/outlet rates don't match: 9.9653e+00 vs.  _dns.py:108
+                    -9.9641e+00                                                
+  [13:54:09] done 26/168 running 8
+  [13:54:10] done 27/168 running 7
+  [13:54:11] done 27/168 running 8
+  [13:54:12] done 27/168 running 8
+  [13:54:13] done 27/168 running 8
+  [13:54:14] done 27/168 running 8
+  [13:54:15] done 27/168 running 8
+  [13:54:16] done 27/168 running 8
+  [13:54:17] done 27/168 running 8
+[13:54:18] WARNING  Found non-percolating regions, were filled to    _dns.py:73
+                    percolate                                                  
+  [13:54:18] done 27/168 running 8
+  [13:54:19] done 27/168 running 8
+  [13:54:20] done 27/168 running 8
+  [13:54:21] done 27/168 running 8
+  [13:54:22] done 27/168 running 8
+  [13:54:23] done 27/168 running 8
+  [13:54:24] done 27/168 running 8
+[13:54:25] ERROR    Inlet/outlet rates don't match: 2.3321e+00 vs.  _dns.py:108
+                    -2.3310e+00                                                
+  [13:54:25] done 27/168 running 8
+  [13:54:26] done 28/168 running 7
+[13:54:26] ERROR    Inlet/outlet rates don't match: 2.4689e+01 vs.  _dns.py:108
+                    -2.4687e+01                                                
+  [13:54:28] done 29/168 running 7
+  [13:54:29] done 29/168 running 8
+  [13:54:30] done 29/168 running 8
+  [13:54:31] done 29/168 running 8
+  [13:54:32] done 29/168 running 8
+  [13:54:33] done 29/168 running 8
+  [13:54:34] done 29/168 running 8
+[13:54:34] WARNING  Found non-percolating regions, were filled to    _dns.py:73
+                    percolate                                                  
+  [13:54:35] done 29/168 running 8
+[13:54:35] WARNING  Found non-percolating regions, were filled to    _dns.py:73
+                    percolate                                                  
+  [13:54:36] done 29/168 running 8
+  [13:54:37] done 29/168 running 8
+  [13:54:38] done 29/168 running 8
+  [13:54:39] done 29/168 running 8
+[13:54:39] ERROR    Inlet/outlet rates don't match: 1.9873e+01 vs.  _dns.py:108
+                    -1.9870e+01                                                
+  [13:54:40] done 29/168 running 8
+[13:54:40] ERROR    Inlet/outlet rates don't match: 7.8064e-01 vs.  _dns.py:108
+                    -7.8042e-01                                                
+  [13:54:41] done 30/168 running 7
+  [13:54:42] done 31/168 running 7
+  [13:54:43] done 31/168 running 8
+  [13:54:44] done 31/168 running 8
+  [13:54:45] done 31/168 running 8
+[13:54:45] ERROR    Inlet/outlet rates don't match: 7.3274e+00 vs.  _dns.py:108
+                    -7.3265e+00                                                
+  [13:54:46] done 31/168 running 8
+  [13:54:47] done 32/168 running 7
+  [13:54:48] done 32/168 running 8
+[13:54:49] WARNING  Found non-percolating regions, were filled to    _dns.py:73
+                    percolate                                                  
+  [13:54:49] done 32/168 running 8
+[13:54:49] WARNING  Found non-percolating regions, were filled to    _dns.py:73
+                    percolate                                                  
+  [13:54:50] done 32/168 running 8
+  [13:54:51] done 32/168 running 8
+[13:54:52] ERROR    Inlet/outlet rates don't match: 4.3461e+01 vs.  _dns.py:108
+                    -4.3455e+01                                                
+  [13:54:52] done 32/168 running 8
+  [13:54:53] done 33/168 running 7
+  [13:54:54] done 33/168 running 8
+[13:54:55] WARNING  Found non-percolating regions, were filled to    _dns.py:73
+                    percolate                                                  
+  [13:54:55] done 33/168 running 8
+  [13:54:56] done 33/168 running 8
+  [13:54:57] done 33/168 running 8
+  [13:54:58] done 33/168 running 8
+  [13:54:59] done 33/168 running 8
+  [13:55:00] done 33/168 running 8
+[13:55:01] WARNING  Found non-percolating regions, were filled to    _dns.py:73
+                    percolate                                                  
+  [13:55:01] done 33/168 running 8
+  [13:55:02] done 33/168 running 8
+  [13:55:05] done 33/168 running 8
+  [13:55:06] done 33/168 running 8
+[13:55:06] ERROR    Inlet/outlet rates don't match: 2.9223e+00 vs.  _dns.py:108
+                    -2.9215e+00                                                
+  [13:55:08] done 34/168 running 7
+  [13:55:09] done 34/168 running 8
+  [13:55:10] done 34/168 running 8
+  [13:55:11] done 34/168 running 8
+  [13:55:12] done 34/168 running 8
+  [13:55:13] done 34/168 running 8
+  [13:55:14] done 34/168 running 8
+  [13:55:15] done 34/168 running 8
+[13:55:15] ERROR    Inlet/outlet rates don't match: 3.8687e+00 vs.  _dns.py:108
+                    -3.8677e+00                                                
+[13:55:15] WARNING  Found non-percolating regions, were filled to    _dns.py:73
+                    percolate                                                  
+  [13:55:16] done 34/168 running 8
+  [13:55:17] done 35/168 running 7
+  [13:55:18] done 35/168 running 8
+  [13:55:19] done 36/168 running 7
+[13:55:20] ERROR    Inlet/outlet rates don't match: 3.0517e+00 vs.  _dns.py:108
+                    -3.0509e+00                                                
+  [13:55:20] done 36/168 running 8
+[13:55:21] ERROR    Inlet/outlet rates don't match: 1.9717e+00 vs.  _dns.py:108
+                    -1.9712e+00                                                
+  [13:55:21] done 37/168 running 7
+  [13:55:23] done 38/168 running 7
+  [13:55:24] done 38/168 running 8
+[13:55:24] WARNING  Found non-percolating regions, were filled to    _dns.py:73
+                    percolate                                                  
+  [13:55:25] done 38/168 running 8
+  [13:55:26] done 38/168 running 8
+[13:55:27] ERROR    Inlet/outlet rates don't match: 7.2281e+00 vs.  _dns.py:108
+                    -7.2272e+00                                                
+  [13:55:30] done 39/168 running 7
+[13:55:33] WARNING  Found non-percolating regions, were filled to    _dns.py:73
+                    percolate                                                  
+[13:55:33] WARNING  Found non-percolating regions, were filled to    _dns.py:73
+                    percolate                                                  
+  [13:55:34] done 39/168 running 8
+  [13:55:35] done 39/168 running 8
+[13:55:35] ERROR    Inlet/outlet rates don't match: 3.5500e+00 vs.  _dns.py:108
+                    -3.5490e+00                                                
+[13:55:35] WARNING  Found non-percolating regions, were filled to    _dns.py:73
+                    percolate                                                  
+  [13:55:36] done 39/168 running 8
+  [13:55:37] done 40/168 running 7
+  [13:55:38] done 40/168 running 8
+  [13:55:39] done 40/168 running 8
+  [13:55:40] done 40/168 running 8
+[13:55:40] WARNING  Found non-percolating regions, were filled to    _dns.py:73
+                    percolate                                                  
+  [13:55:41] done 40/168 running 8
+  [13:55:42] done 40/168 running 8
+  [13:55:43] done 40/168 running 8
+  [13:55:44] done 40/168 running 8
+[13:55:44] WARNING  Found non-percolating regions, were filled to    _dns.py:73
+                    percolate                                                  
+  [13:55:45] done 40/168 running 8
+  [13:55:46] done 40/168 running 8
+  [13:55:47] done 41/168 running 7
+  [13:55:48] done 41/168 running 8
+  [13:55:49] done 41/168 running 8
+  [13:55:50] done 41/168 running 8
+  [13:55:51] done 41/168 running 8
+  [13:55:52] done 41/168 running 8
+  [13:55:53] done 41/168 running 8
+  [13:55:54] done 41/168 running 8
+[13:55:54] WARNING  Found non-percolating regions, were filled to    _dns.py:73
+                    percolate                                                  
+  [13:55:55] done 41/168 running 8
+  [13:55:56] done 41/168 running 8
+  [13:55:57] done 41/168 running 8
+  [13:55:58] done 41/168 running 8
+  [13:55:59] done 41/168 running 8
+  [13:56:00] done 41/168 running 8
+  [13:56:01] done 41/168 running 8
+  [13:56:02] done 41/168 running 8
+  [13:56:03] done 41/168 running 8
+  [13:56:04] done 41/168 running 8
+  [13:56:05] done 41/168 running 8
+  [13:56:06] done 41/168 running 8
+  [13:56:07] done 41/168 running 8
+  [13:56:09] done 42/168 running 7
+  [13:56:10] done 42/168 running 8
+  [13:56:11] done 42/168 running 8
+  [13:56:12] done 42/168 running 8
+  [13:56:13] done 42/168 running 8
+  [13:56:14] done 42/168 running 8
+  [13:56:15] done 42/168 running 8
+  [13:56:16] done 42/168 running 8
+[13:56:16] WARNING  Found non-percolating regions, were filled to    _dns.py:73
+                    percolate                                                  
+  [13:56:17] done 42/168 running 8
+[13:56:18] ERROR    Inlet/outlet rates don't match: 6.9202e+00 vs.  _dns.py:108
+                    -6.9194e+00                                                
+  [13:56:18] done 42/168 running 8
+  [13:56:19] done 43/168 running 7
+  [13:56:20] done 44/168 running 7
+  [13:56:21] done 44/168 running 8
+  [13:56:22] done 44/168 running 8
+  [13:56:23] done 44/168 running 8
+  [13:56:24] done 44/168 running 8
+[13:56:26] ERROR    Inlet/outlet rates don't match: 8.3442e+00 vs.  _dns.py:108
+                    -8.3432e+00                                                
+  [13:56:26] done 45/168 running 7
+[13:56:27] WARNING  Found non-percolating regions, were filled to    _dns.py:73
+                    percolate                                                  
+  [13:56:27] done 46/168 running 7
+[13:56:28] WARNING  Found non-percolating regions, were filled to    _dns.py:73
+                    percolate                                                  
+  [13:56:28] done 46/168 running 8
+  [13:56:29] done 46/168 running 8
+  [13:56:30] done 46/168 running 8
+  [13:56:31] done 46/168 running 8
+  [13:56:32] done 46/168 running 8
+  [13:56:33] done 46/168 running 8
+[13:56:33] WARNING  Found non-percolating regions, were filled to    _dns.py:73
+                    percolate                                                  
+  [13:56:34] done 46/168 running 8
+[13:56:35] WARNING  Found non-percolating regions, were filled to    _dns.py:73
+                    percolate                                                  
+  [13:56:35] done 46/168 running 8
+  [13:56:36] done 46/168 running 8
+  [13:56:37] done 46/168 running 8
+  [13:56:38] done 46/168 running 8
+  [13:56:39] done 46/168 running 8
+  [13:56:40] done 46/168 running 8
+  [13:56:41] done 47/168 running 7
+[13:56:42] ERROR    Inlet/outlet rates don't match: 2.2695e+00 vs.  _dns.py:108
+                    -2.2684e+00                                                
+  [13:56:43] done 48/168 running 7
+  [13:56:44] done 48/168 running 8
+  [13:56:45] done 48/168 running 8
+  [13:56:46] done 48/168 running 8
+  [13:56:47] done 48/168 running 8
+  [13:56:48] done 48/168 running 8
+  [13:56:49] done 48/168 running 8
+[13:56:49] WARNING  Found non-percolating regions, were filled to    _dns.py:73
+                    percolate                                                  
+  [13:56:50] done 48/168 running 8
+[13:56:50] WARNING  Found non-percolating regions, were filled to    _dns.py:73
+                    percolate                                                  
+  [13:56:51] done 48/168 running 8
+  [13:56:52] done 48/168 running 8
+  [13:56:53] done 48/168 running 8
+  [13:56:54] done 48/168 running 8
+  [13:56:55] done 48/168 running 8
+  [13:56:56] done 48/168 running 8
+  [13:56:57] done 48/168 running 8
+  [13:56:58] done 48/168 running 8
+  [13:56:59] done 48/168 running 8
+  [13:57:00] done 48/168 running 8
+  [13:57:01] done 48/168 running 8
+  [13:57:02] done 48/168 running 8
+  [13:57:03] done 48/168 running 8
+  [13:57:04] done 48/168 running 8
+  [13:57:05] done 48/168 running 8
+  [13:57:06] done 48/168 running 8
+  [13:57:07] done 48/168 running 8
+  [13:57:08] done 48/168 running 8
+  [13:57:09] done 48/168 running 8
+  [13:57:10] done 48/168 running 8
+  [13:57:11] done 48/168 running 8
+  [13:57:12] done 48/168 running 8
+  [13:57:13] done 48/168 running 8
+  [13:57:14] done 48/168 running 8
+  [13:57:15] done 48/168 running 8
+  [13:57:16] done 48/168 running 8
+  [13:57:17] done 48/168 running 8
+  [13:57:18] done 48/168 running 8
+  [13:57:19] done 48/168 running 8
+  [13:57:20] done 48/168 running 8
+  [13:57:21] done 48/168 running 8
+  [13:57:22] done 48/168 running 8
+  [13:57:23] done 48/168 running 8
+  [13:57:24] done 48/168 running 8
+  [13:57:25] done 48/168 running 8
+  [13:57:26] done 48/168 running 8
+  [13:57:27] done 48/168 running 8
+  [13:57:28] done 49/168 running 7
+  [13:57:29] done 49/168 running 8
+  [13:57:30] done 49/168 running 8
+  [13:57:31] done 49/168 running 8
+  [13:57:32] done 49/168 running 8
+  [13:57:33] done 49/168 running 8
+  [13:57:34] done 49/168 running 8
+  [13:57:35] done 49/168 running 8
+[13:57:36] WARNING  Found non-percolating regions, were filled to    _dns.py:73
+                    percolate                                                  
+  [13:57:36] done 49/168 running 8
+  [13:57:37] done 49/168 running 8
+  [13:57:38] done 49/168 running 8
+  [13:57:39] done 49/168 running 8
+  [13:57:40] done 49/168 running 8
+  [13:57:41] done 49/168 running 8
+  [13:57:42] done 49/168 running 8
+  [13:57:43] done 49/168 running 8
+  [13:57:44] done 49/168 running 8
+  [13:57:45] done 49/168 running 8
+  [13:57:46] done 49/168 running 8
+  [13:57:47] done 49/168 running 8
+  [13:57:48] done 49/168 running 8
+  [13:57:49] done 49/168 running 8
+  [13:57:50] done 49/168 running 8
+  [13:57:51] done 49/168 running 8
+  [13:57:52] done 49/168 running 8
+  [13:57:53] done 49/168 running 8
+  [13:57:54] done 49/168 running 8
+  [13:57:55] done 49/168 running 8
+  [13:57:56] done 49/168 running 8
+  [13:57:57] done 49/168 running 8
+  [13:57:58] done 49/168 running 8
+  [13:57:59] done 50/168 running 7
+  [13:58:00] done 50/168 running 8
+  [13:58:01] done 50/168 running 8
+  [13:58:02] done 50/168 running 8
+  [13:58:03] done 50/168 running 8
+  [13:58:04] done 50/168 running 8
+  [13:58:05] done 50/168 running 8
+  [13:58:06] done 50/168 running 8
+[13:58:07] WARNING  Found non-percolating regions, were filled to    _dns.py:73
+                    percolate                                                  
+  [13:58:07] done 50/168 running 8
+  [13:58:09] done 51/168 running 7
+  [13:58:10] done 51/168 running 8
+  [13:58:11] done 51/168 running 8
+  [13:58:12] done 51/168 running 8
+  [13:58:13] done 52/168 running 7
+  [13:58:14] done 52/168 running 8
+  [13:58:15] done 52/168 running 8
+[13:58:16] WARNING  Found non-percolating regions, were filled to    _dns.py:73
+                    percolate                                                  
+  [13:58:17] done 53/168 running 7
+  [13:58:18] done 53/168 running 8
+  [13:58:19] done 53/168 running 8
+  [13:58:20] done 53/168 running 8
+[13:58:21] WARNING  Found non-percolating regions, were filled to    _dns.py:73
+                    percolate                                                  
+  [13:58:21] done 53/168 running 8
+  [13:58:22] done 53/168 running 8
+  [13:58:23] done 53/168 running 8
+  [13:58:24] done 53/168 running 8
+[13:58:24] WARNING  Found non-percolating regions, were filled to    _dns.py:73
+                    percolate                                                  
+  [13:58:25] done 53/168 running 8
+  [13:58:26] done 53/168 running 8
+  [13:58:27] done 55/168 running 6
+  [13:58:28] done 55/168 running 8
+  [13:58:29] done 55/168 running 8
+  [13:58:30] done 55/168 running 8
+  [13:58:31] done 55/168 running 8
+  [13:58:32] done 55/168 running 8
+  [13:58:33] done 55/168 running 8
+  [13:58:34] done 55/168 running 8
+[13:58:35] WARNING  Found non-percolating regions, were filled to    _dns.py:73
+                    percolate                                                  
+[13:58:35] WARNING  Found non-percolating regions, were filled to    _dns.py:73
+                    percolate                                                  
+  [13:58:35] done 55/168 running 8
+  [13:58:36] done 55/168 running 8
+  [13:58:37] done 55/168 running 8
+  [13:58:38] done 55/168 running 8
+  [13:58:39] done 55/168 running 8
+  [13:58:40] done 55/168 running 8
+  [13:58:41] done 55/168 running 8
+  [13:58:42] done 55/168 running 8
+  [13:58:43] done 55/168 running 8
+  [13:58:44] done 55/168 running 8
+  [13:58:45] done 55/168 running 8
+  [13:58:46] done 55/168 running 8
+  [13:58:47] done 55/168 running 8
+  [13:58:48] done 55/168 running 8
+  [13:58:49] done 55/168 running 8
+  [13:58:50] done 55/168 running 8
+  [13:58:51] done 55/168 running 8
+  [13:58:52] done 55/168 running 8
+  [13:58:53] done 55/168 running 8
+  [13:58:54] done 55/168 running 8
+  [13:58:55] done 55/168 running 8
+  [13:58:56] done 55/168 running 8
+  [13:58:57] done 55/168 running 8
+  [13:58:58] done 55/168 running 8
+  [13:58:59] done 55/168 running 8
+  [13:59:00] done 55/168 running 8
+  [13:59:01] done 55/168 running 8
+  [13:59:02] done 55/168 running 8
+  [13:59:03] done 55/168 running 8
+  [13:59:04] done 55/168 running 8
+  [13:59:05] done 55/168 running 8
+  [13:59:06] done 55/168 running 8
+  [13:59:07] done 55/168 running 8
+  [13:59:08] done 55/168 running 8
+  [13:59:09] done 55/168 running 8
+  [13:59:10] done 55/168 running 8
+  [13:59:11] done 55/168 running 8
+  [13:59:12] done 55/168 running 8
+  [13:59:14] done 56/168 running 7
+  [13:59:15] done 56/168 running 8
+  [13:59:16] done 56/168 running 8
+  [13:59:17] done 56/168 running 8
+  [13:59:18] done 56/168 running 8
+  [13:59:19] done 56/168 running 8
+  [13:59:20] done 57/168 running 7
+  [13:59:21] done 57/168 running 8
+[13:59:21] WARNING  Found non-percolating regions, were filled to    _dns.py:73
+                    percolate                                                  
+  [13:59:22] done 57/168 running 8
+  [13:59:23] done 57/168 running 8
+  [13:59:24] done 57/168 running 8
+  [13:59:25] done 57/168 running 8
+  [13:59:26] done 57/168 running 8
+  [13:59:27] done 57/168 running 8
+[13:59:28] WARNING  Found non-percolating regions, were filled to    _dns.py:73
+                    percolate                                                  
+  [13:59:28] done 57/168 running 8
+  [13:59:29] done 57/168 running 8
+  [13:59:30] done 57/168 running 8
+  [13:59:31] done 57/168 running 8
+  [13:59:32] done 57/168 running 8
+  [13:59:33] done 57/168 running 8
+  [13:59:34] done 57/168 running 8
+  [13:59:35] done 57/168 running 8
+  [13:59:36] done 57/168 running 8
+  [13:59:37] done 57/168 running 8
+  [13:59:38] done 57/168 running 8
+  [13:59:39] done 57/168 running 8
+  [13:59:40] done 57/168 running 8
+  [13:59:41] done 57/168 running 8
+  [13:59:42] done 57/168 running 8
+  [13:59:43] done 57/168 running 8
+  [13:59:44] done 57/168 running 8
+  [13:59:45] done 57/168 running 8
+  [13:59:46] done 57/168 running 8
+  [13:59:47] done 57/168 running 8
+  [13:59:48] done 57/168 running 8
+  [13:59:49] done 57/168 running 8
+  [13:59:50] done 57/168 running 8
+  [13:59:51] done 57/168 running 8
+  [13:59:52] done 58/168 running 7
+  [13:59:53] done 58/168 running 8
+  [13:59:54] done 58/168 running 8
+  [13:59:55] done 58/168 running 8
+  [13:59:56] done 58/168 running 8
+  [13:59:57] done 58/168 running 8
+  [13:59:58] done 58/168 running 8
+  [13:59:59] done 58/168 running 8
+[14:00:00] WARNING  Found non-percolating regions, were filled to    _dns.py:73
+                    percolate                                                  
+  [14:00:00] done 58/168 running 8
+  [14:00:01] done 58/168 running 8
+  [14:00:02] done 58/168 running 8
+  [14:00:03] done 58/168 running 8
+  [14:00:04] done 58/168 running 8
+  [14:00:05] done 58/168 running 8
+  [14:00:06] done 59/168 running 7
+  [14:00:07] done 59/168 running 8
+  [14:00:08] done 59/168 running 8
+  [14:00:09] done 59/168 running 8
+  [14:00:10] done 59/168 running 8
+  [14:00:12] done 60/168 running 7
+  [14:00:13] done 60/168 running 8
+[14:00:14] WARNING  Found non-percolating regions, were filled to    _dns.py:73
+                    percolate                                                  
+  [14:00:14] done 60/168 running 8
+  [14:00:15] done 60/168 running 8
+  [14:00:16] done 60/168 running 8
+  [14:00:17] done 60/168 running 8
+  [14:00:18] done 60/168 running 8
+  [14:00:19] done 60/168 running 8
+[14:00:20] WARNING  Found non-percolating regions, were filled to    _dns.py:73
+                    percolate                                                  
+  [14:00:20] done 60/168 running 8
+  [14:00:21] done 60/168 running 8
+  [14:00:22] done 60/168 running 8
+  [14:00:23] done 60/168 running 8
+  [14:00:24] done 60/168 running 8
+  [14:00:25] done 60/168 running 8
+  [14:00:26] done 60/168 running 8
+  [14:00:27] done 60/168 running 8
+  [14:00:28] done 60/168 running 8
+  [14:00:29] done 60/168 running 8
+  [14:00:30] done 60/168 running 8
+  [14:00:31] done 60/168 running 8
+  [14:00:32] done 60/168 running 8
+  [14:00:33] done 60/168 running 8
+  [14:00:34] done 60/168 running 8
+  [14:00:35] done 60/168 running 8
+  [14:00:36] done 60/168 running 8
+  [14:00:37] done 60/168 running 8
+  [14:00:38] done 60/168 running 8
+  [14:00:39] done 60/168 running 8
+  [14:00:40] done 60/168 running 8
+  [14:00:41] done 60/168 running 8
+  [14:00:42] done 60/168 running 8
+  [14:00:43] done 60/168 running 8
+  [14:00:44] done 60/168 running 8
+  [14:00:45] done 60/168 running 8
+  [14:00:46] done 60/168 running 8
+  [14:00:47] done 60/168 running 8
+  [14:00:48] done 60/168 running 8
+  [14:00:49] done 60/168 running 8
+  [14:00:50] done 60/168 running 8
+  [14:00:51] done 60/168 running 8
+  [14:00:52] done 60/168 running 8
+  [14:00:53] done 60/168 running 8
+  [14:00:54] done 60/168 running 8
+  [14:00:55] done 60/168 running 8
+  [14:00:56] done 60/168 running 8
+  [14:00:57] done 60/168 running 8
+  [14:00:58] done 60/168 running 8
+  [14:00:59] done 60/168 running 8
+  [14:01:00] done 60/168 running 8
+  [14:01:01] done 60/168 running 8
+  [14:01:02] done 60/168 running 8
+  [14:01:03] done 60/168 running 8
+  [14:01:04] done 60/168 running 8
+  [14:01:06] done 61/168 running 7
+  [14:01:07] done 61/168 running 8
+  [14:01:08] done 61/168 running 8
+  [14:01:09] done 61/168 running 8
+  [14:01:10] done 61/168 running 8
+  [14:01:11] done 61/168 running 8
+  [14:01:12] done 62/168 running 7
+  [14:01:13] done 63/168 running 7
+[14:01:13] WARNING  Found non-percolating regions, were filled to    _dns.py:73
+                    percolate                                                  
+  [14:01:14] done 63/168 running 8
+  [14:01:15] done 63/168 running 8
+  [14:01:16] done 63/168 running 8
+  [14:01:17] done 63/168 running 8
+  [14:01:18] done 63/168 running 8
+  [14:01:19] done 63/168 running 8
+[14:01:20] WARNING  Found non-percolating regions, were filled to    _dns.py:73
+                    percolate                                                  
+  [14:01:20] done 63/168 running 8
+[14:01:21] WARNING  Found non-percolating regions, were filled to    _dns.py:73
+                    percolate                                                  
+  [14:01:21] done 63/168 running 8
+  [14:01:22] done 63/168 running 8
+  [14:01:24] done 64/168 running 7
+  [14:01:25] done 64/168 running 8
+  [14:01:26] done 64/168 running 8
+  [14:01:27] done 64/168 running 8
+  [14:01:28] done 64/168 running 8
+  [14:01:29] done 64/168 running 8
+  [14:01:30] done 64/168 running 8
+  [14:01:31] done 64/168 running 8
+[14:01:31] WARNING  Found non-percolating regions, were filled to    _dns.py:73
+                    percolate                                                  
+  [14:01:32] done 64/168 running 8
+  [14:01:33] done 64/168 running 8
+  [14:01:34] done 65/168 running 7
+  [14:01:35] done 65/168 running 8
+  [14:01:36] done 65/168 running 8
+  [14:01:37] done 65/168 running 8
+  [14:01:38] done 65/168 running 8
+  [14:01:39] done 65/168 running 8
+  [14:01:40] done 65/168 running 8
+  [14:01:41] done 65/168 running 8
+[14:01:41] WARNING  Found non-percolating regions, were filled to    _dns.py:73
+                    percolate                                                  
+  [14:01:42] done 65/168 running 8
+  [14:01:43] done 65/168 running 8
+  [14:01:44] done 65/168 running 8
+  [14:01:45] done 65/168 running 8
+  [14:01:46] done 65/168 running 8
+  [14:01:47] done 65/168 running 8
+  [14:01:48] done 65/168 running 8
+  [14:01:49] done 65/168 running 8
+  [14:01:50] done 65/168 running 8
+  [14:01:51] done 65/168 running 8
+  [14:01:52] done 65/168 running 8
+  [14:01:53] done 65/168 running 8
+  [14:01:54] done 65/168 running 8
+  [14:01:55] done 65/168 running 8
+  [14:01:56] done 65/168 running 8
+  [14:01:57] done 65/168 running 8
+  [14:01:58] done 65/168 running 8
+  [14:01:59] done 65/168 running 8
+  [14:02:00] done 65/168 running 8
+  [14:02:01] done 65/168 running 8
+  [14:02:02] done 65/168 running 8
+  [14:02:03] done 65/168 running 8
+  [14:02:04] done 65/168 running 8
+  [14:02:05] done 65/168 running 8
+  [14:02:06] done 65/168 running 8
+  [14:02:07] done 65/168 running 8
+  [14:02:08] done 65/168 running 8
+  [14:02:09] done 65/168 running 8
+  [14:02:10] done 65/168 running 8
+  [14:02:11] done 65/168 running 8
+  [14:02:12] done 65/168 running 8
+  [14:02:13] done 66/168 running 7
+  [14:02:14] done 66/168 running 8
+  [14:02:15] done 66/168 running 8
+  [14:02:16] done 66/168 running 8
+  [14:02:17] done 66/168 running 8
+  [14:02:18] done 66/168 running 8
+  [14:02:19] done 66/168 running 8
+  [14:02:20] done 66/168 running 8
+[14:02:20] WARNING  Found non-percolating regions, were filled to    _dns.py:73
+                    percolate                                                  
+  [14:02:21] done 66/168 running 8
+  [14:02:22] done 66/168 running 8
+  [14:02:23] done 66/168 running 8
+  [14:02:24] done 66/168 running 8
+  [14:02:25] done 66/168 running 8
+  [14:02:26] done 66/168 running 8
+  [14:02:27] done 66/168 running 8
+  [14:02:28] done 66/168 running 8
+  [14:02:29] done 66/168 running 8
+  [14:02:30] done 66/168 running 8
+  [14:02:31] done 66/168 running 8
+  [14:02:32] done 66/168 running 8
+  [14:02:33] done 66/168 running 8
+  [14:02:34] done 67/168 running 7
+  [14:02:35] done 67/168 running 8
+  [14:02:36] done 67/168 running 8
+  [14:02:37] done 67/168 running 8
+  [14:02:38] done 67/168 running 8
+  [14:02:39] done 67/168 running 8
+  [14:02:40] done 67/168 running 8
+  [14:02:41] done 67/168 running 8
+[14:02:42] WARNING  Found non-percolating regions, were filled to    _dns.py:73
+                    percolate                                                  
+  [14:02:42] done 67/168 running 8
+  [14:02:43] done 67/168 running 8
+  [14:02:44] done 67/168 running 8
+  [14:02:45] done 67/168 running 8
+  [14:02:47] done 68/168 running 7
+  [14:02:48] done 69/168 running 7
+  [14:02:49] done 69/168 running 8
+  [14:02:50] done 69/168 running 8
+  [14:02:51] done 69/168 running 8
+  [14:02:52] done 69/168 running 8
+  [14:02:53] done 69/168 running 8
+  [14:02:54] done 69/168 running 8
+[14:02:54] WARNING  Found non-percolating regions, were filled to    _dns.py:73
+                    percolate                                                  
+  [14:02:55] done 69/168 running 8
+[14:02:55] WARNING  Found non-percolating regions, were filled to    _dns.py:73
+                    percolate                                                  
+  [14:02:56] done 69/168 running 8
+  [14:02:57] done 69/168 running 8
+  [14:02:58] done 69/168 running 8
+  [14:02:59] done 69/168 running 8
+  [14:03:00] done 69/168 running 8
+  [14:03:01] done 69/168 running 8
+  [14:03:02] done 69/168 running 8
+  [14:03:03] done 69/168 running 8
+  [14:03:04] done 69/168 running 8
+  [14:03:05] done 69/168 running 8
+  [14:03:06] done 69/168 running 8
+  [14:03:07] done 69/168 running 8
+  [14:03:08] done 69/168 running 8
+  [14:03:09] done 69/168 running 8
+  [14:03:10] done 70/168 running 7
+  [14:03:11] done 70/168 running 8
+  [14:03:12] done 70/168 running 8
+  [14:03:13] done 70/168 running 8
+  [14:03:14] done 70/168 running 8
+  [14:03:15] done 70/168 running 8
+  [14:03:16] done 70/168 running 8
+  [14:03:17] done 70/168 running 8
+[14:03:18] WARNING  Found non-percolating regions, were filled to    _dns.py:73
+                    percolate                                                  
+  [14:03:18] done 70/168 running 8
+  [14:03:19] done 71/168 running 7
+  [14:03:20] done 71/168 running 8
+  [14:03:22] done 72/168 running 7
+  [14:03:23] done 73/168 running 7
+  [14:03:24] done 73/168 running 8
+  [14:03:25] done 73/168 running 8
+  [14:03:26] done 73/168 running 8
+  [14:03:27] done 73/168 running 8
+[14:03:27] WARNING  Found non-percolating regions, were filled to    _dns.py:73
+                    percolate                                                  
+  [14:03:28] done 73/168 running 8
+  [14:03:29] done 73/168 running 8
+[14:03:29] WARNING  Found non-percolating regions, were filled to    _dns.py:73
+                    percolate                                                  
+  [14:03:30] done 73/168 running 8
+[14:03:30] WARNING  Found non-percolating regions, were filled to    _dns.py:73
+                    percolate                                                  
+  [14:03:31] done 73/168 running 8
+  [14:03:32] done 73/168 running 8
+  [14:03:33] done 73/168 running 8
+  [14:03:34] done 73/168 running 8
+  [14:03:35] done 73/168 running 8
+  [14:03:36] done 73/168 running 8
+  [14:03:37] done 73/168 running 8
+  [14:03:38] done 73/168 running 8
+  [14:03:39] done 73/168 running 8
+  [14:03:40] done 73/168 running 8
+  [14:03:41] done 73/168 running 8
+  [14:03:42] done 73/168 running 8
+  [14:03:43] done 74/168 running 7
+  [14:03:44] done 74/168 running 8
+  [14:03:45] done 74/168 running 8
+  [14:03:46] done 74/168 running 8
+  [14:03:47] done 74/168 running 8
+  [14:03:48] done 74/168 running 8
+  [14:03:49] done 74/168 running 8
+  [14:03:50] done 74/168 running 8
+[14:03:50] WARNING  Found non-percolating regions, were filled to    _dns.py:73
+                    percolate                                                  
+  [14:03:51] done 74/168 running 8
+  [14:03:52] done 74/168 running 8
+  [14:03:53] done 74/168 running 8
+  [14:03:54] done 74/168 running 8
+  [14:03:55] done 74/168 running 8
+  [14:03:56] done 74/168 running 8
+  [14:03:57] done 74/168 running 8
+  [14:03:58] done 74/168 running 8
+  [14:03:59] done 74/168 running 8
+  [14:04:00] done 75/168 running 7
+  [14:04:01] done 75/168 running 8
+  [14:04:02] done 75/168 running 8
+  [14:04:03] done 75/168 running 8
+  [14:04:04] done 75/168 running 8
+  [14:04:05] done 75/168 running 8
+  [14:04:06] done 75/168 running 8
+  [14:04:07] done 75/168 running 8
+[14:04:07] WARNING  Found non-percolating regions, were filled to    _dns.py:73
+                    percolate                                                  
+  [14:04:08] done 75/168 running 8
+  [14:04:09] done 75/168 running 8
+  [14:04:10] done 75/168 running 8
+  [14:04:11] done 76/168 running 7
+  [14:04:12] done 76/168 running 8
+  [14:04:13] done 76/168 running 8
+  [14:04:14] done 76/168 running 8
+  [14:04:15] done 76/168 running 8
+  [14:04:16] done 76/168 running 8
+  [14:04:17] done 76/168 running 8
+  [14:04:18] done 76/168 running 8
+[14:04:19] WARNING  Found non-percolating regions, were filled to    _dns.py:73
+                    percolate                                                  
+  [14:04:19] done 76/168 running 8
+  [14:04:20] done 76/168 running 8
+  [14:04:21] done 76/168 running 8
+  [14:04:22] done 76/168 running 8
+  [14:04:23] done 76/168 running 8
+  [14:04:24] done 76/168 running 8
+  [14:04:25] done 76/168 running 8
+  [14:04:26] done 76/168 running 8
+  [14:04:27] done 76/168 running 8
+  [14:04:28] done 76/168 running 8
+  [14:04:29] done 76/168 running 8
+  [14:04:30] done 76/168 running 8
+  [14:04:31] done 76/168 running 8
+  [14:04:32] done 76/168 running 8
+  [14:04:33] done 77/168 running 7
+  [14:04:34] done 78/168 running 7
+  [14:04:35] done 78/168 running 8
+  [14:04:36] done 78/168 running 8
+  [14:04:37] done 78/168 running 8
+  [14:04:38] done 79/168 running 7
+  [14:04:39] done 79/168 running 8
+  [14:04:40] done 79/168 running 8
+[14:04:41] WARNING  Found non-percolating regions, were filled to    _dns.py:73
+                    percolate                                                  
+  [14:04:41] done 79/168 running 8
+[14:04:42] WARNING  Found non-percolating regions, were filled to    _dns.py:73
+                    percolate                                                  
+  [14:04:42] done 79/168 running 8
+  [14:04:43] done 79/168 running 8
+  [14:04:44] done 79/168 running 8
+  [14:04:45] done 79/168 running 8
+[14:04:46] WARNING  Found non-percolating regions, were filled to    _dns.py:73
+                    percolate                                                  
+  [14:04:46] done 79/168 running 8
+  [14:04:47] done 79/168 running 8
+  [14:04:48] done 80/168 running 7
+  [14:04:49] done 80/168 running 8
+  [14:04:50] done 80/168 running 8
+  [14:04:51] done 80/168 running 8
+  [14:04:52] done 80/168 running 8
+  [14:04:53] done 80/168 running 8
+  [14:04:55] done 81/168 running 7
+  [14:04:56] done 82/168 running 7
+[14:04:56] WARNING  Found non-percolating regions, were filled to    _dns.py:73
+                    percolate                                                  
+  [14:04:57] done 82/168 running 8
+  [14:04:58] done 82/168 running 8
+  [14:04:59] done 82/168 running 8
+  [14:05:00] done 82/168 running 8
+  [14:05:01] done 82/168 running 8
+  [14:05:02] done 82/168 running 8
+[14:05:02] WARNING  Found non-percolating regions, were filled to    _dns.py:73
+                    percolate                                                  
+  [14:05:03] done 82/168 running 8
+[14:05:03] WARNING  Found non-percolating regions, were filled to    _dns.py:73
+                    percolate                                                  
+  [14:05:04] done 82/168 running 8
+  [14:05:05] done 82/168 running 8
+  [14:05:06] done 82/168 running 8
+  [14:05:07] done 82/168 running 8
+  [14:05:08] done 82/168 running 8
+  [14:05:09] done 82/168 running 8
+  [14:05:10] done 82/168 running 8
+  [14:05:11] done 82/168 running 8
+  [14:05:12] done 82/168 running 8
+  [14:05:13] done 82/168 running 8
+  [14:05:14] done 82/168 running 8
+  [14:05:15] done 82/168 running 8
+  [14:05:16] done 82/168 running 8
+  [14:05:17] done 82/168 running 8
+  [14:05:18] done 82/168 running 8
+  [14:05:19] done 82/168 running 8
+  [14:05:20] done 82/168 running 8
+  [14:05:21] done 82/168 running 8
+  [14:05:22] done 82/168 running 8
+  [14:05:23] done 82/168 running 8
+  [14:05:24] done 82/168 running 8
+  [14:05:25] done 82/168 running 8
+  [14:05:26] done 82/168 running 8
+  [14:05:27] done 82/168 running 8
+  [14:05:28] done 82/168 running 8
+  [14:05:29] done 82/168 running 8
+  [14:05:30] done 82/168 running 8
+  [14:05:31] done 82/168 running 8
+  [14:05:32] done 82/168 running 8
+  [14:05:33] done 82/168 running 8
+  [14:05:34] done 82/168 running 8
+  [14:05:35] done 82/168 running 8
+  [14:05:36] done 82/168 running 8
+  [14:05:37] done 82/168 running 8
+  [14:05:38] done 82/168 running 8
+  [14:05:39] done 82/168 running 8
+  [14:05:40] done 82/168 running 8
+  [14:05:41] done 82/168 running 8
+  [14:05:42] done 82/168 running 8
+  [14:05:43] done 82/168 running 8
+  [14:05:44] done 82/168 running 8
+  [14:05:45] done 83/168 running 7
+  [14:05:46] done 83/168 running 8
+  [14:05:47] done 83/168 running 8
+  [14:05:48] done 83/168 running 8
+  [14:05:50] done 84/168 running 7
+  [14:05:51] done 84/168 running 8
+  [14:05:52] done 84/168 running 8
+  [14:05:53] done 84/168 running 8
+[14:05:53] WARNING  Found non-percolating regions, were filled to    _dns.py:73
+                    percolate                                                  
+  [14:05:54] done 84/168 running 8
+  [14:05:55] done 84/168 running 8
+  [14:05:56] done 84/168 running 8
+[14:05:57] WARNING  Found non-percolating regions, were filled to    _dns.py:73
+                    percolate                                                  
+  [14:05:57] done 85/168 running 7
+  [14:05:58] done 85/168 running 8
+  [14:05:59] done 85/168 running 8
+[14:06:00] ERROR    Inlet/outlet rates don't match: 5.7258e+00 vs.  _dns.py:108
+                    -5.7239e+00                                                
+  [14:06:00] done 85/168 running 8
+  [14:06:02] done 86/168 running 7
+  [14:06:03] done 86/168 running 8
+  [14:06:04] done 86/168 running 8
+  [14:06:05] done 86/168 running 8
+[14:06:05] WARNING  Found non-percolating regions, were filled to    _dns.py:73
+                    percolate                                                  
+  [14:06:06] done 86/168 running 8
+  [14:06:07] done 86/168 running 8
+  [14:06:08] done 87/168 running 7
+  [14:06:09] done 87/168 running 8
+[14:06:09] WARNING  Found non-percolating regions, were filled to    _dns.py:73
+                    percolate                                                  
+  [14:06:10] done 87/168 running 8
+  [14:06:11] done 87/168 running 8
+  [14:06:12] done 87/168 running 8
+  [14:06:13] done 87/168 running 8
+  [14:06:14] done 87/168 running 8
+  [14:06:15] done 87/168 running 8
+[14:06:15] WARNING  Found non-percolating regions, were filled to    _dns.py:73
+                    percolate                                                  
+  [14:06:16] done 88/168 running 7
+  [14:06:17] done 88/168 running 8
+  [14:06:18] done 88/168 running 8
+  [14:06:19] done 88/168 running 8
+  [14:06:20] done 88/168 running 8
+  [14:06:21] done 88/168 running 8
+  [14:06:22] done 88/168 running 8
+  [14:06:23] done 88/168 running 8
+[14:06:24] WARNING  Found non-percolating regions, were filled to    _dns.py:73
+                    percolate                                                  
+  [14:06:24] done 88/168 running 8
+  [14:06:25] done 88/168 running 8
+  [14:06:26] done 88/168 running 8
+  [14:06:27] done 88/168 running 8
+  [14:06:28] done 88/168 running 8
+  [14:06:29] done 88/168 running 8
+  [14:06:30] done 88/168 running 8
+  [14:06:31] done 88/168 running 8
+  [14:06:32] done 88/168 running 8
+  [14:06:33] done 88/168 running 8
+  [14:06:34] done 88/168 running 8
+  [14:06:35] done 89/168 running 7
+  [14:06:36] done 89/168 running 8
+  [14:06:37] done 89/168 running 8
+  [14:06:38] done 89/168 running 8
+  [14:06:39] done 89/168 running 8
+  [14:06:40] done 89/168 running 8
+  [14:06:41] done 89/168 running 8
+  [14:06:42] done 89/168 running 8
+[14:06:43] WARNING  Found non-percolating regions, were filled to    _dns.py:73
+                    percolate                                                  
+  [14:06:43] done 90/168 running 7
+  [14:06:44] done 90/168 running 8
+  [14:06:45] done 90/168 running 8
+  [14:06:46] done 90/168 running 8
+  [14:06:47] done 90/168 running 8
+  [14:06:48] done 90/168 running 8
+  [14:06:49] done 90/168 running 8
+  [14:06:50] done 90/168 running 8
+[14:06:51] WARNING  Found non-percolating regions, were filled to    _dns.py:73
+                    percolate                                                  
+  [14:06:51] done 90/168 running 8
+  [14:06:52] done 90/168 running 8
+  [14:06:53] done 90/168 running 8
+  [14:06:54] done 90/168 running 8
+  [14:06:55] done 90/168 running 8
+  [14:06:56] done 90/168 running 8
+  [14:06:57] done 90/168 running 8
+  [14:06:58] done 90/168 running 8
+  [14:06:59] done 90/168 running 8
+  [14:07:00] done 90/168 running 8
+  [14:07:01] done 90/168 running 8
+  [14:07:02] done 90/168 running 8
+  [14:07:03] done 90/168 running 8
+  [14:07:04] done 90/168 running 8
+  [14:07:05] done 90/168 running 8
+  [14:07:06] done 90/168 running 8
+  [14:07:07] done 90/168 running 8
+  [14:07:08] done 91/168 running 7
+  [14:07:09] done 91/168 running 8
+  [14:07:10] done 91/168 running 8
+  [14:07:11] done 91/168 running 8
+  [14:07:12] done 91/168 running 8
+  [14:07:13] done 91/168 running 8
+  [14:07:14] done 91/168 running 8
+  [14:07:15] done 91/168 running 8
+[14:07:16] WARNING  Found non-percolating regions, were filled to    _dns.py:73
+                    percolate                                                  
+  [14:07:16] done 91/168 running 8
+  [14:07:17] done 91/168 running 8
+  [14:07:18] done 91/168 running 8
+  [14:07:19] done 91/168 running 8
+  [14:07:21] done 92/168 running 7
+  [14:07:22] done 92/168 running 8
+  [14:07:23] done 92/168 running 8
+  [14:07:24] done 92/168 running 8
+  [14:07:25] done 92/168 running 8
+  [14:07:26] done 92/168 running 8
+  [14:07:27] done 92/168 running 8
+  [14:07:28] done 92/168 running 8
+[14:07:28] WARNING  Found non-percolating regions, were filled to    _dns.py:73
+                    percolate                                                  
+  [14:07:29] done 93/168 running 7
+  [14:07:30] done 93/168 running 8
+  [14:07:31] done 93/168 running 8
+  [14:07:32] done 93/168 running 8
+  [14:07:33] done 94/168 running 7
+  [14:07:34] done 94/168 running 8
+  [14:07:35] done 94/168 running 8
+[14:07:36] WARNING  Found non-percolating regions, were filled to    _dns.py:73
+                    percolate                                                  
+  [14:07:36] done 94/168 running 8
+  [14:07:37] done 94/168 running 8
+  [14:07:38] done 95/168 running 7
+  [14:07:39] done 95/168 running 8
+  [14:07:40] done 95/168 running 8
+[14:07:42] WARNING  Found non-percolating regions, were filled to    _dns.py:73
+                    percolate                                                  
+  [14:07:43] done 95/168 running 8
+  [14:07:44] done 95/168 running 8
+  [14:07:45] done 95/168 running 8
+[14:07:46] WARNING  Found non-percolating regions, were filled to    _dns.py:73
+                    percolate                                                  
+  [14:07:49] done 95/168 running 8
+  [14:07:50] done 95/168 running 8
+  [14:07:52] done 96/168 running 7
+  [14:07:53] done 96/168 running 8
+  [14:07:54] done 96/168 running 8
+  [14:07:55] done 96/168 running 8
+  [14:07:56] done 96/168 running 8
+  [14:07:57] done 96/168 running 8
+  [14:07:58] done 96/168 running 8
+  [14:07:59] done 96/168 running 8
+[14:07:59] WARNING  Found non-percolating regions, were filled to    _dns.py:73
+                    percolate                                                  
+  [14:08:02] done 96/168 running 8
+  [14:08:03] done 96/168 running 8
+  [14:08:04] done 96/168 running 8
+  [14:08:07] done 96/168 running 8
+  [14:08:08] done 96/168 running 8
+  [14:08:09] done 96/168 running 8
+  [14:08:10] done 96/168 running 8
+  [14:08:11] done 96/168 running 8
+  [14:08:12] done 97/168 running 7
+  [14:08:13] done 97/168 running 8
+  [14:08:14] done 97/168 running 8
+  [14:08:15] done 97/168 running 8
+  [14:08:16] done 97/168 running 8
+  [14:08:17] done 98/168 running 7
+  [14:08:18] done 98/168 running 8
+  [14:08:19] done 98/168 running 8
+[14:08:20] WARNING  Found non-percolating regions, were filled to    _dns.py:73
+                    percolate                                                  
+  [14:08:20] done 98/168 running 8
+  [14:08:21] done 98/168 running 8
+  [14:08:22] done 98/168 running 8
+[14:08:27] ERROR    Inlet/outlet rates don't match: 1.0731e+00 vs.  _dns.py:108
+                    -1.0727e+00                                                
+[14:08:30] WARNING  Found non-percolating regions, were filled to    _dns.py:73
+                    percolate                                                  
+  [14:08:30] done 99/168 running 7
+  [14:08:31] done 99/168 running 8
+  [14:08:33] done 100/168 running 7
+  [14:08:34] done 100/168 running 8
+  [14:08:35] done 100/168 running 8
+  [14:08:36] done 100/168 running 8
+  [14:08:37] done 100/168 running 8
+[14:08:38] WARNING  Found non-percolating regions, were filled to    _dns.py:73
+                    percolate                                                  
+  [14:08:38] done 100/168 running 8
+  [14:08:39] done 100/168 running 8
+  [14:08:40] done 101/168 running 7
+[14:08:41] WARNING  Found non-percolating regions, were filled to    _dns.py:73
+                    percolate                                                  
+  [14:08:41] done 101/168 running 8
+  [14:08:43] done 102/168 running 7
+  [14:08:44] done 102/168 running 8
+  [14:08:45] done 102/168 running 8
+  [14:08:46] done 102/168 running 8
+  [14:08:47] done 102/168 running 8
+[14:08:48] WARNING  Found non-percolating regions, were filled to    _dns.py:73
+                    percolate                                                  
+  [14:08:48] done 102/168 running 8
+  [14:08:49] done 102/168 running 8
+  [14:08:50] done 102/168 running 8
+[14:08:50] WARNING  Found non-percolating regions, were filled to    _dns.py:73
+                    percolate                                                  
+  [14:08:51] done 102/168 running 8
+  [14:08:52] done 102/168 running 8
+  [14:08:53] done 102/168 running 8
+  [14:08:54] done 102/168 running 8
+  [14:08:55] done 102/168 running 8
+  [14:08:56] done 102/168 running 8
+  [14:08:57] done 103/168 running 7
+  [14:08:58] done 103/168 running 8
+  [14:08:59] done 103/168 running 8
+  [14:09:00] done 103/168 running 8
+  [14:09:01] done 103/168 running 8
+  [14:09:02] done 103/168 running 8
+  [14:09:04] done 104/168 running 7
+  [14:09:05] done 104/168 running 8
+[14:09:05] WARNING  Found non-percolating regions, were filled to    _dns.py:73
+                    percolate                                                  
+  [14:09:06] done 104/168 running 8
+  [14:09:07] done 104/168 running 8
+  [14:09:08] done 104/168 running 8
+  [14:09:09] done 104/168 running 8
+  [14:09:10] done 104/168 running 8
+  [14:09:11] done 104/168 running 8
+[14:09:11] WARNING  Found non-percolating regions, were filled to    _dns.py:73
+                    percolate                                                  
+  [14:09:12] done 104/168 running 8
+  [14:09:13] done 104/168 running 8
+  [14:09:14] done 104/168 running 8
+  [14:09:15] done 104/168 running 8
+  [14:09:16] done 104/168 running 8
+  [14:09:17] done 105/168 running 7
+  [14:09:18] done 105/168 running 8
+  [14:09:19] done 105/168 running 8
+  [14:09:20] done 105/168 running 8
+  [14:09:21] done 105/168 running 8
+  [14:09:22] done 105/168 running 8
+  [14:09:23] done 105/168 running 8
+  [14:09:24] done 105/168 running 8
+[14:09:24] WARNING  Found non-percolating regions, were filled to    _dns.py:73
+                    percolate                                                  
+  [14:09:25] done 105/168 running 8
+[14:09:26] ERROR    Inlet/outlet rates don't match: 1.3351e+01 vs.  _dns.py:108
+                    -1.3349e+01                                                
+  [14:09:26] done 105/168 running 8
+  [14:09:27] done 106/168 running 7
+  [14:09:28] done 107/168 running 7
+  [14:09:29] done 107/168 running 8
+  [14:09:30] done 107/168 running 8
+  [14:09:31] done 107/168 running 8
+  [14:09:32] done 107/168 running 8
+  [14:09:33] done 107/168 running 8
+  [14:09:34] done 107/168 running 8
+[14:09:35] WARNING  Found non-percolating regions, were filled to    _dns.py:73
+                    percolate                                                  
+  [14:09:35] done 107/168 running 8
+[14:09:36] WARNING  Found non-percolating regions, were filled to    _dns.py:73
+                    percolate                                                  
+  [14:09:36] done 107/168 running 8
+  [14:09:37] done 107/168 running 8
+  [14:09:38] done 107/168 running 8
+  [14:09:39] done 107/168 running 8
+  [14:09:40] done 107/168 running 8
+  [14:09:41] done 107/168 running 8
+  [14:09:42] done 107/168 running 8
+  [14:09:43] done 107/168 running 8
+  [14:09:44] done 107/168 running 8
+  [14:09:45] done 107/168 running 8
+  [14:09:46] done 107/168 running 8
+  [14:09:47] done 107/168 running 8
+  [14:09:48] done 107/168 running 8
+  [14:09:49] done 107/168 running 8
+  [14:09:51] done 108/168 running 7
+  [14:09:52] done 108/168 running 8
+  [14:09:53] done 108/168 running 8
+  [14:09:54] done 108/168 running 8
+  [14:09:55] done 109/168 running 7
+  [14:09:56] done 109/168 running 8
+  [14:09:57] done 109/168 running 8
+  [14:09:58] done 109/168 running 8
+[14:09:59] WARNING  Found non-percolating regions, were filled to    _dns.py:73
+                    percolate                                                  
+  [14:09:59] done 109/168 running 8
+  [14:10:00] done 109/168 running 8
+  [14:10:01] done 109/168 running 8
+  [14:10:02] done 109/168 running 8
+[14:10:03] WARNING  Found non-percolating regions, were filled to    _dns.py:73
+                    percolate                                                  
+  [14:10:03] done 110/168 running 7
+  [14:10:04] done 110/168 running 8
+  [14:10:05] done 110/168 running 8
+  [14:10:06] done 111/168 running 7
+  [14:10:07] done 111/168 running 8
+  [14:10:08] done 111/168 running 8
+  [14:10:09] done 111/168 running 8
+  [14:10:10] done 111/168 running 8
+[14:10:10] WARNING  Found non-percolating regions, were filled to    _dns.py:73
+                    percolate                                                  
+  [14:10:11] done 111/168 running 8
+  [14:10:12] done 111/168 running 8
+  [14:10:13] done 111/168 running 8
+[14:10:14] WARNING  Found non-percolating regions, were filled to    _dns.py:73
+                    percolate                                                  
+  [14:10:14] done 111/168 running 8
+  [14:10:15] done 111/168 running 8
+  [14:10:17] done 112/168 running 7
+  [14:10:18] done 112/168 running 8
+  [14:10:19] done 112/168 running 8
+  [14:10:20] done 112/168 running 8
+  [14:10:21] done 113/168 running 7
+  [14:10:22] done 113/168 running 8
+  [14:10:23] done 113/168 running 8
+[14:10:24] WARNING  Found non-percolating regions, were filled to    _dns.py:73
+                    percolate                                                  
+  [14:10:24] done 113/168 running 8
+  [14:10:25] done 113/168 running 8
+  [14:10:26] done 113/168 running 8
+  [14:10:27] done 113/168 running 8
+  [14:10:28] done 113/168 running 8
+[14:10:29] ERROR    Inlet/outlet rates don't match: 1.4368e+01 vs.  _dns.py:108
+                    -1.4365e+01                                                
+[14:10:29] WARNING  Found non-percolating regions, were filled to    _dns.py:73
+                    percolate                                                  
+  [14:10:30] done 114/168 running 7
+  [14:10:31] done 114/168 running 8
+  [14:10:32] done 114/168 running 8
+  [14:10:33] done 114/168 running 8
+  [14:10:34] done 114/168 running 8
+[14:10:34] ERROR    Inlet/outlet rates don't match: 1.2744e+01 vs.  _dns.py:108
+                    -1.2742e+01                                                
+  [14:10:36] done 115/168 running 7
+  [14:10:37] done 115/168 running 8
+[14:10:38] WARNING  Found non-percolating regions, were filled to    _dns.py:73
+                    percolate                                                  
+  [14:10:38] done 115/168 running 8
+  [14:10:39] done 115/168 running 8
+  [14:10:40] done 115/168 running 8
+  [14:10:41] done 115/168 running 8
+  [14:10:42] done 115/168 running 8
+  [14:10:43] done 115/168 running 8
+[14:10:44] WARNING  Found non-percolating regions, were filled to    _dns.py:73
+                    percolate                                                  
+  [14:10:44] done 115/168 running 8
+  [14:10:45] done 115/168 running 8
+  [14:10:46] done 115/168 running 8
+  [14:10:47] done 115/168 running 8
+  [14:10:48] done 115/168 running 8
+  [14:10:49] done 115/168 running 8
+  [14:10:50] done 115/168 running 8
+  [14:10:51] done 115/168 running 8
+  [14:10:52] done 115/168 running 8
+  [14:10:53] done 116/168 running 7
+  [14:10:54] done 116/168 running 8
+  [14:10:55] done 116/168 running 8
+  [14:10:56] done 116/168 running 8
+  [14:10:57] done 116/168 running 8
+  [14:10:58] done 116/168 running 8
+  [14:10:59] done 116/168 running 8
+  [14:11:00] done 118/168 running 6
+[14:11:01] WARNING  Found non-percolating regions, were filled to    _dns.py:73
+                    percolate                                                  
+  [14:11:01] done 118/168 running 8
+  [14:11:02] done 118/168 running 8
+  [14:11:03] done 118/168 running 8
+  [14:11:04] done 119/168 running 7
+  [14:11:05] done 119/168 running 8
+  [14:11:06] done 119/168 running 8
+  [14:11:07] done 119/168 running 8
+[14:11:08] WARNING  Found non-percolating regions, were filled to    _dns.py:73
+                    percolate                                                  
+  [14:11:08] done 120/168 running 7
+[14:11:09] WARNING  Found non-percolating regions, were filled to    _dns.py:73
+                    percolate                                                  
+  [14:11:09] done 120/168 running 8
+  [14:11:10] done 120/168 running 8
+  [14:11:11] done 120/168 running 8
+[14:11:12] WARNING  Found non-percolating regions, were filled to    _dns.py:73
+                    percolate                                                  
+  [14:11:12] done 120/168 running 8
+  [14:11:13] done 120/168 running 8
+  [14:11:14] done 120/168 running 8
+  [14:11:15] done 120/168 running 8
+[14:11:16] WARNING  Found non-percolating regions, were filled to    _dns.py:73
+                    percolate                                                  
+  [14:11:16] done 120/168 running 8
+  [14:11:17] done 120/168 running 8
+  [14:11:18] done 120/168 running 8
+  [14:11:19] done 120/168 running 8
+  [14:11:20] done 120/168 running 8
+  [14:11:21] done 120/168 running 8
+  [14:11:22] done 120/168 running 8
+  [14:11:23] done 120/168 running 8
+  [14:11:24] done 120/168 running 8
+  [14:11:25] done 120/168 running 8
+  [14:11:26] done 120/168 running 8
+  [14:11:27] done 120/168 running 8
+  [14:11:29] done 120/168 running 8
+  [14:11:30] done 121/168 running 7
+  [14:11:31] done 121/168 running 8
+  [14:11:32] done 121/168 running 8
+  [14:11:33] done 121/168 running 8
+  [14:11:34] done 121/168 running 8
+  [14:11:35] done 121/168 running 8
+  [14:11:36] done 121/168 running 8
+  [14:11:37] done 122/168 running 7
+[14:11:38] WARNING  Found non-percolating regions, were filled to    _dns.py:73
+                    percolate                                                  
+  [14:11:38] done 122/168 running 8
+  [14:11:39] done 122/168 running 8
+  [14:11:40] done 122/168 running 8
+  [14:11:41] done 122/168 running 8
+[14:11:42] ERROR    Inlet/outlet rates don't match: 7.5542e+00 vs.  _dns.py:108
+                    -7.5532e+00                                                
+  [14:11:42] done 122/168 running 8
+  [14:11:44] done 123/168 running 7
+  [14:11:45] done 124/168 running 7
+[14:11:45] WARNING  Found non-percolating regions, were filled to    _dns.py:73
+                    percolate                                                  
+  [14:11:46] done 124/168 running 8
+  [14:11:47] done 124/168 running 8
+  [14:11:48] done 124/168 running 8
+  [14:11:49] done 124/168 running 8
+  [14:11:50] done 124/168 running 8
+  [14:11:51] done 124/168 running 8
+  [14:11:52] done 124/168 running 8
+[14:11:52] WARNING  Found non-percolating regions, were filled to    _dns.py:73
+                    percolate                                                  
+[14:11:52] WARNING  Found non-percolating regions, were filled to    _dns.py:73
+                    percolate                                                  
+  [14:11:53] done 124/168 running 8
+  [14:11:54] done 124/168 running 8
+  [14:11:55] done 124/168 running 8
+  [14:11:56] done 124/168 running 8
+  [14:11:57] done 124/168 running 8
+  [14:11:58] done 124/168 running 8
+  [14:11:59] done 124/168 running 8
+  [14:12:00] done 124/168 running 8
+  [14:12:01] done 124/168 running 8
+  [14:12:02] done 124/168 running 8
+  [14:12:03] done 124/168 running 8
+  [14:12:04] done 124/168 running 8
+  [14:12:05] done 125/168 running 7
+  [14:12:06] done 125/168 running 8
+  [14:12:07] done 125/168 running 8
+  [14:12:08] done 125/168 running 8
+  [14:12:09] done 125/168 running 8
+  [14:12:10] done 125/168 running 8
+  [14:12:11] done 125/168 running 8
+  [14:12:12] done 125/168 running 8
+[14:12:13] WARNING  Found non-percolating regions, were filled to    _dns.py:73
+                    percolate                                                  
+  [14:12:13] done 125/168 running 8
+  [14:12:14] done 125/168 running 8
+  [14:12:15] done 125/168 running 8
+  [14:12:16] done 125/168 running 8
+  [14:12:17] done 125/168 running 8
+  [14:12:18] done 126/168 running 7
+[14:12:19] ERROR    Inlet/outlet rates don't match: 2.4874e+01 vs.  _dns.py:108
+                    -2.4871e+01                                                
+  [14:12:19] done 126/168 running 8
+  [14:12:20] done 127/168 running 7
+  [14:12:21] done 127/168 running 8
+  [14:12:22] done 127/168 running 8
+  [14:12:23] done 127/168 running 8
+  [14:12:24] done 127/168 running 8
+  [14:12:25] done 127/168 running 8
+[14:12:26] WARNING  Found non-percolating regions, were filled to    _dns.py:73
+                    percolate                                                  
+  [14:12:27] done 128/168 running 7
+  [14:12:28] done 128/168 running 8
+[14:12:28] WARNING  Found non-percolating regions, were filled to    _dns.py:73
+                    percolate                                                  
+  [14:12:29] done 128/168 running 8
+  [14:12:30] done 128/168 running 8
+  [14:12:31] done 128/168 running 8
+  [14:12:32] done 128/168 running 8
+  [14:12:33] done 128/168 running 8
+  [14:12:34] done 128/168 running 8
+[14:12:34] WARNING  Found non-percolating regions, were filled to    _dns.py:73
+                    percolate                                                  
+  [14:12:35] done 128/168 running 8
+  [14:12:36] done 128/168 running 8
+  [14:12:37] done 128/168 running 8
+  [14:12:38] done 128/168 running 8
+  [14:12:39] done 128/168 running 8
+  [14:12:40] done 128/168 running 8
+  [14:12:41] done 128/168 running 8
+  [14:12:42] done 128/168 running 8
+  [14:12:43] done 128/168 running 8
+  [14:12:44] done 128/168 running 8
+[14:12:45] ERROR    Inlet/outlet rates don't match: 2.8958e+01 vs.  _dns.py:108
+                    -2.8955e+01                                                
+  [14:12:45] done 129/168 running 7
+  [14:12:46] done 130/168 running 7
+  [14:12:47] done 130/168 running 8
+  [14:12:49] done 131/168 running 7
+  [14:12:50] done 131/168 running 8
+  [14:12:51] done 132/168 running 7
+  [14:12:52] done 132/168 running 8
+[14:12:53] WARNING  Found non-percolating regions, were filled to    _dns.py:73
+                    percolate                                                  
+  [14:12:53] done 132/168 running 8
+[14:12:54] WARNING  Found non-percolating regions, were filled to    _dns.py:73
+                    percolate                                                  
+  [14:12:54] done 132/168 running 8
+  [14:12:55] done 132/168 running 8
+  [14:12:56] done 132/168 running 8
+[14:12:57] WARNING  Found non-percolating regions, were filled to    _dns.py:73
+                    percolate                                                  
+  [14:12:57] done 132/168 running 8
+  [14:12:58] done 132/168 running 8
+[14:12:59] WARNING  Found non-percolating regions, were filled to    _dns.py:73
+                    percolate                                                  
+  [14:12:59] done 132/168 running 8
+  [14:13:00] done 132/168 running 8
+  [14:13:01] done 132/168 running 8
+  [14:13:02] done 132/168 running 8
+  [14:13:03] done 132/168 running 8
+  [14:13:04] done 132/168 running 8
+  [14:13:05] done 132/168 running 8
+  [14:13:06] done 132/168 running 8
+  [14:13:07] done 132/168 running 8
+  [14:13:08] done 132/168 running 8
+  [14:13:10] done 133/168 running 7
+  [14:13:11] done 133/168 running 8
+  [14:13:12] done 133/168 running 8
+  [14:13:13] done 133/168 running 8
+  [14:13:14] done 133/168 running 8
+  [14:13:15] done 133/168 running 8
+  [14:13:16] done 133/168 running 8
+  [14:13:17] done 133/168 running 8
+[14:13:17] WARNING  Found non-percolating regions, were filled to    _dns.py:73
+                    percolate                                                  
+[14:13:18] ERROR    Inlet/outlet rates don't match: 1.4192e+01 vs.  _dns.py:108
+                    -1.4190e+01                                                
+  [14:13:18] done 133/168 running 8
+  [14:13:19] done 134/168 running 7
+  [14:13:20] done 134/168 running 8
+  [14:13:21] done 134/168 running 8
+  [14:13:22] done 134/168 running 8
+  [14:13:23] done 134/168 running 8
+  [14:13:24] done 134/168 running 8
+  [14:13:25] done 135/168 running 7
+  [14:13:26] done 135/168 running 8
+[14:13:27] WARNING  Found non-percolating regions, were filled to    _dns.py:73
+                    percolate                                                  
+  [14:13:27] done 135/168 running 8
+  [14:13:28] done 135/168 running 8
+  [14:13:29] done 135/168 running 8
+  [14:13:30] done 135/168 running 8
+  [14:13:32] done 136/168 running 7
+  [14:13:33] done 136/168 running 8
+[14:13:33] WARNING  Found non-percolating regions, were filled to    _dns.py:73
+                    percolate                                                  
+  [14:13:34] done 136/168 running 8
+  [14:13:35] done 136/168 running 8
+  [14:13:36] done 136/168 running 8
+  [14:13:37] done 136/168 running 8
+  [14:13:38] done 136/168 running 8
+  [14:13:39] done 136/168 running 8
+[14:13:40] WARNING  Found non-percolating regions, were filled to    _dns.py:73
+                    percolate                                                  
+  [14:13:40] done 136/168 running 8
+  [14:13:41] done 136/168 running 8
+  [14:13:42] done 136/168 running 8
+  [14:13:43] done 136/168 running 8
+  [14:13:44] done 136/168 running 8
+  [14:13:45] done 136/168 running 8
+  [14:13:46] done 136/168 running 8
+  [14:13:47] done 136/168 running 8
+  [14:13:48] done 136/168 running 8
+  [14:13:49] done 136/168 running 8
+  [14:13:50] done 136/168 running 8
+  [14:13:51] done 136/168 running 8
+  [14:13:52] done 136/168 running 8
+  [14:13:53] done 136/168 running 8
+  [14:13:54] done 136/168 running 8
+  [14:13:55] done 136/168 running 8
+  [14:13:56] done 136/168 running 8
+  [14:13:57] done 136/168 running 8
+  [14:13:58] done 139/168 running 5
+  [14:13:59] done 139/168 running 8
+  [14:14:00] done 139/168 running 8
+  [14:14:01] done 139/168 running 8
+  [14:14:02] done 139/168 running 8
+  [14:14:03] done 139/168 running 8
+  [14:14:04] done 139/168 running 8
+  [14:14:05] done 139/168 running 8
+  [14:14:06] done 139/168 running 8
+[14:14:07] WARNING  Found non-percolating regions, were filled to    _dns.py:73
+                    percolate                                                  
+[14:14:07] WARNING  Found non-percolating regions, were filled to    _dns.py:73
+                    percolate                                                  
+[14:14:07] WARNING  Found non-percolating regions, were filled to    _dns.py:73
+                    percolate                                                  
+  [14:14:07] done 139/168 running 8
+  [14:14:08] done 139/168 running 8
+  [14:14:09] done 139/168 running 8
+  [14:14:10] done 139/168 running 8
+  [14:14:11] done 139/168 running 8
+  [14:14:12] done 139/168 running 8
+  [14:14:13] done 139/168 running 8
+  [14:14:15] done 140/168 running 7
+  [14:14:16] done 140/168 running 8
+  [14:14:17] done 140/168 running 8
+  [14:14:18] done 140/168 running 8
+  [14:14:19] done 140/168 running 8
+  [14:14:20] done 140/168 running 8
+  [14:14:21] done 140/168 running 8
+  [14:14:22] done 140/168 running 8
+[14:14:23] WARNING  Found non-percolating regions, were filled to    _dns.py:73
+                    percolate                                                  
+  [14:14:23] done 140/168 running 8
+  [14:14:24] done 141/168 running 7
+  [14:14:25] done 141/168 running 8
+  [14:14:26] done 141/168 running 8
+  [14:14:28] done 142/168 running 7
+  [14:14:29] done 142/168 running 8
+  [14:14:30] done 142/168 running 8
+  [14:14:31] done 142/168 running 8
+  [14:14:32] done 142/168 running 8
+[14:14:32] WARNING  Found non-percolating regions, were filled to    _dns.py:73
+                    percolate                                                  
+  [14:14:33] done 142/168 running 8
+  [14:14:34] done 142/168 running 8
+  [14:14:35] done 143/168 running 7
+[14:14:36] WARNING  Found non-percolating regions, were filled to    _dns.py:73
+                    percolate                                                  
+  [14:14:36] done 143/168 running 8
+  [14:14:37] done 143/168 running 8
+  [14:14:39] done 144/168 running 7
+  [14:14:40] done 144/168 running 8
+  [14:14:41] done 144/168 running 8
+  [14:14:42] done 144/168 running 8
+  [14:14:43] done 144/168 running 8
+[14:14:43] WARNING  Found non-percolating regions, were filled to    _dns.py:73
+                    percolate                                                  
+  [14:14:44] done 144/168 running 8
+  [14:14:45] done 144/168 running 8
+  [14:14:46] done 144/168 running 8
+[14:14:46] WARNING  Found non-percolating regions, were filled to    _dns.py:73
+                    percolate                                                  
+  [14:14:47] done 144/168 running 8
+  [14:14:48] done 144/168 running 8
+  [14:14:49] done 144/168 running 8
+  [14:14:50] done 144/168 running 8
+  [14:14:51] done 144/168 running 8
+  [14:14:52] done 144/168 running 8
+  [14:14:53] done 144/168 running 8
+  [14:14:54] done 144/168 running 8
+  [14:14:55] done 144/168 running 8
+  [14:14:56] done 144/168 running 8
+  [14:14:57] done 144/168 running 8
+  [14:14:58] done 144/168 running 8
+  [14:14:59] done 144/168 running 8
+  [14:15:00] done 144/168 running 8
+  [14:15:01] done 144/168 running 8
+  [14:15:02] done 144/168 running 8
+  [14:15:03] done 144/168 running 8
+  [14:15:04] done 144/168 running 8
+  [14:15:05] done 144/168 running 8
+  [14:15:06] done 144/168 running 8
+  [14:15:07] done 144/168 running 8
+  [14:15:08] done 144/168 running 8
+  [14:15:09] done 144/168 running 8
+  [14:15:10] done 144/168 running 8
+  [14:15:11] done 144/168 running 8
+  [14:15:12] done 144/168 running 8
+  [14:15:13] done 145/168 running 7
+  [14:15:14] done 145/168 running 8
+  [14:15:15] done 145/168 running 8
+  [14:15:16] done 146/168 running 7
+  [14:15:18] done 147/168 running 7
+  [14:15:19] done 147/168 running 8
+  [14:15:20] done 147/168 running 8
+[14:15:21] WARNING  Found non-percolating regions, were filled to    _dns.py:73
+                    percolate                                                  
+  [14:15:21] done 147/168 running 8
+  [14:15:22] done 147/168 running 8
+  [14:15:23] done 147/168 running 8
+  [14:15:24] done 147/168 running 8
+[14:15:24] WARNING  Found non-percolating regions, were filled to    _dns.py:73
+                    percolate                                                  
+  [14:15:25] done 147/168 running 8
+[14:15:25] WARNING  Found non-percolating regions, were filled to    _dns.py:73
+                    percolate                                                  
+  [14:15:26] done 147/168 running 8
+  [14:15:27] done 147/168 running 8
+  [14:15:28] done 147/168 running 8
+  [14:15:29] done 147/168 running 8
+  [14:15:30] done 147/168 running 8
+  [14:15:31] done 147/168 running 8
+  [14:15:32] done 147/168 running 8
+  [14:15:33] done 147/168 running 8
+  [14:15:34] done 147/168 running 8
+  [14:15:35] done 147/168 running 8
+  [14:15:36] done 147/168 running 8
+  [14:15:37] done 148/168 running 7
+  [14:15:38] done 148/168 running 8
+  [14:15:39] done 148/168 running 8
+  [14:15:40] done 148/168 running 8
+  [14:15:41] done 148/168 running 8
+  [14:15:42] done 148/168 running 8
+  [14:15:43] done 148/168 running 8
+  [14:15:44] done 148/168 running 8
+[14:15:45] WARNING  Found non-percolating regions, were filled to    _dns.py:73
+                    percolate                                                  
+  [14:15:45] done 148/168 running 8
+  [14:15:46] done 148/168 running 8
+  [14:15:47] done 148/168 running 8
+  [14:15:48] done 148/168 running 8
+  [14:15:49] done 148/168 running 8
+  [14:15:50] done 148/168 running 8
+  [14:15:52] done 150/168 running 6
+  [14:15:53] done 150/168 running 8
+  [14:15:54] done 150/168 running 8
+  [14:15:55] done 150/168 running 8
+  [14:15:56] done 152/168 running 6
+  [14:15:57] done 152/168 running 8
+  [14:15:58] done 152/168 running 8
+  [14:15:59] done 152/168 running 8
+[14:16:00] WARNING  Found non-percolating regions, were filled to    _dns.py:73
+                    percolate                                                  
+[14:16:00] WARNING  Found non-percolating regions, were filled to    _dns.py:73
+                    percolate                                                  
+  [14:16:00] done 152/168 running 8
+  [14:16:01] done 152/168 running 8
+  [14:16:02] done 152/168 running 8
+  [14:16:03] done 152/168 running 8
+[14:16:04] WARNING  Found non-percolating regions, were filled to    _dns.py:73
+                    percolate                                                  
+[14:16:04] WARNING  Found non-percolating regions, were filled to    _dns.py:73
+                    percolate                                                  
+  [14:16:04] done 152/168 running 8
+  [14:16:05] done 152/168 running 8
+  [14:16:06] done 152/168 running 8
+  [14:16:07] done 152/168 running 8
+  [14:16:08] done 152/168 running 8
+  [14:16:09] done 152/168 running 8
+  [14:16:10] done 152/168 running 8
+  [14:16:11] done 152/168 running 8
+  [14:16:12] done 152/168 running 8
+  [14:16:13] done 152/168 running 8
+  [14:16:14] done 152/168 running 8
+  [14:16:15] done 152/168 running 8
+  [14:16:16] done 152/168 running 8
+  [14:16:17] done 152/168 running 8
+  [14:16:18] done 152/168 running 8
+  [14:16:19] done 152/168 running 8
+  [14:16:20] done 152/168 running 8
+  [14:16:21] done 152/168 running 8
+  [14:16:22] done 152/168 running 8
+  [14:16:23] done 152/168 running 8
+  [14:16:24] done 152/168 running 8
+  [14:16:25] done 152/168 running 8
+  [14:16:26] done 152/168 running 8
+  [14:16:28] done 153/168 running 7
+  [14:16:29] done 154/168 running 7
+  [14:16:30] done 154/168 running 8
+  [14:16:32] done 155/168 running 7
+  [14:16:33] done 155/168 running 8
+  [14:16:34] done 155/168 running 8
+  [14:16:35] done 155/168 running 8
+[14:16:36] WARNING  Found non-percolating regions, were filled to    _dns.py:73
+                    percolate                                                  
+  [14:16:36] done 155/168 running 8
+  [14:16:37] done 155/168 running 8
+[14:16:37] WARNING  Found non-percolating regions, were filled to    _dns.py:73
+                    percolate                                                  
+  [14:16:38] done 155/168 running 8
+  [14:16:39] done 155/168 running 8
+[14:16:39] WARNING  Found non-percolating regions, were filled to    _dns.py:73
+                    percolate                                                  
+  [14:16:40] done 155/168 running 8
+  [14:16:41] done 155/168 running 8
+  [14:16:42] done 155/168 running 8
+  [14:16:43] done 155/168 running 8
+  [14:16:44] done 155/168 running 8
+  [14:16:45] done 155/168 running 8
+  [14:16:46] done 155/168 running 8
+  [14:16:47] done 155/168 running 8
+  [14:16:48] done 155/168 running 8
+  [14:16:49] done 156/168 running 7
+  [14:16:50] done 156/168 running 8
+  [14:16:51] done 156/168 running 8
+  [14:16:52] done 156/168 running 8
+  [14:16:53] done 156/168 running 8
+  [14:16:54] done 156/168 running 8
+  [14:16:55] done 156/168 running 8
+  [14:16:56] done 156/168 running 8
+[14:16:57] WARNING  Found non-percolating regions, were filled to    _dns.py:73
+                    percolate                                                  
+  [14:16:57] done 156/168 running 8
+  [14:16:58] done 156/168 running 8
+  [14:16:59] done 156/168 running 8
+  [14:17:00] done 156/168 running 8
+  [14:17:01] done 156/168 running 8
+  [14:17:02] done 156/168 running 8
+  [14:17:03] done 156/168 running 8
+  [14:17:04] done 156/168 running 8
+  [14:17:05] done 156/168 running 8
+  [14:17:06] done 156/168 running 8
+  [14:17:07] done 156/168 running 8
+  [14:17:08] done 156/168 running 8
+  [14:17:09] done 156/168 running 8
+  [14:17:11] done 157/168 running 7
+  [14:17:12] done 157/168 running 8
+  [14:17:13] done 157/168 running 8
+  [14:17:14] done 157/168 running 8
+  [14:17:16] done 158/168 running 7
+  [14:17:17] done 158/168 running 8
+  [14:17:18] done 158/168 running 8
+  [14:17:19] done 158/168 running 8
+[14:17:19] WARNING  Found non-percolating regions, were filled to    _dns.py:73
+                    percolate                                                  
+  [14:17:20] done 158/168 running 8
+  [14:17:21] done 159/168 running 7
+  [14:17:22] done 159/168 running 8
+[14:17:23] WARNING  Found non-percolating regions, were filled to    _dns.py:73
+                    percolate                                                  
+  [14:17:23] done 160/168 running 7
+  [14:17:24] done 160/168 running 8
+  [14:17:25] done 160/168 running 8
+  [14:17:26] done 160/168 running 8
+  [14:17:27] done 160/168 running 8
+  [14:17:28] done 160/168 running 8
+[14:17:29] WARNING  Found non-percolating regions, were filled to    _dns.py:73
+                    percolate                                                  
+  [14:17:29] done 160/168 running 8
+  [14:17:30] done 160/168 running 8
+[14:17:31] WARNING  Found non-percolating regions, were filled to    _dns.py:73
+                    percolate                                                  
+  [14:17:31] done 160/168 running 8
+  [14:17:32] done 160/168 running 8
+  [14:17:33] done 160/168 running 8
+  [14:17:34] done 160/168 running 8
+  [14:17:35] done 160/168 running 8
+  [14:17:36] done 160/168 running 8
+  [14:17:37] done 160/168 running 8
+  [14:17:38] done 160/168 running 8
+  [14:17:39] done 160/168 running 8
+  [14:17:40] done 160/168 running 8
+  [14:17:41] done 160/168 running 8
+  [14:17:42] done 160/168 running 8
+  [14:17:43] done 160/168 running 8
+  [14:17:44] done 160/168 running 8
+  [14:17:45] done 160/168 running 8
+  [14:17:46] done 160/168 running 8
+  [14:17:47] done 160/168 running 8
+  [14:17:48] done 160/168 running 8
+  [14:17:49] done 161/168 running 7
+  [14:17:50] done 161/168 running 7
+  [14:17:51] done 162/168 running 6
+  [14:17:52] done 162/168 running 6
+  [14:17:53] done 162/168 running 6
+  [14:17:54] done 162/168 running 6
+  [14:17:55] done 162/168 running 6
+  [14:17:56] done 162/168 running 6
+  [14:17:57] done 162/168 running 6
+  [14:17:58] done 162/168 running 6
+  [14:17:59] done 162/168 running 6
+  [14:18:00] done 162/168 running 6
+  [14:18:01] done 162/168 running 6
+  [14:18:02] done 162/168 running 6
+  [14:18:03] done 162/168 running 6
+  [14:18:04] done 162/168 running 6
+  [14:18:05] done 162/168 running 6
+  [14:18:06] done 162/168 running 6
+  [14:18:07] done 162/168 running 6
+  [14:18:08] done 162/168 running 6
+  [14:18:09] done 162/168 running 6
+  [14:18:10] done 162/168 running 6
+  [14:18:11] done 162/168 running 6
+  [14:18:12] done 162/168 running 6
+  [14:18:13] done 162/168 running 6
+  [14:18:14] done 162/168 running 6
+  [14:18:15] done 162/168 running 6
+  [14:18:16] done 162/168 running 6
+  [14:18:17] done 162/168 running 6
+  [14:18:18] done 162/168 running 6
+  [14:18:19] done 162/168 running 6
+  [14:18:20] done 162/168 running 6
+  [14:18:21] done 162/168 running 6
+  [14:18:22] done 162/168 running 6
+  [14:18:23] done 162/168 running 6
+  [14:18:24] done 162/168 running 6
+  [14:18:25] done 162/168 running 6
+  [14:18:27] done 162/168 running 6
+  [14:18:28] done 162/168 running 6
+  [14:18:29] done 162/168 running 6
+  [14:18:30] done 163/168 running 5
+  [14:18:31] done 163/168 running 5
+  [14:18:32] done 163/168 running 5
+  [14:18:33] done 163/168 running 5
+  [14:18:34] done 163/168 running 5
+  [14:18:35] done 163/168 running 5
+  [14:18:36] done 163/168 running 5
+  [14:18:37] done 164/168 running 4
+  [14:18:38] done 165/168 running 3
+  [14:18:39] done 165/168 running 3
+  [14:18:40] done 165/168 running 3
+  [14:18:41] done 166/168 running 2
+  [14:18:42] done 166/168 running 2
+  [14:18:43] done 166/168 running 2
+  [14:18:44] done 166/168 running 2
+  [14:18:45] done 166/168 running 2
+  [14:18:46] done 166/168 running 2
+  [14:18:47] done 166/168 running 2
+  [14:18:48] done 166/168 running 2
+  [14:18:49] done 166/168 running 2
+  [14:18:50] done 166/168 running 2
+  [14:18:51] done 166/168 running 2
+  [14:18:52] done 166/168 running 2
+  [14:18:53] done 166/168 running 2
+  [14:18:54] done 166/168 running 2
+  [14:18:55] done 166/168 running 2
+[14:18:56] ERROR    Inlet/outlet rates don't match: 6.6894e+01 vs.  _dns.py:108
+                    -6.6887e+01                                                
+  [14:18:56] done 166/168 running 2
+  [14:18:58] done 167/168 running 1
+  [14:18:59] done 167/168 running 1
+  [14:19:00] done 167/168 running 1
+  [14:19:01] done 167/168 running 1
+  [14:19:02] done 167/168 running 1
+  [14:19:03] done 167/168 running 1
+  [14:19:04] done 167/168 running 1
+  [14:19:05] done 167/168 running 1
+  [14:19:06] done 167/168 running 1
+  [14:19:07] done 168/168 running 0
+retry (once) for 0 nonconvergence cases
+soil      status 
+Loess     ok         68
+          timeout     4
+Sand      ok         48
+Vertisol  ok         47
+          timeout     1
+dtype: int64

@@ -1,0 +1,21 @@
+{
+  "run_label": "rehovot_samp3",
+  "input": "\\\\hive3065\\Yael_Mishael\\Rony\\remote_computer backup\\10.5\\Rehovot_samp3_highkV_Cu0.11_15um.npy",
+  "pore_label": 1,
+  "voxel_size_um": 15.034357,
+  "n_total_voxels": 274625000,
+  "n_pore_voxels_raw": 112178509,
+  "n_leaked_diameter_shell_voxels": 30532615,
+  "n_pore_voxels_missing_thickness": 0,
+  "sanity_check_1_chi_at_min_r_matches_recorded_euler": true,
+  "sanity_check_2_volume_back_calc": true,
+  "back_calc_volume_mm3": 933.2427952201983,
+  "recorded_volume_mm3": 933.2427952201983,
+  "volume_rel_diff": 0.0,
+  "chi_at_min_r": -70319,
+  "recorded_euler_number": -70319,
+  "r_star_um": 146.9997273758133,
+  "trend": "negative_to_positive",
+  "resolution_limited": false,
+  "n_monotonicity_violations": 7
+}
