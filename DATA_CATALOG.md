@@ -26,30 +26,64 @@ A sample is **NOT** excluded merely for differing in magnitude from another samp
 
 ## Bnei Re'em (Vertisol) — 2 physical specimens (confirmed 2026-08-29 per Rony)
 
+> **2026-09-07 — CURRENT SOURCE OF TRUTH for Bnei Re'em structural metrics.** Both specimens were rebuilt from their raw tomographic reconstructions through **one script, one code path** (`04_inference/scripts/run_bnei_reem_unified_pipeline.py`): raw recon → centre 650³ crop → norm200 → CUDA NLM → global mean/std z-score → 4-way split → nnU-Net inference (`multi_sample_fresh_bnei_reem_i4`) → PSD/topology → χ(r) sweep. The only per-volume differences are input folder, slice regex, sample ID and voxel spacing. **These two runs supersede every earlier Bnei Re'em Track E number in this file and in the figures draft.** Full report: `bnei_reem_unified_pipeline_results.md` (repo root).
+
 ### Specimen A — raw core `18.12.25 bnei_reem_samp_2` (no dot), 15.000149 µm
+
+**Current run — `bnei_reem_specA_unified` (2026-09-07, USE THIS)**
 | | |
 |---|---|
-| Raw source | `Z:\Rony\18.12.25 bnei_reem_samp_2\` — full ~1800-slice stack |
+| Raw reconstruction | `C:\Users\rony.schwartz\Desktop\new_rec` — 804 contiguous reconstructed slices (indices 49–852), 1344×1344, uint16, full range to 65535. Verified as a real reconstruction stack, not projections. |
+| Sample ID | `bnei_reem_specA_unified` |
+| Pore % / POM % | **15.1688 / 0.2403** |
+| Track E | χ = **+26,330**; connectivity density **−28.4069 mm⁻³**; Γ = **0.754887**; DA = **0.188606**; PSD 30–150 µm fraction **0.698896**; r* = **none** (χ(r) all-positive across 2–1000 µm) |
+| Sanity checks | χ(r=min) == recorded Euler ✔; voxel-count volume back-calc ✔ (926.887 mm³) |
+| Location | `nnUNet_resources\bnei_reem_specA_unified\inference_concatenated\bnei_reem_specA_unified.nii.gz`; run dir `Topology_Metrics_Aug2026\raw\psd_diag_20260907T103058_bnei_reem_specA_unified` |
+
+**Legacy run — `bnei_reem_fresh_bnei_reem_i4` ("canonical", ~June/July 2026) — SUPERSEDED for Track E, and its specimen identity is now in doubt (see flag below)**
+| | |
+|---|---|
 | Sample ID | `bnei_reem_fresh_bnei_reem_i4` |
-| Preprocessing | Full pipeline (stack → crop 650³ → norm200 → NLM), trained through iterations i2→i4 (~June/July 2026) |
-| Model/checkpoint | `multi_sample_fresh_bnei_reem_i4`, `checkpoint_final.pth` |
 | Pore % / POM % | 21.636 / 0.819 |
-| Status | **VALID — used in every prior comparison as "Bnei Re'em."** |
+| Track E (superseded) | χ +10,318; Γ 0.859; DA 0.098; r* none in 2–537 µm |
+| Status | Still the source of every POM/3-class Bnei Re'em result to date (Track A/B). **Its Track E numbers are superseded by `bnei_reem_specA_unified`.** |
 | Location | `Z:\Rony\remote_computer backup\nnUNet_resources\bnei_reem_fresh_bnei_reem_i4\inference_concatenated\nlm_volume.nii.gz` |
 
 ### Specimen B — raw core `18.12.25 bnei_reem_samp_2.0`, 15.034357 µm
+
+**Current run — `bnei_reem_specB_unified` (2026-09-07, USE THIS)**
 | | |
 |---|---|
-| Raw source | `Z:\Rony\18.12.25 bnei_reem_samp_2.0\` — full ~1800-slice stack |
-| Processed file | `10.5\bnei_reem_samp_2_0.tif` (Aug 4, crop step skipped — driver bug) → `10.5\bnei_reem_samp_2_0_recropped.tif` (Aug 24, full pipeline re-run correctly: drop 12 stray SkyScan preview TIFFs, crop 650³, norm200, NLM) |
-| Pore % / POM % | ~39.4 / ~11.0 (original, superseded) → 28.3 / 7.62, elevated not collapsed (recropped, current) |
-| Status | **VALID for 2-class (pore/solid) work only — not used for POM/3-class analysis.** 2026-08-26: Rony decided not to pursue this specimen further for POM (settled on Bnei Re'em n=1 for POM — canonical only) |
-| Location | `Z:\Rony\remote_computer backup\nnUNet_resources\bnei_reem_samp_2_0_recropped\` |
-| Track E correction check (2026-09-03) | Rony flagged the 2026-08-29 Track E run (`psd_diag_20260829T164631_bnei_reem_samp_2_0_recropped`) as possibly computed on scan trajectories/motion-metadata rather than this segmentation. Independent re-investigation (fresh reload + `np.unique()`, full preprocessing-log provenance trace, cross-check against a second script's voxel counts, both sanity checks re-verified) found **no evidence of a wrong input** — see `Topology_Metrics_Aug2026/track_e_correction_summary.md` Part 1 for full detail. χ=−144/Γ=0.9539/DA=0.330/r*≈451µm are NOT retracted. **Open item for Rony** — this discrepancy is unresolved, not confirmed as a false alarm. |
+| Raw reconstruction | `\\HIVE3065\Yael_Mishael\Rony\18.12.25 bnei_reem_samp_2.0\bnei_reem_highkV_cu011_samp_2.0_Rec` — 804 contiguous reconstructed slices (indices 49–852), 1344×1344, uint16, full range to 65535 |
+| Sample ID | `bnei_reem_specB_unified` |
+| Pore % / POM % | **21.6403 / 0.8170** |
+| Track E | χ = **+9,771**; connectivity density **−10.4699 mm⁻³**; Γ = **0.859338**; DA = **0.096700**; PSD 30–150 µm fraction **0.391276**; r* = **920.48 µm** (negative→positive, not resolution-limited) |
+| Sanity checks | χ(r=min) == recorded Euler ✔; voxel-count volume back-calc ✔ (933.243 mm³) |
+| Location | `nnUNet_resources\bnei_reem_specB_unified\inference_concatenated\bnei_reem_specB_unified.nii.gz`; run dir `Topology_Metrics_Aug2026\raw\psd_diag_20260907T122221_bnei_reem_specB_unified` |
 
-Bnei Re'em POM work remains **n=1** (canonical only). Specimen B is usable for 2-class pore/solid work only (A2, Track E connectivity) — that gives Bnei Re'em 2 *reconstructions* for structural/topology metrics, matching its 2 *physical specimens*.
+**RETRACTED — `bnei_reem_samp_2_0_recropped` and `bnei_reem_samp_2_0` (all numbers void).** Root cause found 2026-09-06: the driver script's filename regex matched the **1800 raw rotational X-ray projections** at the raw folder's top level, not reconstructed depth slices. Projections are 896×1344 with a compressed value range and no true zero; genuine reconstructions are 1344×1344, full range to 65535 — the shape mismatch is unambiguous. `Number Of Files=1800` in the SkyScan log is the projection count (360°/0.2°), which the original author read as a slice count. Stacking projections along acquisition order and treating that as a Z-axis is not a soil volume — consecutive "slices" differ by rotation angle, not depth. **Every metric from these runs is void**, including χ=−144 / Γ=0.9539 / DA=0.330 / r*≈451 µm and pore 28.395% / POM 7.618%. Rony flagged this from a napari view on 2026-09-02 and was correct. See `bnei_reem_specB_visual_evidence/part0b_CRITICAL_CORRECTION.md`.
 
-**2026-09-02→05 — file-provenance bug ruled out; the underlying data-quality question is UNRESOLVED, not settled.** Rony flagged the `psd_diag_20260829T164631_bnei_reem_samp_2_0_recropped` run (PID 13048) as having used the scan's trajectories rather than the segmented volume. An independent re-investigation (`track_e_correction_prompt.md` Part 1) reloaded the exact input path recorded in the run's own `config.json`, reproduced the documented pore/POM fractions (28.395%/7.618%, matching this catalog's 28.3/7.62 to rounding), traced a complete preprocessing log, and found PID 13048 is a napari viewer process, not the compute pipeline — **this specific wrong-file bug is ruled out.** That is a narrower finding than "the data is fine": it does not address Rony's direct visual observation that this volume's pore network, loaded in napari, looks very different from every other scan in this project and reads as trajectory/motion-artifact-like — a log trail and a matching voxel fraction are consistent with a genuine CT acquisition artifact in the raw scan (correctly processed garbage is still garbage), not just with a pipeline bug. **Rony maintains, with 100% confidence in his own observation, that this scan is not good — a claim no one has yet independently verified or falsified with actual visual/quantitative evidence.** `bnei_reem_specB_visual_proof_prompt.md` (repo root, 2026-09-05) asks for real inspectable evidence — side-by-side midslice images, a reproduced napari-equivalent screenshot, and objective raw-scan motion-artifact screening (slice-to-slice consistency, FFT banding detection) — not another narrative report. **Until that runs, Specimen B's Track E numbers should be treated as of undetermined reliability, not as confirmed valid.**
+### Bnei Re'em — matched-resolution mean ± SE (n = 2 physical specimens, unified pipeline)
+
+| Metric | Mean ± SE |
+|---|---|
+| Pore fraction (%) | 18.40 ± 3.24 |
+| POM fraction (%) | 0.529 ± 0.288 |
+| Connectivity probability Γ | 0.807 ± 0.052 |
+| Degree of anisotropy | 0.143 ± 0.046 |
+| Connectivity density (mm⁻³) | −19.44 ± 8.97 |
+| Euler number χ | +18,051 ± 8,280 |
+| PSD 30–150 µm fraction | 0.545 ± 0.154 |
+
+r* is not averaged: Specimen A has no crossover in range, Specimen B crosses at 920.48 µm.
+
+**Identity check (the reason for the rerun) — PASS.** Pearson r between the two z-scored inputs = **−0.0119**; pore-label Dice between the two segmentations = **0.1679** (expected under independence, 0.1784). The two specimens are genuinely different data. For contrast, the previous failed run gave r = 0.9999 / Dice 0.988.
+
+> **⚠ OPEN — which specimen is the legacy "canonical" volume actually from?** The legacy canonical run (pore 21.636 / POM 0.819, Γ 0.859, DA 0.098, χ +10,318) matches **Specimen B unified** (21.6403 / 0.8170, Γ 0.859338, DA 0.0967, χ +9,771) to within rounding on every metric, while the genuine Specimen A reconstruction gives markedly different values (15.1688 / 0.2403, Γ 0.755, DA 0.189, χ +26,330). Direct comparison measured r = 0.999929 and pore Dice = 0.988 between canonical's array and Specimen B's — higher than a volume correlates with its own slices 20 apart (0.825), and far above the genuinely-different-specimen baseline (0.584). This indicates the volume labelled "canonical" carries Specimen B's core, not Specimen A's, despite its voxel size (15.000149 µm) matching Specimen A's raw log. A search for canonical's own original pre-2026-04 raw reconstruction came back empty across E:, D:, P:, Desktop and Documents (see `bnei_reem_specB_visual_evidence/part0d_otsu_and_identity_check.md`), so the raw-to-raw comparison that would settle it could not be run. **Consequence:** every Bnei Re'em POM/3-class result (Track A/B, Table 1/2, Fig. 4a/b/d/e) derives from canonical and may therefore describe Specimen B rather than Specimen A. Needs Rony's decision before those are re-labelled. This is a labelling question, not a data-validity one — the canonical volume is a real, valid Bnei Re'em Vertisol scan either way.
+
+Bnei Re'em POM work remains **n=1** (canonical only, subject to the labelling flag above). Track E now has **n=2** genuine physical specimens at matched ~15 µm.
+
+**2026-09-02→07 — the Specimen B investigation, closed.** Sequence, for the record: Rony flagged the `psd_diag_20260829T164631_bnei_reem_samp_2_0_recropped` run from a direct napari view, saying the pore network did not look like a normal volume of his. A first investigation checked file *identity* (right sample, right folder, matching voxel fractions, clean preprocessing logs) and found nothing wrong — but that only ruled out a wrong-file bug and never checked whether the files inside that folder were the right *kind of image*. They were not: the pipeline had consumed raw rotational projections instead of reconstructed slices (`part0b_CRITICAL_CORRECTION.md`). A rebuild on the real reconstruction then produced numbers suspiciously close to canonical's, which Rony also flagged; a model-free Otsu re-segmentation reproduced the same near-identity (Dice 0.947 vs ~0.18 expected under independence), ruling out nnU-Net bias and pointing at a data-identity problem rather than a segmentation artifact (`part0d_otsu_and_identity_check.md`). The unified two-specimen rerun (2026-09-07) resolved it: rebuilt from the two raw reconstructions Rony identified as ground truth, the specimens are genuinely different (r = −0.0119, Dice 0.1679) and their metrics are trustworthy. What remains open is only the *labelling* question in the flag above. **Lesson: a provenance/log check answers "is this the right file", not "is this the right kind of data" — verify pixel content (shape, dtype, dynamic range), not just paths and counts. And when the person who acquired the scan says it looks wrong, that observation outranks a clean log.**
 
 ---
 
@@ -99,3 +133,4 @@ This matches Rony's "2 active samples" — `samp1` is real but was never put thr
 - **2026-08-28: merged.** Reconnected this repo, compared both copies. Rony confirmed directly: exactly 2 Bnei Re'em physical specimens (not 3) — `bnei_reem_samp_2` (no dot) and `bnei_reem_samp_2.0` are the same core under two names, despite the sweep finding them as separate raw folders with different voxel sizes (flagged above, unresolved technically, not blocking). `bnei_reem_samp_2`'s reconstruction (dated 2026-08-25 on the share) is the "this week" redo Rony mentioned — POM not recognized by the model there, pore/structure-only. Kept this file's superior Mishmar/Rehovot sections as the base. Going forward: this repo copy is canonical; the local project-folder copy is a mirror, updated to match.
 - **2026-08-29:** added the analysis-tier policy — all valid-pore specimens are in scope for structural/topology metrics; only the Bnei Re'em canonical + both native Mishmar scans (5.85/8.8 µm) are in scope for POM-inclusive analysis. Per Rony, the `Z:\Rony\...` network-share copy of this file is out of scope and no longer tracked here.
 - **2026-08-29 (corrections, same day, in order):** first wrongly collapsed `samp_2`/`samp_2.0` into one specimen (Bnei Re'em "2 total"). Rony corrected: they're two different physical cores (different voxel sizes because different scans) — so briefly went to "3 physical specimens" (canonical + samp_2.0 + samp_2, treating canonical as a third scan). Rony corrected again: canonical isn't a third scan at all, it's just the older of two reconstructions of the `samp_2` (no dot) core — confirmed via voxel-size match (canonical = 15.000149 µm = `samp_2`'s raw log; `samp_2.0`'s raw log is 15.034357 µm, different) and via canonical's `fresh_bnei_reem_i4` training lineage predating both Aug reconstructions by ~2 months. **Final: 2 physical specimens** — Specimen A (`samp_2` raw core, reconstructed twice: canonical + this week's redo) and Specimen B (`samp_2.0` raw core). Lesson: don't treat a working label like "canonical" as implying a distinct entity — verify what it actually refers to before building structure around it, and when a verbal count conflicts with sweep evidence, surface the conflict and ask rather than picking a side.
+- **2026-09-06 → 09-07: Bnei Re'em rebuilt from raw, both specimens, one pipeline.** The `bnei_reem_samp_2_0*` runs were found to have been built from raw rotational projections rather than reconstructed slices (shape 896×1344 vs. 1344×1344 — a pixel-content check no earlier provenance audit had performed), voiding all their metrics. Both specimens were then rebuilt through a single unified script from the two raw reconstructions Rony identified as ground truth (`new_rec` for A; `...samp_2.0_Rec` for B), giving `bnei_reem_specA_unified` / `bnei_reem_specB_unified` and a genuine n=2 at matched ~15 µm. A mandatory identity check now runs as part of that pipeline (r = −0.0119, Dice = 0.1679 — PASS). Left open: the legacy canonical volume's metrics match Specimen B's, not Specimen A's, so which specimen it represents is unresolved (see the ⚠ flag in the Bnei Re'em section) — this affects the labelling of all Bnei Re'em POM/3-class results, not their validity.
