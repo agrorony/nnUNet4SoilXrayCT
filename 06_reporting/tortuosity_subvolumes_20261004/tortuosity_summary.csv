@@ -19,3 +19,43 @@ Sand,(across specimens),128,48,3.0862999673279368,3.0862999673279368,soil,origin
 Sand,(across specimens),200,48,2.909675669011191,2.909675669011191,soil,original,2.0,0.6239189736941085
 Vertisol,(across specimens),128,41,12.895845267109237,12.895845267109237,soil,original,2.0,3.686837735071413
 Vertisol,(across specimens),200,47,18.182727078402607,18.182727078402607,soil,original,2.0,11.560042857528256
+Loess,Cu011_samp_2,128,23,2.660365599096857,4.335689134558071,specimen,original_ok_excluding_flow_mismatch,,
+Loess,Cu011_samp_2,200,20,2.836612884370345,2.928219304887236,specimen,original_ok_excluding_flow_mismatch,,
+Loess,mishmar_2_8p8um_label_ds15,128,23,3.292805200173468,4.779527663536249,specimen,original_ok_excluding_flow_mismatch,,
+Loess,mishmar_2_8p8um_label_ds15,200,22,3.132037942822353,3.1719878775899186,specimen,original_ok_excluding_flow_mismatch,,
+Loess,mishmar_3_5p85um_label_ds15,128,24,3.5133527897022976,3.642686279172333,specimen,original_ok_excluding_flow_mismatch,,
+Loess,mishmar_3_5p85um_label_ds15,200,21,3.2205020517540874,3.4701305258553545,specimen,original_ok_excluding_flow_mismatch,,
+Sand,Rehovot_samp2_highkV_Cu0.11_15um,128,24,3.349983880308691,3.668310784092721,specimen,original_ok_excluding_flow_mismatch,,
+Sand,Rehovot_samp2_highkV_Cu0.11_15um,200,20,3.140053722551426,3.4562782885936634,specimen,original_ok_excluding_flow_mismatch,,
+Sand,Rehovot_samp3_highkV_Cu0.11_15um,128,24,2.087505814646218,2.5042891505631526,specimen,original_ok_excluding_flow_mismatch,,
+Sand,Rehovot_samp3_highkV_Cu0.11_15um,200,23,2.0549727611506494,2.3172321517309715,specimen,original_ok_excluding_flow_mismatch,,
+Vertisol,bnei_reem_specA_unified,128,13,7.93900055830659,9.63595915464072,specimen,original_ok_excluding_flow_mismatch,,
+Vertisol,bnei_reem_specA_unified,200,6,8.17017455215321,10.548359581967096,specimen,original_ok_excluding_flow_mismatch,,
+Vertisol,bnei_reem_specB_unified,128,17,4.78150166740778,5.845938426686591,specimen,original_ok_excluding_flow_mismatch,,
+Vertisol,bnei_reem_specB_unified,200,8,5.290167429841342,5.496290523597145,specimen,original_ok_excluding_flow_mismatch,,
+Loess,(across specimens),128,70,4.335689134558071,4.252634359088884,soil,original_ok_excluding_flow_mismatch,3.0,0.3307948282026156
+Loess,(across specimens),200,63,3.1719878775899186,3.1901125694441697,soil,original_ok_excluding_flow_mismatch,3.0,0.15669856539855745
+Sand,(across specimens),128,48,3.0862999673279368,3.0862999673279368,soil,original_ok_excluding_flow_mismatch,2.0,0.5820108167647842
+Sand,(across specimens),200,43,2.8867552201623177,2.8867552201623177,soil,original_ok_excluding_flow_mismatch,2.0,0.5695230684313459
+Vertisol,(across specimens),128,30,7.740948790663655,7.740948790663655,soil,original_ok_excluding_flow_mismatch,2.0,1.8950103639770641
+Vertisol,(across specimens),200,14,8.02232505278212,8.02232505278212,soil,original_ok_excluding_flow_mismatch,2.0,2.5260345291849755
+Loess,Cu011_samp_2,128,23,2.660365599096857,4.335689134558071,specimen,original_ok_plus_900s_timeout_rerun,,
+Loess,Cu011_samp_2,200,24,2.9469080833232444,4.480568758256111,specimen,original_ok_plus_900s_timeout_rerun,,
+Loess,mishmar_2_8p8um_label_ds15,128,24,3.3872533868852845,7.442045395265439,specimen,original_ok_plus_900s_timeout_rerun,,
+Loess,mishmar_2_8p8um_label_ds15,200,25,3.141736633236722,3.4436656912307715,specimen,original_ok_plus_900s_timeout_rerun,,
+Loess,mishmar_3_5p85um_label_ds15,128,24,3.5133527897022976,3.642686279172333,specimen,original_ok_plus_900s_timeout_rerun,,
+Loess,mishmar_3_5p85um_label_ds15,200,27,3.3349440727359285,3.477541202943107,specimen,original_ok_plus_900s_timeout_rerun,,
+Sand,Rehovot_samp2_highkV_Cu0.11_15um,128,24,3.349983880308691,3.668310784092721,specimen,original_ok_plus_900s_timeout_rerun,,
+Sand,Rehovot_samp2_highkV_Cu0.11_15um,200,24,3.140053722551426,3.5335946427052995,specimen,original_ok_plus_900s_timeout_rerun,,
+Sand,Rehovot_samp3_highkV_Cu0.11_15um,128,24,2.087505814646218,2.5042891505631526,specimen,original_ok_plus_900s_timeout_rerun,,
+Sand,Rehovot_samp3_highkV_Cu0.11_15um,200,24,2.0529891690352358,2.2857566953170823,specimen,original_ok_plus_900s_timeout_rerun,,
+Vertisol,bnei_reem_specA_unified,128,21,15.198072256132605,16.58268300218065,specimen,original_ok_plus_900s_timeout_rerun,,
+Vertisol,bnei_reem_specA_unified,200,25,22.82547143737974,32.219251815200366,specimen,original_ok_plus_900s_timeout_rerun,,
+Vertisol,bnei_reem_specB_unified,128,20,5.43776110543477,9.209007532037825,specimen,original_ok_plus_900s_timeout_rerun,,
+Vertisol,bnei_reem_specB_unified,200,24,5.788829039265579,6.622684220874352,specimen,original_ok_plus_900s_timeout_rerun,,
+Loess,(across specimens),128,71,4.335689134558071,5.140140269665281,soil,original_ok_plus_900s_timeout_rerun,3.0,1.168209262766651
+Loess,(across specimens),200,76,3.477541202943107,3.80059188414333,soil,original_ok_plus_900s_timeout_rerun,3.0,0.3401290439277349
+Sand,(across specimens),128,48,3.0862999673279368,3.0862999673279368,soil,original_ok_plus_900s_timeout_rerun,2.0,0.5820108167647842
+Sand,(across specimens),200,48,2.909675669011191,2.909675669011191,soil,original_ok_plus_900s_timeout_rerun,2.0,0.6239189736941085
+Vertisol,(across specimens),128,41,12.895845267109237,12.895845267109237,soil,original_ok_plus_900s_timeout_rerun,2.0,3.686837735071413
+Vertisol,(across specimens),200,49,19.42096801803736,19.42096801803736,soil,original_ok_plus_900s_timeout_rerun,2.0,12.798283797163005

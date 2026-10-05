@@ -1,0 +1,6 @@
+specimen,cube_index,axis,status,tortuosity,runtime_s,message
+mishmar_3_5p85um_label_ds15,4,0,ok,3.2618147627163228,176.80318660009652,
+bnei_reem_specA_unified,3,1,ok,60.69879342679963,184.96718459995463,FLOW_MISMATCH: Inlet/outlet rates don't match: 3.4076e-01 vs. -3.4035e-01
+mishmar_3_5p85um_label_ds15,5,2,ok,3.734476091169744,222.54368299990892,
+mishmar_3_5p85um_label_ds15,4,1,ok,3.514144864364661,264.12343379994854,
+mishmar_2_8p8um_label_ds15,7,1,ok,4.519731399169637,323.09823329979554,
