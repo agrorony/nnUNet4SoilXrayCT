@@ -6,7 +6,7 @@ A napari-based interactive tool for correcting dense 3D voxel-wise label maps pr
 
 ## Background & motivation
 
-This tool was developed as part of an iterative nnUNet segmentation pipeline for soil X-ray CT volumes ([`nnUNet4SoilXrayCT`](../README.md)).
+This tool was developed as part of an iterative nnUNet segmentation pipeline for soil X-ray CT volumes ([`nnUNet4SoilXrayCT`](../../README.md)).
 
 The core problem: a CNN produces "almost good" dense predictions, but boundary errors and missed phases need human correction before the next training iteration. Annotating from scratch is slow; what's needed is a way to *review and patch* the existing prediction at the regions where it is wrong.
 

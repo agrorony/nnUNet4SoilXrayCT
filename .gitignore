@@ -80,3 +80,22 @@ logs_archive/inference/inference_nlm/_inference_nlm_err.txt
 logs_archive/inference/inference_nlm/_inference_nlm_log.txt
 logs_archive/napari/nlm/_napari_nlm_err.txt
 logs_archive/napari/nlm/_napari_nlm_log.txt
+# 2026-11 hand-off tidy-up: stop tracking a stray binary at the root
+# (file kept on disk; see 00_docs/REPO_TIDY_2026-11.md)
+/freetype.dll
+
+# 2026-11 hand-off: never commit model weights, archives, binaries, the
+# hand-off staging folder, or nnU-Net data folders (volumes live on the share).
+*.pth
+*.zip
+*.dll
+handoff/
+nnUNet_raw/
+nnUNet_preprocessed/
+nnUNet_results/
+
+# 2026-11 hand-off: third-party papers/figures added in this fork (not in the
+# upstream parent). Kept on disk, not tracked. Still present in earlier history.
+00_docs/literature/
+05_evaluation/psd/vogel_psd.pdf
+/dor2025_fig1a_reference.png
