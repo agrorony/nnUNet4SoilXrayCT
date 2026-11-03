@@ -1,5 +1,7 @@
 # Research Exercise — Mission Control
 
+> **Final state at hand-off, 2026-11.** The write-up has been submitted. This file is no longer maintained. Hand-off record: `00_docs/reports/HANDOFF_REPORT.md`.
+
 > Read this first in any new chat about the figures draft. It replaces re-deriving context from the long August conversation. Update the status tables here at the end of each working session.
 
 > **`DATA_CATALOG.md`** (in the project folder, canonical copy in this repo) is the source of truth for every CT scan/sample: what exists, where, preprocessing status, model/checkpoint, and validity with explicit reasoning. Read it before any prompt does its own rediscovery of what scans are available. It also states the corrected sample-inclusion rule (exclude only for channel collapse, an unfixed preprocessing defect, or a confirmed wrong model — NOT merely for differing in magnitude from another sample). **Note (2026-08-27): its written status column is POM-focused; a volume marked not-in-use for POM can still be valid for Track E's binary/pore-channel work — see the Track E row and `connectivity_replicate_expansion_prompt.md`.**
@@ -147,4 +149,4 @@ More importantly: a **later, distinct training attempt (`fresh_bnei_reem_i3`, ~A
 See `DATA_CATALOG.md`'s 2026-09-23 entry (end of Bnei Re'em section) for the full discovery writeup, including which Drive folders were checked and what is/isn't confirmed.
 
 
-> **2026-10-04:** Share access restored (read via E:\PROJECTS\Yael_Mishael\...); nothing was deleted. Earlier statements that the share/files were inaccessible are superseded. See  6_reporting/missing_data_20261004/REPORT.md.
+> **2026-10-04:** Share access restored (read via E:\PROJECTS\Yael_Mishael\...); nothing was deleted. Earlier statements that the share/files were inaccessible are superseded. See 06_reporting/missing_data_20261004/REPORT.md.
