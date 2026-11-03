@@ -1,0 +1,13 @@
+# Line endings: store text with LF in the repo; checkout follows the local core.autocrlf setting.
+* text=auto
+
+# Binary files: never convert, never diff as text.
+*.png binary
+*.jpg binary
+*.tif binary
+*.pdf binary
+*.pth binary
+*.zip binary
+*.dll binary
+*.gz binary
+*.npy binary
