@@ -1,0 +1,6 @@
+edt idx 376 s
+vertices 130806376 diam um p2/p50/p98/max [ 11.69999981  28.65903091 105.94801331] 431.79184 zero-valued vertices 0 1245 s
+== opt 3 full
+render s 294.4
+== opt 3 close
+ALLDONE

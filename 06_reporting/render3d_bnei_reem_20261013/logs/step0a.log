@@ -1,0 +1,17 @@
+path E:\PROJECTS\Yael_Mishael\Rony\remote_computer backup\nnUNet_resources\bnei_reem_fresh_bnei_reem_i4\inference_concatenated\nlm_volume.nii.gz
+size 11871558 mtime 2026-07-06 13:19:47.270204
+shape (650, 650, 652) dtype uint8 header zooms (np.float32(1.0), np.float32(1.0), np.float32(1.0)) axcodes ('R', 'A', 'S')
+labels {0: 207816662, 1: 5795552, 2: 2255941, 5: 59601845}
+percent {0: np.float64(75.4408), 1: np.float64(2.1039), 2: np.float64(0.8189), 5: np.float64(21.6364)}
+STEP0.1 PASS
+specB_nifti_predict_0000 raw shape (650, 650, 650)
+  shape mismatch, skipped
+10.5_nlm_volume.tif_transposed(2,1,0) raw shape (650, 650, 652)
+  flip () corr(pore, raw) = -0.0185
+  flip (0,) corr(pore, raw) = -0.0454
+  flip (1,) corr(pore, raw) = -0.8571
+  flip (2,) corr(pore, raw) = 0.0146
+  flip (0, 1) corr(pore, raw) = -0.0368
+  flip (0, 2) corr(pore, raw) = -0.0016
+  flip (1, 2) corr(pore, raw) = -0.0416
+  flip (0, 1, 2) corr(pore, raw) = -0.0189

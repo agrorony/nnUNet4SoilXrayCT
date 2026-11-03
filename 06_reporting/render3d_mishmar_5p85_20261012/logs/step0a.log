@@ -1,0 +1,12 @@
+path E:\PROJECTS\Yael_Mishael\Rony\remote_computer backup\nnUNet_resources\mishmar_hanegev_maoz_3_5p85um\inference_output_concat_loess_i2\mishmar_hanegev_maoz_3_5p85um.nii.gz
+size 52131807 mtime 2026-07-16 00:28:11.393603
+shape (1000, 1000, 1000) dtype uint8 header zooms (np.float32(1.0), np.float32(1.0), np.float32(1.0))
+axcodes ('R', 'A', 'S')
+affine
+ [[ 1.  0. -0. -0.]
+ [ 0.  1. -0. -0.]
+ [ 0.  0.  1.  0.]
+ [ 0.  0.  0.  1.]]
+labels {0: 702291703, 1: 11176847, 2: 16146797, 5: 270384653}
+percent {0: np.float64(70.2292), 1: np.float64(1.1177), 2: np.float64(1.6147), 5: np.float64(27.0385)}
+STEP0.1 PASS

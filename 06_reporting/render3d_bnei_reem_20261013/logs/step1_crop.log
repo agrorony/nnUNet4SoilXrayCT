@@ -1,0 +1,7 @@
+crop (np.float64(0.05043173528658778), [400, 200, 300, 200])
+crop (200, 200, 200)
+pom {'components': 295, 'hidden_vox': 777, 'hidden_pct': 0.1906215193786278, 'n_hidden_components': 244} 0 s
+pom pts 169794 cells 338510 1 s
+pore {'components': 704, 'hidden_vox': 3244, 'hidden_pct': 0.16774775371072095, 'n_hidden_components': 383} 0 s
+pore_open pts 963885 cells 1912539 5 s
+pore_closed pts 1004196 cells 2009340 6 s

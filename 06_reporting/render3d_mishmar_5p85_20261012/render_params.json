@@ -1,0 +1,5 @@
+{"pore_color": "#4F9A98", "pom_color": "#B3A23F", "pore_opacity": 0.025, "pom_specular": 0.45,
+ "azimuth": 40, "elevation": 28, "fill": 0.8, "line_px": 2,
+ "peels": 20, "ssao": true, "ssao_radius_um": 45, "ssao_bias_um": 5,
+ "vol_gamma": 1.0, "vol_max_opacity": 0.2, "vol_unit_um": 500,
+ "diam_clim": [11.7, 105.9]}

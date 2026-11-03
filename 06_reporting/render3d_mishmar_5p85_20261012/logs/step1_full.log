@@ -1,0 +1,6 @@
+full (1000, 1000, 1000)
+pom {'components': 6533, 'hidden_vox': 23711, 'hidden_pct': 0.1468464612517269, 'n_hidden_components': 4966} 25 s
+pom pts 4585198 cells 9138006 53 s
+pore {'components': 68652, 'hidden_vox': 280571, 'hidden_pct': 0.10376735398513909, 'n_hidden_components': 37005} 26 s
+pore_open pts 129563443 cells 258902818 879 s
+pore_closed pts 130806376 cells 261842180 882 s

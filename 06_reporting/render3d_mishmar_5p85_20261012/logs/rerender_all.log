@@ -1,0 +1,16 @@
+== opt 2 full
+render s 162.1
+== opt 2 close
+POM taubin deviation um: mean 1.532 max 5.292
+render s 48.1
+== opt 3 full
+render s 311.7
+== opt 3 close
+POM taubin deviation um: mean 1.532 max 5.292
+render s 1368.3
+== opt 1 full
+render s 382.9
+== opt 1 close
+POM taubin deviation um: mean 1.532 max 5.292
+render s 1416.6
+ALLDONE

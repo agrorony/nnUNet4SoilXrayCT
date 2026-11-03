@@ -1,0 +1,9 @@
+== opt 2 full
+render s 213.4
+== opt 2 close
+render s 58.2
+== opt 1 full
+render s 380.8
+== opt 1 close
+render s 1604.5
+ALLDONE

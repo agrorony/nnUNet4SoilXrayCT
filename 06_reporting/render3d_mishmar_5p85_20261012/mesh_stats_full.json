@@ -1,0 +1,31 @@
+{
+ "sigma_vox": 0.8,
+ "min_voxels": 27,
+ "crop": null,
+ "stats": {
+  "pom": {
+   "components": 6533,
+   "hidden_vox": 23711,
+   "hidden_pct": 0.1468464612517269,
+   "n_hidden_components": 4966
+  },
+  "pom_mesh": {
+   "points": 4585198,
+   "triangles": 9138006
+  },
+  "pore": {
+   "components": 68652,
+   "hidden_vox": 280571,
+   "hidden_pct": 0.10376735398513909,
+   "n_hidden_components": 37005
+  },
+  "pore_open_mesh": {
+   "points": 129563443,
+   "triangles": 258902818
+  },
+  "pore_closed_mesh": {
+   "points": 130806376,
+   "triangles": 261842180
+  }
+ }
+}

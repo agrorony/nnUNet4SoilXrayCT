@@ -1,0 +1,11 @@
+{
+ "match_psd_table": true,
+ "max_abs_count_diff": 0,
+ "pct_um": {
+  "p2": 16.54629839658737,
+  "p50": 58.5,
+  "p98": 226.26722316741942
+ },
+ "max_um": 431.7918395996094,
+ "unit_note": "diameter_map values are in voxels; x5.85 = um (pct_um/max_um already in um)"
+}
