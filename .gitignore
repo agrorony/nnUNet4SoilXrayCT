@@ -83,3 +83,13 @@ logs_archive/napari/nlm/_napari_nlm_log.txt
 # 2026-11 hand-off tidy-up: stop tracking a stray binary at the root
 # (file kept on disk; see 00_docs/REPO_TIDY_2026-11.md)
 /freetype.dll
+
+# 2026-11 hand-off: never commit model weights, archives, binaries, the
+# hand-off staging folder, or nnU-Net data folders (volumes live on the share).
+*.pth
+*.zip
+*.dll
+handoff/
+nnUNet_raw/
+nnUNet_preprocessed/
+nnUNet_results/
