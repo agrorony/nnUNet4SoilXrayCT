@@ -4,7 +4,7 @@ This repository contains the code and documentation to run the complete nnUNet p
 2. several scripts to prepare the input images to a format that is compatible with nnUNet;
 3. extra utilities for result extraction. 
 
-In this repository, we provide detailed explanations on how to transition from 3D image stacks to nnUNet predictions. If you used this repository and associated code for your own work, please cite the references, institutional links, and tooling documentation listed in **[`RESOURCES.md`](RESOURCES.md)** to acknowledge our efforts.
+In this repository, we provide detailed explanations on how to transition from 3D image stacks to nnUNet predictions. If you used this repository and associated code for your own work, please cite the references, institutional links, and tooling documentation listed in **[`RESOURCES.md`](../RESOURCES.md)** to acknowledge our efforts.
 
 # Philosopy
 The scripts and repository were written assuming (almost) no prerequisite programming experience of the user. Together, we will go in detail into a range of technical aspects, from installing plugins to tapping into the resources of high performance computing (HPC) cluster. We aimed to write codes which are flexible and easy to use. For most scripts, you will have to adjust a few file paths only. In most cases, these filepaths are given from the terminals. We hope that this philosophy and the level of details of this document will help you get onto the deep learning boat for your image processing tasks.
@@ -40,7 +40,7 @@ Optional flags:
 - `--hide_prediction` to start with prediction hidden.
 
 <p align="center">
-  <img src="00_docs/Figures/Workflow.png" width="500"> 
+  <img src="Figures/Workflow.png" width="500"> 
 </p>
 
 **Figure 1.** Workflow to transition from 3D X-ray CT image stacks to nnUNet predictions 
@@ -436,6 +436,6 @@ This repository was drafted by Maxime Phalempin (UFZ) and Lars Krämer (DKFZ, HI
 Part of this work was funded by Helmholtz Imaging (HI), a platform of the Helmholtz Incubator. 
 
 <p align="left">
-  <img src="00_docs/Figures/UFZ_Logo.png" width="500"> 
-  <img src="00_docs/Figures/HI_Logo.png" width="300"> 
+  <img src="Figures/UFZ_Logo.png" width="500"> 
+  <img src="Figures/HI_Logo.png" width="300"> 
 </p>
