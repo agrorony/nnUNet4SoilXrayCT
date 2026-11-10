@@ -1,0 +1,164 @@
+{
+  "paired_before_after_mishmar_subvolumes": {
+    "porosity": {
+      "n": 8,
+      "mean_before_5p85um": 0.2766781792798118,
+      "mean_after_15um": 0.2758375439089326,
+      "mean_diff": -0.0008406353708791843,
+      "se_diff": 5.666768546654846e-05,
+      "pct_change": -0.3038314669654624,
+      "wilcoxon_stat": 0.0,
+      "wilcoxon_p": 0.0078125
+    },
+    "frac31_150_of_total": {
+      "n": 8,
+      "mean_before_5p85um": 0.20376584179021268,
+      "mean_after_15um": 0.19749453599669706,
+      "mean_diff": -0.006271305793515626,
+      "se_diff": 0.0003808115290526535,
+      "pct_change": -3.077702198964366,
+      "wilcoxon_stat": 0.0,
+      "wilcoxon_p": 0.0078125
+    },
+    "frac150_290_of_total": {
+      "n": 8,
+      "mean_before_5p85um": 0.022091366646385314,
+      "mean_after_15um": 0.02339422414486879,
+      "mean_diff": 0.0013028574984834782,
+      "se_diff": 0.00044253520300865235,
+      "pct_change": 5.897586687769076,
+      "wilcoxon_stat": 0.0,
+      "wilcoxon_p": 0.0078125
+    },
+    "fracGE290_of_total": {
+      "n": 8,
+      "mean_before_5p85um": 0.0008618848295839875,
+      "mean_after_15um": 0.000812890116015174,
+      "mean_diff": -4.8994713568813554e-05,
+      "se_diff": 5.0791908354936166e-05,
+      "pct_change": -5.684600991580535,
+      "wilcoxon_stat": 3.0,
+      "wilcoxon_p": 0.625
+    }
+  },
+  "three_soil_with_downsampled_mishmar": {
+    "porosity": {
+      "test": "Kruskal-Wallis",
+      "p": 0.009754759102342877,
+      "letters": {
+        "bnei_reem": "a",
+        "mishmar": "ab",
+        "rehovot": "b"
+      },
+      "group_means": {
+        "bnei_reem": 0.22086543518518517,
+        "mishmar": 0.2758375439089326,
+        "rehovot": 0.3086566712962963
+      }
+    },
+    "frac31_150_of_total": {
+      "test": "Kruskal-Wallis",
+      "p": 0.0003772886551346049,
+      "letters": {
+        "bnei_reem": "b",
+        "mishmar": "a",
+        "rehovot": "a"
+      },
+      "group_means": {
+        "bnei_reem": 0.0930135997664264,
+        "mishmar": 0.19749453599669706,
+        "rehovot": 0.21637937192142748
+      }
+    },
+    "frac150_290_of_total": {
+      "test": "one-way ANOVA",
+      "p": 3.969550017928771e-05,
+      "letters": {
+        "bnei_reem": "a",
+        "mishmar": "b",
+        "rehovot": "c"
+      },
+      "group_means": {
+        "bnei_reem": 0.05499603637889583,
+        "mishmar": 0.02339422414486879,
+        "rehovot": 0.08666273387517853
+      }
+    },
+    "fracGE290_of_total": {
+      "test": "Kruskal-Wallis",
+      "p": 5.4070687448133706e-05,
+      "letters": {
+        "bnei_reem": "a",
+        "mishmar": "b",
+        "rehovot": "c"
+      },
+      "group_means": {
+        "bnei_reem": 0.07285579903986283,
+        "mishmar": 0.000812890116015174,
+        "rehovot": 0.005614565499690188
+      }
+    }
+  },
+  "robustness_comparison": {
+    "porosity": {
+      "original_mishmar_letters": {
+        "bnei_reem": "a",
+        "mishmar": "ab",
+        "rehovot": "b"
+      },
+      "downsampled_mishmar_letters": {
+        "bnei_reem": "a",
+        "mishmar": "ab",
+        "rehovot": "b"
+      },
+      "letters_match": true,
+      "original_p": 0.01075375804411683,
+      "downsampled_p": 0.009754759102342877
+    },
+    "frac31_150_of_total": {
+      "original_mishmar_letters": {
+        "bnei_reem": "b",
+        "mishmar": "a",
+        "rehovot": "a"
+      },
+      "downsampled_mishmar_letters": {
+        "bnei_reem": "b",
+        "mishmar": "a",
+        "rehovot": "a"
+      },
+      "letters_match": true,
+      "original_p": 0.0004087119208877943,
+      "downsampled_p": 0.0003772886551346049
+    },
+    "frac150_290_of_total": {
+      "original_mishmar_letters": {
+        "bnei_reem": "b",
+        "mishmar": "a",
+        "rehovot": "c"
+      },
+      "downsampled_mishmar_letters": {
+        "bnei_reem": "a",
+        "mishmar": "b",
+        "rehovot": "c"
+      },
+      "letters_match": false,
+      "original_p": 2.3732185302382612e-05,
+      "downsampled_p": 3.969550017928771e-05
+    },
+    "fracGE290_of_total": {
+      "original_mishmar_letters": {
+        "bnei_reem": "b",
+        "mishmar": "a",
+        "rehovot": "c"
+      },
+      "downsampled_mishmar_letters": {
+        "bnei_reem": "a",
+        "mishmar": "b",
+        "rehovot": "c"
+      },
+      "letters_match": false,
+      "original_p": 6.239059158307414e-05,
+      "downsampled_p": 5.4070687448133706e-05
+    }
+  }
+}

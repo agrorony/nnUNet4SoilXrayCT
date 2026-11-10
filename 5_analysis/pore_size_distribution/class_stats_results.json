@@ -1,0 +1,354 @@
+{
+  "note": "Cross-soil inference restricted to >=31um functional classes per psd_binning_recommendation.md. Whole-distribution median diameter is DROPPED from cross-soil claims (resolution-confounded). >=290um used as practical >300um boundary (nearest available log-bin edge, 288.54um).",
+  "A_univariate": {
+    "porosity": {
+      "metric": "porosity",
+      "label": "Porosity",
+      "shapiro_W": 0.8377908286851383,
+      "shapiro_p": 0.0013082287487818235,
+      "levene_W": 2.5863541720368786,
+      "levene_p": 0.09905846766546593,
+      "assumptions_ok": "False",
+      "test": "Kruskal-Wallis",
+      "statistic": 9.064999999999998,
+      "df_between": 2,
+      "df_within": null,
+      "p": 0.01075375804411683,
+      "effect_size_name": "epsilon^2",
+      "effect_size": 0.3364285714285713,
+      "posthoc": "Dunn (Holm-corrected)",
+      "pairwise": [
+        {
+          "group1": "bnei_reem",
+          "group2": "mishmar",
+          "p_adj": 0.19314550684085174,
+          "reject": false
+        },
+        {
+          "group1": "bnei_reem",
+          "group2": "rehovot",
+          "p_adj": 0.007962088078447026,
+          "reject": true
+        },
+        {
+          "group1": "mishmar",
+          "group2": "rehovot",
+          "p_adj": 0.19314550684085174,
+          "reject": false
+        }
+      ],
+      "letters": {
+        "bnei_reem": "a",
+        "mishmar": "ab",
+        "rehovot": "b"
+      },
+      "group_stats": {
+        "bnei_reem": {
+          "mean": 0.2208654351851852,
+          "se": 0.0324970278792613,
+          "n": 8
+        },
+        "mishmar": {
+          "mean": 0.27667817927981186,
+          "se": 0.01585864764408823,
+          "n": 8
+        },
+        "rehovot": {
+          "mean": 0.3086566712962963,
+          "se": 0.0073017626876413335,
+          "n": 8
+        }
+      }
+    },
+    "frac31_150_of_total": {
+      "metric": "frac31_150_of_total",
+      "label": "31-150um class porosity (microbially active)",
+      "shapiro_W": 0.887664039794304,
+      "shapiro_p": 0.011897109951183978,
+      "levene_W": 8.845936190935404,
+      "levene_p": 0.0016341625544298568,
+      "assumptions_ok": "False",
+      "test": "Kruskal-Wallis",
+      "statistic": 15.605000000000004,
+      "df_between": 2,
+      "df_within": null,
+      "p": 0.0004087119208877943,
+      "effect_size_name": "epsilon^2",
+      "effect_size": 0.647857142857143,
+      "posthoc": "Dunn (Holm-corrected)",
+      "pairwise": [
+        {
+          "group1": "bnei_reem",
+          "group2": "mishmar",
+          "p_adj": 0.0033033309074764145,
+          "reject": true
+        },
+        {
+          "group1": "bnei_reem",
+          "group2": "rehovot",
+          "p_adj": 0.0008128467578990377,
+          "reject": true
+        },
+        {
+          "group1": "mishmar",
+          "group2": "rehovot",
+          "p_adj": 0.6206179464376897,
+          "reject": false
+        }
+      ],
+      "letters": {
+        "bnei_reem": "b",
+        "mishmar": "a",
+        "rehovot": "a"
+      },
+      "group_stats": {
+        "bnei_reem": {
+          "mean": 0.09301359976642642,
+          "se": 0.003970267514247665,
+          "n": 8
+        },
+        "mishmar": {
+          "mean": 0.2037658417902127,
+          "se": 0.01916522813434074,
+          "n": 8
+        },
+        "rehovot": {
+          "mean": 0.2163793719214275,
+          "se": 0.004049613168260184,
+          "n": 8
+        }
+      },
+      "omnibus_p_holm_family": 0.0004087119208877943
+    },
+    "frac150_290_of_total": {
+      "metric": "frac150_290_of_total",
+      "label": "150-290um class porosity (transmission)",
+      "shapiro_W": 0.9455532456125663,
+      "shapiro_p": 0.21661660092259954,
+      "levene_W": 0.09156112799626309,
+      "levene_p": 0.9128677853738149,
+      "assumptions_ok": "True",
+      "test": "one-way ANOVA",
+      "statistic": 18.44898389900305,
+      "df_between": 2,
+      "df_within": 21,
+      "p": 2.3732185302382612e-05,
+      "effect_size_name": "eta^2",
+      "effect_size": 0.6372929690163806,
+      "posthoc": "Tukey HSD",
+      "pairwise": [
+        {
+          "group1": "bnei_reem",
+          "group2": "mishmar",
+          "p_adj": 0.0145,
+          "reject": true
+        },
+        {
+          "group1": "bnei_reem",
+          "group2": "rehovot",
+          "p_adj": 0.0188,
+          "reject": true
+        },
+        {
+          "group1": "mishmar",
+          "group2": "rehovot",
+          "p_adj": 0.0,
+          "reject": true
+        }
+      ],
+      "letters": {
+        "bnei_reem": "b",
+        "mishmar": "a",
+        "rehovot": "c"
+      },
+      "group_stats": {
+        "bnei_reem": {
+          "mean": 0.054996036378895885,
+          "se": 0.006720171242479608,
+          "n": 8
+        },
+        "mishmar": {
+          "mean": 0.02209136664638536,
+          "se": 0.008786157771599856,
+          "n": 8
+        },
+        "rehovot": {
+          "mean": 0.08666273387517856,
+          "se": 0.006867542224826211,
+          "n": 8
+        }
+      },
+      "omnibus_p_holm_family": 7.119655590714783e-05
+    },
+    "fracGE290_of_total": {
+      "metric": "fracGE290_of_total",
+      "label": ">=290um class porosity (large macropores/biopores/cracks)",
+      "shapiro_W": 0.5705805013650613,
+      "shapiro_p": 2.948354332966992e-07,
+      "levene_W": 4.794507210016932,
+      "levene_p": 0.019269258835168557,
+      "assumptions_ok": "False",
+      "test": "Kruskal-Wallis",
+      "statistic": 19.36419213973799,
+      "df_between": 2,
+      "df_within": null,
+      "p": 6.239059158307414e-05,
+      "effect_size_name": "epsilon^2",
+      "effect_size": 0.8268662923684758,
+      "posthoc": "Dunn (Holm-corrected)",
+      "pairwise": [
+        {
+          "group1": "bnei_reem",
+          "group2": "mishmar",
+          "p_adj": 3.344299698522778e-05,
+          "reject": true
+        },
+        {
+          "group1": "bnei_reem",
+          "group2": "rehovot",
+          "p_adj": 0.03195697048519286,
+          "reject": true
+        },
+        {
+          "group1": "mishmar",
+          "group2": "rehovot",
+          "p_adj": 0.047231631715800186,
+          "reject": true
+        }
+      ],
+      "letters": {
+        "bnei_reem": "b",
+        "mishmar": "a",
+        "rehovot": "c"
+      },
+      "group_stats": {
+        "bnei_reem": {
+          "mean": 0.07285579903986286,
+          "se": 0.02891740223746565,
+          "n": 8
+        },
+        "mishmar": {
+          "mean": 0.0008618848295840103,
+          "se": 0.00040492076576276664,
+          "n": 8
+        },
+        "rehovot": {
+          "mean": 0.005614565499690239,
+          "se": 0.0009092950312098146,
+          "n": 8
+        }
+      },
+      "omnibus_p_holm_family": 0.0001247811831661483
+    }
+  },
+  "A_sensitivity_60_150": {
+    "metric": "frac60_150_of_total",
+    "label": "60-150um class porosity (sensitivity re-test, >=4 voxels @15um)",
+    "shapiro_W": 0.8043109814413179,
+    "shapiro_p": 0.00034675814756258576,
+    "levene_W": 2.6100344799201016,
+    "levene_p": 0.09719577438289885,
+    "assumptions_ok": "False",
+    "test": "Kruskal-Wallis",
+    "statistic": 15.920000000000002,
+    "df_between": 2,
+    "df_within": null,
+    "p": 0.00034915311745982593,
+    "effect_size_name": "epsilon^2",
+    "effect_size": 0.6628571428571429,
+    "posthoc": "Dunn (Holm-corrected)",
+    "pairwise": [
+      {
+        "group1": "bnei_reem",
+        "group2": "mishmar",
+        "p_adj": 0.11979493042591832,
+        "reject": false
+      },
+      {
+        "group1": "bnei_reem",
+        "group2": "rehovot",
+        "p_adj": 0.00022503958399637728,
+        "reject": true
+      },
+      {
+        "group1": "mishmar",
+        "group2": "rehovot",
+        "p_adj": 0.03241908281845088,
+        "reject": true
+      }
+    ],
+    "letters": {
+      "bnei_reem": "a",
+      "mishmar": "a",
+      "rehovot": "b"
+    },
+    "group_stats": {
+      "bnei_reem": {
+        "mean": 0.08223938702650807,
+        "se": 0.0036125657545851256,
+        "n": 8
+      },
+      "mishmar": {
+        "mean": 0.1203438368798361,
+        "se": 0.014737988529118432,
+        "n": 8
+      },
+      "rehovot": {
+        "mean": 0.20757148366728045,
+        "se": 0.004005651581359579,
+        "n": 8
+      }
+    }
+  },
+  "B_permanova_3class": {
+    "omnibus": {
+      "pseudo_F": 12.648543786567192,
+      "R2": 0.5464077526080489,
+      "p": 0.0001,
+      "df_among": 2,
+      "df_within": 21,
+      "n_perm": 9999
+    },
+    "pairwise": [
+      {
+        "group1": "bnei_reem",
+        "group2": "mishmar",
+        "pseudo_F": 16.331290768009495,
+        "R2": 0.5384304576063133,
+        "p": 0.0003,
+        "df_among": 1,
+        "df_within": 14,
+        "n_perm": 9999,
+        "p_adj_holm": 0.0006000000000000001
+      },
+      {
+        "group1": "bnei_reem",
+        "group2": "rehovot",
+        "pseudo_F": 34.21507389198903,
+        "R2": 0.7096343763495483,
+        "p": 0.0002,
+        "df_among": 1,
+        "df_within": 14,
+        "n_perm": 9999,
+        "p_adj_holm": 0.0006000000000000001
+      },
+      {
+        "group1": "mishmar",
+        "group2": "rehovot",
+        "pseudo_F": 7.882345853597345,
+        "R2": 0.3602148465403917,
+        "p": 0.0105,
+        "df_among": 1,
+        "df_within": 14,
+        "n_perm": 9999,
+        "p_adj_holm": 0.0105
+      }
+    ],
+    "cols": [
+      "frac31_150_of_total",
+      "frac150_290_of_total",
+      "fracGE290_of_total"
+    ],
+    "transform": "CLR + Euclidean (compositional)"
+  }
+}
