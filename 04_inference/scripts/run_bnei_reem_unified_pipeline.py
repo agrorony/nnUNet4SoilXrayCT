@@ -961,10 +961,10 @@ def stage_d_report(state: Dict[str, Any]) -> str:
     A("")
 
     text = "\n".join(L) + "\n"
-    for dest in (REPO_DIR / REPORT_NAME, HIVE_BASE / REPORT_NAME):
+    for dest in (REPO_DIR / "00_docs" / "reports" / REPORT_NAME, HIVE_BASE / REPORT_NAME):
         dest.write_text(text, encoding="utf-8")
         log(f"  wrote {dest}")
-    state["report_paths"] = [str(REPO_DIR / REPORT_NAME), str(HIVE_BASE / REPORT_NAME)]
+    state["report_paths"] = [str(REPO_DIR / "00_docs" / "reports" / REPORT_NAME), str(HIVE_BASE / REPORT_NAME)]
     save_state(state)
     return text
 
