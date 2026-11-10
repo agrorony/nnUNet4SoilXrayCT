@@ -17,7 +17,8 @@ import tifffile
 from raw_volume_io import list_zslices, center_range
 
 HERE = Path(__file__).resolve().parent
-RUN_DIR = HERE.parent
+# Data (input and output volumes) is not in git. It stays in this run folder on the lab computer.
+RUN_DIR = HERE.parents[3] / "05_evaluation" / "psd" / "pom_analysis_20260829_roi_expansion"
 
 
 def main() -> None:

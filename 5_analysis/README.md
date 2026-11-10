@@ -1,6 +1,6 @@
 # 5_analysis: which script produces which result
 
-Every structural result in the write-up comes from one of the folders below. All of them work on the final segmentations listed in the root `README.md` (pore = 5, POM = 2; Rehovot = boolean Otsu mask).
+Every structural result in the write-up comes from one of the folders below. All of them work on the final segmentations listed in the root `README.md` (pore = 5, POM = 2; Rehovot = boolean Otsu mask). Cross-soil comparisons use the Loess scans at ~15 µm; those volumes are made in `4_inference/loess/resolution_matching_15um/`.
 
 The input volumes are not in git; the root README says where they live. Figures are drawn from these outputs by `6_figures/write_up_figures/` (graph numbers below are the write-up's).
 

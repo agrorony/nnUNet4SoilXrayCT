@@ -122,7 +122,7 @@ def main() -> None:
         }
         print()
 
-    out_path = Path(__file__).resolve().parent.parent / "part1_margin_report.json"
+    out_path = Path(__file__).resolve().parents[4] / "05_evaluation" / "psd" / "pom_analysis_20260829_roi_expansion" / "part1_margin_report.json"  # run folder on the lab computer
     with out_path.open("w", encoding="utf-8") as fh:
         json.dump(report, fh, indent=2)
     print(f"Wrote {out_path}")

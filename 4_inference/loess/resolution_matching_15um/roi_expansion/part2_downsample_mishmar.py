@@ -22,8 +22,9 @@ import nibabel as nib
 import numpy as np
 
 HERE = Path(__file__).resolve().parent
-RUN_DIR = HERE.parent
-sys.path.insert(0, str(RUN_DIR.parent / "pom_analysis_20260824_ablation" / "scripts"))
+# Data (input and output volumes) is not in git. It stays in this run folder on the lab computer.
+RUN_DIR = HERE.parents[3] / "05_evaluation" / "psd" / "pom_analysis_20260829_roi_expansion"
+sys.path.insert(0, str(HERE.parent / "label_downsample_for_pom"))
 from downsample_common import compute_block_edges, block_majority_labels, achieved_voxel_um  # noqa: E402
 
 PORE_LABEL, POM_LABEL = 5, 2

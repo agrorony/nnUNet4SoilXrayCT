@@ -1,13 +1,14 @@
-"""Part A -- mishmar_label_downsample.
+"""Part 2 (second replicate) -- mishmar_label_downsample_2.
 
-Majority-vote block-downsample the EXISTING, already-validated Mishmar
-native segmentation (5.85um, pore=5/POM=2) to ~15.0um, sanity-check the
-pore/POM fractions before running anything expensive, then (if the sanity
-check passes) run the full A1/A2/A3/B POM pipeline on the result.
+Majority-vote block-downsample the second physical Mishmar volume
+(mishmar_hanegev_maoz_2_8p8um, native 8.8um, already segmented with the
+existing i2_loess model and sanity-checked in Part 0/1: POM 1.6431%, pore
+22.9840% -- both plausible, no collapse) to ~15.0um, sanity-check again
+after downsampling, then run the full A1/A2/A3/B POM pipeline.
 
-This replaces the failed 2026-08-23 mishmar_15um branch (a different
-physical sample that produced a collapsed, implausible POM fraction) with a
-clean computational ablation on the SAME physical core as mishmar_native.
+Mirrors pom_analysis_20260824_ablation/scripts/step1_label_downsample.py
+(same downsample_common.py helpers, same run_full_pom_pipeline logic) but
+generalized to this volume's own 8.8um source voxel size instead of 5.85um.
 """
 from __future__ import annotations
 
@@ -26,29 +27,32 @@ from scipy import ndimage as ndi
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from downsample_common import block_majority_labels, compute_block_edges, achieved_voxel_um  # noqa: E402
 
-sys.path.insert(0, str(Path(__file__).resolve().parents[2]))  # .../05_evaluation/psd
+sys.path.insert(0, str(Path(__file__).resolve().parents[4] / "5_analysis" / "shared_code"))
 from psd_topology_metrics import get_percolating_mask  # noqa: E402
 
-OUT_ROOT = Path(__file__).resolve().parents[1]
+# Data (input and output volumes) is not in git. It stays in its run folder on the lab computer.
+OUT_ROOT = Path(__file__).resolve().parents[4] / "05_evaluation" / "psd" / "pom_analysis_20260824_replicates"
 BORDER_WIDTH = 1
 CUTOFFS = (2, 8, 27)
 STRUCT_26 = np.ones((3, 3, 3), dtype=np.uint8)
 STRUCT_FACE = ndi.generate_binary_structure(3, 1)
 
-SOIL_KEY = "mishmar_label_downsample"
+SOIL_KEY = "mishmar_label_downsample_2"
 SOURCE_PATH = (
     r"\\hive3065\Yael_Mishael\Rony\remote_computer backup\nnUNet_resources"
-    r"\mishmar_hanegev_maoz_3_5p85um\inference_output_concat_loess_i2\mishmar_hanegev_maoz_3_5p85um.nii.gz"
+    r"\mishmar_hanegev_maoz_2_8p8um\inference_output_concat_loess_i2\mishmar_hanegev_maoz_2_8p8um.nii.gz"
 )
-SOURCE_VOXEL_UM = 5.85
+SOURCE_VOXEL_UM = 8.8
 TARGET_VOXEL_UM = 15.000149
 PORE_LABEL, POM_LABEL = 5, 2
 VALID_LABELS = [0, 1, 2, 5]
 
-# Reference: native Mishmar (5.85um) fractions, from pom_analysis_20260815/mishmar/summary_pom_metrics.json
-NATIVE_MISHMAR_POM_PCT = 1.6146797
-NATIVE_MISHMAR_PORE_PCT = 27.0384653
-POM_COLLAPSE_FLOOR_PCT = 0.3  # prompt's explicit stop-and-flag threshold
+# Reference: this volume's own native-resolution (8.8um) fractions, verified
+# in Part 0 discovery -- POM 1.6431%, pore 22.9840%, both plausible (no
+# collapse pattern like Cu011_samp_2's 0.120%).
+NATIVE_8P8_POM_PCT = 1.6431
+NATIVE_8P8_PORE_PCT = 22.9840
+POM_COLLAPSE_FLOOR_PCT = 0.3  # same explicit stop-and-flag threshold as the ablation run
 
 
 def log(msg: str) -> None:
@@ -354,7 +358,7 @@ def main() -> None:
     pore_pct = 100 * n_pore / n_total
     pom_pct = 100 * n_pom / n_total
     log(f"  downsampled pore={n_pore:,} ({pore_pct:.3f}%)  pom={n_pom:,} ({pom_pct:.3f}%)")
-    log(f"  reference: native Mishmar (5.85um) pore={NATIVE_MISHMAR_PORE_PCT:.3f}%  pom={NATIVE_MISHMAR_POM_PCT:.3f}%")
+    log(f"  reference: this sample's own native (8.8um) pore={NATIVE_8P8_PORE_PCT:.3f}%  pom={NATIVE_8P8_POM_PCT:.3f}%")
 
     sanity = {
         "branch": SOIL_KEY,
@@ -364,8 +368,8 @@ def main() -> None:
         "unique_labels": uniq_ds.tolist(),
         "pore_voxel_fraction_pct": pore_pct,
         "pom_voxel_fraction_pct": pom_pct,
-        "native_mishmar_pore_voxel_fraction_pct": NATIVE_MISHMAR_PORE_PCT,
-        "native_mishmar_pom_voxel_fraction_pct": NATIVE_MISHMAR_POM_PCT,
+        "native_8p8um_pore_voxel_fraction_pct": NATIVE_8P8_PORE_PCT,
+        "native_8p8um_pom_voxel_fraction_pct": NATIVE_8P8_POM_PCT,
         "pom_collapse_floor_pct": POM_COLLAPSE_FLOOR_PCT,
         "pom_collapsed": bool(pom_pct < POM_COLLAPSE_FLOOR_PCT),
     }
@@ -386,7 +390,7 @@ def main() -> None:
     nib.save(nib.Nifti1Image(ds.astype(np.uint8), affine=np.eye(4)), str(nii_path))
     log(f"  wrote {nii_path}")
 
-    label = f"Mishmar HaNegev (Loess) -- label-downsampled to {v_um:.2f}um (majority vote, from native 5.85um)"
+    label = f"Mishmar HaNegev (Loess) -- 2nd physical sample (8.8um native), label-downsampled to {v_um:.2f}um"
     run_full_pom_pipeline(ds, v_um, out_dir, label, source_desc=f"downsampled from {SOURCE_PATH}")
     log("=== DONE ===")
 

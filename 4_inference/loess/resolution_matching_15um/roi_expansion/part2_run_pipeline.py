@@ -20,11 +20,12 @@ import numpy as np
 import tifffile
 
 HERE = Path(__file__).resolve().parent
-RUN_DIR = HERE.parent
+# Data (input and output volumes) is not in git. It stays in this run folder on the lab computer.
+RUN_DIR = HERE.parents[3] / "05_evaluation" / "psd" / "pom_analysis_20260829_roi_expansion"
 REPO_DIR = RUN_DIR.parents[2]  # .../nnUNet4SoilXrayCT
-FILTERS_DIR = REPO_DIR / "02_preprocessing" / "filters"
-NNUNET_DIR = REPO_DIR / "02_preprocessing" / "nnunet"
-CONCAT_SCRIPT = REPO_DIR / "04_inference" / "postprocessing_nnUNet_predict_concatenate.py"
+FILTERS_DIR = REPO_DIR / "2_preprocessing" / "denoise_normalize"
+NNUNET_DIR = REPO_DIR / "2_preprocessing" / "nnunet_dataset"
+CONCAT_SCRIPT = REPO_DIR / "4_inference" / "postprocessing_nnUNet_predict_concatenate.py"
 HIVE_BASE = Path(r"\\hive3065\Yael_Mishael\Rony\remote_computer backup\nnUNet_resources")
 
 PORE_LABEL, POM_LABEL = 5, 2
