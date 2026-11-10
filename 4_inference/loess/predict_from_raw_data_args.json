@@ -1,0 +1,11 @@
+{
+    "folder_with_segs_from_prev_stage": null,
+    "list_of_lists_or_source_folder": "//hive3065/Yael_Mishael/Rony/remote_computer backup/nnUNet_resources/mishmar_hanegev_maoz_3_5p85um/inference_input",
+    "num_parts": 1,
+    "num_processes_preprocessing": 1,
+    "num_processes_segmentation_export": 1,
+    "output_folder_or_list_of_truncated_output_files": "//hive3065/Yael_Mishael/Rony/remote_computer backup/nnUNet_resources/mishmar_hanegev_maoz_3_5p85um/inference_output_scratch_i2",
+    "overwrite": true,
+    "part_id": 0,
+    "save_probabilities": false
+}

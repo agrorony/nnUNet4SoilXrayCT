@@ -1,0 +1,11 @@
+{
+  "range": {
+    "min": 2.2301715612411503,
+    "max": 906.4473876953124
+  },
+  "repeat_bins": 475,
+  "low_count_bins": 15,
+  "spikes": 11,
+  "mode": "real",
+  "run_name": "bnei_reem_sub_00_z12_y12_x13"
+}
