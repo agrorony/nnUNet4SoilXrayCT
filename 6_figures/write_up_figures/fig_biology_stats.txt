@@ -1,0 +1,9 @@
+post-hoc: Fisher's LSD; qCO2 window: d11-15
+Fig1a cumulative day15 means [139.0, 605.0, 372.6] F(2,8)=28.99 p < 0.001 eta2=0.88 letters ['a', 'c', 'b']
+Fig1b days 1–3 means [18.5, 28.4, 31.7] F(2,8)=2.91 p = 0.112 letters ['a', 'a', 'a']
+Fig1b days 4–7 means [6.7, 38.8, 25.6] F(2,8)=24.47 p < 0.001 letters ['a', 'c', 'b']
+Fig1b days 8–10 means [13.7, 43.0, 24.7] F(2,8)=29.88 p < 0.001 letters ['a', 'c', 'b']
+Fig1b days 11–15 means [3.2, 47.1, 20.2] F(2,8)=52.31 p < 0.001 letters ['a', 'c', 'b']
+Fig2 Cmic means [315.572, 406.61, 199.444] SE [35.9, 21.773, 6.905] F(2,9)=17.87 p < 0.001 eta2=0.80 letters ['b', 'c', 'a']
+Fig2 qCO2 d11-15 means [0.555, 4.877, 4.241] SE [0.505, 0.309, 0.929] F(2,8)=10.99 p = 0.005 eta2=0.73 letters ['a', 'b', 'b']
+Fig2 Cmic/Corg means [1.996, 1.442, 2.055] SE [0.227, 0.077, 0.071] F(2,9)=5.49 p = 0.028 eta2=0.55 letters ['b', 'a', 'b']

@@ -100,3 +100,21 @@ nnUNet_results/
 !00_docs/literature/REFERENCES.md
 05_evaluation/psd/vogel_psd.pdf
 /dor2025_fig1a_reference.png
+
+# 2026-11 restructure. The rules above still name the old paths on purpose: on the lab
+# computer the untracked run outputs stay where they were, and must stay ignored.
+docs/literature/*
+!docs/literature/REFERENCES.md
+2_preprocessing/denoise_normalize/nlm_output/
+2_preprocessing/denoise_normalize/norm200_output/
+2_preprocessing/denoise_normalize/_tmp_center_crop/
+3_training/training_plots/training_diagnostics/
+6_figures/write_up_figures/out/
+6_figures/write_up_figures/lab_data/
+6_figures/write_up_figures/sim/
+__pycache__/
+*.nii.gz
+*.npy
+*.npz
+*.tif
+*.tiff

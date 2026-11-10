@@ -1,0 +1,82 @@
+[
+  {
+    "subvolume_id": "sub_00_z35_y35_x35",
+    "npy_path": "C:\\Users\\rony.schwartz\\Documents\\nnUNet4SoilXrayCT\\05_evaluation\\psd\\psd_A2_reanalysis_20260822\\mishmar_downsample\\subvolumes_15um\\sub_00_z35_y35_x35_15um.npy",
+    "edge_voxels_in": 430,
+    "edge_voxels_out": 168,
+    "actual_voxel_um": 14.973214285714286,
+    "porosity_before_5p85um": 0.3527213704453696,
+    "porosity_after_15um": 0.35196215142803156,
+    "porosity_delta": -0.0007592190173380531
+  },
+  {
+    "subvolume_id": "sub_01_z35_y35_x535",
+    "npy_path": "C:\\Users\\rony.schwartz\\Documents\\nnUNet4SoilXrayCT\\05_evaluation\\psd\\psd_A2_reanalysis_20260822\\mishmar_downsample\\subvolumes_15um\\sub_01_z35_y35_x535_15um.npy",
+    "edge_voxels_in": 430,
+    "edge_voxels_out": 168,
+    "actual_voxel_um": 14.973214285714286,
+    "porosity_before_5p85um": 0.297159369615254,
+    "porosity_after_15um": 0.2963367886837275,
+    "porosity_delta": -0.0008225809315265398
+  },
+  {
+    "subvolume_id": "sub_02_z35_y535_x35",
+    "npy_path": "C:\\Users\\rony.schwartz\\Documents\\nnUNet4SoilXrayCT\\05_evaluation\\psd\\psd_A2_reanalysis_20260822\\mishmar_downsample\\subvolumes_15um\\sub_02_z35_y535_x35_15um.npy",
+    "edge_voxels_in": 430,
+    "edge_voxels_out": 168,
+    "actual_voxel_um": 14.973214285714286,
+    "porosity_before_5p85um": 0.27877523991598224,
+    "porosity_after_15um": 0.27810994189342403,
+    "porosity_delta": -0.0006652980225582139
+  },
+  {
+    "subvolume_id": "sub_03_z35_y535_x535",
+    "npy_path": "C:\\Users\\rony.schwartz\\Documents\\nnUNet4SoilXrayCT\\05_evaluation\\psd\\psd_A2_reanalysis_20260822\\mishmar_downsample\\subvolumes_15um\\sub_03_z35_y535_x535_15um.npy",
+    "edge_voxels_in": 430,
+    "edge_voxels_out": 168,
+    "actual_voxel_um": 14.973214285714286,
+    "porosity_before_5p85um": 0.3059856239073289,
+    "porosity_after_15um": 0.30536891095724006,
+    "porosity_delta": -0.0006167129500888602
+  },
+  {
+    "subvolume_id": "sub_04_z535_y35_x35",
+    "npy_path": "C:\\Users\\rony.schwartz\\Documents\\nnUNet4SoilXrayCT\\05_evaluation\\psd\\psd_A2_reanalysis_20260822\\mishmar_downsample\\subvolumes_15um\\sub_04_z535_y35_x35_15um.npy",
+    "edge_voxels_in": 430,
+    "edge_voxels_out": 168,
+    "actual_voxel_um": 14.973214285714286,
+    "porosity_before_5p85um": 0.2557130441344787,
+    "porosity_after_15um": 0.2548015113783609,
+    "porosity_delta": -0.0009115327561178277
+  },
+  {
+    "subvolume_id": "sub_05_z535_y35_x535",
+    "npy_path": "C:\\Users\\rony.schwartz\\Documents\\nnUNet4SoilXrayCT\\05_evaluation\\psd\\psd_A2_reanalysis_20260822\\mishmar_downsample\\subvolumes_15um\\sub_05_z535_y35_x535_15um.npy",
+    "edge_voxels_in": 430,
+    "edge_voxels_out": 168,
+    "actual_voxel_um": 14.973214285714286,
+    "porosity_before_5p85um": 0.24479116304224785,
+    "porosity_after_15um": 0.24378694930353093,
+    "porosity_delta": -0.0010042137387169248
+  },
+  {
+    "subvolume_id": "sub_06_z535_y535_x35",
+    "npy_path": "C:\\Users\\rony.schwartz\\Documents\\nnUNet4SoilXrayCT\\05_evaluation\\psd\\psd_A2_reanalysis_20260822\\mishmar_downsample\\subvolumes_15um\\sub_06_z535_y535_x35_15um.npy",
+    "edge_voxels_in": 430,
+    "edge_voxels_out": 168,
+    "actual_voxel_um": 14.973214285714286,
+    "porosity_before_5p85um": 0.27617944331945615,
+    "porosity_after_15um": 0.2753191306284419,
+    "porosity_delta": -0.0008603126910142755
+  },
+  {
+    "subvolume_id": "sub_07_z535_y535_x535",
+    "npy_path": "C:\\Users\\rony.schwartz\\Documents\\nnUNet4SoilXrayCT\\05_evaluation\\psd\\psd_A2_reanalysis_20260822\\mishmar_downsample\\subvolumes_15um\\sub_07_z535_y535_x535_15um.npy",
+    "edge_voxels_in": 430,
+    "edge_voxels_out": 168,
+    "actual_voxel_um": 14.973214285714286,
+    "porosity_before_5p85um": 0.20210017985837725,
+    "porosity_after_15um": 0.20101496699870425,
+    "porosity_delta": -0.0010852128596730015
+  }
+]

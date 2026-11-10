@@ -1,0 +1,8 @@
+Gamma: logit(G) ~ porosity, slope=19.05, R2=0.91
+V mean residual -0.14 | Gamma/porosity 4.47
+L mean residual -0.12 | Gamma/porosity 3.88
+S mean residual 0.32 | Gamma/porosity 2.84
+Tortuosity: log(tau) ~ log(porosity), n=163, slope=-1.88, R2=0.62
+Vertisol mean residual (log units) 0.16 n 47
+Loess mean residual (log units) -0.22 n 68
+Sand mean residual (log units) 0.16 n 48
