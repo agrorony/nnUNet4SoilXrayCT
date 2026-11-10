@@ -8,7 +8,7 @@ The write-up has been submitted. This repository is in its final hand-off state 
 
 | Folder | Contents |
 |---|---|
-| `00_docs/` | Project records: [`prompts/`](00_docs/prompts) (agent prompts that drove each analysis step), [`reports/`](00_docs/reports) (findings and results write-ups, incl. the hand-off report), [`reorg_2026-07/`](00_docs/reorg_2026-07) (repo reorganisation records), the upstream UFZ tutorial, figures |
+| `00_docs/` | Project records: [`prompts/`](00_docs/prompts) (agent prompts that drove each analysis step), [`reports/`](00_docs/reports) (findings and results write-ups, incl. the hand-off report), [`reorg_2026-07/`](00_docs/reorg_2026-07) (repo reorganisation records), [`literature/REFERENCES.md`](00_docs/literature/REFERENCES.md) (every paper used for the analysis; PDFs kept locally, not in git), the upstream UFZ tutorial, figures |
 | `01_data_ingestion/` | Annotation tool (`make_annotations.py`, napari) and the data registry (`registry/data_registry.json`) |
 | `02_preprocessing/` | nnU-Net dataset preparation, split-for-inference, and the norm200 + CUDA non-local-means (NLM) filter branch (`filters/`) |
 | `03_training/` | Custom trainer `nnUNetTrainer_betterIgnoreSampling.py`, training run configs (`run_configs/*.yaml`) and drivers |
@@ -101,4 +101,4 @@ The respiration simulation model (appendix A of the write-up): <https://github.c
 
 Schwartz, R. (2026). *Research exercise, Hebrew University of Jerusalem.* Advisors: Prof. Y. Mishael and Dr. M. Dor.
 
-Please also cite nnU-Net (Isensee et al., 2021) and the UFZ pipeline this fork builds on (Phalempin et al., 2025); the full references are in [`RESOURCES.md`](RESOURCES.md).
+Please also cite nnU-Net (Isensee et al., 2021) and the UFZ pipeline this fork builds on (Phalempin et al., 2025); the full references are in [`RESOURCES.md`](RESOURCES.md). The complete list of papers behind the analysis is in [`00_docs/literature/REFERENCES.md`](00_docs/literature/REFERENCES.md).

@@ -96,6 +96,7 @@ nnUNet_results/
 
 # 2026-11 hand-off: third-party papers/figures added in this fork (not in the
 # upstream parent). Kept on disk, not tracked. Still present in earlier history.
-00_docs/literature/
+00_docs/literature/*
+!00_docs/literature/REFERENCES.md
 05_evaluation/psd/vogel_psd.pdf
 /dor2025_fig1a_reference.png
