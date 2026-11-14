@@ -67,17 +67,17 @@ Sampling dates (all specimens); the canonical volume's raw reconstruction, scan 
 
 ## Disagreements between documents (reported, not resolved)
 
-1. `dataset_info.json` (annotation space: 6 = Pore) vs the deployed models' `dataset.json` (5 = Pore, 2 = POM). Consistent through `mask_to_nnUNet()`, but misleading; the README now explains it.
+1. `dataset_info.json` (annotation space: 6 = Pore) vs the deployed models' `dataset.json` (5 = Pore, 2 = POM). Consistent through `mask_to_nnUNet()`, but misleading; the README now explains it. **Explained (follow-up, 2026-11-14):** not a disagreement. nnU-Net maps annotation 0 (unlabelled) to the ignore label and shifts every other class down by one, so `dataset_info.json` (annotation space) is one higher than the predictions by design.
 2. `docs/ct_scan_parameters_findings.md` says the ROI-expanded volumes were used only for the retired clustering, but the matched-resolution Track E runs (`psd_diag_20260902T*_label_downsample_15um` configs) and the 2026-10-04 tortuosity used the ROI-expanded label-downsamples.
 3. `mishmar_hanegev_maoz_3_5p85um_scratch.yaml` lists the same annotation file as `…_loess_i2.yaml`, while the registry says loess_i2 used *new* 2-slice annotations (z 715–716). The YAMLs are flagged as reconstructed and unverified (`VERIFIED.md`).
 4. `DATA_CATALOG.md` still points canonical's location at `Z:\Rony\…` (not mapped); the README gives the `E:`/UNC equivalents.
 
 ## Flags for Rony before sending the ZIP
 
-1. **Segmentations are flipped on axis 1 relative to their images** (checked on one nnU-Net segmentation per volume, 7 files: r ≈ −0.8 only after flipping; identical affines). Otsu masks have reversed axes. Packaged unchanged; every README and napari snippet says so. Metrics are unaffected, but anyone overlaying image and labels must flip.
-2. `07_lab_data_and_writeup/` is a placeholder: add the submitted write-up and the lab data (respiration, Cmic, quotients, Table 1) if Maoz should have them. The ZIP would then need rebuilding (`MANIFEST.csv` and the `.sha256` would change).
-3. Three volumes are UNVERIFIED (no inference log) and the Rehovot samp3 Otsu mask is UNVERIFIED (timestamp). The evidence is consistent; say so to Maoz rather than calling them verified.
-4. Vertisol "canonical" specimen label is still unresolved; every Vertisol POM result depends on it.
+1. **Segmentations are flipped on axis 1 relative to their images** (checked on one nnU-Net segmentation per volume, 7 files: r ≈ −0.8 only after flipping; identical affines). Otsu masks have reversed axes. Packaged unchanged; every README and napari snippet says so. Metrics are unaffected, but anyone overlaying image and labels must flip. **Resolved in the follow-up (2026-11-10):** all 16 segmentations in the package (including the 15 µm label-downsamples and both Otsu masks) were checked and re-oriented to their images in v2 of the ZIP; see `docs/HANDOFF_FOLLOWUP_2026-11.md`, Part B.
+2. `07_lab_data_and_writeup/` is a placeholder: add the submitted write-up and the lab data (respiration, Cmic, quotients, Table 1) if Maoz should have them. The ZIP would then need rebuilding (`MANIFEST.csv` and the `.sha256` would change). **Resolved in the follow-up (2026-11-14):** the lab data is in v2 (`07_lab_data_and_writeup/`); the write-up itself is still not included.
+3. Three volumes are UNVERIFIED (no inference log) and the Rehovot samp3 Otsu mask is UNVERIFIED (timestamp). The evidence is consistent; say so to Maoz rather than calling them verified. **Resolved in the follow-up (2026-11-10):** all four reproduced (re-inference ≥ 99.9988 % voxel agreement; Otsu mask identical) and are VERIFIED; see `docs/HANDOFF_FOLLOWUP_2026-11.md`, Part C.
+4. Vertisol "canonical" specimen label is still unresolved; every Vertisol POM result depends on it. **Resolved in the follow-up (2026-11-14):** Specimen B (raw core `18.12.25 bnei_reem_samp_2.0`), legacy processing (April 2026). Source of all Vertisol POM results. See `docs/HANDOFF_FOLLOWUP_2026-11.md`, Part D.
 5. Third-party files are still in the public repo history (incl. `dor2025_fig1a_reference.png`, pushed today). Removing them needs a history rewrite and force-push: your call.
 6. A render README notes "HIVE3065 60-day retention applies" to share folders. If that covers `nnUNet_resources` or the raw scans, the ZIP may become the only copy of some files.
 7. All NIfTI headers store a voxel size of 1 × 1 × 1. Physical sizes are in the READMEs only.

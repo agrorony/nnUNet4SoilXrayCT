@@ -1,0 +1,2 @@
+bnei_reem_specB_unified target (650, 650, 650) | best perm [2, 1, 0] flip axes [] r8 0.99997 off8 (0, 0, 0) | refined [0, 0, 0] r 0.999929 overlap 274625000 | 2nd best r8 0.3566 | max|r| 8x 1.0
+bnei_reem_specA_unified target (650, 650, 650) | best perm [1, 2, 0] flip axes [0, 2] r8 0.17045 off8 (7, 18, 24) | refined [69, 155, 206] r 0.140308 overlap 127692180 | 2nd best r8 0.1549 | max|r| 8x 0.1704

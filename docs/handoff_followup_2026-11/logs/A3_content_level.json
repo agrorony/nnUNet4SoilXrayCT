@@ -1,0 +1,6622 @@
+{
+ "image": {
+  "legend": [
+   "0: `Cu011_samp_2/img` (650, 650, 822)",
+   "1: `Rehovot_samp2_highkV_Cu0.11_15um/img` (650, 650, 650)",
+   "2: `Rehovot_samp3_highkV_Cu0.11_15um/img` (650, 650, 650)",
+   "3: `bnei_reem_fresh_bnei_reem_i4/img.tif` (652, 650, 650)",
+   "4: `bnei_reem_specA_unified/img` (650, 650, 650)",
+   "5: `bnei_reem_specB_unified/img` (650, 650, 650)",
+   "6: `mishmar_hanegev_maoz_2_8p8um/img` (1000, 1000, 1000)",
+   "7: `mishmar_hanegev_maoz_3_5p85um/img` (1000, 1000, 1000)",
+   "8: `bnei_reem_i4/imagesTr/nlm_volume_0000` (650, 650, 99)",
+   "9: `mishmar_loess_i2/imagesTr/mishmar_hanegev_maoz_3_5p85um_0000` (1000, 1000, 98)"
+  ],
+  "matrix_md": [
+   "| | 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 |",
+   "|---|---|---|---|---|---|---|---|---|---|---|",
+   "| 0 | \u2014 | n/c | n/c | n/c | n/c | n/c | n/c | n/c | n/c | n/c |",
+   "| 1 | n/c | \u2014 | 0.0122 | n/c | 0.0022 | 0.0205 | n/c | n/c | n/c | n/c |",
+   "| 2 | n/c | 0.0122 | \u2014 | n/c | 0.0009 | 0.0051 | n/c | n/c | n/c | n/c |",
+   "| 3 | n/c | n/c | n/c | \u2014 | n/c | n/c | n/c | n/c | n/c | n/c |",
+   "| 4 | n/c | 0.0022 | 0.0009 | n/c | \u2014 | -0.0120 | n/c | n/c | n/c | n/c |",
+   "| 5 | n/c | 0.0205 | 0.0051 | n/c | -0.0120 | \u2014 | n/c | n/c | n/c | n/c |",
+   "| 6 | n/c | n/c | n/c | n/c | n/c | n/c | \u2014 | 0.0638 | n/c | n/c |",
+   "| 7 | n/c | n/c | n/c | n/c | n/c | n/c | 0.0638 | \u2014 | n/c | n/c |",
+   "| 8 | n/c | n/c | n/c | n/c | n/c | n/c | n/c | n/c | \u2014 | n/c |",
+   "| 9 | n/c | n/c | n/c | n/c | n/c | n/c | n/c | n/c | n/c | \u2014 |"
+  ],
+  "strict": [
+   {
+    "a": "01_volumes/Rehovot_samp2_highkV_Cu0.11_15um/image_preprocessed.nii.gz",
+    "b": "01_volumes/Rehovot_samp3_highkV_Cu0.11_15um/image_preprocessed.nii.gz",
+    "score": 0.01220369897412518
+   },
+   {
+    "a": "01_volumes/Rehovot_samp2_highkV_Cu0.11_15um/image_preprocessed.nii.gz",
+    "b": "01_volumes/bnei_reem_specA_unified/image_preprocessed.nii.gz",
+    "score": 0.002153768170836958
+   },
+   {
+    "a": "01_volumes/Rehovot_samp2_highkV_Cu0.11_15um/image_preprocessed.nii.gz",
+    "b": "01_volumes/bnei_reem_specB_unified/image_preprocessed.nii.gz",
+    "score": 0.020517362994835787
+   },
+   {
+    "a": "01_volumes/Rehovot_samp3_highkV_Cu0.11_15um/image_preprocessed.nii.gz",
+    "b": "01_volumes/bnei_reem_specA_unified/image_preprocessed.nii.gz",
+    "score": 0.0009155874711564872
+   },
+   {
+    "a": "01_volumes/Rehovot_samp3_highkV_Cu0.11_15um/image_preprocessed.nii.gz",
+    "b": "01_volumes/bnei_reem_specB_unified/image_preprocessed.nii.gz",
+    "score": 0.00505631972018535
+   },
+   {
+    "a": "01_volumes/bnei_reem_specA_unified/image_preprocessed.nii.gz",
+    "b": "01_volumes/bnei_reem_specB_unified/image_preprocessed.nii.gz",
+    "score": -0.012049878281483092
+   },
+   {
+    "a": "01_volumes/mishmar_hanegev_maoz_2_8p8um/image_preprocessed.nii.gz",
+    "b": "01_volumes/mishmar_hanegev_maoz_3_5p85um/image_preprocessed.nii.gz",
+    "score": 0.06376826164384326
+   }
+  ],
+  "searched": [
+   {
+    "a": "01_volumes/Rehovot_samp2_highkV_Cu0.11_15um/image_preprocessed.nii.gz",
+    "b": "01_volumes/Rehovot_samp3_highkV_Cu0.11_15um/image_preprocessed.nii.gz",
+    "best": {
+     "score": 0.01665503261457689,
+     "perm": [
+      1,
+      0,
+      2
+     ],
+     "flips": [
+      true,
+      true,
+      false
+     ],
+     "off_a": [
+      0,
+      0,
+      0
+     ],
+     "off_b": [
+      0,
+      0,
+      0
+     ]
+    },
+    "identity": {
+     "score": 0.0123406590916357,
+     "perm": [
+      0,
+      1,
+      2
+     ],
+     "flips": [
+      false,
+      false,
+      false
+     ],
+     "off_a": [
+      0,
+      0,
+      0
+     ],
+     "off_b": [
+      0,
+      0,
+      0
+     ]
+    }
+   },
+   {
+    "a": "01_volumes/Rehovot_samp2_highkV_Cu0.11_15um/image_preprocessed.nii.gz",
+    "b": "01_volumes/bnei_reem_fresh_bnei_reem_i4/image_preprocessed.tif",
+    "best": {
+     "score": 0.043372905402164166,
+     "perm": [
+      1,
+      2,
+      0
+     ],
+     "flips": [
+      true,
+      true,
+      true
+     ],
+     "off_a": [
+      0,
+      0,
+      0
+     ],
+     "off_b": [
+      0,
+      0,
+      0
+     ]
+    },
+    "identity": {
+     "score": 0.006870060180611368,
+     "perm": [
+      0,
+      1,
+      2
+     ],
+     "flips": [
+      false,
+      false,
+      false
+     ],
+     "off_a": [
+      0,
+      0,
+      0
+     ],
+     "off_b": [
+      0,
+      0,
+      0
+     ]
+    }
+   },
+   {
+    "a": "01_volumes/Rehovot_samp2_highkV_Cu0.11_15um/image_preprocessed.nii.gz",
+    "b": "01_volumes/bnei_reem_specA_unified/image_preprocessed.nii.gz",
+    "best": {
+     "score": -0.013329113267846237,
+     "perm": [
+      0,
+      2,
+      1
+     ],
+     "flips": [
+      true,
+      true,
+      false
+     ],
+     "off_a": [
+      0,
+      0,
+      0
+     ],
+     "off_b": [
+      0,
+      0,
+      0
+     ]
+    },
+    "identity": {
+     "score": 0.002297769631835398,
+     "perm": [
+      0,
+      1,
+      2
+     ],
+     "flips": [
+      false,
+      false,
+      false
+     ],
+     "off_a": [
+      0,
+      0,
+      0
+     ],
+     "off_b": [
+      0,
+      0,
+      0
+     ]
+    }
+   },
+   {
+    "a": "01_volumes/Rehovot_samp2_highkV_Cu0.11_15um/image_preprocessed.nii.gz",
+    "b": "01_volumes/bnei_reem_specB_unified/image_preprocessed.nii.gz",
+    "best": {
+     "score": 0.04332899800701167,
+     "perm": [
+      1,
+      0,
+      2
+     ],
+     "flips": [
+      true,
+      true,
+      true
+     ],
+     "off_a": [
+      0,
+      0,
+      0
+     ],
+     "off_b": [
+      0,
+      0,
+      0
+     ]
+    },
+    "identity": {
+     "score": 0.02071689781810819,
+     "perm": [
+      0,
+      1,
+      2
+     ],
+     "flips": [
+      false,
+      false,
+      false
+     ],
+     "off_a": [
+      0,
+      0,
+      0
+     ],
+     "off_b": [
+      0,
+      0,
+      0
+     ]
+    }
+   },
+   {
+    "a": "01_volumes/Rehovot_samp3_highkV_Cu0.11_15um/image_preprocessed.nii.gz",
+    "b": "01_volumes/bnei_reem_fresh_bnei_reem_i4/image_preprocessed.tif",
+    "best": {
+     "score": 0.0388248777626128,
+     "perm": [
+      2,
+      1,
+      0
+     ],
+     "flips": [
+      false,
+      true,
+      true
+     ],
+     "off_a": [
+      0,
+      0,
+      0
+     ],
+     "off_b": [
+      0,
+      0,
+      0
+     ]
+    },
+    "identity": {
+     "score": 0.0011989379336346479,
+     "perm": [
+      0,
+      1,
+      2
+     ],
+     "flips": [
+      false,
+      false,
+      false
+     ],
+     "off_a": [
+      0,
+      0,
+      0
+     ],
+     "off_b": [
+      0,
+      0,
+      0
+     ]
+    }
+   },
+   {
+    "a": "01_volumes/Rehovot_samp3_highkV_Cu0.11_15um/image_preprocessed.nii.gz",
+    "b": "01_volumes/bnei_reem_specA_unified/image_preprocessed.nii.gz",
+    "best": {
+     "score": -0.02020093856011436,
+     "perm": [
+      0,
+      2,
+      1
+     ],
+     "flips": [
+      true,
+      true,
+      true
+     ],
+     "off_a": [
+      0,
+      0,
+      0
+     ],
+     "off_b": [
+      0,
+      0,
+      0
+     ]
+    },
+    "identity": {
+     "score": 0.0011311669074972274,
+     "perm": [
+      0,
+      1,
+      2
+     ],
+     "flips": [
+      false,
+      false,
+      false
+     ],
+     "off_a": [
+      0,
+      0,
+      0
+     ],
+     "off_b": [
+      0,
+      0,
+      0
+     ]
+    }
+   },
+   {
+    "a": "01_volumes/Rehovot_samp3_highkV_Cu0.11_15um/image_preprocessed.nii.gz",
+    "b": "01_volumes/bnei_reem_specB_unified/image_preprocessed.nii.gz",
+    "best": {
+     "score": 0.03847886523166447,
+     "perm": [
+      0,
+      1,
+      2
+     ],
+     "flips": [
+      false,
+      true,
+      true
+     ],
+     "off_a": [
+      0,
+      0,
+      0
+     ],
+     "off_b": [
+      0,
+      0,
+      0
+     ]
+    },
+    "identity": {
+     "score": 0.0053658641593481516,
+     "perm": [
+      0,
+      1,
+      2
+     ],
+     "flips": [
+      false,
+      false,
+      false
+     ],
+     "off_a": [
+      0,
+      0,
+      0
+     ],
+     "off_b": [
+      0,
+      0,
+      0
+     ]
+    }
+   },
+   {
+    "a": "01_volumes/bnei_reem_fresh_bnei_reem_i4/image_preprocessed.tif",
+    "b": "01_volumes/bnei_reem_specA_unified/image_preprocessed.nii.gz",
+    "best": {
+     "score": -0.056356242967593846,
+     "perm": [
+      1,
+      0,
+      2
+     ],
+     "flips": [
+      true,
+      true,
+      true
+     ],
+     "off_a": [
+      2,
+      0,
+      0
+     ],
+     "off_b": [
+      0,
+      0,
+      0
+     ]
+    },
+    "identity": {
+     "score": -0.030461113381853953,
+     "perm": [
+      0,
+      1,
+      2
+     ],
+     "flips": [
+      false,
+      false,
+      false
+     ],
+     "off_a": [
+      0,
+      0,
+      0
+     ],
+     "off_b": [
+      0,
+      0,
+      0
+     ]
+    }
+   },
+   {
+    "a": "01_volumes/bnei_reem_fresh_bnei_reem_i4/image_preprocessed.tif",
+    "b": "01_volumes/bnei_reem_specB_unified/image_preprocessed.nii.gz",
+    "best": {
+     "score": 0.9999328130935222,
+     "perm": [
+      2,
+      1,
+      0
+     ],
+     "flips": [
+      false,
+      false,
+      false
+     ],
+     "off_a": [
+      0,
+      0,
+      0
+     ],
+     "off_b": [
+      0,
+      0,
+      0
+     ]
+    },
+    "identity": {
+     "score": 0.1334332088317127,
+     "perm": [
+      0,
+      1,
+      2
+     ],
+     "flips": [
+      false,
+      false,
+      false
+     ],
+     "off_a": [
+      0,
+      0,
+      0
+     ],
+     "off_b": [
+      0,
+      0,
+      0
+     ]
+    }
+   },
+   {
+    "a": "01_volumes/bnei_reem_specA_unified/image_preprocessed.nii.gz",
+    "b": "01_volumes/bnei_reem_specB_unified/image_preprocessed.nii.gz",
+    "best": {
+     "score": -0.05574502873500143,
+     "perm": [
+      1,
+      2,
+      0
+     ],
+     "flips": [
+      true,
+      true,
+      true
+     ],
+     "off_a": [
+      0,
+      0,
+      0
+     ],
+     "off_b": [
+      0,
+      0,
+      0
+     ]
+    },
+    "identity": {
+     "score": -0.011869206375077962,
+     "perm": [
+      0,
+      1,
+      2
+     ],
+     "flips": [
+      false,
+      false,
+      false
+     ],
+     "off_a": [
+      0,
+      0,
+      0
+     ],
+     "off_b": [
+      0,
+      0,
+      0
+     ]
+    }
+   },
+   {
+    "a": "01_volumes/mishmar_hanegev_maoz_2_8p8um/image_preprocessed.nii.gz",
+    "b": "01_volumes/mishmar_hanegev_maoz_3_5p85um/image_preprocessed.nii.gz",
+    "best": {
+     "score": 0.06406092349560955,
+     "perm": [
+      0,
+      1,
+      2
+     ],
+     "flips": [
+      false,
+      false,
+      false
+     ],
+     "off_a": [
+      0,
+      0,
+      0
+     ],
+     "off_b": [
+      0,
+      0,
+      0
+     ]
+    },
+    "identity": {
+     "score": 0.06406092349560955,
+     "perm": [
+      0,
+      1,
+      2
+     ],
+     "flips": [
+      false,
+      false,
+      false
+     ],
+     "off_a": [
+      0,
+      0,
+      0
+     ],
+     "off_b": [
+      0,
+      0,
+      0
+     ]
+    }
+   }
+  ]
+ },
+ "seg": {
+  "legend": [
+   "0: `Cu011_samp_2/segmentation` (650, 650, 822) pore=5",
+   "1: `Rehovot_samp2_highkV_Cu0.11_15um/segmentation_nnunet_bnei_reem_i4` (650, 650, 650) pore=5",
+   "2: `Rehovot_samp2_highkV_Cu0.11_15um/segmentation_nnunet_loess_i2` (650, 650, 650) pore=5",
+   "3: `Rehovot_samp2_highkV_Cu0.11_15um/segmentation_otsu.npy` (650, 650, 650) pore=1",
+   "4: `Rehovot_samp3_highkV_Cu0.11_15um/segmentation_nnunet_bnei_reem_i4` (650, 650, 650) pore=5",
+   "5: `Rehovot_samp3_highkV_Cu0.11_15um/segmentation_nnunet_loess_i2` (650, 650, 650) pore=5",
+   "6: `Rehovot_samp3_highkV_Cu0.11_15um/segmentation_otsu.npy` (650, 650, 650) pore=1",
+   "7: `bnei_reem_fresh_bnei_reem_i4/segmentation` (650, 650, 652) pore=5",
+   "8: `bnei_reem_specA_unified/segmentation` (650, 650, 650) pore=5",
+   "9: `bnei_reem_specB_unified/segmentation` (650, 650, 650) pore=5",
+   "10: `mishmar_hanegev_maoz_2_8p8um/segmentation` (1000, 1000, 1000) pore=5",
+   "11: `mishmar_hanegev_maoz_2_8p8um/segmentation_15um_pom` (587, 587, 587) pore=5",
+   "12: `mishmar_hanegev_maoz_2_8p8um/segmentation_15um_trackE` (947, 947, 947) pore=5",
+   "13: `mishmar_hanegev_maoz_3_5p85um/segmentation` (1000, 1000, 1000) pore=5",
+   "14: `mishmar_hanegev_maoz_3_5p85um/segmentation_15um_pom` (390, 390, 390) pore=5",
+   "15: `mishmar_hanegev_maoz_3_5p85um/segmentation_15um_trackE` (474, 474, 474) pore=5",
+   "16: `bnei_reem_i4/labelsTr/nlm_volume` (650, 650, 99) pore=5",
+   "17: `bnei_reem_i4//annotations_i2` (650, 650, 652) pore=6",
+   "18: `bnei_reem_i4//annotations_i3` (650, 650, 652) pore=6",
+   "19: `bnei_reem_i4//fine_tuning_annotations` (650, 650, 652) pore=6",
+   "20: `bnei_reem_i4//POM_GT` (650, 650, 652) pore=6",
+   "21: `bnei_reem_i4//less_reliable_solid_pores_GT` (650, 650, 652) pore=6",
+   "22: `bnei_reem_i4//merged_GT` (650, 650, 652) pore=6",
+   "23: `mishmar_loess_i2/labelsTr/mishmar_hanegev_maoz_3_5p85um` (1000, 1000, 98) pore=5",
+   "24: `mishmar_loess_i2//mishmar_hanegev_maoz_3_5p85um-1` (1000, 1000, 1000) pore=6",
+   "25: `mishmar_loess_i2//mishmar_hanegev_maoz_3_5p85um` (1000, 1000, 1000) pore=6",
+   "26: `bnei_reem_i4/validation/nlm_volume` (650, 650, 99) pore=5",
+   "27: `mishmar_loess_i2/validation/mishmar_hanegev_maoz_3_5p85um` (1000, 1000, 98) pore=5"
+  ],
+  "matrix_md": [
+   "| | 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 | 14 | 15 | 16 | 17 | 18 | 19 | 20 | 21 | 22 | 23 | 24 | 25 | 26 | 27 |",
+   "|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|",
+   "| 0 | \u2014 | n/c | n/c | n/c | n/c | n/c | n/c | n/c | n/c | n/c | n/c | n/c | n/c | n/c | n/c | n/c | n/c | n/c | n/c | n/c | n/c | n/c | n/c | n/c | n/c | n/c | n/c | n/c |",
+   "| 1 | n/c | \u2014 | 0.9581 | 0.2897 | 0.3198 | 0.3237 | 0.3278 | n/c | 0.1935 | 0.2464 | n/c | n/c | n/c | n/c | n/c | n/c | n/c | n/c | n/c | n/c | n/c | n/c | n/c | n/c | n/c | n/c | n/c | n/c |",
+   "| 2 | n/c | 0.9581 | \u2014 | 0.2907 | 0.3213 | 0.3253 | 0.3292 | n/c | 0.1946 | 0.2468 | n/c | n/c | n/c | n/c | n/c | n/c | n/c | n/c | n/c | n/c | n/c | n/c | n/c | n/c | n/c | n/c | n/c | n/c |",
+   "| 3 | n/c | 0.2897 | 0.2907 | \u2014 | 0.3397 | 0.3443 | 0.3529 | n/c | 0.2033 | 0.2610 | n/c | n/c | n/c | n/c | n/c | n/c | n/c | n/c | n/c | n/c | n/c | n/c | n/c | n/c | n/c | n/c | n/c | n/c |",
+   "| 4 | n/c | 0.3198 | 0.3213 | 0.3397 | \u2014 | 0.9703 | 0.3968 | n/c | 0.2153 | 0.2783 | n/c | n/c | n/c | n/c | n/c | n/c | n/c | n/c | n/c | n/c | n/c | n/c | n/c | n/c | n/c | n/c | n/c | n/c |",
+   "| 5 | n/c | 0.3237 | 0.3253 | 0.3443 | 0.9703 | \u2014 | 0.4025 | n/c | 0.2174 | 0.2812 | n/c | n/c | n/c | n/c | n/c | n/c | n/c | n/c | n/c | n/c | n/c | n/c | n/c | n/c | n/c | n/c | n/c | n/c |",
+   "| 6 | n/c | 0.3278 | 0.3292 | 0.3529 | 0.3968 | 0.4025 | \u2014 | n/c | 0.2243 | 0.2889 | n/c | n/c | n/c | n/c | n/c | n/c | n/c | n/c | n/c | n/c | n/c | n/c | n/c | n/c | n/c | n/c | n/c | n/c |",
+   "| 7 | n/c | n/c | n/c | n/c | n/c | n/c | n/c | \u2014 | n/c | n/c | n/c | n/c | n/c | n/c | n/c | n/c | n/c | 0.0076 | 0.0104 | 0.0015 | 0.0000 | 0.0054 | 0.0054 | n/c | n/c | n/c | n/c | n/c |",
+   "| 8 | n/c | 0.1935 | 0.1946 | 0.2033 | 0.2153 | 0.2174 | 0.2243 | n/c | \u2014 | 0.1678 | n/c | n/c | n/c | n/c | n/c | n/c | n/c | n/c | n/c | n/c | n/c | n/c | n/c | n/c | n/c | n/c | n/c | n/c |",
+   "| 9 | n/c | 0.2464 | 0.2468 | 0.2610 | 0.2783 | 0.2812 | 0.2889 | n/c | 0.1678 | \u2014 | n/c | n/c | n/c | n/c | n/c | n/c | n/c | n/c | n/c | n/c | n/c | n/c | n/c | n/c | n/c | n/c | n/c | n/c |",
+   "| 10 | n/c | n/c | n/c | n/c | n/c | n/c | n/c | n/c | n/c | n/c | \u2014 | n/c | n/c | 0.2635 | n/c | n/c | n/c | n/c | n/c | n/c | n/c | n/c | n/c | n/c | 0.0002 | 0.0010 | n/c | n/c |",
+   "| 11 | n/c | n/c | n/c | n/c | n/c | n/c | n/c | n/c | n/c | n/c | n/c | \u2014 | n/c | n/c | n/c | n/c | n/c | n/c | n/c | n/c | n/c | n/c | n/c | n/c | n/c | n/c | n/c | n/c |",
+   "| 12 | n/c | n/c | n/c | n/c | n/c | n/c | n/c | n/c | n/c | n/c | n/c | n/c | \u2014 | n/c | n/c | n/c | n/c | n/c | n/c | n/c | n/c | n/c | n/c | n/c | n/c | n/c | n/c | n/c |",
+   "| 13 | n/c | n/c | n/c | n/c | n/c | n/c | n/c | n/c | n/c | n/c | 0.2635 | n/c | n/c | \u2014 | n/c | n/c | n/c | n/c | n/c | n/c | n/c | n/c | n/c | n/c | 0.0004 | 0.0009 | n/c | n/c |",
+   "| 14 | n/c | n/c | n/c | n/c | n/c | n/c | n/c | n/c | n/c | n/c | n/c | n/c | n/c | n/c | \u2014 | n/c | n/c | n/c | n/c | n/c | n/c | n/c | n/c | n/c | n/c | n/c | n/c | n/c |",
+   "| 15 | n/c | n/c | n/c | n/c | n/c | n/c | n/c | n/c | n/c | n/c | n/c | n/c | n/c | n/c | n/c | \u2014 | n/c | n/c | n/c | n/c | n/c | n/c | n/c | n/c | n/c | n/c | n/c | n/c |",
+   "| 16 | n/c | n/c | n/c | n/c | n/c | n/c | n/c | n/c | n/c | n/c | n/c | n/c | n/c | n/c | n/c | n/c | \u2014 | n/c | n/c | n/c | n/c | n/c | n/c | n/c | n/c | n/c | 0.0368 | n/c |",
+   "| 17 | n/c | n/c | n/c | n/c | n/c | n/c | n/c | 0.0076 | n/c | n/c | n/c | n/c | n/c | n/c | n/c | n/c | n/c | \u2014 | 0.8777 | 0.0000 | 0.0000 | 0.8263 | 0.8320 | n/c | n/c | n/c | n/c | n/c |",
+   "| 18 | n/c | n/c | n/c | n/c | n/c | n/c | n/c | 0.0104 | n/c | n/c | n/c | n/c | n/c | n/c | n/c | n/c | n/c | 0.8777 | \u2014 | 0.2079 | 0.0000 | 0.7102 | 0.7155 | n/c | n/c | n/c | n/c | n/c |",
+   "| 19 | n/c | n/c | n/c | n/c | n/c | n/c | n/c | 0.0015 | n/c | n/c | n/c | n/c | n/c | n/c | n/c | n/c | n/c | 0.0000 | 0.2079 | \u2014 | 0.0000 | 0.0000 | 0.0000 | n/c | n/c | n/c | n/c | n/c |",
+   "| 20 | n/c | n/c | n/c | n/c | n/c | n/c | n/c | 0.0000 | n/c | n/c | n/c | n/c | n/c | n/c | n/c | n/c | n/c | 0.0000 | 0.0000 | 0.0000 | \u2014 | 0.0000 | 0.0000 | n/c | n/c | n/c | n/c | n/c |",
+   "| 21 | n/c | n/c | n/c | n/c | n/c | n/c | n/c | 0.0054 | n/c | n/c | n/c | n/c | n/c | n/c | n/c | n/c | n/c | 0.8263 | 0.7102 | 0.0000 | 0.0000 | \u2014 | 0.9941 | n/c | n/c | n/c | n/c | n/c |",
+   "| 22 | n/c | n/c | n/c | n/c | n/c | n/c | n/c | 0.0054 | n/c | n/c | n/c | n/c | n/c | n/c | n/c | n/c | n/c | 0.8320 | 0.7155 | 0.0000 | 0.0000 | 0.9941 | \u2014 | n/c | n/c | n/c | n/c | n/c |",
+   "| 23 | n/c | n/c | n/c | n/c | n/c | n/c | n/c | n/c | n/c | n/c | n/c | n/c | n/c | n/c | n/c | n/c | n/c | n/c | n/c | n/c | n/c | n/c | n/c | \u2014 | n/c | n/c | n/c | 0.0368 |",
+   "| 24 | n/c | n/c | n/c | n/c | n/c | n/c | n/c | n/c | n/c | n/c | 0.0002 | n/c | n/c | 0.0004 | n/c | n/c | n/c | n/c | n/c | n/c | n/c | n/c | n/c | n/c | \u2014 | 0.0000 | n/c | n/c |",
+   "| 25 | n/c | n/c | n/c | n/c | n/c | n/c | n/c | n/c | n/c | n/c | 0.0010 | n/c | n/c | 0.0009 | n/c | n/c | n/c | n/c | n/c | n/c | n/c | n/c | n/c | n/c | 0.0000 | \u2014 | n/c | n/c |",
+   "| 26 | n/c | n/c | n/c | n/c | n/c | n/c | n/c | n/c | n/c | n/c | n/c | n/c | n/c | n/c | n/c | n/c | 0.0368 | n/c | n/c | n/c | n/c | n/c | n/c | n/c | n/c | n/c | \u2014 | n/c |",
+   "| 27 | n/c | n/c | n/c | n/c | n/c | n/c | n/c | n/c | n/c | n/c | n/c | n/c | n/c | n/c | n/c | n/c | n/c | n/c | n/c | n/c | n/c | n/c | n/c | 0.0368 | n/c | n/c | n/c | \u2014 |"
+  ],
+  "strict": [
+   {
+    "a": "01_volumes/Rehovot_samp2_highkV_Cu0.11_15um/segmentation_nnunet_bnei_reem_i4.nii.gz",
+    "b": "01_volumes/Rehovot_samp2_highkV_Cu0.11_15um/segmentation_nnunet_loess_i2.nii.gz",
+    "score": 0.9581053846234808
+   },
+   {
+    "a": "01_volumes/Rehovot_samp2_highkV_Cu0.11_15um/segmentation_nnunet_bnei_reem_i4.nii.gz",
+    "b": "01_volumes/Rehovot_samp2_highkV_Cu0.11_15um/segmentation_otsu.npy",
+    "score": 0.2896741349740016
+   },
+   {
+    "a": "01_volumes/Rehovot_samp2_highkV_Cu0.11_15um/segmentation_nnunet_bnei_reem_i4.nii.gz",
+    "b": "01_volumes/Rehovot_samp3_highkV_Cu0.11_15um/segmentation_nnunet_bnei_reem_i4.nii.gz",
+    "score": 0.3198436487977098
+   },
+   {
+    "a": "01_volumes/Rehovot_samp2_highkV_Cu0.11_15um/segmentation_nnunet_bnei_reem_i4.nii.gz",
+    "b": "01_volumes/Rehovot_samp3_highkV_Cu0.11_15um/segmentation_nnunet_loess_i2.nii.gz",
+    "score": 0.3236540601674898
+   },
+   {
+    "a": "01_volumes/Rehovot_samp2_highkV_Cu0.11_15um/segmentation_nnunet_bnei_reem_i4.nii.gz",
+    "b": "01_volumes/Rehovot_samp3_highkV_Cu0.11_15um/segmentation_otsu.npy",
+    "score": 0.3278450347460845
+   },
+   {
+    "a": "01_volumes/Rehovot_samp2_highkV_Cu0.11_15um/segmentation_nnunet_bnei_reem_i4.nii.gz",
+    "b": "01_volumes/bnei_reem_specA_unified/segmentation.nii.gz",
+    "score": 0.1934864789189313
+   },
+   {
+    "a": "01_volumes/Rehovot_samp2_highkV_Cu0.11_15um/segmentation_nnunet_bnei_reem_i4.nii.gz",
+    "b": "01_volumes/bnei_reem_specB_unified/segmentation.nii.gz",
+    "score": 0.24642852294317194
+   },
+   {
+    "a": "01_volumes/Rehovot_samp2_highkV_Cu0.11_15um/segmentation_nnunet_loess_i2.nii.gz",
+    "b": "01_volumes/Rehovot_samp2_highkV_Cu0.11_15um/segmentation_otsu.npy",
+    "score": 0.29073085606951865
+   },
+   {
+    "a": "01_volumes/Rehovot_samp2_highkV_Cu0.11_15um/segmentation_nnunet_loess_i2.nii.gz",
+    "b": "01_volumes/Rehovot_samp3_highkV_Cu0.11_15um/segmentation_nnunet_bnei_reem_i4.nii.gz",
+    "score": 0.32133596596009867
+   },
+   {
+    "a": "01_volumes/Rehovot_samp2_highkV_Cu0.11_15um/segmentation_nnunet_loess_i2.nii.gz",
+    "b": "01_volumes/Rehovot_samp3_highkV_Cu0.11_15um/segmentation_nnunet_loess_i2.nii.gz",
+    "score": 0.32529434185083655
+   },
+   {
+    "a": "01_volumes/Rehovot_samp2_highkV_Cu0.11_15um/segmentation_nnunet_loess_i2.nii.gz",
+    "b": "01_volumes/Rehovot_samp3_highkV_Cu0.11_15um/segmentation_otsu.npy",
+    "score": 0.3291766201524805
+   },
+   {
+    "a": "01_volumes/Rehovot_samp2_highkV_Cu0.11_15um/segmentation_nnunet_loess_i2.nii.gz",
+    "b": "01_volumes/bnei_reem_specA_unified/segmentation.nii.gz",
+    "score": 0.194556803299359
+   },
+   {
+    "a": "01_volumes/Rehovot_samp2_highkV_Cu0.11_15um/segmentation_nnunet_loess_i2.nii.gz",
+    "b": "01_volumes/bnei_reem_specB_unified/segmentation.nii.gz",
+    "score": 0.24679071085249307
+   },
+   {
+    "a": "01_volumes/Rehovot_samp2_highkV_Cu0.11_15um/segmentation_otsu.npy",
+    "b": "01_volumes/Rehovot_samp3_highkV_Cu0.11_15um/segmentation_nnunet_bnei_reem_i4.nii.gz",
+    "score": 0.33974027957977104
+   },
+   {
+    "a": "01_volumes/Rehovot_samp2_highkV_Cu0.11_15um/segmentation_otsu.npy",
+    "b": "01_volumes/Rehovot_samp3_highkV_Cu0.11_15um/segmentation_nnunet_loess_i2.nii.gz",
+    "score": 0.34429868816004344
+   },
+   {
+    "a": "01_volumes/Rehovot_samp2_highkV_Cu0.11_15um/segmentation_otsu.npy",
+    "b": "01_volumes/Rehovot_samp3_highkV_Cu0.11_15um/segmentation_otsu.npy",
+    "score": 0.3528880584124734
+   },
+   {
+    "a": "01_volumes/Rehovot_samp2_highkV_Cu0.11_15um/segmentation_otsu.npy",
+    "b": "01_volumes/bnei_reem_specA_unified/segmentation.nii.gz",
+    "score": 0.20331951452194258
+   },
+   {
+    "a": "01_volumes/Rehovot_samp2_highkV_Cu0.11_15um/segmentation_otsu.npy",
+    "b": "01_volumes/bnei_reem_specB_unified/segmentation.nii.gz",
+    "score": 0.26096011119491164
+   },
+   {
+    "a": "01_volumes/Rehovot_samp3_highkV_Cu0.11_15um/segmentation_nnunet_bnei_reem_i4.nii.gz",
+    "b": "01_volumes/Rehovot_samp3_highkV_Cu0.11_15um/segmentation_nnunet_loess_i2.nii.gz",
+    "score": 0.9703380268667526
+   },
+   {
+    "a": "01_volumes/Rehovot_samp3_highkV_Cu0.11_15um/segmentation_nnunet_bnei_reem_i4.nii.gz",
+    "b": "01_volumes/Rehovot_samp3_highkV_Cu0.11_15um/segmentation_otsu.npy",
+    "score": 0.3967841651387574
+   },
+   {
+    "a": "01_volumes/Rehovot_samp3_highkV_Cu0.11_15um/segmentation_nnunet_bnei_reem_i4.nii.gz",
+    "b": "01_volumes/bnei_reem_specA_unified/segmentation.nii.gz",
+    "score": 0.2152637483026635
+   },
+   {
+    "a": "01_volumes/Rehovot_samp3_highkV_Cu0.11_15um/segmentation_nnunet_bnei_reem_i4.nii.gz",
+    "b": "01_volumes/bnei_reem_specB_unified/segmentation.nii.gz",
+    "score": 0.2783396332464885
+   },
+   {
+    "a": "01_volumes/Rehovot_samp3_highkV_Cu0.11_15um/segmentation_nnunet_loess_i2.nii.gz",
+    "b": "01_volumes/Rehovot_samp3_highkV_Cu0.11_15um/segmentation_otsu.npy",
+    "score": 0.40245228711257636
+   },
+   {
+    "a": "01_volumes/Rehovot_samp3_highkV_Cu0.11_15um/segmentation_nnunet_loess_i2.nii.gz",
+    "b": "01_volumes/bnei_reem_specA_unified/segmentation.nii.gz",
+    "score": 0.21739713282767023
+   },
+   {
+    "a": "01_volumes/Rehovot_samp3_highkV_Cu0.11_15um/segmentation_nnunet_loess_i2.nii.gz",
+    "b": "01_volumes/bnei_reem_specB_unified/segmentation.nii.gz",
+    "score": 0.28123486880793247
+   },
+   {
+    "a": "01_volumes/Rehovot_samp3_highkV_Cu0.11_15um/segmentation_otsu.npy",
+    "b": "01_volumes/bnei_reem_specA_unified/segmentation.nii.gz",
+    "score": 0.22428922920142294
+   },
+   {
+    "a": "01_volumes/Rehovot_samp3_highkV_Cu0.11_15um/segmentation_otsu.npy",
+    "b": "01_volumes/bnei_reem_specB_unified/segmentation.nii.gz",
+    "score": 0.2888559553694759
+   },
+   {
+    "a": "01_volumes/bnei_reem_fresh_bnei_reem_i4/segmentation.nii.gz",
+    "b": "02_annotations/bnei_reem_i4/original_annotations/annotations_i2.nii.gz",
+    "score": 0.007577408668287196
+   },
+   {
+    "a": "01_volumes/bnei_reem_fresh_bnei_reem_i4/segmentation.nii.gz",
+    "b": "02_annotations/bnei_reem_i4/original_annotations/annotations_i3.nii.gz",
+    "score": 0.010418012654685085
+   },
+   {
+    "a": "01_volumes/bnei_reem_fresh_bnei_reem_i4/segmentation.nii.gz",
+    "b": "02_annotations/bnei_reem_i4/original_annotations/fine_tuning_annotations.nii.gz",
+    "score": 0.0015471471612968515
+   },
+   {
+    "a": "01_volumes/bnei_reem_fresh_bnei_reem_i4/segmentation.nii.gz",
+    "b": "02_annotations/bnei_reem_i4/registry_merged_GT/POM_GT.nii.gz",
+    "score": 0.0
+   },
+   {
+    "a": "01_volumes/bnei_reem_fresh_bnei_reem_i4/segmentation.nii.gz",
+    "b": "02_annotations/bnei_reem_i4/registry_merged_GT/less_reliable_solid_pores_GT.nii.gz",
+    "score": 0.005404605705417362
+   },
+   {
+    "a": "01_volumes/bnei_reem_fresh_bnei_reem_i4/segmentation.nii.gz",
+    "b": "02_annotations/bnei_reem_i4/registry_merged_GT/merged_GT.nii.gz",
+    "score": 0.005425651976602802
+   },
+   {
+    "a": "01_volumes/bnei_reem_specA_unified/segmentation.nii.gz",
+    "b": "01_volumes/bnei_reem_specB_unified/segmentation.nii.gz",
+    "score": 0.1677790313236428
+   },
+   {
+    "a": "01_volumes/mishmar_hanegev_maoz_2_8p8um/segmentation.nii.gz",
+    "b": "01_volumes/mishmar_hanegev_maoz_3_5p85um/segmentation.nii.gz",
+    "score": 0.26349757000724994
+   },
+   {
+    "a": "01_volumes/mishmar_hanegev_maoz_2_8p8um/segmentation.nii.gz",
+    "b": "02_annotations/mishmar_loess_i2/original_annotations/mishmar_hanegev_maoz_3_5p85um-1.nii.gz",
+    "score": 0.0002468508781494
+   },
+   {
+    "a": "01_volumes/mishmar_hanegev_maoz_2_8p8um/segmentation.nii.gz",
+    "b": "02_annotations/mishmar_loess_i2/original_annotations/mishmar_hanegev_maoz_3_5p85um.nii.gz",
+    "score": 0.0009779768759575836
+   },
+   {
+    "a": "01_volumes/mishmar_hanegev_maoz_3_5p85um/segmentation.nii.gz",
+    "b": "02_annotations/mishmar_loess_i2/original_annotations/mishmar_hanegev_maoz_3_5p85um-1.nii.gz",
+    "score": 0.00040468192866653196
+   },
+   {
+    "a": "01_volumes/mishmar_hanegev_maoz_3_5p85um/segmentation.nii.gz",
+    "b": "02_annotations/mishmar_loess_i2/original_annotations/mishmar_hanegev_maoz_3_5p85um.nii.gz",
+    "score": 0.0009224515820703147
+   },
+   {
+    "a": "02_annotations/bnei_reem_i4/nnUNet_raw_Dataset777_GCEF/labelsTr/nlm_volume.nii.gz",
+    "b": "03_models/bnei_reem_i4/nnUNetTrainer_betterIgnoreSampling_earlyStopValLoss_lowlr__nnUNetPlans__3d_fullres/fold_0/validation/nlm_volume.nii.gz",
+    "score": 0.03681668070096231
+   },
+   {
+    "a": "02_annotations/bnei_reem_i4/original_annotations/annotations_i2.nii.gz",
+    "b": "02_annotations/bnei_reem_i4/original_annotations/annotations_i3.nii.gz",
+    "score": 0.8776649674513182
+   },
+   {
+    "a": "02_annotations/bnei_reem_i4/original_annotations/annotations_i2.nii.gz",
+    "b": "02_annotations/bnei_reem_i4/original_annotations/fine_tuning_annotations.nii.gz",
+    "score": 0.0
+   },
+   {
+    "a": "02_annotations/bnei_reem_i4/original_annotations/annotations_i2.nii.gz",
+    "b": "02_annotations/bnei_reem_i4/registry_merged_GT/POM_GT.nii.gz",
+    "score": 0.0
+   },
+   {
+    "a": "02_annotations/bnei_reem_i4/original_annotations/annotations_i2.nii.gz",
+    "b": "02_annotations/bnei_reem_i4/registry_merged_GT/less_reliable_solid_pores_GT.nii.gz",
+    "score": 0.8263360436265309
+   },
+   {
+    "a": "02_annotations/bnei_reem_i4/original_annotations/annotations_i2.nii.gz",
+    "b": "02_annotations/bnei_reem_i4/registry_merged_GT/merged_GT.nii.gz",
+    "score": 0.8320285633749882
+   },
+   {
+    "a": "02_annotations/bnei_reem_i4/original_annotations/annotations_i3.nii.gz",
+    "b": "02_annotations/bnei_reem_i4/original_annotations/fine_tuning_annotations.nii.gz",
+    "score": 0.20785042345746935
+   },
+   {
+    "a": "02_annotations/bnei_reem_i4/original_annotations/annotations_i3.nii.gz",
+    "b": "02_annotations/bnei_reem_i4/registry_merged_GT/POM_GT.nii.gz",
+    "score": 0.0
+   },
+   {
+    "a": "02_annotations/bnei_reem_i4/original_annotations/annotations_i3.nii.gz",
+    "b": "02_annotations/bnei_reem_i4/registry_merged_GT/less_reliable_solid_pores_GT.nii.gz",
+    "score": 0.7101619551458894
+   },
+   {
+    "a": "02_annotations/bnei_reem_i4/original_annotations/annotations_i3.nii.gz",
+    "b": "02_annotations/bnei_reem_i4/registry_merged_GT/merged_GT.nii.gz",
+    "score": 0.7155388633190257
+   },
+   {
+    "a": "02_annotations/bnei_reem_i4/original_annotations/fine_tuning_annotations.nii.gz",
+    "b": "02_annotations/bnei_reem_i4/registry_merged_GT/POM_GT.nii.gz",
+    "score": 0.0
+   },
+   {
+    "a": "02_annotations/bnei_reem_i4/original_annotations/fine_tuning_annotations.nii.gz",
+    "b": "02_annotations/bnei_reem_i4/registry_merged_GT/less_reliable_solid_pores_GT.nii.gz",
+    "score": 0.0
+   },
+   {
+    "a": "02_annotations/bnei_reem_i4/original_annotations/fine_tuning_annotations.nii.gz",
+    "b": "02_annotations/bnei_reem_i4/registry_merged_GT/merged_GT.nii.gz",
+    "score": 0.0
+   },
+   {
+    "a": "02_annotations/bnei_reem_i4/registry_merged_GT/POM_GT.nii.gz",
+    "b": "02_annotations/bnei_reem_i4/registry_merged_GT/less_reliable_solid_pores_GT.nii.gz",
+    "score": 0.0
+   },
+   {
+    "a": "02_annotations/bnei_reem_i4/registry_merged_GT/POM_GT.nii.gz",
+    "b": "02_annotations/bnei_reem_i4/registry_merged_GT/merged_GT.nii.gz",
+    "score": 0.0
+   },
+   {
+    "a": "02_annotations/bnei_reem_i4/registry_merged_GT/less_reliable_solid_pores_GT.nii.gz",
+    "b": "02_annotations/bnei_reem_i4/registry_merged_GT/merged_GT.nii.gz",
+    "score": 0.9941299409359382
+   },
+   {
+    "a": "02_annotations/mishmar_loess_i2/nnUNet_raw_Dataset777_GCEF/labelsTr/mishmar_hanegev_maoz_3_5p85um.nii.gz",
+    "b": "03_models/mishmar_loess_i2/nnUNetTrainer_betterIgnoreSampling_earlyStopValLoss__nnUNetPlans__3d_fullres/fold_0/validation/mishmar_hanegev_maoz_3_5p85um.nii.gz",
+    "score": 0.03679223561446362
+   },
+   {
+    "a": "02_annotations/mishmar_loess_i2/original_annotations/mishmar_hanegev_maoz_3_5p85um-1.nii.gz",
+    "b": "02_annotations/mishmar_loess_i2/original_annotations/mishmar_hanegev_maoz_3_5p85um.nii.gz",
+    "score": 0.0
+   }
+  ],
+  "searched": [
+   {
+    "a": "01_volumes/Rehovot_samp2_highkV_Cu0.11_15um/segmentation_nnunet_bnei_reem_i4.nii.gz",
+    "b": "01_volumes/Rehovot_samp2_highkV_Cu0.11_15um/segmentation_nnunet_loess_i2.nii.gz",
+    "best": {
+     "score": 0.9576707305554056,
+     "perm": [
+      0,
+      1,
+      2
+     ],
+     "flips": [
+      false,
+      false,
+      false
+     ],
+     "off_a": [
+      0,
+      0,
+      0
+     ],
+     "off_b": [
+      0,
+      0,
+      0
+     ]
+    },
+    "identity": {
+     "score": 0.9576707305554056,
+     "perm": [
+      0,
+      1,
+      2
+     ],
+     "flips": [
+      false,
+      false,
+      false
+     ],
+     "off_a": [
+      0,
+      0,
+      0
+     ],
+     "off_b": [
+      0,
+      0,
+      0
+     ]
+    }
+   },
+   {
+    "a": "01_volumes/Rehovot_samp2_highkV_Cu0.11_15um/segmentation_nnunet_bnei_reem_i4.nii.gz",
+    "b": "01_volumes/Rehovot_samp2_highkV_Cu0.11_15um/segmentation_otsu.npy",
+    "best": {
+     "score": 0.9178144131887479,
+     "perm": [
+      2,
+      1,
+      0
+     ],
+     "flips": [
+      false,
+      true,
+      false
+     ],
+     "off_a": [
+      0,
+      0,
+      0
+     ],
+     "off_b": [
+      0,
+      0,
+      0
+     ]
+    },
+    "identity": {
+     "score": 0.2894234724830045,
+     "perm": [
+      0,
+      1,
+      2
+     ],
+     "flips": [
+      false,
+      false,
+      false
+     ],
+     "off_a": [
+      0,
+      0,
+      0
+     ],
+     "off_b": [
+      0,
+      0,
+      0
+     ]
+    }
+   },
+   {
+    "a": "01_volumes/Rehovot_samp2_highkV_Cu0.11_15um/segmentation_nnunet_bnei_reem_i4.nii.gz",
+    "b": "01_volumes/Rehovot_samp3_highkV_Cu0.11_15um/segmentation_nnunet_bnei_reem_i4.nii.gz",
+    "best": {
+     "score": 0.3210250538826402,
+     "perm": [
+      1,
+      0,
+      2
+     ],
+     "flips": [
+      false,
+      false,
+      false
+     ],
+     "off_a": [
+      0,
+      0,
+      0
+     ],
+     "off_b": [
+      0,
+      0,
+      0
+     ]
+    },
+    "identity": {
+     "score": 0.31976075860541875,
+     "perm": [
+      0,
+      1,
+      2
+     ],
+     "flips": [
+      false,
+      false,
+      false
+     ],
+     "off_a": [
+      0,
+      0,
+      0
+     ],
+     "off_b": [
+      0,
+      0,
+      0
+     ]
+    }
+   },
+   {
+    "a": "01_volumes/Rehovot_samp2_highkV_Cu0.11_15um/segmentation_nnunet_bnei_reem_i4.nii.gz",
+    "b": "01_volumes/Rehovot_samp3_highkV_Cu0.11_15um/segmentation_nnunet_loess_i2.nii.gz",
+    "best": {
+     "score": 0.324578072879757,
+     "perm": [
+      1,
+      0,
+      2
+     ],
+     "flips": [
+      false,
+      false,
+      false
+     ],
+     "off_a": [
+      0,
+      0,
+      0
+     ],
+     "off_b": [
+      0,
+      0,
+      0
+     ]
+    },
+    "identity": {
+     "score": 0.32353573312213396,
+     "perm": [
+      0,
+      1,
+      2
+     ],
+     "flips": [
+      false,
+      false,
+      false
+     ],
+     "off_a": [
+      0,
+      0,
+      0
+     ],
+     "off_b": [
+      0,
+      0,
+      0
+     ]
+    }
+   },
+   {
+    "a": "01_volumes/Rehovot_samp2_highkV_Cu0.11_15um/segmentation_nnunet_bnei_reem_i4.nii.gz",
+    "b": "01_volumes/Rehovot_samp3_highkV_Cu0.11_15um/segmentation_otsu.npy",
+    "best": {
+     "score": 0.3300243365466532,
+     "perm": [
+      1,
+      2,
+      0
+     ],
+     "flips": [
+      true,
+      false,
+      false
+     ],
+     "off_a": [
+      0,
+      0,
+      0
+     ],
+     "off_b": [
+      0,
+      0,
+      0
+     ]
+    },
+    "identity": {
+     "score": 0.3273025104848103,
+     "perm": [
+      0,
+      1,
+      2
+     ],
+     "flips": [
+      false,
+      false,
+      false
+     ],
+     "off_a": [
+      0,
+      0,
+      0
+     ],
+     "off_b": [
+      0,
+      0,
+      0
+     ]
+    }
+   },
+   {
+    "a": "01_volumes/Rehovot_samp2_highkV_Cu0.11_15um/segmentation_nnunet_bnei_reem_i4.nii.gz",
+    "b": "01_volumes/bnei_reem_fresh_bnei_reem_i4/segmentation.nii.gz",
+    "best": {
+     "score": 0.2502421422422159,
+     "perm": [
+      1,
+      0,
+      2
+     ],
+     "flips": [
+      false,
+      false,
+      true
+     ],
+     "off_a": [
+      0,
+      0,
+      0
+     ],
+     "off_b": [
+      0,
+      0,
+      0
+     ]
+    },
+    "identity": {
+     "score": 0.24632564187861009,
+     "perm": [
+      0,
+      1,
+      2
+     ],
+     "flips": [
+      false,
+      false,
+      false
+     ],
+     "off_a": [
+      0,
+      0,
+      0
+     ],
+     "off_b": [
+      0,
+      0,
+      0
+     ]
+    }
+   },
+   {
+    "a": "01_volumes/Rehovot_samp2_highkV_Cu0.11_15um/segmentation_nnunet_bnei_reem_i4.nii.gz",
+    "b": "01_volumes/bnei_reem_specA_unified/segmentation.nii.gz",
+    "best": {
+     "score": 0.19901207684763395,
+     "perm": [
+      2,
+      1,
+      0
+     ],
+     "flips": [
+      true,
+      false,
+      true
+     ],
+     "off_a": [
+      0,
+      0,
+      0
+     ],
+     "off_b": [
+      0,
+      0,
+      0
+     ]
+    },
+    "identity": {
+     "score": 0.1941026226265393,
+     "perm": [
+      0,
+      1,
+      2
+     ],
+     "flips": [
+      false,
+      false,
+      false
+     ],
+     "off_a": [
+      0,
+      0,
+      0
+     ],
+     "off_b": [
+      0,
+      0,
+      0
+     ]
+    }
+   },
+   {
+    "a": "01_volumes/Rehovot_samp2_highkV_Cu0.11_15um/segmentation_nnunet_bnei_reem_i4.nii.gz",
+    "b": "01_volumes/bnei_reem_specB_unified/segmentation.nii.gz",
+    "best": {
+     "score": 0.2498595644300442,
+     "perm": [
+      1,
+      0,
+      2
+     ],
+     "flips": [
+      false,
+      false,
+      true
+     ],
+     "off_a": [
+      0,
+      0,
+      0
+     ],
+     "off_b": [
+      0,
+      0,
+      0
+     ]
+    },
+    "identity": {
+     "score": 0.246313156204799,
+     "perm": [
+      0,
+      1,
+      2
+     ],
+     "flips": [
+      false,
+      false,
+      false
+     ],
+     "off_a": [
+      0,
+      0,
+      0
+     ],
+     "off_b": [
+      0,
+      0,
+      0
+     ]
+    }
+   },
+   {
+    "a": "01_volumes/Rehovot_samp2_highkV_Cu0.11_15um/segmentation_nnunet_bnei_reem_i4.nii.gz",
+    "b": "02_annotations/bnei_reem_i4/original_annotations/annotations_i2.nii.gz",
+    "best": {
+     "score": 0.01127016504106094,
+     "perm": [
+      2,
+      1,
+      0
+     ],
+     "flips": [
+      true,
+      false,
+      false
+     ],
+     "off_a": [
+      0,
+      0,
+      0
+     ],
+     "off_b": [
+      1,
+      0,
+      0
+     ]
+    },
+    "identity": {
+     "score": 0.0073337394633902165,
+     "perm": [
+      0,
+      1,
+      2
+     ],
+     "flips": [
+      false,
+      false,
+      false
+     ],
+     "off_a": [
+      0,
+      0,
+      0
+     ],
+     "off_b": [
+      0,
+      0,
+      0
+     ]
+    }
+   },
+   {
+    "a": "01_volumes/Rehovot_samp2_highkV_Cu0.11_15um/segmentation_nnunet_bnei_reem_i4.nii.gz",
+    "b": "02_annotations/bnei_reem_i4/original_annotations/annotations_i3.nii.gz",
+    "best": {
+     "score": 0.012893776292484263,
+     "perm": [
+      2,
+      1,
+      0
+     ],
+     "flips": [
+      true,
+      false,
+      false
+     ],
+     "off_a": [
+      0,
+      0,
+      0
+     ],
+     "off_b": [
+      2,
+      0,
+      0
+     ]
+    },
+    "identity": {
+     "score": 0.012294813834522704,
+     "perm": [
+      0,
+      1,
+      2
+     ],
+     "flips": [
+      false,
+      false,
+      false
+     ],
+     "off_a": [
+      0,
+      0,
+      0
+     ],
+     "off_b": [
+      0,
+      0,
+      0
+     ]
+    }
+   },
+   {
+    "a": "01_volumes/Rehovot_samp2_highkV_Cu0.11_15um/segmentation_nnunet_bnei_reem_i4.nii.gz",
+    "b": "02_annotations/bnei_reem_i4/original_annotations/fine_tuning_annotations.nii.gz",
+    "best": {
+     "score": 0.0032257602403983495,
+     "perm": [
+      2,
+      0,
+      1
+     ],
+     "flips": [
+      false,
+      true,
+      true
+     ],
+     "off_a": [
+      0,
+      0,
+      0
+     ],
+     "off_b": [
+      0,
+      0,
+      0
+     ]
+    },
+    "identity": {
+     "score": 0.0025298022844064067,
+     "perm": [
+      0,
+      1,
+      2
+     ],
+     "flips": [
+      false,
+      false,
+      false
+     ],
+     "off_a": [
+      0,
+      0,
+      0
+     ],
+     "off_b": [
+      0,
+      0,
+      0
+     ]
+    }
+   },
+   {
+    "a": "01_volumes/Rehovot_samp2_highkV_Cu0.11_15um/segmentation_nnunet_bnei_reem_i4.nii.gz",
+    "b": "02_annotations/bnei_reem_i4/registry_merged_GT/POM_GT.nii.gz",
+    "best": {
+     "score": 0.0,
+     "perm": [
+      0,
+      1,
+      2
+     ],
+     "flips": [
+      false,
+      false,
+      false
+     ],
+     "off_a": [
+      0,
+      0,
+      0
+     ],
+     "off_b": [
+      0,
+      0,
+      0
+     ]
+    },
+    "identity": {
+     "score": 0.0,
+     "perm": [
+      0,
+      1,
+      2
+     ],
+     "flips": [
+      false,
+      false,
+      false
+     ],
+     "off_a": [
+      0,
+      0,
+      0
+     ],
+     "off_b": [
+      0,
+      0,
+      0
+     ]
+    }
+   },
+   {
+    "a": "01_volumes/Rehovot_samp2_highkV_Cu0.11_15um/segmentation_nnunet_bnei_reem_i4.nii.gz",
+    "b": "02_annotations/bnei_reem_i4/registry_merged_GT/less_reliable_solid_pores_GT.nii.gz",
+    "best": {
+     "score": 0.009288431741118115,
+     "perm": [
+      2,
+      1,
+      0
+     ],
+     "flips": [
+      true,
+      false,
+      false
+     ],
+     "off_a": [
+      0,
+      0,
+      0
+     ],
+     "off_b": [
+      1,
+      0,
+      0
+     ]
+    },
+    "identity": {
+     "score": 0.00422669185315649,
+     "perm": [
+      0,
+      1,
+      2
+     ],
+     "flips": [
+      false,
+      false,
+      false
+     ],
+     "off_a": [
+      0,
+      0,
+      0
+     ],
+     "off_b": [
+      0,
+      0,
+      0
+     ]
+    }
+   },
+   {
+    "a": "01_volumes/Rehovot_samp2_highkV_Cu0.11_15um/segmentation_nnunet_bnei_reem_i4.nii.gz",
+    "b": "02_annotations/bnei_reem_i4/registry_merged_GT/merged_GT.nii.gz",
+    "best": {
+     "score": 0.009375007816675407,
+     "perm": [
+      2,
+      1,
+      0
+     ],
+     "flips": [
+      true,
+      false,
+      false
+     ],
+     "off_a": [
+      0,
+      0,
+      0
+     ],
+     "off_b": [
+      1,
+      0,
+      0
+     ]
+    },
+    "identity": {
+     "score": 0.0042616405299491155,
+     "perm": [
+      0,
+      1,
+      2
+     ],
+     "flips": [
+      false,
+      false,
+      false
+     ],
+     "off_a": [
+      0,
+      0,
+      0
+     ],
+     "off_b": [
+      0,
+      0,
+      0
+     ]
+    }
+   },
+   {
+    "a": "01_volumes/Rehovot_samp2_highkV_Cu0.11_15um/segmentation_nnunet_loess_i2.nii.gz",
+    "b": "01_volumes/Rehovot_samp2_highkV_Cu0.11_15um/segmentation_otsu.npy",
+    "best": {
+     "score": 0.9288499328366835,
+     "perm": [
+      2,
+      1,
+      0
+     ],
+     "flips": [
+      false,
+      true,
+      false
+     ],
+     "off_a": [
+      0,
+      0,
+      0
+     ],
+     "off_b": [
+      0,
+      0,
+      0
+     ]
+    },
+    "identity": {
+     "score": 0.2906256153825916,
+     "perm": [
+      0,
+      1,
+      2
+     ],
+     "flips": [
+      false,
+      false,
+      false
+     ],
+     "off_a": [
+      0,
+      0,
+      0
+     ],
+     "off_b": [
+      0,
+      0,
+      0
+     ]
+    }
+   },
+   {
+    "a": "01_volumes/Rehovot_samp2_highkV_Cu0.11_15um/segmentation_nnunet_loess_i2.nii.gz",
+    "b": "01_volumes/Rehovot_samp3_highkV_Cu0.11_15um/segmentation_nnunet_bnei_reem_i4.nii.gz",
+    "best": {
+     "score": 0.3226457961607061,
+     "perm": [
+      1,
+      0,
+      2
+     ],
+     "flips": [
+      false,
+      false,
+      true
+     ],
+     "off_a": [
+      0,
+      0,
+      0
+     ],
+     "off_b": [
+      0,
+      0,
+      0
+     ]
+    },
+    "identity": {
+     "score": 0.32122173899730655,
+     "perm": [
+      0,
+      1,
+      2
+     ],
+     "flips": [
+      false,
+      false,
+      false
+     ],
+     "off_a": [
+      0,
+      0,
+      0
+     ],
+     "off_b": [
+      0,
+      0,
+      0
+     ]
+    }
+   },
+   {
+    "a": "01_volumes/Rehovot_samp2_highkV_Cu0.11_15um/segmentation_nnunet_loess_i2.nii.gz",
+    "b": "01_volumes/Rehovot_samp3_highkV_Cu0.11_15um/segmentation_nnunet_loess_i2.nii.gz",
+    "best": {
+     "score": 0.32640500890418805,
+     "perm": [
+      1,
+      0,
+      2
+     ],
+     "flips": [
+      false,
+      false,
+      true
+     ],
+     "off_a": [
+      0,
+      0,
+      0
+     ],
+     "off_b": [
+      0,
+      0,
+      0
+     ]
+    },
+    "identity": {
+     "score": 0.32521561412002137,
+     "perm": [
+      0,
+      1,
+      2
+     ],
+     "flips": [
+      false,
+      false,
+      false
+     ],
+     "off_a": [
+      0,
+      0,
+      0
+     ],
+     "off_b": [
+      0,
+      0,
+      0
+     ]
+    }
+   },
+   {
+    "a": "01_volumes/Rehovot_samp2_highkV_Cu0.11_15um/segmentation_nnunet_loess_i2.nii.gz",
+    "b": "01_volumes/Rehovot_samp3_highkV_Cu0.11_15um/segmentation_otsu.npy",
+    "best": {
+     "score": 0.33205254881081203,
+     "perm": [
+      2,
+      1,
+      0
+     ],
+     "flips": [
+      true,
+      true,
+      false
+     ],
+     "off_a": [
+      0,
+      0,
+      0
+     ],
+     "off_b": [
+      0,
+      0,
+      0
+     ]
+    },
+    "identity": {
+     "score": 0.32857129813338815,
+     "perm": [
+      0,
+      1,
+      2
+     ],
+     "flips": [
+      false,
+      false,
+      false
+     ],
+     "off_a": [
+      0,
+      0,
+      0
+     ],
+     "off_b": [
+      0,
+      0,
+      0
+     ]
+    }
+   },
+   {
+    "a": "01_volumes/Rehovot_samp2_highkV_Cu0.11_15um/segmentation_nnunet_loess_i2.nii.gz",
+    "b": "01_volumes/bnei_reem_fresh_bnei_reem_i4/segmentation.nii.gz",
+    "best": {
+     "score": 0.25167033569363884,
+     "perm": [
+      1,
+      0,
+      2
+     ],
+     "flips": [
+      false,
+      false,
+      true
+     ],
+     "off_a": [
+      0,
+      0,
+      0
+     ],
+     "off_b": [
+      0,
+      0,
+      0
+     ]
+    },
+    "identity": {
+     "score": 0.2467067231483755,
+     "perm": [
+      0,
+      1,
+      2
+     ],
+     "flips": [
+      false,
+      false,
+      false
+     ],
+     "off_a": [
+      0,
+      0,
+      0
+     ],
+     "off_b": [
+      0,
+      0,
+      0
+     ]
+    }
+   },
+   {
+    "a": "01_volumes/Rehovot_samp2_highkV_Cu0.11_15um/segmentation_nnunet_loess_i2.nii.gz",
+    "b": "01_volumes/bnei_reem_specA_unified/segmentation.nii.gz",
+    "best": {
+     "score": 0.19919110703659132,
+     "perm": [
+      2,
+      1,
+      0
+     ],
+     "flips": [
+      true,
+      false,
+      true
+     ],
+     "off_a": [
+      0,
+      0,
+      0
+     ],
+     "off_b": [
+      0,
+      0,
+      0
+     ]
+    },
+    "identity": {
+     "score": 0.19502662378030652,
+     "perm": [
+      0,
+      1,
+      2
+     ],
+     "flips": [
+      false,
+      false,
+      false
+     ],
+     "off_a": [
+      0,
+      0,
+      0
+     ],
+     "off_b": [
+      0,
+      0,
+      0
+     ]
+    }
+   },
+   {
+    "a": "01_volumes/Rehovot_samp2_highkV_Cu0.11_15um/segmentation_nnunet_loess_i2.nii.gz",
+    "b": "01_volumes/bnei_reem_specB_unified/segmentation.nii.gz",
+    "best": {
+     "score": 0.2514133447206678,
+     "perm": [
+      1,
+      0,
+      2
+     ],
+     "flips": [
+      false,
+      false,
+      true
+     ],
+     "off_a": [
+      0,
+      0,
+      0
+     ],
+     "off_b": [
+      0,
+      0,
+      0
+     ]
+    },
+    "identity": {
+     "score": 0.2467187625679049,
+     "perm": [
+      0,
+      1,
+      2
+     ],
+     "flips": [
+      false,
+      false,
+      false
+     ],
+     "off_a": [
+      0,
+      0,
+      0
+     ],
+     "off_b": [
+      0,
+      0,
+      0
+     ]
+    }
+   },
+   {
+    "a": "01_volumes/Rehovot_samp2_highkV_Cu0.11_15um/segmentation_nnunet_loess_i2.nii.gz",
+    "b": "02_annotations/bnei_reem_i4/original_annotations/annotations_i2.nii.gz",
+    "best": {
+     "score": 0.011263948115974505,
+     "perm": [
+      1,
+      0,
+      2
+     ],
+     "flips": [
+      false,
+      true,
+      true
+     ],
+     "off_a": [
+      0,
+      0,
+      0
+     ],
+     "off_b": [
+      0,
+      0,
+      1
+     ]
+    },
+    "identity": {
+     "score": 0.00725315843965082,
+     "perm": [
+      0,
+      1,
+      2
+     ],
+     "flips": [
+      false,
+      false,
+      false
+     ],
+     "off_a": [
+      0,
+      0,
+      0
+     ],
+     "off_b": [
+      0,
+      0,
+      0
+     ]
+    }
+   },
+   {
+    "a": "01_volumes/Rehovot_samp2_highkV_Cu0.11_15um/segmentation_nnunet_loess_i2.nii.gz",
+    "b": "02_annotations/bnei_reem_i4/original_annotations/annotations_i3.nii.gz",
+    "best": {
+     "score": 0.012942202885501677,
+     "perm": [
+      0,
+      1,
+      2
+     ],
+     "flips": [
+      true,
+      false,
+      false
+     ],
+     "off_a": [
+      0,
+      0,
+      0
+     ],
+     "off_b": [
+      0,
+      0,
+      0
+     ]
+    },
+    "identity": {
+     "score": 0.012221381502467526,
+     "perm": [
+      0,
+      1,
+      2
+     ],
+     "flips": [
+      false,
+      false,
+      false
+     ],
+     "off_a": [
+      0,
+      0,
+      0
+     ],
+     "off_b": [
+      0,
+      0,
+      0
+     ]
+    }
+   },
+   {
+    "a": "01_volumes/Rehovot_samp2_highkV_Cu0.11_15um/segmentation_nnunet_loess_i2.nii.gz",
+    "b": "02_annotations/bnei_reem_i4/original_annotations/fine_tuning_annotations.nii.gz",
+    "best": {
+     "score": 0.003211281779528204,
+     "perm": [
+      2,
+      0,
+      1
+     ],
+     "flips": [
+      false,
+      true,
+      true
+     ],
+     "off_a": [
+      0,
+      0,
+      0
+     ],
+     "off_b": [
+      0,
+      0,
+      0
+     ]
+    },
+    "identity": {
+     "score": 0.002532674002226747,
+     "perm": [
+      0,
+      1,
+      2
+     ],
+     "flips": [
+      false,
+      false,
+      false
+     ],
+     "off_a": [
+      0,
+      0,
+      0
+     ],
+     "off_b": [
+      0,
+      0,
+      0
+     ]
+    }
+   },
+   {
+    "a": "01_volumes/Rehovot_samp2_highkV_Cu0.11_15um/segmentation_nnunet_loess_i2.nii.gz",
+    "b": "02_annotations/bnei_reem_i4/registry_merged_GT/POM_GT.nii.gz",
+    "best": {
+     "score": 0.0,
+     "perm": [
+      0,
+      1,
+      2
+     ],
+     "flips": [
+      false,
+      false,
+      false
+     ],
+     "off_a": [
+      0,
+      0,
+      0
+     ],
+     "off_b": [
+      0,
+      0,
+      0
+     ]
+    },
+    "identity": {
+     "score": 0.0,
+     "perm": [
+      0,
+      1,
+      2
+     ],
+     "flips": [
+      false,
+      false,
+      false
+     ],
+     "off_a": [
+      0,
+      0,
+      0
+     ],
+     "off_b": [
+      0,
+      0,
+      0
+     ]
+    }
+   },
+   {
+    "a": "01_volumes/Rehovot_samp2_highkV_Cu0.11_15um/segmentation_nnunet_loess_i2.nii.gz",
+    "b": "02_annotations/bnei_reem_i4/registry_merged_GT/less_reliable_solid_pores_GT.nii.gz",
+    "best": {
+     "score": 0.009217131190666063,
+     "perm": [
+      2,
+      1,
+      0
+     ],
+     "flips": [
+      true,
+      false,
+      false
+     ],
+     "off_a": [
+      0,
+      0,
+      0
+     ],
+     "off_b": [
+      1,
+      0,
+      0
+     ]
+    },
+    "identity": {
+     "score": 0.004160811358214852,
+     "perm": [
+      0,
+      1,
+      2
+     ],
+     "flips": [
+      false,
+      false,
+      false
+     ],
+     "off_a": [
+      0,
+      0,
+      0
+     ],
+     "off_b": [
+      0,
+      0,
+      0
+     ]
+    }
+   },
+   {
+    "a": "01_volumes/Rehovot_samp2_highkV_Cu0.11_15um/segmentation_nnunet_loess_i2.nii.gz",
+    "b": "02_annotations/bnei_reem_i4/registry_merged_GT/merged_GT.nii.gz",
+    "best": {
+     "score": 0.009293100724607114,
+     "perm": [
+      2,
+      1,
+      0
+     ],
+     "flips": [
+      true,
+      false,
+      false
+     ],
+     "off_a": [
+      0,
+      0,
+      0
+     ],
+     "off_b": [
+      1,
+      0,
+      0
+     ]
+    },
+    "identity": {
+     "score": 0.004198816197196011,
+     "perm": [
+      0,
+      1,
+      2
+     ],
+     "flips": [
+      false,
+      false,
+      false
+     ],
+     "off_a": [
+      0,
+      0,
+      0
+     ],
+     "off_b": [
+      0,
+      0,
+      0
+     ]
+    }
+   },
+   {
+    "a": "01_volumes/Rehovot_samp2_highkV_Cu0.11_15um/segmentation_otsu.npy",
+    "b": "01_volumes/Rehovot_samp3_highkV_Cu0.11_15um/segmentation_nnunet_bnei_reem_i4.nii.gz",
+    "best": {
+     "score": 0.34275826586808283,
+     "perm": [
+      2,
+      0,
+      1
+     ],
+     "flips": [
+      false,
+      true,
+      false
+     ],
+     "off_a": [
+      0,
+      0,
+      0
+     ],
+     "off_b": [
+      0,
+      0,
+      0
+     ]
+    },
+    "identity": {
+     "score": 0.33944036624008045,
+     "perm": [
+      0,
+      1,
+      2
+     ],
+     "flips": [
+      false,
+      false,
+      false
+     ],
+     "off_a": [
+      0,
+      0,
+      0
+     ],
+     "off_b": [
+      0,
+      0,
+      0
+     ]
+    }
+   },
+   {
+    "a": "01_volumes/Rehovot_samp2_highkV_Cu0.11_15um/segmentation_otsu.npy",
+    "b": "01_volumes/Rehovot_samp3_highkV_Cu0.11_15um/segmentation_nnunet_loess_i2.nii.gz",
+    "best": {
+     "score": 0.34680138585349124,
+     "perm": [
+      2,
+      0,
+      1
+     ],
+     "flips": [
+      true,
+      true,
+      false
+     ],
+     "off_a": [
+      0,
+      0,
+      0
+     ],
+     "off_b": [
+      0,
+      0,
+      0
+     ]
+    },
+    "identity": {
+     "score": 0.3438453800785827,
+     "perm": [
+      0,
+      1,
+      2
+     ],
+     "flips": [
+      false,
+      false,
+      false
+     ],
+     "off_a": [
+      0,
+      0,
+      0
+     ],
+     "off_b": [
+      0,
+      0,
+      0
+     ]
+    }
+   },
+   {
+    "a": "01_volumes/Rehovot_samp2_highkV_Cu0.11_15um/segmentation_otsu.npy",
+    "b": "01_volumes/Rehovot_samp3_highkV_Cu0.11_15um/segmentation_otsu.npy",
+    "best": {
+     "score": 0.3536947844287615,
+     "perm": [
+      0,
+      1,
+      2
+     ],
+     "flips": [
+      false,
+      false,
+      true
+     ],
+     "off_a": [
+      0,
+      0,
+      0
+     ],
+     "off_b": [
+      0,
+      0,
+      0
+     ]
+    },
+    "identity": {
+     "score": 0.35235929265797916,
+     "perm": [
+      0,
+      1,
+      2
+     ],
+     "flips": [
+      false,
+      false,
+      false
+     ],
+     "off_a": [
+      0,
+      0,
+      0
+     ],
+     "off_b": [
+      0,
+      0,
+      0
+     ]
+    }
+   },
+   {
+    "a": "01_volumes/Rehovot_samp2_highkV_Cu0.11_15um/segmentation_otsu.npy",
+    "b": "01_volumes/bnei_reem_fresh_bnei_reem_i4/segmentation.nii.gz",
+    "best": {
+     "score": 0.2687954261325462,
+     "perm": [
+      2,
+      0,
+      1
+     ],
+     "flips": [
+      true,
+      true,
+      false
+     ],
+     "off_a": [
+      0,
+      0,
+      0
+     ],
+     "off_b": [
+      0,
+      0,
+      0
+     ]
+    },
+    "identity": {
+     "score": 0.26041410576036395,
+     "perm": [
+      0,
+      1,
+      2
+     ],
+     "flips": [
+      false,
+      false,
+      false
+     ],
+     "off_a": [
+      0,
+      0,
+      0
+     ],
+     "off_b": [
+      0,
+      0,
+      0
+     ]
+    }
+   },
+   {
+    "a": "01_volumes/Rehovot_samp2_highkV_Cu0.11_15um/segmentation_otsu.npy",
+    "b": "01_volumes/bnei_reem_specA_unified/segmentation.nii.gz",
+    "best": {
+     "score": 0.20579013161320064,
+     "perm": [
+      0,
+      1,
+      2
+     ],
+     "flips": [
+      true,
+      true,
+      true
+     ],
+     "off_a": [
+      0,
+      0,
+      0
+     ],
+     "off_b": [
+      0,
+      0,
+      0
+     ]
+    },
+    "identity": {
+     "score": 0.20393407933905364,
+     "perm": [
+      0,
+      1,
+      2
+     ],
+     "flips": [
+      false,
+      false,
+      false
+     ],
+     "off_a": [
+      0,
+      0,
+      0
+     ],
+     "off_b": [
+      0,
+      0,
+      0
+     ]
+    }
+   },
+   {
+    "a": "01_volumes/Rehovot_samp2_highkV_Cu0.11_15um/segmentation_otsu.npy",
+    "b": "01_volumes/bnei_reem_specB_unified/segmentation.nii.gz",
+    "best": {
+     "score": 0.2684430830064078,
+     "perm": [
+      2,
+      0,
+      1
+     ],
+     "flips": [
+      true,
+      true,
+      false
+     ],
+     "off_a": [
+      0,
+      0,
+      0
+     ],
+     "off_b": [
+      0,
+      0,
+      0
+     ]
+    },
+    "identity": {
+     "score": 0.2603742721512106,
+     "perm": [
+      0,
+      1,
+      2
+     ],
+     "flips": [
+      false,
+      false,
+      false
+     ],
+     "off_a": [
+      0,
+      0,
+      0
+     ],
+     "off_b": [
+      0,
+      0,
+      0
+     ]
+    }
+   },
+   {
+    "a": "01_volumes/Rehovot_samp2_highkV_Cu0.11_15um/segmentation_otsu.npy",
+    "b": "02_annotations/bnei_reem_i4/original_annotations/annotations_i2.nii.gz",
+    "best": {
+     "score": 0.011667650901021814,
+     "perm": [
+      2,
+      1,
+      0
+     ],
+     "flips": [
+      false,
+      true,
+      true
+     ],
+     "off_a": [
+      0,
+      0,
+      0
+     ],
+     "off_b": [
+      2,
+      0,
+      0
+     ]
+    },
+    "identity": {
+     "score": 0.007069988386625651,
+     "perm": [
+      0,
+      1,
+      2
+     ],
+     "flips": [
+      false,
+      false,
+      false
+     ],
+     "off_a": [
+      0,
+      0,
+      0
+     ],
+     "off_b": [
+      0,
+      0,
+      0
+     ]
+    }
+   },
+   {
+    "a": "01_volumes/Rehovot_samp2_highkV_Cu0.11_15um/segmentation_otsu.npy",
+    "b": "02_annotations/bnei_reem_i4/original_annotations/annotations_i3.nii.gz",
+    "best": {
+     "score": 0.01354032500349514,
+     "perm": [
+      2,
+      1,
+      0
+     ],
+     "flips": [
+      false,
+      true,
+      true
+     ],
+     "off_a": [
+      0,
+      0,
+      0
+     ],
+     "off_b": [
+      0,
+      0,
+      0
+     ]
+    },
+    "identity": {
+     "score": 0.012192047429548424,
+     "perm": [
+      0,
+      1,
+      2
+     ],
+     "flips": [
+      false,
+      false,
+      false
+     ],
+     "off_a": [
+      0,
+      0,
+      0
+     ],
+     "off_b": [
+      0,
+      0,
+      0
+     ]
+    }
+   },
+   {
+    "a": "01_volumes/Rehovot_samp2_highkV_Cu0.11_15um/segmentation_otsu.npy",
+    "b": "02_annotations/bnei_reem_i4/original_annotations/fine_tuning_annotations.nii.gz",
+    "best": {
+     "score": 0.003343299275895462,
+     "perm": [
+      1,
+      0,
+      2
+     ],
+     "flips": [
+      true,
+      false,
+      false
+     ],
+     "off_a": [
+      0,
+      0,
+      0
+     ],
+     "off_b": [
+      0,
+      0,
+      0
+     ]
+    },
+    "identity": {
+     "score": 0.0028010273455204714,
+     "perm": [
+      0,
+      1,
+      2
+     ],
+     "flips": [
+      false,
+      false,
+      false
+     ],
+     "off_a": [
+      0,
+      0,
+      0
+     ],
+     "off_b": [
+      0,
+      0,
+      0
+     ]
+    }
+   },
+   {
+    "a": "01_volumes/Rehovot_samp2_highkV_Cu0.11_15um/segmentation_otsu.npy",
+    "b": "02_annotations/bnei_reem_i4/registry_merged_GT/POM_GT.nii.gz",
+    "best": {
+     "score": 0.0,
+     "perm": [
+      0,
+      1,
+      2
+     ],
+     "flips": [
+      false,
+      false,
+      false
+     ],
+     "off_a": [
+      0,
+      0,
+      0
+     ],
+     "off_b": [
+      0,
+      0,
+      0
+     ]
+    },
+    "identity": {
+     "score": 0.0,
+     "perm": [
+      0,
+      1,
+      2
+     ],
+     "flips": [
+      false,
+      false,
+      false
+     ],
+     "off_a": [
+      0,
+      0,
+      0
+     ],
+     "off_b": [
+      0,
+      0,
+      0
+     ]
+    }
+   },
+   {
+    "a": "01_volumes/Rehovot_samp2_highkV_Cu0.11_15um/segmentation_otsu.npy",
+    "b": "02_annotations/bnei_reem_i4/registry_merged_GT/less_reliable_solid_pores_GT.nii.gz",
+    "best": {
+     "score": 0.009571641001347813,
+     "perm": [
+      0,
+      1,
+      2
+     ],
+     "flips": [
+      false,
+      true,
+      true
+     ],
+     "off_a": [
+      0,
+      0,
+      0
+     ],
+     "off_b": [
+      0,
+      0,
+      1
+     ]
+    },
+    "identity": {
+     "score": 0.004531337354826168,
+     "perm": [
+      0,
+      1,
+      2
+     ],
+     "flips": [
+      false,
+      false,
+      false
+     ],
+     "off_a": [
+      0,
+      0,
+      0
+     ],
+     "off_b": [
+      0,
+      0,
+      0
+     ]
+    }
+   },
+   {
+    "a": "01_volumes/Rehovot_samp2_highkV_Cu0.11_15um/segmentation_otsu.npy",
+    "b": "02_annotations/bnei_reem_i4/registry_merged_GT/merged_GT.nii.gz",
+    "best": {
+     "score": 0.009649458864093477,
+     "perm": [
+      2,
+      0,
+      1
+     ],
+     "flips": [
+      true,
+      true,
+      true
+     ],
+     "off_a": [
+      0,
+      0,
+      0
+     ],
+     "off_b": [
+      1,
+      0,
+      0
+     ]
+    },
+    "identity": {
+     "score": 0.004568680130611211,
+     "perm": [
+      0,
+      1,
+      2
+     ],
+     "flips": [
+      false,
+      false,
+      false
+     ],
+     "off_a": [
+      0,
+      0,
+      0
+     ],
+     "off_b": [
+      0,
+      0,
+      0
+     ]
+    }
+   },
+   {
+    "a": "01_volumes/Rehovot_samp3_highkV_Cu0.11_15um/segmentation_nnunet_bnei_reem_i4.nii.gz",
+    "b": "01_volumes/Rehovot_samp3_highkV_Cu0.11_15um/segmentation_nnunet_loess_i2.nii.gz",
+    "best": {
+     "score": 0.9699247446961579,
+     "perm": [
+      0,
+      1,
+      2
+     ],
+     "flips": [
+      false,
+      false,
+      false
+     ],
+     "off_a": [
+      0,
+      0,
+      0
+     ],
+     "off_b": [
+      0,
+      0,
+      0
+     ]
+    },
+    "identity": {
+     "score": 0.9699247446961579,
+     "perm": [
+      0,
+      1,
+      2
+     ],
+     "flips": [
+      false,
+      false,
+      false
+     ],
+     "off_a": [
+      0,
+      0,
+      0
+     ],
+     "off_b": [
+      0,
+      0,
+      0
+     ]
+    }
+   },
+   {
+    "a": "01_volumes/Rehovot_samp3_highkV_Cu0.11_15um/segmentation_nnunet_bnei_reem_i4.nii.gz",
+    "b": "01_volumes/Rehovot_samp3_highkV_Cu0.11_15um/segmentation_otsu.npy",
+    "best": {
+     "score": 0.9520707929382639,
+     "perm": [
+      2,
+      1,
+      0
+     ],
+     "flips": [
+      false,
+      true,
+      false
+     ],
+     "off_a": [
+      0,
+      0,
+      0
+     ],
+     "off_b": [
+      0,
+      0,
+      0
+     ]
+    },
+    "identity": {
+     "score": 0.39630987671301027,
+     "perm": [
+      0,
+      1,
+      2
+     ],
+     "flips": [
+      false,
+      false,
+      false
+     ],
+     "off_a": [
+      0,
+      0,
+      0
+     ],
+     "off_b": [
+      0,
+      0,
+      0
+     ]
+    }
+   },
+   {
+    "a": "01_volumes/Rehovot_samp3_highkV_Cu0.11_15um/segmentation_nnunet_bnei_reem_i4.nii.gz",
+    "b": "01_volumes/bnei_reem_fresh_bnei_reem_i4/segmentation.nii.gz",
+    "best": {
+     "score": 0.2851349941458099,
+     "perm": [
+      2,
+      0,
+      1
+     ],
+     "flips": [
+      true,
+      true,
+      false
+     ],
+     "off_a": [
+      0,
+      0,
+      0
+     ],
+     "off_b": [
+      1,
+      0,
+      0
+     ]
+    },
+    "identity": {
+     "score": 0.27829302065340916,
+     "perm": [
+      0,
+      1,
+      2
+     ],
+     "flips": [
+      false,
+      false,
+      false
+     ],
+     "off_a": [
+      0,
+      0,
+      0
+     ],
+     "off_b": [
+      0,
+      0,
+      0
+     ]
+    }
+   },
+   {
+    "a": "01_volumes/Rehovot_samp3_highkV_Cu0.11_15um/segmentation_nnunet_bnei_reem_i4.nii.gz",
+    "b": "01_volumes/bnei_reem_specA_unified/segmentation.nii.gz",
+    "best": {
+     "score": 0.22031605016124742,
+     "perm": [
+      2,
+      1,
+      0
+     ],
+     "flips": [
+      false,
+      true,
+      false
+     ],
+     "off_a": [
+      0,
+      0,
+      0
+     ],
+     "off_b": [
+      0,
+      0,
+      0
+     ]
+    },
+    "identity": {
+     "score": 0.2156076313056518,
+     "perm": [
+      0,
+      1,
+      2
+     ],
+     "flips": [
+      false,
+      false,
+      false
+     ],
+     "off_a": [
+      0,
+      0,
+      0
+     ],
+     "off_b": [
+      0,
+      0,
+      0
+     ]
+    }
+   },
+   {
+    "a": "01_volumes/Rehovot_samp3_highkV_Cu0.11_15um/segmentation_nnunet_bnei_reem_i4.nii.gz",
+    "b": "01_volumes/bnei_reem_specB_unified/segmentation.nii.gz",
+    "best": {
+     "score": 0.2852068256144959,
+     "perm": [
+      2,
+      0,
+      1
+     ],
+     "flips": [
+      true,
+      true,
+      false
+     ],
+     "off_a": [
+      0,
+      0,
+      0
+     ],
+     "off_b": [
+      0,
+      0,
+      0
+     ]
+    },
+    "identity": {
+     "score": 0.2783452534151653,
+     "perm": [
+      0,
+      1,
+      2
+     ],
+     "flips": [
+      false,
+      false,
+      false
+     ],
+     "off_a": [
+      0,
+      0,
+      0
+     ],
+     "off_b": [
+      0,
+      0,
+      0
+     ]
+    }
+   },
+   {
+    "a": "01_volumes/Rehovot_samp3_highkV_Cu0.11_15um/segmentation_nnunet_bnei_reem_i4.nii.gz",
+    "b": "02_annotations/bnei_reem_i4/original_annotations/annotations_i2.nii.gz",
+    "best": {
+     "score": 0.01143578141419669,
+     "perm": [
+      0,
+      1,
+      2
+     ],
+     "flips": [
+      true,
+      true,
+      true
+     ],
+     "off_a": [
+      0,
+      0,
+      0
+     ],
+     "off_b": [
+      0,
+      0,
+      1
+     ]
+    },
+    "identity": {
+     "score": 0.007647017879044627,
+     "perm": [
+      0,
+      1,
+      2
+     ],
+     "flips": [
+      false,
+      false,
+      false
+     ],
+     "off_a": [
+      0,
+      0,
+      0
+     ],
+     "off_b": [
+      0,
+      0,
+      0
+     ]
+    }
+   },
+   {
+    "a": "01_volumes/Rehovot_samp3_highkV_Cu0.11_15um/segmentation_nnunet_bnei_reem_i4.nii.gz",
+    "b": "02_annotations/bnei_reem_i4/original_annotations/annotations_i3.nii.gz",
+    "best": {
+     "score": 0.013297810505306068,
+     "perm": [
+      1,
+      2,
+      0
+     ],
+     "flips": [
+      false,
+      false,
+      true
+     ],
+     "off_a": [
+      0,
+      0,
+      0
+     ],
+     "off_b": [
+      0,
+      0,
+      0
+     ]
+    },
+    "identity": {
+     "score": 0.012933326656221756,
+     "perm": [
+      0,
+      1,
+      2
+     ],
+     "flips": [
+      false,
+      false,
+      false
+     ],
+     "off_a": [
+      0,
+      0,
+      0
+     ],
+     "off_b": [
+      0,
+      0,
+      0
+     ]
+    }
+   },
+   {
+    "a": "01_volumes/Rehovot_samp3_highkV_Cu0.11_15um/segmentation_nnunet_bnei_reem_i4.nii.gz",
+    "b": "02_annotations/bnei_reem_i4/original_annotations/fine_tuning_annotations.nii.gz",
+    "best": {
+     "score": 0.0041459209643069286,
+     "perm": [
+      1,
+      2,
+      0
+     ],
+     "flips": [
+      true,
+      false,
+      true
+     ],
+     "off_a": [
+      0,
+      0,
+      0
+     ],
+     "off_b": [
+      0,
+      0,
+      0
+     ]
+    },
+    "identity": {
+     "score": 0.002984561054013673,
+     "perm": [
+      0,
+      1,
+      2
+     ],
+     "flips": [
+      false,
+      false,
+      false
+     ],
+     "off_a": [
+      0,
+      0,
+      0
+     ],
+     "off_b": [
+      0,
+      0,
+      0
+     ]
+    }
+   },
+   {
+    "a": "01_volumes/Rehovot_samp3_highkV_Cu0.11_15um/segmentation_nnunet_bnei_reem_i4.nii.gz",
+    "b": "02_annotations/bnei_reem_i4/registry_merged_GT/POM_GT.nii.gz",
+    "best": {
+     "score": 0.0,
+     "perm": [
+      0,
+      1,
+      2
+     ],
+     "flips": [
+      false,
+      false,
+      false
+     ],
+     "off_a": [
+      0,
+      0,
+      0
+     ],
+     "off_b": [
+      0,
+      0,
+      0
+     ]
+    },
+    "identity": {
+     "score": 0.0,
+     "perm": [
+      0,
+      1,
+      2
+     ],
+     "flips": [
+      false,
+      false,
+      false
+     ],
+     "off_a": [
+      0,
+      0,
+      0
+     ],
+     "off_b": [
+      0,
+      0,
+      0
+     ]
+    }
+   },
+   {
+    "a": "01_volumes/Rehovot_samp3_highkV_Cu0.11_15um/segmentation_nnunet_bnei_reem_i4.nii.gz",
+    "b": "02_annotations/bnei_reem_i4/registry_merged_GT/less_reliable_solid_pores_GT.nii.gz",
+    "best": {
+     "score": 0.009275276176141569,
+     "perm": [
+      0,
+      1,
+      2
+     ],
+     "flips": [
+      true,
+      true,
+      true
+     ],
+     "off_a": [
+      0,
+      0,
+      0
+     ],
+     "off_b": [
+      0,
+      0,
+      1
+     ]
+    },
+    "identity": {
+     "score": 0.004588153575428317,
+     "perm": [
+      0,
+      1,
+      2
+     ],
+     "flips": [
+      false,
+      false,
+      false
+     ],
+     "off_a": [
+      0,
+      0,
+      0
+     ],
+     "off_b": [
+      0,
+      0,
+      0
+     ]
+    }
+   },
+   {
+    "a": "01_volumes/Rehovot_samp3_highkV_Cu0.11_15um/segmentation_nnunet_bnei_reem_i4.nii.gz",
+    "b": "02_annotations/bnei_reem_i4/registry_merged_GT/merged_GT.nii.gz",
+    "best": {
+     "score": 0.0093639185393006,
+     "perm": [
+      0,
+      1,
+      2
+     ],
+     "flips": [
+      true,
+      true,
+      true
+     ],
+     "off_a": [
+      0,
+      0,
+      0
+     ],
+     "off_b": [
+      0,
+      0,
+      1
+     ]
+    },
+    "identity": {
+     "score": 0.0046192131072882725,
+     "perm": [
+      0,
+      1,
+      2
+     ],
+     "flips": [
+      false,
+      false,
+      false
+     ],
+     "off_a": [
+      0,
+      0,
+      0
+     ],
+     "off_b": [
+      0,
+      0,
+      0
+     ]
+    }
+   },
+   {
+    "a": "01_volumes/Rehovot_samp3_highkV_Cu0.11_15um/segmentation_nnunet_loess_i2.nii.gz",
+    "b": "01_volumes/Rehovot_samp3_highkV_Cu0.11_15um/segmentation_otsu.npy",
+    "best": {
+     "score": 0.9622296242179141,
+     "perm": [
+      2,
+      1,
+      0
+     ],
+     "flips": [
+      false,
+      true,
+      false
+     ],
+     "off_a": [
+      0,
+      0,
+      0
+     ],
+     "off_b": [
+      0,
+      0,
+      0
+     ]
+    },
+    "identity": {
+     "score": 0.40185799464000055,
+     "perm": [
+      0,
+      1,
+      2
+     ],
+     "flips": [
+      false,
+      false,
+      false
+     ],
+     "off_a": [
+      0,
+      0,
+      0
+     ],
+     "off_b": [
+      0,
+      0,
+      0
+     ]
+    }
+   },
+   {
+    "a": "01_volumes/Rehovot_samp3_highkV_Cu0.11_15um/segmentation_nnunet_loess_i2.nii.gz",
+    "b": "01_volumes/bnei_reem_fresh_bnei_reem_i4/segmentation.nii.gz",
+    "best": {
+     "score": 0.2874873119167085,
+     "perm": [
+      2,
+      0,
+      1
+     ],
+     "flips": [
+      true,
+      true,
+      false
+     ],
+     "off_a": [
+      0,
+      0,
+      0
+     ],
+     "off_b": [
+      1,
+      0,
+      0
+     ]
+    },
+    "identity": {
+     "score": 0.28119779807264933,
+     "perm": [
+      0,
+      1,
+      2
+     ],
+     "flips": [
+      false,
+      false,
+      false
+     ],
+     "off_a": [
+      0,
+      0,
+      0
+     ],
+     "off_b": [
+      0,
+      0,
+      0
+     ]
+    }
+   },
+   {
+    "a": "01_volumes/Rehovot_samp3_highkV_Cu0.11_15um/segmentation_nnunet_loess_i2.nii.gz",
+    "b": "01_volumes/bnei_reem_specA_unified/segmentation.nii.gz",
+    "best": {
+     "score": 0.22197193757646408,
+     "perm": [
+      2,
+      1,
+      0
+     ],
+     "flips": [
+      false,
+      true,
+      false
+     ],
+     "off_a": [
+      0,
+      0,
+      0
+     ],
+     "off_b": [
+      0,
+      0,
+      0
+     ]
+    },
+    "identity": {
+     "score": 0.21762061826120765,
+     "perm": [
+      0,
+      1,
+      2
+     ],
+     "flips": [
+      false,
+      false,
+      false
+     ],
+     "off_a": [
+      0,
+      0,
+      0
+     ],
+     "off_b": [
+      0,
+      0,
+      0
+     ]
+    }
+   },
+   {
+    "a": "01_volumes/Rehovot_samp3_highkV_Cu0.11_15um/segmentation_nnunet_loess_i2.nii.gz",
+    "b": "01_volumes/bnei_reem_specB_unified/segmentation.nii.gz",
+    "best": {
+     "score": 0.2875514280303591,
+     "perm": [
+      2,
+      0,
+      1
+     ],
+     "flips": [
+      true,
+      true,
+      false
+     ],
+     "off_a": [
+      0,
+      0,
+      0
+     ],
+     "off_b": [
+      0,
+      0,
+      0
+     ]
+    },
+    "identity": {
+     "score": 0.28124684481699747,
+     "perm": [
+      0,
+      1,
+      2
+     ],
+     "flips": [
+      false,
+      false,
+      false
+     ],
+     "off_a": [
+      0,
+      0,
+      0
+     ],
+     "off_b": [
+      0,
+      0,
+      0
+     ]
+    }
+   },
+   {
+    "a": "01_volumes/Rehovot_samp3_highkV_Cu0.11_15um/segmentation_nnunet_loess_i2.nii.gz",
+    "b": "02_annotations/bnei_reem_i4/original_annotations/annotations_i2.nii.gz",
+    "best": {
+     "score": 0.011376574846238571,
+     "perm": [
+      0,
+      1,
+      2
+     ],
+     "flips": [
+      true,
+      true,
+      true
+     ],
+     "off_a": [
+      0,
+      0,
+      0
+     ],
+     "off_b": [
+      0,
+      0,
+      1
+     ]
+    },
+    "identity": {
+     "score": 0.00758378844227376,
+     "perm": [
+      0,
+      1,
+      2
+     ],
+     "flips": [
+      false,
+      false,
+      false
+     ],
+     "off_a": [
+      0,
+      0,
+      0
+     ],
+     "off_b": [
+      0,
+      0,
+      0
+     ]
+    }
+   },
+   {
+    "a": "01_volumes/Rehovot_samp3_highkV_Cu0.11_15um/segmentation_nnunet_loess_i2.nii.gz",
+    "b": "02_annotations/bnei_reem_i4/original_annotations/annotations_i3.nii.gz",
+    "best": {
+     "score": 0.013270826489042471,
+     "perm": [
+      0,
+      2,
+      1
+     ],
+     "flips": [
+      true,
+      false,
+      true
+     ],
+     "off_a": [
+      0,
+      0,
+      0
+     ],
+     "off_b": [
+      0,
+      0,
+      0
+     ]
+    },
+    "identity": {
+     "score": 0.012840317670386264,
+     "perm": [
+      0,
+      1,
+      2
+     ],
+     "flips": [
+      false,
+      false,
+      false
+     ],
+     "off_a": [
+      0,
+      0,
+      0
+     ],
+     "off_b": [
+      0,
+      0,
+      0
+     ]
+    }
+   },
+   {
+    "a": "01_volumes/Rehovot_samp3_highkV_Cu0.11_15um/segmentation_nnunet_loess_i2.nii.gz",
+    "b": "02_annotations/bnei_reem_i4/original_annotations/fine_tuning_annotations.nii.gz",
+    "best": {
+     "score": 0.004106720781696295,
+     "perm": [
+      1,
+      2,
+      0
+     ],
+     "flips": [
+      true,
+      false,
+      true
+     ],
+     "off_a": [
+      0,
+      0,
+      0
+     ],
+     "off_b": [
+      0,
+      0,
+      0
+     ]
+    },
+    "identity": {
+     "score": 0.0029290889501087116,
+     "perm": [
+      0,
+      1,
+      2
+     ],
+     "flips": [
+      false,
+      false,
+      false
+     ],
+     "off_a": [
+      0,
+      0,
+      0
+     ],
+     "off_b": [
+      0,
+      0,
+      0
+     ]
+    }
+   },
+   {
+    "a": "01_volumes/Rehovot_samp3_highkV_Cu0.11_15um/segmentation_nnunet_loess_i2.nii.gz",
+    "b": "02_annotations/bnei_reem_i4/registry_merged_GT/POM_GT.nii.gz",
+    "best": {
+     "score": 0.0,
+     "perm": [
+      0,
+      1,
+      2
+     ],
+     "flips": [
+      false,
+      false,
+      false
+     ],
+     "off_a": [
+      0,
+      0,
+      0
+     ],
+     "off_b": [
+      0,
+      0,
+      0
+     ]
+    },
+    "identity": {
+     "score": 0.0,
+     "perm": [
+      0,
+      1,
+      2
+     ],
+     "flips": [
+      false,
+      false,
+      false
+     ],
+     "off_a": [
+      0,
+      0,
+      0
+     ],
+     "off_b": [
+      0,
+      0,
+      0
+     ]
+    }
+   },
+   {
+    "a": "01_volumes/Rehovot_samp3_highkV_Cu0.11_15um/segmentation_nnunet_loess_i2.nii.gz",
+    "b": "02_annotations/bnei_reem_i4/registry_merged_GT/less_reliable_solid_pores_GT.nii.gz",
+    "best": {
+     "score": 0.00917319545008574,
+     "perm": [
+      0,
+      1,
+      2
+     ],
+     "flips": [
+      true,
+      true,
+      true
+     ],
+     "off_a": [
+      0,
+      0,
+      0
+     ],
+     "off_b": [
+      0,
+      0,
+      1
+     ]
+    },
+    "identity": {
+     "score": 0.004524783580128181,
+     "perm": [
+      0,
+      1,
+      2
+     ],
+     "flips": [
+      false,
+      false,
+      false
+     ],
+     "off_a": [
+      0,
+      0,
+      0
+     ],
+     "off_b": [
+      0,
+      0,
+      0
+     ]
+    }
+   },
+   {
+    "a": "01_volumes/Rehovot_samp3_highkV_Cu0.11_15um/segmentation_nnunet_loess_i2.nii.gz",
+    "b": "02_annotations/bnei_reem_i4/registry_merged_GT/merged_GT.nii.gz",
+    "best": {
+     "score": 0.009259350902268553,
+     "perm": [
+      0,
+      1,
+      2
+     ],
+     "flips": [
+      true,
+      true,
+      true
+     ],
+     "off_a": [
+      0,
+      0,
+      0
+     ],
+     "off_b": [
+      0,
+      0,
+      1
+     ]
+    },
+    "identity": {
+     "score": 0.00455145408305116,
+     "perm": [
+      0,
+      1,
+      2
+     ],
+     "flips": [
+      false,
+      false,
+      false
+     ],
+     "off_a": [
+      0,
+      0,
+      0
+     ],
+     "off_b": [
+      0,
+      0,
+      0
+     ]
+    }
+   },
+   {
+    "a": "01_volumes/Rehovot_samp3_highkV_Cu0.11_15um/segmentation_otsu.npy",
+    "b": "01_volumes/bnei_reem_fresh_bnei_reem_i4/segmentation.nii.gz",
+    "best": {
+     "score": 0.2942138575072347,
+     "perm": [
+      2,
+      0,
+      1
+     ],
+     "flips": [
+      false,
+      true,
+      false
+     ],
+     "off_a": [
+      0,
+      0,
+      0
+     ],
+     "off_b": [
+      2,
+      0,
+      0
+     ]
+    },
+    "identity": {
+     "score": 0.28851020078085765,
+     "perm": [
+      0,
+      1,
+      2
+     ],
+     "flips": [
+      false,
+      false,
+      false
+     ],
+     "off_a": [
+      0,
+      0,
+      0
+     ],
+     "off_b": [
+      0,
+      0,
+      0
+     ]
+    }
+   },
+   {
+    "a": "01_volumes/Rehovot_samp3_highkV_Cu0.11_15um/segmentation_otsu.npy",
+    "b": "01_volumes/bnei_reem_specA_unified/segmentation.nii.gz",
+    "best": {
+     "score": 0.2247574258384922,
+     "perm": [
+      0,
+      1,
+      2
+     ],
+     "flips": [
+      false,
+      false,
+      false
+     ],
+     "off_a": [
+      0,
+      0,
+      0
+     ],
+     "off_b": [
+      0,
+      0,
+      0
+     ]
+    },
+    "identity": {
+     "score": 0.2247574258384922,
+     "perm": [
+      0,
+      1,
+      2
+     ],
+     "flips": [
+      false,
+      false,
+      false
+     ],
+     "off_a": [
+      0,
+      0,
+      0
+     ],
+     "off_b": [
+      0,
+      0,
+      0
+     ]
+    }
+   },
+   {
+    "a": "01_volumes/Rehovot_samp3_highkV_Cu0.11_15um/segmentation_otsu.npy",
+    "b": "01_volumes/bnei_reem_specB_unified/segmentation.nii.gz",
+    "best": {
+     "score": 0.2939311123241033,
+     "perm": [
+      2,
+      0,
+      1
+     ],
+     "flips": [
+      false,
+      true,
+      false
+     ],
+     "off_a": [
+      0,
+      0,
+      0
+     ],
+     "off_b": [
+      0,
+      0,
+      0
+     ]
+    },
+    "identity": {
+     "score": 0.28858258070199205,
+     "perm": [
+      0,
+      1,
+      2
+     ],
+     "flips": [
+      false,
+      false,
+      false
+     ],
+     "off_a": [
+      0,
+      0,
+      0
+     ],
+     "off_b": [
+      0,
+      0,
+      0
+     ]
+    }
+   },
+   {
+    "a": "01_volumes/Rehovot_samp3_highkV_Cu0.11_15um/segmentation_otsu.npy",
+    "b": "02_annotations/bnei_reem_i4/original_annotations/annotations_i2.nii.gz",
+    "best": {
+     "score": 0.01171378011909345,
+     "perm": [
+      2,
+      1,
+      0
+     ],
+     "flips": [
+      true,
+      false,
+      true
+     ],
+     "off_a": [
+      0,
+      0,
+      0
+     ],
+     "off_b": [
+      1,
+      0,
+      0
+     ]
+    },
+    "identity": {
+     "score": 0.006955159532148256,
+     "perm": [
+      0,
+      1,
+      2
+     ],
+     "flips": [
+      false,
+      false,
+      false
+     ],
+     "off_a": [
+      0,
+      0,
+      0
+     ],
+     "off_b": [
+      0,
+      0,
+      0
+     ]
+    }
+   },
+   {
+    "a": "01_volumes/Rehovot_samp3_highkV_Cu0.11_15um/segmentation_otsu.npy",
+    "b": "02_annotations/bnei_reem_i4/original_annotations/annotations_i3.nii.gz",
+    "best": {
+     "score": 0.013230046325238082,
+     "perm": [
+      1,
+      2,
+      0
+     ],
+     "flips": [
+      true,
+      false,
+      true
+     ],
+     "off_a": [
+      0,
+      0,
+      0
+     ],
+     "off_b": [
+      0,
+      0,
+      0
+     ]
+    },
+    "identity": {
+     "score": 0.012202235886842666,
+     "perm": [
+      0,
+      1,
+      2
+     ],
+     "flips": [
+      false,
+      false,
+      false
+     ],
+     "off_a": [
+      0,
+      0,
+      0
+     ],
+     "off_b": [
+      0,
+      0,
+      0
+     ]
+    }
+   },
+   {
+    "a": "01_volumes/Rehovot_samp3_highkV_Cu0.11_15um/segmentation_otsu.npy",
+    "b": "02_annotations/bnei_reem_i4/original_annotations/fine_tuning_annotations.nii.gz",
+    "best": {
+     "score": 0.004008468340773978,
+     "perm": [
+      0,
+      2,
+      1
+     ],
+     "flips": [
+      true,
+      true,
+      true
+     ],
+     "off_a": [
+      0,
+      0,
+      0
+     ],
+     "off_b": [
+      0,
+      0,
+      0
+     ]
+    },
+    "identity": {
+     "score": 0.002883312728838262,
+     "perm": [
+      0,
+      1,
+      2
+     ],
+     "flips": [
+      false,
+      false,
+      false
+     ],
+     "off_a": [
+      0,
+      0,
+      0
+     ],
+     "off_b": [
+      0,
+      0,
+      0
+     ]
+    }
+   },
+   {
+    "a": "01_volumes/Rehovot_samp3_highkV_Cu0.11_15um/segmentation_otsu.npy",
+    "b": "02_annotations/bnei_reem_i4/registry_merged_GT/POM_GT.nii.gz",
+    "best": {
+     "score": 0.0,
+     "perm": [
+      0,
+      1,
+      2
+     ],
+     "flips": [
+      false,
+      false,
+      false
+     ],
+     "off_a": [
+      0,
+      0,
+      0
+     ],
+     "off_b": [
+      0,
+      0,
+      0
+     ]
+    },
+    "identity": {
+     "score": 0.0,
+     "perm": [
+      0,
+      1,
+      2
+     ],
+     "flips": [
+      false,
+      false,
+      false
+     ],
+     "off_a": [
+      0,
+      0,
+      0
+     ],
+     "off_b": [
+      0,
+      0,
+      0
+     ]
+    }
+   },
+   {
+    "a": "01_volumes/Rehovot_samp3_highkV_Cu0.11_15um/segmentation_otsu.npy",
+    "b": "02_annotations/bnei_reem_i4/registry_merged_GT/less_reliable_solid_pores_GT.nii.gz",
+    "best": {
+     "score": 0.009466787242697361,
+     "perm": [
+      2,
+      1,
+      0
+     ],
+     "flips": [
+      true,
+      false,
+      true
+     ],
+     "off_a": [
+      0,
+      0,
+      0
+     ],
+     "off_b": [
+      1,
+      0,
+      0
+     ]
+    },
+    "identity": {
+     "score": 0.004075083813481003,
+     "perm": [
+      0,
+      1,
+      2
+     ],
+     "flips": [
+      false,
+      false,
+      false
+     ],
+     "off_a": [
+      0,
+      0,
+      0
+     ],
+     "off_b": [
+      0,
+      0,
+      0
+     ]
+    }
+   },
+   {
+    "a": "01_volumes/Rehovot_samp3_highkV_Cu0.11_15um/segmentation_otsu.npy",
+    "b": "02_annotations/bnei_reem_i4/registry_merged_GT/merged_GT.nii.gz",
+    "best": {
+     "score": 0.009564188522973773,
+     "perm": [
+      2,
+      1,
+      0
+     ],
+     "flips": [
+      true,
+      false,
+      true
+     ],
+     "off_a": [
+      0,
+      0,
+      0
+     ],
+     "off_b": [
+      1,
+      0,
+      0
+     ]
+    },
+    "identity": {
+     "score": 0.0040985152877773805,
+     "perm": [
+      0,
+      1,
+      2
+     ],
+     "flips": [
+      false,
+      false,
+      false
+     ],
+     "off_a": [
+      0,
+      0,
+      0
+     ],
+     "off_b": [
+      0,
+      0,
+      0
+     ]
+    }
+   },
+   {
+    "a": "01_volumes/bnei_reem_fresh_bnei_reem_i4/segmentation.nii.gz",
+    "b": "01_volumes/bnei_reem_specA_unified/segmentation.nii.gz",
+    "best": {
+     "score": 0.19389176002653302,
+     "perm": [
+      1,
+      2,
+      0
+     ],
+     "flips": [
+      true,
+      true,
+      false
+     ],
+     "off_a": [
+      0,
+      0,
+      0
+     ],
+     "off_b": [
+      0,
+      0,
+      0
+     ]
+    },
+    "identity": {
+     "score": 0.16825172667654115,
+     "perm": [
+      0,
+      1,
+      2
+     ],
+     "flips": [
+      false,
+      false,
+      false
+     ],
+     "off_a": [
+      0,
+      0,
+      0
+     ],
+     "off_b": [
+      0,
+      0,
+      0
+     ]
+    }
+   },
+   {
+    "a": "01_volumes/bnei_reem_fresh_bnei_reem_i4/segmentation.nii.gz",
+    "b": "01_volumes/bnei_reem_specB_unified/segmentation.nii.gz",
+    "best": {
+     "score": 0.9882706866590085,
+     "perm": [
+      0,
+      1,
+      2
+     ],
+     "flips": [
+      false,
+      false,
+      false
+     ],
+     "off_a": [
+      0,
+      0,
+      0
+     ],
+     "off_b": [
+      0,
+      0,
+      0
+     ]
+    },
+    "identity": {
+     "score": 0.9882706866590085,
+     "perm": [
+      0,
+      1,
+      2
+     ],
+     "flips": [
+      false,
+      false,
+      false
+     ],
+     "off_a": [
+      0,
+      0,
+      0
+     ],
+     "off_b": [
+      0,
+      0,
+      0
+     ]
+    }
+   },
+   {
+    "a": "01_volumes/bnei_reem_fresh_bnei_reem_i4/segmentation.nii.gz",
+    "b": "02_annotations/bnei_reem_i4/original_annotations/annotations_i2.nii.gz",
+    "best": {
+     "score": 0.03260834141936379,
+     "perm": [
+      0,
+      1,
+      2
+     ],
+     "flips": [
+      false,
+      true,
+      false
+     ],
+     "off_a": [
+      0,
+      0,
+      0
+     ],
+     "off_b": [
+      0,
+      0,
+      0
+     ]
+    },
+    "identity": {
+     "score": 0.006200569173982841,
+     "perm": [
+      0,
+      1,
+      2
+     ],
+     "flips": [
+      false,
+      false,
+      false
+     ],
+     "off_a": [
+      0,
+      0,
+      0
+     ],
+     "off_b": [
+      0,
+      0,
+      0
+     ]
+    }
+   },
+   {
+    "a": "01_volumes/bnei_reem_fresh_bnei_reem_i4/segmentation.nii.gz",
+    "b": "02_annotations/bnei_reem_i4/original_annotations/annotations_i3.nii.gz",
+    "best": {
+     "score": 0.05450705425760357,
+     "perm": [
+      0,
+      1,
+      2
+     ],
+     "flips": [
+      false,
+      true,
+      false
+     ],
+     "off_a": [
+      0,
+      0,
+      0
+     ],
+     "off_b": [
+      0,
+      0,
+      0
+     ]
+    },
+    "identity": {
+     "score": 0.011804046180887965,
+     "perm": [
+      0,
+      1,
+      2
+     ],
+     "flips": [
+      false,
+      false,
+      false
+     ],
+     "off_a": [
+      0,
+      0,
+      0
+     ],
+     "off_b": [
+      0,
+      0,
+      0
+     ]
+    }
+   },
+   {
+    "a": "01_volumes/bnei_reem_fresh_bnei_reem_i4/segmentation.nii.gz",
+    "b": "02_annotations/bnei_reem_i4/original_annotations/fine_tuning_annotations.nii.gz",
+    "best": {
+     "score": 0.012260448473181066,
+     "perm": [
+      0,
+      1,
+      2
+     ],
+     "flips": [
+      false,
+      true,
+      false
+     ],
+     "off_a": [
+      0,
+      0,
+      0
+     ],
+     "off_b": [
+      0,
+      0,
+      0
+     ]
+    },
+    "identity": {
+     "score": 0.00303231207952435,
+     "perm": [
+      0,
+      1,
+      2
+     ],
+     "flips": [
+      false,
+      false,
+      false
+     ],
+     "off_a": [
+      0,
+      0,
+      0
+     ],
+     "off_b": [
+      0,
+      0,
+      0
+     ]
+    }
+   },
+   {
+    "a": "01_volumes/bnei_reem_fresh_bnei_reem_i4/segmentation.nii.gz",
+    "b": "02_annotations/bnei_reem_i4/registry_merged_GT/POM_GT.nii.gz",
+    "best": {
+     "score": 0.0,
+     "perm": [
+      0,
+      1,
+      2
+     ],
+     "flips": [
+      false,
+      false,
+      false
+     ],
+     "off_a": [
+      0,
+      0,
+      0
+     ],
+     "off_b": [
+      0,
+      0,
+      0
+     ]
+    },
+    "identity": {
+     "score": 0.0,
+     "perm": [
+      0,
+      1,
+      2
+     ],
+     "flips": [
+      false,
+      false,
+      false
+     ],
+     "off_a": [
+      0,
+      0,
+      0
+     ],
+     "off_b": [
+      0,
+      0,
+      0
+     ]
+    }
+   },
+   {
+    "a": "01_volumes/bnei_reem_fresh_bnei_reem_i4/segmentation.nii.gz",
+    "b": "02_annotations/bnei_reem_i4/registry_merged_GT/less_reliable_solid_pores_GT.nii.gz",
+    "best": {
+     "score": 0.019355849523196533,
+     "perm": [
+      0,
+      1,
+      2
+     ],
+     "flips": [
+      false,
+      true,
+      false
+     ],
+     "off_a": [
+      0,
+      0,
+      0
+     ],
+     "off_b": [
+      0,
+      0,
+      0
+     ]
+    },
+    "identity": {
+     "score": 0.0036057666859341223,
+     "perm": [
+      0,
+      1,
+      2
+     ],
+     "flips": [
+      false,
+      false,
+      false
+     ],
+     "off_a": [
+      0,
+      0,
+      0
+     ],
+     "off_b": [
+      0,
+      0,
+      0
+     ]
+    }
+   },
+   {
+    "a": "01_volumes/bnei_reem_fresh_bnei_reem_i4/segmentation.nii.gz",
+    "b": "02_annotations/bnei_reem_i4/registry_merged_GT/merged_GT.nii.gz",
+    "best": {
+     "score": 0.019546594376940396,
+     "perm": [
+      0,
+      1,
+      2
+     ],
+     "flips": [
+      false,
+      true,
+      false
+     ],
+     "off_a": [
+      0,
+      0,
+      0
+     ],
+     "off_b": [
+      0,
+      0,
+      0
+     ]
+    },
+    "identity": {
+     "score": 0.0036181027930737362,
+     "perm": [
+      0,
+      1,
+      2
+     ],
+     "flips": [
+      false,
+      false,
+      false
+     ],
+     "off_a": [
+      0,
+      0,
+      0
+     ],
+     "off_b": [
+      0,
+      0,
+      0
+     ]
+    }
+   },
+   {
+    "a": "01_volumes/bnei_reem_specA_unified/segmentation.nii.gz",
+    "b": "01_volumes/bnei_reem_specB_unified/segmentation.nii.gz",
+    "best": {
+     "score": 0.1933508728768031,
+     "perm": [
+      2,
+      0,
+      1
+     ],
+     "flips": [
+      false,
+      true,
+      true
+     ],
+     "off_a": [
+      0,
+      0,
+      0
+     ],
+     "off_b": [
+      0,
+      0,
+      0
+     ]
+    },
+    "identity": {
+     "score": 0.16827048195982153,
+     "perm": [
+      0,
+      1,
+      2
+     ],
+     "flips": [
+      false,
+      false,
+      false
+     ],
+     "off_a": [
+      0,
+      0,
+      0
+     ],
+     "off_b": [
+      0,
+      0,
+      0
+     ]
+    }
+   },
+   {
+    "a": "01_volumes/bnei_reem_specA_unified/segmentation.nii.gz",
+    "b": "02_annotations/bnei_reem_i4/original_annotations/annotations_i2.nii.gz",
+    "best": {
+     "score": 0.012532386077210753,
+     "perm": [
+      2,
+      1,
+      0
+     ],
+     "flips": [
+      true,
+      true,
+      true
+     ],
+     "off_a": [
+      0,
+      0,
+      0
+     ],
+     "off_b": [
+      1,
+      0,
+      0
+     ]
+    },
+    "identity": {
+     "score": 0.006805371414181066,
+     "perm": [
+      0,
+      1,
+      2
+     ],
+     "flips": [
+      false,
+      false,
+      false
+     ],
+     "off_a": [
+      0,
+      0,
+      0
+     ],
+     "off_b": [
+      0,
+      0,
+      0
+     ]
+    }
+   },
+   {
+    "a": "01_volumes/bnei_reem_specA_unified/segmentation.nii.gz",
+    "b": "02_annotations/bnei_reem_i4/original_annotations/annotations_i3.nii.gz",
+    "best": {
+     "score": 0.01346702197757343,
+     "perm": [
+      2,
+      0,
+      1
+     ],
+     "flips": [
+      false,
+      true,
+      true
+     ],
+     "off_a": [
+      0,
+      0,
+      0
+     ],
+     "off_b": [
+      0,
+      0,
+      0
+     ]
+    },
+    "identity": {
+     "score": 0.011794808243244229,
+     "perm": [
+      0,
+      1,
+      2
+     ],
+     "flips": [
+      false,
+      false,
+      false
+     ],
+     "off_a": [
+      0,
+      0,
+      0
+     ],
+     "off_b": [
+      0,
+      0,
+      0
+     ]
+    }
+   },
+   {
+    "a": "01_volumes/bnei_reem_specA_unified/segmentation.nii.gz",
+    "b": "02_annotations/bnei_reem_i4/original_annotations/fine_tuning_annotations.nii.gz",
+    "best": {
+     "score": 0.002877987754267361,
+     "perm": [
+      0,
+      2,
+      1
+     ],
+     "flips": [
+      false,
+      false,
+      false
+     ],
+     "off_a": [
+      0,
+      0,
+      0
+     ],
+     "off_b": [
+      0,
+      0,
+      0
+     ]
+    },
+    "identity": {
+     "score": 0.002694542348822942,
+     "perm": [
+      0,
+      1,
+      2
+     ],
+     "flips": [
+      false,
+      false,
+      false
+     ],
+     "off_a": [
+      0,
+      0,
+      0
+     ],
+     "off_b": [
+      0,
+      0,
+      0
+     ]
+    }
+   },
+   {
+    "a": "01_volumes/bnei_reem_specA_unified/segmentation.nii.gz",
+    "b": "02_annotations/bnei_reem_i4/registry_merged_GT/POM_GT.nii.gz",
+    "best": {
+     "score": 0.0,
+     "perm": [
+      0,
+      1,
+      2
+     ],
+     "flips": [
+      false,
+      false,
+      false
+     ],
+     "off_a": [
+      0,
+      0,
+      0
+     ],
+     "off_b": [
+      0,
+      0,
+      0
+     ]
+    },
+    "identity": {
+     "score": 0.0,
+     "perm": [
+      0,
+      1,
+      2
+     ],
+     "flips": [
+      false,
+      false,
+      false
+     ],
+     "off_a": [
+      0,
+      0,
+      0
+     ],
+     "off_b": [
+      0,
+      0,
+      0
+     ]
+    }
+   },
+   {
+    "a": "01_volumes/bnei_reem_specA_unified/segmentation.nii.gz",
+    "b": "02_annotations/bnei_reem_i4/registry_merged_GT/less_reliable_solid_pores_GT.nii.gz",
+    "best": {
+     "score": 0.01011885522332768,
+     "perm": [
+      2,
+      0,
+      1
+     ],
+     "flips": [
+      false,
+      true,
+      false
+     ],
+     "off_a": [
+      0,
+      0,
+      0
+     ],
+     "off_b": [
+      2,
+      0,
+      0
+     ]
+    },
+    "identity": {
+     "score": 0.0036562196125364647,
+     "perm": [
+      0,
+      1,
+      2
+     ],
+     "flips": [
+      false,
+      false,
+      false
+     ],
+     "off_a": [
+      0,
+      0,
+      0
+     ],
+     "off_b": [
+      0,
+      0,
+      0
+     ]
+    }
+   },
+   {
+    "a": "01_volumes/bnei_reem_specA_unified/segmentation.nii.gz",
+    "b": "02_annotations/bnei_reem_i4/registry_merged_GT/merged_GT.nii.gz",
+    "best": {
+     "score": 0.010180399632325277,
+     "perm": [
+      2,
+      0,
+      1
+     ],
+     "flips": [
+      false,
+      true,
+      false
+     ],
+     "off_a": [
+      0,
+      0,
+      0
+     ],
+     "off_b": [
+      2,
+      0,
+      0
+     ]
+    },
+    "identity": {
+     "score": 0.003694584964983711,
+     "perm": [
+      0,
+      1,
+      2
+     ],
+     "flips": [
+      false,
+      false,
+      false
+     ],
+     "off_a": [
+      0,
+      0,
+      0
+     ],
+     "off_b": [
+      0,
+      0,
+      0
+     ]
+    }
+   },
+   {
+    "a": "01_volumes/bnei_reem_specB_unified/segmentation.nii.gz",
+    "b": "02_annotations/bnei_reem_i4/original_annotations/annotations_i2.nii.gz",
+    "best": {
+     "score": 0.04591746249006307,
+     "perm": [
+      0,
+      1,
+      2
+     ],
+     "flips": [
+      false,
+      true,
+      false
+     ],
+     "off_a": [
+      0,
+      0,
+      0
+     ],
+     "off_b": [
+      0,
+      0,
+      2
+     ]
+    },
+    "identity": {
+     "score": 0.0062261080201354985,
+     "perm": [
+      0,
+      1,
+      2
+     ],
+     "flips": [
+      false,
+      false,
+      false
+     ],
+     "off_a": [
+      0,
+      0,
+      0
+     ],
+     "off_b": [
+      0,
+      0,
+      0
+     ]
+    }
+   },
+   {
+    "a": "01_volumes/bnei_reem_specB_unified/segmentation.nii.gz",
+    "b": "02_annotations/bnei_reem_i4/original_annotations/annotations_i3.nii.gz",
+    "best": {
+     "score": 0.0544930862403554,
+     "perm": [
+      0,
+      1,
+      2
+     ],
+     "flips": [
+      false,
+      true,
+      false
+     ],
+     "off_a": [
+      0,
+      0,
+      0
+     ],
+     "off_b": [
+      0,
+      0,
+      0
+     ]
+    },
+    "identity": {
+     "score": 0.01180254387752132,
+     "perm": [
+      0,
+      1,
+      2
+     ],
+     "flips": [
+      false,
+      false,
+      false
+     ],
+     "off_a": [
+      0,
+      0,
+      0
+     ],
+     "off_b": [
+      0,
+      0,
+      0
+     ]
+    }
+   },
+   {
+    "a": "01_volumes/bnei_reem_specB_unified/segmentation.nii.gz",
+    "b": "02_annotations/bnei_reem_i4/original_annotations/fine_tuning_annotations.nii.gz",
+    "best": {
+     "score": 0.01225468581828768,
+     "perm": [
+      0,
+      1,
+      2
+     ],
+     "flips": [
+      false,
+      true,
+      false
+     ],
+     "off_a": [
+      0,
+      0,
+      0
+     ],
+     "off_b": [
+      0,
+      0,
+      0
+     ]
+    },
+    "identity": {
+     "score": 0.0030069627657257248,
+     "perm": [
+      0,
+      1,
+      2
+     ],
+     "flips": [
+      false,
+      false,
+      false
+     ],
+     "off_a": [
+      0,
+      0,
+      0
+     ],
+     "off_b": [
+      0,
+      0,
+      0
+     ]
+    }
+   },
+   {
+    "a": "01_volumes/bnei_reem_specB_unified/segmentation.nii.gz",
+    "b": "02_annotations/bnei_reem_i4/registry_merged_GT/POM_GT.nii.gz",
+    "best": {
+     "score": 0.0,
+     "perm": [
+      0,
+      1,
+      2
+     ],
+     "flips": [
+      false,
+      false,
+      false
+     ],
+     "off_a": [
+      0,
+      0,
+      0
+     ],
+     "off_b": [
+      0,
+      0,
+      0
+     ]
+    },
+    "identity": {
+     "score": 0.0,
+     "perm": [
+      0,
+      1,
+      2
+     ],
+     "flips": [
+      false,
+      false,
+      false
+     ],
+     "off_a": [
+      0,
+      0,
+      0
+     ],
+     "off_b": [
+      0,
+      0,
+      0
+     ]
+    }
+   },
+   {
+    "a": "01_volumes/bnei_reem_specB_unified/segmentation.nii.gz",
+    "b": "02_annotations/bnei_reem_i4/registry_merged_GT/less_reliable_solid_pores_GT.nii.gz",
+    "best": {
+     "score": 0.036940481633577604,
+     "perm": [
+      0,
+      1,
+      2
+     ],
+     "flips": [
+      false,
+      true,
+      false
+     ],
+     "off_a": [
+      0,
+      0,
+      0
+     ],
+     "off_b": [
+      0,
+      0,
+      2
+     ]
+    },
+    "identity": {
+     "score": 0.003646176860751828,
+     "perm": [
+      0,
+      1,
+      2
+     ],
+     "flips": [
+      false,
+      false,
+      false
+     ],
+     "off_a": [
+      0,
+      0,
+      0
+     ],
+     "off_b": [
+      0,
+      0,
+      0
+     ]
+    }
+   },
+   {
+    "a": "01_volumes/bnei_reem_specB_unified/segmentation.nii.gz",
+    "b": "02_annotations/bnei_reem_i4/registry_merged_GT/merged_GT.nii.gz",
+    "best": {
+     "score": 0.03739711076653068,
+     "perm": [
+      0,
+      1,
+      2
+     ],
+     "flips": [
+      false,
+      true,
+      false
+     ],
+     "off_a": [
+      0,
+      0,
+      0
+     ],
+     "off_b": [
+      0,
+      0,
+      2
+     ]
+    },
+    "identity": {
+     "score": 0.003660626667951097,
+     "perm": [
+      0,
+      1,
+      2
+     ],
+     "flips": [
+      false,
+      false,
+      false
+     ],
+     "off_a": [
+      0,
+      0,
+      0
+     ],
+     "off_b": [
+      0,
+      0,
+      0
+     ]
+    }
+   },
+   {
+    "a": "01_volumes/mishmar_hanegev_maoz_2_8p8um/segmentation.nii.gz",
+    "b": "01_volumes/mishmar_hanegev_maoz_3_5p85um/segmentation.nii.gz",
+    "best": {
+     "score": 0.2634462966363067,
+     "perm": [
+      0,
+      1,
+      2
+     ],
+     "flips": [
+      false,
+      false,
+      false
+     ],
+     "off_a": [
+      0,
+      0,
+      0
+     ],
+     "off_b": [
+      0,
+      0,
+      0
+     ]
+    },
+    "identity": {
+     "score": 0.2634462966363067,
+     "perm": [
+      0,
+      1,
+      2
+     ],
+     "flips": [
+      false,
+      false,
+      false
+     ],
+     "off_a": [
+      0,
+      0,
+      0
+     ],
+     "off_b": [
+      0,
+      0,
+      0
+     ]
+    }
+   },
+   {
+    "a": "01_volumes/mishmar_hanegev_maoz_2_8p8um/segmentation.nii.gz",
+    "b": "02_annotations/mishmar_loess_i2/original_annotations/mishmar_hanegev_maoz_3_5p85um-1.nii.gz",
+    "best": {
+     "score": 0.0007139260903010861,
+     "perm": [
+      2,
+      1,
+      0
+     ],
+     "flips": [
+      false,
+      true,
+      true
+     ],
+     "off_a": [
+      0,
+      0,
+      0
+     ],
+     "off_b": [
+      0,
+      0,
+      0
+     ]
+    },
+    "identity": {
+     "score": 0.00048317424909217175,
+     "perm": [
+      0,
+      1,
+      2
+     ],
+     "flips": [
+      false,
+      false,
+      false
+     ],
+     "off_a": [
+      0,
+      0,
+      0
+     ],
+     "off_b": [
+      0,
+      0,
+      0
+     ]
+    }
+   },
+   {
+    "a": "01_volumes/mishmar_hanegev_maoz_2_8p8um/segmentation.nii.gz",
+    "b": "02_annotations/mishmar_loess_i2/original_annotations/mishmar_hanegev_maoz_3_5p85um.nii.gz",
+    "best": {
+     "score": 0.0023492458654631194,
+     "perm": [
+      2,
+      1,
+      0
+     ],
+     "flips": [
+      true,
+      true,
+      false
+     ],
+     "off_a": [
+      0,
+      0,
+      0
+     ],
+     "off_b": [
+      0,
+      0,
+      0
+     ]
+    },
+    "identity": {
+     "score": 0.001951181645917919,
+     "perm": [
+      0,
+      1,
+      2
+     ],
+     "flips": [
+      false,
+      false,
+      false
+     ],
+     "off_a": [
+      0,
+      0,
+      0
+     ],
+     "off_b": [
+      0,
+      0,
+      0
+     ]
+    }
+   },
+   {
+    "a": "01_volumes/mishmar_hanegev_maoz_3_5p85um/segmentation.nii.gz",
+    "b": "02_annotations/mishmar_loess_i2/original_annotations/mishmar_hanegev_maoz_3_5p85um-1.nii.gz",
+    "best": {
+     "score": 0.0022170342684815726,
+     "perm": [
+      0,
+      1,
+      2
+     ],
+     "flips": [
+      false,
+      true,
+      false
+     ],
+     "off_a": [
+      0,
+      0,
+      0
+     ],
+     "off_b": [
+      0,
+      0,
+      0
+     ]
+    },
+    "identity": {
+     "score": 0.0008116942627737192,
+     "perm": [
+      0,
+      1,
+      2
+     ],
+     "flips": [
+      false,
+      false,
+      false
+     ],
+     "off_a": [
+      0,
+      0,
+      0
+     ],
+     "off_b": [
+      0,
+      0,
+      0
+     ]
+    }
+   },
+   {
+    "a": "01_volumes/mishmar_hanegev_maoz_3_5p85um/segmentation.nii.gz",
+    "b": "02_annotations/mishmar_loess_i2/original_annotations/mishmar_hanegev_maoz_3_5p85um.nii.gz",
+    "best": {
+     "score": 0.0068846027974922095,
+     "perm": [
+      0,
+      1,
+      2
+     ],
+     "flips": [
+      false,
+      true,
+      false
+     ],
+     "off_a": [
+      0,
+      0,
+      0
+     ],
+     "off_b": [
+      0,
+      0,
+      0
+     ]
+    },
+    "identity": {
+     "score": 0.0018361603249687603,
+     "perm": [
+      0,
+      1,
+      2
+     ],
+     "flips": [
+      false,
+      false,
+      false
+     ],
+     "off_a": [
+      0,
+      0,
+      0
+     ],
+     "off_b": [
+      0,
+      0,
+      0
+     ]
+    }
+   },
+   {
+    "a": "02_annotations/bnei_reem_i4/nnUNet_raw_Dataset777_GCEF/labelsTr/nlm_volume.nii.gz",
+    "b": "03_models/bnei_reem_i4/nnUNetTrainer_betterIgnoreSampling_earlyStopValLoss_lowlr__nnUNetPlans__3d_fullres/fold_0/validation/nlm_volume.nii.gz",
+    "best": {
+     "score": 0.0,
+     "perm": [
+      0,
+      1,
+      2
+     ],
+     "flips": [
+      false,
+      false,
+      false
+     ],
+     "off_a": [
+      0,
+      0,
+      0
+     ],
+     "off_b": [
+      0,
+      0,
+      0
+     ]
+    },
+    "identity": {
+     "score": 0.0,
+     "perm": [
+      0,
+      1,
+      2
+     ],
+     "flips": [
+      false,
+      false,
+      false
+     ],
+     "off_a": [
+      0,
+      0,
+      0
+     ],
+     "off_b": [
+      0,
+      0,
+      0
+     ]
+    }
+   },
+   {
+    "a": "02_annotations/bnei_reem_i4/original_annotations/annotations_i2.nii.gz",
+    "b": "02_annotations/bnei_reem_i4/original_annotations/annotations_i3.nii.gz",
+    "best": {
+     "score": 0.7444360618634478,
+     "perm": [
+      0,
+      1,
+      2
+     ],
+     "flips": [
+      false,
+      false,
+      false
+     ],
+     "off_a": [
+      0,
+      0,
+      0
+     ],
+     "off_b": [
+      0,
+      0,
+      0
+     ]
+    },
+    "identity": {
+     "score": 0.7444360618634478,
+     "perm": [
+      0,
+      1,
+      2
+     ],
+     "flips": [
+      false,
+      false,
+      false
+     ],
+     "off_a": [
+      0,
+      0,
+      0
+     ],
+     "off_b": [
+      0,
+      0,
+      0
+     ]
+    }
+   },
+   {
+    "a": "02_annotations/bnei_reem_i4/original_annotations/annotations_i2.nii.gz",
+    "b": "02_annotations/bnei_reem_i4/original_annotations/fine_tuning_annotations.nii.gz",
+    "best": {
+     "score": 0.00698702939755454,
+     "perm": [
+      2,
+      0,
+      1
+     ],
+     "flips": [
+      false,
+      false,
+      false
+     ],
+     "off_a": [
+      0,
+      0,
+      1
+     ],
+     "off_b": [
+      0,
+      0,
+      0
+     ]
+    },
+    "identity": {
+     "score": 0.0,
+     "perm": [
+      0,
+      1,
+      2
+     ],
+     "flips": [
+      false,
+      false,
+      false
+     ],
+     "off_a": [
+      0,
+      0,
+      0
+     ],
+     "off_b": [
+      0,
+      0,
+      0
+     ]
+    }
+   },
+   {
+    "a": "02_annotations/bnei_reem_i4/original_annotations/annotations_i2.nii.gz",
+    "b": "02_annotations/bnei_reem_i4/registry_merged_GT/POM_GT.nii.gz",
+    "best": {
+     "score": 0.0,
+     "perm": [
+      0,
+      1,
+      2
+     ],
+     "flips": [
+      false,
+      false,
+      false
+     ],
+     "off_a": [
+      0,
+      0,
+      0
+     ],
+     "off_b": [
+      0,
+      0,
+      0
+     ]
+    },
+    "identity": {
+     "score": 0.0,
+     "perm": [
+      0,
+      1,
+      2
+     ],
+     "flips": [
+      false,
+      false,
+      false
+     ],
+     "off_a": [
+      0,
+      0,
+      0
+     ],
+     "off_b": [
+      0,
+      0,
+      0
+     ]
+    }
+   },
+   {
+    "a": "02_annotations/bnei_reem_i4/original_annotations/annotations_i2.nii.gz",
+    "b": "02_annotations/bnei_reem_i4/registry_merged_GT/less_reliable_solid_pores_GT.nii.gz",
+    "best": {
+     "score": 0.7354931720796124,
+     "perm": [
+      0,
+      1,
+      2
+     ],
+     "flips": [
+      false,
+      false,
+      false
+     ],
+     "off_a": [
+      0,
+      0,
+      0
+     ],
+     "off_b": [
+      0,
+      0,
+      0
+     ]
+    },
+    "identity": {
+     "score": 0.7354931720796124,
+     "perm": [
+      0,
+      1,
+      2
+     ],
+     "flips": [
+      false,
+      false,
+      false
+     ],
+     "off_a": [
+      0,
+      0,
+      0
+     ],
+     "off_b": [
+      0,
+      0,
+      0
+     ]
+    }
+   },
+   {
+    "a": "02_annotations/bnei_reem_i4/original_annotations/annotations_i2.nii.gz",
+    "b": "02_annotations/bnei_reem_i4/registry_merged_GT/merged_GT.nii.gz",
+    "best": {
+     "score": 0.7403358997885666,
+     "perm": [
+      0,
+      1,
+      2
+     ],
+     "flips": [
+      false,
+      false,
+      false
+     ],
+     "off_a": [
+      0,
+      0,
+      0
+     ],
+     "off_b": [
+      0,
+      0,
+      0
+     ]
+    },
+    "identity": {
+     "score": 0.7403358997885666,
+     "perm": [
+      0,
+      1,
+      2
+     ],
+     "flips": [
+      false,
+      false,
+      false
+     ],
+     "off_a": [
+      0,
+      0,
+      0
+     ],
+     "off_b": [
+      0,
+      0,
+      0
+     ]
+    }
+   },
+   {
+    "a": "02_annotations/bnei_reem_i4/original_annotations/annotations_i3.nii.gz",
+    "b": "02_annotations/bnei_reem_i4/original_annotations/fine_tuning_annotations.nii.gz",
+    "best": {
+     "score": 0.3567527538646672,
+     "perm": [
+      0,
+      1,
+      2
+     ],
+     "flips": [
+      false,
+      false,
+      false
+     ],
+     "off_a": [
+      0,
+      0,
+      0
+     ],
+     "off_b": [
+      0,
+      0,
+      0
+     ]
+    },
+    "identity": {
+     "score": 0.3567527538646672,
+     "perm": [
+      0,
+      1,
+      2
+     ],
+     "flips": [
+      false,
+      false,
+      false
+     ],
+     "off_a": [
+      0,
+      0,
+      0
+     ],
+     "off_b": [
+      0,
+      0,
+      0
+     ]
+    }
+   },
+   {
+    "a": "02_annotations/bnei_reem_i4/original_annotations/annotations_i3.nii.gz",
+    "b": "02_annotations/bnei_reem_i4/registry_merged_GT/POM_GT.nii.gz",
+    "best": {
+     "score": 0.0,
+     "perm": [
+      0,
+      1,
+      2
+     ],
+     "flips": [
+      false,
+      false,
+      false
+     ],
+     "off_a": [
+      0,
+      0,
+      0
+     ],
+     "off_b": [
+      0,
+      0,
+      0
+     ]
+    },
+    "identity": {
+     "score": 0.0,
+     "perm": [
+      0,
+      1,
+      2
+     ],
+     "flips": [
+      false,
+      false,
+      false
+     ],
+     "off_a": [
+      0,
+      0,
+      0
+     ],
+     "off_b": [
+      0,
+      0,
+      0
+     ]
+    }
+   },
+   {
+    "a": "02_annotations/bnei_reem_i4/original_annotations/annotations_i3.nii.gz",
+    "b": "02_annotations/bnei_reem_i4/registry_merged_GT/less_reliable_solid_pores_GT.nii.gz",
+    "best": {
+     "score": 0.5128591773477423,
+     "perm": [
+      0,
+      1,
+      2
+     ],
+     "flips": [
+      false,
+      false,
+      false
+     ],
+     "off_a": [
+      0,
+      0,
+      0
+     ],
+     "off_b": [
+      0,
+      0,
+      0
+     ]
+    },
+    "identity": {
+     "score": 0.5128591773477423,
+     "perm": [
+      0,
+      1,
+      2
+     ],
+     "flips": [
+      false,
+      false,
+      false
+     ],
+     "off_a": [
+      0,
+      0,
+      0
+     ],
+     "off_b": [
+      0,
+      0,
+      0
+     ]
+    }
+   },
+   {
+    "a": "02_annotations/bnei_reem_i4/original_annotations/annotations_i3.nii.gz",
+    "b": "02_annotations/bnei_reem_i4/registry_merged_GT/merged_GT.nii.gz",
+    "best": {
+     "score": 0.5168351574901829,
+     "perm": [
+      0,
+      1,
+      2
+     ],
+     "flips": [
+      false,
+      false,
+      false
+     ],
+     "off_a": [
+      0,
+      0,
+      0
+     ],
+     "off_b": [
+      0,
+      0,
+      0
+     ]
+    },
+    "identity": {
+     "score": 0.5168351574901829,
+     "perm": [
+      0,
+      1,
+      2
+     ],
+     "flips": [
+      false,
+      false,
+      false
+     ],
+     "off_a": [
+      0,
+      0,
+      0
+     ],
+     "off_b": [
+      0,
+      0,
+      0
+     ]
+    }
+   },
+   {
+    "a": "02_annotations/bnei_reem_i4/original_annotations/fine_tuning_annotations.nii.gz",
+    "b": "02_annotations/bnei_reem_i4/registry_merged_GT/POM_GT.nii.gz",
+    "best": {
+     "score": 0.0,
+     "perm": [
+      0,
+      1,
+      2
+     ],
+     "flips": [
+      false,
+      false,
+      false
+     ],
+     "off_a": [
+      0,
+      0,
+      0
+     ],
+     "off_b": [
+      0,
+      0,
+      0
+     ]
+    },
+    "identity": {
+     "score": 0.0,
+     "perm": [
+      0,
+      1,
+      2
+     ],
+     "flips": [
+      false,
+      false,
+      false
+     ],
+     "off_a": [
+      0,
+      0,
+      0
+     ],
+     "off_b": [
+      0,
+      0,
+      0
+     ]
+    }
+   },
+   {
+    "a": "02_annotations/bnei_reem_i4/original_annotations/fine_tuning_annotations.nii.gz",
+    "b": "02_annotations/bnei_reem_i4/registry_merged_GT/less_reliable_solid_pores_GT.nii.gz",
+    "best": {
+     "score": 0.009499716041096598,
+     "perm": [
+      1,
+      2,
+      0
+     ],
+     "flips": [
+      false,
+      false,
+      false
+     ],
+     "off_a": [
+      0,
+      0,
+      0
+     ],
+     "off_b": [
+      0,
+      1,
+      0
+     ]
+    },
+    "identity": {
+     "score": 0.0,
+     "perm": [
+      0,
+      1,
+      2
+     ],
+     "flips": [
+      false,
+      false,
+      false
+     ],
+     "off_a": [
+      0,
+      0,
+      0
+     ],
+     "off_b": [
+      0,
+      0,
+      0
+     ]
+    }
+   },
+   {
+    "a": "02_annotations/bnei_reem_i4/original_annotations/fine_tuning_annotations.nii.gz",
+    "b": "02_annotations/bnei_reem_i4/registry_merged_GT/merged_GT.nii.gz",
+    "best": {
+     "score": 0.009449951209491037,
+     "perm": [
+      1,
+      2,
+      0
+     ],
+     "flips": [
+      false,
+      false,
+      false
+     ],
+     "off_a": [
+      0,
+      0,
+      0
+     ],
+     "off_b": [
+      0,
+      1,
+      0
+     ]
+    },
+    "identity": {
+     "score": 0.0,
+     "perm": [
+      0,
+      1,
+      2
+     ],
+     "flips": [
+      false,
+      false,
+      false
+     ],
+     "off_a": [
+      0,
+      0,
+      0
+     ],
+     "off_b": [
+      0,
+      0,
+      0
+     ]
+    }
+   },
+   {
+    "a": "02_annotations/bnei_reem_i4/registry_merged_GT/POM_GT.nii.gz",
+    "b": "02_annotations/bnei_reem_i4/registry_merged_GT/less_reliable_solid_pores_GT.nii.gz",
+    "best": {
+     "score": 0.0,
+     "perm": [
+      0,
+      1,
+      2
+     ],
+     "flips": [
+      false,
+      false,
+      false
+     ],
+     "off_a": [
+      0,
+      0,
+      0
+     ],
+     "off_b": [
+      0,
+      0,
+      0
+     ]
+    },
+    "identity": {
+     "score": 0.0,
+     "perm": [
+      0,
+      1,
+      2
+     ],
+     "flips": [
+      false,
+      false,
+      false
+     ],
+     "off_a": [
+      0,
+      0,
+      0
+     ],
+     "off_b": [
+      0,
+      0,
+      0
+     ]
+    }
+   },
+   {
+    "a": "02_annotations/bnei_reem_i4/registry_merged_GT/POM_GT.nii.gz",
+    "b": "02_annotations/bnei_reem_i4/registry_merged_GT/merged_GT.nii.gz",
+    "best": {
+     "score": 0.0,
+     "perm": [
+      0,
+      1,
+      2
+     ],
+     "flips": [
+      false,
+      false,
+      false
+     ],
+     "off_a": [
+      0,
+      0,
+      0
+     ],
+     "off_b": [
+      0,
+      0,
+      0
+     ]
+    },
+    "identity": {
+     "score": 0.0,
+     "perm": [
+      0,
+      1,
+      2
+     ],
+     "flips": [
+      false,
+      false,
+      false
+     ],
+     "off_a": [
+      0,
+      0,
+      0
+     ],
+     "off_b": [
+      0,
+      0,
+      0
+     ]
+    }
+   },
+   {
+    "a": "02_annotations/bnei_reem_i4/registry_merged_GT/less_reliable_solid_pores_GT.nii.gz",
+    "b": "02_annotations/bnei_reem_i4/registry_merged_GT/merged_GT.nii.gz",
+    "best": {
+     "score": 0.99480012999675,
+     "perm": [
+      0,
+      1,
+      2
+     ],
+     "flips": [
+      false,
+      false,
+      false
+     ],
+     "off_a": [
+      0,
+      0,
+      0
+     ],
+     "off_b": [
+      0,
+      0,
+      0
+     ]
+    },
+    "identity": {
+     "score": 0.99480012999675,
+     "perm": [
+      0,
+      1,
+      2
+     ],
+     "flips": [
+      false,
+      false,
+      false
+     ],
+     "off_a": [
+      0,
+      0,
+      0
+     ],
+     "off_b": [
+      0,
+      0,
+      0
+     ]
+    }
+   },
+   {
+    "a": "02_annotations/mishmar_loess_i2/nnUNet_raw_Dataset777_GCEF/labelsTr/mishmar_hanegev_maoz_3_5p85um.nii.gz",
+    "b": "03_models/mishmar_loess_i2/nnUNetTrainer_betterIgnoreSampling_earlyStopValLoss__nnUNetPlans__3d_fullres/fold_0/validation/mishmar_hanegev_maoz_3_5p85um.nii.gz",
+    "best": {
+     "score": 0.07084011452501209,
+     "perm": [
+      0,
+      1,
+      2
+     ],
+     "flips": [
+      false,
+      false,
+      false
+     ],
+     "off_a": [
+      0,
+      0,
+      0
+     ],
+     "off_b": [
+      0,
+      0,
+      0
+     ]
+    },
+    "identity": {
+     "score": 0.07084011452501209,
+     "perm": [
+      0,
+      1,
+      2
+     ],
+     "flips": [
+      false,
+      false,
+      false
+     ],
+     "off_a": [
+      0,
+      0,
+      0
+     ],
+     "off_b": [
+      0,
+      0,
+      0
+     ]
+    }
+   },
+   {
+    "a": "02_annotations/mishmar_loess_i2/original_annotations/mishmar_hanegev_maoz_3_5p85um-1.nii.gz",
+    "b": "02_annotations/mishmar_loess_i2/original_annotations/mishmar_hanegev_maoz_3_5p85um.nii.gz",
+    "best": {
+     "score": 0.002648332060096766,
+     "perm": [
+      2,
+      0,
+      1
+     ],
+     "flips": [
+      true,
+      true,
+      true
+     ],
+     "off_a": [
+      0,
+      0,
+      0
+     ],
+     "off_b": [
+      0,
+      0,
+      0
+     ]
+    },
+    "identity": {
+     "score": 0.0,
+     "perm": [
+      0,
+      1,
+      2
+     ],
+     "flips": [
+      false,
+      false,
+      false
+     ],
+     "off_a": [
+      0,
+      0,
+      0
+     ],
+     "off_b": [
+      0,
+      0,
+      0
+     ]
+    }
+   }
+  ]
+ }
+}

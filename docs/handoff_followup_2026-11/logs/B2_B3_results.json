@@ -1,0 +1,606 @@
+[
+ {
+  "name": "Cu011_samp_2",
+  "seg": "01_volumes/Cu011_samp_2/segmentation.nii.gz",
+  "transform": {
+   "perm": [
+    0,
+    1,
+    2
+   ],
+   "flips": [
+    false,
+    true,
+    false
+   ]
+  },
+  "agree": true,
+  "identity": false,
+  "aligned_path": "E:\\PROJECTS\\Yael_Mishael\\Rony\\handoff\\Schwartz_soil_uCT_handoff_2026-11\\01_volumes\\Cu011_samp_2\\segmentation_aligned.nii.gz",
+  "label_counts_identical": true,
+  "label_counts": {
+   "0": 252223988,
+   "1": 3031747,
+   "2": 415264,
+   "5": 91624001
+  },
+  "header_from": "image",
+  "png": "E:\\PROJECTS\\Yael_Mishael\\Rony\\handoff\\_evidence_followup_2026-11\\B3_Cu011_samp_2.png",
+  "full": {
+   "baseline": {
+    "r": -0.02553030330940131,
+    "dice": 0.26610061611094016
+   },
+   "chosen": {
+    "r": -0.863571811221117,
+    "dice": 0.9106090941957248
+   }
+  }
+ },
+ {
+  "name": "Rehovot_samp2_highkV_Cu0.11_15um nnU-Net i4",
+  "seg": "01_volumes/Rehovot_samp2_highkV_Cu0.11_15um/segmentation_nnunet_bnei_reem_i4.nii.gz",
+  "transform": {
+   "perm": [
+    0,
+    1,
+    2
+   ],
+   "flips": [
+    false,
+    true,
+    false
+   ]
+  },
+  "agree": true,
+  "identity": false,
+  "aligned_path": "E:\\PROJECTS\\Yael_Mishael\\Rony\\handoff\\Schwartz_soil_uCT_handoff_2026-11\\01_volumes\\Rehovot_samp2_highkV_Cu0.11_15um\\segmentation_nnunet_bnei_reem_i4_aligned.nii.gz",
+  "label_counts_identical": true,
+  "label_counts": {
+   "0": 195033722,
+   "1": 3435924,
+   "2": 1157485,
+   "5": 74997869
+  },
+  "header_from": "image",
+  "png": "E:\\PROJECTS\\Yael_Mishael\\Rony\\handoff\\_evidence_followup_2026-11\\B3_Rehovot_samp2_highkV_Cu0.11_15um_nnU-Net_i4.png",
+  "full": {
+   "baseline": {
+    "r": -0.013391357966140917,
+    "dice": 0.2968171263333637
+   },
+   "chosen": {
+    "r": -0.8296446265950592,
+    "dice": 0.9179101396824245
+   }
+  }
+ },
+ {
+  "name": "Rehovot_samp2_highkV_Cu0.11_15um nnU-Net loess_i2",
+  "seg": "01_volumes/Rehovot_samp2_highkV_Cu0.11_15um/segmentation_nnunet_loess_i2.nii.gz",
+  "transform": {
+   "perm": [
+    0,
+    1,
+    2
+   ],
+   "flips": [
+    false,
+    true,
+    false
+   ]
+  },
+  "agree": true,
+  "identity": false,
+  "aligned_path": "E:\\PROJECTS\\Yael_Mishael\\Rony\\handoff\\Schwartz_soil_uCT_handoff_2026-11\\01_volumes\\Rehovot_samp2_highkV_Cu0.11_15um\\segmentation_nnunet_loess_i2_aligned.nii.gz",
+  "label_counts_identical": true,
+  "label_counts": {
+   "0": 197534408,
+   "1": 1530228,
+   "2": 39880,
+   "5": 75520484
+  },
+  "header_from": "image",
+  "png": "E:\\PROJECTS\\Yael_Mishael\\Rony\\handoff\\_evidence_followup_2026-11\\B3_Rehovot_samp2_highkV_Cu0.11_15um_nnU-Net_loess_i2.png",
+  "full": {
+   "baseline": {
+    "r": -0.014389580492360568,
+    "dice": 0.29833195274560786
+   },
+   "chosen": {
+    "r": -0.8357805802859966,
+    "dice": 0.9283478170898081
+   }
+  }
+ },
+ {
+  "name": "Rehovot_samp2_highkV_Cu0.11_15um Otsu",
+  "seg": "01_volumes/Rehovot_samp2_highkV_Cu0.11_15um/segmentation_otsu.npy",
+  "transform": {
+   "perm": [
+    2,
+    1,
+    0
+   ],
+   "flips": [
+    false,
+    false,
+    false
+   ]
+  },
+  "agree": true,
+  "identity": false,
+  "aligned_path": "E:\\PROJECTS\\Yael_Mishael\\Rony\\handoff\\Schwartz_soil_uCT_handoff_2026-11\\01_volumes\\Rehovot_samp2_highkV_Cu0.11_15um\\segmentation_otsu_aligned.npy",
+  "label_counts_identical": true,
+  "label_counts": {
+   "0": 190868983,
+   "1": 83756017
+  },
+  "header_from": "n/a (.npy)",
+  "png": "E:\\PROJECTS\\Yael_Mishael\\Rony\\handoff\\_evidence_followup_2026-11\\B3_Rehovot_samp2_highkV_Cu0.11_15um_Otsu.png",
+  "full": {
+   "baseline": {
+    "r": -0.023214984638691424,
+    "dice": 0.31846222239104655
+   },
+   "chosen": {
+    "r": -0.8462032621323694,
+    "dice": 0.9995325686104006
+   }
+  }
+ },
+ {
+  "name": "Rehovot_samp3_highkV_Cu0.11_15um nnU-Net i4",
+  "seg": "01_volumes/Rehovot_samp3_highkV_Cu0.11_15um/segmentation_nnunet_bnei_reem_i4.nii.gz",
+  "transform": {
+   "perm": [
+    0,
+    1,
+    2
+   ],
+   "flips": [
+    false,
+    true,
+    false
+   ]
+  },
+  "agree": true,
+  "identity": false,
+  "aligned_path": "E:\\PROJECTS\\Yael_Mishael\\Rony\\handoff\\Schwartz_soil_uCT_handoff_2026-11\\01_volumes\\Rehovot_samp3_highkV_Cu0.11_15um\\segmentation_nnunet_bnei_reem_i4_aligned.nii.gz",
+  "label_counts_identical": true,
+  "label_counts": {
+   "0": 166770815,
+   "1": 1836257,
+   "2": 1161191,
+   "5": 104856737
+  },
+  "header_from": "image",
+  "png": "E:\\PROJECTS\\Yael_Mishael\\Rony\\handoff\\_evidence_followup_2026-11\\B3_Rehovot_samp3_highkV_Cu0.11_15um_nnU-Net_i4.png",
+  "full": {
+   "baseline": {
+    "r": -0.01405272401698348,
+    "dice": 0.4007976044773637
+   },
+   "chosen": {
+    "r": -0.8886433184540738,
+    "dice": 0.9528941855449863
+   }
+  }
+ },
+ {
+  "name": "Rehovot_samp3_highkV_Cu0.11_15um nnU-Net loess_i2",
+  "seg": "01_volumes/Rehovot_samp3_highkV_Cu0.11_15um/segmentation_nnunet_loess_i2.nii.gz",
+  "transform": {
+   "perm": [
+    0,
+    1,
+    2
+   ],
+   "flips": [
+    false,
+    true,
+    false
+   ]
+  },
+  "agree": true,
+  "identity": false,
+  "aligned_path": "E:\\PROJECTS\\Yael_Mishael\\Rony\\handoff\\Schwartz_soil_uCT_handoff_2026-11\\01_volumes\\Rehovot_samp3_highkV_Cu0.11_15um\\segmentation_nnunet_loess_i2_aligned.nii.gz",
+  "label_counts_identical": true,
+  "label_counts": {
+   "0": 163514674,
+   "1": 3038805,
+   "2": 183993,
+   "5": 107887528
+  },
+  "header_from": "image",
+  "png": "E:\\PROJECTS\\Yael_Mishael\\Rony\\handoff\\_evidence_followup_2026-11\\B3_Rehovot_samp3_highkV_Cu0.11_15um_nnU-Net_loess_i2.png",
+  "full": {
+   "baseline": {
+    "r": -0.013666786812566703,
+    "dice": 0.4064116253884185
+   },
+   "chosen": {
+    "r": -0.8943986777290008,
+    "dice": 0.9624369736558163
+   }
+  }
+ },
+ {
+  "name": "Rehovot_samp3_highkV_Cu0.11_15um Otsu",
+  "seg": "01_volumes/Rehovot_samp3_highkV_Cu0.11_15um/segmentation_otsu.npy",
+  "transform": {
+   "perm": [
+    2,
+    1,
+    0
+   ],
+   "flips": [
+    false,
+    false,
+    false
+   ]
+  },
+  "agree": true,
+  "identity": false,
+  "aligned_path": "E:\\PROJECTS\\Yael_Mishael\\Rony\\handoff\\Schwartz_soil_uCT_handoff_2026-11\\01_volumes\\Rehovot_samp3_highkV_Cu0.11_15um\\segmentation_otsu_aligned.npy",
+  "label_counts_identical": true,
+  "label_counts": {
+   "0": 162446491,
+   "1": 112178509
+  },
+  "header_from": "n/a (.npy)",
+  "png": "E:\\PROJECTS\\Yael_Mishael\\Rony\\handoff\\_evidence_followup_2026-11\\B3_Rehovot_samp3_highkV_Cu0.11_15um_Otsu.png",
+  "full": {
+   "baseline": {
+    "r": -0.021911041267292434,
+    "dice": 0.41938639676468414
+   },
+   "chosen": {
+    "r": -0.9021696715391558,
+    "dice": 0.9999881752367162
+   }
+  }
+ },
+ {
+  "name": "bnei_reem canonical",
+  "seg": "01_volumes/bnei_reem_fresh_bnei_reem_i4/segmentation.nii.gz",
+  "transform": {
+   "perm": [
+    2,
+    1,
+    0
+   ],
+   "flips": [
+    false,
+    true,
+    false
+   ]
+  },
+  "agree": true,
+  "identity": false,
+  "aligned_path": "E:\\PROJECTS\\Yael_Mishael\\Rony\\handoff\\Schwartz_soil_uCT_handoff_2026-11\\01_volumes\\bnei_reem_fresh_bnei_reem_i4\\segmentation_aligned.nii.gz",
+  "label_counts_identical": true,
+  "label_counts": {
+   "0": 207816662,
+   "1": 5795552,
+   "2": 2255941,
+   "5": 59601845
+  },
+  "header_from": "segmentation (no NIfTI image of this shape)",
+  "png": "E:\\PROJECTS\\Yael_Mishael\\Rony\\handoff\\_evidence_followup_2026-11\\B3_bnei_reem_canonical.png",
+  "full": {
+   "baseline": {
+    "r": -0.018511258776643363,
+    "dice": 0.20790312977433084
+   },
+   "chosen": {
+    "r": -0.8570762922141791,
+    "dice": 0.8695106639235842
+   }
+  }
+ },
+ {
+  "name": "bnei_reem specA",
+  "seg": "01_volumes/bnei_reem_specA_unified/segmentation.nii.gz",
+  "transform": {
+   "perm": [
+    0,
+    1,
+    2
+   ],
+   "flips": [
+    false,
+    true,
+    false
+   ]
+  },
+  "agree": true,
+  "identity": false,
+  "aligned_path": "E:\\PROJECTS\\Yael_Mishael\\Rony\\handoff\\Schwartz_soil_uCT_handoff_2026-11\\01_volumes\\bnei_reem_specA_unified\\segmentation_aligned.nii.gz",
+  "label_counts_identical": true,
+  "label_counts": {
+   "0": 225951169,
+   "1": 6356509,
+   "2": 659889,
+   "5": 41657433
+  },
+  "header_from": "image",
+  "png": "E:\\PROJECTS\\Yael_Mishael\\Rony\\handoff\\_evidence_followup_2026-11\\B3_bnei_reem_specA.png",
+  "full": {
+   "baseline": {
+    "r": -0.013103662115859276,
+    "dice": 0.12872668803123494
+   },
+   "chosen": {
+    "r": -0.7818654098815406,
+    "dice": 0.7465438288630871
+   }
+  }
+ },
+ {
+  "name": "bnei_reem specB",
+  "seg": "01_volumes/bnei_reem_specB_unified/segmentation.nii.gz",
+  "transform": {
+   "perm": [
+    0,
+    1,
+    2
+   ],
+   "flips": [
+    false,
+    true,
+    false
+   ]
+  },
+  "agree": true,
+  "identity": false,
+  "aligned_path": "E:\\PROJECTS\\Yael_Mishael\\Rony\\handoff\\Schwartz_soil_uCT_handoff_2026-11\\01_volumes\\bnei_reem_specB_unified\\segmentation_aligned.nii.gz",
+  "label_counts_identical": true,
+  "label_counts": {
+   "0": 207195055,
+   "1": 5756768,
+   "2": 2243567,
+   "5": 59429610
+  },
+  "header_from": "image",
+  "png": "E:\\PROJECTS\\Yael_Mishael\\Rony\\handoff\\_evidence_followup_2026-11\\B3_bnei_reem_specB.png",
+  "full": {
+   "baseline": {
+    "r": -0.01872578480355298,
+    "dice": 0.20767338805250135
+   },
+   "chosen": {
+    "r": -0.8590962032460336,
+    "dice": 0.8690484235959808
+   }
+  }
+ },
+ {
+  "name": "mishmar_hanegev_maoz_3_5p85um",
+  "seg": "01_volumes/mishmar_hanegev_maoz_3_5p85um/segmentation.nii.gz",
+  "transform": {
+   "perm": [
+    0,
+    1,
+    2
+   ],
+   "flips": [
+    false,
+    true,
+    false
+   ]
+  },
+  "agree": true,
+  "identity": false,
+  "aligned_path": "E:\\PROJECTS\\Yael_Mishael\\Rony\\handoff\\Schwartz_soil_uCT_handoff_2026-11\\01_volumes\\mishmar_hanegev_maoz_3_5p85um\\segmentation_aligned.nii.gz",
+  "label_counts_identical": true,
+  "label_counts": {
+   "0": 702291703,
+   "1": 11176847,
+   "2": 16146797,
+   "5": 270384653
+  },
+  "header_from": "image",
+  "png": "E:\\PROJECTS\\Yael_Mishael\\Rony\\handoff\\_evidence_followup_2026-11\\B3_mishmar_hanegev_maoz_3_5p85um.png",
+  "full": {
+   "baseline": {
+    "r": -0.013275185070794414,
+    "dice": 0.28750720135202634
+   },
+   "chosen": {
+    "r": -0.8488208401829673,
+    "dice": 0.9005338089597611
+   }
+  }
+ },
+ {
+  "name": "mishmar_hanegev_maoz_3_5p85um 15um_pom",
+  "seg": "01_volumes/mishmar_hanegev_maoz_3_5p85um/segmentation_15um_pom.nii.gz",
+  "transform": {
+   "perm": [
+    0,
+    1,
+    2
+   ],
+   "flips": [
+    false,
+    true,
+    false
+   ]
+  },
+  "agree": true,
+  "identity": false,
+  "aligned_path": "E:\\PROJECTS\\Yael_Mishael\\Rony\\handoff\\Schwartz_soil_uCT_handoff_2026-11\\01_volumes\\mishmar_hanegev_maoz_3_5p85um\\segmentation_15um_pom_aligned.nii.gz",
+  "label_counts_identical": true,
+  "label_counts": {
+   "0": 42236100,
+   "1": 638278,
+   "2": 957445,
+   "5": 15487177
+  },
+  "header_from": "segmentation (no NIfTI image of this shape)",
+  "png": "E:\\PROJECTS\\Yael_Mishael\\Rony\\handoff\\_evidence_followup_2026-11\\B3_mishmar_hanegev_maoz_3_5p85um_15um_pom.png",
+  "full": {
+   "baseline": {
+    "r": -0.013792353990073137,
+    "dice": 0.2823383407462927
+   },
+   "chosen": {
+    "r": -0.8406858419041483,
+    "dice": 0.8940355686714486
+   }
+  }
+ },
+ {
+  "name": "mishmar_hanegev_maoz_3_5p85um 15um_trackE",
+  "seg": "01_volumes/mishmar_hanegev_maoz_3_5p85um/segmentation_15um_trackE.nii.gz",
+  "transform": {
+   "perm": [
+    0,
+    1,
+    2
+   ],
+   "flips": [
+    false,
+    true,
+    false
+   ]
+  },
+  "agree": true,
+  "identity": false,
+  "aligned_path": "E:\\PROJECTS\\Yael_Mishael\\Rony\\handoff\\Schwartz_soil_uCT_handoff_2026-11\\01_volumes\\mishmar_hanegev_maoz_3_5p85um\\segmentation_15um_trackE_aligned.nii.gz",
+  "label_counts_identical": true,
+  "label_counts": {
+   "0": 75046435,
+   "1": 992730,
+   "2": 2162315,
+   "5": 28294944
+  },
+  "header_from": "segmentation (no NIfTI image of this shape)",
+  "png": "E:\\PROJECTS\\Yael_Mishael\\Rony\\handoff\\_evidence_followup_2026-11\\B3_mishmar_hanegev_maoz_3_5p85um_15um_trackE.png",
+  "full": {
+   "baseline": {
+    "r": -0.014222251042486797,
+    "dice": 0.2815698113688527
+   },
+   "chosen": {
+    "r": -0.8104653515771987,
+    "dice": 0.865942222995908
+   }
+  }
+ },
+ {
+  "name": "mishmar_hanegev_maoz_2_8p8um",
+  "seg": "01_volumes/mishmar_hanegev_maoz_2_8p8um/segmentation.nii.gz",
+  "transform": {
+   "perm": [
+    0,
+    1,
+    2
+   ],
+   "flips": [
+    false,
+    true,
+    false
+   ]
+  },
+  "agree": true,
+  "identity": false,
+  "aligned_path": "E:\\PROJECTS\\Yael_Mishael\\Rony\\handoff\\Schwartz_soil_uCT_handoff_2026-11\\01_volumes\\mishmar_hanegev_maoz_2_8p8um\\segmentation_aligned.nii.gz",
+  "label_counts_identical": true,
+  "label_counts": {
+   "0": 746958869,
+   "1": 6770059,
+   "2": 16430595,
+   "5": 229840477
+  },
+  "header_from": "image",
+  "png": "E:\\PROJECTS\\Yael_Mishael\\Rony\\handoff\\_evidence_followup_2026-11\\B3_mishmar_hanegev_maoz_2_8p8um.png",
+  "full": {
+   "baseline": {
+    "r": -0.020800801108221433,
+    "dice": 0.2575974121019049
+   },
+   "chosen": {
+    "r": -0.8174047312914196,
+    "dice": 0.8705761972086391
+   }
+  }
+ },
+ {
+  "name": "mishmar_hanegev_maoz_2_8p8um 15um_pom",
+  "seg": "01_volumes/mishmar_hanegev_maoz_2_8p8um/segmentation_15um_pom.nii.gz",
+  "transform": {
+   "perm": [
+    0,
+    1,
+    2
+   ],
+   "flips": [
+    false,
+    true,
+    false
+   ]
+  },
+  "agree": true,
+  "identity": false,
+  "aligned_path": "E:\\PROJECTS\\Yael_Mishael\\Rony\\handoff\\Schwartz_soil_uCT_handoff_2026-11\\01_volumes\\mishmar_hanegev_maoz_2_8p8um\\segmentation_15um_pom_aligned.nii.gz",
+  "label_counts_identical": true,
+  "label_counts": {
+   "0": 154608376,
+   "1": 1265632,
+   "2": 3327571,
+   "5": 43060424
+  },
+  "header_from": "segmentation (no NIfTI image of this shape)",
+  "png": "E:\\PROJECTS\\Yael_Mishael\\Rony\\handoff\\_evidence_followup_2026-11\\B3_mishmar_hanegev_maoz_2_8p8um_15um_pom.png",
+  "full": {
+   "baseline": {
+    "r": -0.020312507412711234,
+    "dice": 0.24757634306168758
+   },
+   "chosen": {
+    "r": -0.8111475436471335,
+    "dice": 0.8534255941866009
+   }
+  }
+ },
+ {
+  "name": "mishmar_hanegev_maoz_2_8p8um 15um_trackE",
+  "seg": "01_volumes/mishmar_hanegev_maoz_2_8p8um/segmentation_15um_trackE.nii.gz",
+  "transform": {
+   "perm": [
+    0,
+    1,
+    2
+   ],
+   "flips": [
+    false,
+    true,
+    false
+   ]
+  },
+  "agree": true,
+  "identity": false,
+  "aligned_path": "E:\\PROJECTS\\Yael_Mishael\\Rony\\handoff\\Schwartz_soil_uCT_handoff_2026-11\\01_volumes\\mishmar_hanegev_maoz_2_8p8um\\segmentation_15um_trackE_aligned.nii.gz",
+  "label_counts_identical": true,
+  "label_counts": {
+   "0": 604175432,
+   "1": 5586996,
+   "2": 66747114,
+   "5": 172768581
+  },
+  "header_from": "segmentation (no NIfTI image of this shape)",
+  "png": "E:\\PROJECTS\\Yael_Mishael\\Rony\\handoff\\_evidence_followup_2026-11\\B3_mishmar_hanegev_maoz_2_8p8um_15um_trackE.png",
+  "full": {
+   "baseline": {
+    "r": 0.09317437481403563,
+    "dice": 0.21340174596433115
+   },
+   "chosen": {
+    "r": -0.4006777660953984,
+    "dice": 0.5422734580076379
+   }
+  }
+ }
+]

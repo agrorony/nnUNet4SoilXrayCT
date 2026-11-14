@@ -1,0 +1,382 @@
+[
+ {
+  "file": "01_volumes/Cu011_samp_2/segmentation.nii.gz",
+  "transform": {
+   "perm": [
+    0,
+    1,
+    2
+   ],
+   "flips": [
+    false,
+    true,
+    false
+   ]
+  },
+  "original_sha256": "7334ed9784d18fd707113bcaa243bf53ecfd34bf46f0a8b3e11967b1daecfa94",
+  "backup": "E:\\PROJECTS\\Yael_Mishael\\Rony\\handoff\\_pre_flip_backup_2026-11\\01_volumes\\Cu011_samp_2\\segmentation.nii.gz",
+  "new_sha256": "05460b9bac95a50d5bda06b8483507506acb1da13c2866afe3a7aeb0f9a711ce",
+  "label_counts": {
+   "0": 252223988,
+   "1": 3031747,
+   "2": 415264,
+   "5": 91624001
+  }
+ },
+ {
+  "file": "01_volumes/Rehovot_samp2_highkV_Cu0.11_15um/segmentation_nnunet_bnei_reem_i4.nii.gz",
+  "transform": {
+   "perm": [
+    0,
+    1,
+    2
+   ],
+   "flips": [
+    false,
+    true,
+    false
+   ]
+  },
+  "original_sha256": "956458f5d2b873ee5d6ddc28aa40a848e441c937b1179cb153ab7e6478e1d4bd",
+  "backup": "E:\\PROJECTS\\Yael_Mishael\\Rony\\handoff\\_pre_flip_backup_2026-11\\01_volumes\\Rehovot_samp2_highkV_Cu0.11_15um\\segmentation_nnunet_bnei_reem_i4.nii.gz",
+  "new_sha256": "45e5338122f26f387608cebbb17f937a88454242128021ad0ce914fa4f0cddfd",
+  "label_counts": {
+   "0": 195033722,
+   "1": 3435924,
+   "2": 1157485,
+   "5": 74997869
+  }
+ },
+ {
+  "file": "01_volumes/Rehovot_samp2_highkV_Cu0.11_15um/segmentation_nnunet_loess_i2.nii.gz",
+  "transform": {
+   "perm": [
+    0,
+    1,
+    2
+   ],
+   "flips": [
+    false,
+    true,
+    false
+   ]
+  },
+  "original_sha256": "e3bfefdd1fc07cea38233870c73b329fdb4afc976cee63e36113cb16fb6802d5",
+  "backup": "E:\\PROJECTS\\Yael_Mishael\\Rony\\handoff\\_pre_flip_backup_2026-11\\01_volumes\\Rehovot_samp2_highkV_Cu0.11_15um\\segmentation_nnunet_loess_i2.nii.gz",
+  "new_sha256": "317619cb3d940b69e6e49309788268bbb6b136a1252f24306a96228610cd7d96",
+  "label_counts": {
+   "0": 197534408,
+   "1": 1530228,
+   "2": 39880,
+   "5": 75520484
+  }
+ },
+ {
+  "file": "01_volumes/Rehovot_samp2_highkV_Cu0.11_15um/segmentation_otsu.npy",
+  "transform": {
+   "perm": [
+    2,
+    1,
+    0
+   ],
+   "flips": [
+    false,
+    false,
+    false
+   ]
+  },
+  "original_sha256": "8d72750c4151f7c75b2370cb9b93192f8e406761156f37d8a99ca7681b2fe2c9",
+  "backup": "E:\\PROJECTS\\Yael_Mishael\\Rony\\handoff\\_pre_flip_backup_2026-11\\01_volumes\\Rehovot_samp2_highkV_Cu0.11_15um\\segmentation_otsu.npy",
+  "new_sha256": "09715f3f6dea97094df5d6f6e55527a8d41fcf1bd1f5be98bef8f891881d82fd",
+  "label_counts": {
+   "0": 190868983,
+   "1": 83756017
+  }
+ },
+ {
+  "file": "01_volumes/Rehovot_samp3_highkV_Cu0.11_15um/segmentation_nnunet_bnei_reem_i4.nii.gz",
+  "transform": {
+   "perm": [
+    0,
+    1,
+    2
+   ],
+   "flips": [
+    false,
+    true,
+    false
+   ]
+  },
+  "original_sha256": "2cedec3bf80c4474b81b4f29c72cbdd9b0b0b1518dccdc45dcedfabdd3d9938b",
+  "backup": "E:\\PROJECTS\\Yael_Mishael\\Rony\\handoff\\_pre_flip_backup_2026-11\\01_volumes\\Rehovot_samp3_highkV_Cu0.11_15um\\segmentation_nnunet_bnei_reem_i4.nii.gz",
+  "new_sha256": "8b65a6122180c21205bdf3951e6f818ac494485d93addc06e7c226cf19f04afd",
+  "label_counts": {
+   "0": 166770815,
+   "1": 1836257,
+   "2": 1161191,
+   "5": 104856737
+  }
+ },
+ {
+  "file": "01_volumes/Rehovot_samp3_highkV_Cu0.11_15um/segmentation_nnunet_loess_i2.nii.gz",
+  "transform": {
+   "perm": [
+    0,
+    1,
+    2
+   ],
+   "flips": [
+    false,
+    true,
+    false
+   ]
+  },
+  "original_sha256": "302b4c7e23ee8518e51f87482371bb0bc5360724cb6b70396daff29f16e0ca3a",
+  "backup": "E:\\PROJECTS\\Yael_Mishael\\Rony\\handoff\\_pre_flip_backup_2026-11\\01_volumes\\Rehovot_samp3_highkV_Cu0.11_15um\\segmentation_nnunet_loess_i2.nii.gz",
+  "new_sha256": "7557be60041ffbbb3f9b8ddc4e8621949219579e3415692b335f4899f4a78c17",
+  "label_counts": {
+   "0": 163514674,
+   "1": 3038805,
+   "2": 183993,
+   "5": 107887528
+  }
+ },
+ {
+  "file": "01_volumes/Rehovot_samp3_highkV_Cu0.11_15um/segmentation_otsu.npy",
+  "transform": {
+   "perm": [
+    2,
+    1,
+    0
+   ],
+   "flips": [
+    false,
+    false,
+    false
+   ]
+  },
+  "original_sha256": "6f418401cca964270d91854dffb968db3bd27b7b52646902a3fb9e6b99a74acb",
+  "backup": "E:\\PROJECTS\\Yael_Mishael\\Rony\\handoff\\_pre_flip_backup_2026-11\\01_volumes\\Rehovot_samp3_highkV_Cu0.11_15um\\segmentation_otsu.npy",
+  "new_sha256": "8f7dd5a1f99137d584a3fb350034dc4602f714348d36bc6fc24e4567a2b7572f",
+  "label_counts": {
+   "0": 162446491,
+   "1": 112178509
+  }
+ },
+ {
+  "file": "01_volumes/bnei_reem_fresh_bnei_reem_i4/segmentation.nii.gz",
+  "transform": {
+   "perm": [
+    2,
+    1,
+    0
+   ],
+   "flips": [
+    false,
+    true,
+    false
+   ]
+  },
+  "original_sha256": "f11f4042f48c052b6baa81a58b700613d7114b35139a449600342ed539f6fbd8",
+  "backup": "E:\\PROJECTS\\Yael_Mishael\\Rony\\handoff\\_pre_flip_backup_2026-11\\01_volumes\\bnei_reem_fresh_bnei_reem_i4\\segmentation.nii.gz",
+  "new_sha256": "60f85bb2bbe1a481f8fe7c508e3d00b31374a97c3ddbd9607142c4a7af001a7c",
+  "label_counts": {
+   "0": 207816662,
+   "1": 5795552,
+   "2": 2255941,
+   "5": 59601845
+  }
+ },
+ {
+  "file": "01_volumes/bnei_reem_specA_unified/segmentation.nii.gz",
+  "transform": {
+   "perm": [
+    0,
+    1,
+    2
+   ],
+   "flips": [
+    false,
+    true,
+    false
+   ]
+  },
+  "original_sha256": "7eba29cbe5f567b4ea2503d2f4132d49b8cf81f94f138e7e1108fe35830cdf27",
+  "backup": "E:\\PROJECTS\\Yael_Mishael\\Rony\\handoff\\_pre_flip_backup_2026-11\\01_volumes\\bnei_reem_specA_unified\\segmentation.nii.gz",
+  "new_sha256": "dfd4ce862be9500b8262218b58233b3a88dc471200be9a088a3d133890c77bc9",
+  "label_counts": {
+   "0": 225951169,
+   "1": 6356509,
+   "2": 659889,
+   "5": 41657433
+  }
+ },
+ {
+  "file": "01_volumes/bnei_reem_specB_unified/segmentation.nii.gz",
+  "transform": {
+   "perm": [
+    0,
+    1,
+    2
+   ],
+   "flips": [
+    false,
+    true,
+    false
+   ]
+  },
+  "original_sha256": "8f95f6560396c7ffabd584b03e809e18007f72644ab8cb0079192e47601923fb",
+  "backup": "E:\\PROJECTS\\Yael_Mishael\\Rony\\handoff\\_pre_flip_backup_2026-11\\01_volumes\\bnei_reem_specB_unified\\segmentation.nii.gz",
+  "new_sha256": "58b860279fe4685ccfa0264aca25d22a955958753127b7dad60302f53ee68cdf",
+  "label_counts": {
+   "0": 207195055,
+   "1": 5756768,
+   "2": 2243567,
+   "5": 59429610
+  }
+ },
+ {
+  "file": "01_volumes/mishmar_hanegev_maoz_3_5p85um/segmentation.nii.gz",
+  "transform": {
+   "perm": [
+    0,
+    1,
+    2
+   ],
+   "flips": [
+    false,
+    true,
+    false
+   ]
+  },
+  "original_sha256": "e06eecbd5a2d4f789d54c38d8fb0887ff3d4b6e414c0862267460bda677b55a1",
+  "backup": "E:\\PROJECTS\\Yael_Mishael\\Rony\\handoff\\_pre_flip_backup_2026-11\\01_volumes\\mishmar_hanegev_maoz_3_5p85um\\segmentation.nii.gz",
+  "new_sha256": "037bf60e0cb055a329503e31cb9ab0ac5518f615dc300bce3470580c8ba651af",
+  "label_counts": {
+   "0": 702291703,
+   "1": 11176847,
+   "2": 16146797,
+   "5": 270384653
+  }
+ },
+ {
+  "file": "01_volumes/mishmar_hanegev_maoz_3_5p85um/segmentation_15um_pom.nii.gz",
+  "transform": {
+   "perm": [
+    0,
+    1,
+    2
+   ],
+   "flips": [
+    false,
+    true,
+    false
+   ]
+  },
+  "original_sha256": "5ec7f6bd4cf76e26b44a52e06c38b0517a1446dda080465c5651b22bb91b5fdb",
+  "backup": "E:\\PROJECTS\\Yael_Mishael\\Rony\\handoff\\_pre_flip_backup_2026-11\\01_volumes\\mishmar_hanegev_maoz_3_5p85um\\segmentation_15um_pom.nii.gz",
+  "new_sha256": "e07ca08ddc11c93ba9291f84d8e3909060ffb668b5ea7446dd8a2366bc2af7cf",
+  "label_counts": {
+   "0": 42236100,
+   "1": 638278,
+   "2": 957445,
+   "5": 15487177
+  }
+ },
+ {
+  "file": "01_volumes/mishmar_hanegev_maoz_3_5p85um/segmentation_15um_trackE.nii.gz",
+  "transform": {
+   "perm": [
+    0,
+    1,
+    2
+   ],
+   "flips": [
+    false,
+    true,
+    false
+   ]
+  },
+  "original_sha256": "219734fdc9f4220de8e333e17d749251ecb8f8f04b39b8432a6d349130b94b3e",
+  "backup": "E:\\PROJECTS\\Yael_Mishael\\Rony\\handoff\\_pre_flip_backup_2026-11\\01_volumes\\mishmar_hanegev_maoz_3_5p85um\\segmentation_15um_trackE.nii.gz",
+  "new_sha256": "63d1b39f24cdf4a60b4858c6165cc910db0d0e0ad7a602adc1d5a4c5409b549c",
+  "label_counts": {
+   "0": 75046435,
+   "1": 992730,
+   "2": 2162315,
+   "5": 28294944
+  }
+ },
+ {
+  "file": "01_volumes/mishmar_hanegev_maoz_2_8p8um/segmentation.nii.gz",
+  "transform": {
+   "perm": [
+    0,
+    1,
+    2
+   ],
+   "flips": [
+    false,
+    true,
+    false
+   ]
+  },
+  "original_sha256": "36af553c43a3769cfd7e15fb89523462eedc00caaa5fa5b1d4b859f7dd4c5683",
+  "backup": "E:\\PROJECTS\\Yael_Mishael\\Rony\\handoff\\_pre_flip_backup_2026-11\\01_volumes\\mishmar_hanegev_maoz_2_8p8um\\segmentation.nii.gz",
+  "new_sha256": "bd7b026ce1061186d32b3a9dfa9c9bffcf519ebfe0dc56347a209eb1ea37c8e7",
+  "label_counts": {
+   "0": 746958869,
+   "1": 6770059,
+   "2": 16430595,
+   "5": 229840477
+  }
+ },
+ {
+  "file": "01_volumes/mishmar_hanegev_maoz_2_8p8um/segmentation_15um_pom.nii.gz",
+  "transform": {
+   "perm": [
+    0,
+    1,
+    2
+   ],
+   "flips": [
+    false,
+    true,
+    false
+   ]
+  },
+  "original_sha256": "72c65a5271dd474674731ccec10d622e9a8a3fcdcbd0abc81e89a20f97820225",
+  "backup": "E:\\PROJECTS\\Yael_Mishael\\Rony\\handoff\\_pre_flip_backup_2026-11\\01_volumes\\mishmar_hanegev_maoz_2_8p8um\\segmentation_15um_pom.nii.gz",
+  "new_sha256": "5acbf7045087b7e274e668d674374f36ef2bd549ae9564ac8f8bb021806b9192",
+  "label_counts": {
+   "0": 154608376,
+   "1": 1265632,
+   "2": 3327571,
+   "5": 43060424
+  }
+ },
+ {
+  "file": "01_volumes/mishmar_hanegev_maoz_2_8p8um/segmentation_15um_trackE.nii.gz",
+  "transform": {
+   "perm": [
+    0,
+    1,
+    2
+   ],
+   "flips": [
+    false,
+    true,
+    false
+   ]
+  },
+  "original_sha256": "34aa6ea0a375e5f015aed22dceea1e9a12998a0499662e22d95dc70ecbdc4322",
+  "backup": "E:\\PROJECTS\\Yael_Mishael\\Rony\\handoff\\_pre_flip_backup_2026-11\\01_volumes\\mishmar_hanegev_maoz_2_8p8um\\segmentation_15um_trackE.nii.gz",
+  "new_sha256": "0fd133b8ccf35668c29477f8e360f342b5a95c2065fb1597dabf822592b38235",
+  "label_counts": {
+   "0": 604175432,
+   "1": 5586996,
+   "2": 66747114,
+   "5": 172768581
+  }
+ }
+]

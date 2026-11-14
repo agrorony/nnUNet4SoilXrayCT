@@ -1,0 +1,150 @@
+{
+ "zip": "E:\\PROJECTS\\Yael_Mishael\\Rony\\handoff\\Schwartz_soil_uCT_handoff_2026-11_v2.zip",
+ "bytes": 16099070658,
+ "sha256": "4a747fbfed8cc372a27f3f823329b23cab0214daea8f18d4f79545dba845c26c",
+ "entries": 1196,
+ "files_in_manifest": 1195,
+ "content_bytes": 16907947743,
+ "manifest_kinds": {
+  "unchanged": 1138,
+  "changed": 34,
+  "added": 23
+ },
+ "removed_vs_v1": [
+  "04_code/nnUNet4SoilXrayCT_198c5b5.zip",
+  "05_analysis_outputs/connectivity/Topology_Metrics_Aug2026/bnei_reem_specB_visual_evidence/canonical_napari_3d_screenshot.png",
+  "05_analysis_outputs/connectivity/Topology_Metrics_Aug2026/bnei_reem_specB_visual_evidence/specB_napari_3d_screenshot.png",
+  "06_figures/selected_outputs/mishmar_hanegev2_slice_exports/_terminal_probe.txt"
+ ],
+ "testzip": null,
+ "zip_list_equals_manifest": true,
+ "n_readmes": 23,
+ "random_files": [
+  "03_models/mishmar_loess_i2/nnUNetTrainer_betterIgnoreSampling_earlyStopValLoss__nnUNetPlans__3d_fullres/fold_0/validation/mishmar_hanegev_maoz_3_5p85um.nii.gz",
+  "05_analysis_outputs/pom/pom_analysis_20260826_final_shape/mishmar_label_downsample_2/clustering_silhouette_vs_k_final.png",
+  "06_figures/synopsis_outputs/synopsis_i3/slice_0321.png",
+  "06_figures/render3d_mishmar_5p85_20261012/logs/final_3.log",
+  "06_figures/selected_outputs/mishmar_hanegev2_slice_exports/mishmar_hanegev_Cu011_samp_2_Rec_nlm/slice_0086_triplet.png"
+ ],
+ "rehash_checked": 29,
+ "rehash_ok": 29,
+ "rehash": [
+  {
+   "path": "01_volumes/Cu011_samp_2/README.md",
+   "ok": true
+  },
+  {
+   "path": "01_volumes/Rehovot_samp2_highkV_Cu0.11_15um/README.md",
+   "ok": true
+  },
+  {
+   "path": "01_volumes/Rehovot_samp3_highkV_Cu0.11_15um/README.md",
+   "ok": true
+  },
+  {
+   "path": "01_volumes/bnei_reem_fresh_bnei_reem_i4/README.md",
+   "ok": true
+  },
+  {
+   "path": "01_volumes/bnei_reem_specA_unified/README.md",
+   "ok": true
+  },
+  {
+   "path": "01_volumes/bnei_reem_specB_unified/README.md",
+   "ok": true
+  },
+  {
+   "path": "01_volumes/mishmar_hanegev_maoz_2_8p8um/README.md",
+   "ok": true
+  },
+  {
+   "path": "01_volumes/mishmar_hanegev_maoz_3_5p85um/README.md",
+   "ok": true
+  },
+  {
+   "path": "02_annotations/bnei_reem_i4/README.md",
+   "ok": true
+  },
+  {
+   "path": "02_annotations/mishmar_loess_i2/README.md",
+   "ok": true
+  },
+  {
+   "path": "03_models/bnei_reem_i4/README.md",
+   "ok": true
+  },
+  {
+   "path": "03_models/mishmar_loess_i2/README.md",
+   "ok": true
+  },
+  {
+   "path": "04_code/README.md",
+   "ok": true
+  },
+  {
+   "path": "05_analysis_outputs/README.md",
+   "ok": true
+  },
+  {
+   "path": "05_analysis_outputs/connectivity/Topology_Metrics_Aug2026/bnei_reem_specB_visual_evidence/README.md",
+   "ok": true
+  },
+  {
+   "path": "05_analysis_outputs/connectivity/Topology_Metrics_Aug2026/raw/psd_diag_20260829T164703_mishmar_hanegev_maoz_2_8p8um_native/README.md",
+   "ok": true
+  },
+  {
+   "path": "05_analysis_outputs/connectivity/Topology_Metrics_Aug2026/raw/psd_diag_20260902T215639_mishmar_second_8p8um_label_downsample_15um/README.md",
+   "ok": true
+  },
+  {
+   "path": "05_analysis_outputs/pom/pom_analysis_20260831_interface_metrics_resmatched/README.md",
+   "ok": true
+  },
+  {
+   "path": "06_figures/README.md",
+   "ok": true
+  },
+  {
+   "path": "06_figures/render3d_bnei_reem_20261013/README.md",
+   "ok": true
+  },
+  {
+   "path": "06_figures/render3d_mishmar_5p85_20261012/README.md",
+   "ok": true
+  },
+  {
+   "path": "07_lab_data_and_writeup/README.md",
+   "ok": true
+  },
+  {
+   "path": "README.md",
+   "ok": true
+  },
+  {
+   "path": "03_models/mishmar_loess_i2/nnUNetTrainer_betterIgnoreSampling_earlyStopValLoss__nnUNetPlans__3d_fullres/fold_0/validation/mishmar_hanegev_maoz_3_5p85um.nii.gz",
+   "ok": true
+  },
+  {
+   "path": "05_analysis_outputs/pom/pom_analysis_20260826_final_shape/mishmar_label_downsample_2/clustering_silhouette_vs_k_final.png",
+   "ok": true
+  },
+  {
+   "path": "06_figures/synopsis_outputs/synopsis_i3/slice_0321.png",
+   "ok": true
+  },
+  {
+   "path": "06_figures/render3d_mishmar_5p85_20261012/logs/final_3.log",
+   "ok": true
+  },
+  {
+   "path": "06_figures/selected_outputs/mishmar_hanegev2_slice_exports/mishmar_hanegev_Cu011_samp_2_Rec_nlm/slice_0086_triplet.png",
+   "ok": true
+  },
+  {
+   "path": "MANIFEST.csv",
+   "ok": true
+  }
+ ],
+ "manifest_v1_backup": "E:\\PROJECTS\\Yael_Mishael\\Rony\\handoff\\_pre_H_backup_2026-11\\MANIFEST_v1.csv"
+}

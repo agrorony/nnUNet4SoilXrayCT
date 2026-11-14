@@ -1,0 +1,4567 @@
+{
+ "A": {
+  "folder": "E:/PROJECTS/Yael_Mishael/Rony/18.12.25 bnei_reem_samp_2.0",
+  "n_projections": 1800,
+  "proj_index_range": [
+   0,
+   1799
+  ],
+  "proj_mtime_min": "2025-12-18 13:57:45",
+  "proj_mtime_max": "2025-12-18 15:22:12",
+  "example_names": [
+   "bnei_reem_highkV_cu011_samp_2.000000000.tif",
+   "bnei_reem_highkV_cu011_samp_2.000001799.tif"
+  ],
+  "other_files": [
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2.0_arc.tif",
+    "bytes": 2408982,
+    "mtime": "2025-12-18 15:22:12"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2.000000000.iif",
+    "bytes": 2408982,
+    "mtime": "2025-12-18 15:22:32"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2.000000001.iif",
+    "bytes": 2408982,
+    "mtime": "2025-12-18 15:22:37"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2.000000002.iif",
+    "bytes": 2408982,
+    "mtime": "2025-12-18 15:22:43"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2.000000003.iif",
+    "bytes": 2408982,
+    "mtime": "2025-12-18 15:22:48"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2.000000004.iif",
+    "bytes": 2408982,
+    "mtime": "2025-12-18 15:22:54"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2.000000005.iif",
+    "bytes": 2408982,
+    "mtime": "2025-12-18 15:22:59"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2.000000006.iif",
+    "bytes": 2408982,
+    "mtime": "2025-12-18 15:23:05"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2.000000007.iif",
+    "bytes": 2408982,
+    "mtime": "2025-12-18 15:23:10"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2.000000008.iif",
+    "bytes": 2408982,
+    "mtime": "2025-12-18 15:23:16"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2.000000009.iif",
+    "bytes": 2408982,
+    "mtime": "2025-12-18 15:23:21"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2.000000010.iif",
+    "bytes": 2408982,
+    "mtime": "2025-12-18 15:23:27"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2.000000011.iif",
+    "bytes": 2408982,
+    "mtime": "2025-12-18 15:23:32"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2.000000012.iif",
+    "bytes": 2408982,
+    "mtime": "2025-12-18 15:23:38"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2.000000013.iif",
+    "bytes": 2408982,
+    "mtime": "2025-12-18 15:23:43"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2.000000014.iif",
+    "bytes": 2408982,
+    "mtime": "2025-12-18 15:23:49"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2.000000015.iif",
+    "bytes": 2408982,
+    "mtime": "2025-12-18 15:23:54"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2.000000016.iif",
+    "bytes": 2408982,
+    "mtime": "2025-12-18 15:24:00"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2.000000017.iif",
+    "bytes": 2408982,
+    "mtime": "2025-12-18 15:24:05"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2.000000018.iif",
+    "bytes": 2408982,
+    "mtime": "2025-12-18 15:24:11"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2.000000019.iif",
+    "bytes": 2408982,
+    "mtime": "2025-12-18 15:24:16"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2.000000020.iif",
+    "bytes": 2408982,
+    "mtime": "2025-12-18 15:24:22"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2.000000021.iif",
+    "bytes": 2408982,
+    "mtime": "2025-12-18 15:24:28"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2.0.oog",
+    "bytes": 1457,
+    "mtime": "2025-12-18 15:24:39"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2.0.log",
+    "bytes": 1543,
+    "mtime": "2025-12-18 18:12:36"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2.0_ar0.tif",
+    "bytes": 2411046,
+    "mtime": "2025-12-18 18:14:07"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2.0_ar1.tif",
+    "bytes": 2411046,
+    "mtime": "2025-12-18 18:14:18"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2.0_ar2.tif",
+    "bytes": 2411046,
+    "mtime": "2025-12-18 18:14:28"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2.0_ar3.tif",
+    "bytes": 2411046,
+    "mtime": "2025-12-18 18:14:38"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2.0_ar4.tif",
+    "bytes": 2411046,
+    "mtime": "2025-12-18 18:14:48"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2.0_ar5.tif",
+    "bytes": 2411046,
+    "mtime": "2025-12-18 18:14:58"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2.0_ar6.tif",
+    "bytes": 2411046,
+    "mtime": "2025-12-18 18:15:08"
+   },
+   {
+    "name": "disp.tif",
+    "bytes": 3616462,
+    "mtime": "2025-12-18 18:18:28"
+   },
+   {
+    "name": "Thumbs.db",
+    "bytes": 14848,
+    "mtime": "2025-12-22 07:58:59"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2.0_pp1.tif",
+    "bytes": 538342,
+    "mtime": "2025-12-22 13:29:34"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2.0_pp2.tif",
+    "bytes": 538342,
+    "mtime": "2025-12-22 13:29:35"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2.0_rec_spr.bmp",
+    "bytes": 1205302,
+    "mtime": "2025-12-22 14:47:30"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2.0_rec_spr.tif",
+    "bytes": 2411046,
+    "mtime": "2025-12-22 14:47:30"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2.0_rec.log",
+    "bytes": 1645,
+    "mtime": "2025-12-22 14:55:14"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2.0_Rec/",
+    "mtime": "2025-12-23 14:52:13"
+   }
+  ],
+  "log_lines": {
+   "bnei_reem_highkV_cu011_samp_2.0.log": [
+    "Scanner=SkyScan1272",
+    "Software Version=1.4",
+    "Data Directory=\\\\HIVE3065\\Yael_Mishael\\Rony\\18.12.25 bnei_reem_samp_2.0",
+    "Filename Prefix=bnei_reem_highkV_cu011_samp_2.0",
+    "Number Of Files= 1800",
+    "Number Of Rows=  896",
+    "Number Of Columns= 1344",
+    "Camera to Source (mm)=173.64068",
+    "Object to Source (mm)=96.68800",
+    "Source Voltage (kV)=  90",
+    "Image Pixel Size (um)=15.034357",
+    "Exposure (ms)=1408",
+    "Rotation Step (deg)=0.200",
+    "Filter=Cu 0.11mm",
+    "Study Date and Time=18 Dec 2025  15h:20m:12s",
+    "Scan duration=1h:24m:41s"
+   ],
+   "bnei_reem_highkV_cu011_samp_2.0_rec.log": [
+    "Scanner=SkyScan1272",
+    "Software Version=1.4",
+    "Data Directory=\\\\HIVE3065\\Yael_Mishael\\Rony\\18.12.25 bnei_reem_samp_2.0",
+    "Filename Prefix=bnei_reem_highkV_cu011_samp_2.0",
+    "Number Of Files= 1800",
+    "Number Of Rows=  896",
+    "Number Of Columns= 1344",
+    "Camera to Source (mm)=173.64068",
+    "Object to Source (mm)=96.68800",
+    "Source Voltage (kV)=  90",
+    "Image Pixel Size (um)=15.034357",
+    "Exposure (ms)=1408",
+    "Rotation Step (deg)=0.200",
+    "Filter=Cu 0.11mm",
+    "Study Date and Time=18 Dec 2025  15h:20m:12s",
+    "Scan duration=1h:24m:41s",
+    "Filename Prefix=bnei_reem_highkV_cu011_samp_2.0_rec"
+   ]
+  }
+ },
+ "B": {
+  "folder": "E:/PROJECTS/Yael_Mishael/Rony/18.12.25 bnei_reem_samp_2",
+  "n_projections": 1800,
+  "proj_index_range": [
+   0,
+   1799
+  ],
+  "proj_mtime_min": "2025-12-18 12:11:35",
+  "proj_mtime_max": "2025-12-18 13:36:02",
+  "example_names": [
+   "bnei_reem_highkV_cu011_samp_200000000.tif",
+   "bnei_reem_highkV_cu011_samp_200001799.tif"
+  ],
+  "other_files": [
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_arc.tif",
+    "bytes": 2408982,
+    "mtime": "2025-12-18 13:36:02"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_200000000.iif",
+    "bytes": 2408982,
+    "mtime": "2025-12-18 13:36:22"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_200000001.iif",
+    "bytes": 2408982,
+    "mtime": "2025-12-18 13:36:28"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_200000002.iif",
+    "bytes": 2408982,
+    "mtime": "2025-12-18 13:36:33"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_200000003.iif",
+    "bytes": 2408982,
+    "mtime": "2025-12-18 13:36:39"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_200000004.iif",
+    "bytes": 2408982,
+    "mtime": "2025-12-18 13:36:44"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_200000005.iif",
+    "bytes": 2408982,
+    "mtime": "2025-12-18 13:36:50"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_200000006.iif",
+    "bytes": 2408982,
+    "mtime": "2025-12-18 13:36:55"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_200000007.iif",
+    "bytes": 2408982,
+    "mtime": "2025-12-18 13:37:01"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_200000008.iif",
+    "bytes": 2408982,
+    "mtime": "2025-12-18 13:37:06"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_200000009.iif",
+    "bytes": 2408982,
+    "mtime": "2025-12-18 13:37:12"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_200000010.iif",
+    "bytes": 2408982,
+    "mtime": "2025-12-18 13:37:17"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_200000011.iif",
+    "bytes": 2408982,
+    "mtime": "2025-12-18 13:37:23"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_200000012.iif",
+    "bytes": 2408982,
+    "mtime": "2025-12-18 13:37:28"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_200000013.iif",
+    "bytes": 2408982,
+    "mtime": "2025-12-18 13:37:34"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_200000014.iif",
+    "bytes": 2408982,
+    "mtime": "2025-12-18 13:37:39"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_200000015.iif",
+    "bytes": 2408982,
+    "mtime": "2025-12-18 13:37:45"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_200000016.iif",
+    "bytes": 2408982,
+    "mtime": "2025-12-18 13:37:50"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_200000017.iif",
+    "bytes": 2408982,
+    "mtime": "2025-12-18 13:37:56"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_200000018.iif",
+    "bytes": 2408982,
+    "mtime": "2025-12-18 13:38:01"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_200000019.iif",
+    "bytes": 2408982,
+    "mtime": "2025-12-18 13:38:07"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_200000020.iif",
+    "bytes": 2408982,
+    "mtime": "2025-12-18 13:38:12"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_200000021.iif",
+    "bytes": 2408982,
+    "mtime": "2025-12-18 13:38:18"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2.oog",
+    "bytes": 1453,
+    "mtime": "2025-12-18 13:38:29"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2.log",
+    "bytes": 1539,
+    "mtime": "2025-12-18 13:58:34"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_ar0.tif",
+    "bytes": 2411046,
+    "mtime": "2025-12-18 13:59:43"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_ar1.tif",
+    "bytes": 2411046,
+    "mtime": "2025-12-18 13:59:54"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_ar2.tif",
+    "bytes": 2411046,
+    "mtime": "2025-12-18 14:00:06"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_ar3.tif",
+    "bytes": 2411046,
+    "mtime": "2025-12-18 14:00:19"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_ar4.tif",
+    "bytes": 2411046,
+    "mtime": "2025-12-18 14:00:30"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_ar5.tif",
+    "bytes": 2411046,
+    "mtime": "2025-12-18 14:00:42"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_ar6.tif",
+    "bytes": 2411046,
+    "mtime": "2025-12-18 14:00:55"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_Rec/",
+    "mtime": "2025-12-18 15:51:03"
+   },
+   {
+    "name": "Thumbs.db",
+    "bytes": 5632,
+    "mtime": "2025-12-22 07:59:00"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec_spr.bmp",
+    "bytes": 1205302,
+    "mtime": "2026-08-25 16:05:18"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec_spr.tif",
+    "bytes": 2411046,
+    "mtime": "2026-08-25 16:05:18"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000049.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:11:59"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000050.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:11:59"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000051.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:11:59"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000052.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:11:59"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000053.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:11:59"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000054.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:11:59"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000055.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:11:59"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000056.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:11:59"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000057.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:00"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000058.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:00"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000059.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:00"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000060.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:00"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000061.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:00"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000062.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:00"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000063.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:00"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000064.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:00"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000065.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:00"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000066.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:00"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000067.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:00"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000068.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:00"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000069.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:00"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000070.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:00"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000071.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:00"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000072.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:00"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000073.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:01"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000074.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:01"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000075.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:01"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000076.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:01"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000077.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:01"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000078.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:01"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000079.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:01"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000080.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:01"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000081.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:01"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000082.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:01"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000083.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:01"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000084.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:01"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000085.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:01"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000086.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:01"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000087.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:01"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000088.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:01"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000089.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:01"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000090.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:02"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000091.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:02"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000092.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:02"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000093.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:02"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000094.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:02"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000095.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:02"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000096.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:02"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000097.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:02"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000098.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:02"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000099.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:02"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000100.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:02"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000101.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:02"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000102.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:02"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000103.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:02"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000104.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:02"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000105.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:02"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000106.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:03"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000107.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:03"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000108.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:03"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000109.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:03"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000110.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:03"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000111.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:03"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000112.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:03"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000113.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:03"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000114.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:03"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000115.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:03"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000116.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:03"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000117.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:03"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000118.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:03"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000119.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:03"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000120.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:03"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000121.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:03"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000122.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:03"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000123.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:04"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000124.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:04"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000125.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:04"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000126.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:04"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000127.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:04"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000128.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:04"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000129.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:04"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000130.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:04"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000131.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:04"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000132.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:04"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000133.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:04"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000134.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:04"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000135.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:04"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000136.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:04"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000137.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:04"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000138.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:04"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000139.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:05"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000140.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:05"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000141.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:05"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000142.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:05"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000143.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:05"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000144.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:05"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000145.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:05"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000146.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:05"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000147.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:05"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000148.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:05"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000149.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:05"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000150.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:05"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000151.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:05"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000152.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:05"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000153.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:05"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000154.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:05"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000155.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:05"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000156.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:06"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000157.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:06"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000158.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:06"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000159.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:06"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000160.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:06"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000161.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:06"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000162.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:06"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000163.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:06"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000164.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:06"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000165.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:06"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000166.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:06"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000167.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:06"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000168.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:06"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000169.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:06"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000170.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:06"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000171.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:06"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000172.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:06"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000173.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:07"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000174.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:07"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000175.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:07"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000176.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:07"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000177.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:07"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000178.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:07"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000179.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:07"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000180.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:07"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000181.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:07"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000182.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:07"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000183.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:07"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000184.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:07"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000185.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:07"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000186.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:07"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000187.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:07"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000188.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:07"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000189.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:08"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000190.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:08"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000191.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:08"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000192.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:08"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000193.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:08"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000194.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:08"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000195.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:08"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000196.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:08"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000197.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:08"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000198.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:08"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000199.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:08"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000200.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:08"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000201.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:08"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000202.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:08"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000203.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:08"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000204.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:08"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000205.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:08"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000206.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:09"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000207.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:09"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000208.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:09"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000209.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:09"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000210.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:09"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000211.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:09"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000212.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:09"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000213.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:09"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000214.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:09"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000215.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:09"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000216.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:09"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000217.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:09"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000218.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:09"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000219.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:09"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000220.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:09"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000221.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:09"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000222.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:09"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000223.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:10"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000224.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:10"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000225.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:10"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000226.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:10"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000227.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:10"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000228.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:10"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000229.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:10"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000230.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:10"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000231.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:10"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000232.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:10"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000233.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:10"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000234.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:10"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000235.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:10"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000236.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:10"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000237.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:11"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000238.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:11"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000239.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:11"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000240.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:11"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000241.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:11"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000242.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:11"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000243.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:11"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000244.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:11"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000245.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:11"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000246.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:11"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000247.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:11"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000248.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:11"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000249.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:11"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000250.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:11"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000251.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:11"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000252.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:11"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000253.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:11"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000254.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:12"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000255.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:12"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000256.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:12"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000257.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:12"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000258.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:12"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000259.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:12"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000260.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:12"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000261.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:12"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000262.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:12"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000263.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:12"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000264.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:12"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000265.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:12"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000266.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:12"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000267.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:12"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000268.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:12"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000269.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:12"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000270.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:13"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000271.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:13"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000272.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:13"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000273.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:13"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000274.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:13"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000275.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:13"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000276.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:13"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000277.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:13"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000278.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:13"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000279.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:13"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000280.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:13"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000281.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:13"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000282.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:13"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000283.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:13"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000284.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:13"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000285.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:13"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000286.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:13"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000287.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:14"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000288.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:14"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000289.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:14"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000290.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:14"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000291.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:14"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000292.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:14"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000293.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:14"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000294.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:14"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000295.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:14"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000296.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:14"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000297.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:14"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000298.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:14"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000299.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:14"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000300.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:14"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000301.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:14"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000302.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:14"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000303.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:15"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000304.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:15"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000305.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:15"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000306.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:15"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000307.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:15"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000308.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:15"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000309.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:15"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000310.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:15"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000311.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:15"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000312.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:15"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000313.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:15"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000314.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:15"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000315.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:15"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000316.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:15"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000317.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:15"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000318.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:15"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000319.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:15"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000320.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:16"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000321.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:16"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000322.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:16"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000323.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:16"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000324.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:16"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000325.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:16"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000326.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:16"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000327.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:16"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000328.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:16"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000329.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:16"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000330.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:16"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000331.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:16"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000332.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:16"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000333.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:16"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000334.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:17"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000335.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:17"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000336.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:17"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000337.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:17"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000338.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:17"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000339.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:17"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000340.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:17"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000341.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:17"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000342.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:17"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000343.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:17"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000344.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:17"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000345.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:17"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000346.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:17"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000347.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:17"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000348.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:17"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000349.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:17"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000350.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:18"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000351.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:18"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000352.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:18"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000353.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:18"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000354.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:18"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000355.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:18"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000356.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:18"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000357.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:18"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000358.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:18"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000359.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:18"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000360.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:18"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000361.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:18"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000362.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:18"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000363.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:18"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000364.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:18"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000365.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:18"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000366.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:19"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000367.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:19"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000368.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:19"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000369.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:19"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000370.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:19"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000371.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:19"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000372.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:19"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000373.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:19"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000374.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:19"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000375.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:19"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000376.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:19"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000377.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:19"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000378.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:19"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000379.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:19"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000380.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:19"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000381.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:19"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000382.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:19"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000383.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:20"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000384.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:20"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000385.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:20"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000386.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:20"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000387.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:20"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000388.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:20"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000389.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:20"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000390.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:20"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000391.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:20"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000392.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:20"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000393.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:20"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000394.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:20"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000395.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:20"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000396.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:20"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000397.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:20"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000398.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:20"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000399.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:20"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000400.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:20"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000401.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:20"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000402.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:21"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000403.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:21"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000404.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:21"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000405.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:21"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000406.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:21"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000407.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:21"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000408.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:21"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000409.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:21"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000410.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:21"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000411.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:21"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000412.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:21"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000413.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:21"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000414.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:21"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000415.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:21"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000416.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:21"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000417.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:21"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000418.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:21"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000419.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:21"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000420.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:21"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000421.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:21"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000422.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:21"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000423.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:22"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000424.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:22"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000425.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:22"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000426.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:22"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000427.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:22"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000428.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:22"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000429.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:22"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000430.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:22"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000431.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:22"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000432.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:22"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000433.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:22"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000434.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:22"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000435.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:22"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000436.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:23"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000437.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:23"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000438.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:23"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000439.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:23"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000440.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:23"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000441.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:23"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000442.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:23"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000443.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:23"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000444.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:23"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000445.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:23"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000446.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:23"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000447.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:23"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000448.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:23"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000449.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:23"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000450.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:24"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000451.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:24"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000452.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:24"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000453.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:24"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000454.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:24"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000455.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:24"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000456.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:24"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000457.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:24"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000458.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:24"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000459.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:24"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000460.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:24"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000461.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:24"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000462.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:24"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000463.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:24"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000464.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:24"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000465.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:24"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000466.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:25"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000467.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:25"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000468.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:25"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000469.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:25"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000470.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:25"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000471.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:25"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000472.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:25"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000473.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:25"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000474.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:25"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000475.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:25"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000476.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:25"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000477.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:25"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000478.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:25"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000479.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:25"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000480.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:25"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000481.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:25"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000482.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:26"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000483.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:26"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000484.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:26"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000485.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:26"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000486.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:26"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000487.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:26"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000488.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:26"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000489.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:26"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000490.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:26"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000491.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:26"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000492.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:26"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000493.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:26"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000494.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:26"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000495.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:26"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000496.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:26"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000497.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:27"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000498.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:27"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000499.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:27"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000500.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:27"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000501.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:27"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000502.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:27"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000503.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:27"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000504.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:27"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000505.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:27"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000506.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:27"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000507.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:27"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000508.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:27"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000509.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:27"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000510.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:27"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000511.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:27"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000512.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:27"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000513.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:28"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000514.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:28"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000515.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:28"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000516.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:28"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000517.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:28"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000518.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:28"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000519.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:28"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000520.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:28"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000521.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:28"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000522.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:28"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000523.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:28"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000524.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:28"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000525.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:28"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000526.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:28"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000527.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:28"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000528.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:28"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000529.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:28"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000530.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:29"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000531.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:29"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000532.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:29"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000533.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:29"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000534.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:29"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000535.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:29"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000536.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:29"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000537.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:29"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000538.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:29"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000539.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:29"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000540.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:29"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000541.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:29"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000542.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:29"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000543.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:29"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000544.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:30"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000545.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:30"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000546.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:30"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000547.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:30"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000548.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:30"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000549.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:30"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000550.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:30"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000551.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:30"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000552.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:30"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000553.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:30"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000554.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:30"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000555.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:30"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000556.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:30"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000557.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:30"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000558.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:30"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000559.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:30"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000560.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:31"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000561.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:31"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000562.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:31"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000563.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:31"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000564.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:31"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000565.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:31"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000566.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:31"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000567.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:31"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000568.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:31"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000569.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:31"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000570.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:31"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000571.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:31"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000572.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:31"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000573.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:31"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000574.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:31"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000575.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:31"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000576.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:31"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000577.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:32"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000578.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:32"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000579.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:32"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000580.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:32"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000581.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:32"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000582.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:32"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000583.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:32"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000584.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:32"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000585.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:32"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000586.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:32"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000587.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:32"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000588.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:32"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000589.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:32"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000590.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:32"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000591.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:32"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000592.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:32"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000593.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:33"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000594.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:33"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000595.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:33"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000596.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:33"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000597.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:33"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000598.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:33"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000599.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:33"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000600.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:33"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000601.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:33"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000602.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:33"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000603.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:33"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000604.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:33"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000605.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:33"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000606.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:33"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000607.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:33"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000608.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:33"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000609.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:33"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000610.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:34"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000611.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:34"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000612.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:34"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000613.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:34"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000614.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:34"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000615.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:34"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000616.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:34"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000617.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:34"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000618.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:34"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000619.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:34"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000620.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:34"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000621.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:34"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000622.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:34"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000623.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:34"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000624.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:34"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000625.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:34"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000626.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:35"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000627.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:35"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000628.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:35"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000629.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:35"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000630.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:35"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000631.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:35"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000632.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:35"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000633.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:35"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000634.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:35"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000635.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:35"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000636.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:35"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000637.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:35"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000638.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:36"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000639.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:36"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000640.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:36"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000641.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:36"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000642.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:36"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000643.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:36"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000644.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:36"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000645.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:36"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000646.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:36"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000647.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:36"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000648.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:36"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000649.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:36"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000650.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:36"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000651.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:36"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000652.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:36"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000653.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:37"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000654.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:37"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000655.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:37"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000656.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:37"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000657.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:37"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000658.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:37"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000659.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:37"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000660.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:37"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000661.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:37"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000662.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:37"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000663.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:37"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000664.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:37"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000665.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:37"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000666.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:37"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000667.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:37"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000668.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:37"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000669.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:38"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000670.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:38"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000671.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:38"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000672.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:38"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000673.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:38"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000674.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:38"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000675.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:38"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000676.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:38"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000677.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:38"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000678.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:38"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000679.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:38"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000680.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:38"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000681.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:38"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000682.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:38"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000683.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:38"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000684.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:38"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000685.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:38"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000686.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:39"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000687.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:39"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000688.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:39"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000689.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:39"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000690.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:39"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000691.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:39"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000692.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:39"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000693.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:39"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000694.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:39"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000695.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:39"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000696.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:39"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000697.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:39"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000698.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:39"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000699.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:39"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000700.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:39"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000701.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:39"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000702.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:40"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000703.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:40"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000704.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:40"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000705.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:40"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000706.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:40"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000707.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:40"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000708.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:40"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000709.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:40"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000710.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:40"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000711.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:40"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000712.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:40"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000713.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:40"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000714.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:40"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000715.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:40"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000716.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:40"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000717.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:40"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000718.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:40"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000719.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:41"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000720.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:41"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000721.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:41"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000722.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:41"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000723.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:41"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000724.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:41"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000725.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:41"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000726.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:41"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000727.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:41"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000728.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:41"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000729.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:41"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000730.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:41"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000731.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:41"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000732.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:41"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000733.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:41"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000734.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:41"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000735.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:42"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000736.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:42"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000737.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:42"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000738.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:42"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000739.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:42"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000740.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:42"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000741.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:42"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000742.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:42"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000743.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:42"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000744.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:42"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000745.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:42"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000746.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:42"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000747.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:43"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000748.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:43"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000749.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:43"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000750.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:43"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000751.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:43"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000752.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:43"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000753.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:43"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000754.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:43"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000755.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:43"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000756.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:43"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000757.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:43"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000758.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:43"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000759.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:43"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000760.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:43"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000761.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:43"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000762.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:43"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000763.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:43"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000764.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:44"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000765.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:44"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000766.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:44"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000767.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:44"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000768.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:44"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000769.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:44"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000770.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:44"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000771.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:44"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000772.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:44"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000773.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:44"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000774.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:44"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000775.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:44"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000776.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:44"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000777.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:44"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000778.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:44"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000779.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:44"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000780.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:45"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000781.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:45"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000782.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:45"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000783.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:45"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000784.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:45"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000785.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:45"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000786.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:45"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000787.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:45"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000788.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:45"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000789.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:45"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000790.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:45"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000791.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:45"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000792.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:45"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000793.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:45"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000794.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:45"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000795.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:45"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000796.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:46"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000797.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:46"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000798.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:46"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000799.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:46"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000800.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:46"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000801.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:46"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000802.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:46"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000803.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:46"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000804.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:46"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000805.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:46"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000806.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:46"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000807.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:46"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000808.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:46"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000809.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:46"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000810.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:46"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000811.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:46"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000812.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:46"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000813.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:47"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000814.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:47"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000815.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:47"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000816.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:47"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000817.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:47"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000818.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:47"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000819.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:47"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000820.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:47"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000821.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:47"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000822.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:47"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000823.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:47"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000824.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:47"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000825.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:47"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000826.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:47"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000827.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:47"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000828.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:47"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000829.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:47"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000830.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:48"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000831.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:48"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000832.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:48"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000833.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:48"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000834.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:48"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000835.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:48"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000836.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:48"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000837.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:48"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000838.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:48"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000839.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:48"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000840.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:48"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000841.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:48"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000842.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:48"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000843.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:48"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000844.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:48"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000845.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:48"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000846.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:49"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000847.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:49"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000848.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:49"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000849.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:49"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000850.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:49"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000851.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:49"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec00000852.tif",
+    "bytes": 3616486,
+    "mtime": "2026-08-25 16:12:49"
+   },
+   {
+    "name": "bnei_reem_highkV_cu011_samp_2_rec.log",
+    "bytes": 1639,
+    "mtime": "2026-08-25 16:12:52"
+   }
+  ],
+  "log_lines": {
+   "bnei_reem_highkV_cu011_samp_2.log": [
+    "Scanner=SkyScan1272",
+    "Software Version=1.4",
+    "Data Directory=\\\\Hive3065\\Yael_Mishael\\Rony\\18.12.25 bnei_reem_samp_2",
+    "Filename Prefix=bnei_reem_highkV_cu011_samp_2",
+    "Number Of Files= 1800",
+    "Number Of Rows=  896",
+    "Number Of Columns= 1344",
+    "Camera to Source (mm)=173.64068",
+    "Object to Source (mm)=96.46800",
+    "Source Voltage (kV)=  90",
+    "Image Pixel Size (um)=15.000149",
+    "Exposure (ms)=1408",
+    "Rotation Step (deg)=0.200",
+    "Filter=Cu 0.11mm",
+    "Study Date and Time=18 Dec 2025  13h:34m:02s",
+    "Scan duration=1h:24m:40s"
+   ],
+   "bnei_reem_highkV_cu011_samp_2_rec.log": [
+    "Scanner=SkyScan1272",
+    "Software Version=1.4",
+    "Data Directory=\\\\Hive3065\\Yael_Mishael\\Rony\\18.12.25 bnei_reem_samp_2",
+    "Filename Prefix=bnei_reem_highkV_cu011_samp_2",
+    "Number Of Files= 1800",
+    "Number Of Rows=  896",
+    "Number Of Columns= 1344",
+    "Camera to Source (mm)=173.64068",
+    "Object to Source (mm)=96.46800",
+    "Source Voltage (kV)=  90",
+    "Image Pixel Size (um)=15.000149",
+    "Exposure (ms)=1408",
+    "Rotation Step (deg)=0.200",
+    "Filter=Cu 0.11mm",
+    "Study Date and Time=18 Dec 2025  13h:34m:02s",
+    "Scan duration=1h:24m:40s",
+    "Filename Prefix=bnei_reem_highkV_cu011_samp_2_rec"
+   ]
+  }
+ },
+ "projection_comparison": [
+  {
+   "index": 0,
+   "a": "bnei_reem_highkV_cu011_samp_2.000000000.tif",
+   "b": "bnei_reem_highkV_cu011_samp_200000000.tif",
+   "sha_a": "7af8a93138301e884182de4a09feb5d029545dd97fe90ed86bcd1d44559d6094",
+   "sha_b": "fca2bde2cbb505e271eefaa5bc0d25cdb53807c3962383571231a190bc1a8461",
+   "identical": false,
+   "mtime_a": "2025-12-18 13:57:45",
+   "mtime_b": "2025-12-18 12:11:35"
+  },
+  {
+   "index": 450,
+   "a": "bnei_reem_highkV_cu011_samp_2.000000450.tif",
+   "b": "bnei_reem_highkV_cu011_samp_200000450.tif",
+   "sha_a": "890bcd8e811a5c6015c4d928b6931b881be64e55336f749780a9334bc62195b3",
+   "sha_b": "95862a522fe9a13f0d1d3c5035ddfd6c3268f346ffba93d63e6ae8b321e30cad",
+   "identical": false,
+   "mtime_a": "2025-12-18 14:18:52",
+   "mtime_b": "2025-12-18 12:32:43"
+  },
+  {
+   "index": 900,
+   "a": "bnei_reem_highkV_cu011_samp_2.000000900.tif",
+   "b": "bnei_reem_highkV_cu011_samp_200000900.tif",
+   "sha_a": "dc1db4b4a2f3dd14b7774e46fa7869aced12a83429e0cd28934bc8719aebb5e7",
+   "sha_b": "a3612230b94d560b28ee4e9d642bd9cd0de9e6273e88a09e4796f9b0c8d821f2",
+   "identical": false,
+   "mtime_a": "2025-12-18 14:40:00",
+   "mtime_b": "2025-12-18 12:53:50"
+  },
+  {
+   "index": 1350,
+   "a": "bnei_reem_highkV_cu011_samp_2.000001350.tif",
+   "b": "bnei_reem_highkV_cu011_samp_200001350.tif",
+   "sha_a": "3f0f210d67b4a691841ba491094b1001d67bbccd069563ab3245602568b9cb49",
+   "sha_b": "5e4df38ef4993a3218c39f5ca204b435a1872aebaed65a2f391f03fb98217912",
+   "identical": false,
+   "mtime_a": "2025-12-18 15:01:07",
+   "mtime_b": "2025-12-18 13:14:57"
+  },
+  {
+   "index": 1799,
+   "a": "bnei_reem_highkV_cu011_samp_2.000001799.tif",
+   "b": "bnei_reem_highkV_cu011_samp_200001799.tif",
+   "sha_a": "f0a988c12e0e9ab54b134d80f8209ff98d255fe94a3d99f6048938c845f9e679",
+   "sha_b": "caea573197943865b0af611f2f629ffd8a3d63f21e61656abc97578ad1b6c165",
+   "identical": false,
+   "mtime_a": "2025-12-18 15:22:12",
+   "mtime_b": "2025-12-18 13:36:02"
+  }
+ ]
+}

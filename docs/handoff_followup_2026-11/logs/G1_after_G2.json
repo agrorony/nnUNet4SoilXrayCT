@@ -1,0 +1,640 @@
+[
+ {
+  "file": "01_volumes/bnei_reem_fresh_bnei_reem_i4/README.md",
+  "line": 5,
+  "token": "DATA_CATALOG.md",
+  "kind": "file",
+  "new": "DATA_CATALOG.md",
+  "context": "**Verification status: VERIFIED (re-inference match, 2026-11-10, log: `provenance/inference_log_verification_2026-11-10.txt`)**. The original run left no log. On 2026-11-10 the same model and checkpoi"
+ },
+ {
+  "file": "01_volumes/bnei_reem_fresh_bnei_reem_i4/README.md",
+  "line": 11,
+  "token": "DATA_CATALOG.md",
+  "kind": "file",
+  "new": "DATA_CATALOG.md",
+  "context": "Raw reconstruction this volume was cropped from: specimen B's `\\\\HIVE3065\\Yael_Mishael\\Rony\\18.12.25 bnei_reem_samp_2.0\\bnei_reem_highkV_cu011_samp_2.0_Rec` (the only Bnei Re'em reconstruction that ex"
+ },
+ {
+  "file": "01_volumes/bnei_reem_fresh_bnei_reem_i4/README.md",
+  "line": 42,
+  "token": "DATA_CATALOG.md",
+  "kind": "file",
+  "new": "DATA_CATALOG.md",
+  "context": "Check against `DATA_CATALOG.md`: catalog 21.636 / 0.819 \u2014 found 21.6364 / 0.8189 \u2192 match."
+ },
+ {
+  "file": "01_volumes/bnei_reem_fresh_bnei_reem_i4/README.md",
+  "line": 62,
+  "token": "DATA_CATALOG.md",
+  "kind": "file",
+  "new": "DATA_CATALOG.md",
+  "context": "Source of all Vertisol POM / 3-class results (POM interface metrics, Track A/B, Tables 1/2, Fig. 4a/b/d/e per `DATA_CATALOG.md`). Its Track E numbers are superseded by the two unified specimens."
+ },
+ {
+  "file": "01_volumes/bnei_reem_specA_unified/README.md",
+  "line": 5,
+  "token": "DATA_CATALOG.md",
+  "kind": "file",
+  "new": "DATA_CATALOG.md",
+  "context": "**Verification status: VERIFIED**. The run log names the model folder and `checkpoint_final.pth`; the prediction (2026-09-07 12:16) is newer than the checkpoint (2026-07-05 19:41); pore/POM fractions "
+ },
+ {
+  "file": "01_volumes/bnei_reem_specA_unified/README.md",
+  "line": 8,
+  "token": "DATA_CATALOG.md",
+  "kind": "file",
+  "new": "DATA_CATALOG.md",
+  "context": "Soil: Vertisol, Bnei Re'em. Physical specimen A = raw core `18.12.25 bnei_reem_samp_2` (no dot), per `DATA_CATALOG.md` (2026-09-07 entry). Sampling date: NOT FOUND in the repo records (the folder date"
+ },
+ {
+  "file": "01_volumes/bnei_reem_specA_unified/README.md",
+  "line": 11,
+  "token": "DATA_CATALOG.md",
+  "kind": "file",
+  "new": "DATA_CATALOG.md",
+  "context": "Raw reconstruction used: `C:\\Users\\rony.schwartz\\Desktop\\new_rec` (804 slices 49\u2013852, per `DATA_CATALOG.md` and the run log). Its NRecon log (`scan_log/new_rec/`) names `\\\\Hive3065\\Yael_Mishael\\Rony\\1"
+ },
+ {
+  "file": "01_volumes/bnei_reem_specA_unified/README.md",
+  "line": 54,
+  "token": "DATA_CATALOG.md",
+  "kind": "file",
+  "new": "DATA_CATALOG.md",
+  "context": "Check against `DATA_CATALOG.md` (Pore / POM %): catalog 15.1688 / 0.2403 \u2014 found 15.1688 / 0.2403 \u2192 match."
+ },
+ {
+  "file": "01_volumes/bnei_reem_specA_unified/README.md",
+  "line": 72,
+  "token": "DATA_CATALOG.md",
+  "kind": "file",
+  "new": "DATA_CATALOG.md",
+  "context": "- POM fraction (0.24 %) is much lower than in the \"canonical\" volume (0.82 %); see `DATA_CATALOG.md` for the specimen-identity discussion."
+ },
+ {
+  "file": "01_volumes/bnei_reem_specA_unified/README.md",
+  "line": 73,
+  "token": "DATA_CATALOG.md",
+  "kind": "file",
+  "new": "DATA_CATALOG.md",
+  "context": "- `DATA_CATALOG.md` notes the model is brittle to field-of-view changes on Bnei Re'em (ROI-expansion attempt collapsed POM)."
+ },
+ {
+  "file": "01_volumes/bnei_reem_specB_unified/README.md",
+  "line": 5,
+  "token": "DATA_CATALOG.md",
+  "kind": "file",
+  "new": "DATA_CATALOG.md",
+  "context": "**Verification status: VERIFIED**. The run log names the model folder and `checkpoint_final.pth`; the prediction (2026-09-07 12:29) is newer than the checkpoint (2026-07-05 19:41); pore/POM fractions "
+ },
+ {
+  "file": "01_volumes/bnei_reem_specB_unified/README.md",
+  "line": 8,
+  "token": "DATA_CATALOG.md",
+  "kind": "file",
+  "new": "DATA_CATALOG.md",
+  "context": "Soil: Vertisol, Bnei Re'em. Physical specimen B = raw core `18.12.25 bnei_reem_samp_2.0`, per `DATA_CATALOG.md`. Sampling date: NOT FOUND."
+ },
+ {
+  "file": "01_volumes/bnei_reem_specB_unified/README.md",
+  "line": 54,
+  "token": "DATA_CATALOG.md",
+  "kind": "file",
+  "new": "DATA_CATALOG.md",
+  "context": "Check against `DATA_CATALOG.md`: catalog 21.6403 / 0.8170 \u2014 found 21.6403 / 0.8170 \u2192 match."
+ },
+ {
+  "file": "01_volumes/bnei_reem_specB_unified/README.md",
+  "line": 72,
+  "token": "DATA_CATALOG.md",
+  "kind": "file",
+  "new": "DATA_CATALOG.md",
+  "context": "- Numerically identical to the \"canonical\" volume `bnei_reem_fresh_bnei_reem_i4` (`DATA_CATALOG.md`: r = 0.999929, pore Dice 0.988), because the canonical volume is a legacy (April 2026) processing of"
+ },
+ {
+  "file": "01_volumes/Cu011_samp_2/README.md",
+  "line": 5,
+  "token": "DATA_CATALOG.md",
+  "kind": "file",
+  "new": "DATA_CATALOG.md",
+  "context": "**Verification status: VERIFIED**. The inference log `provenance/cu011_loess_i2_inference_log.txt` names the loess_i2 model dir and `Checkpoint: checkpoint_final.pth`; the prediction (2026-08-23 16:21"
+ },
+ {
+  "file": "01_volumes/Cu011_samp_2/README.md",
+  "line": 8,
+  "token": "DATA_CATALOG.md",
+  "kind": "file",
+  "new": "DATA_CATALOG.md",
+  "context": "Soil: Loess, Mishmar HaNegev, 3rd specimen (`DATA_CATALOG.md`). Sampling date: NOT FOUND."
+ },
+ {
+  "file": "01_volumes/Cu011_samp_2/README.md",
+  "line": 11,
+  "token": "DATA_CATALOG.md",
+  "kind": "file",
+  "new": "DATA_CATALOG.md",
+  "context": "Raw source: `\\\\hive3065\\Yael_Mishael\\Rony\\29.3.26 mishmar_hanegev_samp_2\\` (`DATA_CATALOG.md`). Voxel size **15.000149 \u00b5m** (logs below)."
+ },
+ {
+  "file": "01_volumes/Cu011_samp_2/README.md",
+  "line": 24,
+  "token": "DATA_CATALOG.md",
+  "kind": "file",
+  "new": "DATA_CATALOG.md",
+  "context": "- Shape 650\u00d7650\u00d7822: XY cropped to 650 (inference input shapes in the log); all 822 reconstructed slices kept along the third axis (`DATA_CATALOG.md`: 822 slices). Crop position, stretch percentiles, "
+ },
+ {
+  "file": "01_volumes/Cu011_samp_2/README.md",
+  "line": 48,
+  "token": "DATA_CATALOG.md",
+  "kind": "file",
+  "new": "DATA_CATALOG.md",
+  "context": "Check against `DATA_CATALOG.md`: catalog 26.4 / 0.120 \u2014 found 26.3822 / 0.1196 \u2192 match."
+ },
+ {
+  "file": "01_volumes/Cu011_samp_2/README.md",
+  "line": 66,
+  "token": "DATA_CATALOG.md",
+  "kind": "file",
+  "new": "DATA_CATALOG.md",
+  "context": "- POM channel collapse: 0.12 % vs 1.61 % in the 5.85 \u00b5m scan of the same soil (`DATA_CATALOG.md` inclusion rule 1). Never use this volume for POM."
+ },
+ {
+  "file": "01_volumes/mishmar_hanegev_maoz_2_8p8um/README.md",
+  "line": 5,
+  "token": "DATA_CATALOG.md",
+  "kind": "file",
+  "new": "DATA_CATALOG.md",
+  "context": "**Verification status: VERIFIED (re-inference match, 2026-11-10, log: `provenance/inference_log_verification_2026-11-10.txt`)**. The original run left no log. On 2026-11-10 the same model and checkpoi"
+ },
+ {
+  "file": "01_volumes/mishmar_hanegev_maoz_2_8p8um/README.md",
+  "line": 11,
+  "token": "DATA_CATALOG.md",
+  "kind": "file",
+  "new": "DATA_CATALOG.md",
+  "context": "Raw source: `\\\\hive3065\\Yael_Mishael\\Rony\\mishmar_hanegev_maoz\\2-16mm_diam_8.8um\\` (`DATA_CATALOG.md`). Voxel size **8.8 \u00b5m** per `DATA_CATALOG.md` and the run configs; not log-confirmed."
+ },
+ {
+  "file": "01_volumes/mishmar_hanegev_maoz_2_8p8um/README.md",
+  "line": 11,
+  "token": "DATA_CATALOG.md",
+  "kind": "file",
+  "new": "DATA_CATALOG.md",
+  "context": "Raw source: `\\\\hive3065\\Yael_Mishael\\Rony\\mishmar_hanegev_maoz\\2-16mm_diam_8.8um\\` (`DATA_CATALOG.md`). Voxel size **8.8 \u00b5m** per `DATA_CATALOG.md` and the run configs; not log-confirmed."
+ },
+ {
+  "file": "01_volumes/mishmar_hanegev_maoz_2_8p8um/README.md",
+  "line": 65,
+  "token": "DATA_CATALOG.md",
+  "kind": "file",
+  "new": "DATA_CATALOG.md",
+  "context": "`DATA_CATALOG.md` has no Pore/POM % for this volume (cannot be checked; pore 22.984 % matches `connectivity_replicate_expansion_summary.md`). `segmentation_15um_trackE`: sanity-check file 20.343 / 7.8"
+ },
+ {
+  "file": "01_volumes/mishmar_hanegev_maoz_2_8p8um/README.md",
+  "line": 88,
+  "token": "PROJECT_STATUS.md",
+  "kind": "file",
+  "new": "(removed; in git history)",
+  "context": "- The ROI-expanded ~15 \u00b5m mask has a much higher POM fraction (7.86 %) than the 1000\u00b3 crop (1.64 %); `PROJECT_STATUS.md` (removed from the repo in 2026-11; in its git history)/ROI-expansion report: th"
+ },
+ {
+  "file": "01_volumes/mishmar_hanegev_maoz_2_8p8um/README.md",
+  "line": 89,
+  "token": "DATA_CATALOG.md",
+  "kind": "file",
+  "new": "DATA_CATALOG.md",
+  "context": "- Tortuosity on the 8.8\u219215 \u00b5m branch failed with an AMG-solver crash in the full-volume run (`DATA_CATALOG.md`); the subvolume tortuosity (2026-10-04) did not hit it."
+ },
+ {
+  "file": "01_volumes/mishmar_hanegev_maoz_3_5p85um/README.md",
+  "line": 5,
+  "token": "DATA_CATALOG.md",
+  "kind": "file",
+  "new": "DATA_CATALOG.md",
+  "context": "**Verification status: VERIFIED (re-inference match, 2026-11-10, log: `provenance/inference_log_verification_2026-11-10.txt`)**. The original run left no log (as noted in `docs/missing_data_20261004_R"
+ },
+ {
+  "file": "01_volumes/mishmar_hanegev_maoz_3_5p85um/README.md",
+  "line": 11,
+  "token": "DATA_CATALOG.md",
+  "kind": "file",
+  "new": "DATA_CATALOG.md",
+  "context": "Raw source: `\\\\hive3065\\Yael_Mishael\\Rony\\mishmar_hanegev_maoz\\3-16mm_diam_5.85um\\` (`DATA_CATALOG.md`). Voxel size **5.85 \u00b5m** per `DATA_CATALOG.md` and the analysis configs (`--voxel-spacing 5.85` i"
+ },
+ {
+  "file": "01_volumes/mishmar_hanegev_maoz_3_5p85um/README.md",
+  "line": 11,
+  "token": "DATA_CATALOG.md",
+  "kind": "file",
+  "new": "DATA_CATALOG.md",
+  "context": "Raw source: `\\\\hive3065\\Yael_Mishael\\Rony\\mishmar_hanegev_maoz\\3-16mm_diam_5.85um\\` (`DATA_CATALOG.md`). Voxel size **5.85 \u00b5m** per `DATA_CATALOG.md` and the analysis configs (`--voxel-spacing 5.85` i"
+ },
+ {
+  "file": "01_volumes/mishmar_hanegev_maoz_3_5p85um/README.md",
+  "line": 65,
+  "token": "DATA_CATALOG.md",
+  "kind": "file",
+  "new": "DATA_CATALOG.md",
+  "context": "Check against `DATA_CATALOG.md`: catalog 27.038 / 1.615 \u2014 found 27.0385 / 1.6147 \u2192 match. `segmentation_15um_pom`: catalog (`mishmar_label_downsample`) 26.108 / 1.614 \u2014 found 26.1083 / 1.6141 \u2192 match."
+ },
+ {
+  "file": "01_volumes/Rehovot_samp2_highkV_Cu0.11_15um/README.md",
+  "line": 8,
+  "token": "DATA_CATALOG.md",
+  "kind": "file",
+  "new": "DATA_CATALOG.md",
+  "context": "Soil: Sand, Rehovot, specimen samp2 (1st of 2 physical specimens, `DATA_CATALOG.md`). Sampling date: NOT FOUND."
+ },
+ {
+  "file": "01_volumes/Rehovot_samp2_highkV_Cu0.11_15um/README.md",
+  "line": 11,
+  "token": "DATA_CATALOG.md",
+  "kind": "file",
+  "new": "DATA_CATALOG.md",
+  "context": "Raw source: `\\\\hive3065\\Yael_Mishael\\Rony\\10.12.25_Rehovot_samp_2\\` (`DATA_CATALOG.md`). Voxel size **15.000149 \u00b5m** (logs below)."
+ },
+ {
+  "file": "01_volumes/Rehovot_samp2_highkV_Cu0.11_15um/README.md",
+  "line": 71,
+  "token": "DATA_CATALOG.md",
+  "kind": "file",
+  "new": "DATA_CATALOG.md",
+  "context": "`DATA_CATALOG.md` has no Pore % column for Rehovot; checked against `docs/missing_data_20261004_REPORT.md` (Otsu pore 30.498 %) \u2192 match."
+ },
+ {
+  "file": "01_volumes/Rehovot_samp3_highkV_Cu0.11_15um/README.md",
+  "line": 8,
+  "token": "DATA_CATALOG.md",
+  "kind": "file",
+  "new": "DATA_CATALOG.md",
+  "context": "Soil: Sand, Rehovot, specimen samp3 (2nd of 2 physical specimens, `DATA_CATALOG.md`). Sampling date: NOT FOUND."
+ },
+ {
+  "file": "01_volumes/Rehovot_samp3_highkV_Cu0.11_15um/README.md",
+  "line": 11,
+  "token": "DATA_CATALOG.md",
+  "kind": "file",
+  "new": "DATA_CATALOG.md",
+  "context": "Raw source: `\\\\hive3065\\Yael_Mishael\\Rony\\10.12.25_Rehovot_samp_3_clean\\` (corrected re-reconstruction, 2026-08-04), superseding `10.12.25_Rehovot_samp_3\\` (`DATA_CATALOG.md`); both folders' logs are "
+ },
+ {
+  "file": "01_volumes/Rehovot_samp3_highkV_Cu0.11_15um/README.md",
+  "line": 71,
+  "token": "DATA_CATALOG.md",
+  "kind": "file",
+  "new": "DATA_CATALOG.md",
+  "context": "`DATA_CATALOG.md` has no Pore % for Rehovot; checked against `missing_data_20261004/REPORT.md` (Otsu pore 40.848 %) \u2192 match."
+ },
+ {
+  "file": "04_code/README.md",
+  "line": 8,
+  "token": "README.md",
+  "kind": "file",
+  "new": "README.md",
+  "context": "The repository archive contains code and small records only. Volumes, checkpoints and annotations are in `01_volumes/`, `02_annotations/` and `03_models/` of this package. Start with its `README.md`, "
+ },
+ {
+  "file": "04_code/README.md",
+  "line": 8,
+  "token": "DATA_CATALOG.md",
+  "kind": "file",
+  "new": "DATA_CATALOG.md",
+  "context": "The repository archive contains code and small records only. Volumes, checkpoints and annotations are in `01_volumes/`, `02_annotations/` and `03_models/` of this package. Start with its `README.md`, "
+ },
+ {
+  "file": "05_analysis_outputs/connectivity/missing_data_20261004/REPORT.md",
+  "line": 45,
+  "token": "06_reporting/scripts/plot_training_metrics.py",
+  "kind": "file",
+  "new": "3_training/training_plots/plot_training_metrics.py",
+  "context": "Used the existing `06_reporting/scripts/plot_training_metrics.py` unmodified, pointed (`--results-dir`) at **copies** of the logs in `training_curves/<model>/src/` so nothing was written to the share."
+ },
+ {
+  "file": "05_analysis_outputs/connectivity/missing_data_20261004/REPORT.md",
+  "line": 76,
+  "token": "PROJECT_STATUS.md",
+  "kind": "file",
+  "new": "(removed; in git history)",
+  "context": "One dated line appended to the repo copies of `PROJECT_STATUS.md`, `DATA_CATALOG.md`, `local_asset_recovery_findings.md`. No git commit made."
+ },
+ {
+  "file": "05_analysis_outputs/connectivity/missing_data_20261004/REPORT.md",
+  "line": 76,
+  "token": "DATA_CATALOG.md",
+  "kind": "file",
+  "new": "DATA_CATALOG.md",
+  "context": "One dated line appended to the repo copies of `PROJECT_STATUS.md`, `DATA_CATALOG.md`, `local_asset_recovery_findings.md`. No git commit made."
+ },
+ {
+  "file": "05_analysis_outputs/connectivity/Topology_Metrics_Aug2026/bnei_reem_specB_visual_evidence/part0_provenance.md",
+  "line": 44,
+  "token": "04_inference/scripts/run_bnei_reem_samp_2_0_recrop_pipeline.py",
+  "kind": "file",
+  "new": "archive/4_inference/superseded_vertisol_runs/run_bnei_reem_samp_2_0_recrop_pipeline.py",
+  "context": "`04_inference/scripts/run_bnei_reem_samp_2_0_recrop_pipeline.py` (the exact script that produced the volume in question, confirmed via DATA_CATALOG.md and `bnei_reem_samp_2_0_repreprocess_prompt.md`) "
+ },
+ {
+  "file": "05_analysis_outputs/connectivity/Topology_Metrics_Aug2026/bnei_reem_specB_visual_evidence/part0_provenance.md",
+  "line": 59,
+  "token": "02_preprocessing/nnunet/preprocessing_nnUNet_predict.py",
+  "kind": "file",
+  "new": "2_preprocessing/nnunet_dataset/preprocessing_nnUNet_predict.py",
+  "context": "Question: did `bnei_reem_samp_2_0_recropped_0000.nii.gz` go through `02_preprocessing/nnunet/preprocessing_nnUNet_predict.py` with a non-default `--norm` flag, or through `02_preprocessing/filters/run"
+ },
+ {
+  "file": "05_analysis_outputs/connectivity/Topology_Metrics_Aug2026/bnei_reem_specB_visual_evidence/part0_provenance.md",
+  "line": 59,
+  "token": "02_preprocessing/filters/run_preprocess.py",
+  "kind": "file",
+  "new": "2_preprocessing/denoise_normalize/run_preprocess.py",
+  "context": "Question: did `bnei_reem_samp_2_0_recropped_0000.nii.gz` go through `02_preprocessing/nnunet/preprocessing_nnUNet_predict.py` with a non-default `--norm` flag, or through `02_preprocessing/filters/run"
+ },
+ {
+  "file": "05_analysis_outputs/connectivity/Topology_Metrics_Aug2026/bnei_reem_specB_visual_evidence/part0_provenance.md",
+  "line": 65,
+  "token": "02_preprocessing/filters/",
+  "kind": "dir",
+  "n_files": 6,
+  "new": null,
+  "removed": 0,
+  "example": [
+   "02_preprocessing/filters/clean_copy_rehovot_samp3.py",
+   "2_preprocessing/denoise_normalize/clean_copy_rehovot_samp3.py"
+  ],
+  "context": "1. **`step2_norm_nlm()`** calls `run_preprocess.py --input_dir <cropped_dir>` (in `02_preprocessing/filters/`). That script calls `normalization.py`'s `norm200()`, whose own docstring and code confirm"
+ },
+ {
+  "file": "05_analysis_outputs/connectivity/Topology_Metrics_Aug2026/bnei_reem_specB_visual_evidence/part0_provenance.md",
+  "line": 84,
+  "token": "04_inference/scripts/legacy_per_iteration/_run_inference_fresh_bnei_reem_i4.py",
+  "kind": "file",
+  "new": "4_inference/vertisol/_run_inference_fresh_bnei_reem_i4.py",
+  "context": "This means canonical Bnei Re'em's raw source almost certainly went through a **different, older code path** that does apply z-score normalization (consistent with `preprocessing_nnUNet_predict.py`'s `"
+ },
+ {
+  "file": "05_analysis_outputs/connectivity/Topology_Metrics_Aug2026/bnei_reem_specB_visual_evidence/part0_provenance.md",
+  "line": 88,
+  "token": "README.md",
+  "kind": "file",
+  "new": "README.md",
+  "context": "This closes the file-provenance question decisively: Specimen B's segmentation is built from its own correctly-identified raw scan, via a script whose input-matching logic could not have silently subs"
+ },
+ {
+  "file": "05_analysis_outputs/connectivity/Topology_Metrics_Aug2026/bnei_reem_specB_visual_evidence/part0c_TRUE_RECONSTRUCTION_RESULTS.md",
+  "line": 41,
+  "token": "04_inference/scripts/run_bnei_reem_samp_2_0_true_recon_pipeline.py",
+  "kind": "file",
+  "new": "archive/4_inference/superseded_vertisol_runs/run_bnei_reem_samp_2_0_true_recon_pipeline.py",
+  "context": "`04_inference/scripts/run_bnei_reem_samp_2_0_true_recon_pipeline.py`,"
+ },
+ {
+  "file": "05_analysis_outputs/connectivity/Topology_Metrics_Aug2026/bnei_reem_specB_visual_evidence/part0c_TRUE_RECONSTRUCTION_RESULTS.md",
+  "line": 122,
+  "token": "04_inference/scripts/run_inference.py",
+  "kind": "file",
+  "new": "4_inference/run_inference.py",
+  "context": "as every other Bnei Re'em volume. Run via `04_inference/scripts/run_inference.py`."
+ },
+ {
+  "file": "05_analysis_outputs/connectivity/Topology_Metrics_Aug2026/bnei_reem_specB_visual_evidence/part0c_TRUE_RECONSTRUCTION_RESULTS.md",
+  "line": 335,
+  "token": "04_inference/run_configs/",
+  "kind": "dir",
+  "n_files": 11,
+  "new": null,
+  "removed": 0,
+  "example": [
+   "04_inference/run_configs/fresh_bnei_reem.yaml",
+   "archive/4_inference/run_configs/fresh_bnei_reem.yaml"
+  ],
+  "context": "3. `04_inference/run_configs/` has no `.yaml` entry for"
+ },
+ {
+  "file": "05_analysis_outputs/connectivity/Topology_Metrics_Aug2026/connectivity_replicate_expansion_summary.md",
+  "line": 32,
+  "token": "02_preprocessing/otsu_threshold_3d.py",
+  "kind": "file",
+  "new": "2_preprocessing/otsu_threshold_3d.py",
+  "context": "**Rehovot samp3** \u2014 traced how the *existing* Rehovot Track E run's binary mask (`rehovot_samp_2.npy`, used by `compute_rehovot_distance_metrics.py`) was actually produced: **not** from either nnUNet "
+ },
+ {
+  "file": "05_analysis_outputs/connectivity/Topology_Metrics_Aug2026/connectivity_replicate_expansion_summary.md",
+  "line": 51,
+  "token": "05_evaluation/psd/pore_metrics_research/compute_chi_r_sweep.py",
+  "kind": "file",
+  "new": "5_analysis/connectivity/compute_chi_r_sweep.py",
+  "context": "- **\u03c7(r)/crossover-radius sweep \u2014 recreated from scratch.** No standalone script survived from the prior session that established this methodology (`crossover_radius_summary.md`), so `05_evaluation/ps"
+ },
+ {
+  "file": "05_analysis_outputs/connectivity/Topology_Metrics_Aug2026/track_e_correction_summary.md",
+  "line": 14,
+  "token": "DATA_CATALOG.md",
+  "kind": "file",
+  "new": "DATA_CATALOG.md",
+  "context": "1. **Independent reload of the exact input file** (`nnUNet_resources\\bnei_reem_samp_2_0_recropped\\inference_concatenated\\bnei_reem_samp_2_0_recropped.nii.gz`, the same path recorded in the run's own `"
+ },
+ {
+  "file": "05_analysis_outputs/connectivity/Topology_Metrics_Aug2026/track_e_correction_summary.md",
+  "line": 17,
+  "token": "PROJECT_STATUS.md",
+  "kind": "file",
+  "new": "(removed; in git history)",
+  "context": "4. **Live corroborating evidence found during this investigation**: process PID 13048 \u2014 the exact PID cited in `track_e_correction_prompt.md` and `PROJECT_STATUS.md` as having \"produced\" the bad run \u2014"
+ },
+ {
+  "file": "05_analysis_outputs/connectivity/Topology_Metrics_Aug2026/track_e_correction_summary.md",
+  "line": 41,
+  "token": "DATA_CATALOG.md",
+  "kind": "file",
+  "new": "DATA_CATALOG.md",
+  "context": "**The r*\u2248450.79\u00b5m loop-to-fragment crossover for Specimen B stands, unretracted**, pending Rony's resolution of the open item above. No new run was created (no different/better candidate input file wa"
+ },
+ {
+  "file": "05_analysis_outputs/pom/pom_analysis_20260829_roi_expansion/final_report.md",
+  "line": 12,
+  "token": "DATA_CATALOG.md",
+  "kind": "file",
+  "new": "DATA_CATALOG.md",
+  "context": "its existing, already-trusted 650\u00b3 crop per the prompt's rule. This is not a surprise in hindsight \u2014 `DATA_CATALOG.md`"
+ },
+ {
+  "file": "05_analysis_outputs/pom/pom_analysis_20260829_roi_expansion/final_report.md",
+  "line": 40,
+  "token": "DATA_CATALOG.md",
+  "kind": "file",
+  "new": "DATA_CATALOG.md",
+  "context": "confirmed\" flag from initial discovery) against `DATA_CATALOG.md` \u2014 confirmed correct."
+ },
+ {
+  "file": "05_analysis_outputs/pom/pom_analysis_20260829_roi_expansion/final_report.md",
+  "line": 172,
+  "token": "DATA_CATALOG.md",
+  "kind": "file",
+  "new": "DATA_CATALOG.md",
+  "context": "`DATA_CATALOG.md` that a separate fresh reconstruction of the same physical core failed POM recognition entirely,"
+ },
+ {
+  "file": "05_analysis_outputs/psd/psd_A2_reanalysis_20260822/A2_summary.md",
+  "line": 3,
+  "token": "PROJECT_STATUS.md",
+  "kind": "file",
+  "new": "(removed; in git history)",
+  "context": "Generated 2026-08-22. Executes the A2 follow-up flagged in `PROJECT_STATUS.md`"
+ },
+ {
+  "file": "05_analysis_outputs/README.md",
+  "line": 5,
+  "token": "DATA_CATALOG.md",
+  "kind": "file",
+  "new": "DATA_CATALOG.md",
+  "context": "Retracted specimens are excluded: the run folders and \u03c7(r) tables of `bnei_reem_samp_2_0_recropped` / `bnei_reem_samp_2_0_true_recon` were left out. Some summaries written before the retraction still "
+ },
+ {
+  "file": "05_analysis_outputs/README.md",
+  "line": 25,
+  "token": "00_docs/prompts/",
+  "kind": "dir",
+  "n_files": 23,
+  "new": null,
+  "removed": 23,
+  "example": [
+   "00_docs/prompts/bnei_reem_3d_render_followup_prompt.md",
+   "(removed; in git history)"
+  ],
+  "context": "| `Topology_Metrics_Aug2026/*.md` | `connectivity_validation_summary.md`, `connectivity_replicate_expansion_summary.md`, `crossover_radius_summary.md`, `track_e_correction_summary.md`: the Track E wri"
+ },
+ {
+  "file": "05_analysis_outputs/tortuosity/tortuosity_subvolumes_20261004/REPORT.md",
+  "line": 4,
+  "token": "05_evaluation/psd/psd_topology_metrics.py",
+  "kind": "file",
+  "new": "5_analysis/shared_code/psd_topology_metrics.py",
+  "context": "- **Function:** `tortuosity_diffusive()` in `05_evaluation/psd/psd_topology_metrics.py` (line ~402), the same one `run_psd_diagnostics.py` calls on whole volumes. It calls `porespy.simulations.tortuos"
+ },
+ {
+  "file": "05_analysis_outputs/tortuosity/tortuosity_subvolumes_20261004/REPORT.md",
+  "line": 58,
+  "token": "DATA_CATALOG.md",
+  "kind": "file",
+  "new": "DATA_CATALOG.md",
+  "context": "`tortuosity_subvolumes.csv` (336 rows, includes flow_mismatch), `convergence_summary.csv`, `tortuosity_summary.csv` (specimen- and soil-level, `basis` column: original / excluding flow mismatch / plus"
+ },
+ {
+  "file": "05_analysis_outputs/tortuosity/tortuosity_subvolumes_20261004/REPORT.md",
+  "line": 58,
+  "token": "PROJECT_STATUS.md",
+  "kind": "file",
+  "new": "(removed; in git history)",
+  "context": "`tortuosity_subvolumes.csv` (336 rows, includes flow_mismatch), `convergence_summary.csv`, `tortuosity_summary.csv` (specimen- and soil-level, `basis` column: original / excluding flow mismatch / plus"
+ },
+ {
+  "file": "06_figures/README.md",
+  "line": 3,
+  "token": "06_reporting/",
+  "kind": "dir",
+  "n_files": 158,
+  "new": null,
+  "removed": 6,
+  "example": [
+   "06_reporting/missing_data_20261004/REPORT.md",
+   "docs/missing_data_20261004_REPORT.md"
+  ],
+  "context": "Figure outputs found on the analysis workstation, copied from the repo's `06_reporting/` (since 2026-11 split across `6_figures/`, `3_training/training_plots/` and `archive/`; `archive/PATH_MAP_2026-1"
+ },
+ {
+  "file": "06_figures/README.md",
+  "line": 7,
+  "token": "README.md",
+  "kind": "file",
+  "new": "README.md",
+  "context": "| `render3d_mishmar_5p85_20261012/` | 3D renders of the Loess 5.85 \u00b5m segmentation (three styles, full view and close-up, white and transparent background), contact sheet, camera/render parameters, me"
+ },
+ {
+  "file": "06_figures/README.md",
+  "line": 8,
+  "token": "README.md",
+  "kind": "file",
+  "new": "README.md",
+  "context": "| `render3d_bnei_reem_20261013/` | same for the Vertisol \"canonical\" volume. Its README records an independent mirror check (segmentation flipped on axis 1 relative to the image, r \u22120.857), consistent"
+ },
+ {
+  "file": "06_figures/README.md",
+  "line": 13,
+  "token": "06_reporting/scripts/",
+  "kind": "dir",
+  "n_files": 25,
+  "new": null,
+  "removed": 0,
+  "example": [
+   "06_reporting/scripts/_launch_napari_mishmar_Cu011_15um_loess_i2.py",
+   "6_figures/napari_viewers/_launch_napari_mishmar_Cu011_15um_loess_i2.py"
+  ],
+  "context": "| `selected_outputs/` | slice exports (raw / segmentation / overlay triplets) for Loess and Vertisol volumes and PSD/bulk-density figure outputs | various scripts formerly in `06_reporting/scripts/` ("
+ },
+ {
+  "file": "06_figures/selected_outputs/psd_bulk_density/psd_bulk_density_report.md",
+  "line": 23,
+  "token": "01_data_ingestion/registry/data_registry.json",
+  "kind": "file",
+  "new": "1_annotation/data_registry.json",
+  "context": "Note: the project's data registry (`01_data_ingestion/registry/data_registry.json`)"
+ },
+ {
+  "file": "06_figures/selected_outputs/psd_bulk_density/psd_bulk_density_report.md",
+  "line": 29,
+  "token": "02_preprocessing/otsu_threshold_3d.py",
+  "kind": "file",
+  "new": "2_preprocessing/otsu_threshold_3d.py",
+  "context": "produced by `02_preprocessing/otsu_threshold_3d.py` (global"
+ },
+ {
+  "file": "06_figures/selected_outputs/psd_bulk_density/psd_bulk_density_report.md",
+  "line": 79,
+  "token": "05_evaluation/psd/psd_diagnostics_core.py",
+  "kind": "file",
+  "new": "5_analysis/shared_code/psd_diagnostics_core.py",
+  "context": "`05_evaluation/psd/psd_diagnostics_core.py` (`run_psd_pipeline`) directly on"
+ },
+ {
+  "file": "06_figures/selected_outputs/psd_bulk_density/psd_bulk_density_report.md",
+  "line": 175,
+  "token": "02_preprocessing/otsu_threshold_3d.py",
+  "kind": "file",
+  "new": "2_preprocessing/otsu_threshold_3d.py",
+  "context": "`02_preprocessing/otsu_threshold_3d.py` (same method/defaults:"
+ },
+ {
+  "file": "06_figures/training_diagnostics/SUMMARY.md",
+  "line": 3,
+  "token": "06_reporting/scripts/aggregate_training_diagnostics.py",
+  "kind": "file",
+  "new": "3_training/training_plots/aggregate_training_diagnostics.py",
+  "context": "Auto-generated by `06_reporting/scripts/aggregate_training_diagnostics.py`. Re-run after new training runs land on the HIVE share."
+ },
+ {
+  "file": "README.md",
+  "line": 13,
+  "token": "README.md",
+  "kind": "file",
+  "new": "README.md",
+  "context": "| `01_volumes/<specimen>/` | one folder per analysed volume: the preprocessed image the model saw, the segmentation used in the write-up, ~15 \u00b5m resolution-matched masks (Loess 5.85/8.8 \u00b5m), the Otsu "
+ },
+ {
+  "file": "README.md",
+  "line": 35,
+  "token": "DATA_CATALOG.md",
+  "kind": "file",
+  "new": "DATA_CATALOG.md",
+  "context": "VERIFIED = an inference log names the model folder and checkpoint, the file is newer than that checkpoint, and its label fractions match `DATA_CATALOG.md` (or the run record where the catalog has no v"
+ },
+ {
+  "file": "README.md",
+  "line": 39,
+  "token": "DATA_CATALOG.md",
+  "kind": "file",
+  "new": "DATA_CATALOG.md",
+  "context": "Voxel sizes come from the SkyScan logs (Vertisol, Cu011, Sand) or from `DATA_CATALOG.md` and the analysis configs (the two external Loess scans have no scan log). **All NIfTI headers say 1 \u00d7 1 \u00d7 1**: "
+ }
+]

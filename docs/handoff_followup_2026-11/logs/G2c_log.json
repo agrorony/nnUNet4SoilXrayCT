@@ -1,0 +1,59 @@
+[
+ {
+  "path": "03_models/bnei_reem_i4/README.md",
+  "edits": [
+   [
+    "02_preprocessing/nnunet/preprocessing_nnUNet_predict_split.py",
+    "2_preprocessing/nnunet_dataset/preprocessing_nnUNet_predict_split.py",
+    1
+   ]
+  ],
+  "sha256_before": "3cd39c3bcfdd063c899aa1c6c19c84d324e82fcf6d20679674a9f26d8c652990",
+  "sha256_after": "ec40105faddb48c7f3dbbdf1d7ee40ae55155ce2bc4b1e7fdecd58dfbff34a07",
+  "backup": "E:\\PROJECTS\\Yael_Mishael\\Rony\\handoff\\_pre_G2c_backup_2026-11\\03_models\\bnei_reem_i4\\README.md"
+ },
+ {
+  "path": "03_models/mishmar_loess_i2/README.md",
+  "edits": [
+   [
+    "02_preprocessing/nnunet/preprocessing_nnUNet_predict_split.py",
+    "2_preprocessing/nnunet_dataset/preprocessing_nnUNet_predict_split.py",
+    1
+   ]
+  ],
+  "sha256_before": "6a2ecb243b03ef062458bdfe14c3f0a181ee70e697652f8356939cbaa02bc13e",
+  "sha256_after": "cb967559a8705ef3952348eb79c44ba1eb0fe27d2208c8a3d27332db3b2b9423",
+  "backup": "E:\\PROJECTS\\Yael_Mishael\\Rony\\handoff\\_pre_G2c_backup_2026-11\\03_models\\mishmar_loess_i2\\README.md"
+ },
+ {
+  "path": "README.md",
+  "edits": [
+   [
+    "02_preprocessing/nnunet/preprocessing_nnUNet_predict_split.py",
+    "2_preprocessing/nnunet_dataset/preprocessing_nnUNet_predict_split.py",
+    1
+   ],
+   [
+    "`04_inference/postprocessing_nnUNet_predict_concatenate.py -i",
+    "`4_inference/postprocessing_nnUNet_predict_concatenate.py -i",
+    1
+   ]
+  ],
+  "sha256_before": "ed2703e4220a254cae34d347356c9492f10be88fa62fbc77c7524b426bdf4c02",
+  "sha256_after": "bd28c137d6e7e20ba605b08863308fd0e856108d40fb0ba6dc894dd3c6781da2",
+  "backup": "E:\\PROJECTS\\Yael_Mishael\\Rony\\handoff\\_pre_G2c_backup_2026-11\\README.md"
+ },
+ {
+  "path": "05_analysis_outputs/README.md",
+  "edits": [
+   [
+    "`05_evaluation/psd/run_psd_diagnostics.py extended`",
+    "`5_analysis/shared_code/run_psd_diagnostics.py extended`",
+    1
+   ]
+  ],
+  "sha256_before": "f43b39e7dc60f8379f6b74f3088402f58c36dcd53f7bb9aecac4eed7652d8886",
+  "sha256_after": "287b57140a5e92d7aa3161e2c96fac8ccca950f1bff95ed17a7a8d219f57ec30",
+  "backup": "E:\\PROJECTS\\Yael_Mishael\\Rony\\handoff\\_pre_G2c_backup_2026-11\\05_analysis_outputs\\README.md"
+ }
+]

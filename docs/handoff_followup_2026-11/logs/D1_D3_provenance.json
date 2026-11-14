@@ -1,0 +1,155 @@
+{
+ "cutoff": "2026-04-20",
+ "reconstructions": {
+  "E:/PROJECTS/Yael_Mishael/Rony/18.12.25 bnei_reem_samp_2.0": [
+   {
+    "folder": "E:/PROJECTS/Yael_Mishael/Rony/18.12.25 bnei_reem_samp_2.0",
+    "n_slices": 0,
+    "logs": [
+     {
+      "file": "bnei_reem_highkV_cu011_samp_2.0_rec.log",
+      "mtime": "2025-12-22 14:55:14",
+      "lines": [
+       {
+        "section": "[Acquisition]",
+        "line": "Data Directory=\\\\HIVE3065\\Yael_Mishael\\Rony\\18.12.25 bnei_reem_samp_2.0"
+       },
+       {
+        "section": "[Acquisition]",
+        "line": "Filename Prefix=bnei_reem_highkV_cu011_samp_2.0"
+       },
+       {
+        "section": "[Acquisition]",
+        "line": "Image Pixel Size (um)=15.034357"
+       },
+       {
+        "section": "[Acquisition]",
+        "line": "Study Date and Time=18 Dec 2025  15h:20m:12s"
+       },
+       {
+        "section": "[File name convention]",
+        "line": "Filename Prefix=bnei_reem_highkV_cu011_samp_2.0_rec"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "folder": "E:/PROJECTS/Yael_Mishael/Rony/18.12.25 bnei_reem_samp_2.0\\bnei_reem_highkV_cu011_samp_2.0_Rec",
+    "n_slices": 804,
+    "slice_mtime_min": "2025-12-23 09:29:57",
+    "slice_mtime_max": "2025-12-23 09:31:33",
+    "first_slice": "bnei_reem_highkV_cu011_samp_2.0_rec00000049.tif",
+    "last_slice": "bnei_reem_highkV_cu011_samp_2.0_rec00000852.tif",
+    "logs": [
+     {
+      "file": "bnei_reem_highkV_cu011_samp_2.0_rec.log",
+      "mtime": "2025-12-23 09:31:37",
+      "lines": [
+       {
+        "section": "[Acquisition]",
+        "line": "Data Directory=\\\\HIVE3065\\Yael_Mishael\\Rony\\18.12.25 bnei_reem_samp_2.0"
+       },
+       {
+        "section": "[Acquisition]",
+        "line": "Filename Prefix=bnei_reem_highkV_cu011_samp_2.0"
+       },
+       {
+        "section": "[Acquisition]",
+        "line": "Image Pixel Size (um)=15.034357"
+       },
+       {
+        "section": "[Acquisition]",
+        "line": "Study Date and Time=18 Dec 2025  15h:20m:12s"
+       },
+       {
+        "section": "[File name convention]",
+        "line": "Filename Prefix=bnei_reem_highkV_cu011_samp_2.0_rec"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "E:/PROJECTS/Yael_Mishael/Rony/18.12.25 bnei_reem_samp_2": [
+   {
+    "folder": "E:/PROJECTS/Yael_Mishael/Rony/18.12.25 bnei_reem_samp_2",
+    "n_slices": 804,
+    "slice_mtime_min": "2026-08-25 16:11:59",
+    "slice_mtime_max": "2026-08-25 16:12:49",
+    "first_slice": "bnei_reem_highkV_cu011_samp_2_rec00000049.tif",
+    "last_slice": "bnei_reem_highkV_cu011_samp_2_rec00000852.tif",
+    "logs": [
+     {
+      "file": "bnei_reem_highkV_cu011_samp_2_rec.log",
+      "mtime": "2026-08-25 16:12:52",
+      "lines": [
+       {
+        "section": "[Acquisition]",
+        "line": "Data Directory=\\\\Hive3065\\Yael_Mishael\\Rony\\18.12.25 bnei_reem_samp_2"
+       },
+       {
+        "section": "[Acquisition]",
+        "line": "Filename Prefix=bnei_reem_highkV_cu011_samp_2"
+       },
+       {
+        "section": "[Acquisition]",
+        "line": "Image Pixel Size (um)=15.000149"
+       },
+       {
+        "section": "[Acquisition]",
+        "line": "Study Date and Time=18 Dec 2025  13h:34m:02s"
+       },
+       {
+        "section": "[File name convention]",
+        "line": "Filename Prefix=bnei_reem_highkV_cu011_samp_2_rec"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "C:/Users/rony.schwartz/Desktop/new_rec": [
+   {
+    "folder": "C:/Users/rony.schwartz/Desktop/new_rec",
+    "n_slices": 804,
+    "slice_mtime_min": "2026-08-25 17:16:09",
+    "slice_mtime_max": "2026-08-25 17:18:10",
+    "first_slice": "bnei_reem_highkV_cu011_samp_2_rec00000049.tif",
+    "last_slice": "bnei_reem_highkV_cu011_samp_2_rec00000852.tif",
+    "logs": [
+     {
+      "file": "bnei_reem_highkV_cu011_samp_2_rec.log",
+      "mtime": "2026-08-25 17:18:14",
+      "lines": [
+       {
+        "section": "[Acquisition]",
+        "line": "Data Directory=\\\\Hive3065\\Yael_Mishael\\Rony\\18.12.25 bnei_reem_samp_2"
+       },
+       {
+        "section": "[Acquisition]",
+        "line": "Filename Prefix=bnei_reem_highkV_cu011_samp_2"
+       },
+       {
+        "section": "[Acquisition]",
+        "line": "Image Pixel Size (um)=15.000149"
+       },
+       {
+        "section": "[Acquisition]",
+        "line": "Study Date and Time=18 Dec 2025  13h:34m:02s"
+       },
+       {
+        "section": "[File name convention]",
+        "line": "Filename Prefix=bnei_reem_highkV_cu011_samp_2_rec"
+       }
+      ]
+     }
+    ]
+   }
+  ]
+ },
+ "older_than_cutoff": {
+  "E:/PROJECTS/Yael_Mishael/Rony/remote_computer backup/10.5": [],
+  "C:/Users/rony.schwartz/Documents/nnUNet_resources/bnei_reem": []
+ }
+}

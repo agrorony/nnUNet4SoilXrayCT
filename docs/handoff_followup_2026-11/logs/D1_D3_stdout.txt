@@ -1,0 +1,33 @@
+## E:/PROJECTS/Yael_Mishael/Rony/18.12.25 bnei_reem_samp_2.0
+  E:/PROJECTS/Yael_Mishael/Rony/18.12.25 bnei_reem_samp_2.0: 0 slices, mtime None .. None
+    bnei_reem_highkV_cu011_samp_2.0_rec.log (mtime 2025-12-22 14:55:14)
+      [Acquisition] Data Directory=\\HIVE3065\Yael_Mishael\Rony\18.12.25 bnei_reem_samp_2.0
+      [Acquisition] Filename Prefix=bnei_reem_highkV_cu011_samp_2.0
+      [Acquisition] Image Pixel Size (um)=15.034357
+      [Acquisition] Study Date and Time=18 Dec 2025  15h:20m:12s
+      [File name convention] Filename Prefix=bnei_reem_highkV_cu011_samp_2.0_rec
+  E:/PROJECTS/Yael_Mishael/Rony/18.12.25 bnei_reem_samp_2.0\bnei_reem_highkV_cu011_samp_2.0_Rec: 804 slices, mtime 2025-12-23 09:29:57 .. 2025-12-23 09:31:33
+    bnei_reem_highkV_cu011_samp_2.0_rec.log (mtime 2025-12-23 09:31:37)
+      [Acquisition] Data Directory=\\HIVE3065\Yael_Mishael\Rony\18.12.25 bnei_reem_samp_2.0
+      [Acquisition] Filename Prefix=bnei_reem_highkV_cu011_samp_2.0
+      [Acquisition] Image Pixel Size (um)=15.034357
+      [Acquisition] Study Date and Time=18 Dec 2025  15h:20m:12s
+      [File name convention] Filename Prefix=bnei_reem_highkV_cu011_samp_2.0_rec
+## E:/PROJECTS/Yael_Mishael/Rony/18.12.25 bnei_reem_samp_2
+  E:/PROJECTS/Yael_Mishael/Rony/18.12.25 bnei_reem_samp_2: 804 slices, mtime 2026-08-25 16:11:59 .. 2026-08-25 16:12:49
+    bnei_reem_highkV_cu011_samp_2_rec.log (mtime 2026-08-25 16:12:52)
+      [Acquisition] Data Directory=\\Hive3065\Yael_Mishael\Rony\18.12.25 bnei_reem_samp_2
+      [Acquisition] Filename Prefix=bnei_reem_highkV_cu011_samp_2
+      [Acquisition] Image Pixel Size (um)=15.000149
+      [Acquisition] Study Date and Time=18 Dec 2025  13h:34m:02s
+      [File name convention] Filename Prefix=bnei_reem_highkV_cu011_samp_2_rec
+## C:/Users/rony.schwartz/Desktop/new_rec
+  C:/Users/rony.schwartz/Desktop/new_rec: 804 slices, mtime 2026-08-25 17:16:09 .. 2026-08-25 17:18:10
+    bnei_reem_highkV_cu011_samp_2_rec.log (mtime 2026-08-25 17:18:14)
+      [Acquisition] Data Directory=\\Hive3065\Yael_Mishael\Rony\18.12.25 bnei_reem_samp_2
+      [Acquisition] Filename Prefix=bnei_reem_highkV_cu011_samp_2
+      [Acquisition] Image Pixel Size (um)=15.000149
+      [Acquisition] Study Date and Time=18 Dec 2025  13h:34m:02s
+      [File name convention] Filename Prefix=bnei_reem_highkV_cu011_samp_2_rec
+## older than 2026-04-20 in E:/PROJECTS/Yael_Mishael/Rony/remote_computer backup/10.5 : 0
+## older than 2026-04-20 in C:/Users/rony.schwartz/Documents/nnUNet_resources/bnei_reem : 0
