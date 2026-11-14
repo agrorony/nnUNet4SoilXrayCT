@@ -1,0 +1,11 @@
+{
+  "range": {
+    "min": 2.2301715612411503,
+    "max": 906.4473876953125
+  },
+  "repeat_bins": 239,
+  "low_count_bins": 16,
+  "spikes": 15,
+  "mode": "real",
+  "run_name": "rehovot_full_volume"
+}

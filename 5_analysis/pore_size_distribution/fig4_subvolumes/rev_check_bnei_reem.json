@@ -1,0 +1,32 @@
+[
+  {
+    "edge_voxels": 75,
+    "edge_mm": 1.125,
+    "porosity": 0.34632059259259257
+  },
+  {
+    "edge_voxels": 150,
+    "edge_mm": 2.25,
+    "porosity": 0.31459437037037036
+  },
+  {
+    "edge_voxels": 225,
+    "edge_mm": 3.375,
+    "porosity": 0.2894769163237311
+  },
+  {
+    "edge_voxels": 300,
+    "edge_mm": 4.5,
+    "porosity": 0.288655
+  },
+  {
+    "edge_voxels": 400,
+    "edge_mm": 6.0001,
+    "porosity": 0.2857875625
+  },
+  {
+    "edge_voxels": 500,
+    "edge_mm": 7.5001,
+    "porosity": 0.258139728
+  }
+]

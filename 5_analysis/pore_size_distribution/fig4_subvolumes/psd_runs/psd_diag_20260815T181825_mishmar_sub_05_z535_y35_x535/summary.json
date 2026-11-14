@@ -1,0 +1,11 @@
+{
+  "range": {
+    "min": 2.23017156124115,
+    "max": 906.4473876953124
+  },
+  "repeat_bins": 516,
+  "low_count_bins": 15,
+  "spikes": 14,
+  "mode": "real",
+  "run_name": "mishmar_sub_05_z535_y35_x535"
+}

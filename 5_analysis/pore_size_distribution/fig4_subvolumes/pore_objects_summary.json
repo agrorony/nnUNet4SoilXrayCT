@@ -1,0 +1,29 @@
+{
+  "bnei_reem": {
+    "n_objects_before_cutoff": 25279,
+    "n_objects_after_cutoff": 23423,
+    "n_excluded_lt2vox": 1856,
+    "frac_excluded": 0.07342062581589462,
+    "median_diameter_um": 59.69445784474553,
+    "mean_diameter_um": 72.35616084345756,
+    "elapsed_s": 23.95799708366394
+  },
+  "mishmar": {
+    "n_objects_before_cutoff": 56187,
+    "n_objects_after_cutoff": 52542,
+    "n_excluded_lt2vox": 3645,
+    "frac_excluded": 0.06487265737626141,
+    "median_diameter_um": 23.513428823577918,
+    "mean_diameter_um": 28.341468914417216,
+    "elapsed_s": 93.53200173377991
+  },
+  "rehovot": {
+    "n_objects_before_cutoff": 2695,
+    "n_objects_after_cutoff": 2529,
+    "n_excluded_lt2vox": 166,
+    "frac_excluded": 0.06159554730983302,
+    "median_diameter_um": 66.68236517102376,
+    "mean_diameter_um": 81.35841857789089,
+    "elapsed_s": 10.734003782272339
+  }
+}

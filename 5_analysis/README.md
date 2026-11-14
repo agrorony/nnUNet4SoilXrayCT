@@ -6,8 +6,9 @@ The input volumes are not in git; the root README says where they live. Figures 
 
 | Result | Graph | Script | Output |
 |---|---|---|---|
-| **Pore-size classes**: 30–150, 150–300 and > 300 µm shares of pore volume, 8 subvolumes per soil; ANOVA or Kruskal–Wallis depending on the assumption checks, Holm-corrected pairwise tests | 4 | Local thickness via `shared_code/run_psd_diagnostics.py` on each subvolume. Driver scripts: `pore_size_distribution/scripts/` ⚠ still being brought from the lab computer | `pore_size_distribution/class_metrics.csv`, `class_stats_results.json` (what graph 4 reads); `A2_summary.md` (method and results) |
-| Resolution check for the 5.85 µm Loess scan (downsampled to 15 µm) | text | same pipeline | `pore_size_distribution/mishmar_downsample_check/` |
+| **Pore-size classes**: 30–150, 150–300 and > 300 µm shares of pore volume, 8 subvolumes per soil; ANOVA or Kruskal–Wallis depending on the assumption checks, Holm-corrected pairwise tests | 4 | Local thickness via `shared_code/run_psd_diagnostics.py` on each subvolume. Driver scripts in `pore_size_distribution/scripts/`: `extract_subvolumes.py` → `batch_run_psd.py` → `aggregate_metrics.py` → `reaggregate_classes.py` (the classes and their tests) | `pore_size_distribution/class_metrics.csv`, `class_stats_results.json` (what graph 4 reads); `A2_summary.md` (method and results) |
+| Subvolume PSD replicates behind graph 4 (the 8 subvolumes per soil, per-subvolume PSD runs, porosity and median-diameter tests) | 4 | `pore_size_distribution/scripts/`: `extract_subvolumes.py`, `batch_run_psd.py`, `aggregate_metrics.py`, `step3c_pore_objects.py`, `run_stats.py`, `make_figure4.py` | `pore_size_distribution/fig4_subvolumes/` (`subvolume_metrics.csv`, `stats_results.json`, `stats_summary.md`, `psd_runs/*/psd_table.csv`) |
+| Resolution check for the 5.85 µm Loess scan (downsampled to 15 µm) | text | `pore_size_distribution/scripts/`: `downsample_mishmar.py`, `run_downsample_psd_batch.py`, `downsample_compare.py` | `pore_size_distribution/mishmar_downsample_check/` |
 | **Connectivity**: Euler χ, connectivity density, connection probability Γ, degree of anisotropy | 5b | `shared_code/run_psd_diagnostics.py extended` (functions in `shared_code/psd_topology_metrics.py`) | per-scan runs on the share (`Topology_Metrics_Aug2026\raw\psd_diag_*\summary.json`); all values in `connectivity/figures_data_export.md`; Rehovot samp3 in `connectivity/rehovot_samp3/` |
 | **Crossover radius r\*** from the connectivity function χ(r) | 5c | `connectivity/compute_chi_r_sweep.py` | `chi_r_*.csv` on the share (`Topology_Metrics_Aug2026\connectivity_function\`); Rehovot in `connectivity/rehovot_samp3/` |
 | Per-block variability of the same metrics (2×2×2 blocks) | — | `connectivity/compute_block_metrics.py` | written next to each run |
@@ -28,5 +29,6 @@ The input volumes are not in git; the root README says where they live. Figures 
 - `pore_size_distribution/psd_binning_recommendation.md`: why these three pore classes.
 - `pore_size_distribution/subvolume_psd_stats_summary_v1.md`: the original subvolume method and the REV check.
 - `pore_size_distribution/make_psd_plot.py`: plots one run's `psd_table.csv`.
+- `pore_size_distribution/scripts/README.md`: what each pore-size script reads and writes, and which version of `run_psd_diagnostics.py` they ran with.
 
 The POM shape clustering ("archetypes") was dropped in August 2026 as not robust. Its runs are in `archive/5_analysis/pom_clustering_retired/`. The `size_and_spatial_pattern` script still computes clusters, but only the per-object sizes and Clark–Evans R are reported.
