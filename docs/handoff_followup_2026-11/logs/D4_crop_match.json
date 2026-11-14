@@ -1,0 +1,2824 @@
+{
+ "canonical": {
+  "path": "01_volumes/bnei_reem_fresh_bnei_reem_i4/image_preprocessed.tif",
+  "shape": [
+   652,
+   650,
+   650
+  ],
+  "dtype": "float32",
+  "note": "TIFF as read by tifffile (Z, Y, X)"
+ },
+ "bnei_reem_specB_unified": {
+  "target_shape": [
+   650,
+   650,
+   650
+  ],
+  "target_dtype": "float32",
+  "best_transform": {
+   "perm": [
+    2,
+    1,
+    0
+   ],
+   "flips": [
+    false,
+    false,
+    false
+   ],
+   "flipped_axes": [],
+   "note": "canonical TIFF (Z,Y,X) -> np.transpose(perm) -> flip flipped_axes"
+  },
+  "coarse_8x": {
+   "perm": [
+    2,
+    1,
+    0
+   ],
+   "flips": [
+    false,
+    false,
+    false
+   ],
+   "flipped_axes": [],
+   "r_max": 0.9999716283117063,
+   "offset8": [
+    0,
+    0,
+    0
+   ],
+   "r_min": -0.13728767558589094,
+   "offset8_min": [
+    23,
+    -2,
+    -23
+   ]
+  },
+  "refined": {
+   "offset_full_res": [
+    0,
+    0,
+    0
+   ],
+   "r_full_res": 0.999928961156071,
+   "overlap_voxels": 274625000,
+   "trace": [
+    {
+     "factor": 4,
+     "offset_at_factor": [
+      0,
+      0,
+      0
+     ],
+     "r": 0.9999579305241767
+    },
+    {
+     "factor": 2,
+     "offset_at_factor": [
+      0,
+      0,
+      0
+     ],
+     "r": 0.9999363133995895
+    },
+    {
+     "factor": 1,
+     "offset_at_factor": [
+      0,
+      0,
+      0
+     ],
+     "r": 0.9999374967668918
+    }
+   ]
+  },
+  "second_best_transform_r8": 0.35659701110551806,
+  "max_abs_r_any_transform_any_offset_8x": 0.9999716283117063,
+  "all_transforms_8x": [
+   {
+    "perm": [
+     2,
+     1,
+     0
+    ],
+    "flips": [
+     false,
+     false,
+     false
+    ],
+    "flipped_axes": [],
+    "r_max": 0.9999716283117063,
+    "offset8": [
+     0,
+     0,
+     0
+    ],
+    "r_min": -0.13728767558589094,
+    "offset8_min": [
+     23,
+     -2,
+     -23
+    ]
+   },
+   {
+    "perm": [
+     1,
+     2,
+     0
+    ],
+    "flips": [
+     false,
+     false,
+     true
+    ],
+    "flipped_axes": [
+     2
+    ],
+    "r_max": 0.35659701110551806,
+    "offset8": [
+     7,
+     -7,
+     -4
+    ],
+    "r_min": -0.11604901562234791,
+    "offset8_min": [
+     -10,
+     19,
+     8
+    ]
+   },
+   {
+    "perm": [
+     2,
+     1,
+     0
+    ],
+    "flips": [
+     false,
+     true,
+     false
+    ],
+    "flipped_axes": [
+     1
+    ],
+    "r_max": 0.3344212587375181,
+    "offset8": [
+     0,
+     -30,
+     0
+    ],
+    "r_min": -0.07225939649371094,
+    "offset8_min": [
+     -21,
+     -11,
+     17
+    ]
+   },
+   {
+    "perm": [
+     0,
+     1,
+     2
+    ],
+    "flips": [
+     false,
+     false,
+     false
+    ],
+    "flipped_axes": [],
+    "r_max": 0.32899100383654184,
+    "offset8": [
+     -14,
+     0,
+     14
+    ],
+    "r_min": -0.13013819341401148,
+    "offset8_min": [
+     31,
+     -11,
+     -5
+    ]
+   },
+   {
+    "perm": [
+     0,
+     1,
+     2
+    ],
+    "flips": [
+     false,
+     true,
+     false
+    ],
+    "flipped_axes": [
+     1
+    ],
+    "r_max": 0.32391383577030125,
+    "offset8": [
+     -8,
+     -30,
+     9
+    ],
+    "r_min": -0.09819198550762835,
+    "offset8_min": [
+     11,
+     5,
+     31
+    ]
+   },
+   {
+    "perm": [
+     2,
+     0,
+     1
+    ],
+    "flips": [
+     false,
+     true,
+     true
+    ],
+    "flipped_axes": [
+     1,
+     2
+    ],
+    "r_max": 0.3109652190741734,
+    "offset8": [
+     0,
+     -20,
+     -20
+    ],
+    "r_min": -0.1299598683267085,
+    "offset8_min": [
+     10,
+     10,
+     28
+    ]
+   },
+   {
+    "perm": [
+     0,
+     1,
+     2
+    ],
+    "flips": [
+     true,
+     false,
+     true
+    ],
+    "flipped_axes": [
+     0,
+     2
+    ],
+    "r_max": 0.30631732242993515,
+    "offset8": [
+     -24,
+     0,
+     -23
+    ],
+    "r_min": -0.1483334995269454,
+    "offset8_min": [
+     3,
+     3,
+     -37
+    ]
+   },
+   {
+    "perm": [
+     2,
+     0,
+     1
+    ],
+    "flips": [
+     false,
+     false,
+     false
+    ],
+    "flipped_axes": [],
+    "r_max": 0.2946582898540254,
+    "offset8": [
+     0,
+     -24,
+     23
+    ],
+    "r_min": -0.1373880292374721,
+    "offset8_min": [
+     14,
+     -26,
+     -8
+    ]
+   },
+   {
+    "perm": [
+     1,
+     2,
+     0
+    ],
+    "flips": [
+     true,
+     true,
+     false
+    ],
+    "flipped_axes": [
+     0,
+     1
+    ],
+    "r_max": 0.29320948729117435,
+    "offset8": [
+     -24,
+     -23,
+     0
+    ],
+    "r_min": -0.13612588134141862,
+    "offset8_min": [
+     -26,
+     -3,
+     19
+    ]
+   },
+   {
+    "perm": [
+     0,
+     2,
+     1
+    ],
+    "flips": [
+     true,
+     false,
+     false
+    ],
+    "flipped_axes": [
+     0
+    ],
+    "r_max": 0.2869940626925157,
+    "offset8": [
+     -2,
+     -15,
+     30
+    ],
+    "r_min": -0.15148651888692197,
+    "offset8_min": [
+     8,
+     17,
+     -24
+    ]
+   },
+   {
+    "perm": [
+     1,
+     0,
+     2
+    ],
+    "flips": [
+     false,
+     false,
+     true
+    ],
+    "flipped_axes": [
+     2
+    ],
+    "r_max": 0.28694680069176726,
+    "offset8": [
+     15,
+     -30,
+     -2
+    ],
+    "r_min": -0.15252215664086405,
+    "offset8_min": [
+     -16,
+     24,
+     9
+    ]
+   },
+   {
+    "perm": [
+     2,
+     0,
+     1
+    ],
+    "flips": [
+     true,
+     false,
+     false
+    ],
+    "flipped_axes": [
+     0
+    ],
+    "r_max": 0.28277995383680443,
+    "offset8": [
+     -29,
+     -9,
+     10
+    ],
+    "r_min": -0.09462734715847647,
+    "offset8_min": [
+     -7,
+     15,
+     -15
+    ]
+   },
+   {
+    "perm": [
+     1,
+     0,
+     2
+    ],
+    "flips": [
+     false,
+     true,
+     false
+    ],
+    "flipped_axes": [
+     1
+    ],
+    "r_max": 0.271875284952685,
+    "offset8": [
+     -1,
+     -29,
+     17
+    ],
+    "r_min": -0.12831358592807102,
+    "offset8_min": [
+     24,
+     -12,
+     -13
+    ]
+   },
+   {
+    "perm": [
+     0,
+     2,
+     1
+    ],
+    "flips": [
+     false,
+     false,
+     true
+    ],
+    "flipped_axes": [
+     2
+    ],
+    "r_max": 0.2713801891449542,
+    "offset8": [
+     -19,
+     0,
+     -28
+    ],
+    "r_min": -0.1292993649246416,
+    "offset8_min": [
+     13,
+     -24,
+     -12
+    ]
+   },
+   {
+    "perm": [
+     1,
+     0,
+     2
+    ],
+    "flips": [
+     true,
+     false,
+     true
+    ],
+    "flipped_axes": [
+     0,
+     2
+    ],
+    "r_max": 0.26379818866570415,
+    "offset8": [
+     -25,
+     -5,
+     -18
+    ],
+    "r_min": -0.14435887804397324,
+    "offset8_min": [
+     -36,
+     8,
+     0
+    ]
+   },
+   {
+    "perm": [
+     0,
+     2,
+     1
+    ],
+    "flips": [
+     true,
+     true,
+     false
+    ],
+    "flipped_axes": [
+     0,
+     1
+    ],
+    "r_max": 0.2637486199749216,
+    "offset8": [
+     -19,
+     -24,
+     5
+    ],
+    "r_min": -0.14482203901790847,
+    "offset8_min": [
+     0,
+     -36,
+     -8
+    ]
+   },
+   {
+    "perm": [
+     2,
+     0,
+     1
+    ],
+    "flips": [
+     true,
+     true,
+     true
+    ],
+    "flipped_axes": [
+     0,
+     1,
+     2
+    ],
+    "r_max": 0.24468418759512647,
+    "offset8": [
+     -16,
+     -17,
+     -17
+    ],
+    "r_min": -0.14242529670463797,
+    "offset8_min": [
+     -36,
+     2,
+     -6
+    ]
+   },
+   {
+    "perm": [
+     0,
+     2,
+     1
+    ],
+    "flips": [
+     false,
+     true,
+     true
+    ],
+    "flipped_axes": [
+     1,
+     2
+    ],
+    "r_max": 0.2307176428195626,
+    "offset8": [
+     -2,
+     -32,
+     -12
+    ],
+    "r_min": -0.12963395650719584,
+    "offset8_min": [
+     19,
+     14,
+     -17
+    ]
+   },
+   {
+    "perm": [
+     1,
+     0,
+     2
+    ],
+    "flips": [
+     true,
+     true,
+     false
+    ],
+    "flipped_axes": [
+     0,
+     1
+    ],
+    "r_max": 0.22855663100781531,
+    "offset8": [
+     -32,
+     -12,
+     2
+    ],
+    "r_min": -0.12938045241891571,
+    "offset8_min": [
+     14,
+     -17,
+     -19
+    ]
+   },
+   {
+    "perm": [
+     1,
+     2,
+     0
+    ],
+    "flips": [
+     false,
+     false,
+     false
+    ],
+    "flipped_axes": [],
+    "r_max": 0.227157552905766,
+    "offset8": [
+     -18,
+     18,
+     0
+    ],
+    "r_min": -0.10346353052705792,
+    "offset8_min": [
+     -7,
+     -33,
+     6
+    ]
+   },
+   {
+    "perm": [
+     0,
+     1,
+     2
+    ],
+    "flips": [
+     true,
+     true,
+     true
+    ],
+    "flipped_axes": [
+     0,
+     1,
+     2
+    ],
+    "r_max": 0.22664309358970383,
+    "offset8": [
+     -8,
+     -31,
+     -8
+    ],
+    "r_min": -0.14189388874099904,
+    "offset8_min": [
+     -21,
+     8,
+     -20
+    ]
+   },
+   {
+    "perm": [
+     2,
+     1,
+     0
+    ],
+    "flips": [
+     true,
+     false,
+     true
+    ],
+    "flipped_axes": [
+     0,
+     2
+    ],
+    "r_max": 0.22015737381641237,
+    "offset8": [
+     -30,
+     0,
+     -16
+    ],
+    "r_min": -0.15033085674333913,
+    "offset8_min": [
+     9,
+     4,
+     -33
+    ]
+   },
+   {
+    "perm": [
+     2,
+     1,
+     0
+    ],
+    "flips": [
+     false,
+     false,
+     true
+    ],
+    "flipped_axes": [
+     2
+    ],
+    "r_max": 0.21733522571337188,
+    "offset8": [
+     0,
+     0,
+     -40
+    ],
+    "r_min": -0.07366097931581435,
+    "offset8_min": [
+     -28,
+     -15,
+     -5
+    ]
+   },
+   {
+    "perm": [
+     1,
+     0,
+     2
+    ],
+    "flips": [
+     false,
+     false,
+     false
+    ],
+    "flipped_axes": [],
+    "r_max": 0.21365741215989845,
+    "offset8": [
+     -17,
+     -6,
+     -5
+    ],
+    "r_min": -0.10159457319784887,
+    "offset8_min": [
+     24,
+     3,
+     -7
+    ]
+   },
+   {
+    "perm": [
+     0,
+     2,
+     1
+    ],
+    "flips": [
+     false,
+     false,
+     false
+    ],
+    "flipped_axes": [],
+    "r_max": 0.21365298981371322,
+    "offset8": [
+     5,
+     17,
+     6
+    ],
+    "r_min": -0.10118389511134006,
+    "offset8_min": [
+     7,
+     -24,
+     -3
+    ]
+   },
+   {
+    "perm": [
+     2,
+     1,
+     0
+    ],
+    "flips": [
+     true,
+     true,
+     true
+    ],
+    "flipped_axes": [
+     0,
+     1,
+     2
+    ],
+    "r_max": 0.2113309339223362,
+    "offset8": [
+     -14,
+     -32,
+     0
+    ],
+    "r_min": -0.18804833994592257,
+    "offset8_min": [
+     21,
+     3,
+     24
+    ]
+   },
+   {
+    "perm": [
+     1,
+     2,
+     0
+    ],
+    "flips": [
+     true,
+     false,
+     false
+    ],
+    "flipped_axes": [
+     0
+    ],
+    "r_max": 0.2107366118408611,
+    "offset8": [
+     -36,
+     3,
+     -5
+    ],
+    "r_min": -0.11410675106776265,
+    "offset8_min": [
+     14,
+     9,
+     -23
+    ]
+   },
+   {
+    "perm": [
+     1,
+     2,
+     0
+    ],
+    "flips": [
+     false,
+     true,
+     false
+    ],
+    "flipped_axes": [
+     1
+    ],
+    "r_max": 0.2099523608122928,
+    "offset8": [
+     -3,
+     -36,
+     5
+    ],
+    "r_min": -0.11408483096844271,
+    "offset8_min": [
+     -9,
+     14,
+     23
+    ]
+   },
+   {
+    "perm": [
+     1,
+     2,
+     0
+    ],
+    "flips": [
+     false,
+     true,
+     true
+    ],
+    "flipped_axes": [
+     1,
+     2
+    ],
+    "r_max": 0.20873323743103278,
+    "offset8": [
+     -4,
+     -25,
+     -19
+    ],
+    "r_min": -0.1116475858413089,
+    "offset8_min": [
+     -9,
+     6,
+     -31
+    ]
+   },
+   {
+    "perm": [
+     1,
+     2,
+     0
+    ],
+    "flips": [
+     true,
+     false,
+     true
+    ],
+    "flipped_axes": [
+     0,
+     2
+    ],
+    "r_max": 0.2070361482814431,
+    "offset8": [
+     -25,
+     4,
+     -19
+    ],
+    "r_min": -0.11289025544002881,
+    "offset8_min": [
+     6,
+     9,
+     -31
+    ]
+   },
+   {
+    "perm": [
+     2,
+     1,
+     0
+    ],
+    "flips": [
+     true,
+     false,
+     false
+    ],
+    "flipped_axes": [
+     0
+    ],
+    "r_max": 0.19566328057186336,
+    "offset8": [
+     -40,
+     0,
+     0
+    ],
+    "r_min": -0.11104618564187754,
+    "offset8_min": [
+     18,
+     -5,
+     25
+    ]
+   },
+   {
+    "perm": [
+     2,
+     0,
+     1
+    ],
+    "flips": [
+     false,
+     true,
+     false
+    ],
+    "flipped_axes": [
+     1
+    ],
+    "r_max": 0.18940419621255078,
+    "offset8": [
+     6,
+     -36,
+     0
+    ],
+    "r_min": -0.09439690963602318,
+    "offset8_min": [
+     22,
+     5,
+     16
+    ]
+   },
+   {
+    "perm": [
+     2,
+     0,
+     1
+    ],
+    "flips": [
+     false,
+     false,
+     true
+    ],
+    "flipped_axes": [
+     2
+    ],
+    "r_max": 0.18874784642425813,
+    "offset8": [
+     -6,
+     0,
+     -36
+    ],
+    "r_min": -0.09450707738887126,
+    "offset8_min": [
+     -22,
+     -16,
+     5
+    ]
+   },
+   {
+    "perm": [
+     1,
+     0,
+     2
+    ],
+    "flips": [
+     true,
+     false,
+     false
+    ],
+    "flipped_axes": [
+     0
+    ],
+    "r_max": 0.16304984896443359,
+    "offset8": [
+     -38,
+     -1,
+     -3
+    ],
+    "r_min": -0.10575048726136835,
+    "offset8_min": [
+     8,
+     -21,
+     20
+    ]
+   },
+   {
+    "perm": [
+     0,
+     2,
+     1
+    ],
+    "flips": [
+     false,
+     true,
+     false
+    ],
+    "flipped_axes": [
+     1
+    ],
+    "r_max": 0.16256311975850193,
+    "offset8": [
+     3,
+     -38,
+     1
+    ],
+    "r_min": -0.10578885157883615,
+    "offset8_min": [
+     -20,
+     8,
+     21
+    ]
+   },
+   {
+    "perm": [
+     1,
+     0,
+     2
+    ],
+    "flips": [
+     false,
+     true,
+     true
+    ],
+    "flipped_axes": [
+     1,
+     2
+    ],
+    "r_max": 0.15844004516074808,
+    "offset8": [
+     -7,
+     -9,
+     -31
+    ],
+    "r_min": -0.13920253882303904,
+    "offset8_min": [
+     -17,
+     -27,
+     4
+    ]
+   },
+   {
+    "perm": [
+     0,
+     2,
+     1
+    ],
+    "flips": [
+     true,
+     false,
+     true
+    ],
+    "flipped_axes": [
+     0,
+     2
+    ],
+    "r_max": 0.15668900944183398,
+    "offset8": [
+     -31,
+     7,
+     -9
+    ],
+    "r_min": -0.14066935031336644,
+    "offset8_min": [
+     4,
+     17,
+     -27
+    ]
+   },
+   {
+    "perm": [
+     2,
+     1,
+     0
+    ],
+    "flips": [
+     false,
+     true,
+     true
+    ],
+    "flipped_axes": [
+     1,
+     2
+    ],
+    "r_max": 0.150892789048311,
+    "offset8": [
+     0,
+     -38,
+     4
+    ],
+    "r_min": -0.1296350896637779,
+    "offset8_min": [
+     0,
+     37,
+     6
+    ]
+   },
+   {
+    "perm": [
+     2,
+     0,
+     1
+    ],
+    "flips": [
+     true,
+     false,
+     true
+    ],
+    "flipped_axes": [
+     0,
+     2
+    ],
+    "r_max": 0.14864906446226805,
+    "offset8": [
+     -31,
+     -5,
+     -11
+    ],
+    "r_min": -0.13104338983140343,
+    "offset8_min": [
+     -7,
+     4,
+     -34
+    ]
+   },
+   {
+    "perm": [
+     2,
+     0,
+     1
+    ],
+    "flips": [
+     true,
+     true,
+     false
+    ],
+    "flipped_axes": [
+     0,
+     1
+    ],
+    "r_max": 0.147523151705981,
+    "offset8": [
+     -30,
+     -12,
+     5
+    ],
+    "r_min": -0.13086557376846292,
+    "offset8_min": [
+     -7,
+     -34,
+     -4
+    ]
+   },
+   {
+    "perm": [
+     0,
+     1,
+     2
+    ],
+    "flips": [
+     false,
+     false,
+     true
+    ],
+    "flipped_axes": [
+     2
+    ],
+    "r_max": 0.14595691058986926,
+    "offset8": [
+     5,
+     -34,
+     5
+    ],
+    "r_min": -0.11356353273694901,
+    "offset8_min": [
+     21,
+     -7,
+     21
+    ]
+   },
+   {
+    "perm": [
+     0,
+     1,
+     2
+    ],
+    "flips": [
+     true,
+     false,
+     false
+    ],
+    "flipped_axes": [
+     0
+    ],
+    "r_max": 0.14511521273739786,
+    "offset8": [
+     5,
+     34,
+     -6
+    ],
+    "r_min": -0.11402786325484249,
+    "offset8_min": [
+     21,
+     7,
+     -21
+    ]
+   },
+   {
+    "perm": [
+     2,
+     1,
+     0
+    ],
+    "flips": [
+     true,
+     true,
+     false
+    ],
+    "flipped_axes": [
+     0,
+     1
+    ],
+    "r_max": 0.09997920306148447,
+    "offset8": [
+     0,
+     3,
+     -9
+    ],
+    "r_min": -0.13572709515697076,
+    "offset8_min": [
+     27,
+     12,
+     -1
+    ]
+   },
+   {
+    "perm": [
+     0,
+     2,
+     1
+    ],
+    "flips": [
+     true,
+     true,
+     true
+    ],
+    "flipped_axes": [
+     0,
+     1,
+     2
+    ],
+    "r_max": 0.09626499583488142,
+    "offset8": [
+     -3,
+     -11,
+     -32
+    ],
+    "r_min": -0.13584022169833534,
+    "offset8_min": [
+     19,
+     14,
+     13
+    ]
+   },
+   {
+    "perm": [
+     1,
+     0,
+     2
+    ],
+    "flips": [
+     true,
+     true,
+     true
+    ],
+    "flipped_axes": [
+     0,
+     1,
+     2
+    ],
+    "r_max": 0.09507630978859061,
+    "offset8": [
+     -30,
+     -13,
+     -4
+    ],
+    "r_min": -0.13469602029893096,
+    "offset8_min": [
+     13,
+     13,
+     19
+    ]
+   },
+   {
+    "perm": [
+     0,
+     1,
+     2
+    ],
+    "flips": [
+     false,
+     true,
+     true
+    ],
+    "flipped_axes": [
+     1,
+     2
+    ],
+    "r_max": 0.09289808497850567,
+    "offset8": [
+     0,
+     -8,
+     -36
+    ],
+    "r_min": -0.1046363881228518,
+    "offset8_min": [
+     -28,
+     11,
+     9
+    ]
+   },
+   {
+    "perm": [
+     0,
+     1,
+     2
+    ],
+    "flips": [
+     true,
+     true,
+     false
+    ],
+    "flipped_axes": [
+     0,
+     1
+    ],
+    "r_max": 0.09157384930625123,
+    "offset8": [
+     -36,
+     -8,
+     0
+    ],
+    "r_min": -0.10589459734428097,
+    "offset8_min": [
+     8,
+     12,
+     28
+    ]
+   },
+   {
+    "perm": [
+     1,
+     2,
+     0
+    ],
+    "flips": [
+     true,
+     true,
+     true
+    ],
+    "flipped_axes": [
+     0,
+     1,
+     2
+    ],
+    "r_max": 0.08318120965036825,
+    "offset8": [
+     -6,
+     -5,
+     34
+    ],
+    "r_min": -0.14612435621190292,
+    "offset8_min": [
+     15,
+     15,
+     16
+    ]
+   }
+  ]
+ },
+ "bnei_reem_specA_unified": {
+  "target_shape": [
+   650,
+   650,
+   650
+  ],
+  "target_dtype": "float32",
+  "best_transform": {
+   "perm": [
+    1,
+    2,
+    0
+   ],
+   "flips": [
+    true,
+    false,
+    true
+   ],
+   "flipped_axes": [
+    0,
+    2
+   ],
+   "note": "canonical TIFF (Z,Y,X) -> np.transpose(perm) -> flip flipped_axes"
+  },
+  "coarse_8x": {
+   "perm": [
+    1,
+    2,
+    0
+   ],
+   "flips": [
+    true,
+    false,
+    true
+   ],
+   "flipped_axes": [
+    0,
+    2
+   ],
+   "r_max": 0.17044741360792606,
+   "offset8": [
+    7,
+    18,
+    24
+   ],
+   "r_min": -0.07105392017146697,
+   "offset8_min": [
+    19,
+    -7,
+    -23
+   ]
+  },
+  "refined": {
+   "offset_full_res": [
+    69,
+    155,
+    206
+   ],
+   "r_full_res": 0.14030784977148902,
+   "overlap_voxels": 127692180,
+   "trace": [
+    {
+     "factor": 4,
+     "offset_at_factor": [
+      16,
+      38,
+      50
+     ],
+     "r": 0.15000219392736683
+    },
+    {
+     "factor": 2,
+     "offset_at_factor": [
+      34,
+      78,
+      102
+     ],
+     "r": 0.14287168714557041
+    },
+    {
+     "factor": 1,
+     "offset_at_factor": [
+      69,
+      155,
+      206
+     ],
+     "r": 0.14049001879326561
+    }
+   ]
+  },
+  "second_best_transform_r8": 0.15487696385357896,
+  "max_abs_r_any_transform_any_offset_8x": 0.17044741360792606,
+  "all_transforms_8x": [
+   {
+    "perm": [
+     1,
+     2,
+     0
+    ],
+    "flips": [
+     true,
+     false,
+     true
+    ],
+    "flipped_axes": [
+     0,
+     2
+    ],
+    "r_max": 0.17044741360792606,
+    "offset8": [
+     7,
+     18,
+     24
+    ],
+    "r_min": -0.07105392017146697,
+    "offset8_min": [
+     19,
+     -7,
+     -23
+    ]
+   },
+   {
+    "perm": [
+     2,
+     0,
+     1
+    ],
+    "flips": [
+     true,
+     true,
+     true
+    ],
+    "flipped_axes": [
+     0,
+     1,
+     2
+    ],
+    "r_max": 0.15487696385357896,
+    "offset8": [
+     28,
+     16,
+     3
+    ],
+    "r_min": -0.10209691344859989,
+    "offset8_min": [
+     7,
+     33,
+     6
+    ]
+   },
+   {
+    "perm": [
+     1,
+     2,
+     0
+    ],
+    "flips": [
+     true,
+     true,
+     false
+    ],
+    "flipped_axes": [
+     0,
+     1
+    ],
+    "r_max": 0.15457704591066163,
+    "offset8": [
+     18,
+     -5,
+     25
+    ],
+    "r_min": -0.08829891242270144,
+    "offset8_min": [
+     0,
+     39,
+     0
+    ]
+   },
+   {
+    "perm": [
+     1,
+     0,
+     2
+    ],
+    "flips": [
+     true,
+     false,
+     true
+    ],
+    "flipped_axes": [
+     0,
+     2
+    ],
+    "r_max": 0.1496600415611797,
+    "offset8": [
+     15,
+     7,
+     10
+    ],
+    "r_min": -0.08118323902945547,
+    "offset8_min": [
+     14,
+     -16,
+     -16
+    ]
+   },
+   {
+    "perm": [
+     2,
+     1,
+     0
+    ],
+    "flips": [
+     true,
+     true,
+     false
+    ],
+    "flipped_axes": [
+     0,
+     1
+    ],
+    "r_max": 0.1318652590112823,
+    "offset8": [
+     11,
+     0,
+     34
+    ],
+    "r_min": -0.06499046581698552,
+    "offset8_min": [
+     -3,
+     -23,
+     22
+    ]
+   },
+   {
+    "perm": [
+     0,
+     2,
+     1
+    ],
+    "flips": [
+     true,
+     true,
+     true
+    ],
+    "flipped_axes": [
+     0,
+     1,
+     2
+    ],
+    "r_max": 0.12970183235948152,
+    "offset8": [
+     34,
+     -1,
+     10
+    ],
+    "r_min": -0.08027738063481944,
+    "offset8_min": [
+     18,
+     18,
+     10
+    ]
+   },
+   {
+    "perm": [
+     1,
+     0,
+     2
+    ],
+    "flips": [
+     true,
+     true,
+     false
+    ],
+    "flipped_axes": [
+     0,
+     1
+    ],
+    "r_max": 0.12772916117387056,
+    "offset8": [
+     12,
+     15,
+     22
+    ],
+    "r_min": -0.0820154125793777,
+    "offset8_min": [
+     8,
+     -26,
+     10
+    ]
+   },
+   {
+    "perm": [
+     1,
+     2,
+     0
+    ],
+    "flips": [
+     false,
+     false,
+     false
+    ],
+    "flipped_axes": [],
+    "r_max": 0.12040737131464835,
+    "offset8": [
+     -19,
+     -4,
+     24
+    ],
+    "r_min": -0.07263048902529506,
+    "offset8_min": [
+     0,
+     -8,
+     -36
+    ]
+   },
+   {
+    "perm": [
+     2,
+     1,
+     0
+    ],
+    "flips": [
+     true,
+     true,
+     true
+    ],
+    "flipped_axes": [
+     0,
+     1,
+     2
+    ],
+    "r_max": 0.1140887595596994,
+    "offset8": [
+     29,
+     -4,
+     14
+    ],
+    "r_min": -0.09847232371776107,
+    "offset8_min": [
+     8,
+     21,
+     20
+    ]
+   },
+   {
+    "perm": [
+     0,
+     1,
+     2
+    ],
+    "flips": [
+     false,
+     true,
+     true
+    ],
+    "flipped_axes": [
+     1,
+     2
+    ],
+    "r_max": 0.11381393984292978,
+    "offset8": [
+     38,
+     -1,
+     3
+    ],
+    "r_min": -0.09901477936825832,
+    "offset8_min": [
+     25,
+     15,
+     9
+    ]
+   },
+   {
+    "perm": [
+     0,
+     1,
+     2
+    ],
+    "flips": [
+     true,
+     false,
+     false
+    ],
+    "flipped_axes": [
+     0
+    ],
+    "r_max": 0.11241496088700736,
+    "offset8": [
+     6,
+     -1,
+     -14
+    ],
+    "r_min": -0.06689651966053389,
+    "offset8_min": [
+     8,
+     24,
+     -17
+    ]
+   },
+   {
+    "perm": [
+     2,
+     1,
+     0
+    ],
+    "flips": [
+     true,
+     false,
+     true
+    ],
+    "flipped_axes": [
+     0,
+     2
+    ],
+    "r_max": 0.11188255701566228,
+    "offset8": [
+     11,
+     29,
+     -7
+    ],
+    "r_min": -0.06730923189790074,
+    "offset8_min": [
+     -3,
+     -19,
+     -16
+    ]
+   },
+   {
+    "perm": [
+     1,
+     0,
+     2
+    ],
+    "flips": [
+     false,
+     false,
+     false
+    ],
+    "flipped_axes": [],
+    "r_max": 0.10819819380793068,
+    "offset8": [
+     -17,
+     -29,
+     -1
+    ],
+    "r_min": -0.0652283518339125,
+    "offset8_min": [
+     6,
+     -8,
+     -19
+    ]
+   },
+   {
+    "perm": [
+     0,
+     1,
+     2
+    ],
+    "flips": [
+     true,
+     true,
+     true
+    ],
+    "flipped_axes": [
+     0,
+     1,
+     2
+    ],
+    "r_max": 0.10641098665019105,
+    "offset8": [
+     33,
+     -3,
+     -6
+    ],
+    "r_min": -0.09512804377921154,
+    "offset8_min": [
+     -18,
+     24,
+     6
+    ]
+   },
+   {
+    "perm": [
+     1,
+     2,
+     0
+    ],
+    "flips": [
+     true,
+     true,
+     true
+    ],
+    "flipped_axes": [
+     0,
+     1,
+     2
+    ],
+    "r_max": 0.10192518409515645,
+    "offset8": [
+     18,
+     -11,
+     -20
+    ],
+    "r_min": -0.07820362678759907,
+    "offset8_min": [
+     -5,
+     -28,
+     15
+    ]
+   },
+   {
+    "perm": [
+     0,
+     1,
+     2
+    ],
+    "flips": [
+     false,
+     false,
+     false
+    ],
+    "flipped_axes": [],
+    "r_max": 0.10009936009943877,
+    "offset8": [
+     -22,
+     -20,
+     7
+    ],
+    "r_min": -0.07033246015429154,
+    "offset8_min": [
+     15,
+     -3,
+     2
+    ]
+   },
+   {
+    "perm": [
+     0,
+     1,
+     2
+    ],
+    "flips": [
+     false,
+     false,
+     true
+    ],
+    "flipped_axes": [
+     2
+    ],
+    "r_max": 0.10000516917360305,
+    "offset8": [
+     -29,
+     -9,
+     -10
+    ],
+    "r_min": -0.08525119754797451,
+    "offset8_min": [
+     24,
+     -14,
+     -11
+    ]
+   },
+   {
+    "perm": [
+     1,
+     0,
+     2
+    ],
+    "flips": [
+     true,
+     false,
+     false
+    ],
+    "flipped_axes": [
+     0
+    ],
+    "r_max": 0.0993363004477577,
+    "offset8": [
+     16,
+     13,
+     9
+    ],
+    "r_min": -0.06034540497718345,
+    "offset8_min": [
+     -6,
+     -31,
+     10
+    ]
+   },
+   {
+    "perm": [
+     2,
+     0,
+     1
+    ],
+    "flips": [
+     true,
+     false,
+     false
+    ],
+    "flipped_axes": [
+     0
+    ],
+    "r_max": 0.09806761290379029,
+    "offset8": [
+     17,
+     18,
+     15
+    ],
+    "r_min": -0.09189969036220844,
+    "offset8_min": [
+     6,
+     -20,
+     13
+    ]
+   },
+   {
+    "perm": [
+     1,
+     2,
+     0
+    ],
+    "flips": [
+     true,
+     false,
+     false
+    ],
+    "flipped_axes": [
+     0
+    ],
+    "r_max": 0.09540997822799134,
+    "offset8": [
+     7,
+     18,
+     -12
+    ],
+    "r_min": -0.07674091816199201,
+    "offset8_min": [
+     7,
+     -28,
+     -12
+    ]
+   },
+   {
+    "perm": [
+     0,
+     2,
+     1
+    ],
+    "flips": [
+     true,
+     true,
+     false
+    ],
+    "flipped_axes": [
+     0,
+     1
+    ],
+    "r_max": 0.09532489726513795,
+    "offset8": [
+     26,
+     -3,
+     19
+    ],
+    "r_min": -0.06032855573506175,
+    "offset8_min": [
+     0,
+     8,
+     36
+    ]
+   },
+   {
+    "perm": [
+     2,
+     0,
+     1
+    ],
+    "flips": [
+     true,
+     false,
+     true
+    ],
+    "flipped_axes": [
+     0,
+     2
+    ],
+    "r_max": 0.09518719682758393,
+    "offset8": [
+     28,
+     5,
+     13
+    ],
+    "r_min": -0.07529397588181141,
+    "offset8_min": [
+     4,
+     -27,
+     -6
+    ]
+   },
+   {
+    "perm": [
+     0,
+     1,
+     2
+    ],
+    "flips": [
+     true,
+     false,
+     true
+    ],
+    "flipped_axes": [
+     0,
+     2
+    ],
+    "r_max": 0.09447776755870683,
+    "offset8": [
+     19,
+     22,
+     8
+    ],
+    "r_min": -0.07541456767744681,
+    "offset8_min": [
+     14,
+     -19,
+     -17
+    ]
+   },
+   {
+    "perm": [
+     2,
+     1,
+     0
+    ],
+    "flips": [
+     false,
+     false,
+     true
+    ],
+    "flipped_axes": [
+     2
+    ],
+    "r_max": 0.09428761192836477,
+    "offset8": [
+     -21,
+     -2,
+     14
+    ],
+    "r_min": -0.07091134843252359,
+    "offset8_min": [
+     36,
+     -3,
+     5
+    ]
+   },
+   {
+    "perm": [
+     2,
+     1,
+     0
+    ],
+    "flips": [
+     false,
+     false,
+     false
+    ],
+    "flipped_axes": [],
+    "r_max": 0.09415614968486982,
+    "offset8": [
+     -12,
+     -28,
+     -5
+    ],
+    "r_min": -0.06131480890102543,
+    "offset8_min": [
+     29,
+     9,
+     -10
+    ]
+   },
+   {
+    "perm": [
+     0,
+     1,
+     2
+    ],
+    "flips": [
+     false,
+     true,
+     false
+    ],
+    "flipped_axes": [
+     1
+    ],
+    "r_max": 0.09402119220097614,
+    "offset8": [
+     28,
+     0,
+     19
+    ],
+    "r_min": -0.06949330192288398,
+    "offset8_min": [
+     -24,
+     20,
+     3
+    ]
+   },
+   {
+    "perm": [
+     1,
+     0,
+     2
+    ],
+    "flips": [
+     true,
+     true,
+     true
+    ],
+    "flipped_axes": [
+     0,
+     1,
+     2
+    ],
+    "r_max": 0.09192012825516846,
+    "offset8": [
+     30,
+     -3,
+     -14
+    ],
+    "r_min": -0.08260143559970284,
+    "offset8_min": [
+     -5,
+     1,
+     0
+    ]
+   },
+   {
+    "perm": [
+     0,
+     2,
+     1
+    ],
+    "flips": [
+     false,
+     false,
+     false
+    ],
+    "flipped_axes": [],
+    "r_max": 0.08963512962549995,
+    "offset8": [
+     -22,
+     -20,
+     3
+    ],
+    "r_min": -0.06637827920282934,
+    "offset8_min": [
+     19,
+     -16,
+     15
+    ]
+   },
+   {
+    "perm": [
+     0,
+     2,
+     1
+    ],
+    "flips": [
+     false,
+     true,
+     true
+    ],
+    "flipped_axes": [
+     1,
+     2
+    ],
+    "r_max": 0.08957392582234368,
+    "offset8": [
+     30,
+     3,
+     -14
+    ],
+    "r_min": -0.08959463194353114,
+    "offset8_min": [
+     6,
+     -11,
+     -30
+    ]
+   },
+   {
+    "perm": [
+     0,
+     2,
+     1
+    ],
+    "flips": [
+     false,
+     false,
+     true
+    ],
+    "flipped_axes": [
+     2
+    ],
+    "r_max": 0.08475947041888866,
+    "offset8": [
+     23,
+     20,
+     -5
+    ],
+    "r_min": -0.08547061408203442,
+    "offset8_min": [
+     26,
+     -10,
+     -12
+    ]
+   },
+   {
+    "perm": [
+     2,
+     0,
+     1
+    ],
+    "flips": [
+     true,
+     true,
+     false
+    ],
+    "flipped_axes": [
+     0,
+     1
+    ],
+    "r_max": 0.08458050971569314,
+    "offset8": [
+     16,
+     -20,
+     -12
+    ],
+    "r_min": -0.06079675454166808,
+    "offset8_min": [
+     -32,
+     -11,
+     -3
+    ]
+   },
+   {
+    "perm": [
+     0,
+     1,
+     2
+    ],
+    "flips": [
+     true,
+     true,
+     false
+    ],
+    "flipped_axes": [
+     0,
+     1
+    ],
+    "r_max": 0.08416292024169594,
+    "offset8": [
+     32,
+     3,
+     -11
+    ],
+    "r_min": -0.08055341045461387,
+    "offset8_min": [
+     6,
+     -15,
+     27
+    ]
+   },
+   {
+    "perm": [
+     1,
+     0,
+     2
+    ],
+    "flips": [
+     false,
+     true,
+     false
+    ],
+    "flipped_axes": [
+     1
+    ],
+    "r_max": 0.08374718546781586,
+    "offset8": [
+     15,
+     -6,
+     27
+    ],
+    "r_min": -0.059213639490198366,
+    "offset8_min": [
+     -30,
+     1,
+     15
+    ]
+   },
+   {
+    "perm": [
+     2,
+     1,
+     0
+    ],
+    "flips": [
+     true,
+     false,
+     false
+    ],
+    "flipped_axes": [
+     0
+    ],
+    "r_max": 0.08356384370604655,
+    "offset8": [
+     9,
+     25,
+     15
+    ],
+    "r_min": -0.08417267542384159,
+    "offset8_min": [
+     11,
+     -25,
+     6
+    ]
+   },
+   {
+    "perm": [
+     2,
+     0,
+     1
+    ],
+    "flips": [
+     false,
+     false,
+     false
+    ],
+    "flipped_axes": [],
+    "r_max": 0.08016163975219433,
+    "offset8": [
+     14,
+     4,
+     28
+    ],
+    "r_min": -0.053146325189520525,
+    "offset8_min": [
+     8,
+     -4,
+     -23
+    ]
+   },
+   {
+    "perm": [
+     2,
+     0,
+     1
+    ],
+    "flips": [
+     false,
+     false,
+     true
+    ],
+    "flipped_axes": [
+     2
+    ],
+    "r_max": 0.07946626056367406,
+    "offset8": [
+     0,
+     -26,
+     -21
+    ],
+    "r_min": -0.06845070184514412,
+    "offset8_min": [
+     -18,
+     28,
+     1
+    ]
+   },
+   {
+    "perm": [
+     0,
+     2,
+     1
+    ],
+    "flips": [
+     true,
+     false,
+     false
+    ],
+    "flipped_axes": [
+     0
+    ],
+    "r_max": 0.07634375134972814,
+    "offset8": [
+     -36,
+     -8,
+     0
+    ],
+    "r_min": -0.06843300469208537,
+    "offset8_min": [
+     0,
+     -15,
+     31
+    ]
+   },
+   {
+    "perm": [
+     1,
+     2,
+     0
+    ],
+    "flips": [
+     false,
+     true,
+     false
+    ],
+    "flipped_axes": [
+     1
+    ],
+    "r_max": 0.074015798829009,
+    "offset8": [
+     9,
+     7,
+     1
+    ],
+    "r_min": -0.07374821821284534,
+    "offset8_min": [
+     5,
+     27,
+     16
+    ]
+   },
+   {
+    "perm": [
+     0,
+     2,
+     1
+    ],
+    "flips": [
+     true,
+     false,
+     true
+    ],
+    "flipped_axes": [
+     0,
+     2
+    ],
+    "r_max": 0.0739055358067657,
+    "offset8": [
+     -29,
+     -1,
+     17
+    ],
+    "r_min": -0.07346753544030774,
+    "offset8_min": [
+     25,
+     -11,
+     -5
+    ]
+   },
+   {
+    "perm": [
+     1,
+     0,
+     2
+    ],
+    "flips": [
+     false,
+     true,
+     true
+    ],
+    "flipped_axes": [
+     1,
+     2
+    ],
+    "r_max": 0.07302812867769565,
+    "offset8": [
+     6,
+     -20,
+     -18
+    ],
+    "r_min": -0.08148452528172262,
+    "offset8_min": [
+     -3,
+     30,
+     14
+    ]
+   },
+   {
+    "perm": [
+     1,
+     2,
+     0
+    ],
+    "flips": [
+     false,
+     false,
+     true
+    ],
+    "flipped_axes": [
+     2
+    ],
+    "r_max": 0.07145476102918782,
+    "offset8": [
+     -16,
+     -15,
+     -19
+    ],
+    "r_min": -0.06759285203048644,
+    "offset8_min": [
+     30,
+     2,
+     -15
+    ]
+   },
+   {
+    "perm": [
+     2,
+     0,
+     1
+    ],
+    "flips": [
+     false,
+     true,
+     true
+    ],
+    "flipped_axes": [
+     1,
+     2
+    ],
+    "r_max": 0.068618121457742,
+    "offset8": [
+     36,
+     8,
+     0
+    ],
+    "r_min": -0.08459577903428471,
+    "offset8_min": [
+     -5,
+     25,
+     17
+    ]
+   },
+   {
+    "perm": [
+     1,
+     2,
+     0
+    ],
+    "flips": [
+     false,
+     true,
+     true
+    ],
+    "flipped_axes": [
+     1,
+     2
+    ],
+    "r_max": 0.06495874393374432,
+    "offset8": [
+     0,
+     -37,
+     -6
+    ],
+    "r_min": -0.07493760865722762,
+    "offset8_min": [
+     -19,
+     8,
+     2
+    ]
+   },
+   {
+    "perm": [
+     1,
+     0,
+     2
+    ],
+    "flips": [
+     false,
+     false,
+     true
+    ],
+    "flipped_axes": [
+     2
+    ],
+    "r_max": 0.06410684229024993,
+    "offset8": [
+     -16,
+     -5,
+     23
+    ],
+    "r_min": -0.08316900700007278,
+    "offset8_min": [
+     24,
+     -3,
+     -21
+    ]
+   },
+   {
+    "perm": [
+     0,
+     2,
+     1
+    ],
+    "flips": [
+     false,
+     true,
+     false
+    ],
+    "flipped_axes": [
+     1
+    ],
+    "r_max": 0.06102758199344344,
+    "offset8": [
+     19,
+     21,
+     -9
+    ],
+    "r_min": -0.08827597093177308,
+    "offset8_min": [
+     2,
+     2,
+     38
+    ]
+   },
+   {
+    "perm": [
+     2,
+     1,
+     0
+    ],
+    "flips": [
+     false,
+     true,
+     true
+    ],
+    "flipped_axes": [
+     1,
+     2
+    ],
+    "r_max": 0.059304749436117424,
+    "offset8": [
+     36,
+     -3,
+     5
+    ],
+    "r_min": -0.08718383850097156,
+    "offset8_min": [
+     -5,
+     27,
+     15
+    ]
+   },
+   {
+    "perm": [
+     2,
+     0,
+     1
+    ],
+    "flips": [
+     false,
+     true,
+     false
+    ],
+    "flipped_axes": [
+     1
+    ],
+    "r_max": 0.03680902410522755,
+    "offset8": [
+     -15,
+     -29,
+     3
+    ],
+    "r_min": -0.07190062491936379,
+    "offset8_min": [
+     -3,
+     4,
+     7
+    ]
+   },
+   {
+    "perm": [
+     2,
+     1,
+     0
+    ],
+    "flips": [
+     false,
+     true,
+     false
+    ],
+    "flipped_axes": [
+     1
+    ],
+    "r_max": 0.03530275154951814,
+    "offset8": [
+     39,
+     2,
+     0
+    ],
+    "r_min": -0.0871478314973267,
+    "offset8_min": [
+     -11,
+     15,
+     23
+    ]
+   }
+  ]
+ }
+}

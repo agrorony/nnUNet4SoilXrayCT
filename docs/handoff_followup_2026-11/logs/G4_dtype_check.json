@@ -1,0 +1,868 @@
+{
+ "n": 16,
+ "n_dtype_diff": 0,
+ "bytes_before": 908086194,
+ "bytes_after": 1078570282,
+ "rows": [
+  {
+   "path": "01_volumes/bnei_reem_fresh_bnei_reem_i4/segmentation.nii.gz",
+   "same_dtype": true,
+   "same_label_counts": true,
+   "same_shape_up_to_permutation": true,
+   "original": {
+    "header_dtype": "uint8",
+    "zooms": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "slope_inter": [
+     null,
+     null
+    ],
+    "array_dtype": "uint8",
+    "shape": [
+     650,
+     650,
+     652
+    ],
+    "labels": {
+     "0": 207816662,
+     "1": 5795552,
+     "2": 2255941,
+     "5": 59601845
+    },
+    "bytes": 11871558
+   },
+   "reoriented": {
+    "header_dtype": "uint8",
+    "zooms": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "slope_inter": [
+     null,
+     null
+    ],
+    "array_dtype": "uint8",
+    "shape": [
+     652,
+     650,
+     650
+    ],
+    "labels": {
+     "0": 207816662,
+     "1": 5795552,
+     "2": 2255941,
+     "5": 59601845
+    },
+    "bytes": 20466250
+   }
+  },
+  {
+   "path": "01_volumes/bnei_reem_specA_unified/segmentation.nii.gz",
+   "same_dtype": true,
+   "same_label_counts": true,
+   "same_shape_up_to_permutation": true,
+   "original": {
+    "header_dtype": "uint8",
+    "zooms": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "slope_inter": [
+     null,
+     null
+    ],
+    "array_dtype": "uint8",
+    "shape": [
+     650,
+     650,
+     650
+    ],
+    "labels": {
+     "0": 225951169,
+     "1": 6356509,
+     "2": 659889,
+     "5": 41657433
+    },
+    "bytes": 13395445
+   },
+   "reoriented": {
+    "header_dtype": "uint8",
+    "zooms": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "slope_inter": [
+     null,
+     null
+    ],
+    "array_dtype": "uint8",
+    "shape": [
+     650,
+     650,
+     650
+    ],
+    "labels": {
+     "0": 225951169,
+     "1": 6356509,
+     "2": 659889,
+     "5": 41657433
+    },
+    "bytes": 23389448
+   }
+  },
+  {
+   "path": "01_volumes/bnei_reem_specB_unified/segmentation.nii.gz",
+   "same_dtype": true,
+   "same_label_counts": true,
+   "same_shape_up_to_permutation": true,
+   "original": {
+    "header_dtype": "uint8",
+    "zooms": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "slope_inter": [
+     null,
+     null
+    ],
+    "array_dtype": "uint8",
+    "shape": [
+     650,
+     650,
+     650
+    ],
+    "labels": {
+     "0": 207195055,
+     "1": 5756768,
+     "2": 2243567,
+     "5": 59429610
+    },
+    "bytes": 11745077
+   },
+   "reoriented": {
+    "header_dtype": "uint8",
+    "zooms": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "slope_inter": [
+     null,
+     null
+    ],
+    "array_dtype": "uint8",
+    "shape": [
+     650,
+     650,
+     650
+    ],
+    "labels": {
+     "0": 207195055,
+     "1": 5756768,
+     "2": 2243567,
+     "5": 59429610
+    },
+    "bytes": 20856103
+   }
+  },
+  {
+   "path": "01_volumes/Cu011_samp_2/segmentation.nii.gz",
+   "same_dtype": true,
+   "same_label_counts": true,
+   "same_shape_up_to_permutation": true,
+   "original": {
+    "header_dtype": "uint8",
+    "zooms": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "slope_inter": [
+     null,
+     null
+    ],
+    "array_dtype": "uint8",
+    "shape": [
+     650,
+     650,
+     822
+    ],
+    "labels": {
+     "0": 252223988,
+     "1": 3031747,
+     "2": 415264,
+     "5": 91624001
+    },
+    "bytes": 16321675
+   },
+   "reoriented": {
+    "header_dtype": "uint8",
+    "zooms": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "slope_inter": [
+     null,
+     null
+    ],
+    "array_dtype": "uint8",
+    "shape": [
+     650,
+     650,
+     822
+    ],
+    "labels": {
+     "0": 252223988,
+     "1": 3031747,
+     "2": 415264,
+     "5": 91624001
+    },
+    "bytes": 29481305
+   }
+  },
+  {
+   "path": "01_volumes/mishmar_hanegev_maoz_2_8p8um/segmentation.nii.gz",
+   "same_dtype": true,
+   "same_label_counts": true,
+   "same_shape_up_to_permutation": true,
+   "original": {
+    "header_dtype": "uint8",
+    "zooms": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "slope_inter": [
+     null,
+     null
+    ],
+    "array_dtype": "uint8",
+    "shape": [
+     1000,
+     1000,
+     1000
+    ],
+    "labels": {
+     "0": 746958869,
+     "1": 6770059,
+     "2": 16430595,
+     "5": 229840477
+    },
+    "bytes": 50004911
+   },
+   "reoriented": {
+    "header_dtype": "uint8",
+    "zooms": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "slope_inter": [
+     null,
+     null
+    ],
+    "array_dtype": "uint8",
+    "shape": [
+     1000,
+     1000,
+     1000
+    ],
+    "labels": {
+     "0": 746958869,
+     "1": 6770059,
+     "2": 16430595,
+     "5": 229840477
+    },
+    "bytes": 86956782
+   }
+  },
+  {
+   "path": "01_volumes/mishmar_hanegev_maoz_2_8p8um/segmentation_15um_pom.nii.gz",
+   "same_dtype": true,
+   "same_label_counts": true,
+   "same_shape_up_to_permutation": true,
+   "original": {
+    "header_dtype": "uint8",
+    "zooms": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "slope_inter": [
+     null,
+     null
+    ],
+    "array_dtype": "uint8",
+    "shape": [
+     587,
+     587,
+     587
+    ],
+    "labels": {
+     "0": 154608376,
+     "1": 1265632,
+     "2": 3327571,
+     "5": 43060424
+    },
+    "bytes": 22760322
+   },
+   "reoriented": {
+    "header_dtype": "uint8",
+    "zooms": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "slope_inter": [
+     null,
+     null
+    ],
+    "array_dtype": "uint8",
+    "shape": [
+     587,
+     587,
+     587
+    ],
+    "labels": {
+     "0": 154608376,
+     "1": 1265632,
+     "2": 3327571,
+     "5": 43060424
+    },
+    "bytes": 22760809
+   }
+  },
+  {
+   "path": "01_volumes/mishmar_hanegev_maoz_2_8p8um/segmentation_15um_trackE.nii.gz",
+   "same_dtype": true,
+   "same_label_counts": true,
+   "same_shape_up_to_permutation": true,
+   "original": {
+    "header_dtype": "uint8",
+    "zooms": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "slope_inter": [
+     null,
+     null
+    ],
+    "array_dtype": "uint8",
+    "shape": [
+     947,
+     947,
+     947
+    ],
+    "labels": {
+     "0": 604175432,
+     "1": 5586996,
+     "2": 66747114,
+     "5": 172768581
+    },
+    "bytes": 88737392
+   },
+   "reoriented": {
+    "header_dtype": "uint8",
+    "zooms": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "slope_inter": [
+     null,
+     null
+    ],
+    "array_dtype": "uint8",
+    "shape": [
+     947,
+     947,
+     947
+    ],
+    "labels": {
+     "0": 604175432,
+     "1": 5586996,
+     "2": 66747114,
+     "5": 172768581
+    },
+    "bytes": 88770353
+   }
+  },
+  {
+   "path": "01_volumes/mishmar_hanegev_maoz_3_5p85um/segmentation.nii.gz",
+   "same_dtype": true,
+   "same_label_counts": true,
+   "same_shape_up_to_permutation": true,
+   "original": {
+    "header_dtype": "uint8",
+    "zooms": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "slope_inter": [
+     null,
+     null
+    ],
+    "array_dtype": "uint8",
+    "shape": [
+     1000,
+     1000,
+     1000
+    ],
+    "labels": {
+     "0": 702291703,
+     "1": 11176847,
+     "2": 16146797,
+     "5": 270384653
+    },
+    "bytes": 52131807
+   },
+   "reoriented": {
+    "header_dtype": "uint8",
+    "zooms": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "slope_inter": [
+     null,
+     null
+    ],
+    "array_dtype": "uint8",
+    "shape": [
+     1000,
+     1000,
+     1000
+    ],
+    "labels": {
+     "0": 702291703,
+     "1": 11176847,
+     "2": 16146797,
+     "5": 270384653
+    },
+    "bytes": 90571542
+   }
+  },
+  {
+   "path": "01_volumes/mishmar_hanegev_maoz_3_5p85um/segmentation_15um_pom.nii.gz",
+   "same_dtype": true,
+   "same_label_counts": true,
+   "same_shape_up_to_permutation": true,
+   "original": {
+    "header_dtype": "uint8",
+    "zooms": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "slope_inter": [
+     null,
+     null
+    ],
+    "array_dtype": "uint8",
+    "shape": [
+     390,
+     390,
+     390
+    ],
+    "labels": {
+     "0": 42236100,
+     "1": 638278,
+     "2": 957445,
+     "5": 15487177
+    },
+    "bytes": 8465725
+   },
+   "reoriented": {
+    "header_dtype": "uint8",
+    "zooms": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "slope_inter": [
+     null,
+     null
+    ],
+    "array_dtype": "uint8",
+    "shape": [
+     390,
+     390,
+     390
+    ],
+    "labels": {
+     "0": 42236100,
+     "1": 638278,
+     "2": 957445,
+     "5": 15487177
+    },
+    "bytes": 8464884
+   }
+  },
+  {
+   "path": "01_volumes/mishmar_hanegev_maoz_3_5p85um/segmentation_15um_trackE.nii.gz",
+   "same_dtype": true,
+   "same_label_counts": true,
+   "same_shape_up_to_permutation": true,
+   "original": {
+    "header_dtype": "uint8",
+    "zooms": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "slope_inter": [
+     null,
+     null
+    ],
+    "array_dtype": "uint8",
+    "shape": [
+     474,
+     474,
+     474
+    ],
+    "labels": {
+     "0": 75046435,
+     "1": 992730,
+     "2": 2162315,
+     "5": 28294944
+    },
+    "bytes": 15731266
+   },
+   "reoriented": {
+    "header_dtype": "uint8",
+    "zooms": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "slope_inter": [
+     null,
+     null
+    ],
+    "array_dtype": "uint8",
+    "shape": [
+     474,
+     474,
+     474
+    ],
+    "labels": {
+     "0": 75046435,
+     "1": 992730,
+     "2": 2162315,
+     "5": 28294944
+    },
+    "bytes": 15730809
+   }
+  },
+  {
+   "path": "01_volumes/Rehovot_samp2_highkV_Cu0.11_15um/segmentation_nnunet_bnei_reem_i4.nii.gz",
+   "same_dtype": true,
+   "same_label_counts": true,
+   "same_shape_up_to_permutation": true,
+   "original": {
+    "header_dtype": "uint8",
+    "zooms": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "slope_inter": [
+     null,
+     null
+    ],
+    "array_dtype": "uint8",
+    "shape": [
+     650,
+     650,
+     650
+    ],
+    "labels": {
+     "0": 195033722,
+     "1": 3435924,
+     "2": 1157485,
+     "5": 74997869
+    },
+    "bytes": 16389079
+   },
+   "reoriented": {
+    "header_dtype": "uint8",
+    "zooms": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "slope_inter": [
+     null,
+     null
+    ],
+    "array_dtype": "uint8",
+    "shape": [
+     650,
+     650,
+     650
+    ],
+    "labels": {
+     "0": 195033722,
+     "1": 3435924,
+     "2": 1157485,
+     "5": 74997869
+    },
+    "bytes": 29600591
+   }
+  },
+  {
+   "path": "01_volumes/Rehovot_samp2_highkV_Cu0.11_15um/segmentation_nnunet_loess_i2.nii.gz",
+   "same_dtype": true,
+   "same_label_counts": true,
+   "same_shape_up_to_permutation": true,
+   "original": {
+    "header_dtype": "uint8",
+    "zooms": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "slope_inter": [
+     null,
+     null
+    ],
+    "array_dtype": "uint8",
+    "shape": [
+     650,
+     650,
+     650
+    ],
+    "labels": {
+     "0": 197534408,
+     "1": 1530228,
+     "2": 39880,
+     "5": 75520484
+    },
+    "bytes": 15825611
+   },
+   "reoriented": {
+    "header_dtype": "uint8",
+    "zooms": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "slope_inter": [
+     null,
+     null
+    ],
+    "array_dtype": "uint8",
+    "shape": [
+     650,
+     650,
+     650
+    ],
+    "labels": {
+     "0": 197534408,
+     "1": 1530228,
+     "2": 39880,
+     "5": 75520484
+    },
+    "bytes": 28922119
+   }
+  },
+  {
+   "path": "01_volumes/Rehovot_samp2_highkV_Cu0.11_15um/segmentation_otsu.npy",
+   "same_dtype": true,
+   "same_label_counts": true,
+   "same_shape_up_to_permutation": true,
+   "original": {
+    "header_dtype": "bool",
+    "zooms": null,
+    "slope_inter": null,
+    "array_dtype": "bool",
+    "shape": [
+     650,
+     650,
+     650
+    ],
+    "labels": {
+     "False": 190868983,
+     "True": 83756017
+    },
+    "bytes": 274625128
+   },
+   "reoriented": {
+    "header_dtype": "bool",
+    "zooms": null,
+    "slope_inter": null,
+    "array_dtype": "bool",
+    "shape": [
+     650,
+     650,
+     650
+    ],
+    "labels": {
+     "False": 190868983,
+     "True": 83756017
+    },
+    "bytes": 274625128
+   }
+  },
+  {
+   "path": "01_volumes/Rehovot_samp3_highkV_Cu0.11_15um/segmentation_nnunet_bnei_reem_i4.nii.gz",
+   "same_dtype": true,
+   "same_label_counts": true,
+   "same_shape_up_to_permutation": true,
+   "original": {
+    "header_dtype": "uint8",
+    "zooms": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "slope_inter": [
+     null,
+     null
+    ],
+    "array_dtype": "uint8",
+    "shape": [
+     650,
+     650,
+     650
+    ],
+    "labels": {
+     "0": 166770815,
+     "1": 1836257,
+     "2": 1161191,
+     "5": 104856737
+    },
+    "bytes": 17673053
+   },
+   "reoriented": {
+    "header_dtype": "uint8",
+    "zooms": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "slope_inter": [
+     null,
+     null
+    ],
+    "array_dtype": "uint8",
+    "shape": [
+     650,
+     650,
+     650
+    ],
+    "labels": {
+     "0": 166770815,
+     "1": 1836257,
+     "2": 1161191,
+     "5": 104856737
+    },
+    "bytes": 31526062
+   }
+  },
+  {
+   "path": "01_volumes/Rehovot_samp3_highkV_Cu0.11_15um/segmentation_nnunet_loess_i2.nii.gz",
+   "same_dtype": true,
+   "same_label_counts": true,
+   "same_shape_up_to_permutation": true,
+   "original": {
+    "header_dtype": "uint8",
+    "zooms": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "slope_inter": [
+     null,
+     null
+    ],
+    "array_dtype": "uint8",
+    "shape": [
+     650,
+     650,
+     650
+    ],
+    "labels": {
+     "0": 163514674,
+     "1": 3038805,
+     "2": 183993,
+     "5": 107887528
+    },
+    "bytes": 17783017
+   },
+   "reoriented": {
+    "header_dtype": "uint8",
+    "zooms": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "slope_inter": [
+     null,
+     null
+    ],
+    "array_dtype": "uint8",
+    "shape": [
+     650,
+     650,
+     650
+    ],
+    "labels": {
+     "0": 163514674,
+     "1": 3038805,
+     "2": 183993,
+     "5": 107887528
+    },
+    "bytes": 31822969
+   }
+  },
+  {
+   "path": "01_volumes/Rehovot_samp3_highkV_Cu0.11_15um/segmentation_otsu.npy",
+   "same_dtype": true,
+   "same_label_counts": true,
+   "same_shape_up_to_permutation": true,
+   "original": {
+    "header_dtype": "bool",
+    "zooms": null,
+    "slope_inter": null,
+    "array_dtype": "bool",
+    "shape": [
+     650,
+     650,
+     650
+    ],
+    "labels": {
+     "False": 162446491,
+     "True": 112178509
+    },
+    "bytes": 274625128
+   },
+   "reoriented": {
+    "header_dtype": "bool",
+    "zooms": null,
+    "slope_inter": null,
+    "array_dtype": "bool",
+    "shape": [
+     650,
+     650,
+     650
+    ],
+    "labels": {
+     "False": 162446491,
+     "True": 112178509
+    },
+    "bytes": 274625128
+   }
+  }
+ ]
+}

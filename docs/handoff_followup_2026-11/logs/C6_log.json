@@ -1,0 +1,85 @@
+{
+ "date": "2026-11-10",
+ "readmes": [
+  {
+   "path": "01_volumes\\bnei_reem_fresh_bnei_reem_i4\\README.md",
+   "sha256_before": "5ebb582ad29234ff6f93197400aa322a4d1c600c22917c01f65edde8f24713e6",
+   "sha256_after": "9cd4186859c6071d31fb607f44ce33a47aefd3716dec4a4c564d8fa9d0f6ab62",
+   "backup": "E:\\PROJECTS\\Yael_Mishael\\Rony\\handoff\\_pre_C6_backup_2026-11\\01_volumes\\bnei_reem_fresh_bnei_reem_i4\\README.md"
+  },
+  {
+   "path": "01_volumes\\mishmar_hanegev_maoz_3_5p85um\\README.md",
+   "sha256_before": "1498c23520739458d9a3003254e0fc4fb802312efe1f2412f25df5b9ae08f491",
+   "sha256_after": "638e0b6ae213eb3b1775f7b65a6c830a0176e5081297b7f70c9f9755e8699e94",
+   "backup": "E:\\PROJECTS\\Yael_Mishael\\Rony\\handoff\\_pre_C6_backup_2026-11\\01_volumes\\mishmar_hanegev_maoz_3_5p85um\\README.md"
+  },
+  {
+   "path": "01_volumes\\mishmar_hanegev_maoz_2_8p8um\\README.md",
+   "sha256_before": "582e7215a5ac6a5faa9f97e41a5235b40e2737262a79016e0d98429b254ba9ba",
+   "sha256_after": "c98223737a07736421d31d6213899a5be27940809a11da3629e56f70f61a1287",
+   "backup": "E:\\PROJECTS\\Yael_Mishael\\Rony\\handoff\\_pre_C6_backup_2026-11\\01_volumes\\mishmar_hanegev_maoz_2_8p8um\\README.md"
+  },
+  {
+   "path": "01_volumes\\Rehovot_samp3_highkV_Cu0.11_15um\\README.md",
+   "sha256_before": "6387c2f078c610a4f7e75b61fac5c7cd9c8419579b183e55366d8daf839c52b6",
+   "sha256_after": "9328d25df8fd155f372570184e961d4e94d4f402a1d0614a60643fa8bd81905e",
+   "backup": "E:\\PROJECTS\\Yael_Mishael\\Rony\\handoff\\_pre_C6_backup_2026-11\\01_volumes\\Rehovot_samp3_highkV_Cu0.11_15um\\README.md"
+  },
+  {
+   "path": "README.md",
+   "sha256_before": "84a5b4435cfc3324d953b67f912022f6feb90357bf46aa2124d86fed18b83449",
+   "sha256_after": "1c264e0050e267a18ddc5c711816c1b5ca7d507457c5e09a81becafb3017139b",
+   "backup": "E:\\PROJECTS\\Yael_Mishael\\Rony\\handoff\\_pre_C6_backup_2026-11\\README.md"
+  }
+ ],
+ "copies": [
+  {
+   "src": "E:\\PROJECTS\\Yael_Mishael\\Rony\\handoff\\_verification_2026-11\\bnei_reem_fresh_bnei_reem_i4\\inference_log.txt",
+   "dst": "01_volumes\\bnei_reem_fresh_bnei_reem_i4\\provenance\\inference_log_verification_2026-11-10.txt",
+   "sha256": "7a7bf5ed96ec2513fb03e6279b7f9142007d6c69df58fa32b1b41fdcf9b6d22f",
+   "bytes": 4927
+  },
+  {
+   "src": "E:\\PROJECTS\\Yael_Mishael\\Rony\\handoff\\_verification_2026-11\\bnei_reem_fresh_bnei_reem_i4\\inference_log.json",
+   "dst": "01_volumes\\bnei_reem_fresh_bnei_reem_i4\\provenance\\inference_log_verification_2026-11-10.json",
+   "sha256": "2484532fadd2256dc8fcbf1cba36b6e1b21d71a615c74d2d2d4dedd9d51a78b3",
+   "bytes": 7147
+  },
+  {
+   "src": "E:\\PROJECTS\\Yael_Mishael\\Rony\\handoff\\_verification_2026-11\\mishmar_hanegev_maoz_3_5p85um\\inference_log.txt",
+   "dst": "01_volumes\\mishmar_hanegev_maoz_3_5p85um\\provenance\\inference_log_verification_2026-11-10.txt",
+   "sha256": "0b970de552f581b685776b897d05d2d0cc80c546aae84fb0985242d8a728cffc",
+   "bytes": 5288
+  },
+  {
+   "src": "E:\\PROJECTS\\Yael_Mishael\\Rony\\handoff\\_verification_2026-11\\mishmar_hanegev_maoz_3_5p85um\\inference_log.json",
+   "dst": "01_volumes\\mishmar_hanegev_maoz_3_5p85um\\provenance\\inference_log_verification_2026-11-10.json",
+   "sha256": "e263c1a81614d41d2bc83f6529763dd9a6755dfe097e73a5b3c45aa0293bf865",
+   "bytes": 7683
+  },
+  {
+   "src": "E:\\PROJECTS\\Yael_Mishael\\Rony\\handoff\\_verification_2026-11\\mishmar_hanegev_maoz_2_8p8um\\inference_log.txt",
+   "dst": "01_volumes\\mishmar_hanegev_maoz_2_8p8um\\provenance\\inference_log_verification_2026-11-10.txt",
+   "sha256": "3311f67cda1fb5c42ce70562e5b39e1cb76d6f752b6aaf00f81683639964d277",
+   "bytes": 5218
+  },
+  {
+   "src": "E:\\PROJECTS\\Yael_Mishael\\Rony\\handoff\\_verification_2026-11\\mishmar_hanegev_maoz_2_8p8um\\inference_log.json",
+   "dst": "01_volumes\\mishmar_hanegev_maoz_2_8p8um\\provenance\\inference_log_verification_2026-11-10.json",
+   "sha256": "008db12cb630aa9e8106b2c94a0d702e15f1e1f66ff1a4294c1357900293021f",
+   "bytes": 7602
+  },
+  {
+   "src": "E:\\PROJECTS\\Yael_Mishael\\Rony\\handoff\\_evidence_followup_2026-11\\C4_otsu.json",
+   "dst": "01_volumes\\Rehovot_samp3_highkV_Cu0.11_15um\\provenance\\otsu_verification_2026-11-10.json",
+   "sha256": "41e112833b61ad689ba70dd3925b64a11c4c40530f93274f56ff9bb1b99f79e7",
+   "bytes": 1267
+  },
+  {
+   "src": "generated from C4_otsu.json",
+   "dst": "01_volumes\\Rehovot_samp3_highkV_Cu0.11_15um\\provenance\\otsu_verification_2026-11-10.txt",
+   "sha256": "886e49c0fe123463bbb24ece78416cd68cd77b0c0ade075b037b04d910fcab80",
+   "bytes": 824
+  }
+ ]
+}

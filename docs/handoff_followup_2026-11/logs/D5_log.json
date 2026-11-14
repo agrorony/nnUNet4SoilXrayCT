@@ -1,0 +1,40 @@
+{
+ "date": "2026-11-14",
+ "repo": [
+  {
+   "path": "DATA_CATALOG.md",
+   "sha256_before": "dbc3544c3bed98bc1682b55de0c1c33c777c6832ecce04b7ea6ae4ed41cb80ba",
+   "sha256_after": "a21c17ea20cc32f99d933f3f910ce60467c2705d278a040e87b550d63cc56881"
+  },
+  {
+   "path": "README.md",
+   "sha256_before": "b763081030ca79b3c4f0818f3738c9267398e813cc26b3369bcd1cc1e23336b3",
+   "sha256_after": "3bf1d026b832f00b4587ca69899b86fda8c0f6c921f54ead7cd90ceeecbaeed9"
+  },
+  {
+   "path": "docs\\HANDOFF_REPORT.md",
+   "sha256_before": "9a4dc6f9314ca497ae73e34dbd02ae846b7f394763d56696cc114b22f13a0c82",
+   "sha256_after": "4ccf9b41537f55d19cc15589505e9b2c347a7aa667a9af2506b4ed4ee0309a91"
+  }
+ ],
+ "package": [
+  {
+   "path": "01_volumes/bnei_reem_fresh_bnei_reem_i4/README.md",
+   "sha256_before": "9cd4186859c6071d31fb607f44ce33a47aefd3716dec4a4c564d8fa9d0f6ab62",
+   "sha256_after": "e6584e5fb0f1fff9ecff35c88fb41459cc18750f55abbda7bde575e4cf779fb8",
+   "backup": "E:\\PROJECTS\\Yael_Mishael\\Rony\\handoff\\_pre_D5_backup_2026-11\\01_volumes\\bnei_reem_fresh_bnei_reem_i4\\README.md"
+  },
+  {
+   "path": "01_volumes/bnei_reem_specB_unified/README.md",
+   "sha256_before": "d96cfc6a87141650d02b2eeb20ffad9026edf75f02669fe890a1b61168cfa32b",
+   "sha256_after": "108603b562985d6cbc10681f113aa80f52b611614f90c1bf6bba598c5e11a431",
+   "backup": "E:\\PROJECTS\\Yael_Mishael\\Rony\\handoff\\_pre_D5_backup_2026-11\\01_volumes\\bnei_reem_specB_unified\\README.md"
+  },
+  {
+   "path": "README.md",
+   "sha256_before": "1c264e0050e267a18ddc5c711816c1b5ca7d507457c5e09a81becafb3017139b",
+   "sha256_after": "68164855fdb7ef2f8b6fd3ae5c75582bdd2a5bc982c70ffd3cdb11cea0f846c7",
+   "backup": "E:\\PROJECTS\\Yael_Mishael\\Rony\\handoff\\_pre_D5_backup_2026-11\\README.md"
+  }
+ ]
+}

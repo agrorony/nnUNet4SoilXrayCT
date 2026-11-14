@@ -22,7 +22,7 @@ The folders follow the pipeline in order. Each one holds only what produced a re
 | `4_inference/` | `run_inference.py` and the chunk concatenation, then one folder per soil: `vertisol/` (specimen A/B rebuild pipeline; canonical inference), `loess/` (Cu011 and 8.8 µm drivers and logs; `resolution_matching_15um/` makes the ~15 µm Loess volumes used in every cross-soil comparison), `sand_rehovot/` |
 | `5_analysis/` | One folder per analysis: `pore_size_distribution/`, `connectivity/`, `distance_maps/`, `tortuosity/`, `pom/`, plus `shared_code/`. **See [`5_analysis/README.md`](5_analysis/README.md)** for which script produces which result |
 | `6_figures/` | `write_up_figures/`: the scripts behind the 7 figures in the write-up. Also `segmentation_examples/`, `renders_3d/` and `napari_viewers/` |
-| `docs/` | `HANDOFF_REPORT.md`, the Vertisol specimen investigation, the CT scan parameters, `literature/REFERENCES.md` (every paper behind the analysis), and the upstream tutorial and citations (`RESOURCES.md`) |
+| `docs/` | `HANDOFF_REPORT.md` and its follow-up `HANDOFF_FOLLOWUP_2026-11.md` (evidence in `handoff_followup_2026-11/`), the Vertisol specimen investigation, the CT scan parameters, `literature/REFERENCES.md` (every paper behind the analysis), and the upstream tutorial and citations (`RESOURCES.md`) |
 | `archive/` | Earlier iterations, retracted runs, the retired POM-clustering analyses and exploratory tools. Code there still has its old paths; `archive/PATH_MAP_2026-11.csv` maps old paths to new ones |
 | `DATA_CATALOG.md` | The specimen inventory: every scan, where it is, and whether it is valid |
 | `dataset_info.json` | The annotation label scheme (scripts read it from the repo root) |
@@ -35,7 +35,7 @@ The specimen inventory is in [`DATA_CATALOG.md`](DATA_CATALOG.md). Distinct name
 |---|---|---|---|---|
 | `bnei_reem_specA_unified` | Vertisol, specimen A | 15.000149 | nnU-Net `fresh_bnei_reem_i4` | structure |
 | `bnei_reem_specB_unified` | Vertisol, specimen B | 15.034357 | nnU-Net `fresh_bnei_reem_i4` | structure |
-| `bnei_reem_fresh_bnei_reem_i4` ("canonical") | Vertisol: an older processing of a scan numerically identical to specimen B (see `DATA_CATALOG.md`) | see catalog | nnU-Net `fresh_bnei_reem_i4` | source of all Vertisol POM results |
+| `bnei_reem_fresh_bnei_reem_i4` ("canonical") | Vertisol, specimen B (raw core `18.12.25 bnei_reem_samp_2.0`), legacy processing (April 2026) | 15.034357 | nnU-Net `fresh_bnei_reem_i4` | source of all Vertisol POM results |
 | `mishmar_hanegev_maoz_3_5p85um` | Loess (external scan) | 5.85, plus a ~15 µm label-downsample | nnU-Net `..._loess_i2` | structure + POM |
 | `mishmar_hanegev_maoz_2_8p8um` | Loess (external scan) | 8.8, plus a ~15 µm label-downsample | nnU-Net `..._loess_i2` | structure + POM |
 | `Cu011_samp_2` | Loess | 15.000149 | nnU-Net `..._loess_i2` | pore only (POM channel collapsed) |
@@ -60,7 +60,7 @@ Volumes, checkpoints and annotations are **not in git**. They are on the lab sha
 
 Some analysis scripts read input volumes from run folders that were never in git. On the lab computer those folders stay at their old paths under `05_evaluation/psd/`, and the scripts point there (marked in the code).
 
-A packaged copy of the data is in the hand-off ZIP: every analysed volume with its segmentation, the annotations, both models and the analysis outputs. See [`docs/HANDOFF_REPORT.md`](docs/HANDOFF_REPORT.md).
+A packaged copy of the data is in the hand-off ZIP: every analysed volume with its segmentation, the annotations, both models and the analysis outputs. See [`docs/HANDOFF_REPORT.md`](docs/HANDOFF_REPORT.md) and, for v2 of the ZIP (re-oriented segmentations, verification, lab data), [`docs/HANDOFF_FOLLOWUP_2026-11.md`](docs/HANDOFF_FOLLOWUP_2026-11.md).
 
 ## Label convention
 
@@ -73,7 +73,7 @@ The Rehovot Otsu masks are boolean arrays, True = pore. NIfTI headers store a vo
 ## Known limitations
 
 - **Tiny training set.** Each model was trained on one volume with sparse annotations, and nnU-Net's training and validation split is that same volume. The Dice of ~0.97 therefore says nothing about generalisation.
-- **Vertisol "canonical" volume.** It is numerically identical to specimen B, and every Vertisol POM result comes from it.
+- **Vertisol "canonical" volume.** Specimen B (raw core `18.12.25 bnei_reem_samp_2.0`), legacy processing (April 2026). Source of all Vertisol POM results. Resolved 2026-11-14 (`DATA_CATALOG.md`, `docs/HANDOFF_FOLLOWUP_2026-11.md`). Vertisol POM is therefore n = 1 (specimen B only). The 0.23 % voxel-size difference (15.000149 vs 15.034357 µm) is negligible for the reported metrics, which are not recomputed.
 - **Rehovot (sand).** Metrics come from a global-Otsu binary mask, not nnU-Net, and no POM was detected.
 - **`Cu011_samp_2`.** The POM channel collapsed (0.12 % vs 1.6 % in the 5.85 µm scan), so it is used for pore metrics only.
 
