@@ -199,9 +199,19 @@ Historical reports copied into the package (files not named `README.md`) keep th
 - `_removed_from_v2_2026-11\`: files that are not in v2.
 - `_verification_2026-11\`: the fresh predictions from Part C.
 
-<!-- ZIP_STATS -->
-*ZIP statistics: added in the next commit, after the build.*
-<!-- /ZIP_STATS -->
+**v2 ZIP (built 2026-11-14, `logs/G6_log.json`):**
+
+| | |
+|---|---|
+| File | `E:\PROJECTS\Yael_Mishael\Rony\handoff\Schwartz_soil_uCT_handoff_2026-11_v2.zip` (v1 kept next to it) |
+| Size | 16,099,070,658 bytes (16.1 GB); content 16,907,947,743 bytes |
+| Files | 1,195 + `MANIFEST.csv` (v1: 1,176 + `MANIFEST.csv`) |
+| sha256 | `4a747fbfed8cc372a27f3f823329b23cab0214daea8f18d4f79545dba845c26c` (also in `….zip.sha256`) |
+| Code archive inside | `04_code/nnUNet4SoilXrayCT_a01686e.zip`: `git archive` of commit **`a01686ea9852742328a9fec07854d1ba7f5489ae`** (branch `handoff/2026-11-followup`; https://github.com/agrorony/nnUNet4SoilXrayCT/tree/a01686ea9852742328a9fec07854d1ba7f5489ae); 231,042,331 bytes, 871 files, sha256 `665d64041772955e6e52a8309ac9abeff7534759891cdc95b63d3254c3619cf0` (`logs/G5_log.json`) |
+| Compared with v1 (final `MANIFEST.csv`) | 1,138 unchanged, 34 changed, 23 added, 4 removed. These are the G3 counts above plus the code-archive swap: one added (the new archive), one removed (the 198c5b5 archive) and one changed (`04_code/README.md`) |
+| Checks | `testzip()` → None. The ZIP's file list equals `MANIFEST.csv`. All 23 READMEs, 5 random files (seed 20261114) and `MANIFEST.csv` were re-extracted and hashed: 29/29 match |
+
+`MANIFEST.csv` was regenerated. Unchanged files keep v1's `source`; changed and added files carry a follow-up note. v1's manifest is in `_pre_H_backup_2026-11\MANIFEST_v1.csv`.
 
 ## NOT FOUND
 

@@ -60,3 +60,15 @@ Extracted into `07_lab_data_and_writeup/`: `README.md` (replaces the placeholder
 - Repo paths in 15 package READMEs moved to the 2026-11 layout (`archive/PATH_MAP_2026-11.csv`): 45 backticked paths + 9 hand-written directory/removed-file cases.
   Historical reports copied into the package (not named README.md) keep their original paths. Inventory before/after: `G1_repo_path_citations.json`, `G1_after_G2.json`.
 - Full diff against v1's MANIFEST: `G3_diff_vs_v1.json` (33 changed, 22 added, 3 removed; 1,195 files + MANIFEST.csv).
+
+## Gate G approved (Rony, 2026-11-14, option 1) and after
+
+- **dtype check** before the build (`G4_dtype_check.json`): all 16 re-oriented segmentations have the same dtype as their originals (uint8 NIfTI, bool `.npy`). Shape (up to axis order), zooms, scl_slope/inter and label counts are also the same. The 16 files grew by 0.17 GB (gzip of the new axis order); total content went from 16.70 to 16.88 GB. The "about 18 GB" stated at Gate G was wrong.
+- **G2b** (`G2b_log.json`, backups in `_pre_G2b_backup_2026-11\`), from an existence check of every backticked path in the READMEs against the package and the repo tree. 7 READMEs:
+  - the tortuosity folder path in the two Track E one-liners (→ `05_analysis_outputs/tortuosity/tortuosity_subvolumes_20261004/`);
+  - the `run_configs/*.yaml` paths in the 2 annotation READMEs;
+  - `extract_subvolumes.py` (PR #4 location);
+  - the two `full_volume_batch` logs, now marked lab-computer-only.
+- **G2c** (`G2c_log.json`, backups in `_pre_G2c_backup_2026-11\`): repo paths inside backticked commands, in 4 READMEs (the split/concatenate scripts and `run_psd_diagnostics.py`).
+- **G5** (`G5_log.json`, README backups in `_pre_H_backup_2026-11\`): `04_code/nnUNet4SoilXrayCT_198c5b5.zip` moved to `_removed_from_v2_2026-11\04_code\`. It is replaced by `nnUNet4SoilXrayCT_a01686e.zip`, a `git archive` of commit `a01686ea9852742328a9fec07854d1ba7f5489ae` (branch `handoff/2026-11-followup`, pushed). `04_code/README.md` and the top-level README name the commit.
+- **G6** (`G6_log.json`): v2 built as `Schwartz_soil_uCT_handoff_2026-11_v2.zip` with `.sha256`. `MANIFEST.csv` regenerated; v1's manifest is in `_pre_H_backup_2026-11\MANIFEST_v1.csv`.

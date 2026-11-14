@@ -1,0 +1,35 @@
+{
+ "commit": "a01686ea9852742328a9fec07854d1ba7f5489ae",
+ "branch": "handoff/2026-11-followup",
+ "archive": "E:\\PROJECTS\\Yael_Mishael\\Rony\\handoff\\Schwartz_soil_uCT_handoff_2026-11\\04_code\\nnUNet4SoilXrayCT_a01686e.zip",
+ "archive_bytes": 231042331,
+ "archive_sha256": "665d64041772955e6e52a8309ac9abeff7534759891cdc95b63d3254c3619cf0",
+ "archive_files": 871,
+ "cited_paths_missing_allowed": [
+  "00_docs/prompts/",
+  "02_data/",
+  "05_evaluation/psd/full_volume_batch/logs/mishmar_hanegev_maoz_3_5p85um_scratch_i2.log",
+  "05_evaluation/psd/full_volume_batch/logs/nlm_volume_fresh_bnei_reem_i4.log",
+  "06_reporting/",
+  "06_reporting/scripts/"
+ ],
+ "moved": {
+  "path": "04_code/nnUNet4SoilXrayCT_198c5b5.zip",
+  "to": "E:\\PROJECTS\\Yael_Mishael\\Rony\\handoff\\_removed_from_v2_2026-11\\04_code\\nnUNet4SoilXrayCT_198c5b5.zip",
+  "sha256": "4fe003a4741da75136c0608be6f07d3f4d624b52c3b9456d192f1255634c5130"
+ },
+ "edited": [
+  {
+   "path": "04_code/README.md",
+   "backup": "E:\\PROJECTS\\Yael_Mishael\\Rony\\handoff\\_pre_H_backup_2026-11\\04_code\\README.md",
+   "sha256_before": "ceead37e6f6a26164c75a704a8ebf9529e11d34da8957270612d47542e2f246c",
+   "sha256_after": "9a1146690157043460e8fbd9fef803b90df31fa8a1617bccce3eaa55c3b24bec"
+  },
+  {
+   "path": "README.md",
+   "backup": "E:\\PROJECTS\\Yael_Mishael\\Rony\\handoff\\_pre_H_backup_2026-11\\README.md",
+   "sha256_before": "bd28c137d6e7e20ba605b08863308fd0e856108d40fb0ba6dc894dd3c6781da2",
+   "sha256_after": "f814498e071de109be0909eb54604b5f7df967c6d3c5e283685dd13d05bdb654"
+  }
+ ]
+}
