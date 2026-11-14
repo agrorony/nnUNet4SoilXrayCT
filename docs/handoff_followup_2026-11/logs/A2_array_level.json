@@ -1,0 +1,624 @@
+[
+ {
+  "rel": "01_volumes/Cu011_samp_2/image_preprocessed.nii.gz",
+  "shape": [
+   650,
+   650,
+   822
+  ],
+  "dtype": "float32",
+  "array_sha256": "04f4560da15bdb256ad86077c40a3855cfea2df9a313e1b71158bef0d3d17a20",
+  "min": -2.7039406299591064,
+  "max": 1.5601468086242676,
+  "mean": -3.202820751046926e-08,
+  "cache": "C:\\Users\\RONY~1.SCH\\AppData\\Local\\Temp\\52\\claude\\c261376e306a5e94\\67d63105-031f-4980-852f-ec19e1c50110\\scratchpad\\cache\\01_volumes__Cu011_samp_2__image_preprocessed.nii.gz.npy"
+ },
+ {
+  "rel": "01_volumes/Cu011_samp_2/segmentation.nii.gz",
+  "shape": [
+   650,
+   650,
+   822
+  ],
+  "dtype": "uint8",
+  "array_sha256": "7b3315458124fd2450d441bf5e8f8678ff5bcf16a75d307e1de6e0150b664ddb",
+  "labels": {
+   "0": 252223988,
+   "1": 3031747,
+   "2": 415264,
+   "5": 91624001
+  },
+  "cache": "C:\\Users\\RONY~1.SCH\\AppData\\Local\\Temp\\52\\claude\\c261376e306a5e94\\67d63105-031f-4980-852f-ec19e1c50110\\scratchpad\\cache\\01_volumes__Cu011_samp_2__segmentation.nii.gz.npy"
+ },
+ {
+  "rel": "01_volumes/Rehovot_samp2_highkV_Cu0.11_15um/image_preprocessed.nii.gz",
+  "shape": [
+   650,
+   650,
+   650
+  ],
+  "dtype": "float32",
+  "array_sha256": "84808b69e8997e275084c17a03f27541f8c6f233f39b51ac48942de6dc9ad987",
+  "min": 0.000987360836006701,
+  "max": 0.9999911189079285,
+  "mean": 0.6107332819230487,
+  "cache": "C:\\Users\\RONY~1.SCH\\AppData\\Local\\Temp\\52\\claude\\c261376e306a5e94\\67d63105-031f-4980-852f-ec19e1c50110\\scratchpad\\cache\\01_volumes__Rehovot_samp2_highkV_Cu0.11_15um__image_preprocessed.nii.gz.npy"
+ },
+ {
+  "rel": "01_volumes/Rehovot_samp2_highkV_Cu0.11_15um/segmentation_nnunet_bnei_reem_i4.nii.gz",
+  "shape": [
+   650,
+   650,
+   650
+  ],
+  "dtype": "uint8",
+  "array_sha256": "fafe87241e4198fe9bfaa96be6603ca25d71b6644f6a2e465d710ae2aa8ce8f0",
+  "labels": {
+   "0": 195033722,
+   "1": 3435924,
+   "2": 1157485,
+   "5": 74997869
+  },
+  "cache": "C:\\Users\\RONY~1.SCH\\AppData\\Local\\Temp\\52\\claude\\c261376e306a5e94\\67d63105-031f-4980-852f-ec19e1c50110\\scratchpad\\cache\\01_volumes__Rehovot_samp2_highkV_Cu0.11_15um__segmentation_nnunet_bnei_reem_i4.nii.gz.npy"
+ },
+ {
+  "rel": "01_volumes/Rehovot_samp2_highkV_Cu0.11_15um/segmentation_nnunet_loess_i2.nii.gz",
+  "shape": [
+   650,
+   650,
+   650
+  ],
+  "dtype": "uint8",
+  "array_sha256": "87c41c8a0366f51d024d3211a792938aa74bfd563929f4756625155dfb337871",
+  "labels": {
+   "0": 197534408,
+   "1": 1530228,
+   "2": 39880,
+   "5": 75520484
+  },
+  "cache": "C:\\Users\\RONY~1.SCH\\AppData\\Local\\Temp\\52\\claude\\c261376e306a5e94\\67d63105-031f-4980-852f-ec19e1c50110\\scratchpad\\cache\\01_volumes__Rehovot_samp2_highkV_Cu0.11_15um__segmentation_nnunet_loess_i2.nii.gz.npy"
+ },
+ {
+  "rel": "01_volumes/Rehovot_samp2_highkV_Cu0.11_15um/segmentation_otsu.npy",
+  "shape": [
+   650,
+   650,
+   650
+  ],
+  "dtype": "bool",
+  "array_sha256": "8c9ec405ece2db7a5e75e346eab7e9a2abf523842424cc742f8d0c71d6ed4b4a",
+  "labels": {
+   "0": 190868983,
+   "1": 83756017
+  },
+  "cache": "C:\\Users\\RONY~1.SCH\\AppData\\Local\\Temp\\52\\claude\\c261376e306a5e94\\67d63105-031f-4980-852f-ec19e1c50110\\scratchpad\\cache\\01_volumes__Rehovot_samp2_highkV_Cu0.11_15um__segmentation_otsu.npy.npy"
+ },
+ {
+  "rel": "01_volumes/Rehovot_samp3_highkV_Cu0.11_15um/image_preprocessed.nii.gz",
+  "shape": [
+   650,
+   650,
+   650
+  ],
+  "dtype": "float32",
+  "array_sha256": "f674ef08e7ae2cbae0abdeb9d6b348be0965923bf5d1bce0bde25f59783d1f8c",
+  "min": 6.429668428609148e-05,
+  "max": 1.0,
+  "mean": 0.48073381438763396,
+  "cache": "C:\\Users\\RONY~1.SCH\\AppData\\Local\\Temp\\52\\claude\\c261376e306a5e94\\67d63105-031f-4980-852f-ec19e1c50110\\scratchpad\\cache\\01_volumes__Rehovot_samp3_highkV_Cu0.11_15um__image_preprocessed.nii.gz.npy"
+ },
+ {
+  "rel": "01_volumes/Rehovot_samp3_highkV_Cu0.11_15um/segmentation_nnunet_bnei_reem_i4.nii.gz",
+  "shape": [
+   650,
+   650,
+   650
+  ],
+  "dtype": "uint8",
+  "array_sha256": "e7a21957d80029ea25b94b994b319c2ce0cbeea058b2b8bea32b305a5145593a",
+  "labels": {
+   "0": 166770815,
+   "1": 1836257,
+   "2": 1161191,
+   "5": 104856737
+  },
+  "cache": "C:\\Users\\RONY~1.SCH\\AppData\\Local\\Temp\\52\\claude\\c261376e306a5e94\\67d63105-031f-4980-852f-ec19e1c50110\\scratchpad\\cache\\01_volumes__Rehovot_samp3_highkV_Cu0.11_15um__segmentation_nnunet_bnei_reem_i4.nii.gz.npy"
+ },
+ {
+  "rel": "01_volumes/Rehovot_samp3_highkV_Cu0.11_15um/segmentation_nnunet_loess_i2.nii.gz",
+  "shape": [
+   650,
+   650,
+   650
+  ],
+  "dtype": "uint8",
+  "array_sha256": "650d03c6e27ba43c908d66440b15f48754e4e1321b3ed180a0d2c97a6a175f3f",
+  "labels": {
+   "0": 163514674,
+   "1": 3038805,
+   "2": 183993,
+   "5": 107887528
+  },
+  "cache": "C:\\Users\\RONY~1.SCH\\AppData\\Local\\Temp\\52\\claude\\c261376e306a5e94\\67d63105-031f-4980-852f-ec19e1c50110\\scratchpad\\cache\\01_volumes__Rehovot_samp3_highkV_Cu0.11_15um__segmentation_nnunet_loess_i2.nii.gz.npy"
+ },
+ {
+  "rel": "01_volumes/Rehovot_samp3_highkV_Cu0.11_15um/segmentation_otsu.npy",
+  "shape": [
+   650,
+   650,
+   650
+  ],
+  "dtype": "bool",
+  "array_sha256": "ad1345a7287989f25392137607b0bdbe56b592f7ea870c2258a07f02c69a34fb",
+  "labels": {
+   "0": 162446491,
+   "1": 112178509
+  },
+  "cache": "C:\\Users\\RONY~1.SCH\\AppData\\Local\\Temp\\52\\claude\\c261376e306a5e94\\67d63105-031f-4980-852f-ec19e1c50110\\scratchpad\\cache\\01_volumes__Rehovot_samp3_highkV_Cu0.11_15um__segmentation_otsu.npy.npy"
+ },
+ {
+  "rel": "01_volumes/bnei_reem_fresh_bnei_reem_i4/image_preprocessed.tif",
+  "shape": [
+   652,
+   650,
+   650
+  ],
+  "dtype": "float32",
+  "array_sha256": "d15e454898223acf1dd7580973ab36b37e6a04cced29137bfa1ba8dc7e66103e",
+  "min": 0.0004668328328989446,
+  "max": 1.0,
+  "mean": 0.6718718817291076,
+  "cache": "C:\\Users\\RONY~1.SCH\\AppData\\Local\\Temp\\52\\claude\\c261376e306a5e94\\67d63105-031f-4980-852f-ec19e1c50110\\scratchpad\\cache\\01_volumes__bnei_reem_fresh_bnei_reem_i4__image_preprocessed.tif.npy"
+ },
+ {
+  "rel": "01_volumes/bnei_reem_fresh_bnei_reem_i4/segmentation.nii.gz",
+  "shape": [
+   650,
+   650,
+   652
+  ],
+  "dtype": "uint8",
+  "array_sha256": "9a8b3ab3fbb918ae55246e6398b4a388cff97e89b7aa30ba6fbc478e8a810f7d",
+  "labels": {
+   "0": 207816662,
+   "1": 5795552,
+   "2": 2255941,
+   "5": 59601845
+  },
+  "cache": "C:\\Users\\RONY~1.SCH\\AppData\\Local\\Temp\\52\\claude\\c261376e306a5e94\\67d63105-031f-4980-852f-ec19e1c50110\\scratchpad\\cache\\01_volumes__bnei_reem_fresh_bnei_reem_i4__segmentation.nii.gz.npy"
+ },
+ {
+  "rel": "01_volumes/bnei_reem_specA_unified/image_preprocessed.nii.gz",
+  "shape": [
+   650,
+   650,
+   650
+  ],
+  "dtype": "float32",
+  "array_sha256": "d8dbae48d4e545a5af07629e69c823259178dc0850ffcefb5b985509c5996e61",
+  "min": -4.166689395904541,
+  "max": 1.509042501449585,
+  "mean": 2.0088287069218547e-07,
+  "cache": "C:\\Users\\RONY~1.SCH\\AppData\\Local\\Temp\\52\\claude\\c261376e306a5e94\\67d63105-031f-4980-852f-ec19e1c50110\\scratchpad\\cache\\01_volumes__bnei_reem_specA_unified__image_preprocessed.nii.gz.npy"
+ },
+ {
+  "rel": "01_volumes/bnei_reem_specA_unified/segmentation.nii.gz",
+  "shape": [
+   650,
+   650,
+   650
+  ],
+  "dtype": "uint8",
+  "array_sha256": "0f4ecacd75c71a7dd761ec2dfd3de7b375ac8506ab8a34c1274810b159657581",
+  "labels": {
+   "0": 225951169,
+   "1": 6356509,
+   "2": 659889,
+   "5": 41657433
+  },
+  "cache": "C:\\Users\\RONY~1.SCH\\AppData\\Local\\Temp\\52\\claude\\c261376e306a5e94\\67d63105-031f-4980-852f-ec19e1c50110\\scratchpad\\cache\\01_volumes__bnei_reem_specA_unified__segmentation.nii.gz.npy"
+ },
+ {
+  "rel": "01_volumes/bnei_reem_specB_unified/image_preprocessed.nii.gz",
+  "shape": [
+   650,
+   650,
+   650
+  ],
+  "dtype": "float32",
+  "array_sha256": "5ceac4654f45a9e5b94bd698eef07a0e28d33ad9a103f72a1265263f328bde7a",
+  "min": -3.133578300476074,
+  "max": 1.446762204170227,
+  "mean": 1.4185064231937548e-07,
+  "cache": "C:\\Users\\RONY~1.SCH\\AppData\\Local\\Temp\\52\\claude\\c261376e306a5e94\\67d63105-031f-4980-852f-ec19e1c50110\\scratchpad\\cache\\01_volumes__bnei_reem_specB_unified__image_preprocessed.nii.gz.npy"
+ },
+ {
+  "rel": "01_volumes/bnei_reem_specB_unified/segmentation.nii.gz",
+  "shape": [
+   650,
+   650,
+   650
+  ],
+  "dtype": "uint8",
+  "array_sha256": "e60e0584adf3bfa26138bafb39a65b8bbc8d352ab57854e98ae31546cae3a14f",
+  "labels": {
+   "0": 207195055,
+   "1": 5756768,
+   "2": 2243567,
+   "5": 59429610
+  },
+  "cache": "C:\\Users\\RONY~1.SCH\\AppData\\Local\\Temp\\52\\claude\\c261376e306a5e94\\67d63105-031f-4980-852f-ec19e1c50110\\scratchpad\\cache\\01_volumes__bnei_reem_specB_unified__segmentation.nii.gz.npy"
+ },
+ {
+  "rel": "01_volumes/mishmar_hanegev_maoz_2_8p8um/image_preprocessed.nii.gz",
+  "shape": [
+   1000,
+   1000,
+   1000
+  ],
+  "dtype": "float32",
+  "array_sha256": "02d2dcd416e738f4281596d8fc93e52e54bfdd980da8decf11fbf48a89ead505",
+  "min": 0.010110610164701939,
+  "max": 1.0,
+  "mean": 0.6322230787324914,
+  "cache": "C:\\Users\\RONY~1.SCH\\AppData\\Local\\Temp\\52\\claude\\c261376e306a5e94\\67d63105-031f-4980-852f-ec19e1c50110\\scratchpad\\cache\\01_volumes__mishmar_hanegev_maoz_2_8p8um__image_preprocessed.nii.gz.npy"
+ },
+ {
+  "rel": "01_volumes/mishmar_hanegev_maoz_2_8p8um/segmentation.nii.gz",
+  "shape": [
+   1000,
+   1000,
+   1000
+  ],
+  "dtype": "uint8",
+  "array_sha256": "122c8a6da8449ec8eb6cb56f9fe7c766f32188ed89ed00ba8b47dd761fb217a4",
+  "labels": {
+   "0": 746958869,
+   "1": 6770059,
+   "2": 16430595,
+   "5": 229840477
+  },
+  "cache": "C:\\Users\\RONY~1.SCH\\AppData\\Local\\Temp\\52\\claude\\c261376e306a5e94\\67d63105-031f-4980-852f-ec19e1c50110\\scratchpad\\cache\\01_volumes__mishmar_hanegev_maoz_2_8p8um__segmentation.nii.gz.npy"
+ },
+ {
+  "rel": "01_volumes/mishmar_hanegev_maoz_2_8p8um/segmentation_15um_pom.nii.gz",
+  "shape": [
+   587,
+   587,
+   587
+  ],
+  "dtype": "uint8",
+  "array_sha256": "d43a84915e2db420bc1416e93bf88dfa4c0d84e9d5e8d81254876228604123e3",
+  "labels": {
+   "0": 154608376,
+   "1": 1265632,
+   "2": 3327571,
+   "5": 43060424
+  },
+  "cache": "C:\\Users\\RONY~1.SCH\\AppData\\Local\\Temp\\52\\claude\\c261376e306a5e94\\67d63105-031f-4980-852f-ec19e1c50110\\scratchpad\\cache\\01_volumes__mishmar_hanegev_maoz_2_8p8um__segmentation_15um_pom.nii.gz.npy"
+ },
+ {
+  "rel": "01_volumes/mishmar_hanegev_maoz_2_8p8um/segmentation_15um_trackE.nii.gz",
+  "shape": [
+   947,
+   947,
+   947
+  ],
+  "dtype": "uint8",
+  "array_sha256": "937c4a2b00d2f217a13763bd19e0ab8f93e05f961ced12a7fe2a0cf1803ad7a3",
+  "labels": {
+   "0": 604175432,
+   "1": 5586996,
+   "2": 66747114,
+   "5": 172768581
+  },
+  "cache": "C:\\Users\\RONY~1.SCH\\AppData\\Local\\Temp\\52\\claude\\c261376e306a5e94\\67d63105-031f-4980-852f-ec19e1c50110\\scratchpad\\cache\\01_volumes__mishmar_hanegev_maoz_2_8p8um__segmentation_15um_trackE.nii.gz.npy"
+ },
+ {
+  "rel": "01_volumes/mishmar_hanegev_maoz_3_5p85um/image_preprocessed.nii.gz",
+  "shape": [
+   1000,
+   1000,
+   1000
+  ],
+  "dtype": "float32",
+  "array_sha256": "b67c15533291a78fe5a7b986f56399e00ae46e3cb3514733c99f35c992db6331",
+  "min": 0.05989730730652809,
+  "max": 1.0,
+  "mean": 0.6313381902071631,
+  "cache": "C:\\Users\\RONY~1.SCH\\AppData\\Local\\Temp\\52\\claude\\c261376e306a5e94\\67d63105-031f-4980-852f-ec19e1c50110\\scratchpad\\cache\\01_volumes__mishmar_hanegev_maoz_3_5p85um__image_preprocessed.nii.gz.npy"
+ },
+ {
+  "rel": "01_volumes/mishmar_hanegev_maoz_3_5p85um/segmentation.nii.gz",
+  "shape": [
+   1000,
+   1000,
+   1000
+  ],
+  "dtype": "uint8",
+  "array_sha256": "377a8ebf0c131561460204da0b7b2a2372142b2696b4fca719031d2364e41f7e",
+  "labels": {
+   "0": 702291703,
+   "1": 11176847,
+   "2": 16146797,
+   "5": 270384653
+  },
+  "cache": "C:\\Users\\RONY~1.SCH\\AppData\\Local\\Temp\\52\\claude\\c261376e306a5e94\\67d63105-031f-4980-852f-ec19e1c50110\\scratchpad\\cache\\01_volumes__mishmar_hanegev_maoz_3_5p85um__segmentation.nii.gz.npy"
+ },
+ {
+  "rel": "01_volumes/mishmar_hanegev_maoz_3_5p85um/segmentation_15um_pom.nii.gz",
+  "shape": [
+   390,
+   390,
+   390
+  ],
+  "dtype": "uint8",
+  "array_sha256": "48b16ef1dc3774c57d1a487b2ec62020cc0c30c4a7b666a5e5c293778bc58a7f",
+  "labels": {
+   "0": 42236100,
+   "1": 638278,
+   "2": 957445,
+   "5": 15487177
+  },
+  "cache": "C:\\Users\\RONY~1.SCH\\AppData\\Local\\Temp\\52\\claude\\c261376e306a5e94\\67d63105-031f-4980-852f-ec19e1c50110\\scratchpad\\cache\\01_volumes__mishmar_hanegev_maoz_3_5p85um__segmentation_15um_pom.nii.gz.npy"
+ },
+ {
+  "rel": "01_volumes/mishmar_hanegev_maoz_3_5p85um/segmentation_15um_trackE.nii.gz",
+  "shape": [
+   474,
+   474,
+   474
+  ],
+  "dtype": "uint8",
+  "array_sha256": "7d5391ed2a4bc9e1d32553236cb8cb99bbd58bf9351b8834d1062c6aa9559821",
+  "labels": {
+   "0": 75046435,
+   "1": 992730,
+   "2": 2162315,
+   "5": 28294944
+  },
+  "cache": "C:\\Users\\RONY~1.SCH\\AppData\\Local\\Temp\\52\\claude\\c261376e306a5e94\\67d63105-031f-4980-852f-ec19e1c50110\\scratchpad\\cache\\01_volumes__mishmar_hanegev_maoz_3_5p85um__segmentation_15um_trackE.nii.gz.npy"
+ },
+ {
+  "rel": "02_annotations/bnei_reem_i4/nnUNet_raw_Dataset777_GCEF/imagesTr/nlm_volume_0000.nii.gz",
+  "shape": [
+   650,
+   650,
+   99
+  ],
+  "dtype": "float32",
+  "array_sha256": "509bfd1134d19538ce103ccb6d60f3d8eb70b6ad8ca7cde572efc3e5ef6e1e67",
+  "min": 0.027710754424333572,
+  "max": 0.9999964237213135,
+  "mean": 0.6461559040804445,
+  "cache": "C:\\Users\\RONY~1.SCH\\AppData\\Local\\Temp\\52\\claude\\c261376e306a5e94\\67d63105-031f-4980-852f-ec19e1c50110\\scratchpad\\cache\\02_annotations__bnei_reem_i4__nnUNet_raw_Dataset777_GCEF__imagesTr__nlm_volume_0000.nii.gz.npy"
+ },
+ {
+  "rel": "02_annotations/bnei_reem_i4/nnUNet_raw_Dataset777_GCEF/labelsTr/nlm_volume.nii.gz",
+  "shape": [
+   650,
+   650,
+   99
+  ],
+  "dtype": "uint8",
+  "array_sha256": "5319bc56a8240df02c133d88b351313ef540665207dd97e22fd78b9f657f064f",
+  "labels": {
+   "0": 605083,
+   "1": 22153,
+   "2": 15013,
+   "5": 183986,
+   "6": 41001265
+  },
+  "cache": "C:\\Users\\RONY~1.SCH\\AppData\\Local\\Temp\\52\\claude\\c261376e306a5e94\\67d63105-031f-4980-852f-ec19e1c50110\\scratchpad\\cache\\02_annotations__bnei_reem_i4__nnUNet_raw_Dataset777_GCEF__labelsTr__nlm_volume.nii.gz.npy"
+ },
+ {
+  "rel": "02_annotations/bnei_reem_i4/original_annotations/annotations_i2.nii.gz",
+  "shape": [
+   650,
+   650,
+   652
+  ],
+  "dtype": "uint8",
+  "array_sha256": "2afa5b9a0da13dbd1975516603fc2b825c8050280fc8a87a2f7d26239d01563b",
+  "labels": {
+   "0": 270506146,
+   "1": 3578536,
+   "2": 10645,
+   "3": 188441,
+   "6": 1186232
+  },
+  "cache": "C:\\Users\\RONY~1.SCH\\AppData\\Local\\Temp\\52\\claude\\c261376e306a5e94\\67d63105-031f-4980-852f-ec19e1c50110\\scratchpad\\cache\\02_annotations__bnei_reem_i4__original_annotations__annotations_i2.nii.gz.npy"
+ },
+ {
+  "rel": "02_annotations/bnei_reem_i4/original_annotations/annotations_i3.nii.gz",
+  "shape": [
+   650,
+   650,
+   652
+  ],
+  "dtype": "uint8",
+  "array_sha256": "757ed7ada975e9d7923bb40122bdb09180fc3533c901df2c07a99745dfaa9fca",
+  "labels": {
+   "0": 268434066,
+   "1": 5130444,
+   "2": 40842,
+   "3": 252825,
+   "6": 1611823
+  },
+  "cache": "C:\\Users\\RONY~1.SCH\\AppData\\Local\\Temp\\52\\claude\\c261376e306a5e94\\67d63105-031f-4980-852f-ec19e1c50110\\scratchpad\\cache\\02_annotations__bnei_reem_i4__original_annotations__annotations_i3.nii.gz.npy"
+ },
+ {
+  "rel": "02_annotations/bnei_reem_i4/original_annotations/fine_tuning_annotations.nii.gz",
+  "shape": [
+   650,
+   650,
+   652
+  ],
+  "dtype": "uint8",
+  "array_sha256": "b0d04fd5ae397378d905e7f0a2263c919e2cf8811f11b0c48c34c40df72d37f3",
+  "labels": {
+   "0": 274643765,
+   "1": 605083,
+   "2": 22153,
+   "3": 15013,
+   "6": 183986
+  },
+  "cache": "C:\\Users\\RONY~1.SCH\\AppData\\Local\\Temp\\52\\claude\\c261376e306a5e94\\67d63105-031f-4980-852f-ec19e1c50110\\scratchpad\\cache\\02_annotations__bnei_reem_i4__original_annotations__fine_tuning_annotations.nii.gz.npy"
+ },
+ {
+  "rel": "02_annotations/bnei_reem_i4/registry_merged_GT/POM_GT.nii.gz",
+  "shape": [
+   650,
+   650,
+   652
+  ],
+  "dtype": "uint8",
+  "array_sha256": "e015dd96d832848f919ca176c7e1bb676eacc03b3fe0dd5dbc4cc3a23cf82301",
+  "labels": {
+   "0": 275334775,
+   "3": 135225
+  },
+  "cache": "C:\\Users\\RONY~1.SCH\\AppData\\Local\\Temp\\52\\claude\\c261376e306a5e94\\67d63105-031f-4980-852f-ec19e1c50110\\scratchpad\\cache\\02_annotations__bnei_reem_i4__registry_merged_GT__POM_GT.nii.gz.npy"
+ },
+ {
+  "rel": "02_annotations/bnei_reem_i4/registry_merged_GT/less_reliable_solid_pores_GT.nii.gz",
+  "shape": [
+   650,
+   650,
+   652
+  ],
+  "dtype": "uint8",
+  "array_sha256": "845a0d13dc564ea36e631b515e3f887bf7996a124c19f75baa4aecb2cbba485c",
+  "labels": {
+   "0": 272656493,
+   "1": 2007928,
+   "2": 3249,
+   "6": 801657,
+   "7": 329,
+   "8": 344
+  },
+  "cache": "C:\\Users\\RONY~1.SCH\\AppData\\Local\\Temp\\52\\claude\\c261376e306a5e94\\67d63105-031f-4980-852f-ec19e1c50110\\scratchpad\\cache\\02_annotations__bnei_reem_i4__registry_merged_GT__less_reliable_solid_pores_GT.nii.gz.npy"
+ },
+ {
+  "rel": "02_annotations/bnei_reem_i4/registry_merged_GT/merged_GT.nii.gz",
+  "shape": [
+   650,
+   650,
+   652
+  ],
+  "dtype": "uint8",
+  "array_sha256": "8125782ac434e7047e53b4ecbea04f7324f2958c9c607fd9cc31fb8237cf922b",
+  "labels": {
+   "0": 274199244,
+   "1": 321543,
+   "2": 3249,
+   "3": 135225,
+   "6": 810066,
+   "7": 329,
+   "8": 344
+  },
+  "cache": "C:\\Users\\RONY~1.SCH\\AppData\\Local\\Temp\\52\\claude\\c261376e306a5e94\\67d63105-031f-4980-852f-ec19e1c50110\\scratchpad\\cache\\02_annotations__bnei_reem_i4__registry_merged_GT__merged_GT.nii.gz.npy"
+ },
+ {
+  "rel": "02_annotations/mishmar_loess_i2/nnUNet_raw_Dataset777_GCEF/imagesTr/mishmar_hanegev_maoz_3_5p85um_0000.nii.gz",
+  "shape": [
+   1000,
+   1000,
+   98
+  ],
+  "dtype": "float32",
+  "array_sha256": "621e2cdfc540ca8213d9dd3dcf0ee6e518b569588219046a28435ed1e2e320cb",
+  "min": 0.09462115168571472,
+  "max": 1.0,
+  "mean": 0.6587078758655229,
+  "cache": "C:\\Users\\RONY~1.SCH\\AppData\\Local\\Temp\\52\\claude\\c261376e306a5e94\\67d63105-031f-4980-852f-ec19e1c50110\\scratchpad\\cache\\02_annotations__mishmar_loess_i2__nnUNet_raw_Dataset777_GCEF__imagesTr__mishmar_hanegev_maoz_3_5p85um_0000.nii.gz.npy"
+ },
+ {
+  "rel": "02_annotations/mishmar_loess_i2/nnUNet_raw_Dataset777_GCEF/labelsTr/mishmar_hanegev_maoz_3_5p85um.nii.gz",
+  "shape": [
+   1000,
+   1000,
+   98
+  ],
+  "dtype": "uint8",
+  "array_sha256": "8a8074b3da66ede3b1058bc54464cf44080fe81c33f937e8148977dd718f69f5",
+  "labels": {
+   "0": 1382645,
+   "1": 31918,
+   "2": 60836,
+   "5": 473735,
+   "6": 96050866
+  },
+  "cache": "C:\\Users\\RONY~1.SCH\\AppData\\Local\\Temp\\52\\claude\\c261376e306a5e94\\67d63105-031f-4980-852f-ec19e1c50110\\scratchpad\\cache\\02_annotations__mishmar_loess_i2__nnUNet_raw_Dataset777_GCEF__labelsTr__mishmar_hanegev_maoz_3_5p85um.nii.gz.npy"
+ },
+ {
+  "rel": "02_annotations/mishmar_loess_i2/original_annotations/mishmar_hanegev_maoz_3_5p85um-1.nii.gz",
+  "shape": [
+   1000,
+   1000,
+   1000
+  ],
+  "dtype": "uint8",
+  "array_sha256": "58132421280e6ea02e401e6dca81a8e56d816613bbd7587949b9c9636044ee01",
+  "labels": {
+   "0": 998927822,
+   "1": 748110,
+   "2": 15671,
+   "3": 43924,
+   "6": 264473
+  },
+  "cache": "C:\\Users\\RONY~1.SCH\\AppData\\Local\\Temp\\52\\claude\\c261376e306a5e94\\67d63105-031f-4980-852f-ec19e1c50110\\scratchpad\\cache\\02_annotations__mishmar_loess_i2__original_annotations__mishmar_hanegev_maoz_3_5p85um-1.nii.gz.npy"
+ },
+ {
+  "rel": "02_annotations/mishmar_loess_i2/original_annotations/mishmar_hanegev_maoz_3_5p85um.nii.gz",
+  "shape": [
+   1000,
+   1000,
+   1000
+  ],
+  "dtype": "uint8",
+  "array_sha256": "74407a937ef4128ff1bdbe5d28c690650733524f967c6fb7805029b6bb3cd11c",
+  "labels": {
+   "0": 998050866,
+   "1": 1382645,
+   "2": 31918,
+   "3": 60836,
+   "6": 473735
+  },
+  "cache": "C:\\Users\\RONY~1.SCH\\AppData\\Local\\Temp\\52\\claude\\c261376e306a5e94\\67d63105-031f-4980-852f-ec19e1c50110\\scratchpad\\cache\\02_annotations__mishmar_loess_i2__original_annotations__mishmar_hanegev_maoz_3_5p85um.nii.gz.npy"
+ },
+ {
+  "rel": "03_models/bnei_reem_i4/nnUNetTrainer_betterIgnoreSampling_earlyStopValLoss_lowlr__nnUNetPlans__3d_fullres/fold_0/validation/nlm_volume.nii.gz",
+  "shape": [
+   650,
+   650,
+   99
+  ],
+  "dtype": "uint8",
+  "array_sha256": "e2c7471295e9159f1d83f97763038a0ab773e9092eba819c69d4b870314c6cff",
+  "labels": {
+   "0": 30984525,
+   "1": 815393,
+   "2": 458902,
+   "5": 9568680
+  },
+  "cache": "C:\\Users\\RONY~1.SCH\\AppData\\Local\\Temp\\52\\claude\\c261376e306a5e94\\67d63105-031f-4980-852f-ec19e1c50110\\scratchpad\\cache\\03_models__bnei_reem_i4__nnUNetTrainer_betterIgnoreSampling_earlyStopValLoss_lowlr__nnUNetPlans__3d_fullres__fold_0__validation__nlm_volume.nii.gz.npy"
+ },
+ {
+  "rel": "03_models/mishmar_loess_i2/nnUNetTrainer_betterIgnoreSampling_earlyStopValLoss__nnUNetPlans__3d_fullres/fold_0/validation/mishmar_hanegev_maoz_3_5p85um.nii.gz",
+  "shape": [
+   1000,
+   1000,
+   98
+  ],
+  "dtype": "uint8",
+  "array_sha256": "19571437465ccae46f806e019ff7b95bb7ce370fb84d3e22e05673b3adce70b4",
+  "labels": {
+   "0": 68372039,
+   "1": 1545199,
+   "2": 2997308,
+   "5": 25085454
+  },
+  "cache": "C:\\Users\\RONY~1.SCH\\AppData\\Local\\Temp\\52\\claude\\c261376e306a5e94\\67d63105-031f-4980-852f-ec19e1c50110\\scratchpad\\cache\\03_models__mishmar_loess_i2__nnUNetTrainer_betterIgnoreSampling_earlyStopValLoss__nnUNetPlans__3d_fullres__fold_0__validation__mishmar_hanegev_maoz_3_5p85um.nii.gz.npy"
+ }
+]

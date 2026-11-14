@@ -1,0 +1,212 @@
+{
+ "bnei_reem_fresh_bnei_reem_i4": {
+  "transform_applied_to_fresh": {
+   "perm": [
+    2,
+    1,
+    0
+   ],
+   "flips": [
+    false,
+    true,
+    false
+   ]
+  },
+  "packaged_vs_fresh": {
+   "voxel_agreement_pct": 99.99880785566486,
+   "n_diff": 3284,
+   "dice_5": 0.9999789100453031,
+   "dice_2": 0.9999197669429166,
+   "dice_1": 0.9999401265280029,
+   "fractions_pct": {
+    "0": [
+     75.44076015537082,
+     75.44077467600829
+    ],
+    "1": [
+     2.1038777362326204,
+     2.103879914328239
+    ],
+    "2": [
+     0.818942534577268,
+     0.8189330961629215
+    ],
+    "5": [
+     21.63641957381929,
+     21.636412313500564
+    ]
+   },
+   "max_fraction_diff_pp": 1.452063746398835e-05,
+   "status": "VERIFIED (re-inference match)"
+  },
+  "share_vs_fresh_share_orientation": {
+   "voxel_agreement_pct": 99.99880785566486,
+   "n_diff": 3284,
+   "dice_5": 0.9999789100453031,
+   "dice_2": 0.9999197669429166,
+   "dice_1": 0.9999401265280029,
+   "fractions_pct": {
+    "0": [
+     75.44076015537082,
+     75.44077467600829
+    ],
+    "1": [
+     2.1038777362326204,
+     2.103879914328239
+    ],
+    "2": [
+     0.818942534577268,
+     0.8189330961629215
+    ],
+    "5": [
+     21.63641957381929,
+     21.636412313500564
+    ]
+   },
+   "max_fraction_diff_pp": 1.452063746398835e-05,
+   "status": "VERIFIED (re-inference match)"
+  },
+  "fresh_identical_to_share": false,
+  "png": "E:\\PROJECTS\\Yael_Mishael\\Rony\\handoff\\_evidence_followup_2026-11\\C5_bnei_reem_fresh_bnei_reem_i4.png"
+ },
+ "mishmar_hanegev_maoz_3_5p85um": {
+  "transform_applied_to_fresh": {
+   "perm": [
+    0,
+    1,
+    2
+   ],
+   "flips": [
+    false,
+    true,
+    false
+   ]
+  },
+  "packaged_vs_fresh": {
+   "voxel_agreement_pct": 99.9991576,
+   "n_diff": 8424,
+   "dice_5": 0.9999870018516268,
+   "dice_2": 0.9999720067817907,
+   "dice_1": 0.9999548173313917,
+   "fractions_pct": {
+    "0": [
+     70.22917029999999,
+     70.2291726
+    ],
+    "1": [
+     1.1176847,
+     1.1176857
+    ],
+    "2": [
+     1.6146797000000002,
+     1.6146739
+    ],
+    "5": [
+     27.0384653,
+     27.0384678
+    ]
+   },
+   "max_fraction_diff_pp": 5.8000000000557606e-06,
+   "status": "VERIFIED (re-inference match)"
+  },
+  "share_vs_fresh_share_orientation": {
+   "voxel_agreement_pct": 99.9991576,
+   "n_diff": 8424,
+   "dice_5": 0.9999870018516268,
+   "dice_2": 0.9999720067817907,
+   "dice_1": 0.9999548173313917,
+   "fractions_pct": {
+    "0": [
+     70.22917029999999,
+     70.2291726
+    ],
+    "1": [
+     1.1176847,
+     1.1176857
+    ],
+    "2": [
+     1.6146797000000002,
+     1.6146739
+    ],
+    "5": [
+     27.0384653,
+     27.0384678
+    ]
+   },
+   "max_fraction_diff_pp": 5.8000000000557606e-06,
+   "status": "VERIFIED (re-inference match)"
+  },
+  "fresh_identical_to_share": false,
+  "png": "E:\\PROJECTS\\Yael_Mishael\\Rony\\handoff\\_evidence_followup_2026-11\\C5_mishmar_hanegev_maoz_3_5p85um.png"
+ },
+ "mishmar_hanegev_maoz_2_8p8um": {
+  "transform_applied_to_fresh": {
+   "perm": [
+    0,
+    1,
+    2
+   ],
+   "flips": [
+    false,
+    true,
+    false
+   ]
+  },
+  "packaged_vs_fresh": {
+   "voxel_agreement_pct": 99.99912090000001,
+   "n_diff": 8791,
+   "dice_5": 0.9999835168308309,
+   "dice_2": 0.9999675300656529,
+   "dice_1": 0.9999440920636062,
+   "fractions_pct": {
+    "0": [
+     74.69588689999999,
+     74.69588259999999
+    ],
+    "1": [
+     0.6770059,
+     0.6770058
+    ],
+    "2": [
+     1.6430595,
+     1.6430574
+    ],
+    "5": [
+     22.984047699999998,
+     22.9840542
+    ]
+   },
+   "max_fraction_diff_pp": 6.500000001352646e-06,
+   "status": "VERIFIED (re-inference match)"
+  },
+  "share_vs_fresh_share_orientation": {
+   "voxel_agreement_pct": 99.99912090000001,
+   "n_diff": 8791,
+   "dice_5": 0.9999835168308309,
+   "dice_2": 0.9999675300656529,
+   "dice_1": 0.9999440920636062,
+   "fractions_pct": {
+    "0": [
+     74.69588689999999,
+     74.69588259999999
+    ],
+    "1": [
+     0.6770059,
+     0.6770058
+    ],
+    "2": [
+     1.6430595,
+     1.6430574
+    ],
+    "5": [
+     22.984047699999998,
+     22.9840542
+    ]
+   },
+   "max_fraction_diff_pp": 6.500000001352646e-06,
+   "status": "VERIFIED (re-inference match)"
+  },
+  "fresh_identical_to_share": false,
+  "png": "E:\\PROJECTS\\Yael_Mishael\\Rony\\handoff\\_evidence_followup_2026-11\\C5_mishmar_hanegev_maoz_2_8p8um.png"
+ }
+}

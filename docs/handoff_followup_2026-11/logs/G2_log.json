@@ -1,0 +1,226 @@
+{
+ "moved": [
+  {
+   "path": "05_analysis_outputs/connectivity/Topology_Metrics_Aug2026/bnei_reem_specB_visual_evidence/canonical_napari_3d_screenshot.png",
+   "to": "E:\\PROJECTS\\Yael_Mishael\\Rony\\handoff\\_removed_from_v2_2026-11\\05_analysis_outputs\\connectivity\\Topology_Metrics_Aug2026\\bnei_reem_specB_visual_evidence\\canonical_napari_3d_screenshot.png",
+   "bytes": 4021,
+   "sha256": "921fb7b215edb75f01c2967358a16475819da1d06acde7a2871a68d3bf10fe12"
+  },
+  {
+   "path": "05_analysis_outputs/connectivity/Topology_Metrics_Aug2026/bnei_reem_specB_visual_evidence/specB_napari_3d_screenshot.png",
+   "to": "E:\\PROJECTS\\Yael_Mishael\\Rony\\handoff\\_removed_from_v2_2026-11\\05_analysis_outputs\\connectivity\\Topology_Metrics_Aug2026\\bnei_reem_specB_visual_evidence\\specB_napari_3d_screenshot.png",
+   "bytes": 4021,
+   "sha256": "921fb7b215edb75f01c2967358a16475819da1d06acde7a2871a68d3bf10fe12"
+  },
+  {
+   "path": "06_figures/selected_outputs/mishmar_hanegev2_slice_exports/_terminal_probe.txt",
+   "to": "E:\\PROJECTS\\Yael_Mishael\\Rony\\handoff\\_removed_from_v2_2026-11\\06_figures\\selected_outputs\\mishmar_hanegev2_slice_exports\\_terminal_probe.txt",
+   "bytes": 0,
+   "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  }
+ ],
+ "added": [
+  {
+   "path": "05_analysis_outputs/connectivity/Topology_Metrics_Aug2026/raw/psd_diag_20260829T164703_mishmar_hanegev_maoz_2_8p8um_native/README.md",
+   "sha256": "ff4a889032992887a7287a1efd432b5c80614d1daccfba5a328d4135f61974db",
+   "text": "Tortuosity failed in this run (pyamg int32 error) and was not re-run, so `extended_tortuosity.png` here is empty; the write-up's tortuosity comes from the 200³ subvolume run (`05_analysis_outputs/tortuosity_subvolumes_20261004/`)."
+  },
+  {
+   "path": "05_analysis_outputs/connectivity/Topology_Metrics_Aug2026/raw/psd_diag_20260902T215639_mishmar_second_8p8um_label_downsample_15um/README.md",
+   "sha256": "ff4a889032992887a7287a1efd432b5c80614d1daccfba5a328d4135f61974db",
+   "text": "Tortuosity failed in this run (pyamg int32 error) and was not re-run, so `extended_tortuosity.png` here is empty; the write-up's tortuosity comes from the 200³ subvolume run (`05_analysis_outputs/tortuosity_subvolumes_20261004/`)."
+  }
+ ],
+ "edited": [
+  {
+   "path": "01_volumes/Rehovot_samp2_highkV_Cu0.11_15um/README.md",
+   "path_tokens_replaced": 2,
+   "special_edits": 0,
+   "sha256_before": "26ccb3eb239465a04a4ee23975e8ae36f7e9aef5973b8e90a9c06a332401a5a5",
+   "sha256_after": "a4fb5161f3918e54bd0b3a1772199406a7384c185a29e23eaa0c88a281ff1b9d",
+   "backup": "E:\\PROJECTS\\Yael_Mishael\\Rony\\handoff\\_pre_G_backup_2026-11\\01_volumes\\Rehovot_samp2_highkV_Cu0.11_15um\\README.md",
+   "token_map": {
+    "`06_reporting/missing_data_20261004/REPORT.md`": "`docs/missing_data_20261004_REPORT.md`"
+   }
+  },
+  {
+   "path": "01_volumes/Rehovot_samp3_highkV_Cu0.11_15um/README.md",
+   "path_tokens_replaced": 1,
+   "special_edits": 0,
+   "sha256_before": "9328d25df8fd155f372570184e961d4e94d4f402a1d0614a60643fa8bd81905e",
+   "sha256_after": "1ce42fb9a82f58cd5b481f9de4c1bb94b60ba86d9a3b768ec4119985a00b2dce",
+   "backup": "E:\\PROJECTS\\Yael_Mishael\\Rony\\handoff\\_pre_G_backup_2026-11\\01_volumes\\Rehovot_samp3_highkV_Cu0.11_15um\\README.md",
+   "token_map": {
+    "`06_reporting/missing_data_20261004/REPORT.md`": "`docs/missing_data_20261004_REPORT.md`"
+   }
+  },
+  {
+   "path": "01_volumes/bnei_reem_fresh_bnei_reem_i4/README.md",
+   "path_tokens_replaced": 2,
+   "special_edits": 0,
+   "sha256_before": "e6584e5fb0f1fff9ecff35c88fb41459cc18750f55abbda7bde575e4cf779fb8",
+   "sha256_after": "0b1750044857ef2b779cf1ad8bde0ca5eba86d35d023e7c46ca874af8d1d5e98",
+   "backup": "E:\\PROJECTS\\Yael_Mishael\\Rony\\handoff\\_pre_G_backup_2026-11\\01_volumes\\bnei_reem_fresh_bnei_reem_i4\\README.md",
+   "token_map": {
+    "`00_docs/reports/ct_scan_parameters_findings.md`": "`docs/ct_scan_parameters_findings.md`",
+    "`05_evaluation/psd/pom_analysis_20260829_roi_expansion/part1_margin_report.json`": "`archive/5_analysis/pom_clustering_retired/pom_analysis_20260829_roi_expansion/part1_margin_report.json`"
+   }
+  },
+  {
+   "path": "01_volumes/bnei_reem_specA_unified/README.md",
+   "path_tokens_replaced": 5,
+   "special_edits": 0,
+   "sha256_before": "801e382de870709bf9d517ecb8a3bdaea8307182c59a66214b2bff285ab708c4",
+   "sha256_after": "f94993be167fc05f15639d7dea7d5445460836bc450aee0d23b6b0d8b9497566",
+   "backup": "E:\\PROJECTS\\Yael_Mishael\\Rony\\handoff\\_pre_G_backup_2026-11\\01_volumes\\bnei_reem_specA_unified\\README.md",
+   "token_map": {
+    "`04_inference/scripts/run_bnei_reem_unified_pipeline.py`": "`4_inference/vertisol/run_bnei_reem_unified_pipeline.py`",
+    "`02_preprocessing/filters/normalization.py`": "`2_preprocessing/denoise_normalize/normalization.py`",
+    "`00_docs/reports/ct_scan_parameters_findings.md`": "`docs/ct_scan_parameters_findings.md`",
+    "`02_preprocessing/filters/gpu_nlm_torch.py`": "`2_preprocessing/denoise_normalize/gpu_nlm_torch.py`",
+    "`04_inference/postprocessing_nnUNet_predict_concatenate.py`": "`4_inference/postprocessing_nnUNet_predict_concatenate.py`"
+   }
+  },
+  {
+   "path": "01_volumes/bnei_reem_specB_unified/README.md",
+   "path_tokens_replaced": 4,
+   "special_edits": 0,
+   "sha256_before": "108603b562985d6cbc10681f113aa80f52b611614f90c1bf6bba598c5e11a431",
+   "sha256_after": "6346a2ebbf0cace45e45b4d1b36fd91a8a26bc1f01eb979f43eef847ebb0a0e7",
+   "backup": "E:\\PROJECTS\\Yael_Mishael\\Rony\\handoff\\_pre_G_backup_2026-11\\01_volumes\\bnei_reem_specB_unified\\README.md",
+   "token_map": {
+    "`04_inference/scripts/run_bnei_reem_unified_pipeline.py`": "`4_inference/vertisol/run_bnei_reem_unified_pipeline.py`",
+    "`02_preprocessing/filters/normalization.py`": "`2_preprocessing/denoise_normalize/normalization.py`",
+    "`00_docs/reports/ct_scan_parameters_findings.md`": "`docs/ct_scan_parameters_findings.md`",
+    "`02_preprocessing/filters/gpu_nlm_torch.py`": "`2_preprocessing/denoise_normalize/gpu_nlm_torch.py`"
+   }
+  },
+  {
+   "path": "01_volumes/mishmar_hanegev_maoz_2_8p8um/README.md",
+   "path_tokens_replaced": 2,
+   "special_edits": 1,
+   "sha256_before": "c98223737a07736421d31d6213899a5be27940809a11da3629e56f70f61a1287",
+   "sha256_after": "da916d425385c02267edb974bc3508daab10339f11c0fa80ac449ef8fe9474bb",
+   "backup": "E:\\PROJECTS\\Yael_Mishael\\Rony\\handoff\\_pre_G_backup_2026-11\\01_volumes\\mishmar_hanegev_maoz_2_8p8um\\README.md",
+   "token_map": {
+    "`06_reporting/missing_data_20261004/REPORT.md`": "`docs/missing_data_20261004_REPORT.md`",
+    "`00_docs/reports/ct_scan_parameters_findings.md`": "`docs/ct_scan_parameters_findings.md`"
+   }
+  },
+  {
+   "path": "01_volumes/mishmar_hanegev_maoz_3_5p85um/README.md",
+   "path_tokens_replaced": 3,
+   "special_edits": 0,
+   "sha256_before": "638e0b6ae213eb3b1775f7b65a6c830a0176e5081297b7f70c9f9755e8699e94",
+   "sha256_after": "75ceecb7c85a72b687e91bb50ed0997434b1a8d02ec35cb09f68ee0fc85277f0",
+   "backup": "E:\\PROJECTS\\Yael_Mishael\\Rony\\handoff\\_pre_G_backup_2026-11\\01_volumes\\mishmar_hanegev_maoz_3_5p85um\\README.md",
+   "token_map": {
+    "`06_reporting/missing_data_20261004/REPORT.md`": "`docs/missing_data_20261004_REPORT.md`",
+    "`00_docs/reports/ct_scan_parameters_findings.md`": "`docs/ct_scan_parameters_findings.md`",
+    "`05_evaluation/psd/pom_analysis_20260829_roi_expansion/part2_driver_run_log.txt`": "`4_inference/loess/resolution_matching_15um/roi_expansion/part2_driver_run_log.txt`"
+   }
+  },
+  {
+   "path": "02_annotations/bnei_reem_i4/README.md",
+   "path_tokens_replaced": 4,
+   "special_edits": 0,
+   "sha256_before": "fb50d9c55a202dfc2c731bf66bf96abc89a216d67e5fcc547465f4f09573ee75",
+   "sha256_after": "377e5ea5a12147c967df0e44072a171dfd20c14e86e14d73f6a5d038d6259da0",
+   "backup": "E:\\PROJECTS\\Yael_Mishael\\Rony\\handoff\\_pre_G_backup_2026-11\\02_annotations\\bnei_reem_i4\\README.md",
+   "token_map": {
+    "`01_data_ingestion/registry/data_registry.json`": "`1_annotation/data_registry.json`",
+    "`02_preprocessing/nnunet/preprocessing_nnUNet_train.py`": "`2_preprocessing/nnunet_dataset/preprocessing_nnUNet_train.py`",
+    "`03_training/nnUNetTrainer_betterIgnoreSampling.py`": "`3_training/nnUNetTrainer_betterIgnoreSampling.py`",
+    "`03_training/run_configs/VERIFIED.md`": "`3_training/run_configs_VERIFIED.md`"
+   }
+  },
+  {
+   "path": "02_annotations/mishmar_loess_i2/README.md",
+   "path_tokens_replaced": 3,
+   "special_edits": 0,
+   "sha256_before": "738338bc5b4a05fa4d6be658b2b9d45475893a9b96b078dce3c165e43073f37d",
+   "sha256_after": "498bb0e8f22a506d255909cdca479c1cca7a344f73ae2e408612f0c52ecf0ba3",
+   "backup": "E:\\PROJECTS\\Yael_Mishael\\Rony\\handoff\\_pre_G_backup_2026-11\\02_annotations\\mishmar_loess_i2\\README.md",
+   "token_map": {
+    "`02_preprocessing/nnunet/preprocessing_nnUNet_train.py`": "`2_preprocessing/nnunet_dataset/preprocessing_nnUNet_train.py`",
+    "`03_training/nnUNetTrainer_betterIgnoreSampling.py`": "`3_training/nnUNetTrainer_betterIgnoreSampling.py`",
+    "`03_training/run_configs/VERIFIED.md`": "`3_training/run_configs_VERIFIED.md`"
+   }
+  },
+  {
+   "path": "03_models/bnei_reem_i4/README.md",
+   "path_tokens_replaced": 3,
+   "special_edits": 1,
+   "sha256_before": "eabc18073ca82e79941cadd07d87deef210a96f4fde7c4f888b36dfa22b7e7a5",
+   "sha256_after": "3cd39c3bcfdd063c899aa1c6c19c84d324e82fcf6d20679674a9f26d8c652990",
+   "backup": "E:\\PROJECTS\\Yael_Mishael\\Rony\\handoff\\_pre_G_backup_2026-11\\03_models\\bnei_reem_i4\\README.md",
+   "token_map": {
+    "`06_reporting/missing_data_20261004/REPORT.md`": "`docs/missing_data_20261004_REPORT.md`",
+    "`04_inference/postprocessing_nnUNet_predict_concatenate.py`": "`4_inference/postprocessing_nnUNet_predict_concatenate.py`",
+    "`04_inference/scripts/run_inference.py`": "`4_inference/run_inference.py`"
+   }
+  },
+  {
+   "path": "03_models/mishmar_loess_i2/README.md",
+   "path_tokens_replaced": 2,
+   "special_edits": 1,
+   "sha256_before": "a21916c32b37a4b9753334b425432f739226357065d5be3e5a4d95911a4bdd98",
+   "sha256_after": "6a2ecb243b03ef062458bdfe14c3f0a181ee70e697652f8356939cbaa02bc13e",
+   "backup": "E:\\PROJECTS\\Yael_Mishael\\Rony\\handoff\\_pre_G_backup_2026-11\\03_models\\mishmar_loess_i2\\README.md",
+   "token_map": {
+    "`04_inference/postprocessing_nnUNet_predict_concatenate.py`": "`4_inference/postprocessing_nnUNet_predict_concatenate.py`",
+    "`04_inference/scripts/run_inference.py`": "`4_inference/run_inference.py`"
+   }
+  },
+  {
+   "path": "05_analysis_outputs/README.md",
+   "path_tokens_replaced": 5,
+   "special_edits": 1,
+   "sha256_before": "66d4702bd3120054dfbc08fb0d835b862a40703136be1207015538548b8dfb0f",
+   "sha256_after": "2884ebe78119774d1c9bb9e6e553ba55dcbe633c8f97a469dd774770c6e7becb",
+   "backup": "E:\\PROJECTS\\Yael_Mishael\\Rony\\handoff\\_pre_G_backup_2026-11\\05_analysis_outputs\\README.md",
+   "token_map": {
+    "`05_evaluation/psd/run_psd_diagnostics.py`": "`5_analysis/shared_code/run_psd_diagnostics.py`",
+    "`05_evaluation/psd/pore_metrics_research/compute_chi_r_sweep.py`": "`5_analysis/connectivity/compute_chi_r_sweep.py`",
+    "`05_evaluation/psd/psd_topology_metrics.py`": "`5_analysis/shared_code/psd_topology_metrics.py`",
+    "`05_evaluation/psd/pore_metrics_research/compute_rehovot_distance_metrics.py`": "`5_analysis/distance_maps/compute_rehovot_distance_metrics.py`",
+    "`05_evaluation/psd/pore_metrics_research/make_comparison_figure.py`": "`5_analysis/distance_maps/make_comparison_figure.py`"
+   }
+  },
+  {
+   "path": "05_analysis_outputs/connectivity/Topology_Metrics_Aug2026/bnei_reem_specB_visual_evidence/README.md",
+   "path_tokens_replaced": 0,
+   "special_edits": 1,
+   "sha256_before": "a638050d2107194377480081a535d8e5c771a46325ea5a27250f0684e4f8aa54",
+   "sha256_after": "37d861211b3395a71e04ef5585e8765471dffe4f680f611f05b1be3ffb9fb227",
+   "backup": "E:\\PROJECTS\\Yael_Mishael\\Rony\\handoff\\_pre_G_backup_2026-11\\05_analysis_outputs\\connectivity\\Topology_Metrics_Aug2026\\bnei_reem_specB_visual_evidence\\README.md",
+   "token_map": {}
+  },
+  {
+   "path": "06_figures/README.md",
+   "path_tokens_replaced": 2,
+   "special_edits": 2,
+   "sha256_before": "ff4f6786516bfd432d2b4641c799a9c57e94c4a136540fa1161b1f3f8bfad745",
+   "sha256_after": "8a5d9e1b5a300d2a6b70f0046c350464509ae30d71c3fecaedfc92b9ab9147b4",
+   "backup": "E:\\PROJECTS\\Yael_Mishael\\Rony\\handoff\\_pre_G_backup_2026-11\\06_figures\\README.md",
+   "token_map": {
+    "`06_reporting/scripts/aggregate_training_diagnostics.py`": "`3_training/training_plots/aggregate_training_diagnostics.py`",
+    "`06_reporting/scripts/make_synopsis.py`": "`archive/6_figures/make_synopsis.py`"
+   }
+  },
+  {
+   "path": "README.md",
+   "path_tokens_replaced": 4,
+   "special_edits": 3,
+   "sha256_before": "68164855fdb7ef2f8b6fd3ae5c75582bdd2a5bc982c70ffd3cdb11cea0f846c7",
+   "sha256_after": "ed2703e4220a254cae34d347356c9492f10be88fa62fbc77c7524b426bdf4c02",
+   "backup": "E:\\PROJECTS\\Yael_Mishael\\Rony\\handoff\\_pre_G_backup_2026-11\\README.md",
+   "token_map": {
+    "`02_preprocessing/filters/normalization.py`": "`2_preprocessing/denoise_normalize/normalization.py`",
+    "`02_preprocessing/filters/run_preprocess.py`": "`2_preprocessing/denoise_normalize/run_preprocess.py`",
+    "`04_inference/scripts/run_bnei_reem_unified_pipeline.py`": "`4_inference/vertisol/run_bnei_reem_unified_pipeline.py`",
+    "`04_inference/scripts/run_inference.py`": "`4_inference/run_inference.py`"
+   }
+  }
+ ]
+}

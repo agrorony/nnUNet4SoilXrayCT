@@ -1,0 +1,35 @@
+manifest: 1195 files ({'unchanged': 1138, 'changed': 34, 'added': 23}); removed vs v1: 4
+zip written 16099070658 4a747fbfed8cc372a27f3f823329b23cab0214daea8f18d4f79545dba845c26c
+{
+ "zip": "E:\\PROJECTS\\Yael_Mishael\\Rony\\handoff\\Schwartz_soil_uCT_handoff_2026-11_v2.zip",
+ "bytes": 16099070658,
+ "sha256": "4a747fbfed8cc372a27f3f823329b23cab0214daea8f18d4f79545dba845c26c",
+ "entries": 1196,
+ "files_in_manifest": 1195,
+ "content_bytes": 16907947743,
+ "manifest_kinds": {
+  "unchanged": 1138,
+  "changed": 34,
+  "added": 23
+ },
+ "removed_vs_v1": [
+  "04_code/nnUNet4SoilXrayCT_198c5b5.zip",
+  "05_analysis_outputs/connectivity/Topology_Metrics_Aug2026/bnei_reem_specB_visual_evidence/canonical_napari_3d_screenshot.png",
+  "05_analysis_outputs/connectivity/Topology_Metrics_Aug2026/bnei_reem_specB_visual_evidence/specB_napari_3d_screenshot.png",
+  "06_figures/selected_outputs/mishmar_hanegev2_slice_exports/_terminal_probe.txt"
+ ],
+ "testzip": null,
+ "zip_list_equals_manifest": true,
+ "n_readmes": 23,
+ "random_files": [
+  "03_models/mishmar_loess_i2/nnUNetTrainer_betterIgnoreSampling_earlyStopValLoss__nnUNetPlans__3d_fullres/fold_0/validation/mishmar_hanegev_maoz_3_5p85um.nii.gz",
+  "05_analysis_outputs/pom/pom_analysis_20260826_final_shape/mishmar_label_downsample_2/clustering_silhouette_vs_k_final.png",
+  "06_figures/synopsis_outputs/synopsis_i3/slice_0321.png",
+  "06_figures/render3d_mishmar_5p85_20261012/logs/final_3.log",
+  "06_figures/selected_outputs/mishmar_hanegev2_slice_exports/mishmar_hanegev_Cu011_samp_2_Rec_nlm/slice_0086_triplet.png"
+ ],
+ "rehash_checked": 29,
+ "rehash_ok": 29,
+ "manifest_v1_backup": "E:\\PROJECTS\\Yael_Mishael\\Rony\\handoff\\_pre_H_backup_2026-11\\MANIFEST_v1.csv"
+}
+exit 0

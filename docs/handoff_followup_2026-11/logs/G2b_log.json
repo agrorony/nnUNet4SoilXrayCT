@@ -1,0 +1,86 @@
+[
+ {
+  "path": "05_analysis_outputs/connectivity/Topology_Metrics_Aug2026/raw/psd_diag_20260829T164703_mishmar_hanegev_maoz_2_8p8um_native/README.md",
+  "edits": [
+   [
+    "`05_analysis_outputs/tortuosity_subvolumes_20261004/`",
+    "`05_analysis_outputs/tortuosity/tortuosity_subvolumes_20261004/`"
+   ]
+  ],
+  "sha256_before": "ff4a889032992887a7287a1efd432b5c80614d1daccfba5a328d4135f61974db",
+  "sha256_after": "6bbdb6c30ae185a1f50d6c8e7738220aaf09064a8e1be7f1a7a085968d6ae815",
+  "backup": "E:\\PROJECTS\\Yael_Mishael\\Rony\\handoff\\_pre_G2b_backup_2026-11\\05_analysis_outputs\\connectivity\\Topology_Metrics_Aug2026\\raw\\psd_diag_20260829T164703_mishmar_hanegev_maoz_2_8p8um_native\\README.md"
+ },
+ {
+  "path": "05_analysis_outputs/connectivity/Topology_Metrics_Aug2026/raw/psd_diag_20260902T215639_mishmar_second_8p8um_label_downsample_15um/README.md",
+  "edits": [
+   [
+    "`05_analysis_outputs/tortuosity_subvolumes_20261004/`",
+    "`05_analysis_outputs/tortuosity/tortuosity_subvolumes_20261004/`"
+   ]
+  ],
+  "sha256_before": "ff4a889032992887a7287a1efd432b5c80614d1daccfba5a328d4135f61974db",
+  "sha256_after": "6bbdb6c30ae185a1f50d6c8e7738220aaf09064a8e1be7f1a7a085968d6ae815",
+  "backup": "E:\\PROJECTS\\Yael_Mishael\\Rony\\handoff\\_pre_G2b_backup_2026-11\\05_analysis_outputs\\connectivity\\Topology_Metrics_Aug2026\\raw\\psd_diag_20260902T215639_mishmar_second_8p8um_label_downsample_15um\\README.md"
+ },
+ {
+  "path": "01_volumes/bnei_reem_fresh_bnei_reem_i4/README.md",
+  "edits": [
+   [
+    "`05_evaluation/psd/full_volume_batch/logs/nlm_volume_fresh_bnei_reem_i4.log`",
+    "`05_evaluation/psd/full_volume_batch/logs/nlm_volume_fresh_bnei_reem_i4.log` (run log on the lab computer, in the pre-2026-11 working tree; never in git)"
+   ]
+  ],
+  "sha256_before": "0b1750044857ef2b779cf1ad8bde0ca5eba86d35d023e7c46ca874af8d1d5e98",
+  "sha256_after": "df765a9b8266570292ebd70cab823528f4445a816291fb33e204f3ac9d2e7b10",
+  "backup": "E:\\PROJECTS\\Yael_Mishael\\Rony\\handoff\\_pre_G2b_backup_2026-11\\01_volumes\\bnei_reem_fresh_bnei_reem_i4\\README.md"
+ },
+ {
+  "path": "01_volumes/mishmar_hanegev_maoz_3_5p85um/README.md",
+  "edits": [
+   [
+    "`05_evaluation/psd/full_volume_batch/logs/mishmar_hanegev_maoz_3_5p85um_scratch_i2.log`",
+    "`05_evaluation/psd/full_volume_batch/logs/mishmar_hanegev_maoz_3_5p85um_scratch_i2.log` (run log on the lab computer, in the pre-2026-11 working tree; never in git)"
+   ]
+  ],
+  "sha256_before": "75ceecb7c85a72b687e91bb50ed0997434b1a8d02ec35cb09f68ee0fc85277f0",
+  "sha256_after": "89c75220e7943ea4ea5fc84c60d8cebf7f5439a744b3161059e4e5385096dbc2",
+  "backup": "E:\\PROJECTS\\Yael_Mishael\\Rony\\handoff\\_pre_G2b_backup_2026-11\\01_volumes\\mishmar_hanegev_maoz_3_5p85um\\README.md"
+ },
+ {
+  "path": "02_annotations/bnei_reem_i4/README.md",
+  "edits": [
+   [
+    "(`03_training/run_configs/*.yaml`, `preprocessing_nnUNet_train.py`)",
+    "(`3_training/vertisol_i4/fresh_bnei_reem_i4.yaml`, `preprocessing_nnUNet_train.py`)"
+   ]
+  ],
+  "sha256_before": "377e5ea5a12147c967df0e44072a171dfd20c14e86e14d73f6a5d038d6259da0",
+  "sha256_after": "89870735572fd8948e1c1816a85a8365e24f63c404765789f35be775e29be437",
+  "backup": "E:\\PROJECTS\\Yael_Mishael\\Rony\\handoff\\_pre_G2b_backup_2026-11\\02_annotations\\bnei_reem_i4\\README.md"
+ },
+ {
+  "path": "02_annotations/mishmar_loess_i2/README.md",
+  "edits": [
+   [
+    "(`03_training/run_configs/*.yaml`, `preprocessing_nnUNet_train.py`)",
+    "(`3_training/loess_i2/mishmar_hanegev_maoz_3_5p85um_loess_i2.yaml`, `preprocessing_nnUNet_train.py`)"
+   ]
+  ],
+  "sha256_before": "498bb0e8f22a506d255909cdca479c1cca7a344f73ae2e408612f0c52ecf0ba3",
+  "sha256_after": "9b0109f47164116f4a1ae1e4e5891438d95084cae225f50d6ff50551e4cf863c",
+  "backup": "E:\\PROJECTS\\Yael_Mishael\\Rony\\handoff\\_pre_G2b_backup_2026-11\\02_annotations\\mishmar_loess_i2\\README.md"
+ },
+ {
+  "path": "05_analysis_outputs/README.md",
+  "edits": [
+   [
+    "`05_evaluation/psd/fig4_inference_20260815/scripts/extract_subvolumes.py`",
+    "`5_analysis/pore_size_distribution/scripts/extract_subvolumes.py`"
+   ]
+  ],
+  "sha256_before": "2884ebe78119774d1c9bb9e6e553ba55dcbe633c8f97a469dd774770c6e7becb",
+  "sha256_after": "f43b39e7dc60f8379f6b74f3088402f58c36dcd53f7bb9aecac4eed7652d8886",
+  "backup": "E:\\PROJECTS\\Yael_Mishael\\Rony\\handoff\\_pre_G2b_backup_2026-11\\05_analysis_outputs\\README.md"
+ }
+]
