@@ -1,0 +1,115 @@
+{
+ "zip": "E:\\PROJECTS\\Yael_Mishael\\Rony\\handoff\\Schwartz_soil_uCT_handoff_2026-11_v3.zip",
+ "bytes": 15333652727,
+ "sha256": "c514c341557604899d3bd0c8fb679d4a5271968480e84e7cee9193c857af1724",
+ "entries": 250,
+ "files_in_manifest": 249,
+ "content_bytes": 16073423439,
+ "testzip": null,
+ "zip_list_equals_manifest": true,
+ "n_readmes": 17,
+ "random_files": [
+  "01_scans/loess_8p8um_maoz/provenance/inference_output_loess_i2/dataset.json",
+  "01_scans/sand_samp3/scan_log/10.12.25_Rehovot_samp_3_clean/Rehovot_samp3_highkV_Cu0.11_15um_rectmp.log",
+  "05_results/connectivity/porosity_normalization_results.txt",
+  "05_results/connectivity/track_e/psd_diag_20260902T160041_mishmar_native_label_downsample_15um/summary.json",
+  "04_code/environment/nvidia_smi.txt"
+ ],
+ "rehash_checked": 23,
+ "rehash_ok": 23,
+ "rehash": [
+  {
+   "path": "01_scans/loess_5p85um_maoz/README.md",
+   "ok": true
+  },
+  {
+   "path": "01_scans/loess_8p8um_maoz/README.md",
+   "ok": true
+  },
+  {
+   "path": "01_scans/loess_samp2/README.md",
+   "ok": true
+  },
+  {
+   "path": "01_scans/sand_samp2/README.md",
+   "ok": true
+  },
+  {
+   "path": "01_scans/sand_samp3/README.md",
+   "ok": true
+  },
+  {
+   "path": "01_scans/vertisol_A/README.md",
+   "ok": true
+  },
+  {
+   "path": "01_scans/vertisol_B/README.md",
+   "ok": true
+  },
+  {
+   "path": "01_scans/vertisol_B/april_processing/README.md",
+   "ok": true
+  },
+  {
+   "path": "02_annotations/bnei_reem_i4/README.md",
+   "ok": true
+  },
+  {
+   "path": "02_annotations/mishmar_loess_i2/README.md",
+   "ok": true
+  },
+  {
+   "path": "03_models/loess_i2/README.md",
+   "ok": true
+  },
+  {
+   "path": "03_models/vertisol_i4/README.md",
+   "ok": true
+  },
+  {
+   "path": "04_code/README.md",
+   "ok": true
+  },
+  {
+   "path": "05_results/README.md",
+   "ok": true
+  },
+  {
+   "path": "06_figures/README.md",
+   "ok": true
+  },
+  {
+   "path": "07_lab_data/README.md",
+   "ok": true
+  },
+  {
+   "path": "README.md",
+   "ok": true
+  },
+  {
+   "path": "01_scans/loess_8p8um_maoz/provenance/inference_output_loess_i2/dataset.json",
+   "ok": true
+  },
+  {
+   "path": "01_scans/sand_samp3/scan_log/10.12.25_Rehovot_samp_3_clean/Rehovot_samp3_highkV_Cu0.11_15um_rectmp.log",
+   "ok": true
+  },
+  {
+   "path": "05_results/connectivity/porosity_normalization_results.txt",
+   "ok": true
+  },
+  {
+   "path": "05_results/connectivity/track_e/psd_diag_20260902T160041_mishmar_native_label_downsample_15um/summary.json",
+   "ok": true
+  },
+  {
+   "path": "04_code/environment/nvidia_smi.txt",
+   "ok": true
+  },
+  {
+   "path": "MANIFEST.csv",
+   "ok": true
+  }
+ ],
+ "code_archive_commit": "87f2de4df66d1c1b569c8e1887690ebaaade89f7"
+}

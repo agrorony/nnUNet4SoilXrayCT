@@ -226,3 +226,62 @@ Historical reports copied into the package (files not named `README.md`) keep th
 
 - Disagreement 1 (`dataset_info.json` vs `dataset.json`) is marked as explained by the +1 annotation shift.
 - Flags 1, 2, 3 and 4 have "resolved in the follow-up" notes.
+
+## Package v3 (2026-11-14)
+
+v3 is the lean package. It holds the scans, the models, the annotations, the code, the lab data, and only the result files behind numbers reported in the write-up. The results were chosen with `5_analysis/README.md` and `6_figures/write_up_figures/README.md`; a file that could not be traced to a reported number was left out. Everything is a copy of v2 or of the repo. Nothing was recomputed, and v2 and its ZIP are unchanged. Scripts: `6_figures/handoff_followup/v3_*.py`. Logs: `logs/v3_*.json`.
+
+| | |
+|---|---|
+| File | `E:\PROJECTS\Yael_Mishael\Rony\handoff\Schwartz_soil_uCT_handoff_2026-11_v3.zip` (v1 and v2 kept next to it) |
+| Size | 15,333,652,727 bytes (15.3 GB); content 16,073,423,439 bytes |
+| Files | 249 + `MANIFEST.csv` (v2: 1,195 + `MANIFEST.csv`) |
+| sha256 | `c514c341557604899d3bd0c8fb679d4a5271968480e84e7cee9193c857af1724` (also in `….zip.sha256`) |
+| Code archive | `04_code/nnUNet4SoilXrayCT_87f2de4.zip`: `git archive` of `main` at **`87f2de4df66d1c1b569c8e1887690ebaaade89f7`** (the merge of PR #5); 874 files, sha256 `4fedf953ce90c3e85684981823d01914189f2f5ab5c7038064a1626d887d7b0b`. Every repo path cited in a v3 README exists in it, except two run logs that were only ever on the lab computer |
+| Checks | `testzip()` → None. The file list equals `MANIFEST.csv`. All 17 READMEs, 5 random files and `MANIFEST.csv` were re-extracted and hashed: 23/23 match |
+| Map | `PACKAGE_MAP_v2_to_v3.csv` next to the ZIP (not inside it): every v2 path → its v3 path, or "not in v3" with the reason |
+
+**Renames.**
+- **Scans** (`01_volumes/` → `01_scans/`):
+
+  | v2 folder | v3 folder |
+  |---|---|
+  | `bnei_reem_specA_unified` | `vertisol_A/` |
+  | `bnei_reem_specB_unified` | `vertisol_B/` |
+  | `bnei_reem_fresh_bnei_reem_i4` ("canonical") | `vertisol_B/april_processing/` |
+  | `mishmar_hanegev_maoz_3_5p85um` | `loess_5p85um_maoz/` |
+  | `mishmar_hanegev_maoz_2_8p8um` | `loess_8p8um_maoz/` |
+  | `Cu011_samp_2` | `loess_samp2/` |
+  | `Rehovot_samp2_highkV_Cu0.11_15um` | `sand_samp2/` |
+  | `Rehovot_samp3_highkV_Cu0.11_15um` | `sand_samp3/` |
+
+- **Sand nnU-Net predictions:** `segmentation_nnunet_*` → `segmentation_nnunet_reference_*`.
+- **Models:** `bnei_reem_i4` → `vertisol_i4`, `mishmar_loess_i2` → `loess_i2`. The run configs moved into the model folders.
+- **Other folders:** `05_analysis_outputs/` → `05_results/`; `07_lab_data_and_writeup/` → `07_lab_data/`.
+- Share paths in the READMEs keep their original folder names.
+
+**New in the READMEs.**
+- Each scan README's *Used in the write-up for* section is rewritten from the input path each run recorded (`config.json`, `source_input`, `input_path`, run logs).
+- `vertisol_B/README.md` explains that both processings are one scan (r = 0.9999, pore Dice 0.988) and lists which result used which:
+  - **September processing:** Γ/porosity, χ(r) and tortuosity.
+  - **April processing:** pore-size classes, distances and every POM result.
+- `loess_8p8um_maoz/README.md` now carries the holder warning: about 80 % of the POM voxels in `segmentation_15um_trackE` are the holder. Before, it was only in this report.
+
+**Left out (937 v2 files, in v2 and on the share):**
+- per-subvolume PSD runs, logs and scripts (333);
+- the dropped POM clustering runs (174);
+- Track E logs, `diagnostics.json`, `psd_raw_data.csv`/`psd_table.csv`, block files and unreported runs (128);
+- `synopsis_outputs`, `selected_outputs` and `training_diagnostics` (131);
+- render scripts and logs (53);
+- the Aug 2026 specimen-B visual evidence (29);
+- `checkpoint_best.pth` and the other nnU-Net extras (16, 723 MB);
+- the earlier 08-30 POM interface run and the per-soil files of the reported run (21);
+- tortuosity scripts and work files (17);
+- other notes and figure sources (35).
+
+Another 31 v2 files are not copied because v3 already holds the same content; the map names that file.
+
+**Uncertain, flagged in the READMEs:**
+- **Loess distances (5a).** The run `…_scratch_i2` has no `config.json`. Its input was matched to `loess_i2` by pore-voxel count ("high but not 100 % confidence").
+- **Vertisol distances.** That run has no `config.json` either. It was traced through a bin-exact reproduction of its PSD table from the April segmentation.
+- **Vertisol r\* (graph 5c).** Graph 5c shows "no crossover in measured range" for Vertisol, but the specimen-B χ(r) crosses zero at about 920 µm.

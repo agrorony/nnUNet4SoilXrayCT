@@ -1,0 +1,14 @@
+{
+ "commit": "87f2de4df66d1c1b569c8e1887690ebaaade89f7",
+ "archive": "E:\\PROJECTS\\Yael_Mishael\\Rony\\handoff\\Schwartz_soil_uCT_handoff_2026-11_v3\\04_code\\nnUNet4SoilXrayCT_87f2de4.zip",
+ "bytes": 231046946,
+ "sha256": "4fedf953ce90c3e85684981823d01914189f2f5ab5c7038064a1626d887d7b0b",
+ "files": 874,
+ "readme_repo_paths_checked": 49,
+ "allowed_missing": [
+  "05_evaluation/psd/full_volume_batch/logs/mishmar_hanegev_maoz_3_5p85um_scratch_i2.log",
+  "05_evaluation/psd/full_volume_batch/logs/nlm_volume_fresh_bnei_reem_i4.log"
+ ],
+ "removed_copy": "04_code/nnUNet4SoilXrayCT_a01686e.zip",
+ "removed_sha256": "665d64041772955e6e52a8309ac9abeff7534759891cdc95b63d3254c3619cf0"
+}

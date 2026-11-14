@@ -1,0 +1,1247 @@
+{
+ "copied": {
+  "01_scans/vertisol_B/april_processing/image_preprocessed.tif": {
+   "source": "01_volumes/bnei_reem_fresh_bnei_reem_i4/image_preprocessed.tif",
+   "sha256": "f9e404ad1a7f8e7b8e56e6329c762c1a3aa3deafa9677b37d6445f3e9cdffbe4",
+   "bytes": 1102060076
+  },
+  "01_scans/vertisol_B/april_processing/provenance/_run_inference_fresh_bnei_reem_i4.py": {
+   "source": "01_volumes/bnei_reem_fresh_bnei_reem_i4/provenance/_run_inference_fresh_bnei_reem_i4.py",
+   "sha256": "c2e5990c336663f8ddab24100187961efa35b9cb7cecbf33d4fafdd3b561070d",
+   "bytes": 2864
+  },
+  "01_scans/vertisol_B/april_processing/provenance/inference_log_verification_2026-11-10.json": {
+   "source": "01_volumes/bnei_reem_fresh_bnei_reem_i4/provenance/inference_log_verification_2026-11-10.json",
+   "sha256": "2484532fadd2256dc8fcbf1cba36b6e1b21d71a615c74d2d2d4dedd9d51a78b3",
+   "bytes": 7147
+  },
+  "01_scans/vertisol_B/april_processing/provenance/inference_log_verification_2026-11-10.txt": {
+   "source": "01_volumes/bnei_reem_fresh_bnei_reem_i4/provenance/inference_log_verification_2026-11-10.txt",
+   "sha256": "7a7bf5ed96ec2513fb03e6279b7f9142007d6c69df58fa32b1b41fdcf9b6d22f",
+   "bytes": 4927
+  },
+  "01_scans/vertisol_B/april_processing/provenance/inference_output/dataset.json": {
+   "source": "01_volumes/bnei_reem_fresh_bnei_reem_i4/provenance/inference_output/dataset.json",
+   "sha256": "a00ca55880069fe361c35c55e88f6ce114e5bde848a738418386b139417f5cc7",
+   "bytes": 319
+  },
+  "01_scans/vertisol_B/april_processing/provenance/inference_output/plans.json": {
+   "source": "01_volumes/bnei_reem_fresh_bnei_reem_i4/provenance/inference_output/plans.json",
+   "sha256": "f117c9df1dad6a5cf5e3c2a0f2ea5aa588c3d677911cdd90394ba2d39e52a034",
+   "bytes": 17606
+  },
+  "01_scans/vertisol_B/april_processing/provenance/inference_output/predict_from_raw_data_args.json": {
+   "source": "01_volumes/bnei_reem_fresh_bnei_reem_i4/provenance/inference_output/predict_from_raw_data_args.json",
+   "sha256": "a7f8b937128719aee579bbe42fd5bb20be412eebb838c653959a7a821f9c60ef",
+   "bytes": 566
+  },
+  "01_scans/vertisol_B/april_processing/segmentation.nii.gz": {
+   "source": "01_volumes/bnei_reem_fresh_bnei_reem_i4/segmentation.nii.gz",
+   "sha256": "60f85bb2bbe1a481f8fe7c508e3d00b31374a97c3ddbd9607142c4a7af001a7c",
+   "bytes": 20466250
+  },
+  "01_scans/vertisol_A/image_preprocessed.nii.gz": {
+   "source": "01_volumes/bnei_reem_specA_unified/image_preprocessed.nii.gz",
+   "sha256": "95569cd6f660009052ae6fc0e6afb0526b857e288f1e463b796c9e572a30b043",
+   "bytes": 1014942834
+  },
+  "01_scans/vertisol_A/provenance/bnei_reem_unified_pipeline_log.txt": {
+   "source": "01_volumes/bnei_reem_specA_unified/provenance/bnei_reem_unified_pipeline_log.txt",
+   "sha256": "c569a8a31afaa9cff10d34576e11c29f69d511c8dda2eb273ebc5daf20bf0cad",
+   "bytes": 123840
+  },
+  "01_scans/vertisol_A/provenance/inference_output/dataset.json": {
+   "source": "01_volumes/bnei_reem_specA_unified/provenance/inference_output/dataset.json",
+   "sha256": "a00ca55880069fe361c35c55e88f6ce114e5bde848a738418386b139417f5cc7",
+   "bytes": 319
+  },
+  "01_scans/vertisol_A/provenance/inference_output/plans.json": {
+   "source": "01_volumes/bnei_reem_specA_unified/provenance/inference_output/plans.json",
+   "sha256": "f117c9df1dad6a5cf5e3c2a0f2ea5aa588c3d677911cdd90394ba2d39e52a034",
+   "bytes": 17606
+  },
+  "01_scans/vertisol_A/provenance/inference_output/predict_from_raw_data_args.json": {
+   "source": "01_volumes/bnei_reem_specA_unified/provenance/inference_output/predict_from_raw_data_args.json",
+   "sha256": "9290842ec2377462ce54d49dccef211c0ec771165ce1950e2e1d5e536cda362a",
+   "bytes": 568
+  },
+  "01_scans/vertisol_A/scan_log/18.12.25 bnei_reem_samp_2/bnei_reem_highkV_cu011_samp_2.log": {
+   "source": "01_volumes/bnei_reem_specA_unified/scan_log/18.12.25 bnei_reem_samp_2/bnei_reem_highkV_cu011_samp_2.log",
+   "sha256": "1b68064ebd00872c035944b5a24d164d1af74ab8a9fbc7435ed3559128fc3083",
+   "bytes": 1539
+  },
+  "01_scans/vertisol_A/scan_log/18.12.25 bnei_reem_samp_2/bnei_reem_highkV_cu011_samp_2_rec.log": {
+   "source": "01_volumes/bnei_reem_specA_unified/scan_log/18.12.25 bnei_reem_samp_2/bnei_reem_highkV_cu011_samp_2_rec.log",
+   "sha256": "bbbbbc7642318cc7f97e11834f4163ca1f9faf6f296ae6147fccc558949c8540",
+   "bytes": 1639
+  },
+  "01_scans/vertisol_A/scan_log/new_rec/bnei_reem_highkV_cu011_samp_2_rec.log": {
+   "source": "01_volumes/bnei_reem_specA_unified/scan_log/new_rec/bnei_reem_highkV_cu011_samp_2_rec.log",
+   "sha256": "bbbbbc7642318cc7f97e11834f4163ca1f9faf6f296ae6147fccc558949c8540",
+   "bytes": 1639
+  },
+  "01_scans/vertisol_A/scan_log/new_rec/bnei_reem_highkV_cu011_samp_2_rectmp.log": {
+   "source": "01_volumes/bnei_reem_specA_unified/scan_log/new_rec/bnei_reem_highkV_cu011_samp_2_rectmp.log",
+   "sha256": "1b68064ebd00872c035944b5a24d164d1af74ab8a9fbc7435ed3559128fc3083",
+   "bytes": 1539
+  },
+  "01_scans/vertisol_A/segmentation.nii.gz": {
+   "source": "01_volumes/bnei_reem_specA_unified/segmentation.nii.gz",
+   "sha256": "dfd4ce862be9500b8262218b58233b3a88dc471200be9a088a3d133890c77bc9",
+   "bytes": 23389448
+  },
+  "01_scans/vertisol_B/image_preprocessed.nii.gz": {
+   "source": "01_volumes/bnei_reem_specB_unified/image_preprocessed.nii.gz",
+   "sha256": "ad2e5a878f008fbcc05fe314a2fbcae21db8123736f55d61a359548c009093f1",
+   "bytes": 1002771752
+  },
+  "01_scans/vertisol_B/provenance/bnei_reem_unified_pipeline_log.txt": {
+   "source": "01_volumes/bnei_reem_specB_unified/provenance/bnei_reem_unified_pipeline_log.txt",
+   "sha256": "c569a8a31afaa9cff10d34576e11c29f69d511c8dda2eb273ebc5daf20bf0cad",
+   "bytes": 123840
+  },
+  "01_scans/vertisol_B/provenance/inference_output/dataset.json": {
+   "source": "01_volumes/bnei_reem_specB_unified/provenance/inference_output/dataset.json",
+   "sha256": "a00ca55880069fe361c35c55e88f6ce114e5bde848a738418386b139417f5cc7",
+   "bytes": 319
+  },
+  "01_scans/vertisol_B/provenance/inference_output/plans.json": {
+   "source": "01_volumes/bnei_reem_specB_unified/provenance/inference_output/plans.json",
+   "sha256": "f117c9df1dad6a5cf5e3c2a0f2ea5aa588c3d677911cdd90394ba2d39e52a034",
+   "bytes": 17606
+  },
+  "01_scans/vertisol_B/provenance/inference_output/predict_from_raw_data_args.json": {
+   "source": "01_volumes/bnei_reem_specB_unified/provenance/inference_output/predict_from_raw_data_args.json",
+   "sha256": "f069117990f7cb1937537c2da3ddb90dc79e1af1c593d8939970655c4fee8d2a",
+   "bytes": 568
+  },
+  "01_scans/vertisol_B/scan_log/18.12.25 bnei_reem_samp_2.0/bnei_reem_highkV_cu011_samp_2.0.log": {
+   "source": "01_volumes/bnei_reem_specB_unified/scan_log/18.12.25 bnei_reem_samp_2.0/bnei_reem_highkV_cu011_samp_2.0.log",
+   "sha256": "03b028810383c836464ccc4d1fb76c3c0b340d64af8e05316a0d0c48ac30ab5e",
+   "bytes": 1543
+  },
+  "01_scans/vertisol_B/scan_log/18.12.25 bnei_reem_samp_2.0/bnei_reem_highkV_cu011_samp_2.0_Rec/bnei_reem_highkV_cu011_samp_2.0_rec.log": {
+   "source": "01_volumes/bnei_reem_specB_unified/scan_log/18.12.25 bnei_reem_samp_2.0/bnei_reem_highkV_cu011_samp_2.0_Rec/bnei_reem_highkV_cu011_samp_2.0_rec.log",
+   "sha256": "1d5ade9911817abbac2bfdc1c3a0b93fd4fb206d91d2b895db48bffd5576e4ea",
+   "bytes": 1645
+  },
+  "01_scans/vertisol_B/scan_log/18.12.25 bnei_reem_samp_2.0/bnei_reem_highkV_cu011_samp_2.0_Rec/bnei_reem_highkV_cu011_samp_2.0_rectmp.log": {
+   "source": "01_volumes/bnei_reem_specB_unified/scan_log/18.12.25 bnei_reem_samp_2.0/bnei_reem_highkV_cu011_samp_2.0_Rec/bnei_reem_highkV_cu011_samp_2.0_rectmp.log",
+   "sha256": "03b028810383c836464ccc4d1fb76c3c0b340d64af8e05316a0d0c48ac30ab5e",
+   "bytes": 1543
+  },
+  "01_scans/vertisol_B/scan_log/18.12.25 bnei_reem_samp_2.0/bnei_reem_highkV_cu011_samp_2.0_rec.log": {
+   "source": "01_volumes/bnei_reem_specB_unified/scan_log/18.12.25 bnei_reem_samp_2.0/bnei_reem_highkV_cu011_samp_2.0_rec.log",
+   "sha256": "1d5ade9911817abbac2bfdc1c3a0b93fd4fb206d91d2b895db48bffd5576e4ea",
+   "bytes": 1645
+  },
+  "01_scans/vertisol_B/segmentation.nii.gz": {
+   "source": "01_volumes/bnei_reem_specB_unified/segmentation.nii.gz",
+   "sha256": "58b860279fe4685ccfa0264aca25d22a955958753127b7dad60302f53ee68cdf",
+   "bytes": 20856103
+  },
+  "01_scans/loess_samp2/image_preprocessed.nii.gz": {
+   "source": "01_volumes/Cu011_samp_2/image_preprocessed.nii.gz",
+   "sha256": "1fd188f01f61458b92e8bd1a596c3db6d85d45625b3d06f485e61ad34c8349b2",
+   "bytes": 1273275944
+  },
+  "01_scans/loess_samp2/provenance/_run_inference_mishmar_cu011_samp2_loess_i2.py": {
+   "source": "01_volumes/Cu011_samp_2/provenance/_run_inference_mishmar_cu011_samp2_loess_i2.py",
+   "sha256": "18fd52c59b8bdd0b1709508f35a39e53a64f90c62e10bd81e220329344dd6ce9",
+   "bytes": 5238
+  },
+  "01_scans/loess_samp2/provenance/cu011_loess_i2_inference_log.txt": {
+   "source": "01_volumes/Cu011_samp_2/provenance/cu011_loess_i2_inference_log.txt",
+   "sha256": "c93f2e3663fbb618cc410bca5dc3a0877d733fdf97a1a3241a90861b45d939a7",
+   "bytes": 88918
+  },
+  "01_scans/loess_samp2/provenance/inference_output_loess_i2/dataset.json": {
+   "source": "01_volumes/Cu011_samp_2/provenance/inference_output_loess_i2/dataset.json",
+   "sha256": "a00ca55880069fe361c35c55e88f6ce114e5bde848a738418386b139417f5cc7",
+   "bytes": 319
+  },
+  "01_scans/loess_samp2/provenance/inference_output_loess_i2/plans.json": {
+   "source": "01_volumes/Cu011_samp_2/provenance/inference_output_loess_i2/plans.json",
+   "sha256": "a69d9d41e3278330d95ba2db2839e65583052c55c023bc412c8c0f3b04efe992",
+   "bytes": 17920
+  },
+  "01_scans/loess_samp2/provenance/inference_output_loess_i2/predict_from_raw_data_args.json": {
+   "source": "01_volumes/Cu011_samp_2/provenance/inference_output_loess_i2/predict_from_raw_data_args.json",
+   "sha256": "2959c93b1a25d7052f2db513e674ac7a85e8a9e355c8b290ab081f11ee143bce",
+   "bytes": 616
+  },
+  "01_scans/loess_samp2/scan_log/mishmar_hanegev_Cu011_samp_2.log": {
+   "source": "01_volumes/Cu011_samp_2/scan_log/mishmar_hanegev_Cu011_samp_2.log",
+   "sha256": "d635648587c95f05a34220459351d5a793a1c6c99c4caf4a353c783afb787cd8",
+   "bytes": 3173
+  },
+  "01_scans/loess_samp2/scan_log/mishmar_hanegev_Cu011_samp_2_Rec/mishmar_hanegev_Cu011_samp_2_rec.log": {
+   "source": "01_volumes/Cu011_samp_2/scan_log/mishmar_hanegev_Cu011_samp_2_Rec/mishmar_hanegev_Cu011_samp_2_rec.log",
+   "sha256": "fae883c2a9a5e583a64c6072e0e810de3e661c24d3b9a1ded4606caae77b8135",
+   "bytes": 3272
+  },
+  "01_scans/loess_samp2/segmentation.nii.gz": {
+   "source": "01_volumes/Cu011_samp_2/segmentation.nii.gz",
+   "sha256": "05460b9bac95a50d5bda06b8483507506acb1da13c2866afe3a7aeb0f9a711ce",
+   "bytes": 29481305
+  },
+  "01_scans/loess_8p8um_maoz/image_preprocessed.nii.gz": {
+   "source": "01_volumes/mishmar_hanegev_maoz_2_8p8um/image_preprocessed.nii.gz",
+   "sha256": "8cf7814520d7ea81ac0d383654f37433aab1c96ff8108c0a915e9df529414a8f",
+   "bytes": 3496669176
+  },
+  "01_scans/loess_8p8um_maoz/provenance/_run_inference_maoz_2_8p8um_loess_i2.py": {
+   "source": "01_volumes/mishmar_hanegev_maoz_2_8p8um/provenance/_run_inference_maoz_2_8p8um_loess_i2.py",
+   "sha256": "9633e427ecdd413ae1e0bf28a840003f1b9d9efd1b2bd2e55776dd87a010ab42",
+   "bytes": 4707
+  },
+  "01_scans/loess_8p8um_maoz/provenance/inference_log_verification_2026-11-10.json": {
+   "source": "01_volumes/mishmar_hanegev_maoz_2_8p8um/provenance/inference_log_verification_2026-11-10.json",
+   "sha256": "008db12cb630aa9e8106b2c94a0d702e15f1e1f66ff1a4294c1357900293021f",
+   "bytes": 7602
+  },
+  "01_scans/loess_8p8um_maoz/provenance/inference_log_verification_2026-11-10.txt": {
+   "source": "01_volumes/mishmar_hanegev_maoz_2_8p8um/provenance/inference_log_verification_2026-11-10.txt",
+   "sha256": "3311f67cda1fb5c42ce70562e5b39e1cb76d6f752b6aaf00f81683639964d277",
+   "bytes": 5218
+  },
+  "01_scans/loess_8p8um_maoz/provenance/inference_output_loess_i2/dataset.json": {
+   "source": "01_volumes/mishmar_hanegev_maoz_2_8p8um/provenance/inference_output_loess_i2/dataset.json",
+   "sha256": "a00ca55880069fe361c35c55e88f6ce114e5bde848a738418386b139417f5cc7",
+   "bytes": 319
+  },
+  "01_scans/loess_8p8um_maoz/provenance/inference_output_loess_i2/plans.json": {
+   "source": "01_volumes/mishmar_hanegev_maoz_2_8p8um/provenance/inference_output_loess_i2/plans.json",
+   "sha256": "a69d9d41e3278330d95ba2db2839e65583052c55c023bc412c8c0f3b04efe992",
+   "bytes": 17920
+  },
+  "01_scans/loess_8p8um_maoz/provenance/inference_output_loess_i2/predict_from_raw_data_args.json": {
+   "source": "01_volumes/mishmar_hanegev_maoz_2_8p8um/provenance/inference_output_loess_i2/predict_from_raw_data_args.json",
+   "sha256": "0dc3e3271ce6ea2ccdbc2015b1790eead4e40f180f5f8c812499628af48b0192",
+   "bytes": 587
+  },
+  "01_scans/loess_8p8um_maoz/provenance/roi_expansion_downsample_run_log.txt": {
+   "source": "01_volumes/mishmar_hanegev_maoz_2_8p8um/provenance/roi_expansion_downsample_run_log.txt",
+   "sha256": "4aaddd8a702fdbe85186f50d9d183c07b8981e5f0dfb02e1ff46c18833370ef0",
+   "bytes": 1215
+  },
+  "01_scans/loess_8p8um_maoz/provenance/roi_expansion_downsample_sanity_check.json": {
+   "source": "01_volumes/mishmar_hanegev_maoz_2_8p8um/provenance/roi_expansion_downsample_sanity_check.json",
+   "sha256": "f1b1614e79a64293a4a4a353c1bcbcd1dc46d01b12a5d790bce380102a5f40ad",
+   "bytes": 341
+  },
+  "01_scans/loess_8p8um_maoz/provenance/run_log_step_mishmar2_label_downsample.txt": {
+   "source": "01_volumes/mishmar_hanegev_maoz_2_8p8um/provenance/run_log_step_mishmar2_label_downsample.txt",
+   "sha256": "762465eae45b319e42403d5eabd6b0e26f0571b9eb57ecbe3f885e683c92a538",
+   "bytes": 3367
+  },
+  "01_scans/loess_8p8um_maoz/segmentation.nii.gz": {
+   "source": "01_volumes/mishmar_hanegev_maoz_2_8p8um/segmentation.nii.gz",
+   "sha256": "bd7b026ce1061186d32b3a9dfa9c9bffcf519ebfe0dc56347a209eb1ea37c8e7",
+   "bytes": 86956782
+  },
+  "01_scans/loess_8p8um_maoz/segmentation_15um_pom.nii.gz": {
+   "source": "01_volumes/mishmar_hanegev_maoz_2_8p8um/segmentation_15um_pom.nii.gz",
+   "sha256": "5acbf7045087b7e274e668d674374f36ef2bd549ae9564ac8f8bb021806b9192",
+   "bytes": 22760809
+  },
+  "01_scans/loess_8p8um_maoz/segmentation_15um_trackE.nii.gz": {
+   "source": "01_volumes/mishmar_hanegev_maoz_2_8p8um/segmentation_15um_trackE.nii.gz",
+   "sha256": "0fd133b8ccf35668c29477f8e360f342b5a95c2065fb1597dabf822592b38235",
+   "bytes": 88770353
+  },
+  "01_scans/loess_5p85um_maoz/image_preprocessed.nii.gz": {
+   "source": "01_volumes/mishmar_hanegev_maoz_3_5p85um/image_preprocessed.nii.gz",
+   "sha256": "088b9fa607aa261bda80500115cf989a7a4a6fb0f33dbbf95f04497786a1c8bf",
+   "bytes": 3497364642
+  },
+  "01_scans/loess_5p85um_maoz/provenance/inference_log_verification_2026-11-10.json": {
+   "source": "01_volumes/mishmar_hanegev_maoz_3_5p85um/provenance/inference_log_verification_2026-11-10.json",
+   "sha256": "e263c1a81614d41d2bc83f6529763dd9a6755dfe097e73a5b3c45aa0293bf865",
+   "bytes": 7683
+  },
+  "01_scans/loess_5p85um_maoz/provenance/inference_log_verification_2026-11-10.txt": {
+   "source": "01_volumes/mishmar_hanegev_maoz_3_5p85um/provenance/inference_log_verification_2026-11-10.txt",
+   "sha256": "0b970de552f581b685776b897d05d2d0cc80c546aae84fb0985242d8a728cffc",
+   "bytes": 5288
+  },
+  "01_scans/loess_5p85um_maoz/provenance/inference_output_loess_i2/dataset.json": {
+   "source": "01_volumes/mishmar_hanegev_maoz_3_5p85um/provenance/inference_output_loess_i2/dataset.json",
+   "sha256": "a00ca55880069fe361c35c55e88f6ce114e5bde848a738418386b139417f5cc7",
+   "bytes": 319
+  },
+  "01_scans/loess_5p85um_maoz/provenance/inference_output_loess_i2/plans.json": {
+   "source": "01_volumes/mishmar_hanegev_maoz_3_5p85um/provenance/inference_output_loess_i2/plans.json",
+   "sha256": "a69d9d41e3278330d95ba2db2839e65583052c55c023bc412c8c0f3b04efe992",
+   "bytes": 17920
+  },
+  "01_scans/loess_5p85um_maoz/provenance/inference_output_loess_i2/predict_from_raw_data_args.json": {
+   "source": "01_volumes/mishmar_hanegev_maoz_3_5p85um/provenance/inference_output_loess_i2/predict_from_raw_data_args.json",
+   "sha256": "fcde1dcc20d0cf4df071e4098a86c7ad947cf446ded12c75965f0ba42c120c1e",
+   "bytes": 575
+  },
+  "01_scans/loess_5p85um_maoz/provenance/roi_expansion_downsample_run_log.txt": {
+   "source": "01_volumes/mishmar_hanegev_maoz_3_5p85um/provenance/roi_expansion_downsample_run_log.txt",
+   "sha256": "fc1f9956cf647ed96853df95bf5c9a1ef1e488d8202f5aa254beb96eff0bf23d",
+   "bytes": 1225
+  },
+  "01_scans/loess_5p85um_maoz/provenance/roi_expansion_downsample_sanity_check.json": {
+   "source": "01_volumes/mishmar_hanegev_maoz_3_5p85um/provenance/roi_expansion_downsample_sanity_check.json",
+   "sha256": "256b4f68546fc3fdaaa070218ef2d63d3a56a5e204c32d582d6368a56b15fce3",
+   "bytes": 342
+  },
+  "01_scans/loess_5p85um_maoz/provenance/run_log_step1_label_downsample.txt": {
+   "source": "01_volumes/mishmar_hanegev_maoz_3_5p85um/provenance/run_log_step1_label_downsample.txt",
+   "sha256": "316e3eb3063433677b314f94bb26201ae3ad461bb499436413f68ded0b5e2544",
+   "bytes": 3327
+  },
+  "01_scans/loess_5p85um_maoz/segmentation.nii.gz": {
+   "source": "01_volumes/mishmar_hanegev_maoz_3_5p85um/segmentation.nii.gz",
+   "sha256": "037bf60e0cb055a329503e31cb9ab0ac5518f615dc300bce3470580c8ba651af",
+   "bytes": 90571542
+  },
+  "01_scans/loess_5p85um_maoz/segmentation_15um_pom.nii.gz": {
+   "source": "01_volumes/mishmar_hanegev_maoz_3_5p85um/segmentation_15um_pom.nii.gz",
+   "sha256": "e07ca08ddc11c93ba9291f84d8e3909060ffb668b5ea7446dd8a2366bc2af7cf",
+   "bytes": 8464884
+  },
+  "01_scans/loess_5p85um_maoz/segmentation_15um_trackE.nii.gz": {
+   "source": "01_volumes/mishmar_hanegev_maoz_3_5p85um/segmentation_15um_trackE.nii.gz",
+   "sha256": "63d1b39f24cdf4a60b4858c6165cc910db0d0e0ad7a602adc1d5a4c5409b549c",
+   "bytes": 15730809
+  },
+  "01_scans/sand_samp2/image_preprocessed.nii.gz": {
+   "source": "01_volumes/Rehovot_samp2_highkV_Cu0.11_15um/image_preprocessed.nii.gz",
+   "sha256": "ae874960d7ed2f4ac7f7b7200cfe1d417000b4ed259d3c4e012ed9d79e5221e6",
+   "bytes": 966660519
+  },
+  "01_scans/sand_samp2/provenance/inference_output_bnei_reem_i4/dataset.json": {
+   "source": "01_volumes/Rehovot_samp2_highkV_Cu0.11_15um/provenance/inference_output_bnei_reem_i4/dataset.json",
+   "sha256": "a00ca55880069fe361c35c55e88f6ce114e5bde848a738418386b139417f5cc7",
+   "bytes": 319
+  },
+  "01_scans/sand_samp2/provenance/inference_output_bnei_reem_i4/plans.json": {
+   "source": "01_volumes/Rehovot_samp2_highkV_Cu0.11_15um/provenance/inference_output_bnei_reem_i4/plans.json",
+   "sha256": "f117c9df1dad6a5cf5e3c2a0f2ea5aa588c3d677911cdd90394ba2d39e52a034",
+   "bytes": 17606
+  },
+  "01_scans/sand_samp2/provenance/inference_output_bnei_reem_i4/predict_from_raw_data_args.json": {
+   "source": "01_volumes/Rehovot_samp2_highkV_Cu0.11_15um/provenance/inference_output_bnei_reem_i4/predict_from_raw_data_args.json",
+   "sha256": "47fb6e6ab2adf8170ac1ffcee1fdea7d4ca922c18aae631545b5f9cf76c7be53",
+   "bytes": 599
+  },
+  "01_scans/sand_samp2/provenance/inference_output_loess_i2/dataset.json": {
+   "source": "01_volumes/Rehovot_samp2_highkV_Cu0.11_15um/provenance/inference_output_loess_i2/dataset.json",
+   "sha256": "a00ca55880069fe361c35c55e88f6ce114e5bde848a738418386b139417f5cc7",
+   "bytes": 319
+  },
+  "01_scans/sand_samp2/provenance/inference_output_loess_i2/plans.json": {
+   "source": "01_volumes/Rehovot_samp2_highkV_Cu0.11_15um/provenance/inference_output_loess_i2/plans.json",
+   "sha256": "a69d9d41e3278330d95ba2db2839e65583052c55c023bc412c8c0f3b04efe992",
+   "bytes": 17920
+  },
+  "01_scans/sand_samp2/provenance/inference_output_loess_i2/predict_from_raw_data_args.json": {
+   "source": "01_volumes/Rehovot_samp2_highkV_Cu0.11_15um/provenance/inference_output_loess_i2/predict_from_raw_data_args.json",
+   "sha256": "46291d34e58d382984eaabfe80135cda865120d5e0792fbd31a11502327dd6c9",
+   "bytes": 595
+  },
+  "01_scans/sand_samp2/provenance/pipeline_log.txt": {
+   "source": "01_volumes/Rehovot_samp2_highkV_Cu0.11_15um/provenance/pipeline_log.txt",
+   "sha256": "d477d1507aaa2a6100479ac151dd306ebbd701f8d2c3837c72c1c15654cdf920",
+   "bytes": 78871
+  },
+  "01_scans/sand_samp2/scan_log/10.12.25_Rehovot_samp_2/Rehovot_samp2_highkV_Cu0.11_15um.log": {
+   "source": "01_volumes/Rehovot_samp2_highkV_Cu0.11_15um/scan_log/10.12.25_Rehovot_samp_2/Rehovot_samp2_highkV_Cu0.11_15um.log",
+   "sha256": "7e467b331cdf2f1d61ecdf1f3e429ff7029d2a7bc6041e23d5420262b1d9b936",
+   "bytes": 3174
+  },
+  "01_scans/sand_samp2/scan_log/10.12.25_Rehovot_samp_2/Rehovot_samp2_highkV_Cu0.11_15um_Rec/Rehovot_samp2_highkV_Cu0.11_15um_rec.log": {
+   "source": "01_volumes/Rehovot_samp2_highkV_Cu0.11_15um/scan_log/10.12.25_Rehovot_samp_2/Rehovot_samp2_highkV_Cu0.11_15um_Rec/Rehovot_samp2_highkV_Cu0.11_15um_rec.log",
+   "sha256": "838a84d84db19b1e077f7e51f2c43a1a699028c75cf53a769cf2898ca85fa9b8",
+   "bytes": 3305
+  },
+  "01_scans/sand_samp2/scan_log/10.12.25_Rehovot_samp_2/Rehovot_samp2_highkV_Cu0.11_15um_Rec_2/Rehovot_samp2_highkV_Cu0.11_15um_rec.log": {
+   "source": "01_volumes/Rehovot_samp2_highkV_Cu0.11_15um/scan_log/10.12.25_Rehovot_samp_2/Rehovot_samp2_highkV_Cu0.11_15um_Rec_2/Rehovot_samp2_highkV_Cu0.11_15um_rec.log",
+   "sha256": "76f3b0f9928e48687ed061f0559be6fe5b2ee70a018c7b0a71883391293504d3",
+   "bytes": 3277
+  },
+  "01_scans/sand_samp2/segmentation_nnunet_reference_bnei_reem_i4.nii.gz": {
+   "source": "01_volumes/Rehovot_samp2_highkV_Cu0.11_15um/segmentation_nnunet_bnei_reem_i4.nii.gz",
+   "sha256": "45e5338122f26f387608cebbb17f937a88454242128021ad0ce914fa4f0cddfd",
+   "bytes": 29600591
+  },
+  "01_scans/sand_samp2/segmentation_nnunet_reference_loess_i2.nii.gz": {
+   "source": "01_volumes/Rehovot_samp2_highkV_Cu0.11_15um/segmentation_nnunet_loess_i2.nii.gz",
+   "sha256": "317619cb3d940b69e6e49309788268bbb6b136a1252f24306a96228610cd7d96",
+   "bytes": 28922119
+  },
+  "01_scans/sand_samp2/segmentation_otsu.npy": {
+   "source": "01_volumes/Rehovot_samp2_highkV_Cu0.11_15um/segmentation_otsu.npy",
+   "sha256": "09715f3f6dea97094df5d6f6e55527a8d41fcf1bd1f5be98bef8f891881d82fd",
+   "bytes": 274625128
+  },
+  "01_scans/sand_samp3/image_preprocessed.nii.gz": {
+   "source": "01_volumes/Rehovot_samp3_highkV_Cu0.11_15um/image_preprocessed.nii.gz",
+   "sha256": "97c752a7031e5802d8f4246d7e4ee097e0931665fdbebdda46ebb2414ad87b4c",
+   "bytes": 985862170
+  },
+  "01_scans/sand_samp3/provenance/inference_output_bnei_reem_i4/dataset.json": {
+   "source": "01_volumes/Rehovot_samp3_highkV_Cu0.11_15um/provenance/inference_output_bnei_reem_i4/dataset.json",
+   "sha256": "a00ca55880069fe361c35c55e88f6ce114e5bde848a738418386b139417f5cc7",
+   "bytes": 319
+  },
+  "01_scans/sand_samp3/provenance/inference_output_bnei_reem_i4/plans.json": {
+   "source": "01_volumes/Rehovot_samp3_highkV_Cu0.11_15um/provenance/inference_output_bnei_reem_i4/plans.json",
+   "sha256": "f117c9df1dad6a5cf5e3c2a0f2ea5aa588c3d677911cdd90394ba2d39e52a034",
+   "bytes": 17606
+  },
+  "01_scans/sand_samp3/provenance/inference_output_bnei_reem_i4/predict_from_raw_data_args.json": {
+   "source": "01_volumes/Rehovot_samp3_highkV_Cu0.11_15um/provenance/inference_output_bnei_reem_i4/predict_from_raw_data_args.json",
+   "sha256": "47b91e2b91b0da50e061ed2bdd93888555a4b020bf95a3fc9d21d8e817bb0035",
+   "bytes": 635
+  },
+  "01_scans/sand_samp3/provenance/inference_output_loess_i2/dataset.json": {
+   "source": "01_volumes/Rehovot_samp3_highkV_Cu0.11_15um/provenance/inference_output_loess_i2/dataset.json",
+   "sha256": "a00ca55880069fe361c35c55e88f6ce114e5bde848a738418386b139417f5cc7",
+   "bytes": 319
+  },
+  "01_scans/sand_samp3/provenance/inference_output_loess_i2/plans.json": {
+   "source": "01_volumes/Rehovot_samp3_highkV_Cu0.11_15um/provenance/inference_output_loess_i2/plans.json",
+   "sha256": "a69d9d41e3278330d95ba2db2839e65583052c55c023bc412c8c0f3b04efe992",
+   "bytes": 17920
+  },
+  "01_scans/sand_samp3/provenance/inference_output_loess_i2/predict_from_raw_data_args.json": {
+   "source": "01_volumes/Rehovot_samp3_highkV_Cu0.11_15um/provenance/inference_output_loess_i2/predict_from_raw_data_args.json",
+   "sha256": "bbf4919524389b57101cc62f9eb90d0cf88bbc6b3d2b0fdefb66d40954274bb4",
+   "bytes": 631
+  },
+  "01_scans/sand_samp3/provenance/otsu_verification_2026-11-10.json": {
+   "source": "01_volumes/Rehovot_samp3_highkV_Cu0.11_15um/provenance/otsu_verification_2026-11-10.json",
+   "sha256": "41e112833b61ad689ba70dd3925b64a11c4c40530f93274f56ff9bb1b99f79e7",
+   "bytes": 1267
+  },
+  "01_scans/sand_samp3/provenance/otsu_verification_2026-11-10.txt": {
+   "source": "01_volumes/Rehovot_samp3_highkV_Cu0.11_15um/provenance/otsu_verification_2026-11-10.txt",
+   "sha256": "886e49c0fe123463bbb24ece78416cd68cd77b0c0ade075b037b04d910fcab80",
+   "bytes": 824
+  },
+  "01_scans/sand_samp3/provenance/pipeline_log.txt": {
+   "source": "01_volumes/Rehovot_samp3_highkV_Cu0.11_15um/provenance/pipeline_log.txt",
+   "sha256": "a8d3d6999355066ad99e4c4a795162174e6b3cdaac150daebb51f335632dc37b",
+   "bytes": 74918
+  },
+  "01_scans/sand_samp3/scan_log/10.12.25_Rehovot_samp_3/Rehovot_samp3_highkV_Cu0.11_15um.log": {
+   "source": "01_volumes/Rehovot_samp3_highkV_Cu0.11_15um/scan_log/10.12.25_Rehovot_samp_3/Rehovot_samp3_highkV_Cu0.11_15um.log",
+   "sha256": "534356c2a82e9b6cc759159e54387bb900cefbc565e6476df7ba41cbecb6a1a7",
+   "bytes": 1551
+  },
+  "01_scans/sand_samp3/scan_log/10.12.25_Rehovot_samp_3_clean/Rehovot_samp3_highkV_Cu0.11_15um.log": {
+   "source": "01_volumes/Rehovot_samp3_highkV_Cu0.11_15um/scan_log/10.12.25_Rehovot_samp_3_clean/Rehovot_samp3_highkV_Cu0.11_15um.log",
+   "sha256": "65e6ca0721fb22252297eb2ecf8f7f1be0aec12da7d4a9acd9de88caffd4fd45",
+   "bytes": 3201
+  },
+  "01_scans/sand_samp3/scan_log/10.12.25_Rehovot_samp_3_clean/Rehovot_samp3_highkV_Cu0.11_15um_Rec/Rehovot_samp3_highkV_Cu0.11_15um_rec.log": {
+   "source": "01_volumes/Rehovot_samp3_highkV_Cu0.11_15um/scan_log/10.12.25_Rehovot_samp_3_clean/Rehovot_samp3_highkV_Cu0.11_15um_Rec/Rehovot_samp3_highkV_Cu0.11_15um_rec.log",
+   "sha256": "e796de210369ffcf2fa64a904f89f7f63076c08f4607f928a191d5b53f307bfb",
+   "bytes": 3304
+  },
+  "01_scans/sand_samp3/scan_log/10.12.25_Rehovot_samp_3_clean/Rehovot_samp3_highkV_Cu0.11_15um_rectmp.log": {
+   "source": "01_volumes/Rehovot_samp3_highkV_Cu0.11_15um/scan_log/10.12.25_Rehovot_samp_3_clean/Rehovot_samp3_highkV_Cu0.11_15um_rectmp.log",
+   "sha256": "534356c2a82e9b6cc759159e54387bb900cefbc565e6476df7ba41cbecb6a1a7",
+   "bytes": 1551
+  },
+  "01_scans/sand_samp3/segmentation_nnunet_reference_bnei_reem_i4.nii.gz": {
+   "source": "01_volumes/Rehovot_samp3_highkV_Cu0.11_15um/segmentation_nnunet_bnei_reem_i4.nii.gz",
+   "sha256": "8b65a6122180c21205bdf3951e6f818ac494485d93addc06e7c226cf19f04afd",
+   "bytes": 31526062
+  },
+  "01_scans/sand_samp3/segmentation_nnunet_reference_loess_i2.nii.gz": {
+   "source": "01_volumes/Rehovot_samp3_highkV_Cu0.11_15um/segmentation_nnunet_loess_i2.nii.gz",
+   "sha256": "7557be60041ffbbb3f9b8ddc4e8621949219579e3415692b335f4899f4a78c17",
+   "bytes": 31822969
+  },
+  "01_scans/sand_samp3/segmentation_otsu.npy": {
+   "source": "01_volumes/Rehovot_samp3_highkV_Cu0.11_15um/segmentation_otsu.npy",
+   "sha256": "8f7dd5a1f99137d584a3fb350034dc4602f714348d36bc6fc24e4567a2b7572f",
+   "bytes": 274625128
+  },
+  "02_annotations/bnei_reem_i4/nnUNet_raw_Dataset777_GCEF/dataset.json": {
+   "source": "02_annotations/bnei_reem_i4/nnUNet_raw_Dataset777_GCEF/dataset.json",
+   "sha256": "a00ca55880069fe361c35c55e88f6ce114e5bde848a738418386b139417f5cc7",
+   "bytes": 319
+  },
+  "02_annotations/bnei_reem_i4/nnUNet_raw_Dataset777_GCEF/imagesTr/nlm_volume_0000.nii.gz": {
+   "source": "02_annotations/bnei_reem_i4/nnUNet_raw_Dataset777_GCEF/imagesTr/nlm_volume_0000.nii.gz",
+   "sha256": "e289ca038a2bdd0f4b6d844857cf6ec5f34e221b4a21f3252fe66930a7a403fe",
+   "bytes": 144482125
+  },
+  "02_annotations/bnei_reem_i4/nnUNet_raw_Dataset777_GCEF/labelsTr/nlm_volume.nii.gz": {
+   "source": "02_annotations/bnei_reem_i4/nnUNet_raw_Dataset777_GCEF/labelsTr/nlm_volume.nii.gz",
+   "sha256": "1c3f83cd871f337df58afe70819253e08671e9c43e9485653b4ad231c0b5ed54",
+   "bytes": 237930
+  },
+  "02_annotations/bnei_reem_i4/original_annotations/annotations_i2.nii.gz": {
+   "source": "02_annotations/bnei_reem_i4/original_annotations/annotations_i2.nii.gz",
+   "sha256": "eb23ac72e622f9d2235ebe2e6439e87daccebf192a49493dd9b76caad000a017",
+   "bytes": 1688638
+  },
+  "02_annotations/bnei_reem_i4/original_annotations/annotations_i3.nii.gz": {
+   "source": "02_annotations/bnei_reem_i4/original_annotations/annotations_i3.nii.gz",
+   "sha256": "6a6b276cb4621d56ba8280e6dddc0669ad52a1b967301d65bed2ae0980884e92",
+   "bytes": 1821692
+  },
+  "02_annotations/bnei_reem_i4/original_annotations/fine_tuning_annotations.nii.gz": {
+   "source": "02_annotations/bnei_reem_i4/original_annotations/fine_tuning_annotations.nii.gz",
+   "sha256": "904f76cf08fb25a10efa7bf74167b2da314a92abbdd7ecd7790fb410d6de7d0b",
+   "bytes": 1258233
+  },
+  "02_annotations/bnei_reem_i4/registry_merged_GT/less_reliable_solid_pores_GT.nii.gz": {
+   "source": "02_annotations/bnei_reem_i4/registry_merged_GT/less_reliable_solid_pores_GT.nii.gz",
+   "sha256": "36ab8359dd360bf9b2b40451e4054b4b0d6c490c876eba15d02e7e0c2b9ecb43",
+   "bytes": 1421298
+  },
+  "02_annotations/bnei_reem_i4/registry_merged_GT/merged_GT.nii.gz": {
+   "source": "02_annotations/bnei_reem_i4/registry_merged_GT/merged_GT.nii.gz",
+   "sha256": "ee29370dc5c069f23dfdbb8cef62d8a7466a535ba2d7f4709ba0141a4dab72a3",
+   "bytes": 1427637
+  },
+  "02_annotations/bnei_reem_i4/registry_merged_GT/POM_GT.nii.gz": {
+   "source": "02_annotations/bnei_reem_i4/registry_merged_GT/POM_GT.nii.gz",
+   "sha256": "ee78f879ec770aa181a7301a78dce8e84764db47d69a1ab388f53920d730a784",
+   "bytes": 1235452
+  },
+  "02_annotations/mishmar_loess_i2/nnUNet_raw_Dataset777_GCEF/dataset.json": {
+   "source": "02_annotations/mishmar_loess_i2/nnUNet_raw_Dataset777_GCEF/dataset.json",
+   "sha256": "a00ca55880069fe361c35c55e88f6ce114e5bde848a738418386b139417f5cc7",
+   "bytes": 319
+  },
+  "02_annotations/mishmar_loess_i2/nnUNet_raw_Dataset777_GCEF/imagesTr/mishmar_hanegev_maoz_3_5p85um_0000.nii.gz": {
+   "source": "02_annotations/mishmar_loess_i2/nnUNet_raw_Dataset777_GCEF/imagesTr/mishmar_hanegev_maoz_3_5p85um_0000.nii.gz",
+   "sha256": "24a85d76d57b9e423d9b93ceca1827e382d047f4177786aca6ef75d579e94a9a",
+   "bytes": 342261697
+  },
+  "02_annotations/mishmar_loess_i2/nnUNet_raw_Dataset777_GCEF/labelsTr/mishmar_hanegev_maoz_3_5p85um.nii.gz": {
+   "source": "02_annotations/mishmar_loess_i2/nnUNet_raw_Dataset777_GCEF/labelsTr/mishmar_hanegev_maoz_3_5p85um.nii.gz",
+   "sha256": "f9c77e3cacb9d670ab59da4984fd4fca4d8b56c11ed945c59193fbe80c7cf5df",
+   "bytes": 601511
+  },
+  "02_annotations/mishmar_loess_i2/original_annotations/mishmar_hanegev_maoz_3_5p85um-1.nii.gz": {
+   "source": "02_annotations/mishmar_loess_i2/original_annotations/mishmar_hanegev_maoz_3_5p85um-1.nii.gz",
+   "sha256": "ef2a010f32e8051b2e78d622d3c8e10be7fce255e195e5d05cdaf47c7400aa35",
+   "bytes": 4470461
+  },
+  "02_annotations/mishmar_loess_i2/original_annotations/mishmar_hanegev_maoz_3_5p85um.nii.gz": {
+   "source": "02_annotations/mishmar_loess_i2/original_annotations/mishmar_hanegev_maoz_3_5p85um.nii.gz",
+   "sha256": "ebf23c9b6c130505a41300ab43a2f1b708d74c30052d21b73e0f358b843c7dce",
+   "bytes": 4537197
+  },
+  "03_models/vertisol_i4/splits_final.json": {
+   "source": "03_models/bnei_reem_i4/splits_final.json",
+   "sha256": "e3cd3a8fadb62d7c8d58675accd434d1d74f033d0182be9930790fd6ffe56d1b",
+   "bytes": 99
+  },
+  "03_models/vertisol_i4/nnUNetTrainer_betterIgnoreSampling_earlyStopValLoss_lowlr__nnUNetPlans__3d_fullres/plans.json": {
+   "source": "03_models/bnei_reem_i4/nnUNetTrainer_betterIgnoreSampling_earlyStopValLoss_lowlr__nnUNetPlans__3d_fullres/plans.json",
+   "sha256": "f117c9df1dad6a5cf5e3c2a0f2ea5aa588c3d677911cdd90394ba2d39e52a034",
+   "bytes": 17606
+  },
+  "03_models/vertisol_i4/nnUNetTrainer_betterIgnoreSampling_earlyStopValLoss_lowlr__nnUNetPlans__3d_fullres/dataset.json": {
+   "source": "03_models/bnei_reem_i4/nnUNetTrainer_betterIgnoreSampling_earlyStopValLoss_lowlr__nnUNetPlans__3d_fullres/dataset.json",
+   "sha256": "a00ca55880069fe361c35c55e88f6ce114e5bde848a738418386b139417f5cc7",
+   "bytes": 319
+  },
+  "03_models/vertisol_i4/nnUNetTrainer_betterIgnoreSampling_earlyStopValLoss_lowlr__nnUNetPlans__3d_fullres/fold_0/checkpoint_final.pth": {
+   "source": "03_models/bnei_reem_i4/nnUNetTrainer_betterIgnoreSampling_earlyStopValLoss_lowlr__nnUNetPlans__3d_fullres/fold_0/checkpoint_final.pth",
+   "sha256": "9543f9ac2dd562c376ffe5fcb816118b161786428d8827e7b06d1242574794dc",
+   "bytes": 357794663
+  },
+  "03_models/vertisol_i4/nnUNetTrainer_betterIgnoreSampling_earlyStopValLoss_lowlr__nnUNetPlans__3d_fullres/fold_0/progress.png": {
+   "source": "03_models/bnei_reem_i4/nnUNetTrainer_betterIgnoreSampling_earlyStopValLoss_lowlr__nnUNetPlans__3d_fullres/fold_0/progress.png",
+   "sha256": "755f39b8e5705b8c12b7b586373f52234a8b0d7cfc32ec6ed1d70016accbfc74",
+   "bytes": 504577
+  },
+  "03_models/vertisol_i4/nnUNetTrainer_betterIgnoreSampling_earlyStopValLoss_lowlr__nnUNetPlans__3d_fullres/fold_0/training_log_2026_7_5_16_52_21.txt": {
+   "source": "03_models/bnei_reem_i4/nnUNetTrainer_betterIgnoreSampling_earlyStopValLoss_lowlr__nnUNetPlans__3d_fullres/fold_0/training_log_2026_7_5_16_52_21.txt",
+   "sha256": "88ca5e392f06e0e8134b2c123971b47e4a967f1ea0713eb699c9f4308588330a",
+   "bytes": 64639
+  },
+  "03_models/vertisol_i4/fresh_bnei_reem_i4.yaml": {
+   "source": "03_models/run_configs/fresh_bnei_reem_i4.yaml",
+   "sha256": "d0681edebae03450d94da823e24f902a1d39d6b847724412be5defc4b95c3feb",
+   "bytes": 637
+  },
+  "03_models/loess_i2/splits_final.json": {
+   "source": "03_models/mishmar_loess_i2/splits_final.json",
+   "sha256": "a1859ad4863e4c5530b97877c80cd932cffc43c0b9619048d4b05d21789bbd43",
+   "bytes": 137
+  },
+  "03_models/loess_i2/nnUNetTrainer_betterIgnoreSampling_earlyStopValLoss__nnUNetPlans__3d_fullres/plans.json": {
+   "source": "03_models/mishmar_loess_i2/nnUNetTrainer_betterIgnoreSampling_earlyStopValLoss__nnUNetPlans__3d_fullres/plans.json",
+   "sha256": "a69d9d41e3278330d95ba2db2839e65583052c55c023bc412c8c0f3b04efe992",
+   "bytes": 17920
+  },
+  "03_models/loess_i2/nnUNetTrainer_betterIgnoreSampling_earlyStopValLoss__nnUNetPlans__3d_fullres/dataset.json": {
+   "source": "03_models/mishmar_loess_i2/nnUNetTrainer_betterIgnoreSampling_earlyStopValLoss__nnUNetPlans__3d_fullres/dataset.json",
+   "sha256": "a00ca55880069fe361c35c55e88f6ce114e5bde848a738418386b139417f5cc7",
+   "bytes": 319
+  },
+  "03_models/loess_i2/nnUNetTrainer_betterIgnoreSampling_earlyStopValLoss__nnUNetPlans__3d_fullres/fold_0/checkpoint_final.pth": {
+   "source": "03_models/mishmar_loess_i2/nnUNetTrainer_betterIgnoreSampling_earlyStopValLoss__nnUNetPlans__3d_fullres/fold_0/checkpoint_final.pth",
+   "sha256": "c712022ebe81dbfe6699ed6316d6389acd7abef18b062f976458f086f22f2337",
+   "bytes": 357783911
+  },
+  "03_models/loess_i2/nnUNetTrainer_betterIgnoreSampling_earlyStopValLoss__nnUNetPlans__3d_fullres/fold_0/progress.png": {
+   "source": "03_models/mishmar_loess_i2/nnUNetTrainer_betterIgnoreSampling_earlyStopValLoss__nnUNetPlans__3d_fullres/fold_0/progress.png",
+   "sha256": "74929be10518b094ac5314786fcd55474262c0bc5329a7d7fc5c86b5928ab908",
+   "bytes": 574021
+  },
+  "03_models/loess_i2/nnUNetTrainer_betterIgnoreSampling_earlyStopValLoss__nnUNetPlans__3d_fullres/fold_0/training_log_2026_7_15_13_43_55.txt": {
+   "source": "03_models/mishmar_loess_i2/nnUNetTrainer_betterIgnoreSampling_earlyStopValLoss__nnUNetPlans__3d_fullres/fold_0/training_log_2026_7_15_13_43_55.txt",
+   "sha256": "1c11a72282d805c5050abd5a0b2e4ad5caec2a26c5aea24e41f119a07adda989",
+   "bytes": 47860
+  },
+  "03_models/loess_i2/mishmar_hanegev_maoz_3_5p85um_loess_i2.yaml": {
+   "source": "03_models/run_configs/mishmar_hanegev_maoz_3_5p85um_loess_i2.yaml",
+   "sha256": "847985c085907aafb4257c305db1a7a5a593ab334bcea358e652da7ac79bcd78",
+   "bytes": 551
+  },
+  "03_models/nnUNetTrainer_betterIgnoreSampling.py": {
+   "source": "03_models/nnUNetTrainer_betterIgnoreSampling.py",
+   "sha256": "ea0926a0181a732dfa42b4bbdf646322c3164af2e2fd261d51032fa9f1fe6843",
+   "bytes": 25448
+  },
+  "04_code/environment/conda_env_venv-napari.yml": {
+   "source": "04_code/environment/conda_env_venv-napari.yml",
+   "sha256": "e058060657ca860f6125d9daa41afd04980cd2804b8a7dde520ad07baaac5459",
+   "bytes": 6975
+  },
+  "04_code/environment/nvidia_smi.txt": {
+   "source": "04_code/environment/nvidia_smi.txt",
+   "sha256": "228faf165c31a6f779724ecb3fcdb7db9f6fd4744e50df2ca40ddef839ece466",
+   "bytes": 218
+  },
+  "04_code/environment/pip_freeze_venv-napari.txt": {
+   "source": "04_code/environment/pip_freeze_venv-napari.txt",
+   "sha256": "92a6b4d6d7f6a91eb464cf9d36c93bcbdd4030d1bb704f7d87e5e107e7415564",
+   "bytes": 4437
+  },
+  "04_code/environment/versions.txt": {
+   "source": "04_code/environment/versions.txt",
+   "sha256": "798dfd721b33f43f01cafb55f8ccb0e06bfe61fe8aaff52415879ee5051bd8b0",
+   "bytes": 352
+  },
+  "04_code/nnUNet4SoilXrayCT_a01686e.zip": {
+   "source": "04_code/nnUNet4SoilXrayCT_a01686e.zip",
+   "sha256": "665d64041772955e6e52a8309ac9abeff7534759891cdc95b63d3254c3619cf0",
+   "bytes": 231042331
+  },
+  "04_code/resp_model_5a82e60.zip": {
+   "source": "04_code/resp_model_5a82e60.zip",
+   "sha256": "706c9d32d111aa16c0bd2954cec1ec344562b8ab285bd19256b931aae336dfa2",
+   "bytes": 21966477
+  },
+  "07_lab_data/quotients_and_stats/common.py": {
+   "source": "07_lab_data_and_writeup/quotients_and_stats/common.py",
+   "sha256": "7354a0ea397bdd1cdb405b67c9d54f777d07316b5fd5e6f73151f51d5da5aa84",
+   "bytes": 6256
+  },
+  "07_lab_data/quotients_and_stats/fig_biology.py": {
+   "source": "07_lab_data_and_writeup/quotients_and_stats/fig_biology.py",
+   "sha256": "a20c3e9aaec2a6d556a1da203a670387dbe809d525d7f01b8ed428583a306d1a",
+   "bytes": 7016
+  },
+  "07_lab_data/quotients_and_stats/fig_biology_stats.txt": {
+   "source": "07_lab_data_and_writeup/quotients_and_stats/fig_biology_stats.txt",
+   "sha256": "cfb0506e949b81a614e122b3039c03bddc1c83645796de136480ce49f2fbd6b9",
+   "bytes": 884
+  },
+  "07_lab_data/quotients_and_stats/fig_biology_stats_tukey_mean15.txt": {
+   "source": "07_lab_data_and_writeup/quotients_and_stats/fig_biology_stats_tukey_mean15.txt",
+   "sha256": "8d33ce8d5382bebbc120af627816efaa0ad18655c8adeda650c4d2a5a74204c9",
+   "bytes": 881
+  },
+  "07_lab_data/quotients_and_stats/stats_tukey_vs_lsd.txt": {
+   "source": "07_lab_data_and_writeup/quotients_and_stats/stats_tukey_vs_lsd.txt",
+   "sha256": "bd1eca3f071dbe3bb3510f2bb5bc049ca0fda33c0b805781ed2f72d712ede78e",
+   "bytes": 2154
+  },
+  "07_lab_data/raw_workbooks/Bulk_Density_Experiment.xlsx": {
+   "source": "07_lab_data_and_writeup/raw_workbooks/Bulk_Density_Experiment.xlsx",
+   "sha256": "93080f1ac80d2acfe9ee745ef8cf30b92d90f929cf1df7a43d8ca7dc76338b10",
+   "bytes": 15886
+  },
+  "07_lab_data/raw_workbooks/Fumigation_Extraction_Experiment.xlsx": {
+   "source": "07_lab_data_and_writeup/raw_workbooks/Fumigation_Extraction_Experiment.xlsx",
+   "sha256": "3358b8985cd2c81b9afe2413de850089d7e0a6e0c35c8adc829cb2a4f9ff3ee1",
+   "bytes": 64333
+  },
+  "07_lab_data/raw_workbooks/Lime_CaCO3_Calcimeter_Experiment.xlsx": {
+   "source": "07_lab_data_and_writeup/raw_workbooks/Lime_CaCO3_Calcimeter_Experiment.xlsx",
+   "sha256": "eeef36a79ccf50cc1a557107d513b6f3dd181a34a1e131e8a83de260f9cefffa",
+   "bytes": 11149
+  },
+  "07_lab_data/raw_workbooks/Organic carbon(2).xlsx": {
+   "source": "07_lab_data_and_writeup/raw_workbooks/Organic carbon(2).xlsx",
+   "sha256": "40b033bb33b20c2535e8888407bf3478302db9eeb87d2b9f1cec1d2530884fd1",
+   "bytes": 13354
+  },
+  "07_lab_data/raw_workbooks/rehovot_soil_texture.xlsx": {
+   "source": "07_lab_data_and_writeup/raw_workbooks/rehovot_soil_texture.xlsx",
+   "sha256": "c729c8c15f70581b943ba3c5786e8628c4e336a9ebd222a1d4b80f7da1548176",
+   "bytes": 524688
+  },
+  "07_lab_data/raw_workbooks/Soil_CO2_Respiration_v4.xlsx": {
+   "source": "07_lab_data_and_writeup/raw_workbooks/Soil_CO2_Respiration_v4.xlsx",
+   "sha256": "ce7bbd6338c9534242222741fc06c409aa4db962248c3974e05c509ad279b249",
+   "bytes": 260148
+  },
+  "07_lab_data/raw_workbooks/Soil_Texture_Analysis.xlsx": {
+   "source": "07_lab_data_and_writeup/raw_workbooks/Soil_Texture_Analysis.xlsx",
+   "sha256": "dafb2b3718847426f78a82ca388dfd48c9d8fb034765a281346c55cf56d48f12",
+   "bytes": 395797
+  },
+  "05_results/pore_size_classes/class_metrics.csv": {
+   "source": "05_analysis_outputs/psd/psd_A2_reanalysis_20260822/class_metrics.csv",
+   "sha256": "7c2d5f9d0bcd7ab3845ba2d3a303ae0a2f947ee8b26511b3a4eb78b8454c653f",
+   "bytes": 8798
+  },
+  "05_results/pore_size_classes/class_stats_results.json": {
+   "source": "05_analysis_outputs/psd/psd_A2_reanalysis_20260822/class_stats_results.json",
+   "sha256": "f737c7ffca3dc7522be821ca6984349f5033a1c732e8393ca227305d63f10893",
+   "bytes": 9819
+  },
+  "05_results/pore_size_classes/A2_summary.md": {
+   "source": "REPO:5_analysis/pore_size_distribution/A2_summary.md",
+   "sha256": "920e406b6e5e1ebc906fe7fdbe46f67bf1d20fa25b18f81587ee99d0784b7c83",
+   "bytes": 11548
+  },
+  "05_results/pore_size_classes/downsample_comparison.json": {
+   "source": "05_analysis_outputs/psd/psd_A2_reanalysis_20260822/downsample_comparison.json",
+   "sha256": "92579b2f025852e4fd8100d2cab624fbe59ae35475adb890df5fe4e7f4230d84",
+   "bytes": 4555
+  },
+  "05_results/pore_size_classes/fig4_subvolumes/stats_results.json": {
+   "source": "05_analysis_outputs/psd/fig4_inference_20260815/stats_results.json",
+   "sha256": "207a8a24b125be916aa263c170482fa555e5507bc591d1ecfd8593dbc19b9503",
+   "bytes": 7662
+  },
+  "05_results/pore_size_classes/fig4_subvolumes/subvolume_metrics.csv": {
+   "source": "05_analysis_outputs/psd/fig4_inference_20260815/subvolume_metrics.csv",
+   "sha256": "bab552f8234860a14df7b6d94b7d77522f1edec26b45302dc0b2ac0f1f40dcc6",
+   "bytes": 17147
+  },
+  "05_results/pore_size_classes/fig4_subvolumes/stats_summary.md": {
+   "source": "05_analysis_outputs/psd/fig4_inference_20260815/stats_summary.md",
+   "sha256": "a2ab1b3fbdacf7b5e278fa3981d18c97705fa885d6493da27d9913998cf4e763",
+   "bytes": 11418
+  },
+  "05_results/connectivity/track_e/psd_diag_20260907T103058_bnei_reem_specA_unified/summary.json": {
+   "source": "05_analysis_outputs/connectivity/Topology_Metrics_Aug2026/raw/psd_diag_20260907T103058_bnei_reem_specA_unified/summary.json",
+   "sha256": "bd90f0155f8035c9aedd9de4036976c48152fc09b53b85a80510be4a14e11b51",
+   "bytes": 934
+  },
+  "05_results/connectivity/track_e/psd_diag_20260907T103058_bnei_reem_specA_unified/config.json": {
+   "source": "05_analysis_outputs/connectivity/Topology_Metrics_Aug2026/raw/psd_diag_20260907T103058_bnei_reem_specA_unified/config.json",
+   "sha256": "3cb4ad5acdbbee72df031d2aa802884287b7aaf16fc337f79870f036f1f7d8fa",
+   "bytes": 1761
+  },
+  "05_results/connectivity/track_e/psd_diag_20260907T122221_bnei_reem_specB_unified/summary.json": {
+   "source": "05_analysis_outputs/connectivity/Topology_Metrics_Aug2026/raw/psd_diag_20260907T122221_bnei_reem_specB_unified/summary.json",
+   "sha256": "efeecd09a9d0331e754c94fdcbef37f0cdb8cd5ed0ba5d790381acb5e2727147",
+   "bytes": 937
+  },
+  "05_results/connectivity/track_e/psd_diag_20260907T122221_bnei_reem_specB_unified/config.json": {
+   "source": "05_analysis_outputs/connectivity/Topology_Metrics_Aug2026/raw/psd_diag_20260907T122221_bnei_reem_specB_unified/config.json",
+   "sha256": "2d6520b3d360612a66eeabe35f7d8244021625f48e0887df0d62c9e3fd812801",
+   "bytes": 1761
+  },
+  "05_results/connectivity/track_e/psd_diag_20260902T160041_mishmar_native_label_downsample_15um/summary.json": {
+   "source": "05_analysis_outputs/connectivity/Topology_Metrics_Aug2026/raw/psd_diag_20260902T160041_mishmar_native_label_downsample_15um/summary.json",
+   "sha256": "51bbf4a303e53eb7a55df788f50ab70ccaaaa864a38b397488b22ca3eb4a10ee",
+   "bytes": 1067
+  },
+  "05_results/connectivity/track_e/psd_diag_20260902T160041_mishmar_native_label_downsample_15um/config.json": {
+   "source": "05_analysis_outputs/connectivity/Topology_Metrics_Aug2026/raw/psd_diag_20260902T160041_mishmar_native_label_downsample_15um/config.json",
+   "sha256": "99a4c0ee6540d4e40d9298c4c877b1a0c66a2cd0603ed482bc81fc458981e238",
+   "bytes": 1837
+  },
+  "05_results/connectivity/track_e/psd_diag_20260902T215639_mishmar_second_8p8um_label_downsample_15um/summary.json": {
+   "source": "05_analysis_outputs/connectivity/Topology_Metrics_Aug2026/raw/psd_diag_20260902T215639_mishmar_second_8p8um_label_downsample_15um/summary.json",
+   "sha256": "4f767f064e3e5d0fa9654a9ab0ca3c9b7536844023c8f4e58f19ff1ae5c2d1ff",
+   "bytes": 1036
+  },
+  "05_results/connectivity/track_e/psd_diag_20260902T215639_mishmar_second_8p8um_label_downsample_15um/config.json": {
+   "source": "05_analysis_outputs/connectivity/Topology_Metrics_Aug2026/raw/psd_diag_20260902T215639_mishmar_second_8p8um_label_downsample_15um/config.json",
+   "sha256": "d10e82129281354d5ae362290b841f3a335eec04a0d4bdf99aae72d90a1f7a4f",
+   "bytes": 3943
+  },
+  "05_results/connectivity/track_e/psd_diag_20260824T135838_mishmar_15um_cu011samp2/summary.json": {
+   "source": "05_analysis_outputs/connectivity/Topology_Metrics_Aug2026/raw/psd_diag_20260824T135838_mishmar_15um_cu011samp2/summary.json",
+   "sha256": "30d1b0c7d71fb728cb9ccfdcbc0b137211d7fdf1639ed8092ef4b276d173fcb3",
+   "bytes": 1053
+  },
+  "05_results/connectivity/track_e/psd_diag_20260824T135838_mishmar_15um_cu011samp2/config.json": {
+   "source": "05_analysis_outputs/connectivity/Topology_Metrics_Aug2026/raw/psd_diag_20260824T135838_mishmar_15um_cu011samp2/config.json",
+   "sha256": "fa47c6f32a144d543230f5022d699e4b3b9e5c61e69bc5d91a7c660368d59b4c",
+   "bytes": 140452
+  },
+  "05_results/connectivity/track_e/psd_diag_20260824T135738_rehovot_samp_2_full_volume/summary.json": {
+   "source": "05_analysis_outputs/connectivity/Topology_Metrics_Aug2026/raw/psd_diag_20260824T135738_rehovot_samp_2_full_volume/summary.json",
+   "sha256": "889dc6f22d65058fb3581053b72aa45cbcfc48556722fa23585d91d3ad57e26e",
+   "bytes": 1068
+  },
+  "05_results/connectivity/track_e/psd_diag_20260824T135738_rehovot_samp_2_full_volume/config.json": {
+   "source": "05_analysis_outputs/connectivity/Topology_Metrics_Aug2026/raw/psd_diag_20260824T135738_rehovot_samp_2_full_volume/config.json",
+   "sha256": "9cb36e13fb0853ba1403c8bc14ee94ebf7480c7453ddcb1191ccb23077752b98",
+   "bytes": 120396
+  },
+  "05_results/connectivity/track_e/psd_diag_20260829T164636_rehovot_samp3_full_volume/summary.json": {
+   "source": "05_analysis_outputs/connectivity/Topology_Metrics_Aug2026/raw/psd_diag_20260829T164636_rehovot_samp3_full_volume/summary.json",
+   "sha256": "c9c5bb9ab524d3f60278810ec3aa1f019e2c67670bcfaa9d99a5e66ce4777cb9",
+   "bytes": 1069
+  },
+  "05_results/connectivity/track_e/psd_diag_20260829T164636_rehovot_samp3_full_volume/config.json": {
+   "source": "05_analysis_outputs/connectivity/Topology_Metrics_Aug2026/raw/psd_diag_20260829T164636_rehovot_samp3_full_volume/config.json",
+   "sha256": "83ac47dd3759654a20c90eff95f300c886c5ebc752e98f72a9f5a2a5a8a8d38f",
+   "bytes": 1580
+  },
+  "05_results/connectivity/chi_r/chi_r_bnei_reem_specA_unified.csv": {
+   "source": "05_analysis_outputs/connectivity/Topology_Metrics_Aug2026/connectivity_function/chi_r_bnei_reem_specA_unified.csv",
+   "sha256": "0da7bd86133574e19d533d9405c4cd5c40121a8208198bb7859ab32695122b48",
+   "bytes": 1689
+  },
+  "05_results/connectivity/chi_r/chi_r_bnei_reem_specA_unified.meta.json": {
+   "source": "05_analysis_outputs/connectivity/Topology_Metrics_Aug2026/connectivity_function/chi_r_bnei_reem_specA_unified.meta.json",
+   "sha256": "6b462f0d2a5ad529c8d71dad6d92f851d7b2c49d2cf599c53b1f1483063c267b",
+   "bytes": 834
+  },
+  "05_results/connectivity/chi_r/chi_r_bnei_reem_specB_unified.csv": {
+   "source": "05_analysis_outputs/connectivity/Topology_Metrics_Aug2026/connectivity_function/chi_r_bnei_reem_specB_unified.csv",
+   "sha256": "1962b27c297c738f9388515cf3942e565c86f6f76e186221817a5a7a41c506ab",
+   "bytes": 1671
+  },
+  "05_results/connectivity/chi_r/chi_r_bnei_reem_specB_unified.meta.json": {
+   "source": "05_analysis_outputs/connectivity/Topology_Metrics_Aug2026/connectivity_function/chi_r_bnei_reem_specB_unified.meta.json",
+   "sha256": "a0d30a24bec2d0c6bcd3cfa21c9be63571b254b87a15bf9a60e49551a30d693b",
+   "bytes": 845
+  },
+  "05_results/connectivity/chi_r/chi_r_mishmar_native_label_downsample_15um.csv": {
+   "source": "05_analysis_outputs/connectivity/Topology_Metrics_Aug2026/connectivity_function/chi_r_mishmar_native_label_downsample_15um.csv",
+   "sha256": "1582da5224b10e6b281eb606916667712d3f252cc3e25ec90c8beeda647d5ea5",
+   "bytes": 1654
+  },
+  "05_results/connectivity/chi_r/chi_r_mishmar_native_label_downsample_15um.meta.json": {
+   "source": "05_analysis_outputs/connectivity/Topology_Metrics_Aug2026/connectivity_function/chi_r_mishmar_native_label_downsample_15um.meta.json",
+   "sha256": "6f576247c5a713c3574c78ed719d936848b92f20f10ed76815a3caff43728340",
+   "bytes": 951
+  },
+  "05_results/connectivity/chi_r/chi_r_mishmar_second_8p8um_label_downsample_15um.csv": {
+   "source": "05_analysis_outputs/connectivity/Topology_Metrics_Aug2026/connectivity_function/chi_r_mishmar_second_8p8um_label_downsample_15um.csv",
+   "sha256": "cb91e185d2df0d5761d1d1b0250ca5eff4c439ce28be073238db66e5e26f959a",
+   "bytes": 1711
+  },
+  "05_results/connectivity/chi_r/chi_r_mishmar_second_8p8um_label_downsample_15um.meta.json": {
+   "source": "05_analysis_outputs/connectivity/Topology_Metrics_Aug2026/connectivity_function/chi_r_mishmar_second_8p8um_label_downsample_15um.meta.json",
+   "sha256": "561f5b270a19b2ae08613a916122f930b7400cfa5c9e4462248d6ca61c9cdb11",
+   "bytes": 957
+  },
+  "05_results/connectivity/chi_r/chi_r_mishmar_15um.csv": {
+   "source": "05_analysis_outputs/connectivity/Topology_Metrics_Aug2026/connectivity_function/chi_r_mishmar_15um.csv",
+   "sha256": "195e07555dff87afb6da721e0a29133e17ea7740c28e3467c29c536b2f8eb4dd",
+   "bytes": 2318
+  },
+  "05_results/connectivity/chi_r/chi_r_rehovot.csv": {
+   "source": "05_analysis_outputs/connectivity/Topology_Metrics_Aug2026/connectivity_function/chi_r_rehovot.csv",
+   "sha256": "da1cc41560eb0a51f42ec6aa2ecc00fa976efa233def9e998e4692e07fce9968",
+   "bytes": 2290
+  },
+  "05_results/connectivity/chi_r/chi_r_rehovot_samp3.csv": {
+   "source": "05_analysis_outputs/connectivity/Topology_Metrics_Aug2026/connectivity_function/chi_r_rehovot_samp3.csv",
+   "sha256": "c9e10bee4362968aba5d386d8f03b4fe0618bf8e9d18f5ecb7ef926ecc4ef5d6",
+   "bytes": 1707
+  },
+  "05_results/connectivity/chi_r/chi_r_rehovot_samp3.meta.json": {
+   "source": "05_analysis_outputs/connectivity/Topology_Metrics_Aug2026/connectivity_function/chi_r_rehovot_samp3.meta.json",
+   "sha256": "bb87916d93415b0f7ff54ff23d0c287214b3f0853e30f91e98f664b062c3bbb1",
+   "bytes": 784
+  },
+  "05_results/connectivity/rehovot_track_e_samp2_samp3_mean_se.csv": {
+   "source": "05_analysis_outputs/connectivity/missing_data_20261004/rehovot_samp3_track_e/rehovot_track_e_samp2_samp3_mean_se.csv",
+   "sha256": "60eddcd6b59aa319128423da476b64dcd81f7642d0504bba3c13a80178b60799",
+   "bytes": 926
+  },
+  "05_results/connectivity/figures_data_export.md": {
+   "source": "REPO:5_analysis/connectivity/figures_data_export.md",
+   "sha256": "b311fe547ee1aa223a67d67bb0243898da2e6f41521332ef672ffec685934833",
+   "bytes": 9768
+  },
+  "05_results/connectivity/porosity_normalization_results.txt": {
+   "source": "REPO:5_analysis/porosity_normalization/results.txt",
+   "sha256": "aa5451d3add84b2e9cc1bd1bba4ca1d581aeffd570cbd356720552c8fdfecca5",
+   "bytes": 383
+  },
+  "05_results/distances/psd_diag_20260802T104738_nlm_volume_fresh_bnei_reem_i4/summary_distance_metrics.json": {
+   "source": "05_analysis_outputs/connectivity/Topology_Metrics_Aug2026/raw/psd_diag_20260802T104738_nlm_volume_fresh_bnei_reem_i4/summary_distance_metrics.json",
+   "sha256": "cec85929a88d36650d4733a790e53a268c35fa39d9df0c32c1dcaa8edc422aa3",
+   "bytes": 1585
+  },
+  "05_results/distances/psd_diag_20260803T010446_mishmar_hanegev_maoz_3_5p85um_scratch_i2/summary_distance_metrics.json": {
+   "source": "05_analysis_outputs/connectivity/Topology_Metrics_Aug2026/raw/psd_diag_20260803T010446_mishmar_hanegev_maoz_3_5p85um_scratch_i2/summary_distance_metrics.json",
+   "sha256": "dbe5a99538cd6d6593002626f6dd88c3693a30140ed88bfac0167fcb40876e93",
+   "bytes": 1601
+  },
+  "05_results/distances/rehovot_distance_metrics_20260815/summary_distance_metrics.json": {
+   "source": "05_analysis_outputs/distances/rehovot_distance_metrics_20260815/summary_distance_metrics.json",
+   "sha256": "c3d5549bad4d8b2ebe4ddb722345f529685ae21ae2075906a390f6583acb58a2",
+   "bytes": 1842
+  },
+  "05_results/tortuosity/tortuosity_subvolumes.csv": {
+   "source": "05_analysis_outputs/tortuosity/tortuosity_subvolumes_20261004/tortuosity_subvolumes.csv",
+   "sha256": "78fadf4dfb20d1ae6c88c9391c138122544aec49affd24ebb7ae409cf56a7662",
+   "bytes": 130595
+  },
+  "05_results/tortuosity/tortuosity_summary.csv": {
+   "source": "05_analysis_outputs/tortuosity/tortuosity_subvolumes_20261004/tortuosity_summary.csv",
+   "sha256": "cd3b00d2617128621512ac91b5a36c2b4c471818e9c48f889bc95d7990b95ee3",
+   "bytes": 7161
+  },
+  "05_results/tortuosity/convergence_summary.csv": {
+   "source": "05_analysis_outputs/tortuosity/tortuosity_subvolumes_20261004/convergence_summary.csv",
+   "sha256": "eb2601588ba7dc9384125f6fcf9d5be71b12f4087275511b0c1903900f36e513",
+   "bytes": 632
+  },
+  "05_results/tortuosity/stats.json": {
+   "source": "05_analysis_outputs/tortuosity/tortuosity_subvolumes_20261004/stats.json",
+   "sha256": "627d381b4510b4e326fe8ebceaf93ba485f6002cc765e23e70d275cc39310b43",
+   "bytes": 1530
+  },
+  "05_results/tortuosity/REPORT.md": {
+   "source": "REPO:5_analysis/tortuosity/REPORT.md",
+   "sha256": "ef4cfbee838b64727b014b32f10099e6103a9f1849ac2ac40503aacffe4bdd0a",
+   "bytes": 8015
+  },
+  "05_results/pom/all_soils_interface_summary.json": {
+   "source": "05_analysis_outputs/pom/pom_analysis_20260831_interface_metrics_resmatched/all_soils_interface_summary.json",
+   "sha256": "bdeb27efebc23402c14d76520840165b428e24225ec7588db43fd7c811f28b88",
+   "bytes": 8998
+  },
+  "05_results/pom/comparison_table_raw.json": {
+   "source": "05_analysis_outputs/pom/pom_analysis_20260831_interface_metrics_resmatched/comparison_table_raw.json",
+   "sha256": "a157723ba07bf8d4afbe5da8b26a463f31579b6e300523a7a56bf58e1a3f1ef4",
+   "bytes": 3956
+  },
+  "05_results/pom/pom_spatial_pattern_summary_2soil_clean.json": {
+   "source": "05_analysis_outputs/pom/pom_analysis_20260824_ablation/pom_spatial_pattern_summary_2soil_clean.json",
+   "sha256": "72d739eb83c89f55900e96574ceac4ef73d630ff9b26d1eb861c1417b7c60da5",
+   "bytes": 693
+  },
+  "05_results/pom/pom_object_features_2soil_clean.csv": {
+   "source": "05_analysis_outputs/pom/pom_analysis_20260824_ablation/pom_object_features_2soil_clean.csv",
+   "sha256": "8f38723a649d2d365dd3d1518497e3cf25e3885e1037145269c806bf65a2d8d8",
+   "bytes": 620495
+  },
+  "06_figures/write_up/fig1_respiration.png": {
+   "source": "REPO:6_figures/write_up_figures/fig1_respiration.png",
+   "sha256": "414a9ab58a05eb55ab457cc4ec1b923051753195b8ec4888ada8a14651e2b2b2",
+   "bytes": 141317
+  },
+  "06_figures/write_up/fig1_respiration.svg": {
+   "source": "REPO:6_figures/write_up_figures/fig1_respiration.svg",
+   "sha256": "277700aca94d9dab2bfee6855f55ac0c955783c6dd2e85f11956bdfccba49b3c",
+   "bytes": 68429
+  },
+  "06_figures/write_up/fig2_biomass_quotients.png": {
+   "source": "REPO:6_figures/write_up_figures/fig2_biomass_quotients.png",
+   "sha256": "fa669a92f45b3881567e9a99ccec58917cd7931dec8273ce0804e47ca7c8155f",
+   "bytes": 88371
+  },
+  "06_figures/write_up/fig2_biomass_quotients.svg": {
+   "source": "REPO:6_figures/write_up_figures/fig2_biomass_quotients.svg",
+   "sha256": "173f96e58b88371b35c520e9064ce97e16c1b12b7b8d17d40dae696b76cbe125",
+   "bytes": 46325
+  },
+  "06_figures/write_up/fig3_segmentation.png": {
+   "source": "REPO:6_figures/write_up_figures/fig3_segmentation.png",
+   "sha256": "d7de8e1ee22fab5c45ef5cfa6cc6a0cdebfdb1426e04f8695cc506f081341587",
+   "bytes": 1087430
+  },
+  "06_figures/write_up/fig3_segmentation.svg": {
+   "source": "REPO:6_figures/write_up_figures/fig3_segmentation.svg",
+   "sha256": "626fe4f209b90def88c6f9adf8b34c31d008fbbf844ca225b9b835b8ec87a8ed",
+   "bytes": 414053
+  },
+  "06_figures/write_up/fig4_pore_classes.png": {
+   "source": "REPO:6_figures/write_up_figures/fig4_pore_classes.png",
+   "sha256": "8b6b4aa3a2125e7c9b37fc0f7a6f08d99383d8abb98706484459493198db72eb",
+   "bytes": 104046
+  },
+  "06_figures/write_up/fig4_pore_classes.svg": {
+   "source": "REPO:6_figures/write_up_figures/fig4_pore_classes.svg",
+   "sha256": "4b656e67f74c2dbdbd17433731a1ed621df7778dc41ccc5d7137f52dbac82602",
+   "bytes": 38158
+  },
+  "06_figures/write_up/fig5_distance_connectivity.png": {
+   "source": "REPO:6_figures/write_up_figures/fig5_distance_connectivity.png",
+   "sha256": "54eb51fecdd67da319bdc4df0e20baba6f236b54084666ceba70e8f11dfd178a",
+   "bytes": 139408
+  },
+  "06_figures/write_up/fig5_distance_connectivity.svg": {
+   "source": "REPO:6_figures/write_up_figures/fig5_distance_connectivity.svg",
+   "sha256": "7e20bd84dfe51bfeec1463068e84f928b2536f6ce5782e7bf28446b4b16b6b5c",
+   "bytes": 43094
+  },
+  "06_figures/write_up/fig6_pom.png": {
+   "source": "REPO:6_figures/write_up_figures/fig6_pom.png",
+   "sha256": "b0e75400f92404ba77f5da66c3e0412cb645bcc8484192fd2fdb9f8608426ecc",
+   "bytes": 109406
+  },
+  "06_figures/write_up/fig6_pom.svg": {
+   "source": "REPO:6_figures/write_up_figures/fig6_pom.svg",
+   "sha256": "3e3ae79a7c49dc6ee3a9ce5d9af99a2865f75478a5f5face6310678f736cd434",
+   "bytes": 34632
+  },
+  "06_figures/write_up/fig7_correlation.png": {
+   "source": "REPO:6_figures/write_up_figures/fig7_correlation.png",
+   "sha256": "8be349c0619435fdc9aae863f52fa6fdbabfe871523a231b64be601bfe8cbfa5",
+   "bytes": 131868
+  },
+  "06_figures/write_up/fig7_correlation.svg": {
+   "source": "REPO:6_figures/write_up_figures/fig7_correlation.svg",
+   "sha256": "8c4e839f5c92b7438c1de8f8138701707d86f5db0509a0f13da9d16e7f47d11a",
+   "bytes": 34225
+  },
+  "06_figures/write_up/figA1_simulation.png": {
+   "source": "REPO:6_figures/write_up_figures/figA1_simulation.png",
+   "sha256": "4ff17ac9adfa81a8cc596f0b7dd1328d1c3f0fb3dc3e893b2d0e23b121e38a74",
+   "bytes": 233895
+  },
+  "06_figures/write_up/figA1_simulation.svg": {
+   "source": "REPO:6_figures/write_up_figures/figA1_simulation.svg",
+   "sha256": "74e9c18b297fde3437ddf480f8c53e1a5f05a360a06cb506c5e1d4d2d4dbc7da",
+   "bytes": 119868
+  },
+  "06_figures/segmentation_examples/figure7_prediction_panels.png": {
+   "source": "06_figures/figure7_20261004/figure7_prediction_panels.png",
+   "sha256": "da7672c1a372b4884bf730ae1c6f34911b006ced61485ebef26a452e1f2f1aff",
+   "bytes": 3053231
+  },
+  "06_figures/renders_3d/vertisol_B_april_processing/option1_closeup_transparent.png": {
+   "source": "06_figures/render3d_bnei_reem_20261013/renders/option1_closeup_transparent.png",
+   "sha256": "b50acfc0d9b96393c870d415a4d9a61ab9084ea4394ed26c289861e8d7f35608",
+   "bytes": 3188452
+  },
+  "06_figures/renders_3d/vertisol_B_april_processing/option1_closeup_white.png": {
+   "source": "06_figures/render3d_bnei_reem_20261013/renders/option1_closeup_white.png",
+   "sha256": "1c5d1829071c496981da80edd6f2da67ee4c48820a7609d802c3a4fe592833bf",
+   "bytes": 2892458
+  },
+  "06_figures/renders_3d/vertisol_B_april_processing/option1_full_view_transparent.png": {
+   "source": "06_figures/render3d_bnei_reem_20261013/renders/option1_full_view_transparent.png",
+   "sha256": "95595e8373897997475e591670c5b352f4c06241b97290550e7d53028d3870df",
+   "bytes": 7595872
+  },
+  "06_figures/renders_3d/vertisol_B_april_processing/option1_full_view_white.png": {
+   "source": "06_figures/render3d_bnei_reem_20261013/renders/option1_full_view_white.png",
+   "sha256": "ffb904b0d645509260c3bbc845254e69ede58b878cf7b31d1c973cd42645f159",
+   "bytes": 6258336
+  },
+  "06_figures/renders_3d/vertisol_B_april_processing/option2_closeup_transparent.png": {
+   "source": "06_figures/render3d_bnei_reem_20261013/renders/option2_closeup_transparent.png",
+   "sha256": "692f135798ab911c75ef6a28dec0aad69e9e8a2093552fe14203715b17aa776a",
+   "bytes": 2448266
+  },
+  "06_figures/renders_3d/vertisol_B_april_processing/option2_closeup_white.png": {
+   "source": "06_figures/render3d_bnei_reem_20261013/renders/option2_closeup_white.png",
+   "sha256": "ab903f893cf7c474aae4a8d2ebbdc30d325b4edcf4286320a7ddb6c8938e9062",
+   "bytes": 2261880
+  },
+  "06_figures/renders_3d/vertisol_B_april_processing/option2_full_view_transparent.png": {
+   "source": "06_figures/render3d_bnei_reem_20261013/renders/option2_full_view_transparent.png",
+   "sha256": "eaa035d571e6dba7e9398307e5fbbdd3a82e586ced2b641f823a16a3a60922df",
+   "bytes": 5433804
+  },
+  "06_figures/renders_3d/vertisol_B_april_processing/option2_full_view_white.png": {
+   "source": "06_figures/render3d_bnei_reem_20261013/renders/option2_full_view_white.png",
+   "sha256": "10385db9b095e77c4e03ea92734e67c5c51a94cf83f7c33cae6bf8dbdbcb47d9",
+   "bytes": 4462389
+  },
+  "06_figures/renders_3d/vertisol_B_april_processing/option3_closeup_transparent.png": {
+   "source": "06_figures/render3d_bnei_reem_20261013/renders/option3_closeup_transparent.png",
+   "sha256": "77bd36194bcfb4c9bc8d9f7ae77c1d9b6d446345705955c36cead81a817a05e2",
+   "bytes": 4379252
+  },
+  "06_figures/renders_3d/vertisol_B_april_processing/option3_closeup_white.png": {
+   "source": "06_figures/render3d_bnei_reem_20261013/renders/option3_closeup_white.png",
+   "sha256": "df878c84fa0f0caf6225483aefef9df927d30887e98e6af07cf878de33db0047",
+   "bytes": 4305953
+  },
+  "06_figures/renders_3d/vertisol_B_april_processing/option3_full_view_transparent.png": {
+   "source": "06_figures/render3d_bnei_reem_20261013/renders/option3_full_view_transparent.png",
+   "sha256": "ea9cd95a113499c6ff8d6ac5834f098c1fbbeb6e29ffaf1d22796d7252f58389",
+   "bytes": 7667698
+  },
+  "06_figures/renders_3d/vertisol_B_april_processing/option3_full_view_white.png": {
+   "source": "06_figures/render3d_bnei_reem_20261013/renders/option3_full_view_white.png",
+   "sha256": "290fbbc0ba418bf53ec44cccdb93fb32871e5c62b1e9c11a0f6483515fd1218e",
+   "bytes": 7550326
+  },
+  "06_figures/renders_3d/loess_5p85um_maoz/option1_closeup_transparent.png": {
+   "source": "06_figures/render3d_mishmar_5p85_20261012/renders/option1_closeup_transparent.png",
+   "sha256": "4be286edaae14bfa7a30dae825e46b591545b60061bf8574ffc9c982c7c4f70f",
+   "bytes": 4876419
+  },
+  "06_figures/renders_3d/loess_5p85um_maoz/option1_closeup_white.png": {
+   "source": "06_figures/render3d_mishmar_5p85_20261012/renders/option1_closeup_white.png",
+   "sha256": "653a1b9d135cee5d875a48f863d0c3ed7590a1da8c12fbd1ede645db72a60851",
+   "bytes": 4674240
+  },
+  "06_figures/renders_3d/loess_5p85um_maoz/option1_full_view_transparent.png": {
+   "source": "06_figures/render3d_mishmar_5p85_20261012/renders/option1_full_view_transparent.png",
+   "sha256": "a574bf96f04670d01b208e8194787b22bbd8cab132f750058ad11d7ef9c71f5f",
+   "bytes": 8176796
+  },
+  "06_figures/renders_3d/loess_5p85um_maoz/option1_full_view_white.png": {
+   "source": "06_figures/render3d_mishmar_5p85_20261012/renders/option1_full_view_white.png",
+   "sha256": "3233ea734cf07a1f3a1d487982306c6cca2e9726853a08b06ffaecc948cc5c23",
+   "bytes": 6794396
+  },
+  "06_figures/renders_3d/loess_5p85um_maoz/option2_closeup_transparent.png": {
+   "source": "06_figures/render3d_mishmar_5p85_20261012/renders/option2_closeup_transparent.png",
+   "sha256": "ecb8711584182e9a5e5b5c72031fdd51d7ab87939fbcdfe80231efdd2bb78675",
+   "bytes": 4023927
+  },
+  "06_figures/renders_3d/loess_5p85um_maoz/option2_closeup_white.png": {
+   "source": "06_figures/render3d_mishmar_5p85_20261012/renders/option2_closeup_white.png",
+   "sha256": "8e01149d0a4ea4ed005fa5dd79239a8c4b2020ce2964aeec45e37457165e9f17",
+   "bytes": 3891540
+  },
+  "06_figures/renders_3d/loess_5p85um_maoz/option2_full_view_transparent.png": {
+   "source": "06_figures/render3d_mishmar_5p85_20261012/renders/option2_full_view_transparent.png",
+   "sha256": "445f9f08e4918961366808d64e1bd07e01d5dea74e897d9f89f20fb6f530babc",
+   "bytes": 6162637
+  },
+  "06_figures/renders_3d/loess_5p85um_maoz/option2_full_view_white.png": {
+   "source": "06_figures/render3d_mishmar_5p85_20261012/renders/option2_full_view_white.png",
+   "sha256": "74642faf91c401c770cc40c0d287a1ea1e3d0e4d7d950dd8ffcb670c10373dce",
+   "bytes": 5078786
+  },
+  "06_figures/renders_3d/loess_5p85um_maoz/option3_closeup_transparent.png": {
+   "source": "06_figures/render3d_mishmar_5p85_20261012/renders/option3_closeup_transparent.png",
+   "sha256": "15f5ffcb75ac4106569bc5312f4d32c9a919331463d887bdaa9d672b9b591d74",
+   "bytes": 6185254
+  },
+  "06_figures/renders_3d/loess_5p85um_maoz/option3_closeup_white.png": {
+   "source": "06_figures/render3d_mishmar_5p85_20261012/renders/option3_closeup_white.png",
+   "sha256": "8a1dce3267d57f9949639f104db9e38f23ff0e092847b8ada8bbbae222a91915",
+   "bytes": 6141508
+  },
+  "06_figures/renders_3d/loess_5p85um_maoz/option3_full_view_transparent.png": {
+   "source": "06_figures/render3d_mishmar_5p85_20261012/renders/option3_full_view_transparent.png",
+   "sha256": "6723f744e69fc4aee22fd347f96d774a294b14e5cad22b831c4621bc8582bfe7",
+   "bytes": 8673759
+  },
+  "06_figures/renders_3d/loess_5p85um_maoz/option3_full_view_white.png": {
+   "source": "06_figures/render3d_mishmar_5p85_20261012/renders/option3_full_view_white.png",
+   "sha256": "ee0d146efe65adbf4f44f71c38ee094ffc07dbd5df700361a0bf475364279108",
+   "bytes": 8582244
+  },
+  "06_figures/renders_3d/pairs/pair_option1_translucent_pores.png": {
+   "source": "06_figures/render3d_pairs_20261013/pair_option1_translucent_pores.png",
+   "sha256": "a523a64ac45dcc16a1f31bf33cf9a4377b49bec5c34861bd3aa71175929f1d2d",
+   "bytes": 13129914
+  },
+  "06_figures/renders_3d/pairs/pair_option2_pore_haze.png": {
+   "source": "06_figures/render3d_pairs_20261013/pair_option2_pore_haze.png",
+   "sha256": "4f84b52b5852b25745444ae1abfcfd070abf87e7c3c0a408011c3c5c15718fcb",
+   "bytes": 9625425
+  },
+  "06_figures/renders_3d/pairs/pair_option3_pore_diameter.png": {
+   "source": "06_figures/render3d_pairs_20261013/pair_option3_pore_diameter.png",
+   "sha256": "50b1839135080901ff5efee10d25c684d014f5ed66ab3366df45ab4ce12d699a",
+   "bytes": 16230391
+  }
+ },
+ "left_out": {
+  "models: checkpoint_best.pth and nnU-Net extras (debug.json, dataset_fingerprint.json, analytics/, validation/)": [
+   16,
+   722594039
+  ],
+  "v2 analysis-outputs README (replaced by 05_results/README.md)": [
+   1,
+   6640
+  ],
+  "connectivity: 2026-08 specimen-B visual evidence and notes (superseded by the follow-up Part D)": [
+   29,
+   7640401
+  ],
+  "connectivity: chi(r) files not behind a reported r* (older/recheck runs, native resolution) and the chi(r) plot": [
+   9,
+   108349
+  ],
+  "connectivity: run-summary notes (Markdown)": [
+   4,
+   62683
+  ],
+  "Track E: logs, diagnostics.json, psd_raw_data.csv/psd_table.csv, block files, PNGs, unreported runs": [
+   128,
+   12107426
+  ],
+  "connectivity: 2026-10-04 missing-data report, figure copy and duplicate Track E files": [
+   5,
+   1063889
+  ],
+  "training curves (duplicates; nnU-Net curves are in 03_models)": [
+   8,
+   556988
+  ],
+  "distances: comparison file, figure and notes": [
+   4,
+   1123692
+  ],
+  "POM clustering runs (dropped Aug 2026) and their exploratory outputs": [
+   174,
+   11089490
+  ],
+  "POM interface: earlier 2026-08-30 run (superseded by the resolution-matched 2026-08-31 run)": [
+   11,
+   574159
+  ],
+  "POM interface: per-soil summaries, scripts, figure, README of the reported run": [
+   10,
+   595426
+  ],
+  "pore size: per-subvolume PSD runs, logs, scripts, checkpoints, figures, intermediate files": [
+   333,
+   5660978
+  ],
+  "tortuosity: scripts, solver logs, work/ intermediates, figure": [
+   17,
+   712110
+  ],
+  "figures: v2 figures README": [
+   1,
+   2497
+  ],
+  "figures: segmentation-example script, SVG and slice info (in the repo)": [
+   3,
+   1047433
+  ],
+  "figures: render scripts, logs, parameters and contact sheets (in the repo)": [
+   53,
+   6557434
+  ],
+  "figures: selected_outputs": [
+   54,
+   18403388
+  ],
+  "figures: synopsis_outputs": [
+   67,
+   41074429
+  ],
+  "figures: training_diagnostics (nnU-Net curves are in 03_models)": [
+   10,
+   989040
+  ]
+ },
+ "n_v2": 1195
+}

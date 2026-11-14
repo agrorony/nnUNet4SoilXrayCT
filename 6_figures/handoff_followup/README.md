@@ -22,6 +22,7 @@ These scripts produced `docs/HANDOFF_FOLLOWUP_2026-11.md` and the evidence in `d
 | G | `g1_find_repo_paths.py`, `g2_prepare_v2.py`, `g2b_fix_paths.py`, `g2c_fix_command_paths.py` | Gate A removals and additions; repo paths in package READMEs updated to the 2026-11 layout |
 | G | `g3_diff_vs_v1.py`, `g4_dtype_check.py` | staging vs the v1 manifest; dtype of re-oriented vs original segmentations |
 | G | `g5_swap_code_archive.py`, `g6_build_v2_zip.py` | replace the code archive with a `git archive` of this branch; build and check the v2 ZIP |
+| v3 | `v3_copy.py`, `v3_readmes.py`, `v3_code_archive.py`, `v3_build_zip.py` | lean package v3: copy the needed files into the new layout and write `PACKAGE_MAP_v2_to_v3.csv`; write the READMEs; code archive from `main`; build and check the v3 ZIP (run in this order) |
 
 Paths updated for the 2026-11 layout:
 - `c2` calls `4_inference/postprocessing_nnUNet_predict_concatenate.py`.
